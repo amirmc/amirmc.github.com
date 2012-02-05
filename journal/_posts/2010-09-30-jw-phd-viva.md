@@ -27,9 +27,11 @@ tags: [cambridge, essay, friends, fun, pics]
 </ul>
 
 <div id="myCarousel" class="carousel slide">
-    <script type="text/javascript"> 
+<!-- Totally kills the CPU so not using it -->
+<!--    <script type="text/javascript"> 
         $('.carousel').carousel({ interval: 4000 })
     </script>
+-->
     <div class="carousel-inner">
         <div class="item active">
             <img src="/images/jw-phd-viva/jw-phd-viva-01.jpg" alt="">
@@ -125,26 +127,6 @@ tags: [cambridge, essay, friends, fun, pics]
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
     <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
-
-<!--<ul class="thumbnails">
-    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-01.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-01.jpg" alt="" /></a></li>
-    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-02.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-02.jpg" alt="" /></a></li>
-    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-03.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-03.jpg" alt="" /></a></li>
-    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-04.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-04.jpg" alt="" /></a></li>
-    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-05.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-05.jpg" alt="" /></a></li>
-    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-06.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-06.jpg" alt="" /></a></li>
-    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-07.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-07.jpg" alt="" /></a></li>            
-    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-08.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-08.jpg" alt="" /></a></li>
-    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-09.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-09.jpg" alt="" /></a></li>
-    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-10.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-10.jpg" alt="" /></a></li>
-    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-11.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-11.jpg" alt="" /></a></li>
-    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-12.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-12.jpg" alt="" /></a></li>
-    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-13.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-13.jpg" alt="" /></a></li>
-    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-14.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-14.jpg" alt="" /></a></li>
-    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-15.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-15.jpg" alt="" /></a></li>
-</ul>-->
-
-
 
 I was at a good friend's PhD viva a couple of weeks ago and I was impressed with the 'pomp and circumstance' surrounding it.  Basically, the Dutch do PhD vivas/ceremonies way better than the Brits, especially given how much blood, sweat and tears are involved in getting to that stage.
 
