@@ -1,4 +1,5 @@
 /* Override some defaults */
+
 html, body {
   background-color: #f5f4ee;
 }
@@ -32,7 +33,20 @@ p small {
 .container {
   width: 940px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. AC changed it to 940*/
 }
+.carousel-control {
+  opacity: 0.25;
+  filter: alpha(opacity=25);
+}
 
+.carousel-caption {
+  padding: 2px 15px 2px;
+/*  background: #333333; */
+  background: rgba(0, 0, 0, 0);
+}
+/*.carousel-caption h4, .carousel-caption p {
+  color: #ffffff;
+}
+*/
 .hero-unit {
   background-color: #f5f4ee;
 }
