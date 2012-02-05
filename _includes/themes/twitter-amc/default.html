@@ -12,8 +12,8 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="{{ ASSET_PATH }}/2.0.0/bootstrap.css" rel="stylesheet">
-    <link href="{{ ASSET_PATH }}/2.0.0/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/css/bootstrap.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -64,18 +64,22 @@
       </div>
 
       <footer>
-        <p align="center">&copy; {{ site.author.name }} 2012 </p>
+        <p align="center"><small>&copy; {{ site.author.name }} 2012 </small></p>
       </footer>
 
     </div> <!-- /container -->
 
     {% include JB/analytics %}
-
+    
     <!-- Le javascripts
     ================================================== -->
+    <script src="{{ ASSET_PATH }}/js/jquery.js"></script>
+    <!--<script src="{{ ASSET_PATH }}/js/bootstrap.js"></script>-->
+    <script src="{{ ASSET_PATH }}/js/bootstrap-carousel.js"></script>
+
     <!-- Placed at the end of the document so the pages load faster
     <script src="{{ ASSET_PATH }}/js/tests/vendor/jquery.js"></script>
-    <script src="{{ ASSET_PATH }}/js/bootstrap-transition.js"></script>
+    <script src="{{ ASSET_PATH }}/2.0.0/js/bootstrap-transition.js"></script>
     <script src="{{ ASSET_PATH }}/js/bootstrap-collapse.js"></script> -->
 
   </body>
