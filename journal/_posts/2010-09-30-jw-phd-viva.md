@@ -9,49 +9,49 @@ tags: [cambridge, essay, friends, fun, pics]
 -->
 
 <ul class="thumbnails">
-    <li class="span1"><a href="/images/jw-phd-viva/DSC_3327.jpg"><img src="/images/jw-phd-viva/DSC_3327.jpg" alt="" /></a></li>
-    <li class="span1"><a href="/images/jw-phd-viva/DSC_3318.jpg"><img src="/images/jw-phd-viva/DSC_3318.jpg"></a></li>
-    <li class="span1"><a href="/images/jw-phd-viva/DSC_3341.jpg"><img src="/images/jw-phd-viva/DSC_3341.jpg" alt="" /></a></li>
-    <li class="span1"><a href="#"><img src="/images/jw-phd-viva/DSC_3369.jpg" alt="" /></a></li>
-    <li class="span1"><a href="#"><img src="/images/jw-phd-viva/DSC_3341.jpg" alt="" /></a></li>
-    <li class="span1"><a href="#"><img src="/images/jw-phd-viva/DSC_3369.jpg" alt="" /></a></li>
-    <li class="span1"><a href="#"><img src="/images/jw-phd-viva/DSC_3318.jpg" height="10"></a></li>                
-    <li class="span1"><a href="#"><img src="/images/jw-phd-viva/DSC_3369.jpg" alt="" /></a></li>
-    <li class="span1"><a href="#"><img src="/images/jw-phd-viva/DSC_3341.jpg" alt="" /></a></li>
-    <li class="span1"><a href="#"><img src="/images/jw-phd-viva/DSC_3369.jpg" alt="" /></a></li>
-    <li class="span1"><a href="#"><img src="/images/jw-phd-viva/DSC_3318.jpg" height="10"></a></li>                
-    <li class="span1"><a href="#"><img src="/images/jw-phd-viva/DSC_3369.jpg" alt="" /></a></li>
-    <li class="span1"><a href="#"><img src="/images/jw-phd-viva/DSC_3318.jpg" height="10"></a></li>                
-    <li class="span1"><a href="#"><img src="/images/jw-phd-viva/DSC_3369.jpg" alt="" /></a></li>
-    <li class="span1"><a href="#"><img src="/images/jw-phd-viva/DSC_3341.jpg" alt="" /></a></li>
+    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-01.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-01.jpg" alt="" /></a></li>
+    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-02.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-02.jpg" alt="" /></a></li>
+    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-03.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-03.jpg" alt="" /></a></li>
+    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-04.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-04.jpg" alt="" /></a></li>
+    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-05.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-05.jpg" alt="" /></a></li>
+    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-06.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-06.jpg" alt="" /></a></li>
+    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-07.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-07.jpg" alt="" /></a></li>            
+    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-08.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-08.jpg" alt="" /></a></li>
+    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-09.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-09.jpg" alt="" /></a></li>
+    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-10.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-10.jpg" alt="" /></a></li>
+    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-11.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-11.jpg" alt="" /></a></li>
+    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-12.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-12.jpg" alt="" /></a></li>
+    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-13.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-13.jpg" alt="" /></a></li>
+    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-14.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-14.jpg" alt="" /></a></li>
+    <li class="span1"><a href="/images/jw-phd-viva/jw-phd-viva-15.jpg"><img src="/images/jw-phd-viva/jw-phd-viva-15.jpg" alt="" /></a></li>
 </ul>
 
 <div id="myCarousel" class="carousel slide">
-            <div class="carousel-inner">
-              <div class="item active">
-                <img src="/images/jw-phd-viva/DSC_3327.jpg" alt="">
-                <div class="carousel-caption">
-                  <h4>First Thumbnail label</h4>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                </div>
-              </div>
-              <div class="item">
-                <img src="/images/jw-phd-viva/DSC_3318.jpg" alt="">
-                <div class="carousel-caption">
-                  <h4>Second Thumbnail label</h4>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                </div>
-              </div>
-              <div class="item">
-                <img src="/images/jw-phd-viva/DSC_3341.jpg" alt="">
-                <div class="carousel-caption">
-                  <h4>Third Thumbnail label</h4>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                </div>
-              </div>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="/images/jw-phd-viva/jw-phd-viva-01.jpg" alt="">
+            <div class="carousel-caption">
+                <h4>First Thumbnail label</h4>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
             </div>
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
+        <div class="item">
+            <img src="/images/jw-phd-viva/jw-phd-viva-02.jpg" alt="">
+            <div class="carousel-caption">
+                <h4>Second Thumbnail label</h4>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/images/jw-phd-viva/jw-phd-viva-03.jpg" alt="">
+            <div class="carousel-caption">
+                <h4>Third Thumbnail label</h4>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
 
 
