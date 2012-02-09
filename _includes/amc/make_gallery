@@ -1,0 +1,45 @@
+{% comment %}<!--
+
+The make_gallery include is a helper to make image galleries
+
+REQUIREMENTS
+  - The HTML/CSS is based on Twitter Bootstrap v2.0.0
+  - The name of the folder must be assigned before calling make_gallery
+  - The number of images to include must be assigned in advance
+  - Image filenames must be of the form "/example/example-1.jpg"
+  - Only worth using with 2+ images :)
+
+Example use in a blog post:
+
+  {% assign image_folder = 'my-awesome-holiday' %}
+  {% assign number_of_images = 31 %}
+  {% include amc/make_gallery %}
+
+-->{% endcomment %}
+
+<ul class="thumbnails">
+  {% for image_iter in (1..number_of_images) %}
+    <li class="span1"><a href="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg"><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg" alt="" /></a></li>
+  {% endfor %}
+</ul>
+
+<div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ 1 }}.jpg" alt="">
+            <div class="carousel-caption">
+                <h6 align="right">1 / {{ number_of_images }}</h6>
+            </div>
+        </div>
+        {% for image_iter in (2..number_of_images) %}
+        <div class="item">
+            <img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg" alt="">
+            <div class="carousel-caption">
+                <h6 align="right">{{ image_iter }} / {{ number_of_images }}</h6>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
