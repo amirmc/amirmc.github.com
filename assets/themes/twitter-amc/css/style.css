@@ -4,7 +4,7 @@ html, body {
   background-color: #f5f4ee;
 }
 
-/* Adjust the features of body text */
+/*  Body Text Styles  */
 body {
   padding-top: 0px; /* 40px to make the container go all the way to the bottom of the topbar */
 /*  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
@@ -12,7 +12,7 @@ body {
   line-height: 18px;
 }
 
-/* Adjust the features of links */
+/*  Hyperlink Styles */
 a {
   color: #bc7134;
   text-decoration: none;
@@ -22,7 +22,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Adjust the features of paragraph text */
+/*  Paragraph Text Styles */
 p {
   margin: 18px 0px 18px 0px;
 /*  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
@@ -32,6 +32,15 @@ p {
 p small {
   font-size: 11px;
   color: #999999;
+}
+
+/*  Lists Styles  */
+ul {
+  list-style: disc;
+  font-size: 18px;
+}
+li {
+  line-height: 23px;
 }
 
 .lead {
