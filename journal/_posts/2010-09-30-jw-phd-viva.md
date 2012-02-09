@@ -9,7 +9,7 @@ tags: [cambridge, essay, friends, fun, pics]
 -->
 
 {% assign image_folder = 'jw-phd-viva' %}
-{% assign number_of_images = 2 %}
+{% assign number_of_images = 15 %}
 {% include amc/make_gallery %}
 
 I was at a good friend's PhD viva a couple of weeks ago and I was impressed with the 'pomp and circumstance' surrounding it.  Basically, the Dutch do PhD vivas/ceremonies way better than the Brits, especially given how much blood, sweat and tears are involved in getting to that stage.
