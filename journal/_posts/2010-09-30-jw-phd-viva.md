@@ -1,9 +1,10 @@
 ---
 layout: post
-title: PhD Vivas - The Dutch do it better
+title: "PhD Vivas - The Dutch do it better"
 author: Amir Chaudhry
 tags: [cambridge, essay, friends, fun, pics]
 ---
+{% include JB/setup %}
 
 <!-- permalink: http://amirchaudhry.com/Phd-vivas-the-dutch-do-it-better
 -->

@@ -4,6 +4,7 @@ title: First Jekyll post on new personal site
 author: Amir Chaudhry
 tags: [jekyll, essay, web, learning]
 ---
+{% include JB/setup %}
 
 Test post.  Not to be kept
 
