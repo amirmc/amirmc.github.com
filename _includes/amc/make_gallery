@@ -17,12 +17,6 @@ Example use in a blog post:
 
 -->{% endcomment %}
 
-<ul class="thumbnails">
-  {% for image_iter in (1..number_of_images) %}
-    <li class="span1"><a href="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg"><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg" alt="" /></a></li>
-  {% endfor %}
-</ul>
-
 <div id="myCarousel" class="carousel slide">
     <div class="carousel-inner">
         <div class="item active">
@@ -43,3 +37,9 @@ Example use in a blog post:
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
     <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
+
+<ul class="thumbnails">
+  {% for image_iter in (1..number_of_images) %}
+    <li class="span1"><a href="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg"><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg" alt="" /></a></li>
+  {% endfor %}
+</ul>

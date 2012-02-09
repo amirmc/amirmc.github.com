@@ -2,13 +2,13 @@
 layout: post
 title: "Long overdue catchup post"
 category: 
-tags: []
+tags: [cambridge, essay, pics, startups]
 ---
 {% include JB/setup %}
 
 <!-- permalink: http://amirchaudhry.com/catchup-post-oct-dec -->
 
-# aka 'highlights of the last few months'
+## aka 'highlights of the last few months'
 
 It's been quite a while since I posted anything and it's time I did.  The last few months have been pretty busy so I thought I'd write some notes about the main items in one post and then we can pretend that I'm current again.  I'm well aware that the sheer size of this post means it's unlikely to be read fully by most people.  There are some pics so perhaps that might be enough to hold your interest :)
 

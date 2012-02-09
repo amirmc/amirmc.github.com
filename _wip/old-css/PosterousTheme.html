@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <meta charset="utf-8">
+    
+    <meta name="color:Background" content="#fff">
+      <meta name="color:Text" content="#424037">
+      <meta name="color:Post Title" content="#444">    
+      <meta name="color:Lighter Text" content="#999">
+      <meta name="color:Date" content="#C6C1A5">    
+      <meta name="color:Link" content="#bc7134">
+      <meta name="google-site-verification" content="gYzZF3ZOWRqVMm8GtXYKE6QVaTAsxQ98EsgkNvIFTqs" />
+      <link rel="icon" href="http://www.srcf.ucam.org/~amc79/img/favicon.png" type="image/x-png">
+      
+      <title>{PageTitle}</title>
+      <style>
+        * { margin: 0; padding: 0; }
+        header, footer, aside, section, article, nav { display: block; }
+        
+        .clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+      * html .clearfix             { zoom: 1; } /* IE6 */
+      *:first-child+html .clearfix { zoom: 1; } /* IE7 */
+      
+      /* browser fixes */
+        select { min-width:1.5em; }
+
+        /* global styles */
+        body, html { text-align: center; width: 100%; height: 100%; margin: 0; padding: 0; background-color: {color:Background}; font-family: Arial, Helvetica, sans-serif; color: {color:Text}; }
+        body { font-size: 62.5%; }
+        html { font-size: 100%; }
+        
+        p, ol, ul { margin: 10px 0; }
+        img { border: none; }
+        
+        ol { margin: 15px 0 15px 20px; }
+        ul { margin: 15px 0 15px 15px; }
+        pre { margin: 10px 0; }
+        
+        h1 { font-size: 3.2em; line-height: 1em; }
+        header h1 { letter-spacing: -1px; }
+        h2 { font-size: 1.8em; letter-spacing: -1px; }
+        h3 { font-size: 1.6em; letter-spacing: -0.5px; }
+        h4 { font-size: 1.4em; letter-spacing: -0.5px; }
+        h5 { font-size: 1.3em; }
+        h6 { font-size: 1.2em; }
+        
+        a { color: {color:Link}; text-decoration: none; }
+        a[name] { color: {color:Lighter Text}; text-decoration: none; }
+        a[name]:hover { text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        article h1 { font-size: 18px; }
+        article h2 { font-size: 16px; }
+        article h3 { font-size: 15px; }
+        article h4 { font-size: 14px; }
+        article h5 { font-size: 13px; }
+        article h6 { font-size: 12px; }
+        article h1, article h2, article h3, article h4, article h5, article h6 { margin-top: 30px; }
+        article header h1 { margin: 12px 0 0; font-size: 22px; padding-top: 0; float: left; width: 500px;}
+        article header h1 a { color: {color:Post Title}; }
+        article header h1 a:hover { color: {color:Lighter Text}; text-decoration: none; }
+        
+        div#wrap { margin: 0 auto; width: 900px; text-align: left; margin-top: -1px; border-top: 1px solid transparent;}
+        
+        aside#posterous_header a.logo { background: url('/images/posterous-header.png') no-repeat left top; width: 75px; height: 35px; text-indent: -9999px; display: inline; margin-left: -5px; float: left; margin-left: 150px; }
+        aside#posterous_header nav { float: right; margin-top: 10px; }
+        
+        header#page_header { width: 500px; margin-left: 155px; display: block; }
+        header#page_header hgroup { margin-top: 40px; {color:Lighter Text}; display: block; }
+        header#page_header hgroup a { color: {color:Lighter Text}; }
+        header#page_header hgroup a:hover { text-decoration: none; color: #ccc; }
+        header#page_header hgroup h2 { margin: 10px 0 30px; font-size: 1.4em; font-weight: normal; color: {color:Lighter Text}; letter-spacing: 0px;}
+        header#page_header h1.header_image { margin-top: 15px; }
+        
+      nav#navigation ul { margin-left: 0; }
+      nav#navigation ul li { list-style: none; display: inline-block; padding-right: 20px; margin: 0px 0px 10px 0px;}
+      nav#navigation ul li a { font-size: 17px; }
+      nav#navigation ul li a.current { color: {color:Lighter Text}; }
+      
+      section#extra_links { margin-bottom: 15px; overflow: hidden; }
+      section#extra_links a.back_to_blog { margin: 15px 0; font-size: 1.4em; display: block; }
+      section#extra_links h1 { color: #111; font-size: 18px; margin-bottom: 2px; }
+      section#extra_links h1 span { letter-spacing: 0; display: block; font-size: 10px; font-weight: normal; color: {color:Lighter Text}; }
+      section#extra_links div { height: 11px; }
+      section#extra_links a#global_tags { display: block; font-size: 10px; }
+      section#extra_links ul { color: {color:Lighter Text}; font-size: 10px; }
+      section#extra_links ul li { list-style: none; display: inline; padding-right: 10px; }
+      section#extra_links a#search_all { display: block; font-size: 10px; }
+      
+      form.search input.text { font-size: 12px; padding: 2px 2px 2px 20px; border: 1px solid #ccc; background: {color:Background} url('/images/icons/search16.png') no-repeat 3px 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+      form.search input.submit { font-size: 10px; padding: 2px; margin: 5px 10px 0 0; }
+      
+      aside#sidebar { float: right; width: 175px; margin-top: 20px; font-size: 1.2em; color: {color:Lighter Text}; }
+      aside#sidebar section { margin-bottom: 30px; }
+      aside#sidebar section h1 { font-size: 11px; font-weight: normal; color: {color:Lighter Text}; letter-spacing: 0; }
+      aside#sidebar section ul { margin: 0; }
+      aside#sidebar section ul li { list-style: none; color: {color:Lighter Text}; }
+      
+      section#profile h1 { margin: 0; }
+      section#profile img.profile_image { border: 1px solid #ccc; width: 75px; height: 75px; }
+      section#profile div.external { margin: 10px 0; }
+      section#profile > a { margin: 10px 0; display: block; }
+      
+      section#contributors li a img { width: 20px; height: 20px; border: 1px solid #ccc; vertical-align: middle; }
+      section#contributors li a { vertical-align: middle; }
+      section#contributors li a:first-child { text-decoration: none; padding-right: 3px;}
+      
+      section#statistics { font-size: 10px; color: {color:Lighter Text}; }
+      section#statistics strong { color: {color:Text}; }
+      section#statistics ul li { margin-bottom: 5px; }
+      
+      section#fans img { width: 20px; height: 20px; vertical-align: middle; border: 1px solid #ccc; }
+      
+      section#rss a { text-indent: -9999px; width: 14px; height: 14px; display: block; background: url('/images/feed-icon-14x14.png') no-repeat left top; }
+      aside#sidebar section#subscriptions { margin-bottom: 15px; }
+      section#tags li a span { font-size: 10px; }
+      section#tags li.selected a { color: {color:Text}; }
+      
+      div#articles { float: left; }
+      article { width: 655px; position: relative; margin-bottom: 35px; }
+      article header { width: 655px; padding-top: 5px; }
+      article header section { float: left; width: 130px; text-align: right; padding-top: 17px; margin-right: 25px; display: inline; }
+      article header aside.sms { font-size: 11px; color: {color:Lighter Text}; }
+      
+      div.editbox { position: absolute; top: 0; visibility: hidden; height: 16px; left: 155px; }
+      div.editbox ul.mini_commands { margin-top: 0px; }
+      article:hover div.editbox { visibility: visible; }
+      div.editbox a { color: {color:Lighter Text}; }
+        div.editbox a:hover { color: {color:Link}; }
+      
+      article time a { font-size: 14px; color: {color:Date}; }
+      article div.body { width: 500px; float: right; font-size: 1.2em; line-height: 1.8em; display: inline; }
+      article div.body div.inner { margin: 15px 0 0; }
+      article div.body div.inner > *:first-child { margin-top: 0; margin-bottom: 0; }
+      article div.body div.inner > p:first-child { margin-top: 15px; }
+      article div.body p, article div.body blockquote { margin: 15px 0 18px; }
+      article div.body div.posterousGalleryMainDiv { margin: 0 0 15px; }
+      
+      article footer { float: left; width: 655px; margin-top: 10px; }
+      footer section.author { float: right; }
+      footer section.author h1 { font-size: 10px; font-weight: normal; color: {color:Lighter Text}; margin: 0 0 5px; }
+      footer section.author h1 a { color: {color:Lighter Text}; }
+      footer section.author:hover h1 a { color: {color:Link}; text-decoration: none; }
+      footer section.author h1 a img { opacity: 0.5; width: 10px; height: 10px; vertical-align: middle; border: 1px solid #ccc; }
+      footer section.author:hover h1 a img { opacity: 1; width: 20px; height: 20px; }
+      
+      footer section.comments h1 { font-size: 12px; font-weight: normal; margin: 0 0 0 155px; }
+      footer section.comments section h1 { margin-bottom: 15px; padding-top: 40px; width: 500px; margin-left: 155px; border-bottom: 1px solid #ddd; padding-bottom: 2px; font-size: 16px; line-height: 20px; font-weight: bold; }
+      footer section.comments div.comment_area { width: 500px; margin-left: 155px; }
+      div.comment { float: left; width: 500px; margin-left: 25px; font-size: 12px; line-height: 20px; }
+/*      div.comment_loading_div { margin-left: 150px; }*/
+        div.comment_label { float: left; width: 130px; color: {color:Date}; 
+            font-size: 14px; padding-top: 2px; margin-top: 0px; text-align: right; }
+        div.comment_spacer { float: left; width: 130px; color: {color:Lighter Text}; height: 1px; text-align: right; display: block; }
+        div.comment_value { float: left; margin-left: 25px; width: 500px; line-height: 18px; font-size: 12px; }
+        div.comment_avatar { float: none; margin-top: 10px; }
+        div.commentunit div.profile_icon { margin-top: 5px; }
+        div.comment_date { color: {color:Date}; font-size: 14px; }
+        div.commentunit { margin: 10px 0px; color: {color:Text}; }
+        div.commentname { font-size: 12px; margin-bottom: 5px; }
+      
+      footer section.tags { color: #aaa; margin-bottom: 20px; }
+      footer section.tags h1 { font-size: 11px; margin: 0; padding-right: 5px; display: inline; }
+      footer section.tags h1 span { font-weight: normal;}
+      footer section.tags ul { margin: 0; display: inline; }
+      footer section.tags ul li { padding-right: 10px; display: inline; list-style: none; }
+      footer section.tags ul li a { color: #666; }
+      
+      footer section.locations { font-size: 10px; margin-top: 10px; margin-bottom: 20px; }
+      footer section.locations h1 { font-size: 11px; font-weight: normal; color: {color:Lighter Text}; line-height: 21px; margin-top: 0px; }
+      footer section.locations h2 { font-size: 11px; margin-top: 0px; }
+      footer section.locations ul { display: block; margin: 0; }
+      footer section.locations ul li { display: block; list-style: none; }
+      footer section.locations div.location_detail { margin-top: 20px; padding: 8px; background-color: #f9f9f9; border: 1px solid #eee; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; overflow: auto; }
+      footer section.locations div.location_detail div.map { float: left; width: 300px; height: 150px; }
+      footer section.locations div.location_detail div.summary { float: right; width: 172px; }
+      
+      footer section.share, footer section.tags, footer section.locations { width: 500px; margin-left: 155px; }
+
+      
+      footer#pagination { margin-left: 155px; width: 500px; padding-bottom: 50px; overflow: hidden; clear: both; }
+      .pagination { padding: 3px; margin: 3px; }
+        .pagination a { padding: 2px 5px; margin: 2px; border: 1px solid #ccc; text-decoration: none; color: #ccc; }
+        .pagination a:hover, .pagination a:active { border: 1px solid #ca9d00; color: {color:Link}; }
+        .pagination span.current { padding: 2px 5px; margin: 2px; font-weight: bold; border: 1px solid {color:Link}; background-color: {color:Link}; color: {color:Background}; }
+        .pagination span.disabled { padding: 2px 5px; margin: 2px; border: 1px solid #eee; color: #ddd; }
+        
+      footer section.share { height: 25px; }
+        div.ajaxResult { margin-bottom: 10px; color: #090; font-size: 10px; }
+      div.retweet { display: inline-block; background: url('/images/icons/services/twitter11.png') no-repeat left center; padding-left: 15px; min-width: 1px; min-height: 11px; }
+      div.facebook_like { display: inline-block; position: relative; top: 5px; margin-left: 10px;  }
+        
+        table { font-size: 11px; border: none; margin: 10px 0 0; border-spacing: 0px; line-height: 16px; text-align: left; }
+        td { border: none; border-bottom: 1px solid #eee; padding: 4px; margin: 0px; vertical-align: top; }
+        th { text-align: left; font-weight: bold; padding: 4px; border: none; border-bottom: 1px solid #ccc; vertical-align: bottom; }
+        hr { margin-top: 10px; margin-bottom: 10px; border: 1px solid #ddd; }
+        
+        input, select, textarea { color: {color:Post Title}; font-size: 1.6em; font-family: "Lucida Grande", sans-serif; 
+            line-height:1.3em !important; padding: 5px; }
+        input[type='text'], input[type='password'], select, textarea { background-color: {color:Background}; border: 1px solid #ccc; }
+        input[type='button'], input[type='submit'] { height: 2em; font-size: 1.4em; color: {color:Post Title}; margin-top: 10px; }
+        
+        div.posterousListComments div.comment, div.posterousAddNewComment div.comment, div.posterousAddNewComment div.comment_value { margin-left: 0; }
+        aside.private { position: relative; margin-top: 10px; }
+        aside.private:hover div.private_post_message { display: block; }
+        div.private_post_message { position: absolute; right: 0; top: 0; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: rgba(0,0,0,0.23) 0px 3px 10px; -moz-box-shadow: rgba(0,0,0,0.23) 0px 3px 10px; box-shadow: rgba(0,0,0,0.23) 0px 3px 10px; background: #f2f2f2; background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f2f2f2)); background: -moz-linear-gradient(top, #fff, #f2f2f2); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fff', endColorstr='#f2f2f2'); border: 1px solid #aaa; padding: 10px; width: 100px; display: none; text-align: left; }
+        div.private_post_message h1 { font-size: 11px; margin: 0 0 5px 0; padding: 0; float: none; width: auto; }
+        div.private_post_message p { font-size: 10px; margin: 0;}
+        div.posterous_retweet_widget { margin: 0px 0px 10px; }
+      </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <aside id="posterous_header" class="clearfix">
+        <a href="{PosterousURL}" title="Posterous" class="logo">Posterous</a>
+        <nav>{PosterousBar}</nav>
+      </aside>
+      <header id="page_header">
+        {block:HeaderImage}
+          <h1 class="header_image"><a href="{SiteURL}" title="{Title}" rel="index"><img src="{HeaderImageURL-500}" alt="{Title} - {Description}"></a></h1>
+        {Else}
+          <hgroup>
+            <h1><a href="{SiteURL}" title="{Title}" rel="index">{Title}</a></h1>
+            {block:Description}
+              <h2>{Description}</h2>
+            {/block:Description}
+          </hgroup>
+        {/block:HeaderImage}
+        {block:HasPages}
+          <nav id="navigation">
+                <ul>
+                  {block:Pages}
+                    <li><a href="{URL}" class="{Current}" rel="{External}">{Label}</a></li>
+                  {/block:Pages}
+                </ul>
+              </nav>
+            {/block:HasPages}
+            <section id="extra_links">
+          {block:Show}
+            <a href="{BlogURL}" rel="up" class="back_to_blog">&laquo; Back to blog</a>
+          {/block:Show}
+          {block:Tag}
+            <h1><span>Filed under</span>{Tag}</h1>
+            <div>
+              <a href="{GlobalTagURL}" style="display:none" id="global_tags">See all posts on Posterous with this tag &raquo;</a>
+            </div>
+            {block:ShowOnHover action_id="extra_links" hidden_div="global_tags"/}
+          {/block:Tag}
+          {block:SearchPage}
+            <h1>
+              {block:SearchResultOne}One result found searching for{/block:SearchResultOne}
+                          {block:SearchResultMany}{SearchResultCount} results found searching for{/block:SearchResultMany}
+                          {block:SearchResultNone}No results found searching for{/block:SearchResultNone}
+                      </h1>
+                      <form class="search">
+                        <input type="hidden" name="sort" value="{SearchSort}">
+                        <input type="text" name="search" class="text" value="{SearchQuery}">
+                        <input type="submit" value="Search" class="submit"><a href="{CurrentURL}">clear</a>
+                      </form>
+                      <ul>
+                        <li>Sort by</li>
+                        <li>{block:SearchSortBestmatch}Best match{Else}<a href="{CurrentURL}?search={SearchQuery}&amp;sort=bestmatch">Best match</a>{/block:SearchSortBestmatch}</li>
+                        <li>{block:SearchSortRecent}Most recent{Else}<a href="{CurrentURL}?search={SearchQuery}&amp;sort=recent">Most recent</a>{/block:SearchSortRecent}</li>
+                        <li>{block:SearchSortInteresting}Most interesting{Else}<a href="{CurrentURL}?search={SearchQuery}&amp;sort=interesting">Most interesting</a>{/block:SearchSortInteresting}</li>
+                      </ul>
+                      <a href="{PosterousURL}/explore/?search={SearchQuery}" id="search_all">Search all of Posterous for <strong>{SearchQuery}</strong> &raquo;</a>
+          {/block:SearchPage}
+        </section>
+      </header>
+      <aside id="sidebar">
+        {block:ListSidebar}
+          {block:Claimed}
+            <section id="profile">
+              <h1>
+                <a href="{ProfileLink}" title="{OwnerName}'s profile">
+                  <img src="{PortraitURL-45}" alt="{OwnerName}" class="profile_image">
+                </a>
+              </h1>
+              <p>{Profile}</p>
+              <div class="external">{ProfileExternalLinks}</div>
+              <a href="https://github.com/amirmc/"><img alt="amirmc on GitHub" style="border-width:0" src="http://www.srcf.ucam.org/~amc79/img/github_16.png"/></a>
+              <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons Licence" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+              <a href="{ProfileLink}">{OwnerName}'s profile&nbsp;&raquo;</a>
+            </section>
+            {block:Contributors}
+              <section id="contributors">
+                <h1>Contributors</h1>
+                <ul>
+                  {block:Contributor collapsible="true" count="10" action_id="see_more_contributors"}
+                    {block:ContributorMore}
+                      <li><a href="#" id="see_more_contributors">View all {NumContributors} contributors &raquo;</a></li>
+                    {/block:ContributorMore}
+                    <li>
+                      <a href="{ContributorProfileLink}" rel="contributor" title="{ContributorName}'s profile">
+                        <img src="{ContributorPortraitURL-20}" alt="{ContributorName}">
+                      </a>
+                      <a href="{ContributorProfileLink}" rel="contributor">{ContributorName}</a>
+                    </li>
+                  {/block:Contributor}
+                </ul>
+              </section>
+            {/block:Contributors}
+            {block:NotSearchOrTag}
+              <section id="search">
+                <form class="search">
+                  <input type="hidden" name="sort" value="{SearchSort}">
+                  <input type="text" name="search" class="text" value="{SearchQuery}" id="searchbox">
+                  <input type="submit" value="Search" class="submit" id="searchbox_button" style="display:none">
+                </form>
+                {block:SearchBox searchbox_button="searchbox_button" searchbox="searchbox"/}
+              </section>
+            {/block:NotSearchOrTag}
+            {block:HasLinks}
+              {block:LinkCategories}
+                <section class="links">
+                  <h1>{Label}</h1>
+                  <ul>
+                    {block:Links}
+                      <li><a href="{URL}" rel="external">{Label}</a></li>
+                    {/block:Links}
+                  </ul>
+                </section>
+              {/block:LinkCategories}
+            {/block:HasLinks}
+            {block:TagList}
+              <section id="tags">
+                <h1>Tags</h1>
+                <ul>
+                  {block:TagListing collapsible="true" count="10" action_id="see_more_tags"}
+                    {block:TagListingMore}
+                      <li><a href="#" id="see_more_tags">View all {NumTags} tags &raquo;</a></li>
+                    {/block:TagListingMore}
+                    {block:TagItem}
+                      <li><a href="{TagLink}">{TagName}</a> <span>({TagCount})</span></li>
+                    {/block:TagItem}
+                    {block:TagItemSelected}
+                      <li class="selected"><a href="{TagLink}">{TagName}</a> <span>({TagCount})</span></li>
+                    {/block:TagItemSelected}
+                  {/block:TagListing}
+                </ul>
+              </section>
+            {/block:TagList}
+            {block:Subscription}
+              <section id="subscriptions">
+                {block:SubscriptionUnsubscribed action_id="subscribe_link" content_div="subscribe"}
+                  <div id="subscribe">
+                    <a href="{SubscribeLink}" id="subscribe_link">Subscribe to this posterous &raquo;</a>
+                  </div>
+                {/block:SubscriptionUnsubscribed}
+                {block:SubscriptionSubscribed action_id="unsubscribe_link" content_div="unsubscribe"}
+                  <div id="unsubscribe">
+                    <a href="{UnsubscribeLink}" id="unsubscribe_link">Unsubscribe &raquo;</a>
+                  </div>
+                {/block:SubscriptionSubscribed}
+                {block:SubscriptionLoading}
+                                <img src="/images/loading.gif" alt="Loading...">            
+                            {/block:SubscriptionLoading}
+              </section>
+            {/block:Subscription}
+            {block:NotSearchOrTag}
+              <section id="rss">
+                <a href="{RSS}" rel="alternate" type="application/rss+xml">Subscribe via RSS</a>
+              </section>
+            {/block:NotSearchOrTag}
+          {/block:Claimed}
+        {/block:ListSidebar}
+        {block:ShowSidebar}
+          <section id="statistics">
+            <ul>
+              <li>Viewed <strong>{PostViews} times</strong></li>
+              <li>Favorited <strong><a href="#" id="fans_link" onclick="return false;" title="View fans of this post">{FavoriteCount} times</a></strong></li>
+            </ul>
+          </section>
+          <section id="fans" style="display:none">
+            <div>
+            {block:Fans}
+              <h1>Fans of this post</h1>
+              <ul>
+                {block:Fan}
+                  <li>
+                    <a href="{FanProfileLink}" rel="nofollow" title="{FanName}'s profile">
+                      <img src="{FanPortraitURL-20}" alt="{FanName}">
+                    </a>
+                    <a href="{FanProfileLink}" rel="nofollow">{FanName}</a>
+                  </li>
+                {/block:Fan}
+              </ul>
+            {/block:Fans}
+            </div>
+            {block:ShowOnClick action_id="fans_link" hidden_div="fans"/}
+          </section>
+          {block:TagList}
+            <section id="tags">
+              <h1>Filed under</h1>
+              <ul>
+                {block:TagListing}
+                  <li><a href="{TagLink}" rel="tag">{TagName}</a></li>
+                {/block:TagListing}
+              </ul>
+            </section>
+          {/block:TagList}
+        {/block:ShowSidebar}
+        {block:NotClaimed}
+          <section>
+            <div class="external">{UnclaimedExternalLinks}</div>
+            {NotClaimedCode}
+          </section>
+        {/block:NotClaimed}
+      </aside>
+      <div id="articles">
+        {block:Posts}
+          <article class="post clearfix" id="post_{PostID}">
+            <header>
+              <section>
+                {block:NewDayDate}
+                  <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate="pubdate"><a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a></time>
+                {/block:NewDayDate}
+                {block:Private}
+                  <aside class="private">
+                    <a href="{Permalink}" class="tooltip_link"><img src="/images/icons/lock12.png"></a>
+                    <div class="private_post_message">
+                      <h1>Private Post</h1>
+                      <p>This post has a secret URL and not linked on your public blog. Send the secret URL to share it with anyone.</p>
+                    </div>
+                  </aside>
+                {/block:Private}
+              </section>
+              {block:Title}
+                <h1><a href="{Permalink}">{Title}</a></h1>
+              {/block:Title}
+              {block:SMS}
+                <aside class="sms">Posted from my mobile phone (SMS)</aside>
+              {/block:SMS}
+              <div class="editbox">
+                {block:EditBox}
+                  {EditBoxContents}
+                {/block:EditBox}
+              </div>
+            </header>
+            <div class="body">
+              <div class="inner">
+                {Body}
+              </div>
+            </div>
+            <footer>
+              {block:Retweet}
+                <section class="share">
+                  <div class="retweet">
+                    <a href="{RetweetLink}" class="retweet" rel="external"><span id="retweet_count_{PostID}">{NumRetweets} <span id="retweet_count_label_{PostID}">mentions</span></span></a>
+                  </div>
+                  {RetweetButton}
+                  <div class="facebook_like"><fb:like href="{Permalink}" layout="button_count"></fb:like></div>
+                </section>
+              {/block:Retweet}
+              {block:List}
+                {block:TagList}
+                  <section class="tags">
+                    <h1>Filed under<span>&nbsp; //</span></h1>
+                    <ul>
+                      {block:TagListing}
+                        <li><a href="{TagLink}" rel="tag">{TagName}</a></li>
+                      {/block:TagListing}
+                    </ul>
+                  </section>
+                {/block:TagList}
+              {/block:List}
+              {block:PostLocations}
+                <section class="locations clearfix">
+                  <h1 id="location_collapsed_{PostID}">Posted from <a href="#" id="post_location_expander_{PostID}" onclick="return false;">{LocationsSummary}</a></h1>
+                  <div class="location_detail" style="display:none" id="post_location_expanded_{PostID}">
+                    <div class="map">
+                      {MapIframe}
+                    </div>
+                    <div class="summary">
+                      <h2>Posted from</h2>
+                      <ul>
+                        {block:PostLocation uniq_by="summary"}
+                          <li>{LocationSummary}</li>
+                        {/block:PostLocation}
+                      </ul>
+                    </div>
+                  </div>
+                  {block:ShowOnClick action_id="post_location_expander_{PostID}" hidden_div="post_location_expanded_{PostID}" to_hide_id="location_collapsed_{PostID}"/}
+                </section>
+              {/block:PostLocations}
+              {block:ShowOrList}
+                {block:Author}
+                  <section class="author">
+                    {block:AuthorUser}
+                      <h1>Posted by <a href="{AuthorURL}" rel="author">{AuthorName} <img src="{AuthorPortraitURL-35}" alt="{AuthorName}"></a></h1>
+                    {/block:AuthorUser}
+                    {block:AuthorEmail}
+                      <h1>Posted by email</h1>
+                    {/block:AuthorEmail}
+                  </section>
+                {/block:Author}
+                {block:Comments}
+                  <section class="comments">
+                    {block:CommentsList action_id="comment_link_{PostID}" target_element="post_commentarea_{PostID}"}
+                      <h1><a href="{Permalink}#comment" id="comment_link_{PostID}">Comments</a> [{CommentCount}]</h1>
+                      <div id="post_commentarea_{PostID}" class="comment_area"></div>
+                    {/block:CommentsList}
+                    {block:CommentsShow}
+                      <a name="comment"></a>
+                      <section class="comments_list">
+                        <h1>Comments ({CommentCount})</h1>
+                        {CommentCode}
+                      </section>
+                      <section class="comment_create">
+                        <h1>Leave a comment...</h1>
+                        {NewCommentCode}
+                      </section>
+                    {/block:CommentsShow}
+                  </section>
+                {/block:Comments}
+                {block:Favorite hover_id="post_{PostID}" position_id="post_{PostID}"/}
+              {/block:ShowOrList}
+            </footer>
+          </article>
+        {/block:Posts}
+      </div>
+      {block:List}
+        <footer id="pagination">
+          {block:Pagination/}
+        </footer>
+      {/block:List}
+    </div>
+  </body>
+</html>​
