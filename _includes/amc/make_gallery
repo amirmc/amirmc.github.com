@@ -43,3 +43,5 @@ Example use in a blog post:
     <li class="span1"><a href="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg"><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg" alt="" /></a></li>
   {% endfor %}
 </ul>
+{% assign image_folder = nil %}
+{% assign number_of_images = nil %}

@@ -35,13 +35,19 @@ p small {
 }
 
 /*  Lists Styles  */
-ul {
+ul.posts {
   list-style: disc;
   font-size: 18px;
 }
-li {
+li.posts {
   line-height: 23px;
 }
+li.tags {
+  line-height: 18px;
+}
+
+
+
 
 .lead {
   margin-bottom: 18px;
