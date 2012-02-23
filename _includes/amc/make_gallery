@@ -1,12 +1,13 @@
 {% comment %}<!--
 
-The make_gallery include is a helper to make image galleries
+The make_gallery include is a helper to make image galleries with thumbnails below the carousel.
 
 REQUIREMENTS
   - The HTML/CSS is based on Twitter Bootstrap v2.0.0
   - The name of the folder must be assigned before calling make_gallery
   - The number of images to include must be assigned in advance
   - Image filenames must be of the form "/example/example-1.jpg"
+  - Thumbnail images must be of the form "/example/example-thumb-1.jpg"
   - Only worth using with 2+ images :)
 
 Example use in a blog post:
@@ -16,7 +17,6 @@ Example use in a blog post:
   {% include amc/make_gallery %}
 
 $('#myCarousel').carousel( 2 )
-
 
 -->{% endcomment %}
 <div id="gallery_{{ image_folder }}" class="gallery">
@@ -43,20 +43,10 @@ $('#myCarousel').carousel( 2 )
 
   <ul class="thumbnails">
     {% for image_iter in (1..number_of_images) %}
-      <li class="span1"><a href="#pics-{{ image_folder }}" data-position="{{ image_iter }}"><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg" alt="" /></a></li>
+      <li class="span1" align="center"><a href="#pics-{{ image_folder }}" data-position="{{ image_iter }}"><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-thumb-{{ image_iter }}.jpg" alt="" /></a></li>
     {% endfor %}
   </ul>
 </div>
-
-
-{% comment %}<!--
-<h4>Second set</h4>
-<ul class="thumbnails">
-  {% for image_iter in (1..number_of_images) %}
-    <li class="span1"><a href="#pics-{{ image_folder }}" onclick=><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg" alt="" /></a></li>
-  {% endfor %}
-</ul>
--->{% endcomment %}
 
 {% assign image_folder = nil %}
 {% assign number_of_images = nil %}
