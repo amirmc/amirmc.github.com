@@ -103,6 +103,7 @@ As always there have been a bunch of events and startup-related items in the las
 {% assign number_of_images = 10 %}
 {% include amc/make_gallery %}
 
+
 ## ... and finally
 
 I managed to get this done in October.  Took a while.

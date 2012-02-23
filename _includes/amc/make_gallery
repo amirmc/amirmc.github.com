@@ -15,33 +15,48 @@ Example use in a blog post:
   {% assign number_of_images = 31 %}
   {% include amc/make_gallery %}
 
--->{% endcomment %}
+$('#myCarousel').carousel( 2 )
 
-<div id="myCarousel" class="carousel slide">
-    <div class="carousel-inner">
-        <div class="item active">
-            <img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ 1 }}.jpg" alt="">
-            <div class="carousel-caption">
-                <h6 align="right">1 / {{ number_of_images }}</h6>
-            </div>
-        </div>
-        {% for image_iter in (2..number_of_images) %}
-        <div class="item">
-            <img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg" alt="">
-            <div class="carousel-caption">
-                <h6 align="right">{{ image_iter }} / {{ number_of_images }}</h6>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+
+-->{% endcomment %}
+<div id="gallery_{{ image_folder }}" class="gallery">
+  <div id="pics-{{ image_folder }}" class="carousel slide">
+      <div class="carousel-inner">
+          <div class="item active" align="center">
+              <img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ 1 }}.jpg" alt="">
+              <div class="carousel-caption">
+                  <h6 align="right">1 / {{ number_of_images }}</h6>
+              </div>
+          </div>
+          {% for image_iter in (2..number_of_images) %}
+          <div class="item" align="center">
+              <img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg" alt="">
+              <div class="carousel-caption">
+                  <h6 align="right">{{ image_iter }} / {{ number_of_images }}</h6>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+      <a class="left carousel-control" href="#pics-{{ image_folder }}" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#pics-{{ image_folder }}" data-slide="next">&rsaquo;</a>
+  </div>
+
+  <ul class="thumbnails">
+    {% for image_iter in (1..number_of_images) %}
+      <li class="span1"><a href="#pics-{{ image_folder }}" data-position="{{ image_iter }}"><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg" alt="" /></a></li>
+    {% endfor %}
+  </ul>
 </div>
 
+
+{% comment %}<!--
+<h4>Second set</h4>
 <ul class="thumbnails">
   {% for image_iter in (1..number_of_images) %}
-    <li class="span1"><a href="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg"><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg" alt="" /></a></li>
+    <li class="span1"><a href="#pics-{{ image_folder }}" onclick=><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg" alt="" /></a></li>
   {% endfor %}
 </ul>
+-->{% endcomment %}
+
 {% assign image_folder = nil %}
 {% assign number_of_images = nil %}
