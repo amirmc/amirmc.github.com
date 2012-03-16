@@ -38,9 +38,17 @@ p small {
 ul.posts {
   list-style: disc;
   font-size: 18px;
+  margin: 0 0 9px 25px;
 }
+ul.archive {
+  list-style: none;
+/*  font-size: 18px; */
+  margin: 0 0 0px 25px;
+}
+
 li.posts {
   line-height: 23px;
+  font-size: 18px;
 }
 li.tags {
   line-height: 18px;
@@ -61,9 +69,9 @@ li.tags {
 .container > footer p {
   text-align: center; /* center align it with the container */
 }
-.container {
-  width: 940px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. AC changed it to 940*/
-}
+/*.container {
+  width: 940px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. AC changed it to 940
+}*/
 
 /* Control buttons on the bootstrap carousel */
 .carousel-control {
@@ -154,8 +162,8 @@ li.tags {
 .tag_box a {
 	padding: 3px 6px;
 	margin: 2px;
-	background: #eee;
-	color:#005F6B;
+/*	background: #eee;
+	color:#005F6B; */
 	border-radius: 3px;
 	text-decoration:none;
 }
