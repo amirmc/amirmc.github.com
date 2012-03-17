@@ -10,14 +10,17 @@ Visitor at [Cambridge Computer Lab][]
 
 Board Observer at [TidePowerd][]
 
-Co-founder of [Springboard][]
+Exec Committee at [SVc2UK][]
 
-Committee at [SVc2UK][]
+Co-founder of [Springboard][]
 
 Advisor at [CU Entrepreneurs][]
 
+Senior Member at [Darwin College][]
+
 [Cambridge Computer Lab]: http://www.cl.cam.ac.uk
-[TidePowerd]: http://www.tidepowerd.com
+[CU Entrepreneurs]: http://www.cue.org.uk
+[Darwin College]: http://www.darwin.cam.ac.uk
 [Springboard]: http://springboard.com
 [SVc2UK]: http://svc2uk.com
-[CU Entrepreneurs]: http://www.cue.org.uk
+[TidePowerd]: http://www.tidepowerd.com
