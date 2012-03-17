@@ -26,6 +26,11 @@ a:hover {
   text-decoration: underline;
 }
 
+img { /* merged changed from bootstrap v2.0.0 and v2.0.2 */
+  max-width: 100%;
+  vertical-align: middle;
+}
+
 /*  Paragraph Text Styles */
 p {
   margin: 18px 0px 18px 0px;
