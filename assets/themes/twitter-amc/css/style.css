@@ -4,6 +4,10 @@ html, body {
   background-color: #f5f4ee;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 /*  Body Text Styles  */
 body {
   padding-top: 0px; /* 40px to make the container go all the way to the bottom of the topbar */
