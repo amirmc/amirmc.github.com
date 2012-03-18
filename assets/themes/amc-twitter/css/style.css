@@ -25,6 +25,14 @@ a:hover {
   color: #bc7134;
   text-decoration: underline;
 }
+a.post-title {
+  color: #444444;
+}
+a.post-title:hover {
+  color: #999999;
+  text-decoration: none;
+}
+
 
 img { /* merged changed from bootstrap v2.0.0 and v2.0.2 */
   max-width: 100%;
