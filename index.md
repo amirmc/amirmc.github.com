@@ -1,40 +1,53 @@
 ---
-layout: page
+layout: default
 title: Amir Chaudhry
 ---
 {% include JB/setup %}
 
-<!--
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
+<div class="row">
+  <div class="span7 offset2">
+    <div class="page-header">
+      <h1>{{ page.title }} <br />
+        <small>thoughts, comments &amp; general ramblings</small></h1>
+    </div>
+  </div>
+</div>
 
-    $ rm -rf _posts/core-samples
+<div class="row">
+  <div class="span7 offset2">
+  <!--
+  This blog contains sample posts which help stage pages and blog data.
+  When you don't need the samples anymore just delete the `_posts/core-samples` folder.
 
-Here's a sample "posts list".
+      $ rm -rf _posts/core-samples
 
-<ul class="posts">
+  Here's a sample "posts list".
+
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li class="posts"><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  -->
+
   {% for post in site.posts %}
-    <li class="posts"><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+  <br />
+
+  <br />
+
+  <h1><a class="post-title" href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
+  <h6>{{ post.date | date_to_string }}</h6>
+  <br />
+  {{ post.content }}
+  <a href="{{ BASE_PATH }}{{ post.url }}#comments">Comments</a>
+  <hr>
   {% endfor %}
-</ul>
 
--->
+  <br />
 
-{% for post in site.posts %}
-<br />
+  <br />
 
-<br />
-
-<h1><a class="post-title" href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
-<h6>{{ post.date | date_to_string }}</h6>
-<br />
-{{ post.content }}
-<a href="{{ BASE_PATH }}{{ post.url }}#comments">Comments</a>
-<hr>
-{% endfor %}
-
-<br />
-
-<br />
-
-<h2 align='center'><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">See all posts...</a></h2>
+  <h2 align='center'><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">See all posts...</a></h2>
+  </div>
+</div>
