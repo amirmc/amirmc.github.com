@@ -7,10 +7,20 @@ title: Amir Chaudhry
 <div class="row">
   <div class="span7 offset2">
     <div class="page-header">
-      <h1>{{ page.title }} <br />
-        <small>thoughts, comments &amp; general ramblings</small></h1>
+      <h1 class="head-title">{{ page.title }} <br /></h1>
+        <h2 class="head-title"><small>thoughts, comments &amp; general ramblings</small></h2>
     </div>
   </div>
+
+  <div class="span7 offset2">
+    <div class="head-nav">
+      <a href="{{ site.JB.production_url }}">home</a>
+      <a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">journal</a>
+      <a href="{{ BASE_PATH }}freebusy">free/busy</a>
+      <a href="{{ BASE_PATH }}about">about</a>
+    </div>
+  </div>
+
 </div>
 
 <div class="row">
@@ -48,6 +58,6 @@ title: Amir Chaudhry
 
   <br />
 
-  <h2 align='center'><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">See all posts...</a></h2>
+  <h3><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">More posts</a></h3>
   </div>
 </div>
