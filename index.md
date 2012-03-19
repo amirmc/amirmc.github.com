@@ -4,7 +4,7 @@ title: Amir Chaudhry
 ---
 {% include JB/setup %}
 
-<div class="row">
+<!--<div class="row">
   <div class="span7 offset2">
     <div class="page-header">
       <h1 class="head-title">{{ page.title }} <br /></h1>
@@ -22,7 +22,7 @@ title: Amir Chaudhry
   </div>
 
 </div>
-
+-->
 <div class="row">
   <div class="span7 offset2">
   <!--

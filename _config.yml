@@ -10,7 +10,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Amir Chaudhry
-tagline: thoughts, comments and general ramblings
+tagline: thoughts, comments &amp; general ramblings
 author :
   name : Amir Chaudhry
   email : 
@@ -59,6 +59,10 @@ JB :
   archive_path: /journal/
   categories_path : /categories.html
   tags_path : /tags.html
+
+  freebusy_path : /freebusy/  # Added by amc (19 Mar 12) for new nav
+  about_path : /about/        # Added by amc (19 Mar 12) for new nav
+
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
