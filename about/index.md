@@ -6,6 +6,8 @@ group: navigation
 ---
 {% include JB/setup %}
 
+### About me
+
 Visitor at [Cambridge Computer Lab][]
 
 Board Observer at [TidePowerd][]
@@ -24,3 +26,27 @@ Senior Member at [Darwin College][]
 [Springboard]: http://springboard.com
 [SVc2UK]: http://svc2uk.com
 [TidePowerd]: http://www.tidepowerd.com
+
+<br />
+
+#### Links
+
+> [twitter][], [linkedin][], [github][], [hacker news][].
+
+[twitter]: http://twitter.com/amirmc
+[linkedin]: http://www.linkedin.com/in/amirchaudhry
+[github]: https://github.com/amirmc/
+[hacker news]: http://news.ycombinator.com/threads?id=amirmc
+
+<br />
+
+<br />
+
+#### About this site
+
+####### Built using [GitHub Pages][] with help from [Jekyll Bootstrap][] and [Twitter Bootstrap][] (as if you couldn't guess from that damn nav-bar).
+
+
+[GitHub Pages]: http://pages.github.com/
+[Jekyll Bootstrap]: http://jekyllbootstrap.com/
+[Twitter Bootstrap]: http://twitter.github.com/bootstrap/
