@@ -1,22 +1,38 @@
 ---
-layout: archpage
+layout: default
 title: Journal
 header: Journal Archive
 group: navigation
+description: Archive of Amir Chaudhry's Journal Posts
 ---
 {% include JB/setup %}
 
-<div class="span7 offset2">
-{% assign posts_collate = site.posts %}
-{% include amc/posts_collate %}
-</div>
 
-<div class="span2">
-{% unless page.tags == empty %}
-  <h4>All Tags</h4>
-  <ul class="tag_box">
-    {% assign tags_list = site.tags %}  
-    {% include JB/tags_list %}
-  </ul>
-{% endunless %}  
+<div class="row">
+  <div class="span12">
+    <div class="row">
+      <div class="span9">
+
+        <div class="row">
+          <!-- <div class="span2">  
+          </div> -->
+          <div class="span7 offset2">
+            {% assign posts_collate = site.posts %}
+            {% include amc/posts_collate %}
+          </div>
+        </div>
+      </div>
+      <div class="span3">
+        <h4>Sidebar goes here</h4>
+        <br />
+        {% unless page.tags == empty %}
+        <h4>All Tags</h4>
+        <ul class="tag_box">
+          {% assign tags_list = site.tags %}
+          {% include JB/tags_list %}
+        </ul>
+        {% endunless %}  
+      </div>
+    </div>
+  </div>
 </div>
