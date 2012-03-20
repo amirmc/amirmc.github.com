@@ -137,9 +137,15 @@ li.tags {
 
 
 .post-date {
-  line-height: 30px;
+  padding: 6px 0px 0px 0px;
   color: #999999;
   font-size: 13px;
+}
+
+/* sidebar  ==================================================== */
+
+.sidebar {
+  padding: 4px 0px 0px 0px;
 }
 
 /* nav  ======================================================== */
