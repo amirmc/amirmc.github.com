@@ -55,6 +55,8 @@ p small {
 }
 
 /*  Lists Styles  */
+/*working on sorting out li styles to avoid tags and header objects to be changed
+*/
 ul.posts {
   list-style: disc;
   font-size: 18px;
@@ -73,9 +75,6 @@ li.posts {
 li.tags {
   line-height: 18px;
 }
-
-/*working on sorting out li styles to avoid tags and header objects to be changed
-*/
 
 
 .lead {
@@ -110,20 +109,6 @@ li.tags {
 }
 */
 
-.hero-unit {
-  background-color: #f5f4ee;
-}
-
-.navbar-inner {
-  background-color: #cbcbcb;
-}
-.btn-navbar {
-  background-color: #cbcbcb;
-}
-
-.navbar .brand {
-  font-size: 20px;
-}
 
 /* The white background content wrapper */
 .content {
@@ -149,24 +134,10 @@ li.tags {
   color: #999999;
 }
 
-.topbar .btn {
-  border: 0;
-}
-
-.btn-custom {
-  background-color: hsl(103, 52%, 29%);
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(hsl(103, 52%, 65%)), to(hsl(103, 52%, 29%)));
-  background-image: -moz-linear-gradient(top, hsl(103, 52%, 65%), hsl(103, 52%, 29%));
-  background-image: -ms-linear-gradient(top, hsl(103, 52%, 65%), hsl(103, 52%, 29%));
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, hsl(103, 52%, 65%)), color-stop(100%, hsl(103, 52%, 29%)));
-  background-image: -webkit-linear-gradient(top, hsl(103, 52%, 65%), hsl(103, 52%, 29%));
-  background-image: -o-linear-gradient(top, hsl(103, 52%, 65%), hsl(103, 52%, 29%));
-  background-image: linear-gradient(top, hsl(103, 52%, 65%), hsl(103, 52%, 29%));
-  border-color: hsl(103, 52%, 29%) hsl(103, 52%, 29%) hsl(103, 52%, 20%);
-  color: #fff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.59);
-  -webkit-font-smoothing: antialiased;
+.post-date {
+  line-height: 30px;
+  color: #999999;
+  font-size: 13px;
 }
 
 /* nav  ======================================================== */
@@ -189,20 +160,9 @@ li.tags {
 /*  background-color: #eeeeee; */
   color: #999999;
 }
-/*.head-nav {
-  display: block;
-  padding: 3px 15px;
-  font-size: 11px;
-  font-weight: bold;
-  line-height: 18px;
-  color: #999999;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
-}*/
 .head-nav li {
   margin-top: 9px;
 }
-
 
 /* tag_box ======================================================== */
 
@@ -235,4 +195,42 @@ li.tags {
 	border:1px solid #4C964D;
 	color:#FFF;
 }
-	
+
+/* random ======================================================== */
+/*
+
+.hero-unit {
+  background-color: #f5f4ee;
+}
+
+.navbar-inner {
+  background-color: #cbcbcb;
+}
+.btn-navbar {
+  background-color: #cbcbcb;
+}
+
+.navbar .brand {
+  font-size: 20px;
+}
+
+.topbar .btn {
+  border: 0;
+}
+
+.btn-custom {
+  background-color: hsl(103, 52%, 29%);
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(hsl(103, 52%, 65%)), to(hsl(103, 52%, 29%)));
+  background-image: -moz-linear-gradient(top, hsl(103, 52%, 65%), hsl(103, 52%, 29%));
+  background-image: -ms-linear-gradient(top, hsl(103, 52%, 65%), hsl(103, 52%, 29%));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, hsl(103, 52%, 65%)), color-stop(100%, hsl(103, 52%, 29%)));
+  background-image: -webkit-linear-gradient(top, hsl(103, 52%, 65%), hsl(103, 52%, 29%));
+  background-image: -o-linear-gradient(top, hsl(103, 52%, 65%), hsl(103, 52%, 29%));
+  background-image: linear-gradient(top, hsl(103, 52%, 65%), hsl(103, 52%, 29%));
+  border-color: hsl(103, 52%, 29%) hsl(103, 52%, 29%) hsl(103, 52%, 20%);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.59);
+  -webkit-font-smoothing: antialiased;
+}
+	*/

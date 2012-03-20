@@ -22,6 +22,7 @@
     </style>
     <link rel="shortcut icon" href="/icons/favicon.png">
     <link rel="icon" href="/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 
 <!--    <link href="{{ ASSET_PATH }}/css/2.0.0/bootstrap-responsive.css" rel="stylesheet">
 
@@ -35,58 +36,33 @@
   </head>
 
   <body>
-  
-<!--    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="i-bar"></span>
-            <span class="i-bar"></span>
-            <span class="i-bar"></span>
-          </a>
-          <a class="brand" href="{{ site.production_url }}">{{ site.title }}</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              {% assign pages_list = site.pages %}
-              {% assign group = 'navigation' %}
-              {% include JB/pages_list %}
-            </ul>
-            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p> -->
-<!--          </div><!--/.nav-collapse -->
-<!--        </div>
+    <div class="container">
+      <div class="row">
+        <div class="span7 offset2">
+          <div class="page-header">
+            <h1 class="head-title"><a class="head-title" href="{{ site.production_url }}">{{ site.title }}</a> <br /></h1>
+            <h3 class="head-title"><small>{{ site.tagline }}</small></h3>
+          </div>
+        </div>
+
+        <div class="span7 offset2">
+          <ul class="head-nav">
+            <li><a href="{{ site.production_url }}">home</a></li>
+            <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">journal</a></li>
+            <li><a href="{{ BASE_PATH }}{{ site.JB.freebusy_path }}">free/busy</a></li>
+            <li><a href="{{ BASE_PATH }}{{ site.JB.about_path }}">about</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
--->
-
-<div class="container">
-<div class="row">
-  <div class="span7 offset2">
-    <div class="page-header">
-      <h1 class="head-title"><a class="head-title" href="{{ site.production_url }}">{{ site.title }}</a> <br /></h1>
-        <h3 class="head-title"><small>{{ site.tagline }}</small></h3>
-    </div>
-  </div>
-
-  <div class="span7 offset2">
-        <ul class="head-nav">
-          <li><a href="{{ site.production_url }}">home</a></li>
-          <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">journal</a></li>
-          <li><a href="{{ BASE_PATH }}{{ site.JB.freebusy_path }}">free/busy</a></li>
-          <li><a href="{{ BASE_PATH }}{{ site.JB.about_path }}">about</a></li>
-        </ul>
-  </div>
-
-</div>
-</div>
+    </div> <!-- /container -->
 
     <div class="container">
-
       <div class="content">
         {{ content }}
       </div>
 
       <footer>
-        <p align="center"><small>&copy; {{ site.author.name }} 2012 </small></p>
+        <p align="center"><small>&copy; {{ site.author.name }} 2010-2012 </small></p>
       </footer>
 
     </div> <!-- /container -->
