@@ -1,29 +1,33 @@
 <div class="row">
-  <div class="span7 offset2">
-    <div class="page-header">
+  <div class="span2">
+    <h5 class="post-date" align="right">{{ page.date | date_to_long_string }}</h5>
+  </div>
+  <div class="span7">
+    <!-- <div class="page-header"> -->
       <h2><a class="post-title" href="{{ BASE_PATH }}{{ page.url }}">{{ page.title }}</a><small></small></h2>
-    </div>
+      <br />
+    <!-- </div> -->
   </div>
 </div>
 
 <div class="row">
   <div class="span7 offset2">
     {{ content }}
-    <h4>Published</h4>
-    <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
+<!--     <h4>Posted</h4>
+    <div class="date"><span>{{ page.date | date_to_long_string }}</span></div> -->
     <hr>
     <div class="pagination">
       <ul>
       {% if page.previous %}
-        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; previous</a></li>
       {% else %}
-        <li class="prev disabled"><a>&larr; Previous</a></li>
+        <li class="prev disabled"><a>&larr; previous</a></li>
       {% endif %}
-        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">journal</a></li>
       {% if page.next %}
-        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">next &rarr;</a></li>
       {% else %}
-        <li class="next disabled"><a>Next &rarr;</a>
+        <li class="next disabled"><a>next &rarr;</a>
       {% endif %}
       </ul>
     </div>
@@ -32,7 +36,7 @@
   </div>
   
   <div class="span2">
-    <h4>Published</h4>
+    <h4>Sidebar goes here</h4>
     <div class="date">
       <span>{{ page.date | date_to_long_string }}</span>
     </div>
