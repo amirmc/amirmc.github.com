@@ -36,6 +36,11 @@ a.head-title {
   color: #999999;
   text-decoration: none;
 }
+a.head-title:hover {
+  color: #cccccc;
+  text-decoration: none;
+}
+
 
 img { /* merged changed from bootstrap v2.0.0 and v2.0.2 */
   max-width: 100%;
@@ -130,9 +135,6 @@ li.tags {
   margin: -20px -20px 20px;
 }
 
-.head-title {
-  color: #999999;
-}
 
 .post-date {
   line-height: 30px;
