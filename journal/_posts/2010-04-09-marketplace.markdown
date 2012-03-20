@@ -4,7 +4,7 @@ title: A Personal Containers Marketplace
 author: Richard Mortier
 excerpt: Personal Containers securely hold all your personal data to help maintain your privacy and security, and the current prototype enables that.  However, to liberate the value contained within your personal data means allowing third-parties access to it somehow, so that they can provide services, advertising and other value-add.   
 ---
-
+{% include JB/setup %}
 
 Personal Containers securely hold all your personal data to help
 maintain your privacy and security, and the [current prototype](http://github.com/avsm/perscon)

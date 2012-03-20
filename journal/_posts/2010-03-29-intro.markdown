@@ -4,6 +4,7 @@ title: Opening a website
 author: Anil Madhavapeddy
 excerpt: We've been working away at building a new type of database to help individuals keep reigns on their ever-increasing personal digital information.
 ---
+{% include JB/setup %}
 
 We've been working away at building a new type of database to help
 individuals keep reigns on their ever-increasing personal digital
