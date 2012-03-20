@@ -1,52 +1,48 @@
 <div class="row">
-  <div class="span2">
-    <h5 class="post-date" align="right">{{ page.date | date_to_long_string }}</h5>
-  </div>
-  <div class="span7">
-    <!-- <div class="page-header"> -->
-      <h2><a class="post-title" href="{{ BASE_PATH }}{{ page.url }}">{{ page.title }}</a><small></small></h2>
-      <br />
-    <!-- </div> -->
-  </div>
-</div>
+  <div class="span12">
+    <div class="row">
+      <div class="span9">
 
-<div class="row">
-  <div class="span7 offset2">
-    {{ content }}
-<!--     <h4>Posted</h4>
-    <div class="date"><span>{{ page.date | date_to_long_string }}</span></div> -->
-    <hr>
-    <div class="pagination">
-      <ul>
-      {% if page.previous %}
-        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; previous</a></li>
-      {% else %}
-        <li class="prev disabled"><a>&larr; previous</a></li>
-      {% endif %}
-        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">journal</a></li>
-      {% if page.next %}
-        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">next &rarr;</a></li>
-      {% else %}
-        <li class="next disabled"><a>next &rarr;</a>
-      {% endif %}
-      </ul>
+        <div class="row">
+          <div class="span2">
+            <h5 class="post-date" align="right">{{ page.date | date_to_long_string }}</h5>
+          </div>
+          <div class="span7">
+            <h2><a class="post-title" href="{{ BASE_PATH }}{{ page.url }}">{{ page.title }}</a><small></small></h2>
+            <br />
+            {{ content }}
+            <hr>
+            <div class="pagination">
+              <ul>
+                {% if page.previous %}
+                  <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; previous</a></li>
+                {% else %}
+                  <li class="prev disabled"><a>&larr; previous</a></li>
+                {% endif %}
+                  <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">journal</a></li>
+                {% if page.next %}
+                  <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">next &rarr;</a></li>
+                {% else %}
+                  <li class="next disabled"><a>next &rarr;</a>
+                {% endif %}
+              </ul>
+            </div>
+            <hr id='comments'>
+            {% include JB/comments %}
+          </div>
+        </div>
+      </div>
+      <div class="span3">
+        <h4>Sidebar goes here</h4>
+        <br />
+        {% unless page.tags == empty %}
+        <h4>Tags</h4>
+        <ul class="tag_box">
+          {% assign tags_list = page.tags %}
+          {% include JB/tags_list %}
+        </ul>
+        {% endunless %}  
+      </div>
     </div>
-    <hr id='comments'>
-    {% include JB/comments %}
-  </div>
-  
-  <div class="span2">
-    <h4>Sidebar goes here</h4>
-<!--     <div class="date">
-      <span>{{ page.date | date_to_long_string }}</span>
-    </div> -->
-    <br />
-  {% unless page.tags == empty %}
-    <h4>Tags</h4>
-    <ul class="tag_box">
-    {% assign tags_list = page.tags %}
-    {% include JB/tags_list %}
-    </ul>
-  {% endunless %}  
   </div>
 </div>
