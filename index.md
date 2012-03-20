@@ -29,7 +29,7 @@ title: Amir Chaudhry
 
       </div>
       <div class="span3">
-        <h3><a href="#">Sidebar goes here</a></h3>
+        <h3 class="sidebar">Sidebar goes here</h3>
       </div>
     </div>
   </div>
