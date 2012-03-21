@@ -137,7 +137,7 @@ li.tags {
 
 
 .post-date {
-  padding: 6px 0px 0px 0px;
+  padding: 11px 6px 0px 0px;
   color: #999999;
   font-size: 13px;
 }
@@ -155,9 +155,6 @@ li.tags {
   margin-bottom: 18px;
   list-style: none;
 }
-.head-nav a {
-  color: #999999;
-}
 .head-nav ul {
   display: block;
 }
@@ -168,15 +165,20 @@ li.tags {
   font-size: 17px;
   color: #999999;
 }
+.head-nav a {
+  /*color: #999999;*/
+  color: #bc7134;
+}
 .head-nav > li > a:hover {
   text-decoration: none;
 /*  background-color: #eeeeee; */
-/*  color: #999999; */
-  color: #bc7134;
+  color: #999999;
+  /*color: #bc7134;*/
 }
-/*.head-nav a:active {
-  color: #bc7134;
-}*/
+.head-nav a:active {
+  color: #999999;
+  /*color: #bc7134;*/
+}
 
 
 /* tag_box ======================================================== */
