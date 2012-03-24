@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Amir Chaudhry
+group: nav
+navtitle: home
+navweight: 1
+description: Amir Chaudhry's website
 ---
 {% include JB/setup %}
 

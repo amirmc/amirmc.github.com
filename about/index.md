@@ -2,7 +2,10 @@
 layout: page
 title: About
 header: About Amir
-group: navigation
+group: nav
+navtitle: about
+navweight: 4
+
 ---
 {% include JB/setup %}
 

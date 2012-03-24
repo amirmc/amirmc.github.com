@@ -2,7 +2,9 @@
 layout: page
 title: Free/Busy
 header: Amir's Free/Busy Info
-group: navigation
+group: nav
+navtitle: free/busy
+navweight: 3
 ---
 {% include JB/setup %}
 

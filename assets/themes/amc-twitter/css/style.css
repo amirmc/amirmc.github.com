@@ -165,17 +165,18 @@ li.tags {
   font-size: 17px;
   color: #999999;
 }
-.head-nav a {
-  /*color: #999999;*/
+/*.head-nav a {
+  color: #999999;
   color: #bc7134;
+}*/
+.head-nav .active,
+.head-nav a:active {
+  color: #999999;
+  /*color: #bc7134;*/
+  /*color: #3b5998; FB blue*/
 }
 .head-nav > li > a:hover {
   text-decoration: none;
-/*  background-color: #eeeeee; */
-  color: #999999;
-  /*color: #bc7134;*/
-}
-.head-nav a:active {
   color: #999999;
   /*color: #bc7134;*/
 }
@@ -250,4 +251,4 @@ li.tags {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.59);
   -webkit-font-smoothing: antialiased;
 }
-	*/
+	
