@@ -4,6 +4,7 @@ title: Free/Busy
 header: Amir's Free/Busy Info
 group: nav
 navtitle: free/busy
+navlink: freebusy
 navweight: 3
 ---
 {% include JB/setup %}

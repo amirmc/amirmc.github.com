@@ -4,6 +4,7 @@ title: About
 header: About Amir
 group: nav
 navtitle: about
+navlink: about
 navweight: 4
 
 ---
