@@ -34,7 +34,7 @@ description: Amir Chaudhry's website
 
       </div>
       <div class="span3">
-        <h3 class="sidebar">Sidebar goes here</h3>
+        {% include amc/sidebar %}
       </div>
     </div>
   </div>
