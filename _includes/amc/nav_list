@@ -3,5 +3,5 @@
 -->{% endcomment %}
 
 {% for weight in (1..4) %}  {% for p in site.pages %} {% if p.navweight == weight %}
-<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{ HOME_PATH }}{{ p.navlink }}">{{ p.navtitle }}</a></li>
+<li><a {% if p.url == page.url %}class="active"{% endif %} href="{{ BASE_PATH }}{{ p.navlink }}">{{ p.navtitle }}</a></li>
 {% endif %} {% endfor %} {% endfor %}
