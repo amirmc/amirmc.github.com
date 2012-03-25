@@ -71,6 +71,10 @@ ul.archive {
   list-style: none;
 /*  font-size: 18px; */
   margin: 0 0 0px 25px;
+  padding: 1px 0px 1px 0px;
+}
+h2.archive {
+  padding: 15px 0px 0px 0px;
 }
 
 li.posts {
