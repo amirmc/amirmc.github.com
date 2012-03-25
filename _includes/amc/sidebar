@@ -1,5 +1,1 @@
-{% comment %}<!--
-  See JB/pages_list for original comments
--->{% endcomment %}
-
 <h3 class="sidebar">Sidebar goes here</h3>
