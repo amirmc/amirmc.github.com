@@ -5,7 +5,7 @@
 
         <div class="row">
           <div class="span2">
-            <h5 class="post-date" align="right">{{ page.date | date_to_long_string }}</h5>
+            <h5 class="post-date" align="right">{{ page.date | date: "%e %B %Y" }}</h5>
           </div>
           <div class="span7">
             <h2><a class="post-title" href="{{ BASE_PATH }}{{ page.url }}">{{ page.title }}</a><small></small></h2>
