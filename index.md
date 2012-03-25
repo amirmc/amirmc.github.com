@@ -45,4 +45,3 @@ description: Amir Chaudhry's website
     <h3><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">More posts</a></h3>
   </div>
 </div>
-
