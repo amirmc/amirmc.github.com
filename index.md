@@ -15,7 +15,7 @@ description: Amir Chaudhry's website
     <div class="row">
       <div class="span9">
 
-        {% for post in site.posts %}
+        {% for post in site.posts limit:5 %}
         <div class="row">
           <div class="span2">
             <h5 class="post-date" align="right">{{ post.date | date_to_long_string }}</h5>
