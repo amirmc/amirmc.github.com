@@ -149,8 +149,28 @@ li.tags {
 /* sidebar  ==================================================== */
 
 .sidebar {
-  padding: 4px 0px 0px 0px;
+  padding-left: 55px;
 }
+img.sidebar {
+  padding-top: 4px;
+}
+ul.sidebar {
+  margin-left: 0;
+  list-style: none;
+  padding-top: 15px;
+}
+a.sidebar {
+  padding: 0px;
+}
+a.sidebar:hover {
+  text-decoration: none;
+  color: #999999;
+}
+li.sidebar {
+  padding: 0px;
+  color: #999999
+}
+
 
 /* nav  ======================================================== */
 

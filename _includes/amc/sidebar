@@ -1,1 +1,9 @@
-<h3 class="sidebar">Sidebar goes here</h3>
+<img class="sidebar" src="/images/amc.jpg"/>
+<ul class="sidebar">
+    <li class="sidebar">Member of <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}">Darwin College</a></li>
+    <li class="sidebar">Visitor at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Computer Lab</a></li>
+    <li class="sidebar">Committee of <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> SVc2UK</a></li>
+    <li class="sidebar">Cofounder of <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Springboard</a></li>
+    <li class="sidebar">Observer at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> TidePowerd</a></li>
+    <li class="sidebar">Advisor to <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}">CUEntrepreneurs</a></li>
+</ul>
