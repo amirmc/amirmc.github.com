@@ -146,37 +146,6 @@ li.tags {
   font-size: 13px;
 }
 
-/* sidebar  ==================================================== */
-.sidebar {
-  color: #999999
-}
-div.sidebar {
-  padding-left: 55px;
-  padding-top: 4px;
-}
-/*img.sidebar {
-  padding-top: 4px;
-}*/
-ul.sidebar {
-  margin-left: 0;
-  list-style: none;
-  padding-top: 15px;
-}
-a.sidebar {
-  padding: 0px;
-  color: #bc7134;
-}
-a.sidebar:hover {
-  text-decoration: none;
-  color: #999999;
-}
-li.sidebar {
-  padding: 0px;
-  line-height: 15px;
-  color: #999999
-}
-
-
 /* nav  ======================================================== */
 
 .head-nav {
@@ -210,6 +179,36 @@ li.sidebar {
   /*color: #bc7134;*/
 }
 
+
+/* sidebar  ==================================================== */
+.sidebar {
+  color: #999999
+}
+div.sidebar {
+  padding-left: 55px;
+  padding-top: 4px;
+}
+/*img.sidebar {
+  padding-top: 4px;
+}*/
+ul.sidebar {
+  margin-left: 0;
+  list-style: none;
+  padding-top: 15px;
+}
+a.sidebar {
+  padding: 0px;
+  color: #bc7134;
+}
+a.sidebar:hover {
+  text-decoration: none;
+  color: #999999;
+}
+li.sidebar {
+  padding: 0px;
+  line-height: 15px;
+  color: #999999
+}
 
 /* tag_box ======================================================== */
 
