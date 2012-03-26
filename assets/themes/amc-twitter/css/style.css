@@ -147,13 +147,16 @@ li.tags {
 }
 
 /* sidebar  ==================================================== */
-
 .sidebar {
-  padding-left: 55px;
+  color: #999999
 }
-img.sidebar {
+div.sidebar {
+  padding-left: 55px;
   padding-top: 4px;
 }
+/*img.sidebar {
+  padding-top: 4px;
+}*/
 ul.sidebar {
   margin-left: 0;
   list-style: none;
@@ -161,6 +164,7 @@ ul.sidebar {
 }
 a.sidebar {
   padding: 0px;
+  color: #bc7134;
 }
 a.sidebar:hover {
   text-decoration: none;
@@ -168,6 +172,7 @@ a.sidebar:hover {
 }
 li.sidebar {
   padding: 0px;
+  line-height: 15px;
   color: #999999
 }
 
@@ -211,32 +216,27 @@ li.sidebar {
 .tag_box {
 	list-style:none;
 	margin:0;
-	padding:5px 0 ;
+	padding:0px 0 ;
 	overflow:hidden;
 }
 .tag_box li {
-	line-height:28px;
+	line-height: 13px;
 }
 .tag_box.inline li {
 	float:left;
+  margin: 0px 20px 20px 0px;
 }
 .tag_box a {
-	padding: 3px 6px;
-	margin: 2px;
-/*	background: #eee;
-	color:#005F6B; */
-	border-radius: 3px;
+  line-height: 16px;
 	text-decoration:none;
 }
 .tag_box a span{
-	vertical-align:super;
-	font-size:0.8em;
+  color: #999999;
+  font-size: smaller;
+	/*vertical-align:super;
+	font-size:0.8em;*/
 }
-.tag_box a.active {
-	background:#57A957;
-	border:1px solid #4C964D;
-	color:#FFF;
-}
+
 
 /* random ======================================================== */
 /*
