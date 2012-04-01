@@ -8,7 +8,7 @@ tags: [cambridge, essay, pics, startups]
 
 <!-- permalink: http://amirchaudhry.com/catchup-post-oct-dec -->
 
-## aka 'highlights of the last few months'
+### aka 'highlights of the last few months'
 
 It's been quite a while since I posted anything and it's time I did.  The last few months have been pretty busy so I thought I'd write some notes about the main items in one post and then we can pretend that I'm current again.  I'm well aware that the sheer size of this post means it's unlikely to be read fully by most people.  There are some pics so perhaps that might be enough to hold your interest :)
 
@@ -16,7 +16,10 @@ Later this week, I'll write a separate post about the things I'm working on now 
 
 All of the following covers October to December.
 
-## Silicon Valley comes to the UK
+<br />
+<br />
+
+### Silicon Valley comes to the UK
 
 [SVc2UK][svc2uk.com] was a 5/6 day conference with events taking place in Cambridge and London.  The aim is to introduce students from universities to high-profile folks from the Valley and inspire the students to consider startups as a career path (either by founding or joining them).  I was involved in this conference back in 2009 and decided to join the the new team for the 2011 events.  This year the conference was preceded by a several 'Appathons' (read: hackathons), which took place at 6 Universities, including Cambridge.  You can find out more about the Appathon and the conference via [svc2uk.com][] but here are some short notes and some pics.
 
@@ -52,15 +55,18 @@ You can find videos of this year's sessions on the [Vimeo account][SVC-Vimeo].
 [Nick]: https://plus.google.com/106738482735452735039/posts
 [Cambridge Computer Laboratory]: http://www.cl.cam.ac.uk/
 
-## Stanford online courses
+<br />
+<br />
+
+### Stanford online courses
 
 I did all three of the inaugural classes. Machine Learning, Artificial Intelligence and Databases ... and I enjoyed them in that order.  The following is a short summary/review of each.
 
-[ML-Class][] was fantastic since you had to write actual scripts and I really looked forward to both the videos and exercises every week.  At times, the exercises felt a bit contrived (one line of code in a file) but there were occasions where I had to really think properly to *get* that one line.  Once you got the hang of matrix multiplication the exercises got easier.  The scores don't really mean anything since you could repeat the questions until you got a perfect score. At some point, I'll go back over the iTunes U content from the profs 2008 class.  It has more theory/maths and covers reinforcement learning, which the applied course didn't.  You can find my 'programming' exercises [on GitHub][Github ML Repo].
+**[ML-Class][]** was fantastic since you had to write actual scripts and I really looked forward to both the videos and exercises every week.  At times, the exercises felt a bit contrived (one line of code in a file) but there were occasions where I had to really think properly to *get* that one line.  Once you got the hang of matrix multiplication the exercises got easier.  The scores don't really mean anything since you could repeat the questions until you got a perfect score. At some point, I'll go back over the iTunes U content from the profs 2008 class.  It has more theory/maths and covers reinforcement learning, which the applied course didn't.  You can find my 'programming' exercises [on GitHub][Github ML Repo].
 
-[AI-Class][] was a very different course and it didn't seem as 'slick' as the ML class but I learnt *way* more maths, specifically about probability.  Since I was terrible at probability at school, I really wanted to get a better handle on it and this class really made me work.  I have pages and pages of calculations for some of the in-class questions and I hope I can retain what I've learnt.  At times there was only a cursory overview of a topic before moving on but I should have expected that from an "Intro to..." course.  This was the only class with *both* graded homeworks and exams. Overall, I was in the 'top 25%' according the statement I got (overall mark was 95%).
+**[AI-Class][]** was a very different course and it didn't seem as 'slick' as the ML class but I learnt *way* more maths, specifically about probability.  Since I was terrible at probability at school, I really wanted to get a better handle on it and this class really made me work.  I have pages and pages of calculations for some of the in-class questions and I hope I can retain what I've learnt.  At times there was only a cursory overview of a topic before moving on but I should have expected that from an "Intro to..." course.  This was the only class with *both* graded homeworks and exams. Overall, I was in the 'top 25%' according the statement I got (overall mark was 95%).
 
-[DB-Class][] was the one I least understood but the one I originally thought I was going to stick with.  Within the first few lectures, I knew I was going to find it tough.  Relational Algebra made no sense to me and the videos seemed to cover each example once and move on to something else.  Since I didn't have enough time to find additional resources, I ended up barely following along and basically flunked the course.  There was a mid-term and final exam and the homeworks could be repeated until you got a perfect score (but I ended up not bothering).  No idea what score I got but you needed >50% to get a statement and I didn't get one :)
+**[DB-Class][]** was the one I least understood but the one I originally thought I was going to stick with.  Within the first few lectures, I knew I was going to find it tough.  Relational Algebra made no sense to me and the videos seemed to cover each example once and move on to something else.  Since I didn't have enough time to find additional resources, I ended up barely following along and basically flunked the course.  There was a mid-term and final exam and the homeworks could be repeated until you got a perfect score (but I ended up not bothering).  No idea what score I got but you needed >50% to get a statement and I didn't get one :)
 
 In general, I was very impressed by the dedication and effort the profs and the teams working with them put into the courses.  Although the profs were the folks centre stage, there were a group of largely unsung heroes who kept things running, put together exercises and enabled everything to happen.  This method of learning is really going to take off and if people can figure out how to deal with proper certification, then it might even challenge the notion of going to University.  There have been a slew of new courses available and I think I'll try two more if I can fit them in (i.e. [Probabilistic Graphical Models][pgm-class] and [Model Thinking][model-class]).
 
@@ -72,7 +78,7 @@ In general, I was very impressed by the dedication and effort the profs and the 
 [model-class]: http://www.modelthinker-class.org/
 
 
-## Learning to code
+### Learning to code
 
 I've also been trying to keep up with learning Python via [LPtHW][] (see [GitHub repo][Github LPtHW Repo] for progress).   I'd describe myself as chugging along and I'm glad that I'm not finding anything too difficult.
 
@@ -86,7 +92,7 @@ I also signed up to Code Academy's 'Code Year' but I've not opened any of their 
 [Github LPtHW Repo]: https://github.com/amirmc/TheHardWay
 
 
-## Events and occasional startup stuff
+### Events and occasional startup stuff
 
 As always there have been a bunch of events and startup-related items in the last few months.  Normally I wouldn't bother mentioning these but I'm in a list-y mood.
 
@@ -97,14 +103,16 @@ As always there have been a bunch of events and startup-related items in the las
 - [Connections talks](http://www.dar.cam.ac.uk/connections) (Nov & Dec - Cyberwarfare and Energy)
 - [Eric Ries - Lean Startup](http://www.cabume.co.uk/the-cluster/the-future-is-now-eric-ries-in-cambridge.html) (Jan - UK Book Launch)
 - [HackerNews London Meetups](http://www.meetup.com/hnlondon/)
-- Visit to Olympic park (ok, so this was waaay back in May and should have had it's own post but I never got around to it)
+- Visit to Olympic park *(ok, so this was waaay back in May and should have had it's own post but I never got around to it)*
+
+Pics of Visit to Olympic Park (in May)
 
 {% assign image_folder = 'olympic-park' %}
 {% assign number_of_images = 10 %}
 {% include amc/make_gallery %}
 
 
-## ... and finally
+### ... and finally
 
 I managed to get this done in October.  Took a while.
 

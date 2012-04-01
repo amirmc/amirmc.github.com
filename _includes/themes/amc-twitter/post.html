@@ -8,7 +8,7 @@
             <h5 class="post-date" align="right">{{ page.date | date: "%e %B %Y" }}</h5>
           </div>
           <div class="span7">
-            <h2><a class="post-title" href="{{ BASE_PATH }}{{ page.url }}">{{ page.title }}</a><small></small></h2>
+            <h2><a class="post-title" href="{{ BASE_PATH }}{{ page.url }}">{{ page.title }}</a></h2>
             <br />
             {{ content }}
             <hr>
@@ -19,7 +19,7 @@
                 {% else %}
                   <li class="prev disabled"><a>&larr; previous</a></li>
                 {% endif %}
-                  <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">journal</a></li>
+                  <li class="small"><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">journal</a></li>
                 {% if page.next %}
                   <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">next &rarr;</a></li>
                 {% else %}

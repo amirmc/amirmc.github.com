@@ -14,6 +14,18 @@ body {
 /*  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-size: 13px;
   line-height: 18px;
+  color: #000000;
+}
+
+/* Heading styles */
+h3 {
+  font-size: 20px;
+}
+h1.head-title {
+  font-size: 35px;
+}
+h2.archive {
+  padding: 15px 0px 0px 0px;
 }
 
 /*  Hyperlink Styles */
@@ -42,6 +54,7 @@ a.head-title:hover {
 }
 
 
+
 img { /* merged changed from bootstrap v2.0.0 and v2.0.2 */
   max-width: 100%;
   vertical-align: middle;
@@ -62,6 +75,10 @@ p small {
 /*  Lists Styles  */
 /*working on sorting out li styles to avoid tags and header objects to be changed
 */
+li {
+  font-size: 18px;
+  line-height: 24px;
+}
 ul.posts {
   list-style: disc;
   font-size: 18px;
@@ -73,16 +90,17 @@ ul.archive {
   margin: 0 0 0px 25px;
   padding: 1px 0px 1px 0px;
 }
-h2.archive {
-  padding: 15px 0px 0px 0px;
-}
-
 li.posts {
   line-height: 23px;
   font-size: 18px;
 }
 li.tags {
   line-height: 18px;
+}
+li.next,
+li.small,
+li.prev {
+  font-size: 13px;
 }
 
 
@@ -186,7 +204,7 @@ li.tags {
 }
 div.sidebar {
   padding-left: 55px;
-  padding-top: 4px;
+  padding-top: 10px;
 }
 /*img.sidebar {
   padding-top: 4px;
@@ -206,6 +224,7 @@ a.sidebar:hover {
 }
 li.sidebar {
   padding: 0px;
+  font-size: 13px;
   line-height: 15px;
   color: #999999
 }
@@ -220,6 +239,7 @@ li.sidebar {
 }
 .tag_box li {
 	line-height: 13px;
+  font-size: 13px;
 }
 .tag_box.inline li {
 	float:left;
