@@ -35,10 +35,15 @@ Senior Member at [Darwin College][]
 
 #### Links
 
-> [twitter][] <br />
-> [linkedin][] <br />
-> [github][] <br />
-> [hacker news][]
+> ![amirmc on twitter](/icons/twitter_16.png) [twitter][] <br />
+> ![amir on linkedin](/icons/linkedin_16.png) [linkedin][] <br />
+> ![amirmc on github](/icons/github_16.png) [github][] <br />
+> ![amirmc on hacker news](/icons/yc_16.png) [hacker news][]
+
+<!-- <a href="https://twitter.com/amirmc/"><img src="/icons/twitter_16.png" alt="amirmc on Twitter" style="border-width:0" /></a>
+  <a href="http://www.linkedin.com/in/amirchaudhry/"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn" style="border-width:0" /></a>
+  <a href="https://github.com/amirmc/"><img src="/icons/github_16.png" alt="amirmc on GitHub" style="border-width:0" /></a>
+  <a href="http://news.ycombinator.com/threads?id=amirmc/"><img src="/icons/yc_16.png" alt="amirmc on Hacker News" style="border-width:0" /></a> -->
 
 [twitter]: http://twitter.com/amirmc
 [linkedin]: http://www.linkedin.com/in/amirchaudhry
