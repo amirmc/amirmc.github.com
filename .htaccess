@@ -1,0 +1,2 @@
+# Redirect old blog post paths to new file paths
+Redirect /olddirectory/oldfile http://amirchaudhry.com/journal/newfile/
