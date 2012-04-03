@@ -17,7 +17,6 @@ Later this week, I'll write a separate post about the things I'm working on now 
 All of the following covers October to December.
 
 <br />
-<br />
 
 ### Silicon Valley comes to the UK
 
@@ -55,7 +54,6 @@ You can find videos of this year's sessions on the [Vimeo account][SVC-Vimeo].
 [Nick]: https://plus.google.com/106738482735452735039/posts
 [Cambridge Computer Laboratory]: http://www.cl.cam.ac.uk/
 
-<br />
 <br />
 
 ### Stanford online courses

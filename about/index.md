@@ -10,7 +10,7 @@ navweight: 4
 ---
 {% include JB/setup %}
 
-### About me
+## About me
 
 Visitor at [Cambridge Computer Lab][]
 
@@ -31,9 +31,7 @@ Senior Member at [Darwin College][]
 [SVc2UK]: http://svc2uk.com
 [TidePowerd]: http://www.tidepowerd.com
 
-<br />
-
-#### Links
+#### Where to find me
 
 > ![amirmc on twitter](/icons/twitter_16.png) [twitter][] <br />
 > ![amir on linkedin](/icons/linkedin_16.png) [linkedin][] <br />
@@ -45,9 +43,6 @@ Senior Member at [Darwin College][]
 [github]: https://github.com/amirmc/
 [hacker news]: http://news.ycombinator.com/threads?id=amirmc
 
-<br />
-
-<br />
 
 #### About this site
 

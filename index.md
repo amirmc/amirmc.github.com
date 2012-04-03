@@ -22,7 +22,6 @@ description: Amir Chaudhry's website
           </div>
           <div class="span7">
             <h2><a class="post-title" href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
-            <br />
             {{ post.content }}
             <a href="{{ BASE_PATH }}{{ post.url }}#comments">Comments</a>
             <hr>

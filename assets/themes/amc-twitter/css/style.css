@@ -18,11 +18,29 @@ body {
 }
 
 /* Heading styles */
+/*h1, h2, h3, h4 {
+  margin-top: 7%;
+}*/
+h2 {
+  line-height: 26px;
+  padding: 6px 0px 0px 0px;
+}
 h3 {
   font-size: 20px;
+  margin-top: 5%;
+}
+h4 {
+  font-size: 18px;
+  line-height: 25px;
+  margin-top: 5%;
 }
 h1.head-title {
-  font-size: 35px;
+  font-size: 32px;
+  /*margin-top: 0px;*/
+}
+h3.head-title {
+  font-size: 32px;
+  margin-top: 0px;
 }
 h2.archive {
   padding: 15px 0px 0px 0px;
@@ -160,11 +178,11 @@ li.prev {
 }
 
 /* Page header tweaks */
-.page-header {
+/*.page-header {
   background-color: #f5f4ee;
   padding: 20px 20px 10px;
   margin: -20px -20px 20px;
-}
+}*/
 
 
 .post-date {
