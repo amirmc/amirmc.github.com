@@ -57,7 +57,13 @@ a.head-title:hover {
 
 img { /* merged changed from bootstrap v2.0.0 and v2.0.2 */
   max-width: 100%;
-  vertical-align: middle;
+/*  vertical-align: middle;*/
+  /*display: block;*/
+}
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*  Paragraph Text Styles */
