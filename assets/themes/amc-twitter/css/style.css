@@ -205,7 +205,7 @@ li.prev {
 .head-nav li {
   display: inline-block;
   margin-top: 9px;
-  padding: 0px 30px 0px 0px;
+  padding-right: 16px;
   font-size: 17px;
   color: #999999;
 }
