@@ -99,6 +99,9 @@ ul.archive {
 li.posts {
   line-height: 23px;
   font-size: 18px;
+  margin-bottom: 8px;
+  text-indent: -25%;
+  padding-left: 25%;
 }
 li.tags {
   line-height: 18px;

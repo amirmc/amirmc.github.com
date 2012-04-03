@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Just found MovieBarCode. Fantastic images by stretching each movie frame and lining them up."
+title: "Just found MovieBarCode. Fantastic images by stretching and lining up movie frames"
 author: Amir Chaudhry
 tags: [web]
 description:
