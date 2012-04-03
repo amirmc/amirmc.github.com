@@ -3,6 +3,15 @@
 
 #########################################
 #
+#  Posterous Pages to redirect
+#
+
+Redirect http://amirchaudhry.com/pages/freebusy /freebusy/
+Redirect http://amirchaudhry.com/pages/about /about
+
+
+#########################################
+#
 #  Renamed slugs
 #
 
