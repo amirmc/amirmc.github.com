@@ -79,7 +79,7 @@ install an OS. This was an injustice. As an OS developer, he could write
 the OS and then legally make it free. At the time, the free sw movement
 had no enemies at the time. Mostly because ppl thought the job was so
 big that it couldn't get done. Following the basic design of UNIX made
-sense. Then I gave it a name which was a joke. [digs in bag]. GNU = Gnu
+sense. Then I gave it a name which was a joke. \[digs in bag\]. GNU = Gnu
 Not Unix. (riffs on the name and pronunciation). History of Linux.
 Aside: What is a free sw license? Why do we need them? <br />
 Copyright law automatically limits anything that's written so you have
@@ -134,4 +134,4 @@ thank u so much,
 This is the same lecture of richard in benghazi-libya at november 2010 :)
 
 i hope to get this lecture in a audio file</i>
-</small><br />
+</small>
