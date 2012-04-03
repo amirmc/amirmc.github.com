@@ -1,2 +1,63 @@
 # Redirect old blog post paths to new file paths
-Redirect /olddirectory/oldfile http://amirchaudhry.com/journal/newfile/
+# Redirect /olddirectory/oldfile http://amirchaudhry.com/journal/newfile/
+
+Redirect http://amirchaudhry.com/this-is-my-posterous-tags-misc /journal/this-is-my-posterous/
+Redirect http://amirchaudhry.com/learning-markdown /journal/learning-markdown/
+Redirect http://amirchaudhry.com/my-first-3-way /journal/my-first-3-way/
+Redirect http://amirchaudhry.com/pics-cfel-ignite-programme-celebration-dinner /journal/cfel-ignite-programme-celebration-dinner/
+Redirect http://amirchaudhry.com/easily-aggregate-outlook-google-ical-calendar /journal/easily-aggregate-outlook-google-ical-calendar/
+Redirect http://amirchaudhry.com/awesome-present-for-a-cool-nephew-pic-pic /journal/awesome-present-for-a-cool-nephew/
+Redirect http://amirchaudhry.com/a-periodic-table-of-visualisation-methods /journal/a-periodic-table-of-visualisation-methods/
+Redirect http://amirchaudhry.com/maz-jobrani-did-you-hear-the-one-about-the-ir /journal/maz-jobrani-did-you-hear-the-one-about-the-iranian-american/
+Redirect http://amirchaudhry.com/gary-arndt-things-ive-learned-from-traveling /journal/gary-arndt-things-ive-learned-from-traveling/
+Redirect http://amirchaudhry.com/base-jumping-meets-free-diving-kind-of /journal/base-jumping-meets-free-diving-kind-of/
+Redirect http://amirchaudhry.com/paul-graham-joins-twitter /journal/paul-graham-joins-twitter/
+Redirect /http://amirchaudhry.com/cooking-recipes-as-gantt-charts-genius /journal/cooking-recipes-as-gantt-charts-genius/
+Redirect /http://amirchaudhry.com/cambridge-ousts-harvard-as-worlds-best-univer /journal/cambridge-ousts-harvard-as-worlds-best-university/
+
+Redirect http://amirchaudhry.com/what-the-facebook-phone-would-look-like /journal/what-the-facebook-phone-would-look-like/
+Redirect http://amirchaudhry.com/i-guess-im-going-to-have-to-play-starcraft-2 /journal/i-guess-im-going-to-have-to-play-starcraft-2/
+Redirect http://amirchaudhry.com/woah-drinking-tea-prevents-testicle-shrinkage /journal/woah-drinking-tea-prevents-testicle-shrinkage/
+Redirect http://amirchaudhry.com/when-girls-say-i-love-you /journal/when-girls-say-i-love-you/
+Redirect http://amirchaudhry.com/this-time-lapse-montage-will-blow-your-mind-f /journal/this-time-lapse-montage-will-blow-your-mind/
+Redirect http://amirchaudhry.com/phd-vivas-the-dutch-do-it-better /journal/phd-vivas-the-dutch-do-it-better/
+Redirect http://amirchaudhry.com/the-future-is-now /journal/the-future-is-now/
+Redirect http://amirchaudhry.com/fantastic-eyjafjallajokull-time-lapse-movie /journal/fantastic-eyjafjallajokull-time-lapse-movie/
+Redirect http://amirchaudhry.com/collective-intelligence-in-human-groups-resea /collective-intelligence-in-human-groups/
+Redirect http://amirchaudhry.com/how-to-discourage-people-from-messing-with-yo /journal/how-to-discourage-people-from-messing-with-your-stuff/
+
+
+Redirect http://amirchaudhry.com/why-obama-got-the-peace-prize-comic /journal/why-obama-got-the-peace-prize-comic/
+Redirect http://amirchaudhry.com/random-things-i-learned-at-school /journal/random-things-i-learned-at-school/
+Redirect http://amirchaudhry.com/moved-desks-and-discovered-spent-munitions-as /journal/moved-desks-and-discovered-spent-munitions/
+Redirect http://amirchaudhry.com/im-at-product-camp-london /journal/im-at-product-camp-london/
+Redirect http://amirchaudhry.com/session-1-data-driven-decisions-pcampldn /journal/session-1-data-driven-decisions-pcampldn/
+Redirect http://amirchaudhry.com/session-3-whats-your-product-mgmnt-persona-pc /journal/session-3-whats-your-product-mgmnt-persona/
+Redirect http://amirchaudhry.com/session-4-using-audience-insight-to-drive-pro /journal/session-4-using-audience-insight/
+Redirect http://amirchaudhry.com/richard-stallman-on-free-software-and-your-fr /journal/2011-03-01-richard-stallman-on-free-software-and-your-freedom/
+Redirect http://amirchaudhry.com/lifes-too-short-for-the-wrong-job /journal/lifes-too-short-for-the-wrong-job/
+Redirect http://amirchaudhry.com/just-found-moviebarcode-fantastic-images-by-s /journal/moviebarcode-fantastic-images/
+
+
+
+
+
+Redirect http://amirchaudhry.com/lego-is-amazing /journal/lego-is-amazing/
+
+Redirect http://amirchaudhry.com/on-my-facebook-wall-tonight /journal/on-my-facebook-wall-tonight/
+
+Redirect http://amirchaudhry.com/solar-3d-printer-fantastic-video /journal/solar-3d-printer-fantastic-video/
+
+Redirect http://amirchaudhry.com/did-google-hangout-just-kill-skype /journal/did-google-hangout-just-kill-skype/
+
+Redirect http://amirchaudhry.com/tech-company-org-charts-and-other-cool-comics /journal/tech-company-org-charts-and-other-cool-comics/
+
+Redirect http://amirchaudhry.com/review-of-the-seedsummit-term-sheet /journal/review-of-the-seedsummit-term-sheet/
+
+Redirect http://amirchaudhry.com/my-thoughts-on-the-seedsummit-term-sheet /journal/my-thoughts-on-the-seedsummit-term-sheet/
+
+Redirect http://amirchaudhry.com/snake-oil-scientific-evidence-for-health-supp /journal/scientific-evidence-for-health-supplements/
+
+Redirect http://amirchaudhry.com/infographic-of-the-day-what-success-really-lo /journal/what-success-really-looks-like/
+
+Redirect http://amirchaudhry.com/catchup-post-oct-dec /journal/catchup-post-oct-dec/
