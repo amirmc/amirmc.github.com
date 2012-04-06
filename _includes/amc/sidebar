@@ -13,6 +13,9 @@
   <a href="https://github.com/amirmc/"><img src="/icons/github_16.png" alt="amirmc on GitHub"/></a>
   <a href="http://news.ycombinator.com/threads?id=amirmc"><img src="/icons/yc_16.png" alt="amirmc on Hacker News" /></a>
   <br />
+  <form class="navbar-search pull-left">
+    <input type="text" class="search-query" placeholder="Search">
+  </form>
   <br />
   {% unless page.tags == empty %}
     {% if page.tags != nil %}

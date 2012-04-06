@@ -257,6 +257,22 @@ li.sidebar {
   color: #999999
 }
 
+/* Search Bar */
+.navbar-search {
+  position: static;
+  margin: 20px 0px;
+}
+.navbar-search .search-query {
+  background-color: #F7F6F1;
+  border: none;
+}
+input,
+textarea,
+select,
+.uneditable-input {
+  width: 100%;
+}
+
 /* tag_box ======================================================== */
 
 .tag_box {
