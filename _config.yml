@@ -3,6 +3,7 @@
 permalink: /:categories/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+include: [".htaccess"]
 auto: true
 pygments: true
 
