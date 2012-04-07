@@ -2,28 +2,26 @@
 layout: post
 title: "I moved my site to GitHub Pages"
 author: Amir Chaudhry
-tags: [code, learning, web]
+tags: [code, essay, learning, web]
 description:
 ---
 {% include JB/setup %}
 
 Yet again, it's been several months since my last post (it's almost a habit now).  This isn't intended to be another catchup post, though.
 
-The reason for this post is that I've moved my site, [amirchaudhry.com][], to [GitHub Pages][].
+The reason for this post is that I've moved my site ([amirchaudhry.com][]) to [GitHub Pages][].
 
-Since I'm using my own domain, this is unlikely to affect anyone but I've copied this post into both the new GitHub site and old Posterous site just in case.  If you're reading this via [my Posterous site][] (presumably through the share/follow functions there), then it'll the last post to go up there.
+Since I'm using my own domain, this is unlikely to affect anyone but I've copied this post into both the new GitHub site and old Posterous site just in case.  If you're reading this via [my Posterous site][] (presumably through the share/follow features there), then it'll be the last post to go up there.
 
 There are still a bunch of things that are bit broken in the new place.
 
-- No tweet/sharing buttons (will probably use [AddThis][])
+- No tweet/sharing buttons\*
 - Tags don't sort properly
-- Search bar doesn't work
 - RSS/Atom feed is probably a mess
 
 [amirchaudhry.com]: http://amirchaudhry.com
 [GitHub Pages]: http://pages.github.com
 [my Posterous site]: http://amirmc.posterous.com
-[AddThis]: http://www.addthis.com
 
 
 ### Moving from Posterous to GitHub Pages
@@ -33,21 +31,38 @@ The process of moving to GitHub was a useful experience.  Here are the steps I e
 
 #### Getting set up with GitHub Pages
 
-I used [Jekyll Bootstrap][] and the default [bootstrap theme][]. It was *ridiculously* quick and easy to get a basic site up and start playing around.  The first thing I did was try to re-create structure of my old site and then worry about how it looked.  I'd never dealt with CSS before so this was always going to take a while.
+I used [Jekyll Bootstrap][] and the default [bootstrap theme][]. It was *ridiculously* quick and easy to get a basic site up and start playing around.  The first thing I did was try to re-create structure of my old site and then worry about how it looked.  I'd never dealt with CSS before so this was always going to take a while. For example, it took me *ages* to figure out why items kept shifting between pages. Turns out I needed the following line in my style file:
 
-Dealing with the CSS took a while but Bootstrap made it really easy to copy/paste/edit the bits I wanted to change.  Even though, it took me far too long to figure out how to get the nav section the way I wanted it.  It took a few weeks to get to this point but you're looking at a bootstrap site, which looks nothing like bootstrap (win!). It's likely that I'll keep tweaking things but I'm not expecting to do anything major.
+{% highlight css %}
+    html { overflow-y: scroll; }
+{% endhighlight %}
+
+Although dealing with the CSS took a while, Bootstrap made it really easy to copy/paste/edit the bits I wanted to change.  The nav section was a pain to sort out.  It took a few weeks to get to this point but you're looking at a bootstrap site, which looks nothing like bootstrap (win!). It's likely that I'll keep tweaking things but I'm not expecting to do anything major.
 
 [Jekyll Bootstrap]: http://jekyllbootstrap.com
 [bootstrap theme]: http://twitter.github.com/bootstrap/
 
 #### Migrating the posts
 
-There wasn't an easy way to migrate directly from Posterous to GitHub. There are scripts available but either through bad-luck or ineptitude, I couldn't get them to work.  A guy called [Chad][] recently wrote an exporter ([ExportMyPosts][]), that pulled out all my content in html format (phew!).  I really didn't want to deal with learning an API or dealing with xml, so I'm glad he put this together.  It works extremely well.
+There wasn't an easy way to migrate directly from Posterous to GitHub. There are scripts available but either through bad-luck or ineptitude, I couldn't get them to work.  A guy called [Chad][] recently created [Export My Posts][], which pulled out all my content in html format (phew!).  I really didn't want to deal with learning an API or parsing an xml file, so I'm glad he put this together.  It works extremely well.
 
-Next step was to run all the html posts through [pandoc][] to convert them to markdown. Then came the slow process of checking each file, removing the left-over html, adding the appropriate headers, dealing with image galleries etc.  Part of this could have been automated but I don't have that many posts so I went through them manually.
+Next step was to run all the html posts through [pandoc][] to convert them to markdown. I wrote a fairly trivial shell script to do this for me.
+
+{% highlight bash %}
+    #!/bin/bash
+    echo -e "Files to convert to md? "
+    read -a allfiles
+    #args=("$@")
+    for file in ${allfiles[*]}; do
+        printf "   %s\n" $file
+        pandoc -o ./convert/$file.md $file
+    done
+{% endhighlight %}
+
+Then came the slow process of checking each file, removing the left-over html, adding the appropriate headers, dealing with image galleries etc.  Part of this could have been automated but I don't have that many posts so I went through them manually.
 
 [Chad]: http://jazzychad.net/
-[ExportMyPosts]: http://exportmyposts.com
+[Export My Posts]: http://exportmyposts.com
 [pandoc]: http://johnmacfarlane.net/pandoc
 
 Once all that was done, I simply had to switch the domain over and everything was fine.
@@ -61,3 +76,7 @@ Having existing things I can dig into and copy from (i.e. bootstrap) really spee
 Scripting things will help. Quickly creating image galleries is the next thing I need to figure out. The process is obvious to me know (since I did parts of it by hand) but I have to automate it using [ImageMagick][].
 
 Overall, I'm quite pleased with myself.  I've gone from knowing nothing about CSS, static sites, and bootstrap to being vaguely (in)competent. Rock on!
+
+[ImageMagick]: http://www.imagemagick.org
+
+<small><i>*Though I'll probably use something like <a href="http://www.addthis.com">AddThis</a>.</i></small>
