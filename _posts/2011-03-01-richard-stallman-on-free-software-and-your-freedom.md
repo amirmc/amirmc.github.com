@@ -128,10 +128,8 @@ Applause <br />
 
 Sent via mobile
 
-<small>Comment on original post: <i>Nov 21, 2011 - 
+<p class="footnote">Comment on original post: Nov 21, 2011 - 
 <a href="http://mrhpages.blogspot.com/">human</a> said...
-thank u so much,
-This is the same lecture of richard in benghazi-libya at november 2010 :)
-
-i hope to get this lecture in a audio file</i>
-</small>
+thank u so much, This is the same lecture of richard in benghazi-libya at november 2010 :)
+i hope to get this lecture in a audio file
+</p>

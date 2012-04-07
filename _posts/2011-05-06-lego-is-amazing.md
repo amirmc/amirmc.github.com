@@ -42,6 +42,6 @@ comparison, the width of a human hair ranges from 17-180 micrometers.
 It's even more impressive when you consider that bricks from 1958 are
 still compatible with bricks made today.
 
-<small>Check out the <a href="http://en.wikipedia.org/wiki/Lego" alt="Lego on Wikipedia">Lego Wikipedia article</a> for more info.</small>
+<p class="footnote">Check out the <a href="http://en.wikipedia.org/wiki/Lego" alt="Lego on Wikipedia">Lego Wikipedia article</a> for more info.</p>
 
 

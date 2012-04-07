@@ -98,4 +98,4 @@ If you haven’t already, you can go check my [review of the Seedsummit terms](h
 
 Did you find this useful? [Upvote and comment on HN](http://news.ycombinator.com/item?id=2750689)
 
-<small><i>Photo credit: <a href="http://www.flickr.com/photos/26601279@N04/2496121873/">Affärsbilder by Dan Eriksson on Flickr</a></i></small>
+<p class="footnote">Photo credit: <a href="http://www.flickr.com/photos/26601279@N04/2496121873/">Affärsbilder by Dan Eriksson on Flickr</a></p>

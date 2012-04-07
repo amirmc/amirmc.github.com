@@ -23,6 +23,6 @@ Frankly, I thought the Dutch method of graduating was way better than the UK equ
 
 Given the fundamental differences in how PhDs are examined between the UK and the Netherlands, I'm not sure what we could do to introduce more of an 'individual ceremony', though it would certainly be nice to try.  If I ever get there, I'm making sure I mark the occasion properly ... which reminds me, back to work. :)
 
-<small>Comment on original post: <i>Apr 30, 2011 - 
+<p class="footnote">Comment on original post: Apr 30, 2011 - 
 <a href="http://www.gilljames.co.uk/">Gill James</a> said...
-You can have your Ph D superviser in the room at UK universities. I opted not to, but in retrospect wish I had had him there. Just back form the Netherlands and watcehd a Ph D defense. Fascinating!</i></small>
+You can have your Ph D superviser in the room at UK universities. I opted not to, but in retrospect wish I had had him there. Just back form the Netherlands and watcehd a Ph D defense. Fascinating!</p>

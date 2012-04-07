@@ -83,8 +83,7 @@ free/busy feed which people can subscribe to.*
 
 * * * * *
 
-<small>
-Comment on original post: <i>Apr 17, 2011 - 
+<p class="footnote">
+Comment on original post: Apr 17, 2011 - 
 Zack said...
-This is cool. The scenario that really needs to be solved is... 2 working parents needing to view each others work schedules as well as personal appointments, maybe personal hotmail or gmail calendars at home and each has an outlook calendar on different work domains. And maybe throw in a teenager's schedule into the mix. Some details you want all to see and some you want to keep private but busy. Now take these calendars and figure out how to view them on each parent's phone. I've been playing with outlook connector which is great when you're at a pc, but the phone experience is missing and you really need that when you're on the road. Has anyone figured out the aggregate when multiple people are involved, and how to do it cleanly on phones?
-</i></small>
+This is cool. The scenario that really needs to be solved is... 2 working parents needing to view each others work schedules as well as personal appointments, maybe personal hotmail or gmail calendars at home and each has an outlook calendar on different work domains. And maybe throw in a teenager's schedule into the mix. Some details you want all to see and some you want to keep private but busy. Now take these calendars and figure out how to view them on each parent's phone. I've been playing with outlook connector which is great when you're at a pc, but the phone experience is missing and you really need that when you're on the road. Has anyone figured out the aggregate when multiple people are involved, and how to do it cleanly on phones?</p>

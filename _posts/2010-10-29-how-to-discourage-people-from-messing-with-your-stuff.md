@@ -15,6 +15,6 @@ This is on @nick\_wood's desk. Yes, that's real hair. Yes, it's Nick's hair. So 
 
 Not sure how much my therapy\* will cost but it's going on expenses :-P
 
-<small>*that's therapy <i>and</i> a dustbuster</small>
+<p class="footnote">*that's therapy <strong>and</strong> a dustbuster</p>
 
 Update: Turns out that it doesn't work as well on cakes as I previously thought. I'd take another photo, but the cake is gone...

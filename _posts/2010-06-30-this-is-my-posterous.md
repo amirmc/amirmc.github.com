@@ -15,4 +15,4 @@ email I expect I'll actually use it a lot more than other services.
 
 Next post will be a link to my 3-way skydive video. :)
 
-<small><i>Edit: This used to be Posterous, until I moved to Jekyll and GitHub Pages in April 2012</i></small>
+<p class="footnote">Edit: This used to be Posterous, until I moved to Jekyll and GitHub Pages in April 2012</p>

@@ -17,4 +17,4 @@ Luckily, (this time) the conversation did move on to other topics, including mal
 
 Amir
 
-*(folks were: @plc, @leemallabone, @rahulvohra, @matclayton, @robbiethng)*
+<p class="footnote">folks were: @plc, @leemallabone, @rahulvohra, @matclayton, @robbiethng</p>

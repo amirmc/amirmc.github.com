@@ -43,6 +43,6 @@ A. In some situations saying you can test things helps reduce risk. Depends on r
 
 Sent via mobile
 
-<small>Comment on original post: <i>Feb 26, 2011 - 
+<p class="footnote">Comment on original post: Feb 26, 2011 - 
 <a href="http://cathyma.com/">Cathy</a> said...
-Great thank you for the notes - I was gutted that I missed her presentation... Sounds like it was a great one!</i></small>
+Great thank you for the notes - I was gutted that I missed her presentation... Sounds like it was a great one!</p>
