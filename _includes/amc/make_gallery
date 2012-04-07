@@ -19,7 +19,7 @@ Example use in a blog post:
 $('#myCarousel').carousel( 2 )
 
 -->{% endcomment %}
-<div id="gallery_{{ image_folder }}" class="gallery">
+<p><div id="gallery_{{ image_folder }}" class="gallery">
   <div id="pics-{{ image_folder }}" class="carousel slide">
       <div class="carousel-inner">
           <div class="item active" align="center">
@@ -46,7 +46,7 @@ $('#myCarousel').carousel( 2 )
       <li class="span1" align="center"><a href="#pics-{{ image_folder }}" data-position="{{ image_iter }}"><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-thumb-{{ image_iter }}.jpg" alt="" /></a></li>
     {% endfor %}
   </ul>
-</div>
+</div></p>
 
 {% assign image_folder = nil %}
 {% assign number_of_images = nil %}
