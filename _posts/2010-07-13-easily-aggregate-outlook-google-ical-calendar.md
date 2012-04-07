@@ -3,6 +3,7 @@ layout: post
 title: "Easily Aggregate Outlook, Google &amp; iCal calendar feeds"
 author: Amir Chaudhry
 tags: [list, software, tech, useful, web]
+shorturl: http://bit.ly/I3aHdD
 ---
 {% include JB/setup %}
 

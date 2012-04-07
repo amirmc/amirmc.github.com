@@ -4,6 +4,7 @@ title: "Random things I learned at school"
 author: Amir Chaudhry
 tags: [learning, school]
 description:
+shorturl: http://bit.ly/Hp2rWF
 ---
 {% include JB/setup %}
 

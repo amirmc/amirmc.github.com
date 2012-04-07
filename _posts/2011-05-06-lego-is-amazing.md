@@ -4,6 +4,7 @@ title: "Lego is Amazing"
 author: Amir Chaudhry
 tags: [cambridge, fun, pics]
 description:
+shorturl: http://bit.ly/IiiAYx
 ---
 {% include JB/setup %}
 

@@ -4,6 +4,7 @@ title: "Solar 3d Printer. Fantastic video"
 author: Amir Chaudhry
 tags: [video]
 description:
+shorturl: http://bit.ly/HTc8Jv
 ---
 {% include JB/setup %}
 

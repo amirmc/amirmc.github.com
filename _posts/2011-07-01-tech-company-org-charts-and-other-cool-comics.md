@@ -4,6 +4,7 @@ title: "Tech Company Org Charts - and other cool comics"
 author: Amir Chaudhry
 tags: [funny]
 description:
+shorturl: http://bit.ly/HneTVV
 ---
 {% include JB/setup %}
 

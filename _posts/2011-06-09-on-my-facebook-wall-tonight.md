@@ -4,6 +4,7 @@ title: "On my facebook wall tonight"
 author: Amir Chaudhry
 tags: [cambridge]
 description:
+shorturl: http://bit.ly/HnanqR
 ---
 {% include JB/setup %}
 

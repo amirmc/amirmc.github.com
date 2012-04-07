@@ -4,6 +4,7 @@ title: "I guess I'm going to have to play Starcraft 2"
 author: Amir Chaudhry
 tags: [fun, games, web]
 description:
+shorturl: http://bit.ly/HoFNOk
 ---
 {% include JB/setup %}
 

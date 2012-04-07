@@ -4,6 +4,7 @@ title: "Awesome present for a cool nephew"
 author: Amir Chaudhry
 tags: [pics]
 description:
+shorturl: http://bit.ly/Hnh8bL
 ---
 {% include JB/setup %}
 

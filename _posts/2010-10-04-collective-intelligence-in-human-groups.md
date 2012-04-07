@@ -4,6 +4,7 @@ title: "Collective Intelligence in Human Groups"
 author: Amir Chaudhry
 tags: [science]
 description:
+shorturl: http://bit.ly/Hp28v0
 ---
 {% include JB/setup %}
 

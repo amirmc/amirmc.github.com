@@ -5,6 +5,7 @@ author: Amir Chaudhry
 date: 2010-08-24 14:37:59
 tags: [learning, misc]
 description:
+shorturl; http://bit.ly/Hn5g5h
 ---
 {% include JB/setup %}
 

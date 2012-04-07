@@ -4,6 +4,7 @@ title: "When girls say I love you..."
 author: Amir Chaudhry
 tags: [funny, quotes, web]
 description:
+shorturl: http://bit.ly/Hn5sWP
 ---
 {% include JB/setup %}
 

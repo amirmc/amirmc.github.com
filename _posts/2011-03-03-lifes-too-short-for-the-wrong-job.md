@@ -4,6 +4,7 @@ title: "Life's Too Short for the Wrong Job"
 author: Amir Chaudhry
 tags: [funny, web]
 description:
+shorturl: http://bit.ly/Hn7HF1
 ---
 {% include JB/setup %}
 

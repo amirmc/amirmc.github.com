@@ -5,6 +5,7 @@ author: Amir Chaudhry
 date: 2010-09-30 23:12:00
 tags: [video, web]
 description:
+shorturl: http://bit.ly/Hp23HL
 ---
 {% include JB/setup %}
 

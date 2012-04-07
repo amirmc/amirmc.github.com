@@ -5,6 +5,7 @@ author: Amir Chaudhry
 date: 2010-09-30 17:22:00
 tags: [funny, web]
 description:
+shorturl: http://bit.ly/Iim25r
 ---
 {% include JB/setup %}
 

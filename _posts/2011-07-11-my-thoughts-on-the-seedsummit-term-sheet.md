@@ -5,6 +5,7 @@ author: Amir Chaudhry
 date: 2011-07-11 14:02:00
 tags: [essay, legal, startups]
 description:
+shorturl: http://bit.ly/HhHhp4
 ---
 {% include JB/setup %}
 

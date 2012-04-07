@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Long overdue catchup post"
+author: Amir Chaudhry
 category: 
 tags: [cambridge, essay, pics, startups]
+shorturl: http://bit.ly/HvUkpd
 ---
 {% include JB/setup %}
 

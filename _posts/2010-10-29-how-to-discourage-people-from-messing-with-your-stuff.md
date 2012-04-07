@@ -4,6 +4,7 @@ title: "How to discourage people from messing with your [insert object here]"
 author: Amir Chaudhry
 tags: [cambridge, friends, fun, pics, redgate]
 description:
+shorturl: http://bit.ly/HIPd05
 ---
 {% include JB/setup %}
 

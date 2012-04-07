@@ -4,6 +4,7 @@ title: "A Periodic Table of Visualisation Methods"
 author: Amir Chaudhry
 tags: [misc, pics]
 description:
+shorturl: http://bit.ly/HlX594
 ---
 {% include JB/setup %}
 

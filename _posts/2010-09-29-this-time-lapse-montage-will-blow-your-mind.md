@@ -4,6 +4,7 @@ title: "This time-lapse montage will blow your mind"
 author: Amir Chaudhry
 tags: [video, web]
 description:
+shorturl: http://bit.ly/HhKK76
 ---
 {% include JB/setup %}
 

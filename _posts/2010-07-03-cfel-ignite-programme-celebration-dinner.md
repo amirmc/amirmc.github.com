@@ -4,6 +4,7 @@ title: "CfEL Ignite programme - Celebration Dinner"
 author: Amir Chaudhry
 tags: [cambridge, entrepreneurs, pics]
 description:
+shorturl: http://bit.ly/HpxhfY
 ---
 {% include JB/setup %}
 

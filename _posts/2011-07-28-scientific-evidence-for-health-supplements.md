@@ -4,6 +4,7 @@ title: "Snake oil? Scientific evidence for health supplements"
 author: Amir Chaudhry
 tags: [science]
 description:
+shorturl: http://bit.ly/Hqyv9k
 ---
 {% include JB/setup %}
 

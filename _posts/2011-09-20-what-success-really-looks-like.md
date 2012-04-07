@@ -4,6 +4,7 @@ title: "Infographic of the day - What success really looks like"
 author: Amir Chaudhry
 tags: []
 description:
+shorturl: http://bit.ly/Hn4KsP
 ---
 {% include JB/setup %}
 

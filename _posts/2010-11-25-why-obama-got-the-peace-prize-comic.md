@@ -4,6 +4,7 @@ title: "Why Obama got the Peace Prize"
 author: Amir Chaudhry
 tags: [funny]
 description:
+shorturl: http://bit.ly/HqxGxb
 ---
 {% include JB/setup %}
 

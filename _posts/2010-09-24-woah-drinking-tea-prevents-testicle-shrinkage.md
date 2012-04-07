@@ -4,6 +4,7 @@ title: "Woah! Drinking tea prevents testicle shrinkage. Are you getting enough?"
 author: Amir Chaudhry
 tags: [trivia, web]
 description:
+shorturl: http://bit.ly/Hn8Roy
 ---
 {% include JB/setup %}
 

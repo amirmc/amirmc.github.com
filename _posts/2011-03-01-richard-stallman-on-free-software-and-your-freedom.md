@@ -4,6 +4,7 @@ title: "Richard Stallman on Free Software and your Freedom (lecture)"
 author: Amir Chaudhry
 tags: [cambridge, lecture, notes]
 description:
+shorturl: http://bit.ly/IineFM
 ---
 {% include JB/setup %}
 

@@ -4,6 +4,7 @@ title: "PhD Vivas: The Dutch do it better"
 author: Amir Chaudhry
 date: 2010-09-30 10:48:00
 tags: [cambridge, essay, friends, fun, pics]
+shorturl: http://bit.ly/I52nXG
 ---
 {% include JB/setup %}
 

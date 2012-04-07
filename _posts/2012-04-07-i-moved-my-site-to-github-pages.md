@@ -4,6 +4,7 @@ title: "I moved my site to GitHub Pages"
 author: Amir Chaudhry
 tags: [code, essay, learning, web]
 description:
+shorturl: http://bit.ly/Hpu1Bn
 ---
 {% include JB/setup %}
 

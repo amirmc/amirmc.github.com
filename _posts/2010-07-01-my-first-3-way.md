@@ -4,6 +4,7 @@ title: "My first 3-way"
 author: Amir Chaudhry
 tags: [fun, learning, skydive]
 description:
+shorturl: http://bit.ly/HoEDTf
 ---
 {% include JB/setup %}
 

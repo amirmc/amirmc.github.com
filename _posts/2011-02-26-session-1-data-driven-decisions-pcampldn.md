@@ -5,6 +5,7 @@ author: Amir Chaudhry
 date: 2011-02-26 11:44:00
 tags: [conference, notes]
 description:
+shorturl: http://bit.ly/Id4wEq
 ---
 {% include JB/setup %}
 

@@ -4,6 +4,7 @@ title: "Cambridge ousts Harvard as world's best university"
 author: Amir Chaudhry
 tags: [cambridge, web]
 description:
+shorturl: http://bit.ly/InPG8E
 ---
 {% include JB/setup %}
 

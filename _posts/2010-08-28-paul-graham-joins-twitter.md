@@ -4,6 +4,7 @@ title: "Paul Graham joins Twitter"
 author: Amir Chaudhry
 tags: [misc, startups]
 description:
+shorturl: http://bit.ly/IaVBlw
 ---
 {% include JB/setup %}
 

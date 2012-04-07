@@ -4,6 +4,7 @@ title: "Did Google+ Hangout just kill Skype?"
 author: Amir Chaudhry
 tags: [web]
 description:
+shorturl: http://bit.ly/I0ChJQ
 ---
 {% include JB/setup %}
 

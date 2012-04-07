@@ -4,6 +4,7 @@ title: "Moved desks and discovered spent munitions as well as a weapons stockpil
 author: Amir Chaudhry
 tags: [fun, pics, redgate]
 description:
+shorturl: http://bit.ly/I52Vg9
 ---
 {% include JB/setup %}
 

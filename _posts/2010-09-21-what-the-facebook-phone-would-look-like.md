@@ -4,6 +4,7 @@ title: "What the Facebook Phone would look like"
 author: Amir Chaudhry
 tags: [funny, web]
 description:
+shorturl: http://bit.ly/IihaNx
 ---
 {% include JB/setup %}
 

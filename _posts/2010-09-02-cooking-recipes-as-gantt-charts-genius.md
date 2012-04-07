@@ -4,6 +4,7 @@ title: "Cooking recipes as Gantt charts. Genius!"
 author: Amir Chaudhry
 tags: [web]
 description:
+shorturl: http://bit.ly/I0EqoU
 ---
 {% include JB/setup %}
 

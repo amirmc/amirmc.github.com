@@ -4,6 +4,7 @@ title: "Just found MovieBarCode. Fantastic images by stretching and lining up mo
 author: Amir Chaudhry
 tags: [web]
 description:
+shorturl: http://bit.ly/HIQTqr
 ---
 {% include JB/setup %}
 
