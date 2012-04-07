@@ -91,10 +91,22 @@ p {
   font-size: 18px;
   line-height: 24px;
 }
-p small {
+/*p small {
+  font-size: 13px;
+  line-height: 15px;
+  color: #000000;
+}*/
+p.footnote {
+  font-size: 13px;
+  line-height: 18px;
+  font-style: italic;
+  color: #000000;
+}
+p.footer {
   font-size: 11px;
   color: #999999;
 }
+
 
 /*  Lists Styles  */
 /*working on sorting out li styles to avoid tags and header objects to be changed
@@ -300,6 +312,10 @@ select,
 	font-size:0.8em;*/
 }
 
+/* addthis sharing toolbar ======================================= */
+/*.addthis_toolbox .addthis_default_style {
+  margin: 20px 0px;
+}*/
 
 /* random ======================================================== */
 /*

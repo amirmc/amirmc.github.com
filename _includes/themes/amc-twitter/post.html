@@ -11,7 +11,8 @@
             <h2><a class="post-title" href="{{ BASE_PATH }}{{ page.url }}">{{ page.title }}</a></h2>
             <!-- <br /> -->
             {{ content }}
-            <hr>
+            <hr id='share-comment'>
+            {% include amc/sharing %}
             <div class="pagination">
               <ul>
                 {% if page.previous %}
