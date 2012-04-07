@@ -8,4 +8,5 @@
     <a class="addthis_counter addthis_bubble_style"></a>
 </div>
 <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f7d70e955879218"></script>
+<script> var addthis_share = { templates : { twitter : "{{ title }}: {{ url }}" } } </script>
 <!-- AddThis Button END -->
