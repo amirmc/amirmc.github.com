@@ -19,6 +19,7 @@ There are still a bunch of things that are bit broken in the new place.
 - Tags don't sort properly
 - Search doesn't work well
 - RSS/Atom feed is probably a mess
+- Syntax highlighting isn't working
 
 [amirchaudhry.com]: http://amirchaudhry.com
 [GitHub Pages]: http://pages.github.com
@@ -47,7 +48,7 @@ Although dealing with the CSS took a while, Bootstrap made it really easy to cop
 
 There wasn't an easy way to migrate directly from Posterous to GitHub. There are scripts available but either through bad-luck or ineptitude, I couldn't get them to work.  A guy called [Chad][] recently created [Export My Posts][], which pulled out all my content in html format (phew!).  I really didn't want to deal with learning an API or parsing an xml file, so I'm glad he put this together.  It works extremely well.
 
-Next step was to run all the html posts through [pandoc][] to convert them to markdown. I wrote a fairly trivial shell script to do this for me.
+Next step was to run all the html posts through [pandoc][] to convert them to markdown. I wrote a fairly trivial shell script to do this.
 
 {% highlight bash %}
     #!/bin/bash
