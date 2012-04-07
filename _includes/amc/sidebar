@@ -1,5 +1,5 @@
 <div class="sidebar">
-  <img src="/images/amc.jpg"/>
+  <a href="{{ BASE_PATH}}{{ site.JB.about_path }}"><img src="/images/amc.jpg"/></a>
   <ul class="sidebar">
     <li class="sidebar">Member of <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}">Darwin College</a></li>
     <li class="sidebar">Visitor at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Computer Lab</a></li>
