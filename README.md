@@ -8,6 +8,7 @@ The following directories and their contents are Copyright &copy; Amir Chaudhry.
 * journal/
 * images/
 * freebusy/
+* _posts/
 * _wip/
 * _olditems/
 
