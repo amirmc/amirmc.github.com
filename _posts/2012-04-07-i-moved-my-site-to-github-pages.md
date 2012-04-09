@@ -37,7 +37,7 @@ The process of moving to GitHub was a useful experience.  Here are the steps I e
 I used [Jekyll Bootstrap][] and the default [bootstrap theme][]. It was *ridiculously* quick and easy to get a basic site up and start playing around.  The first thing I did was try to re-create structure of my old site and then worry about how it looked.  I'd never dealt with CSS before so this was always going to take a while. For example, it took me *ages* to figure out why items kept shifting between pages. Turns out I needed the following line in my style file:
 
 {% highlight css %}
-    html { overflow-y: scroll; }
+html { overflow-y: scroll; }
 {% endhighlight %}
 
 Although dealing with the CSS took a while, Bootstrap made it really easy to copy/paste/edit the bits I wanted to change.  The nav section was a pain to sort out.  It took a few weeks to get to this point but you're looking at a bootstrap site, which looks nothing like bootstrap (win!). It's likely that I'll keep tweaking things but I'm not expecting to do anything major.
@@ -52,14 +52,14 @@ There wasn't an easy way to migrate directly from Posterous to GitHub. There are
 Next step was to run all the html posts through [pandoc][] to convert them to markdown. I wrote a fairly trivial shell script to do this.
 
 {% highlight bash %}
-    #!/bin/bash
-    echo -e "Files to convert to md? "
-    read -a allfiles
-    #args=("$@")
-    for file in ${allfiles[*]}; do
-        printf "   %s\n" $file
-        pandoc -o ./convert/$file.md $file
-    done
+#!/bin/bash
+echo -e "Files to convert to md? "
+read -a allfiles
+#args=("$@")
+for file in ${allfiles[*]}; do
+    printf "   %s\n" $file
+    pandoc -o ./convert/$file.md $file
+done
 {% endhighlight %}
 
 Then came the slow process of checking each file, removing the left-over html, adding the appropriate headers, dealing with image galleries etc.  Part of this could have been automated but I don't have that many posts so I went through them manually.
