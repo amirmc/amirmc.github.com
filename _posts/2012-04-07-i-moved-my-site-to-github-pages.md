@@ -20,7 +20,7 @@ There are still a bunch of things that are bit broken in the new place.
 - Tags don't sort properly
 - Search doesn't work well
 - RSS/Atom feed is probably a mess
-- Syntax highlighting isn't working
+- Syntax highlighting isn't working\*\*
 
 [amirchaudhry.com]: http://amirchaudhry.com
 [GitHub Pages]: http://pages.github.com
@@ -83,3 +83,5 @@ Overall, I'm quite pleased with myself.  I've gone from knowing nothing about CS
 [ImageMagick]: http://www.imagemagick.org
 
 <p class="footnote">*Though I'll probably use something like <a href="http://www.addthis.com">AddThis</a>. ... Edit: Ok, so at the time of writing, I didn't have the buttons but by the time of publishing I'd figured it out :)</p>
+
+<p class="footnote">**Yup, managed to fix that too :)</p>
