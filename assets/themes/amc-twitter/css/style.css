@@ -312,6 +312,15 @@ select,
 	font-size:0.8em;*/
 }
 
+/* code highlighting ============================================= */
+
+/*Code highlight style (from Pygments) is 'autumn'*/
+
+/*.highlight {
+  background: #000000;
+}*/
+
+
 /* addthis sharing toolbar ======================================= */
 /*.addthis_toolbox .addthis_default_style {
   margin: 20px 0px;
