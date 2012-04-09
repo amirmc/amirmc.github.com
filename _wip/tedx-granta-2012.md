@@ -1,16 +1,15 @@
 ---
 layout: post
-title: ""
+title: "TEDx Granta"
 author: Amir Chaudhry
-date: 
-tags: []
+tags: [conference, pics]
 description:
 shorturl: http://amirchaudhry.com/
 ---
 {% include JB/setup %}
 
-{% assign image_folder = 'folder-of-images' %}
-{% assign number_of_images = 2 %}
+{% assign image_folder = 'tedx-granta-2012' %}
+{% assign number_of_images = 10 %}
 {% include amc/make_gallery %}
 
 <a href="#"><img class="center" src="#"></a>

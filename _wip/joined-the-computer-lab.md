@@ -1,16 +1,15 @@
 ---
 layout: post
-title: ""
+title: "Joined the SRG in the Computer Lab"
 author: Amir Chaudhry
-date: 
-tags: []
+tags: [cambridge, pics, science]
 description:
 shorturl: http://amirchaudhry.com/
 ---
 {% include JB/setup %}
 
-{% assign image_folder = 'folder-of-images' %}
-{% assign number_of_images = 2 %}
+{% assign image_folder = 'joined-comp-lab' %}
+{% assign number_of_images = 4 %}
 {% include amc/make_gallery %}
 
 <a href="#"><img class="center" src="#"></a>
