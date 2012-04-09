@@ -316,9 +316,9 @@ select,
 
 /*Code highlight style (from Pygments) is 'autumn'*/
 
-/*.highlight {
-  background: #000000;
-}*/
+.highlight > pre {
+  padding-left: 25px;
+}
 
 
 /* addthis sharing toolbar ======================================= */
