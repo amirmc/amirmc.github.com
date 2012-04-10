@@ -10,14 +10,14 @@
 
 NAME=$1
 # MAXIMAGE=$2
-MAXIMAGE=`ls input/ | wc -l`
+MAXIMAGE=`ls _input/ | wc -l`
 let -i MAXIMAGE     # to make it an integer
 
 mkdir $NAME
 for (( i=1; i <= $MAXIMAGE; i++ ))
 do
-    convert input/$i.JPG  -resize 940x1^\>  $NAME/$NAME-$i.jpg
-    convert input/$i.JPG  -resize 40x40^\> -gravity center -extent 40x40  $NAME/$NAME-thumb-$i.jpg
+    convert _input/$i.JPG  -resize 940x1^\>  $NAME/$NAME-$i.jpg
+    convert _input/$i.JPG  -resize 36x36^\> -gravity center -extent 36x36  $NAME/$NAME-thumb-$i.jpg
 done
 
 # Notes:
