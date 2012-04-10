@@ -1,0 +1,7 @@
+echo -e "Files to convert to md? "
+read -a allfiles
+#args=("$@")
+for file in ${allfiles[*]}; do
+    printf "   %s\n" $file
+    pandoc -o ./convert/$file.md $file
+done
