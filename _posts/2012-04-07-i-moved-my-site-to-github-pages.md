@@ -76,7 +76,7 @@ I need to keep a local copy of content. Of course, this is now solved but even b
 
 Having existing things I can dig into and copy from (i.e. bootstrap) really speeds up my learning. I don't think I could have gotten this far this quickly without such resources.  If you look at the code itself it's probably a mess, but it's *my* mess.
 
-Scripting things will help. Quickly creating image galleries is the next thing I need to figure out. The process is obvious to me know (since I did parts of it by hand) but I have to automate it using [ImageMagick][].
+Scripting things will help. Quickly creating image galleries is the next thing I need to figure out. The process is obvious to me now (since I did parts of it by hand) but I have to automate it using [ImageMagick][].
 
 Overall, I'm quite pleased with myself.  I've gone from knowing nothing about CSS, static sites, and bootstrap to being vaguely (in)competent. Rock on!
 
