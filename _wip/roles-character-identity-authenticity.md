@@ -1,9 +1,23 @@
 ---
 layout: post
-title: Difference between Roles and Character
-tags : [rolls, character, authenticity, old]
+title: "On Roles, Character, Identity and Authenticity"
+author: Amir Chaudhry
+tags: [authenticity, character, essay, identity, roles]
+description:
+shorturl: http://amirchaudhry.com/on-roles-character-identity-and-authenticity
 ---
 {% include JB/setup %}
+
+30 Jan 2012
+On roles
+
+This difference between roles and character has a direct bearing on our life on line. Specifically, as more and more people join networks and those networks grow, how do we maintain relationships?
+take the example of FB TIMELINE. When I first started posting, it was under the premise that things were relatively private and only a certain groups of people would see them. As my fb crowd has grown. So have the types of Interactions I have and the groups of people I have them with.  The only way of dealing with this is if I ONLY use each type of network for limited thing in other words, artificially limiting my social groups. The big bloggers have to this for obvious reasons (no one follows them to hear about breakfast) but that indicates it's not really a *social* tool for them. It's essentially work. I don't want go have to do that.  But do I want to artificially draw lines among groups of friends. While that's easy in real life, it's rather cold and difficult and time consuming online. Also I'd lose the ability to discover interesting things about friends.
+
+
+
+
+
 
 # Difference between Roles and Character
 
@@ -20,10 +34,4 @@ I guess the point I’m trying to make is that when you deal with 60+yr old boar
 
 Garron, that’s a really interesting case. Personally, I think I’d prefer your style of management so I wouldn’t know what to say. I think it comes down to picking up on peoples preferences and trying to behave accordingly but I’ve limited experience of that. The only suggestion I could make would be having a go at amateur dramatics. That might sound a little odd but I have to say that doing drama at school was one of the best decisions I ever made. It essentially gave me the ability and confidence to play different roles/characters. Let me know if you decide to go that way, though it might not be so easy in Rwanda... :)
 
-
-30 Jan 2012
-On roles
-
-This difference between roles and character has a direct bearing on our life online. Specifically, as more and more peole join networks and those networks grow, how do we mai tain relationships?
-take the example of FB TIMELINE. When I first started posting, it was undertge premise that things wererelatively pri ate and only a certaingroups of ppl souls see them. As my fb crowd has grown. So have the types of Interactions I have and the groups of people I havethem with.  The only way of deali g with this is if I ONLY use each type of network for limited thing in other words, artificial limiting my social groups. The big bloggers have to this for obvious reasons (no one follows them to heat about breakfat) but that indicates it's no really a SOCIAL tool for them. It's essentially work. I don't Wang go have to dothat.  Bir do I wan to artificially draw lines among groups of friends. While that's easy irl it's rather cold and difficult and time consuming online. Also I'd lose the ability to discover interesting things about friends.
 
