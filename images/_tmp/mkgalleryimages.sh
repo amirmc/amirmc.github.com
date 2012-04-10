@@ -9,9 +9,9 @@
 # read MAXIMAGE
 
 NAME=$1
-MAXIMAGE=$2
-# MAXIMAGE=`ls input/ | wc -l`
-
+# MAXIMAGE=$2
+MAXIMAGE=`ls input/ | wc -l`
+let -i MAXIMAGE     # to make it an integer
 
 mkdir $NAME
 for (( i=1; i <= $MAXIMAGE; i++ ))
@@ -23,7 +23,7 @@ done
 # Notes:
 # Images are usu. exported from iPhoto in sequential
 # order into 'input' folder referred to above.
-# Running `bash mkgalleryimages $1 $2` from the command line
+# Running `bash mkgalleryimages <folder-name>` from the command line
 # then makes the appropriate folder and thumbnails.
 # Simply `mv` the resulting folder into 'images/' so that
 # '_includes/amc/make_gallery' can do the rest.
