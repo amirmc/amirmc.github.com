@@ -8,16 +8,18 @@
 # echo -e "Max image number from input? "
 # read MAXIMAGE
 
-NAME=$1
+INPUTFOLDER=$1
+OUTPUTNAME=$2
 # MAXIMAGE=$2
-MAXIMAGE=`ls _input/ | wc -l`
+# INPUTFOLDER=$2
+MAXIMAGE=`ls $INPUTFOLDER/ | wc -l`
 let -i MAXIMAGE     # to make it an integer
 
-mkdir $NAME
+mkdir $OUTPUTNAME
 for (( i=1; i <= $MAXIMAGE; i++ ))
 do
-    convert _input/$i.JPG  -resize 940x1^\>  $NAME/$NAME-$i.jpg
-    convert _input/$i.JPG  -resize 36x36^\> -gravity center -extent 36x36  $NAME/$NAME-thumb-$i.jpg
+    convert $INPUTFOLDER/$i.JPG  -resize 540x1^\>  $OUTPUTNAME/$OUTPUTNAME-$i.jpg
+    convert $INPUTFOLDER/$i.JPG  -resize 36x36^\> -gravity center -extent 36x36  $OUTPUTNAME/$OUTPUTNAME-thumb-$i.png
 done
 
 # Notes:

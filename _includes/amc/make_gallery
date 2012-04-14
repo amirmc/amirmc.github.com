@@ -22,7 +22,7 @@ $('#myCarousel').carousel( 2 )
 <p><div id="gallery_{{ image_folder }}" class="gallery">
   <ul class="thumbnails">
     {% for image_iter in (1..number_of_images) %}
-      <li><a data-position="{{ image_iter }}"><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-thumb-{{ image_iter }}.jpg" alt="" /></a></li>
+      <li><a data-position="{{ image_iter }}"><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-thumb-{{ image_iter }}.png" alt="" /></a></li>
     {% endfor %}
   </ul>
   <div id="pics-{{ image_folder }}" class="carousel slide">
