@@ -8,7 +8,7 @@ shorturl: http://bit.ly/HoFNOk
 ---
 {% include JB/setup %}
 
-![Starcraft 2](/images/starcraft2-face.jpg)
+![Starcraft 2](/images/web/starcraft2-face.jpg)
 
 Had a slightly bizarre experience at lunch today. Pretty much everyone I sat with was talking about games they’d played in Starcraft II (see below). Words like *fast expand*, *Cruisers* and *Zerg* were being bandied about and for several minutes it felt like a different language (the terminology gets even more odd with things like [cheese tactics](http://www.google.co.uk/search?hl=en&q=cheese+tactic)).
 

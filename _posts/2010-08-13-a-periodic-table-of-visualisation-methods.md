@@ -13,4 +13,4 @@ shorturl: http://bit.ly/HlX594
 Found this great table of visualisations. Below is an image but you have
 to visit the page at [visual-literacy.org](http://www.visual-literacy.org/periodic_table/periodic_table.html "Periodic Table of Visualisations") and hover over the 'elements' to see the examples. Neat.
 
-[![Vizualisation Methods](/images/VizMethdCrop.png)](/images/VizMethdCrop.png)
+![Vizualisation Methods](/images/web/VizMethdCrop.png)

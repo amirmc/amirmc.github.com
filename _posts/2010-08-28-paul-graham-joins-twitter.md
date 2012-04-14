@@ -15,4 +15,4 @@ the update hasn't filtered everywhere yet since I found the following at
 Looks like the previous owner was a Paul Gardi. I wonder if he has any
 idea how many followers his old handle now has (or will have soon).
 
-![Paulgtwitter](/images/PaulgTwitter.jpg)
+![Paulgtwitter](/images/singles/PaulgTwitter.jpg)

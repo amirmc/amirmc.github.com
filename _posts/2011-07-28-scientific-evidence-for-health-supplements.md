@@ -8,7 +8,7 @@ shorturl: http://bit.ly/Hqyv9k
 ---
 {% include JB/setup %}
 
-[![Scientific evidence for health supplements](/images/snakeoil-supplements.png)](http://www.informationisbeautiful.net/visualizations/snake-oil-supplements/)
+[![Scientific evidence for health supplements](/images/web/snakeoil-supplements.png)](http://www.informationisbeautiful.net/visualizations/snake-oil-supplements/)
 
 via [informationisbeautiful.net](http://www.informationisbeautiful.net/visualizations/snake-oil-supplements/)
 

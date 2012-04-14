@@ -8,7 +8,7 @@ shorturl: http://bit.ly/I0ChJQ
 ---
 {% include JB/setup %}
 
-![google-plus](/images/google-plus.png)
+![google-plus](/images/singles//google-plus.png)
 
 <small><i>Disclaimer: I still haven't tried Hangout, not enough people in my
 circles yet.</i></small>

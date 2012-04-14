@@ -8,7 +8,7 @@ shorturl: http://bit.ly/Hn8Roy
 ---
 {% include JB/setup %}
 
-[![Tea and testicle shrinkage](/images/tea-testicles.jpg)](/images/tea-testicles.jpg)
+[![Tea and testicle shrinkage](/images/web/tea-testicles.jpg)](/images/tea-testicles.jpg)
 
 Wow. Random fact of the day.
 

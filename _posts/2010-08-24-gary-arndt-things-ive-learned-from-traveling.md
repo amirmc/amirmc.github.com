@@ -9,7 +9,7 @@ shorturl: http://bit.ly/Hn5g5h
 ---
 {% include JB/setup %}
 
-[![Gary Arndt - Traveling](/images/learned-from-traveling.jpeg)](http://www.huffingtonpost.com/gary-arndt/20-thing-ive-learned-from_b_673264.html)
+[![Gary Arndt - Traveling](/images/web/learned-from-traveling.jpeg)](http://www.huffingtonpost.com/gary-arndt/20-thing-ive-learned-from_b_673264.html)
 
 via [huffingtonpost.com](http://www.huffingtonpost.com/gary-arndt/20-thing-ive-learned-from_b_673264.html)
 

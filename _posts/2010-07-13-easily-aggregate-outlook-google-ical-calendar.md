@@ -21,7 +21,7 @@ For those who don’t want to read the rest, here’s what you do.
 You now have a link to an aggregated iCal feed of your calendar!\
  Below is the rest of the post for those with more patience ;)
 
-<img src="/images/Cal-Logos.png" alt="Cal Logos" class="center">
+<img src="/images/singles/Cal-Logos.png" alt="Cal Logos" class="center">
 
 ### Why would anyone need to do this?
 

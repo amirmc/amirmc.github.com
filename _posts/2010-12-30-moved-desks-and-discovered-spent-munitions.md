@@ -8,7 +8,7 @@ shorturl: http://bit.ly/I52Vg9
 ---
 {% include JB/setup %}
 
-![Weapons stockpile](/images/weapons-stockpile.jpg)
+![Weapons stockpile](/images/singles/weapons-stockpile.jpg)
 
 I just moved desks from one side of the room to the other. While messing
 with the cabling I also cleared out a bunch of nerf bullets from under

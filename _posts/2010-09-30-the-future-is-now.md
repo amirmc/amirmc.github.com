@@ -9,7 +9,7 @@ shorturl: http://bit.ly/Iim25r
 ---
 {% include JB/setup %}
 
-[![Twitter Fail](/images/just-tweeted.jpg)](http://geekandpoke.typepad.com/geekandpoke/2010/01/tweetrets.html)
+[![Twitter Fail](/images/web/just-tweeted.jpg)](http://geekandpoke.typepad.com/geekandpoke/2010/01/tweetrets.html)
 
 via [geekandpoke.typepad.com](http://geekandpoke.typepad.com/geekandpoke/2010/01/tweetrets.html)
 

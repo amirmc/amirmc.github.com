@@ -9,7 +9,7 @@ shorturl: http://bit.ly/HhHhp4
 ---
 {% include JB/setup %}
 
-![Affärsbilder by Dan Eriksson on Flickr](/images/seedsummit-termsheet.jpg)
+![Affärsbilder by Dan Eriksson on Flickr](/images/web/seedsummit-termsheet.jpg)
 
 A few days ago, [Seedsummit](http://seedsummit.org) released a Term
 Sheet intended to be (or become) standard across Europe for early stage

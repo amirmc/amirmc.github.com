@@ -8,7 +8,7 @@ shorturl: http://bit.ly/I0EqoU
 ---
 {% include JB/setup %}
 
-[![Cooking by Gantt](/images/gantt-cooking.png)](http://kangasbros.fi/visual-cookbook/)
+[![Cooking by Gantt](/images/web/gantt-cooking.png)](http://kangasbros.fi/visual-cookbook/)
 
 via [kangasbros.fi](http://kangasbros.fi/visual-cookbook/)
 

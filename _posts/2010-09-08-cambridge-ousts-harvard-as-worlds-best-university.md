@@ -8,7 +8,7 @@ shorturl: http://bit.ly/InPG8E
 ---
 {% include JB/setup %}
 
-> ![Cambridge University](http://static.guim.co.uk/sys-images/Guardian/About/General/2010/9/7/1283890492557/Cambridge-University-006.jpg)
+> [![Cambridge University](/images/web/cam-uni-ousts-harvard.jpg)](http://www.guardian.co.uk/education/2010/sep/08/cambridge-worlds-best-university-harvard)
 >
 > via [guardian.co.uk](http://www.guardian.co.uk/education/2010/sep/08/cambridge-worlds-best-university-harvard)
 

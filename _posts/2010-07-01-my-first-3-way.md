@@ -12,7 +12,7 @@ shorturl: http://bit.ly/HoEDTf
 
 I’m the guy in the white helmet.
 
-<iframe width="540" height="405" src="http://www.youtube-nocookie.com/embed/3e4t-BA20Jo?rel=0" frameborder="0" allowfullscreen="true">lipsum</iframe>
+&#x20; <iframe width="540" height="405" src="http://www.youtube-nocookie.com/embed/3e4t-BA20Jo?rel=0" frameborder="0" allowfullscreen="true">lipsum</iframe>
 
 The above was my first attempt at a proper 3-way skydive. If you look closely it becomes obvious that I’m being dragged around. I’ve clearly got some work to do before I can keep up with these guys by myself. We did get 7 or 8 points though!
 

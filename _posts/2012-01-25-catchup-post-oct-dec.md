@@ -116,4 +116,4 @@ Pics of Visit to Olympic Park (in May)
 
 I managed to get this done in October.  Took a while.
 
-![PhD Thesis]({{BASE_PATH}}/images/thesis-1.jpg "PhD Thesis")
+![PhD Thesis](/images/singles/thesis.jpg "PhD Thesis")

@@ -18,7 +18,7 @@ Wonder what the [BCPA][] would make of this, since they recklessly combine both 
 
 Seriously though, this nicely depicts that many things have *worse* odds than skydiving (although comparisons like this should be taken with a pinch of salt).  However, base jumping (which is not the same thing as skydiving) seems to be the most dangerous by far (1 in 60).
 
-<a href="http://www.besthealthdegrees.com/health-risks/"><img class="center" src="/images/chances-of-dying.jpg"></a>
+[![Chances of Dying](/images/web/chances-of-dying.jpg)](http://www.besthealthdegrees.com/health-risks/)
 
 via [BMD][]
 
