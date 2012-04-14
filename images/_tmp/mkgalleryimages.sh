@@ -18,8 +18,10 @@ let -i MAXIMAGE     # to make it an integer
 mkdir $OUTPUTNAME
 for (( i=1; i <= $MAXIMAGE; i++ ))
 do
-    convert $INPUTFOLDER/$i.JPG  -resize 540x1^\>  $OUTPUTNAME/$OUTPUTNAME-$i.jpg
-    convert $INPUTFOLDER/$i.JPG  -resize 36x36^\> -gravity center -extent 36x36  $OUTPUTNAME/$OUTPUTNAME-thumb-$i.png
+    convert $INPUTFOLDER/$i.JPG  -resize 540x1^\> -strip $OUTPUTNAME/$OUTPUTNAME-$i.jpg
+    convert -define jpeg:size=100x100 $INPUTFOLDER/$i.JPG  -thumbnail 36x36^\> -gravity center -extent 36x36 $OUTPUTNAME/$OUTPUTNAME-thumb-$i.png
+#    convert $INPUTFOLDER/$i.JPG  -resize 540x1^\> -strip $OUTPUTNAME/$OUTPUTNAME-$i.jpg
+#    convert $INPUTFOLDER/$i.JPG  -resize 36x36^\> -gravity center -extent 36x36 -strip $OUTPUTNAME/$OUTPUTNAME-thumb-$i.png
 done
 
 # Notes:
