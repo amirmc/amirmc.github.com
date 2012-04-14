@@ -86,7 +86,7 @@ The trickiest part is finding ways to actually fit some coding into things I nee
 
 I also signed up to Code Academy's 'Code Year' but I've not opened any of their emails yet (and I suspect I won't have time).
 
-![LPtHW]({{ BASE_PATH }}/images/lpthwbook.jpg "Learn Python the Hard Way")
+![LPtHW](/images/web/lpthwbook.jpg "Learn Python the Hard Way")
 
 [LPtHW]: http://learnpythonthehardway.org/
 [Github LPtHW Repo]: https://github.com/amirmc/TheHardWay
