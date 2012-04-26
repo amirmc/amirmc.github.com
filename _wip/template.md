@@ -13,6 +13,6 @@ shorturl: http://amirchaudhry.com/
 {% assign number_of_images = 2 %}
 {% include amc/make_gallery %}
 
-<a href="#"><img class="center" src="#"></a>
+[![Alt](/images/web/#.jpg)](http://www.com)
 
 &#x20; <iframe>lipsum</iframe>
