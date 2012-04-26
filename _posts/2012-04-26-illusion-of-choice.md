@@ -4,7 +4,7 @@ title: "The Illusion of Choice"
 author: Amir Chaudhry
 tags: [infographic, web]
 description:
-shorturl: http://amirchaudhry.com/
+shorturl: http://bit.ly/JBmH7h
 ---
 {% include JB/setup %}
 
