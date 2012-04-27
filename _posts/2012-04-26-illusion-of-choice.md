@@ -8,7 +8,7 @@ shorturl: http://bit.ly/JBmH7h
 ---
 {% include JB/setup %}
 
-[![Illusion of Choice](/images/web/illusion-of-choice.jpg)](http://i.imgur.com/k0pv0.jpg)
+[![Illusion of Choice](/images/web/illusion-of-choice-alpha.png)](http://i.imgur.com/k0pv0.jpg)
 
 Click on the image for a bigger version.
 
