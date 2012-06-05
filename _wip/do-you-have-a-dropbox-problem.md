@@ -17,7 +17,7 @@ shorturl: http://amirchaudhry.com/
 
 &#x20; <iframe>lipsum</iframe>
 
-Essentiallty this boils down to, are people asking for you service or do you have to find creative ways to reframe your solution/problem.
+Essentially this boils down to, are people asking for you service or do you have to find creative ways to reframe your solution/problem.
 
 examples: motor car quote (faster horse)
 
