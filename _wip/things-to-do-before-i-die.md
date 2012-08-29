@@ -25,3 +25,8 @@ This is the current version of a list I first made when I was 12/13.  I know I h
 - Live in another country for a year
 - Be published (academic articles count)
 - Skydive (more than once)
+
+
+### Overall life goal
+
+To achieve self-determination and financial independence.

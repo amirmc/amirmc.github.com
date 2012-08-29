@@ -1,12 +1,17 @@
 ---
 layout: post
-title: "On Roles, Character, Identity and Authenticity"
+title: "On Roles vs Character and Authenticity"
 author: Amir Chaudhry
 tags: [authenticity, character, essay, identity, roles]
-description:
-shorturl: http://amirchaudhry.com/on-roles-character-identity-and-authenticity
+description: Roles vs Character, 
+shorturl: http://amirchaudhry.com/on-roles-vs-character-and-authenticity
 ---
 {% include JB/setup %}
+
+One of the best classes I took at school was Drama.  Even two decades later I still think 
+
+
+
 
 30 Jan 2012
 On roles
