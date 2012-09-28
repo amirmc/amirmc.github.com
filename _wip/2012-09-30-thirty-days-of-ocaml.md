@@ -8,7 +8,7 @@ shorturl: http://bit.ly/SoyARg
 ---
 {% include JB/setup %}
 
-[![Camel Silhouette](/images/web/camel-silhouette.jpg)](http://www.flickr.com/photos/77313375@N00/396253172/)
+[![Camel Silhouette](/images/ocaml-30days/camel-silhouette.jpg)](http://www.flickr.com/photos/77313375@N00/396253172/)
 
 I've set myself a challenge that over the next thirty days, I'll teach myself [OCaml][].  This won't be easy since it'll be my first experience of functional programming as well as a new language. 
 
