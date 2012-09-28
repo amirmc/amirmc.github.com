@@ -4,7 +4,7 @@ title: "Thirty Days of OCaml"
 author: Amir Chaudhry
 tags: [Code, Learning, OCaml]
 description: "I'm learning the basics of OCaml over 30 days"
-shorturl: http://amirchaudhry.com/
+shorturl: http://bit.ly/SoyARg
 ---
 {% include JB/setup %}
 
