@@ -12,11 +12,11 @@ shorturl: http://bit.ly/SoyARg
 
 I've set myself a challenge that over the next thirty days, I'll teach myself some [functional programming][] using [OCaml][].  This will be my first experience of FP in addition to learning a new language so I expect it'll be quite challenging.  
 
-As I go along, I'll try and write regular posts -- hopefully one a day -- describing my experiences, frustrations as well as the questions that occur to me.  I suspect a number of the posts might be summaries to help me organise my understanding, especially where things seem unexpected.  For the times where I can formulate well-posed questions, I'll put them up in places like [Stack Overflow][] as well as describing them here.  Either way, keeping some form of diary will be useful for me and maybe also for other folks who've considered trying out FP and OCaml in particular.
+As I go along, I'll try and write regular posts -- hopefully one a day -- describing my experiences and frustrations as well as the questions that occur to me.  I suspect a number of the posts might be summaries to help me organise my understanding, especially where things seem unexpected.  For the times where I can formulate well-posed questions, I'll put them up in places like [Stack Overflow][] as well as describing them here.  Either way, keeping some form of diary will be useful for me and maybe also for other folks who've considered trying out FP and OCaml in particular.
 
-Obviously, I'm not completely new to programming but I'm not as experienced as most of the folks I tend to hang out with. Just to give you a better picture, my coding experience so far has involved:
+Obviously, I'm not completely new to programming but I would say I have any deep experience (especially compared to the folks I tend to hang out with). Just to give you a better picture, my coding experience so far has involved:
 
-- Some C/C++ with a little [OOP][] programming for a High Energy Physics simulation (during my undergrad - a loooong time ago so I've forgotten everything)
+- Some C/C++ with a little [OOP][] programming for a High Energy Physics simulation (during my undergrad - a long time ago so I've forgotten everything)
 - A bunch of [Matlab][] and [Bash][] scripting for analysis of neuroimaging data (during my PhD)
 - A bunch of [VBA][] within MS Excel for analysing behavioural data (also during my PhD -- I really wish someone had pointed me to Python back then)
 - Part of [Learn Python the Hard Way][] (I keep dipping in and out of this)
