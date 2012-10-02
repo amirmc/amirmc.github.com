@@ -2,7 +2,7 @@
 layout: post
 title: "Thirty Days of OCaml"
 author: Amir Chaudhry
-tags: [30days, Code, Learning, OCaml]
+tags: [30days, code, learning, ocaml]
 description: "I'm learning the basics of OCaml over 30 days"
 shorturl: http://bit.ly/SoyARg
 ---
