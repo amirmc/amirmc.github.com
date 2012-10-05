@@ -4,7 +4,7 @@ title: "OCaml - Installation and hello world"
 author: Amir Chaudhry
 tags: [30days, code, learning, ocaml]
 description: "I'm learning the basics of OCaml over 30 days. This is the summary of the first few days."
-shorturl: http://amirchaudhry.com
+shorturl: http://bit.ly/Swhtij
 ---
 {% include JB/setup %}
 
