@@ -12,7 +12,7 @@ navweight: 4
 
 ## About me
 
-Visitor at [Cambridge Computer Lab][]
+Post-doc at [Cambridge Computer Lab][]
 
 Board Observer at [TidePowerd][]
 
