@@ -16,9 +16,9 @@ If you haven't used wireframes before, think of them as a slightly more advanced
 
 I want to make this work public and I thought the best way would be to show you some screencasts of how the upcoming [OCaml.org][] website might work and also make the demo available to all of you.  The three videos below cover three aspects of the site and I'd encourage you to go through them in order (about 16 minutes in total).  Apologies if my screen isn't particularly clear in the videos but you can visit the demo for yourself and see things in more detail (link and info on feedback at the end of this post).
 
-### Video walkthrough
+### Video walkthroughs
 
-For those who'd like to watch the videos back-to-back and scaled to fit your browser window, you [view the Vimeo album in couchmode][vimeo-couch]. Otherwise, individual videos are embedded below (total time 16m17s).
+For those who'd like to watch the videos back-to-back and scaled to fit your browser window, you can [view the Vimeo album in 'couchmode'][vimeo-couch]. Otherwise, individual videos are embedded below (total time 16m17s).
 
 &#x20; <iframe src="http://player.vimeo.com/video/61768157?byline=0&amp;portrait=0&amp;color=de9e6a" width="540" height="303" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">lipsum</iframe>
 
