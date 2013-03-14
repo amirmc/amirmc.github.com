@@ -9,6 +9,10 @@ navweight: 3
 ---
 {% include JB/setup %}
 
+NOTE (March 2013): The calendar has been broken for a while, ever since my syncing between laptop, Apple's MobileMe and Google was broken (mostly due to Apple).  I'll figure something out eventually.
+
+-----
+
 Please bear the following points in mind (March 2012):
 
 - Note the timezone (I'm in the UK so it's either BST or GMT)
