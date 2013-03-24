@@ -76,7 +76,7 @@ JB :
   about_path : /about/        # Added by amc (19 Mar 12) for new nav
 
   categories_path : /categories.html
-  tags_path : /tags.html
+  tags_path : /tags/          # Edited by amc (24 Mar 13) for tag feeds
   atom_path : /atom.xml
   rss_path : /rss.xml
 
