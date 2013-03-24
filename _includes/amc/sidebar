@@ -21,7 +21,7 @@
   {% unless page.tags == empty %}
     {% if page.tags != nil %}
       <small class="sidebar">Filed under</small>
-      {% assign tags_list = page.tags %}
+      {% assign tags_list = page.tags | sort %}
     {% else %}
       <small class="sidebar">Tags</small>
       {% assign tags_list = site.tags %}
