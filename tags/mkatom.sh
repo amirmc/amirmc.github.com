@@ -13,7 +13,7 @@ title : Atom Feed
 ---
 <?xml version=\"1.0\" encoding=\"utf-8\"?>
 <feed xmlns=\"http://www.w3.org/2005/Atom\">
-  <title>{{ site.title }} - tagged '$TAG'</title>
+  <title>{{ site.title }} - '$TAG'</title>
   <link href=\"{{ site.production_url }}/tags/$LTAG-atom.xml\" rel=\"self\"/>
   <link href=\"{{ site.production_url }}\"/>
   <subtitle>{{ site.tagline }}</subtitle>
