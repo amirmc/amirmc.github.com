@@ -1,0 +1,7 @@
+---
+layout: nil
+title : Atom Feed
+---
+{% for post in page.posts %}
+    {% include amc/atom_post.xml %}
+{% endfor %}
