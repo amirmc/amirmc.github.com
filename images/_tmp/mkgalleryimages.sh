@@ -1,27 +1,19 @@
 #!/bin/bash
 #
-# $1 is folder name, $2 is number of images
+# $1 is folder with pics to process
+# $2 is name of gallery to output
 #
-
-# echo -e "Output folder to make? "
-# read NAME
-# echo -e "Max image number from input? "
-# read MAXIMAGE
 
 INPUTFOLDER=$1
 OUTPUTNAME=$2
-# MAXIMAGE=$2
-# INPUTFOLDER=$2
-MAXIMAGE=`ls $INPUTFOLDER/ | wc -l`
-let -i MAXIMAGE     # to make it an integer
 
 mkdir $OUTPUTNAME
-for (( i=1; i <= $MAXIMAGE; i++ ))
+cd $INPUTFOLDER
+for file in *
 do
-    convert $INPUTFOLDER/$i.JPG  -resize 540x1^\> -strip $OUTPUTNAME/$OUTPUTNAME-$i.jpg
-    convert -define jpeg:size=100x100 $INPUTFOLDER/$i.JPG  -thumbnail 36x36^\> -gravity center -extent 36x36 $OUTPUTNAME/$OUTPUTNAME-thumb-$i.png
-#    convert $INPUTFOLDER/$i.JPG  -resize 540x1^\> -strip $OUTPUTNAME/$OUTPUTNAME-$i.jpg
-#    convert $INPUTFOLDER/$i.JPG  -resize 36x36^\> -gravity center -extent 36x36 -strip $OUTPUTNAME/$OUTPUTNAME-thumb-$i.png
+    convert $file  -resize 540x1^\> -strip ../$OUTPUTNAME/$OUTPUTNAME-"${file%.*}".jpg
+    convert -define jpeg:size=100x100 $file  -thumbnail 36x36^\> -gravity center -extent 36x36 ../$OUTPUTNAME/$OUTPUTNAME-thumb-"${file%.*}".png
+    #echo "$INPUTFOLDER"/"$file" -> "$OUTPUTNAME"
 done
 
 # Notes:
