@@ -8,9 +8,9 @@
     <li class="sidebar">Observer at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> TidePowerd</a></li>
     <li class="sidebar">Advisor to <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}">CUEntrepreneurs</a></li>
   </ul>
-  <a href="https://twitter.com/amirmc/"><img src="/icons/twitter_16.png" alt="amirmc on Twitter" /></a>
-  <a href="http://www.linkedin.com/in/amirchaudhry/"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn" /></a>
-  <a href="https://github.com/amirmc/"><img src="/icons/github_16.png" alt="amirmc on GitHub"/></a>
+  <a href="https://twitter.com/amirmc/" rel="me"><img src="/icons/twitter_16.png" alt="amirmc on Twitter" /></a>
+  <a href="http://www.linkedin.com/in/amirchaudhry/" rel="me"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn" /></a>
+  <a href="https://github.com/amirmc/" rel="me"><img src="/icons/github_16.png" alt="amirmc on GitHub"/></a>
   <a href="http://news.ycombinator.com/threads?id=amirmc"><img src="/icons/yc_16.png" alt="amirmc on Hacker News" /></a>
   <br />
   <form action="http://www.google.com/search" class="navbar-search pull-left" method="get">
