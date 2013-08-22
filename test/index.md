@@ -31,7 +31,7 @@ Code used to embed above is:
 
 This is the embed code from Speakerdeck for the same presentation as above.  this fails when run in `jekyll serve` with the error "REXML could not parse this XML/HTML".  Since this didn't work locally I never tried pushing a page live so this is my attempt at that.
 
-<script async class="speakerdeck-embed" data-id="c05c39b0ea5a013072963e3eecf5e7e1" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<script class="speakerdeck-embed" data-id="c05c39b0ea5a013072963e3eecf5e7e1" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
 Code to *try* to embed above is:
 
