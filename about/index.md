@@ -14,10 +14,6 @@ navweight: 4
 
 Post-doc at [Cambridge Computer Lab][]
 
-Board Observer at [TidePowerd][]
-
-Exec Committee at [SVc2UK][]
-
 Co-founder of [Springboard][]
 
 Advisor at [CU Entrepreneurs][]
@@ -28,8 +24,14 @@ Senior Member at [Darwin College][]
 [CU Entrepreneurs]: http://www.cue.org.uk
 [Darwin College]: http://www.darwin.cam.ac.uk
 [Springboard]: http://springboard.com
+
+<!-- Past 
+Board Observer at [TidePowerd][]
+Exec Committee at [SVc2UK][]
+
 [SVc2UK]: http://svc2uk.com
 [TidePowerd]: http://www.tidepowerd.com
+-->
 
 #### Where to find me
 
