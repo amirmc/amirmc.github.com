@@ -5,7 +5,6 @@
     <li class="sidebar">Post-doc at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Computer Lab</a></li>
     <li class="sidebar">Committee of <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> SVc2UK</a></li>
     <li class="sidebar">Cofounder of <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Springboard</a></li>
-    <li class="sidebar">Observer at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> TidePowerd</a></li>
     <li class="sidebar">Advisor to <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}">CUEntrepreneurs</a></li>
   </ul>
   <a href="https://twitter.com/amirmc" rel="me"><img src="/icons/twitter_16.png" alt="amirmc on Twitter" /></a>
