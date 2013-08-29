@@ -8,7 +8,7 @@ group: navigation
 
 <ul class="tag_box inline">
   {% assign tags_list = site.tags %}  
-  {% include amc/tags_list %}
+  {% include amc/ordered_tags_list %}
 </ul>
 <hr>
 
