@@ -40,7 +40,7 @@ Senior Member at [Darwin College][]
 
 [twitter]: http://twitter.com/amirmc
 [linkedin]: http://www.linkedin.com/in/amirchaudhry
-[github]: https://github.com/amirmc/
+[github]: https://github.com/amirmc
 [hacker news]: http://news.ycombinator.com/threads?id=amirmc
 
 
@@ -49,7 +49,7 @@ Senior Member at [Darwin College][]
 ####### Built using [GitHub Pages][] with help from [Jekyll Bootstrap][] and [Twitter Bootstrap][]. <br /> ( [source][] )
 
 
-[GitHub Pages]: http://pages.github.com/
-[Jekyll Bootstrap]: http://jekyllbootstrap.com/
-[Twitter Bootstrap]: http://twitter.github.com/bootstrap/
+[GitHub Pages]: http://pages.github.com
+[Jekyll Bootstrap]: http://jekyllbootstrap.com
+[Twitter Bootstrap]: http://twitter.github.com/bootstrap
 [source]: https://github.com/amirmc/amirmc.github.com
