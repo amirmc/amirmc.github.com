@@ -12,26 +12,32 @@ navweight: 4
 
 ## About me
 
+***Currently***
+
 Post-doc at [Cambridge Computer Lab][]
+
+Senior Member at [Darwin College][]
+
+Team at [Nymote.org][]
+
+***Previously***
 
 Co-founder of [Springboard][]
 
+Board Observer at [TidePowerd][]
+
+Exec Committee at [SVc2UK][]
+
 Advisor at [CU Entrepreneurs][]
 
-Senior Member at [Darwin College][]
 
 [Cambridge Computer Lab]: http://www.cl.cam.ac.uk
 [CU Entrepreneurs]: http://www.cue.org.uk
 [Darwin College]: http://www.darwin.cam.ac.uk
 [Springboard]: http://springboard.com
-
-<!-- Past 
-Board Observer at [TidePowerd][]
-Exec Committee at [SVc2UK][]
-
+[Nymote.org]: http://nymote.org
 [SVc2UK]: http://svc2uk.com
-[TidePowerd]: http://www.tidepowerd.com
--->
+[Tidepowerd]: http://tidepowerd.com
 
 #### Where to find me
 
