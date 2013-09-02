@@ -25,7 +25,7 @@ However, if we take the last decade of the Internet and Web as an example of
 how the IoT may play out it's actually not a pretty picture.  We're in the 
 age of the Internet behemoths, with huge centralised data silos containing 
 lots of our personal data.  We trust such services to secure our data but 
-[repeated breaches][dropbox-breaches] undermine that trust. Sure there is 
+[repeated breaches][dropbox-breaches] undermine that trust. Sure, there is 
 some choice among providers but it's fast becoming a case of "choose your 
 dictator".  Our information is trapped, interoperating is 
 [becoming difficult][eff-google-xmpp] and to top it off, these giants are 
@@ -60,7 +60,7 @@ In the last year and a half, I've been exploring these ideas at the
 on the problems of [Identity and connectivity][signpost-post] as well as the 
 operating systems for the future.  Infrastructure and tools are being shaped 
 that together form a new toolstack to make the creation and management of 
-decentralised systems easier<sup>&Dagger;</sup>.  There's a larger picture 
+decentralised networks easier<sup>&Dagger;</sup>.  There's a larger picture 
 emerging from this work and it's time to start talking more about it and 
 describing the pieces.  We're calling this open-source toolstack 
 **[Nymote][]** and there's a new site where you can read more about it and 
