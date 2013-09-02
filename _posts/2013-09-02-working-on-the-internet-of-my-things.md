@@ -13,6 +13,7 @@ these areas used to be called ubiquitous computing and home automation but
 have since been subsumed by the (only slightly) catchier moniker of Internet 
 of Things (IoT).
 
+<a href="http://www.flickr.com/photos/mjwiacek/3718366706/"><img style="float: right; margin-left: 10px" src="/images/web/pizza-oven.jpg"></a>
 A couple of my ideas involved controlling devices at home via SMS messages 
 (this was way before smart phones and 'apps' came along).  For example, 
 being able to set my VCR to record a show while I'm out\* or pre-heat the 
@@ -83,6 +84,7 @@ for updates by email, you can [join the Nymote list here][nymote-list].
 [Nymote Blog]: http://nymote.org/blog
 [about]: /about
 [nymote-list]: http://eepurl.com/mXYb1
+
 
 <!-- footnotes -->
 <p class="footnote">* Sky+ came out with this feature a few months after I started discussing it with people.</p>
