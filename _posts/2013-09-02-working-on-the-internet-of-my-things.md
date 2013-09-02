@@ -3,7 +3,7 @@ layout: post
 title: "I'm working on The Internet of *my* Things"
 author: Amir Chaudhry
 tags: [apps, aggregation, centralisation, companies, devices, essay, internet of things, nymote, ownership, privacy, rights, software, tech]
-shorturl: http://amirchaudhry.com/working-on-the-internet-of-my-things
+shorturl: http://bit.ly/1a1HT0T
 ---
 {% include JB/setup %}
 
