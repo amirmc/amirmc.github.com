@@ -41,6 +41,7 @@ habits.  Trading more of our personal lives, from within our homes, with
 increasingly faceless companies and for not very much in return, isn't 
 particularly appealing.
 
+<a href="http://www.flickr.com/photos/59937401@N07/5857192377/"><img style="float:left; margin-right: 15px;" src="/images/web/monopoly-house-die-dollar.jpg"></a>
 If the IoT plays out this way, then we will effectively *increase* the 
 Privacy Tax that we've *already* had to pay for our social networking tools. 
 In order to benefit from the world of connected devices, we have to adjust 
