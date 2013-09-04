@@ -4,17 +4,17 @@ title : Atom Feed
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ site.title }} - 'ocaml labs'</title>
-  <link href="{{ site.production_url }}/tags/ocaml%20labs-atom.xml" rel="self"/>
+  <title>{{ site.title }} - 'ocaml-labs'</title>
+  <link href="{{ site.production_url }}/tags/ocaml-labs-atom.xml" rel="self"/>
   <link href="{{ site.production_url }}"/>
   <subtitle>{{ site.tagline }}</subtitle>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>{{ site.production_url }}/tags/#ocaml%20labs</id>
+  <id>{{ site.production_url }}/tags/#ocaml-labs</id>
   <author>
     <name>{{ site.author.name }}</name>
     <email>{{ site.author.email }}</email>
   </author>
-  {% for post in site.tags.ocaml%20labs %}
+  {% for post in site.tags.ocaml-labs %}
     {% include amc/atom_entry.xml %}
   {% endfor %}
 </feed>
