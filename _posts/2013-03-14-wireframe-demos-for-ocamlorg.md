@@ -2,7 +2,7 @@
 layout: post
 title: "Wireframe demos for OCaml.org"
 author: Amir Chaudhry
-tags: [ocaml, wireframes, video]
+tags: [ocaml, ocaml labs, wireframes, video]
 description: "Videos that talk through the OCaml.org design work"
 shorturl: http://bit.ly/XabAVw
 ---
