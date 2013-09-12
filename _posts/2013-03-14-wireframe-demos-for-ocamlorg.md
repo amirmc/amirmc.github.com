@@ -20,11 +20,11 @@ I want to make this work public and I thought the best way would be to show you 
 
 For those who'd like to watch the videos back-to-back and scaled to fit your browser window, you can [view the Vimeo album in 'couchmode'][vimeo-couch]. Otherwise, individual videos are embedded below (total time 16m17s).
 
-&#x20; <iframe src="http://player.vimeo.com/video/61768157?byline=0&amp;portrait=0&amp;color=de9e6a" width="540" height="303" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true"><a href="http://player.vimeo.com/video/61768157">Watch 'Part 1 - Overview' on Vimeo</a></iframe>
-
-&#x20; <iframe src="http://player.vimeo.com/video/61768235?byline=0&amp;portrait=0&amp;color=de9e6a" width="540" height="304" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true"><a href="http://player.vimeo.com/video/61768235">Watch 'Part 2 - Documentation' on Vimeo</a></iframe>
-
-&#x20; <iframe src="http://player.vimeo.com/video/61768273?byline=0&amp;portrait=0&amp;color=de9e6a" width="540" height="304" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true"><a href="http://player.vimeo.com/video/61768273">Watch 'Part 3 - Continuous Integration' on Vimeo</a></iframe>
+<iframe src="http://player.vimeo.com/video/61768157?byline=0&amp;portrait=0&amp;color=de9e6a" width="540" height="303" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">Video 'Part 1 - Overview' on Vimeo - http://player.vimeo.com/video/61768157</iframe>
+<br />
+<iframe src="http://player.vimeo.com/video/61768235?byline=0&amp;portrait=0&amp;color=de9e6a" width="540" height="304" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">Video 'Part 2 - Documentation' http://player.vimeo.com/video/61768235</iframe>
+<br />
+<iframe src="http://player.vimeo.com/video/61768273?byline=0&amp;portrait=0&amp;color=de9e6a" width="540" height="304" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">Video 'Part 3 - Continuous Integration' http://player.vimeo.com/video/61768273</iframe>
 
 
 ### Public wireframe demo
