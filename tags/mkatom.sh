@@ -21,7 +21,6 @@ title : Atom Feed
   <id>{{ site.production_url }}/tags/#$LTAG</id>
   <author>
     <name>{{ site.author.name }}</name>
-    <email>{{ site.author.email }}</email>
   </author>
   {% for post in site.tags.$LTAG %}
     {% include amc/atom_entry.xml %}
