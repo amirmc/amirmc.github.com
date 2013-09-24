@@ -17,7 +17,8 @@ changes upstream.
 There is a more detailed post coming about all the design work to date and 
 the workflow we're using, but in the meantime, feedback on the following 
 areas would be most welcome.  Please leave feedback in the form of issues on 
-the [ocaml.org sandbox repo](https://github.com/ocamllabs/sandbox-ocaml.org/issues).  
+the [ocaml.org sandbox repo](https://github.com/ocamllabs/sandbox-ocaml.org/issues).  You can also raise points on the 
+[infrastructure mailing list](http://lists.ocaml.org/listinfo/infrastructure).
 
 1. **OCaml Logo** - There was some feedback on the last iteration of the 
 logo, especially regarding the font, so there are now several options to 
