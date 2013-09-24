@@ -2,7 +2,7 @@
 layout: post
 title: "Feedback requested on the OCaml.org redesign"
 author: Amir Chaudhry
-date: 2013-09-24 00:00:00
+date: 2013-09-24 14:00:00
 tags: [ocaml, ocaml-labs]
 shorturl: http://bit.ly/14AYZBF
 ---
