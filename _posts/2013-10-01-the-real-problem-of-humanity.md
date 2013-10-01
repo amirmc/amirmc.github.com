@@ -2,7 +2,7 @@
 layout: post
 title: "The real problem of humanity"
 author: Amir Chaudhry
-date: 2013-10-01 19:45:00
+date: 2013-10-01 19:45:00 +1
 tags: [quote]
 shorturl: http://bit.ly/1bri3Ef
 ---
