@@ -4,7 +4,7 @@ title: "The real problem of humanity"
 author: Amir Chaudhry
 date: 2013-10-01 19:45:00
 tags: [quote]
-shorturl: http://amirchaudhry.com/
+shorturl: http://bit.ly/1bri3Ef
 ---
 {% include JB/setup %}
 
