@@ -11,7 +11,7 @@ early-stage startups ([CTC][], [GoTestIt][]) to blue chip multi-nationals
 co-founded the [Springboard][] accelerator programme (now part of 
 [Techstars][]), funding four teams for three months in Cambridge. Following 
 this, he led an investment into one of the companies and served as Board 
-Observer. Amir also led [Cambridge University Entrepreneurs][], where he 
+Observer. Amir also led [Cambridge University Entrepreneurs][CUE], where he 
 founded the software competition, based on the principle of developing 
 prototypes rather than business plans. Amir has a diverse academic 
 background with an MSci in Physics and a PhD in Neuroscience
