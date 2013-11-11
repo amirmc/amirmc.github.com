@@ -7,13 +7,13 @@ tags: [ocaml, ocamllabs]
 shorturl: http://bit.ly/HoxEec
 ---
 
-<a href="http://fpdays.net/2013/sessions/index.php?session=24"><img style="float: right; margin-top: 10px; margin-left: 10px" src="/images/web/fpdays-logo.png"></a>
+<a href="http://fpdays.net/2013/sessions/index.php?session=24"><img style="float: right; margin-top: 10px; margin-left: 10px" src="{{BASE_PATH}}/images/web/fpdays-logo.png"></a>
 Last Thursday a bunch of us from the OCaml Labs team gave an OCaml tutorial 
 at the [FPDays][] conference (an event for people interested in Functional 
 Programming).  [Jeremy][] and I led the session with [Leo][], [David][] and 
 [Philippe][] helping everyone progress and dealing with questions.
 
-<img style="float: left; margin-right: 10px" src="/images/fpdays2013/fpdays2013-01.jpg">
+<img style="float: left; margin-right: 10px" src="{{BASE_PATH}}/images/fpdays2013/fpdays2013-01.jpg">
 It turned out to be by far the *most popular session* at the conference with 
 over 20 people all wanting to get to grips with OCaml!  An excellent turnout 
 and a great indicator of the interest that's out there, especially when you 
@@ -67,7 +67,7 @@ OCaml tutorial in the future and also for us to be aware of the next
 time we do this.  I've incorporated the feedback from the attendees as well 
 as our own thoughts.
 
-![Heads down and hands on](/images/fpdays2013/fpdays2013-03.jpg)
+![Heads down and hands on]({{BASE_PATH}}/images/fpdays2013/fpdays2013-03.jpg)
 
 ### Things we learnt
 
@@ -97,7 +97,7 @@ were having trouble locally.  Two people made use of this.
 * Of course, It was great to have early proofs of the book and these were 
 well-received.
 
-![RWO books galore!](/images/fpdays2013/fpdays2013-02.jpg)
+![RWO books galore!]({{BASE_PATH}}/images/fpdays2013/fpdays2013-02.jpg)
 
 #### The Bad
 
@@ -145,7 +145,7 @@ everything working.
 It was a great session and thanks to [Mark][], [Jacqui][] and the rest of 
 the FPDays crew for a great conference!
 
-![RWO Book giveaway](/images/fpdays2013/fpdays2013-04.jpg)
+![RWO Book giveaway]({{BASE_PATH}}/images/fpdays2013/fpdays2013-04.jpg)
 
 
 (Thanks to Jeremy, Leo, David and Philippe for contributions to this post)
