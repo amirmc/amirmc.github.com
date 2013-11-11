@@ -6,6 +6,7 @@ date: 2013-10-28 12:30:00
 tags: [ocaml, ocamllabs]
 shorturl: http://bit.ly/HoxEec
 ---
+{% include JB/setup %}
 
 <a href="http://fpdays.net/2013/sessions/index.php?session=24"><img style="float: right; margin-top: 10px; margin-left: 10px" src="{{BASE_PATH}}/images/web/fpdays-logo.png"></a>
 Last Thursday a bunch of us from the OCaml Labs team gave an OCaml tutorial 
