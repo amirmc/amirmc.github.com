@@ -3,7 +3,7 @@ layout: post
 title: "Review of the OCaml FPDays tutorial"
 author: Amir Chaudhry
 date: 2013-10-28 12:30:00
-tags: [ocaml, ocamllabs]
+tags: [ocaml, ocaml-labs, ocamllabs]
 shorturl: http://bit.ly/HoxEec
 ---
 {% include JB/setup %}

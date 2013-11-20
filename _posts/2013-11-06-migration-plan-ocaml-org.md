@@ -3,7 +3,7 @@ layout: post
 title: "Migration plan for the OCaml.org redesign"
 author: Amir Chaudhry
 date: 2013-11-06 11:00:00
-tags: [ocaml, ocamllabs]
+tags: [ocaml, ocaml-labs, ocamllabs]
 shorturl: http://bit.ly/19C1nKJ
 ---
 {% include JB/setup %}

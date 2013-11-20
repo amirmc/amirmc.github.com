@@ -3,7 +3,7 @@ layout: post
 title: "FP Days OCaml Session"
 author: Amir Chaudhry
 date: 2013-10-22 21:00:00
-tags: [ocaml, ocamllabs]
+tags: [ocaml, ocaml-labs, ocamllabs]
 shorturl: http://bit.ly/1bbVYIH
 ---
 {% include JB/setup %}
