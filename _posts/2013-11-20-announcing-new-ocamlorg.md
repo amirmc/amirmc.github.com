@@ -17,7 +17,7 @@ The DNS may still be propagating so if [http://ocaml.org](http://ocaml.org) hasn
 
 The new site represents a major milestone in the continuing growth of the OCaml ecosystem. It's the culmination of a lot of volunteer work over the last several months and I'd specifically like to thank [Christophe][], [Ashish][] and [Philippe][] for their dedication (the [commit logs][] speak volumes).  
 
-[![OCaml.org Wireframes]({{BASE_PATH}}/images/ann-new-ocamlorg/ocaml-home-wire.png)](http://amirchaudhry.com/wireframe-demos-for-ocamlorg/)
+[![OCaml.org Wireframes](http://amirchaudhry.com/images/ann-new-ocamlorg/ocaml-home-wire.png)](http://amirchaudhry.com/wireframe-demos-for-ocamlorg/)
 
 We began this journey just over 8 months ago with paper, pencils and a lot of ideas. This led to a comprehensive set of [wireframes and walk-throughs][1] of the site, which then developed into a collection of [Photoshop mockups][2]. In turn, these formed the basis for the html templates and style sheets, which we've adapted to fit our needs across the site.  
 
@@ -25,7 +25,7 @@ Alongside the design process, we also considered the kind of structure and [work
 
 Working on all these things in parallel definitely had it challenges (which I'll write about separately) but the result has been worth the effort.  
 
-[![OCaml.org]({{BASE_PATH}}/images/ann-new-ocamlorg/ocaml-home-mockup.png)](http://ocaml.org)
+[![OCaml.org](http://amirchaudhry.com/images/ann-new-ocamlorg/ocaml-home-mockup.png)](http://ocaml.org)
 
 The journey is ongoing and we still have many more improvements we hope to make. The site you see today primarily improves upon the design, structure and workflows but in time, we also intend to incorporate more information on packages and documentation. With the new tooling, moving the website forward will become much easier and I hope that more members of the community become involved in the generation and curation of content.  This brings me to the second part of this post.
 
