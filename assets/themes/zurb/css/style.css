@@ -1,0 +1,228 @@
+/* Override some defaults */
+
+html, body {
+  background-color: #f5f4ee;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+/*  Body Text Styles  */
+body {
+/*  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  color: #000000;
+}
+
+h1.head-title {
+  margin-top: 1rem;
+}
+
+/*  Hyperlink Styles */
+a {
+  color: #bc7134;
+  text-decoration: none;
+}
+a:hover {
+  color: #bc7134;
+  text-decoration: underline;
+}
+a.post-title {
+  color: #444444;
+}
+a.post-title:hover {
+  color: #999999;
+  text-decoration: none;
+}
+a.head-title {
+  color: #999999;
+  text-decoration: none;
+}
+a.head-title:hover {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+.post-date {
+  padding: 0.8rem 0rem 0rem 0rem;
+  color: #999999;
+  font-size: 80%;
+}
+
+p.footnote {
+  font-size: small;
+  font-style: italic;
+}
+p.footer {
+  font-size: x-small;
+  color: #999999;
+}
+/*img {
+  margin: auto;
+}*/
+
+/*  Lists Styles  */
+/*working on sorting out li styles to avoid tags and header objects to be changed
+*/
+ul.archive {
+  list-style: none;
+}
+li.posts {
+  /* deliberately 'em' instead of 'rem' */
+  line-height: 1.2em;
+  font-size: larger;
+  margin-bottom: 0.5em;
+  text-indent: -25%;
+  padding-left: 25%;
+}
+/* Hacks for the Image Gallery */
+div.gallery {
+  margin-bottom: 1.5rem;
+}
+.gallery > ul {
+  margin-left: 0;
+  margin-bottom: 1rem;
+}
+.gallery > .inline-list > li {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+/* Hacks for when JS is disabled */
+.gallery > ul > li.gallery-image {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+
+/* nav  ======================================================== */
+
+.head-nav {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.head-nav li {
+  color: #999999;
+}
+.head-nav .active,
+.head-nav a:active {
+  color: #999999;
+  /*color: #bc7134;*/
+  /*color: #3b5998; FB blue*/
+}
+.head-nav > li > a:hover {
+  text-decoration: none;
+  color: #999999;
+  /*color: #bc7134;*/
+}
+
+/* sidebar  ==================================================== */
+
+.sidebar {
+  color: #999999
+}
+div.sidebar {
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
+ul.sidebar {
+  margin-left: 0;
+  list-style: none;
+  padding-top: 1rem;
+}
+a.sidebar {
+  color: #bc7134;
+}
+a.sidebar:hover {
+  text-decoration: none;
+  color: #999999;
+}
+li.sidebar {
+  font-size: 80%;
+  color: #999999
+}
+
+/* Search Bar */
+.searchbar {
+  margin: 1.2rem 0rem;
+}
+.searchbar .query {
+  background-color: #F7F6F1;
+  border: none;
+}
+
+
+/* tag_box ======================================================== */
+
+.tag_box {
+  list-style:none;
+  margin:0;
+}
+.tag_box li {
+  font-size: 90%;
+}
+.tag_box a {
+  text-decoration:none;
+}
+.tag_box a span{
+  color: #999999;
+  font-size: 70%;
+}
+.tag_cloud.inline-list {
+  font-size: 80%;
+}
+
+
+/* code highlighting ============================================= */
+/*Code highlight style (from Pygments) is 'autumn'*/
+/*This is taken straight from bootstrap*/
+
+code,
+pre {
+  padding: 0 3px 2px;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-size: 12px;
+  color: #333333;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+code {
+  padding: 2px 4px;
+  color: #d14;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+pre {
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 9px;
+  font-size: 12.025px;
+  line-height: 18px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+pre code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+}
+div.highlight {
+  background-color: #f5f4ee;
+}
+.highlight > pre {
+  padding-left: 25px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;  
+}
+

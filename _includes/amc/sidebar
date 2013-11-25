@@ -7,22 +7,20 @@
     <li class="sidebar">Cofounder of <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Springboard</a></li>
     <li class="sidebar">Advisor to <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}">CUEntrepreneurs</a></li>
   </ul>
-  <a href="https://twitter.com/amirmc" rel="me"><img src="/icons/twitter_16.png" alt="amirmc on Twitter" /></a>
-  <a href="http://www.linkedin.com/in/amirchaudhry" rel="me"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn" /></a>
-  <a href="https://github.com/amirmc" rel="me"><img src="/icons/github_16.png" alt="amirmc on GitHub"/></a>
-  <a href="http://news.ycombinator.com/threads?id=amirmc"><img src="/icons/yc_16.png" alt="amirmc on Hacker News" /></a>
-  <br />
-  <form action="http://www.google.com/search" class="navbar-search pull-left" method="get">
+  <a rel="me" href="https://twitter.com/amirmc"><img src="/icons/twitter_16.png" alt="amirmc on Twitter"/></a>
+  <a href="http://www.linkedin.com/in/amirchaudhry/"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn"/></a>
+  <a rel="me" href="https://github.com/amirmc"><img src="/icons/github_16.png" alt="amirmc on GitHub"/></a>
+  <a href="http://news.ycombinator.com/threads?id=amirmc"><img src="/icons/yc_16.png" alt="amirmc on Hacker News"/></a>
+  <form action="http://www.google.com/search" class="searchbar" method="get">
     <input type="hidden" name="q" value="site:amirchaudhry.com"/>
-    <input type="text" class="search-query" placeholder="Search" name="q"/>
+    <input type="text" class="query" placeholder="Search" name="q"/>
   </form>
-  <br />
   {% unless page.tags == empty %}
     {% if page.tags != nil %}
-      <small class="sidebar">Filed under</small>
+      <h6 class="sidebar">Filed under</h6>
       {% assign tags_list = page.tags | sort %}
     {% else %}
-      <small class="sidebar">Tags</small>
+      <h6 class="sidebar">Tags</h6>
       {% assign tags_list = site.tags %}
     {% endif %}
     <ul class="tag_box">

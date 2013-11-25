@@ -10,24 +10,16 @@ description: Archive of Amir Chaudhry's Journal Posts
 ---
 {% include JB/setup %}
 
-
 <div class="row">
-  <div class="span12">
+  <div class="medium-9 columns">
     <div class="row">
-      <div class="span9">
-
-        <div class="row">
-          <!-- <div class="span2">  
-          </div> -->
-          <div class="span7 offset2">
-            {% assign posts_collate = site.posts %}
-            {% include amc/posts_collate %}
-          </div>
-        </div>
-      </div>
-      <div class="span3">
-        {% include amc/sidebar %} 
+      <div class="medium-9 medium-offset-3 columns">
+        {% assign posts_collate = site.posts %}
+        {% include amc/posts_collate %}
       </div>
     </div>
   </div>
+     <div class="medium-3 columns">
+      {% include amc/sidebar %} 
+    </div>
 </div>

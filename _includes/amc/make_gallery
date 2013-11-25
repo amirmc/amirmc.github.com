@@ -3,7 +3,7 @@
 The make_gallery include is a helper to make image galleries with thumbnails below the carousel.
 
 REQUIREMENTS
-  - The HTML/CSS is based on Twitter Bootstrap v2.0.0
+  - The HTML/CSS is based on the Orbit Slider from Zurb Foundation v5
   - The name of the folder must be assigned before calling make_gallery
   - The number of images to include must be assigned in advance
   - Image filenames must be of the form "/example/example-1.jpg"
@@ -16,36 +16,21 @@ Example use in a blog post:
   {% assign number_of_images = 31 %}
   {% include amc/make_gallery %}
 
-$('#myCarousel').carousel( 2 )
-
 -->{% endcomment %}
-<p><div id="gallery_{{ image_folder }}" class="gallery">
-  <ul class="thumbnails">
+
+<div class="gallery">
+  <noscript><small><em>Note: The gallery needs JavaScript but I've tried to make it degrade gracefully. -Amir</em></small></noscript>
+  <ul class="inline-list">
     {% for image_iter in (1..number_of_images) %}
-      <li><a data-position="{{ image_iter }}"><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-thumb-{{ image_iter }}.png" alt="" /></a></li>
+      <li><a data-orbit-link="{{ image_folder }}-{{ image_iter }}"><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-thumb-{{ image_iter }}.png" alt="{{ image_folder }}-thumb-{{ image_iter }}" /></a></li>
     {% endfor %}
   </ul>
-  <div id="pics-{{ image_folder }}" class="carousel slide">
-    <div class="carousel-inner">
-      <div class="item active" align="center">
-        <img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ 1 }}.jpg" alt="">
-        <div class="carousel-caption">
-          <h6 align="right">1 / {{ number_of_images }}</h6>
-        </div>
-      </div>
-      {% for image_iter in (2..number_of_images) %}
-      <div class="item" align="center">
-        <img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg" alt="">
-        <div class="carousel-caption">
-          <h6 align="right">{{ image_iter }} / {{ number_of_images }}</h6>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-    <a class="left carousel-control" href="#pics-{{ image_folder }}" data-slide="prev">&lsaquo;</a>
-    <a class="right carousel-control" href="#pics-{{ image_folder }}" data-slide="next">&rsaquo;</a>
-  </div>
-</div></p>
+  <ul data-orbit data-options="next_on_click:true; timer_speed:3000; pause_on_hover:false; bullets:false;">
+    {% for image_iter in (1..number_of_images) %}
+    <li class="gallery-image" data-orbit-slide="{{ image_folder }}-{{ image_iter }}"><img src="{{ BASE_PATH }}/images/{{ image_folder }}/{{ image_folder }}-{{ image_iter }}.jpg" alt="{{ image_folder }}-{{ image_iter }}"></li>
+    {% endfor %}
+  </ul>
+</div>
 
 {% assign image_folder = nil %}
 {% assign number_of_images = nil %}
