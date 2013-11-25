@@ -12,7 +12,7 @@ shorturl: http://bit.ly/IiiAYx
 {% assign number_of_images = 8 %}
 {% include amc/make_gallery %}
 
-I just spent the afternoon playing *doing valuable research* with Lego.
+I just spent the afternoon ~~playing~~ *doing valuable research* with Lego.
 The pics above show my amazing creation but they don't do justice to the
 complexity of it. I really didn't think I'd need the instructions but I
 was so wrong.
