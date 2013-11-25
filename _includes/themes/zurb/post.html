@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="medium-9 columns">
+
+    <div class="row">
+      <div class="medium-3 columns">
+        <h5 class="post-date" align="right">{{ page.date | date: "%e %B %Y" }}</h5>
+      </div>
+      <div class="medium-9 columns">
+        <h2><a class="post-title" href="{{ BASE_PATH }}{{ page.url }}">{{ page.title }}</a></h2>
+        <!-- <br /> -->
+        {{ content }}
+        <hr id='share-comment'>
+        {% include amc/sharing %}
+        <div class="pagination">
+          <ul class="inline-list">
+            {% if page.previous %}
+              <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; previous</a></li>
+            {% else %}
+              <li class="prev disabled"><a>&larr; previous</a></li>
+            {% endif %}
+              <li class="small"><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">journal</a></li>
+            {% if page.next %}
+              <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">next &rarr;</a></li>
+            {% else %}
+              <li class="next disabled"><a>next &rarr;</a>
+            {% endif %}
+          </ul>
+        </div>
+        <hr id='comments'>
+        {% include JB/comments %}
+      </div>
+    </div>
+  </div>
+  
+  <div class="medium-3 columns">
+    {% include amc/sidebar %}
+  </div>
+</div>
