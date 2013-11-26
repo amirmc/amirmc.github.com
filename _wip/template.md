@@ -13,7 +13,7 @@ shorturl: http://amirchaudhry.com/
 {% assign number_of_images = 2 %}
 {% include amc/make_gallery %}
 
-[![Alt](/images/web/#.jpg)](http://www.com)
+[![Alt]({{BASE_PATH}}/images/web/#.jpg)](http://www.com)
 
 <div class="flex-video">
   <iframe>Title</iframe>
