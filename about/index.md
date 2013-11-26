@@ -24,7 +24,7 @@ Team at [Nymote.org][]
 
 Co-founder of [Springboard][]
 
-Board Observer at [TidePowerd][]
+Board Observer at TidePowerd
 
 Exec Committee at [SVc2UK][]
 
@@ -37,7 +37,6 @@ Advisor at [CU Entrepreneurs][]
 [Springboard]: http://springboard.com
 [Nymote.org]: http://nymote.org
 [SVc2UK]: http://svc2uk.com
-[Tidepowerd]: http://tidepowerd.com
 
 #### Where to find me
 
@@ -54,10 +53,11 @@ Advisor at [CU Entrepreneurs][]
 
 #### About this site
 
-####### Built using [GitHub Pages][] with help from [Jekyll Bootstrap][] and [Twitter Bootstrap][]. <br /> ( [source][] )
+Built using [Jekyll Bootstrap][] and [Zurb Foundation][] on [GitHub Pages][].  
+( [source][] )
 
 
 [GitHub Pages]: http://pages.github.com
 [Jekyll Bootstrap]: http://jekyllbootstrap.com
-[Twitter Bootstrap]: http://twitter.github.com/bootstrap
+[Zurb Foundation]: http://foundation.zurb.com
 [source]: https://github.com/amirmc/amirmc.github.com
