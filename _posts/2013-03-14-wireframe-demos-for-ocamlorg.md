@@ -20,15 +20,15 @@ I want to make this work public and I thought the best way would be to show you 
 
 For those who'd like to watch the videos back-to-back and scaled to fit your browser window, you can [view the Vimeo album in 'couchmode'][vimeo-couch]. Otherwise, individual videos are embedded below (total time 16m17s).
 
-<div class="flex-video">
+<div class="flex-video widescreen vimeo">
     <iframe src="http://player.vimeo.com/video/61768157?byline=0&amp;portrait=0&amp;color=de9e6a" width="540" height="303" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">Video Part 1 - Overview - http://player.vimeo.com/video/61768157</iframe>
 </div>
 
-<div class="flex-video">
+<div class="flex-video widescreen vimeo">
     <iframe src="http://player.vimeo.com/video/61768235?byline=0&amp;portrait=0&amp;color=de9e6a" width="540" height="304" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">Video Part 2 - Documentation - http://player.vimeo.com/video/61768235</iframe>
 </div>
 
-<div class="flex-video">
+<div class="flex-video widescreen vimeo">
     <iframe src="http://player.vimeo.com/video/61768273?byline=0&amp;portrait=0&amp;color=de9e6a" width="540" height="304" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">Video Part 3 - Continuous Integration - http://player.vimeo.com/video/61768273</iframe>
 </div>
 
