@@ -34,4 +34,9 @@ Please bear the following points in mind (March 2012):
 </ul>
 -->
 
-<iframe width="800" height="600" scrolling="no" frameborder="0" src="https://www.google.com/calendar/embed?title=Free%2FBusy%20info&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23f5f4ee&amp;src=idh2t9fkiq1ouil8rpaee576o4%40group.calendar.google.com&amp;color=%23BE6D00&amp;src=l2nmuggjila5if41pb4ba0vu9c%40group.calendar.google.com&amp;color=%230D7813&amp;src=n094q6ajrvkeegg3ajus2tdqnk%40group.calendar.google.com&amp;color=%23AB8B00&amp;src=dh6mb1455vb13bieokfvfehnu8%40group.calendar.google.com&amp;color=%232952A3&amp;src=17q267elg9aovl05dq99gj7qfo%40group.calendar.google.com&amp;color=%23A32929&amp;src=etamod5b69vhgs529ipmo4bp9k%40group.calendar.google.com&amp;color=%23B1365F&amp;src=5d3s6k537rjaa2lj37u6r98sq8%40group.calendar.google.com&amp;color=%23711616&amp;ctz=Europe%2FLondon"></iframe>
+<!--
+<div class="flex-video">
+  <iframe width="800" height="600" scrolling="no" frameborder="0" src="https://www.google.com/calendar/embed?title=Free%2FBusy%20info&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23f5f4ee&amp;src=idh2t9fkiq1ouil8rpaee576o4%40group.calendar.google.com&amp;color=%23BE6D00&amp;src=l2nmuggjila5if41pb4ba0vu9c%40group.calendar.google.com&amp;color=%230D7813&amp;src=n094q6ajrvkeegg3ajus2tdqnk%40group.calendar.google.com&amp;color=%23AB8B00&amp;src=dh6mb1455vb13bieokfvfehnu8%40group.calendar.google.com&amp;color=%232952A3&amp;src=17q267elg9aovl05dq99gj7qfo%40group.calendar.google.com&amp;color=%23A32929&amp;src=etamod5b69vhgs529ipmo4bp9k%40group.calendar.google.com&amp;color=%23B1365F&amp;src=5d3s6k537rjaa2lj37u6r98sq8%40group.calendar.google.com&amp;color=%23711616&amp;ctz=Europe%2FLondon"></iframe>
+</div>
+-->
+
