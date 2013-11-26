@@ -8,7 +8,9 @@ shorturl: http://bit.ly/HhKK76
 ---
 {% include JB/setup %}
 
-&#x20; <iframe src="http://player.vimeo.com/video/14352658?title=0&amp;byline=0&amp;portrait=0" width="540" height="304" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">lipsum</iframe>
+<div class="flex-video widescreen vimeo">
+    <iframe src="http://player.vimeo.com/video/14352658?title=0&amp;byline=0&amp;portrait=0" width="540" height="304" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">Time lapse montage</iframe>
+</div>
 
 > What? Were you trying to use your brain for something right this
 > moment? Please stop that. Stop your multitasking, your conference

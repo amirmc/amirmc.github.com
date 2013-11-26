@@ -9,7 +9,9 @@ shorturl: http://bit.ly/I514bl
 ---
 {% include JB/setup %}
 
-&#x20; <iframe width="540" height="304" src="http://www.youtube-nocookie.com/embed/RmXiItk49Gw?rel=0" frameborder="0" allowfullscreen="true">lipsum</iframe>
+<div class="flex-video widescreen">
+    <iframe width="540" height="304" src="http://www.youtube-nocookie.com/embed/RmXiItk49Gw?rel=0" frameborder="0" allowfullscreen="true">Maz Jobrani</iframe>
+</div>
 
 via [youtube.com](http://www.youtube.com/watch?v=RmXiItk49Gw)
 

@@ -8,7 +8,9 @@ shorturl: http://bit.ly/HTc8Jv
 ---
 {% include JB/setup %}
 
-&#x20; <iframe src="http://player.vimeo.com/video/25401444?title=0&amp;byline=0&amp;portrait=0" width="540" height="304" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">lipsum</iframe>
+<div class="flex-video">
+    <iframe src="http://player.vimeo.com/video/25401444?title=0&amp;byline=0&amp;portrait=0" width="540" height="304" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">Solar 3d Printer video</iframe>
+</div>
 
 via [vimeo.com](http://vimeo.com/25401444)
 

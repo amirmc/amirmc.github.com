@@ -9,7 +9,9 @@ shorturl: http://bit.ly/Hp23HL
 ---
 {% include JB/setup %}
 
-&#x20; <iframe src="http://player.vimeo.com/video/11673745?title=0&amp;byline=0&amp;portrait=0" width="540" height="270" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">lipsum</iframe>
+<div class="flex-video widescreen vimeo">
+    <iframe src="http://player.vimeo.com/video/11673745?title=0&amp;byline=0&amp;portrait=0" width="540" height="270" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">Fantastic Eyjafjallajökull time lapse movie</iframe>
+</div>
 
 via [vimeo.com](http://vimeo.com/11673745)
 
