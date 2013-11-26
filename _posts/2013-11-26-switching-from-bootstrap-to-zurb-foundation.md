@@ -118,7 +118,7 @@ Try changing the width of your browser window to see it scale.
 
 Another of the main difference between the two frameworks is that Bootstrap 
 uses [LESS][] to manage its CSS whereas Foundation uses [SASS][].  Frankly, 
-I've no experience with either of them so it makes little difference to me.  
+I've no experience with either of them so it makes little difference to me. 
 It's worth bearing in mind for anyone who's workflow does involve 
 pre-processing.  Also, Bootstrap is available under the 
 [Apache 2 License][bootstrap-license], while Foundation is released under 
