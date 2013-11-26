@@ -15,4 +15,6 @@ shorturl: http://amirchaudhry.com/
 
 [![Alt](/images/web/#.jpg)](http://www.com)
 
-&#x20; <iframe>lipsum</iframe>
+<div class="flex-video">
+  <iframe>Title</iframe>
+</div
