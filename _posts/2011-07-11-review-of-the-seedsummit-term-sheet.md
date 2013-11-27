@@ -9,7 +9,7 @@ shorturl: http://bit.ly/InJrln
 ---
 {% include JB/setup %}
 
-**Please read the [summary post](http://amirchaudhry.com/journal/my-thoughts-on-the-seedsummit-term-sheet) (above) before reading this one.**
+**Please read the [summary post](http://amirchaudhry.com/my-thoughts-on-the-seedsummit-term-sheet) (above) before reading this one.**
 
 Summary: Last week, [Seedsummit](http://seedsummit.org) released a Term
 Sheet intended to be (or become) standard across Europe for early stage

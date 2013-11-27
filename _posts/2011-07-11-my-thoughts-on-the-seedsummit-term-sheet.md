@@ -21,7 +21,7 @@ and how difficult it must have been to achieve consensus). That might be
 because the announcement seemed to come as a surprise, so perhaps folks
 haven’t had a chance to digest it yet. Or maybe nobody cares?
 
-[One post from the Guardian](http://www.guardian.co.uk/technology/pda/2011/jul/06/startups-terms-seed) offered some criticism, but beyond that it’s all been a bit quiet. Since no-one else has posted any thoughts, I thought I’d go through the document and offer my opinions. I’ve put the notes in a [more comprehensive post](http://amirchaudhry.com/journal/review-of-the-seedsummit-term-sheet) and summarised the main points here (mostly because going through a legal document is a little bit dreary).
+[One post from the Guardian](http://www.guardian.co.uk/technology/pda/2011/jul/06/startups-terms-seed) offered some criticism, but beyond that it’s all been a bit quiet. Since no-one else has posted any thoughts, I thought I’d go through the document and offer my opinions. I’ve put the notes in a [more comprehensive post](http://amirchaudhry.com/review-of-the-seedsummit-term-sheet) and summarised the main points here (mostly because going through a legal document is a little bit dreary).
 
 
 ### Main comments on Seedsummit term sheet
