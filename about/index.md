@@ -16,6 +16,8 @@ navweight: 4
 
 Post-doc at [Cambridge Computer Lab][]
 
+Programme Manager at [OCaml Labs][]
+
 Senior Member at [Darwin College][]
 
 Team at [Nymote.org][]
@@ -32,6 +34,7 @@ Advisor at [CU Entrepreneurs][]
 
 
 [Cambridge Computer Lab]: http://www.cl.cam.ac.uk
+[OCaml Labs]: http://www.cl.cam.ac.uk/projects/ocamllabs/
 [CU Entrepreneurs]: http://www.cue.org.uk
 [Darwin College]: http://www.darwin.cam.ac.uk
 [Springboard]: http://springboard.com

@@ -2,6 +2,7 @@
   <a href="{{ BASE_PATH}}{{ site.JB.about_path }}"><img src="/images/amc.jpg"/></a>
   <ul class="sidebar">
     <li class="sidebar">Team at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Nymote.org</a></li>
+    <li class="sidebar">Wrangler at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> OCaml Labs</a></li>
     <li class="sidebar">Post-doc at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Computer Lab</a></li>
     <li class="sidebar">Member of <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}">Darwin College</a></li>
     <li class="sidebar">Cofounder of <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Springboard</a></li>
