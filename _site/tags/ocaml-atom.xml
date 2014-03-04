@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Amir Chaudhry - 'OCaml'</title>
+  <link href="http://amirchaudhry.com/tags/ocaml-atom.xml" rel="self"/>
+  <link href="http://amirchaudhry.com"/>
+  <subtitle>thoughts, comments &amp; general ramblings</subtitle>
+  <updated>2014-03-04T14:09:16+00:00</updated>
+  <id>http://amirchaudhry.com/tags/#ocaml</id>
+  <author>
+    <name>Amir Chaudhry</name>
+  </author>
+  
+    <entry>
+  <title>Switching from Bootstrap to Zurb Foundation</title>
+  <link href="http://amirchaudhry.com/switching-from-bootstrap-to-zurb-foundation"/>
+  <author>Amir Chaudhry</author>
+  <updated>2013-11-26T21:05:00Z</updated>
+  <id>http://amirchaudhry.com/switching-from-bootstrap-to-zurb-foundation</id>
+  <content type="html">&lt;p&gt;I've just updated my site's HTML/CSS and moved from Twitter Bootstrap to
+&lt;a href=&quot;http://foundation.zurb.com/learn/features.html&quot;&gt;Zurb Foundation&lt;/a&gt;.  This post captures my subjective notes on the
+migration.&lt;/p&gt;
+
+&lt;h4&gt;My use of Bootstrap&lt;/h4&gt;
+
+&lt;p&gt;When I originally set this site up, I didn't know what frameworks existed or
+anything more than the basics of dealing with HTML (and barely any CSS).  I
+came across Twitter Bootstrap and immediately decided it would Solve All My
+Problems.  It really did.  Since then, I've gone through one 'upgrade' with
+Bootstrap (from 1.x to 2.x), after which I dutifully ignored all the fixes
+and improvements (note that Bootstrap was up to v2.3.2 while I was still
+using v2.0.2).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://amirchaudhry.com/images/switch-to-foundation/responsive-design.png&quot; alt=&quot;Responsive Design&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For the most part, this was fine with me but for a while now, I've been
+meaning to make this site 'responsive' (read: not look like crap from a
+mobile).  Bootstrap v3 purports to be mobile-first so upgrading would likely
+give me what I'm after but v3 is &lt;a href=&quot;http://getbootstrap.com/getting-started/&quot;&gt;not backwards compatible&lt;/a&gt;,
+meaning I'd have to rewrite parts of the HTML.  Since this step was
+unavoidable, it led me to have another look at front-end frameworks, just to
+see if I was missing anything.  This was especially relevant since we'd
+&lt;a href=&quot;http://amirchaudhry.com/announcing-new-ocamlorg/&quot;&gt;just released&lt;/a&gt; the new &lt;a href=&quot;http://ocaml.org&quot;&gt;OCaml.org&lt;/a&gt;
+website, itself built with Bootstrap v2.3.1 (we'd done the design/templating
+work long before v3 was released).  It would be useful to know what else is
+out there for any future work.&lt;/p&gt;
+
+&lt;p&gt;Around this time I discovered Zurb Foundation and also the numerous
+comparisons between them (note: Foundation seems to come out ahead in most
+of those).  A few days ago, the folks at Zurb released
+&lt;a href=&quot;http://zurb.com/article/1280/foundation-5-blasts-off--2&quot;&gt;version 5&lt;/a&gt;, so I decided that now is the time to kick the
+tires.  For the last few days, I've been playing with the framework and in
+the end I decided to migrate my site over completely.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://foundation.zurb.com/learn/features.html&quot;&gt;&lt;img src=&quot;http://amirchaudhry.com/images/switch-to-foundation/zurb-yeti.png&quot; alt=&quot;Foundation's Yeti&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;Swapping out one framework for another&lt;/h4&gt;
+
+&lt;p&gt;Over time, I've become moderately experienced with HTML/CSS and I can
+usually wrangle things to look the way I want, but my solutions aren't
+necessarily elegant. I was initially concerned that I'd already munged
+things so much that changing anything would be a pain.  When I first put the
+styles for this site together, I had to spend quite a bit of time
+overwriting Bootstrap's defaults so I was prepared for the same when using
+Foundation.  Turns out that I was fine.  I currently use &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; (and
+&lt;a href=&quot;http://jekyllbootstrap.com&quot;&gt;Jekyll Bootstrap&lt;/a&gt;) so I only had three template files and a couple of
+HTML pages to edit and because I'd kept most of my custom CSS in a separate
+file, it was literally a case of swapping out one framework for another and
+bug-fixing from there onwards.  There's definitely a lesson here in using
+automation as much as possible.&lt;/p&gt;
+
+&lt;p&gt;Customising the styles was another area of concern but I was pleasantly
+surprised to find I needed &lt;em&gt;less&lt;/em&gt; customisation than with Bootstrap.  This
+is likely because I didn't have to override as many defaults (and probably
+because I've learned more about CSS since then).  The one thing I seemed to
+be missing was a way to deal with code sections, so I just took what
+Bootstrap had and copied it in.  At some point I should revisit this.&lt;/p&gt;
+
+&lt;p&gt;It did take me a while to get my head around Foundation's grid but it was
+worth it in the end.  The idea is that you should design for small screens
+first and then adjust things for larger screens as necessary. There are
+several different default sizes which inherit their properties from the size
+below, unless you explicitly override them.  I initially screwed this up by
+explicitly defining the grid using the &lt;code&gt;small-#&lt;/code&gt; classes, which obviously
+looks ridiculous on small screens.  I fixed it by swapping out &lt;code&gt;small-#&lt;/code&gt; for
+&lt;code&gt;medium-#&lt;/code&gt; everywhere in the HTML, after which everything looked reasonable.
+Items flowed sensibly into a default column for the small screens and looked
+acceptable for larger screens and perfectly fine on desktops.  I could do
+more styling of the mobile view but I'd already achieved most of what I was
+after.&lt;/p&gt;
+
+&lt;h4&gt;Fixing image galleries and embedded content&lt;/h4&gt;
+
+&lt;p&gt;The only additional thing I used from Bootstrap was the &lt;a href=&quot;http://getbootstrap.com/javascript/#carousel&quot;&gt;Carousel&lt;/a&gt;. I'd
+written some custom helper scripts that would take some images and
+thumbnails from a specified folder and produce clickable thumbnails with a
+slider underneath.  Foundation provides &lt;a href=&quot;http://foundation.zurb.com/docs/components/orbit.html&quot;&gt;Orbit&lt;/a&gt;, so I had to spend time
+rewriting my script to produce the necessary HTML.  This actually resulted
+in cleaner HTML and one of the features I wanted (the ability to link to a
+specific image) was available by default in Orbit.  At this point I also
+tried to make the output look better for the case where JavaScript is
+disabled (in essence, each image is just displayed as a list).  Below is an
+example of an image gallery, taken from a previous post, when I
+&lt;a href=&quot;http://amirchaudhry.com/joined-the-computer-lab/&quot;&gt;joined the computer lab&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;gallery&quot;&gt;
+  &lt;noscript&gt;&lt;small&gt;&lt;em&gt;Note: The gallery needs JavaScript but I've tried to make it degrade gracefully. -Amir&lt;/em&gt;&lt;/small&gt;&lt;/noscript&gt;
+  &lt;ul class=&quot;inline-list&quot;&gt;
+    
+      &lt;li&gt;&lt;a data-orbit-link=&quot;join-comp-lab-1&quot;&gt;&lt;img src=&quot;/images/join-comp-lab/join-comp-lab-thumb-1.png&quot; alt=&quot;join-comp-lab-thumb-1&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    
+      &lt;li&gt;&lt;a data-orbit-link=&quot;join-comp-lab-2&quot;&gt;&lt;img src=&quot;/images/join-comp-lab/join-comp-lab-thumb-2.png&quot; alt=&quot;join-comp-lab-thumb-2&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    
+      &lt;li&gt;&lt;a data-orbit-link=&quot;join-comp-lab-3&quot;&gt;&lt;img src=&quot;/images/join-comp-lab/join-comp-lab-thumb-3.png&quot; alt=&quot;join-comp-lab-thumb-3&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    
+  &lt;/ul&gt;
+  &lt;ul data-orbit data-options=&quot;next_on_click:true; timer_speed:3000; pause_on_hover:false; bullets:false;&quot;&gt;
+    
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;join-comp-lab-1&quot;&gt;&lt;img src=&quot;/images/join-comp-lab/join-comp-lab-1.jpg&quot; alt=&quot;join-comp-lab-1&quot;&gt;&lt;/li&gt;
+    
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;join-comp-lab-2&quot;&gt;&lt;img src=&quot;/images/join-comp-lab/join-comp-lab-2.jpg&quot; alt=&quot;join-comp-lab-2&quot;&gt;&lt;/li&gt;
+    
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;join-comp-lab-3&quot;&gt;&lt;img src=&quot;/images/join-comp-lab/join-comp-lab-3.jpg&quot; alt=&quot;join-comp-lab-3&quot;&gt;&lt;/li&gt;
+    
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Foundation also provides a component called &lt;a href=&quot;http://foundation.zurb.com/docs/components/flex_video.html&quot;&gt;Flex Video&lt;/a&gt;, which allows the
+browser to scale videos to the appropriate size.  This fix was as simple as
+going back through old posts and wrapping anything that was &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt; in a
+&lt;code&gt;&amp;lt;div class=&quot;flex-video&quot;&amp;gt;&lt;/code&gt;.  It really was that simple and all the Vimeo and
+YouTube items scaled perfectly.  Here's an example of a video from an
+earlier post, where I gave a &lt;a href=&quot;http://amirchaudhry.com/wireframe-demos-for-ocamlorg/&quot;&gt;walkthrough of the ocaml.org site&lt;/a&gt;.
+Try changing the width of your browser window to see it scale.&lt;/p&gt;
+
+&lt;div class=&quot;flex-video widescreen vimeo&quot;&gt;
+  &lt;iframe src=&quot;http://player.vimeo.com/video/61768157?byline=0&amp;amp;portrait=0&amp;amp;color=de9e6a&quot; width=&quot;540&quot; height=&quot;303&quot; frameborder=&quot;0&quot; webkitAllowFullScreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowFullScreen=&quot;true&quot;&gt;Video demo&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;h4&gt;Framework differences&lt;/h4&gt;
+
+&lt;p&gt;Another of the main difference between the two frameworks is that Bootstrap
+uses &lt;a href=&quot;http://lesscss.org&quot;&gt;LESS&lt;/a&gt; to manage its CSS whereas Foundation uses &lt;a href=&quot;http://sass-lang.com&quot;&gt;SASS&lt;/a&gt;.  Frankly,
+I've no experience with either of them so it makes little difference to me.
+It's worth bearing in mind for anyone who's workflow does involve
+pre-processing.  Also, Bootstrap is available under the
+&lt;a href=&quot;http://getbootstrap.com/getting-started/#license-faqs&quot;&gt;Apache 2 License&lt;/a&gt;, while Foundation is released under
+the &lt;a href=&quot;http://foundation.zurb.com/learn/faq.html#question-3&quot;&gt;MIT license&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4&gt;Summary&lt;/h4&gt;
+
+&lt;p&gt;Overall, the transition was pretty painless and most of the time was spent
+getting familiar with the grid, hunting for docs/examples and trying to make
+the image gallery work the way I wanted.  I do think Bootstrap's docs are
+better but Foundation's aren't bad.&lt;/p&gt;
+
+&lt;p&gt;Although this isn't meant to be a comparison, I much prefer Foundation to
+Bootstrap.  If you're not sure which to use then I think the secret is in
+the names of the frameworks.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bootstrap (for me) was a &lt;em&gt;great&lt;/em&gt; way to '&lt;em&gt;bootstrap&lt;/em&gt;' a site quickly with
+lots of acceptable defaults -- it was quick to get started but took some
+work to alter.&lt;/li&gt;
+&lt;li&gt;Foundation seems to provide a great '&lt;em&gt;foundation&lt;/em&gt;' on which to create more
+customised sites -- it's more flexible but needs more upfront thought.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;That's pretty much how I'd recommend them to people now.&lt;/p&gt;
+</content>
+</entry>
+
+  
+    <entry>
+  <title>Announcing the new OCaml.org</title>
+  <link href="http://amirchaudhry.com/announcing-new-ocamlorg"/>
+  <author>Amir Chaudhry</author>
+  <updated>2013-11-20T23:00:00Z</updated>
+  <id>http://amirchaudhry.com/announcing-new-ocamlorg</id>
+  <content type="html">&lt;p&gt;As some of you may have noticed, the new OCaml.org site is now live!&lt;/p&gt;
+
+&lt;p&gt;The DNS may still be propagating so if &lt;a href=&quot;http://ocaml.org&quot;&gt;http://ocaml.org&lt;/a&gt; hasn't updated for you then try http://166.78.252.20.  This post is in two parts: the first is the announcement and the second is a call for content.&lt;/p&gt;
+
+&lt;h3&gt;New OCaml.org website design!&lt;/h3&gt;
+
+&lt;p&gt;The new site represents a major milestone in the continuing growth of the OCaml ecosystem. It's the culmination of a lot of volunteer work over the last several months and I'd specifically like to thank &lt;a href=&quot;https://github.com/Chris00&quot;&gt;Christophe&lt;/a&gt;, &lt;a href=&quot;http://ashishagarwal.org&quot;&gt;Ashish&lt;/a&gt; and &lt;a href=&quot;http://philippewang.info/CL/&quot;&gt;Philippe&lt;/a&gt; for their dedication (the &lt;a href=&quot;https://github.com/ocaml/ocaml.org/commits/master&quot;&gt;commit logs&lt;/a&gt; speak volumes).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://amirchaudhry.com/wireframe-demos-for-ocamlorg/&quot;&gt;&lt;img src=&quot;http://amirchaudhry.com/images/ann-new-ocamlorg/ocaml-home-wire.png&quot; alt=&quot;OCaml.org Wireframes&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We began this journey just over 8 months ago with paper, pencils and a lot of ideas. This led to a comprehensive set of &lt;a href=&quot;http://amirchaudhry.com/wireframe-demos-for-ocamlorg/&quot;&gt;wireframes and walk-throughs&lt;/a&gt; of the site, which then developed into a collection of &lt;a href=&quot;https://github.com/ocaml/ocaml.org/wiki/Site-Redesign&quot;&gt;Photoshop mockups&lt;/a&gt;. In turn, these formed the basis for the html templates and style sheets, which we've adapted to fit our needs across the site.&lt;/p&gt;
+
+&lt;p&gt;Alongside the design process, we also considered the kind of structure and &lt;a href=&quot;http://lists.ocaml.org/pipermail/infrastructure/2013-July/000211.html&quot;&gt;workflow we aspired to&lt;/a&gt;, both as maintainers and contributors.  This led us to develop completely new tools for &lt;a href=&quot;http://pw374.github.io/posts/2013-09-05-22-31-26-about-omd.html&quot;&gt;Markdown&lt;/a&gt; and &lt;a href=&quot;http://pw374.github.io/posts/2013-10-03-20-35-12-using-mpp-two-different-ways.html&quot;&gt;templating&lt;/a&gt; in OCaml, which are now available in OPAM for the benefit all.&lt;/p&gt;
+
+&lt;p&gt;Working on all these things in parallel definitely had it challenges (which I'll write about separately) but the result has been worth the effort.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ocaml.org&quot;&gt;&lt;img src=&quot;http://amirchaudhry.com/images/ann-new-ocamlorg/ocaml-home-mockup.png&quot; alt=&quot;OCaml.org&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The journey is ongoing and we still have many more improvements we hope to make. The site you see today primarily improves upon the design, structure and workflows but in time, we also intend to incorporate more information on packages and documentation. With the new tooling, moving the website forward will become much easier and I hope that more members of the community become involved in the generation and curation of content.  This brings me to the second part of this post.&lt;/p&gt;
+
+&lt;h3&gt;Call for content&lt;/h3&gt;
+
+&lt;p&gt;We have lots of great content on the website but there are parts that could do with a refresh and gaps that could be filled.  As a community driven site, we need ongoing contributions to ensure that the site best reflects its members.&lt;/p&gt;
+
+&lt;p&gt;For example, if you do commercial work on OCaml then maybe you'd like to add yourself to the &lt;a href=&quot;http://ocaml.org/community/support.html&quot;&gt;support page&lt;/a&gt;? Perhaps there are tutorials you can help to complete, like &lt;a href=&quot;http://ocaml.org/learn/tutorials/99problems.html&quot;&gt;99 problems&lt;/a&gt;?  If you're not sure where to begin, there are already a number of &lt;a href=&quot;https://github.com/ocaml/ocaml.org/issues?labels=content&quot;&gt;content issues&lt;/a&gt; you could contribute to.&lt;/p&gt;
+
+&lt;p&gt;Although we've gone through a bug-hunt already, feedback on the site is still very welcome.  You can either &lt;a href=&quot;https://github.com/ocaml/ocaml.org/issues&quot;&gt;create an issue&lt;/a&gt; on the tracker (preferred), or email the infrastructure list.&lt;/p&gt;
+
+&lt;p&gt;It's fantastic how far we've come and I look forward to the next phase!&lt;/p&gt;
+</content>
+</entry>
+
+  
+    <entry>
+  <title>Migration plan for the OCaml.org redesign</title>
+  <link href="http://amirchaudhry.com/migration-plan-ocaml-org"/>
+  <author>Amir Chaudhry</author>
+  <updated>2013-11-06T11:00:00Z</updated>
+  <id>http://amirchaudhry.com/migration-plan-ocaml-org</id>
+  <content type="html">&lt;p&gt;We're close to releasing the new design of ocaml.org but need help from the
+OCaml community to identify and fix bugs before we switch next week.&lt;/p&gt;
+
+&lt;p&gt;Ashish, Christophe, Philippe and I have been discussing how we should go
+about this and below is the plan for migration.  If anyone would like to
+discuss any of this, then the &lt;a href=&quot;http://lists.ocaml.org/listinfo/infrastructure&quot;&gt;infrastructure list&lt;/a&gt; is the best
+place to do so.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;We've made a &lt;strong&gt;&lt;a href=&quot;https://github.com/ocaml/ocaml.org/tree/redesign&quot;&gt;new branch&lt;/a&gt;&lt;/strong&gt; on the main ocaml.org repository with
+the redesign.  This branch is a fork of the master and we've simply cleaned
+up and replayed our git commits there.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We've built a live version of the new site, which is visible at
+&lt;strong&gt;&lt;a href=&quot;http://preview.ocaml.org&quot;&gt;http://preview.ocaml.org&lt;/a&gt;&lt;/strong&gt; - this is rebuilt every few minutes
+from the branch mentioned above.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Over the course of one week, we ask the community to review the new site
+and &lt;strong&gt;&lt;a href=&quot;https://github.com/ocaml/ocaml.org/issues&quot;&gt;report any bugs or problems&lt;/a&gt;&lt;/strong&gt; on the issue tracker. We &lt;em&gt;triage&lt;/em&gt;
+those bugs to identify any blockers and work on those first.  This is the
+phase we'll be in from &lt;em&gt;today&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;After one week (7 days), and after blocking bugs have been fixed, we
+&lt;strong&gt;merge the redesign branch&lt;/strong&gt; into the master branch.  This would
+effectively present the new site to the world.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;During the above, we would not be able to accept any new pull requests on
+the master branch but would be happy to accept them on the new, redesign
+branch.  Hence, restricting the time frame to one week.&lt;/p&gt;
+
+&lt;p&gt;Please note that the above is only intended to merge the &lt;em&gt;design&lt;/em&gt; and
+&lt;em&gt;toolchain&lt;/em&gt; for the new site.  Specifically, we've created new landing
+pages, have new style sheets and have restructured the site's contents as
+well as made some new libraries (&lt;a href=&quot;http://pw374.github.io/posts/2013-09-05-22-31-26-about-omd.html&quot;&gt;OMD&lt;/a&gt; and &lt;a href=&quot;http://pw374.github.io/posts/2013-10-03-20-39-07-OPAMaging-MPP.html&quot;&gt;MPP&lt;/a&gt;). The new toolchain
+means people can write files in markdown, which makes contributing content a
+lot easier.&lt;/p&gt;
+
+&lt;p&gt;Since the files are on GitHub, people don't even need to clone the site
+locally to make simple edits (or even add new pages). Just click the 'Edit
+this page' link in the footer to be taken to the right file in the
+repository and GitHub's editing and pull request features will allow you to
+make changes and submit updates, all from within your browser (see the
+&lt;a href=&quot;https://help.github.com/articles/creating-and-editing-files-in-your-repository&quot;&gt;GitHub Article&lt;/a&gt; for details).&lt;/p&gt;
+
+&lt;p&gt;There is still work to be done on adding new features but the above changes
+are already a great improvement to the site and are ready to be reviewed by
+the OCaml community and merged.&lt;/p&gt;
+</content>
+</entry>
+
+  
+    <entry>
+  <title>Review of the OCaml FPDays tutorial</title>
+  <link href="http://amirchaudhry.com/fpdays-review"/>
+  <author>Amir Chaudhry</author>
+  <updated>2013-10-28T12:30:00Z</updated>
+  <id>http://amirchaudhry.com/fpdays-review</id>
+  <content type="html">&lt;p&gt;&lt;a href=&quot;http://fpdays.net/2013/sessions/index.php?session=24&quot;&gt;&lt;img style=&quot;float: right; margin-top: 10px; margin-left: 10px&quot; src=&quot;/images/web/fpdays-logo.png&quot;&gt;&lt;/a&gt;
+Last Thursday a bunch of us from the OCaml Labs team gave an OCaml tutorial
+at the &lt;a href=&quot;http://fpdays.net/2013/sessions/index.php?session=24&quot;&gt;FPDays&lt;/a&gt; conference (an event for people interested in Functional
+Programming).  &lt;a href=&quot;https://github.com/yallop&quot;&gt;Jeremy&lt;/a&gt; and I led the session with &lt;a href=&quot;http://www.lpw25.net&quot;&gt;Leo&lt;/a&gt;, &lt;a href=&quot;https://github.com/dsheets&quot;&gt;David&lt;/a&gt; and
+&lt;a href=&quot;http://philippewang.info/CL/&quot;&gt;Philippe&lt;/a&gt; helping everyone progress and dealing with questions.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left; margin-right: 10px&quot; src=&quot;/images/fpdays2013/fpdays2013-01.jpg&quot;&gt;
+It turned out to be by far the &lt;em&gt;most popular session&lt;/em&gt; at the conference with
+over 20 people all wanting to get to grips with OCaml!  An excellent turnout
+and a great indicator of the interest that's out there, especially when you
+offer a hands-on session to people.  This shouldn't be a surprise as we've
+had good attendance for the general &lt;a href=&quot;http://www.meetup.com/Cambridge-NonDysFunctional-Programmers/&quot;&gt;OCaml meetups&lt;/a&gt; I've run
+and also the &lt;a href=&quot;http://ocamllabs.github.io/compiler-hacking/2013/09/17/compiler-hacking-july-2013.html&quot;&gt;compiler hacking sessions&lt;/a&gt;, which Jeremy and
+Leo have been building up (do sign up if you're interested in either of
+those!).  We had a nice surprise for attendees, which were
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Galley_proof&quot;&gt;uncorrected proof&lt;/a&gt; copies of Real World OCaml and luckily, we had just
+enough to go around.&lt;/p&gt;
+
+&lt;p&gt;For the tutorial itself, Jeremy put together a nice sequence of exercises
+and a &lt;a href=&quot;https://github.com/ocamllabs/fpdays-skeleton&quot;&gt;skeleton repo&lt;/a&gt; (with helpful comments in the code) so that people
+could dive in quickly.  The event was set up to be really informal and the
+rough plan was as following:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Installation/Intro&lt;/em&gt; - We checked that people had been able to follow the
+&lt;a href=&quot;http://amirchaudhry.com/fpdays-ocaml-session/&quot;&gt;installation instructions&lt;/a&gt;, which we'd sent them in advance.
+We also handed out copies of the book and made sure folks were comfortable
+with &lt;a href=&quot;http://opam.ocaml.org&quot;&gt;OPAM&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Hello world&lt;/em&gt; - A light intro to get people familiar with the OCaml
+syntax and installing packages with OPAM. This would also help people to get
+familiar with the toolchain, workflow and compilation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Monty Hall browser game&lt;/em&gt; - Using &lt;a href=&quot;http://ocsigen.org/js_of_ocaml/&quot;&gt;&lt;code&gt;js_of_ocaml&lt;/code&gt;&lt;/a&gt;, we wanted
+people to create and run the &lt;a href=&quot;http://en.wikipedia.org/wiki/Monty_Hall_problem&quot;&gt;Monty Hall problem&lt;/a&gt; in their
+browser.  This would give people a taste of some real world interaction by
+having to deal with the DOM and interfaces.  If folks did well, they could
+add code to keep logs of the game results.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Client-server game&lt;/em&gt; - The previous game was all in the browser (so could
+be examined by players) so here the task was to split it into a client and
+server, ensuring the two stay in sync.  This would demonstrate the
+re-usability of the OCaml code already written and give people a feel for
+client server interactions. If people wanted to do more, they could use
+&lt;a href=&quot;http://opam.ocaml.org/pkg/ctypes/0.1.1/&quot;&gt;ctypes&lt;/a&gt; and get better random numbers.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;We did manage to stick to the overall scheme as above and we think this is a
+great base from which to improve future tutorials.  It has the really nice
+benefit of having visual, interactive elements and the ability to run things
+both in the browser as well as on the server is a great way to show the
+versatility of OCaml.  &lt;code&gt;js_of_ocaml&lt;/code&gt; is quite a mature tool and so it's
+no surprise that it's also used by companies such as Facebook (see the recent
+&lt;a href=&quot;http://www.youtube.com/watch?v=gKWNjFagR9k&quot;&gt;CUFP talk by Julien Verlaguet&lt;/a&gt; - skip to &lt;a href=&quot;http://www.youtube.com/watch?feature=player_detailpage&amp;amp;v=gKWNjFagR9k#t=1149&quot;&gt;19:00&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;We learned a lot from running this session so we've captured the good, the
+bad and the ugly below.  This is useful for anyone who'd like to run an
+OCaml tutorial in the future and also for us to be aware of the next
+time we do this.  I've incorporated the feedback from the attendees as well
+as our own thoughts.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/fpdays2013/fpdays2013-03.jpg&quot; alt=&quot;Heads down and hands on&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;Things we learnt&lt;/h3&gt;
+
+&lt;h4&gt;The Good&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Most people really did follow the install instructions beforehand. This
+made things so much easier on the day as we didn't have to worry about
+compile times and people getting bored.  A few people had even got in touch
+with me the night before to sort out installation problems.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Many folks from OCaml Labs also came over to help people, which meant
+no-one was waiting longer than around 10 seconds before getting help.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We had a good plan of the things we wanted to cover but we were happy to
+be flexible and made it clear the aim was to get right into it.  Several
+folks told us that they really appreciated this loose (as opposed to rigid)
+structure.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We didn't spend any time lecturing the room but instead got people right
+into the code.  Having enough of a skeleton to get something interesting
+working was a big plus in this regard. People did progress from the early
+examples to the later ones fairly well.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We had a VM with the correct set up that we could log people into if they
+were having trouble locally.  Two people made use of this.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Of course, It was great to have early proofs of the book and these were
+well-received.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;img src=&quot;/images/fpdays2013/fpdays2013-02.jpg&quot; alt=&quot;RWO books galore!&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt;The Bad&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;In our excitement to get right into the exercises, we didn't really give
+an overview of OCaml and its benefits.  A few minutes at the beginning would
+be enough and it's important so that people can leave with a few sound-bites.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Not everyone received my email about installation, and certainly not the
+late arrivals.  This meant some pain getting things downloaded and running
+especially due to the wifi (see 'Ugly' below).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A few of the people who &lt;em&gt;had&lt;/em&gt; installed, didn't complete the instructions
+fully but didn't realise this until the morning of the session.  There was a good
+suggestion about having some kind of test to run that would check
+everything, so you'd know if there was something missing.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We really should have had a cut-off where we told people to use VMs
+instead of fixing installation issues and 10-15 minutes would have been
+enough.  This would have been especially useful for the late-comers.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We didn't really keep a record of the problems folks were having so we
+can't now go back and fix underlying issues.  To be fair, this would have
+been a little awkward to do ad-hoc but in hindsight, it's a good thing to
+plan for.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;The Ugly&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The only ugly part was the wifi.  It turned out that the room itself was a
+bit of a dead-spot and that wasn't helped by 30ish devices trying to connect
+to one access point!  Having everyone grab packages at the same time in the
+morning probably didn't help.  It was especially tricky as all our
+mitigation plans seemed to revolve around at least having local connectivity.
+In any case, this problem only lasted for the morning session and was a
+little better by the afternoon.  I'd definitely recommend a backup plan in
+the case of complete wifi failure next time!  One such plan that Leo got
+started on was to put the repository and other information onto a flash
+drive that could be shared with people.  We didn't need this in the end but
+it'll be useful to have something like this prepared for next time.  If
+anyone fancies donating a bunch of flash drives, I'll happily receive them!&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Overall, it was a great session and everyone left happy, having completed
+most of the tutorial (and with a book!).  A few even continued at home
+afterwards and &lt;a href=&quot;https://twitter.com/richardclegg/status/393458073052139520&quot;&gt;got in touch&lt;/a&gt; to let us know that they got
+everything working.
+It was a great session and thanks to &lt;a href=&quot;https://twitter.com/MarkDalgarno&quot;&gt;Mark&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/JacquiDDavidson&quot;&gt;Jacqui&lt;/a&gt; and the rest of
+the FPDays crew for a great conference!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/fpdays2013/fpdays2013-04.jpg&quot; alt=&quot;RWO Book giveaway&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Thanks to Jeremy, Leo, David and Philippe for contributions to this post)&lt;/p&gt;
+</content>
+</entry>
+
+  
+    <entry>
+  <title>FP Days OCaml Session</title>
+  <link href="http://amirchaudhry.com/fpdays-ocaml-session"/>
+  <author>Amir Chaudhry</author>
+  <updated>2013-10-22T21:00:00Z</updated>
+  <id>http://amirchaudhry.com/fpdays-ocaml-session</id>
+  <content type="html">&lt;p&gt;On Thursday, along with &lt;a href=&quot;https://github.com/yallop&quot;&gt;Jeremy&lt;/a&gt; and
+&lt;a href=&quot;http://www.lpw25.net&quot;&gt;Leo&lt;/a&gt;, I'll be running an OCaml Hands-on Session at
+the &lt;a href=&quot;http://fpdays.net/2013/&quot;&gt;FPDays conference&lt;/a&gt;. Below are some prep
+instructions for attendees.&lt;/p&gt;
+
+&lt;h3&gt;Preparation for the session&lt;/h3&gt;
+
+&lt;p&gt;If you're starting from scratch, installation can take some time so it's
+best to get as much done in advance as possible.  You'll need OPAM (the
+package manager), OCaml 4.01 (available through OPAM) and a few libraries
+before Thursday.  If you have any issues, please contact Amir.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;OPAM&lt;/strong&gt;: Follow the instructions for your platform at &lt;a href=&quot;http://opam.ocaml.org/doc/Quick_Install.html&quot;&gt;http://opam.ocaml.org/doc/Quick_Install.html&lt;/a&gt;.
+OPAM requires OCaml so hopefully the relevant dependencies will kick in and
+you'll get OCaml too (most likely version 3.12).  You can get a cup of
+coffee while you wait. After installation, run &lt;code&gt;opam init&lt;/code&gt; to initialise OPAM.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;OCaml 4.01&lt;/strong&gt;: We actually need the latest version of OCaml but OPAM
+makes this easy.  Just run the following (and get more coffee):&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam update
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam switch 4.01.0
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;opam config env&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Libraries&lt;/strong&gt;: For the workshop you will need to check that you have the
+following installed: &lt;code&gt;libffi&lt;/code&gt;, &lt;code&gt;pcre&lt;/code&gt; and &lt;code&gt;pkg-config&lt;/code&gt;.  This will depend on
+your platform so on a Mac with homebrew I would do
+&lt;code&gt;brew install libffi pcre pkg-config&lt;/code&gt; or on Debian or Ubuntu
+&lt;code&gt;apt-get install libffi-dev&lt;/code&gt;.  After this, two OCaml packages it's worth
+installing in advance are &lt;code&gt;core&lt;/code&gt; and &lt;code&gt;js_of_ocaml&lt;/code&gt; so simply run:&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam install core js_of_ocaml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;OPAM will take care of the dependencies and the rest we can get on the day!&lt;/p&gt;
+</content>
+</entry>
+
+  
+    <entry>
+  <title>Feedback requested on the OCaml.org redesign</title>
+  <link href="http://amirchaudhry.com/ocamlorg-request-for-feedback"/>
+  <author>Amir Chaudhry</author>
+  <updated>2013-09-24T14:00:00Z</updated>
+  <id>http://amirchaudhry.com/ocamlorg-request-for-feedback</id>
+  <content type="html">&lt;p&gt;There is a work-in-progress site at
+&lt;a href=&quot;http://ocaml-redesign.github.io&quot;&gt;ocaml-redesign.github.io&lt;/a&gt;, where we've
+been developing both the tools and design for the new ocaml.org pages.  This
+allows us to test our tools and fix issues before we consider merging
+changes upstream.&lt;/p&gt;
+
+&lt;p&gt;There is a more detailed post coming about all the design work to date and
+the workflow we're using, but in the meantime, feedback on the following
+areas would be most welcome.  Please leave feedback in the form of issues on
+the &lt;a href=&quot;https://github.com/ocamllabs/sandbox-ocaml.org/issues&quot;&gt;ocaml.org sandbox repo&lt;/a&gt;.  You can also raise points on the
+&lt;a href=&quot;http://lists.ocaml.org/listinfo/infrastructure&quot;&gt;infrastructure mailing list&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;OCaml Logo&lt;/strong&gt; - There was some feedback on the last iteration of the
+logo, especially regarding the font, so there are now several options to
+consider.  Please look at the images on the
+&lt;a href=&quot;https://github.com/ocaml/ocaml.org/wiki/Draft-OCaml-Logos&quot;&gt;ocaml.org GitHub wiki&lt;/a&gt; and then leave your feedback on
+&lt;a href=&quot;https://github.com/ocamllabs/sandbox-ocaml.org/issues/16&quot;&gt;issue #16 on the sandbox repo&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Site design&lt;/strong&gt; - Please do give feedback on the design and any glitches
+you notice. Text on each of the new landing pages is still an initial draft
+so comments and improvements there are also welcome (specifically: Home
+Page, Learn, Documentation, Platform, Community). There are already a few
+&lt;a href=&quot;https://github.com/ocamllabs/sandbox-ocaml.org/issues&quot;&gt;known issues&lt;/a&gt;, so do
+add your comments to those threads first.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+</content>
+</entry>
+
+  
+    <entry>
+  <title>Wireframe demos for OCaml.org</title>
+  <link href="http://amirchaudhry.com/wireframe-demos-for-ocamlorg"/>
+  <author>Amir Chaudhry</author>
+  <updated>2013-03-14T00:00:00+00:00</updated>
+  <id>http://amirchaudhry.com/wireframe-demos-for-ocamlorg</id>
+  <content type="html">&lt;h3&gt;Making mockups&lt;/h3&gt;
+
+&lt;p&gt;Over the last few months, I've been working on various aspects of the &lt;a href=&quot;http://ocaml.org&quot;&gt;OCaml.org&lt;/a&gt; design project.  This covers things like the design, information architecture and how to incorporate new functionality.  One of the methods for thinking through these was to put together a bunch of wireframes using &lt;a href=&quot;http://www.balsamiq.com&quot;&gt;Balsamiq&lt;/a&gt; and use these to express (and generate) ideas as well as get feedback quickly.&lt;/p&gt;
+
+&lt;p&gt;If you haven't used wireframes before, think of them as a slightly more advanced form of sketching things out on a whiteboard.  The best aspect is that it's far quicker, easier and &lt;em&gt;cheaper&lt;/em&gt; to iterate using wireframes than on an actual website.  As you'll see below, you can also convey a lot of information about how a site might work by showing people a clickable demo.&lt;/p&gt;
+
+&lt;p&gt;I want to make this work public and I thought the best way would be to show you some screencasts of how the upcoming &lt;a href=&quot;http://ocaml.org&quot;&gt;OCaml.org&lt;/a&gt; website might work and also make the demo available to all of you.  The three videos below cover three aspects of the site and I'd encourage you to go through them in order (about 16 minutes in total).  Apologies if my screen isn't particularly clear in the videos but you can visit the demo for yourself and see things in more detail (link and info on feedback at the end of this post).&lt;/p&gt;
+
+&lt;h3&gt;Video walkthroughs&lt;/h3&gt;
+
+&lt;p&gt;For those who'd like to watch the videos back-to-back and scaled to fit your browser window, you can &lt;a href=&quot;http://vimeo.com/couchmode/album/2301640&quot;&gt;view the Vimeo album in 'couchmode'&lt;/a&gt;. Otherwise, individual videos are embedded below (total time 16m17s).&lt;/p&gt;
+
+&lt;div class=&quot;flex-video widescreen vimeo&quot;&gt;
+    &lt;iframe src=&quot;http://player.vimeo.com/video/61768157?byline=0&amp;amp;portrait=0&amp;amp;color=de9e6a&quot; width=&quot;540&quot; height=&quot;303&quot; frameborder=&quot;0&quot; webkitAllowFullScreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowFullScreen=&quot;true&quot;&gt;Video Part 1 - Overview - http://player.vimeo.com/video/61768157&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;div class=&quot;flex-video widescreen vimeo&quot;&gt;
+    &lt;iframe src=&quot;http://player.vimeo.com/video/61768235?byline=0&amp;amp;portrait=0&amp;amp;color=de9e6a&quot; width=&quot;540&quot; height=&quot;304&quot; frameborder=&quot;0&quot; webkitAllowFullScreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowFullScreen=&quot;true&quot;&gt;Video Part 2 - Documentation - http://player.vimeo.com/video/61768235&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;div class=&quot;flex-video widescreen vimeo&quot;&gt;
+    &lt;iframe src=&quot;http://player.vimeo.com/video/61768273?byline=0&amp;amp;portrait=0&amp;amp;color=de9e6a&quot; width=&quot;540&quot; height=&quot;304&quot; frameborder=&quot;0&quot; webkitAllowFullScreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowFullScreen=&quot;true&quot;&gt;Video Part 3 - Continuous Integration - http://player.vimeo.com/video/61768273&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;h3&gt;Public wireframe demo&lt;/h3&gt;
+
+&lt;p&gt;A demo you can interact with can be found at &lt;a href=&quot;https://ocaml.mybalsamiq.com/projects/public-demo/naked/0_home?key=b897ea86d8a8199c6e46b3295ddf630dfa33e5e1&quot;&gt;OCaml.org wireframe demo&lt;/a&gt; and image files for each page are available on the &lt;a href=&quot;https://github.com/ocaml/ocaml.org/wiki/Wireframes&quot;&gt;github ocaml.org wiki&lt;/a&gt;.  Please bear in mind the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Not everything that looks like it might be clickable actually is (and vice versa). There'll be a toggle on the bottom right of the browser window that will highlight what can be clicked.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;There are parts of the site which are 'work in progress' and are marked as such.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The designs you see aren't necessarily final. Your feedback will help shape our decisions and the best way to provide it is via the &lt;a href=&quot;http://lists.ocaml.org/listinfo/infrastructure&quot;&gt;infrastructure mailing list&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+</entry>
+
+  
+    <entry>
+  <title>OCaml - Installation and hello world</title>
+  <link href="http://amirchaudhry.com/ocaml-installation-and-hello-world"/>
+  <author>Amir Chaudhry</author>
+  <updated>2012-10-04T00:00:00+01:00</updated>
+  <id>http://amirchaudhry.com/ocaml-installation-and-hello-world</id>
+  <content type="html">
+
+&lt;p class=&quot;footnote&quot;&gt;This post is part of a series where I'm trying to teach myself OCaml.&lt;br /&gt;
+You might want to &lt;a href=&quot;http://amirchaudhry.com/thirty-days-of-ocaml/&quot;&gt;start at the beginning&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;p&gt;It's been a few days into my OCaml experience so this is a write-up of what I've come across so far.  I've spent more time reading background rather than getting stuck in so I've copied in some of the links that I've found interesting/useful at the end.&lt;/p&gt;
+
+&lt;h2&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;There are number of ways you can get OCaml on your machine.  The most obvious  would be to get the source via the &lt;a href=&quot;http://caml.inria.fr/ocaml/release.en.html&quot;&gt;release page&lt;/a&gt;, but you could also use something called &lt;a href=&quot;http://godi.camlcity.org/godi/index.html&quot;&gt;GODI&lt;/a&gt;, which apparently bundles a bunch of other stuff alongside the language.&lt;/p&gt;
+
+&lt;p&gt;I don't really want to install from source 'by hand' and I definitely don't need all the stuff that comes with GODI.  I happen to use &lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;Homebrew&lt;/a&gt; on my machine, so I checked to see if I can install that way.  Turns out I can, so that's what I ended up doing.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew install objective-caml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The current version of OCaml is 4.00.0 and you can check the version you have installed by typing &lt;code&gt;ocaml -version&lt;/code&gt; in your terminal.&lt;/p&gt;
+
+&lt;h4&gt;&lt;em&gt;notes&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;Be aware that Homebrew has it's own installation process and depends on Ruby.  To get Ruby, someone recommended that I install via &lt;a href=&quot;https://rvm.io/&quot;&gt;Ruby Version Manager&lt;/a&gt;.  To be able to do the above, you'll need to have the OSX developer tools installed, which means having &lt;a href=&quot;https://developer.apple.com/xcode/&quot;&gt;Xcode&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Hello World!&lt;/h2&gt;
+
+&lt;p&gt;The first thing to do is get a &lt;a href=&quot;http://en.wikipedia.org/wiki/Hello_world_program&quot;&gt;hello world&lt;/a&gt; programme working.  Since OCaml is a compiled language, that means writing the necessary source code into a file, compiling it and then executing it.  In this case I only need one line that prints 'hello world' to the screen and I'm taking it from INRIA's site (&lt;a href=&quot;http://caml.inria.fr/pub/docs/u3-ocaml/ocaml-steps.html&quot;&gt;link&lt;/a&gt;).&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ocaml&quot;&gt;&lt;span class=&quot;n&quot;&gt;print_string&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello, world!&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Take the one line above and save it in a file called &lt;code&gt;hello.ml&lt;/code&gt;.  Now we need to compile that file using the OCaml compiler.  At the command prompt, type the following:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ocamlc -o hello hello.ml
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;./hello
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Since I don't really understand the first line I should break it down. &lt;code&gt;ocamlc&lt;/code&gt; is the command to invoke the compiler, the option &lt;code&gt;-o hello&lt;/code&gt; means you want to name the output executable to be (in this case) 'hello' and the final argument is the source code file.  It's useful to look at the man page for &lt;code&gt;ocamlc&lt;/code&gt; to see what other options are available.  The second line executes the programme, which prints hello world to the screen with a line-break.&lt;/p&gt;
+
+&lt;p&gt;I also notice that I now have two other files in addition to the source, &lt;code&gt;hello.cmi&lt;/code&gt; and &lt;code&gt;hello.cmo&lt;/code&gt;.  According to the man page, these are the 'compiled interface' and 'compiled object code file' respectively.  I have no idea what that means but removing the files doesn't affect the executable.&lt;/p&gt;
+
+&lt;h3&gt;OCaml 'toplevel'&lt;/h3&gt;
+
+&lt;p&gt;Even though OCaml is a compiled language, there's something called 'toplevel' that allows interactive use (more on &lt;a href=&quot;http://caml.inria.fr/pub/docs/manual-ocaml-4.00/manual023.html&quot;&gt;toplevel&lt;/a&gt;).  To enter this mode, you simply have to type &lt;code&gt;ocaml&lt;/code&gt; at the prompt so let's try running the above hello world program using toplevel.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;$ ocaml
+        OCaml version 4.00.0
+
+# print_string &amp;quot;Hello, world!\n&amp;quot;;;
+Hello, world!
+- : unit = ()
+# #quit;;
+$ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The &lt;code&gt;$&lt;/code&gt; prompt is the command line and the &lt;code&gt;#&lt;/code&gt; prompt is where toplevel is awaiting a new line of input.  The input can span multiple lines and is terminated by &lt;code&gt;;;&lt;/code&gt; (as in the source code).&lt;/p&gt;
+
+&lt;p&gt;To exit toplevel, type &lt;code&gt;#quit;;&lt;/code&gt;.  It took me three attempts to get that right.  I haven't really played around with toplevel much and I think I'm likely to stick with source code and compiling until I'm a little more comfortable with the syntax.&lt;/p&gt;
+
+&lt;p&gt;That's pretty much where I am for the moment and everything so far has been straightforward.  Obviously, I should push myself a bit harder :)&lt;/p&gt;
+
+&lt;h2&gt;Resources&lt;/h2&gt;
+
+&lt;p&gt;This is the material I found and have been looking over for the last couple of days.  Useful as background but I'd say I'm in danger of (semi-productive) procrastination if I'm not careful.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://caml.inria.fr/pub/docs/manual-ocaml-4.00&quot;&gt;OCaml Manual&lt;/a&gt; (from INRIA)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://caml.inria.fr/about/taste.en.html&quot;&gt;OCaml examples&lt;/a&gt; (also INRIA)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikibooks.org/wiki/Objective_Caml/Introduction&quot;&gt;OCaml Intro&lt;/a&gt; (wikibooks)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ocaml.janestreet.com/?q=node/82&quot;&gt;Minsky on ML&lt;/a&gt; (Jane Street)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://sites.google.com/site/steveyegge2/ocaml&quot;&gt;OCaml pros&lt;/a&gt; (Steve Yegge)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.podval.org/~sds/ocaml-sucks.html&quot;&gt;OCaml cons&lt;/a&gt; (Sam Steingold)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.thinkocaml.com&quot;&gt;Think OCaml&lt;/a&gt; (PDF book)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;!--
+    http://news.ycombinator.com/item?id=112129
+    http://dave.fayr.am/posts/2011-08-19-lets-go-shopping.html
+--&gt;
+
+</content>
+</entry>
+
+  
+    <entry>
+  <title>Thirty Days of OCaml</title>
+  <link href="http://amirchaudhry.com/thirty-days-of-ocaml"/>
+  <author>Amir Chaudhry</author>
+  <updated>2012-10-01T00:00:00+01:00</updated>
+  <id>http://amirchaudhry.com/thirty-days-of-ocaml</id>
+  <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/jeremyandchanel/6131620285/&quot;&gt;&lt;img src=&quot;/images/ocaml-30days/camel-bactrian-silhouette.jpg&quot; alt=&quot;Bactrian Camel Silhouette&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I've set myself a challenge that over the next thirty days, I'll teach myself some &lt;a href=&quot;http://en.wikipedia.org/wiki/Functional_programming&quot;&gt;functional programming&lt;/a&gt; using &lt;a href=&quot;http://en.wikipedia.org/wiki/OCaml&quot;&gt;OCaml&lt;/a&gt;.  This will be my first experience of FP in addition to learning a new language so I expect it'll be quite challenging.&lt;/p&gt;
+
+&lt;p&gt;As I go along, I'll try and write regular posts -- hopefully one a day -- describing my experiences and frustrations as well as the questions that occur to me.  I suspect a number of the posts might be summaries to help me organise my understanding, especially where things seem unexpected.  For the times where I can formulate well-posed questions, I'll put them up in places like &lt;a href=&quot;http://stackoverflow.com/questions/tagged/ocaml&quot;&gt;Stack Overflow&lt;/a&gt; as well as describing them here.  Either way, keeping some form of diary will be useful for me and maybe also for other folks who've considered trying out FP and OCaml in particular.&lt;/p&gt;
+
+&lt;p&gt;Obviously, I'm not completely new to programming but I would say I have any deep experience (especially compared to the folks I tend to hang out with). Just to give you a better picture, my coding experience so far has involved:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Some C/C++ with a little &lt;a href=&quot;http://en.wikipedia.org/wiki/Object-oriented_programming&quot;&gt;OOP&lt;/a&gt; programming for a High Energy Physics simulation (during my undergrad - a long time ago so I've forgotten everything)&lt;/li&gt;
+&lt;li&gt;A bunch of &lt;a href=&quot;http://www.mathworks.com/products/matlab/&quot;&gt;Matlab&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Bash_(Unix_shell)&quot;&gt;Bash&lt;/a&gt; scripting for analysis of neuroimaging data (during my PhD)&lt;/li&gt;
+&lt;li&gt;A bunch of &lt;a href=&quot;http://en.wikipedia.org/wiki/Visual_Basic_for_Applications&quot;&gt;VBA&lt;/a&gt; within MS Excel for analysing behavioural data (also during my PhD -- I really wish someone had pointed me to Python back then)&lt;/li&gt;
+&lt;li&gt;Part of &lt;a href=&quot;http://learnpythonthehardway.org&quot;&gt;Learn Python the Hard Way&lt;/a&gt; (I keep dipping in and out of this)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;I tried to dump most of my old scripts -- at least those I could find -- into a &lt;a href=&quot;https://github.com/amirmc/PhD_stuff&quot;&gt;github repo&lt;/a&gt;, but I still haven't collated the Matlab bits.  You can judge my coding skills for yourself.&lt;/p&gt;
+
+&lt;p&gt;By the end of the 30 days, I'm hoping to have the ability to pick up and read other people's OCaml code and write basic stuff for myself.  I don't actually have a particular project in mind but I'm not going to let that be an excuse for &lt;em&gt;not&lt;/em&gt; getting started.&lt;/p&gt;
+
+&lt;p&gt;I'll post again tomorrow with the mundane parts of how to get things installed and running on a Mac*.  Onward!&lt;/p&gt;
+
+&lt;p class=&quot;footnote&quot;&gt;*Admittedly, I already did this some time ago but I want this series of posts to start right from the beginning.&lt;/p&gt;
+
+
+
+</content>
+</entry>
+
+  
+</feed>

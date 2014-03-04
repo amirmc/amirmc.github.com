@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCaml - Installation and hello world | Amir Chaudhry</title>
+    <meta name="description" content="I'm learning the basics of OCaml over 30 days. This is the summary of the first few days.">
+    <meta name="author" content="Amir Chaudhry">
+
+    <!-- Style sheets for Zurb Foundation v5 -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/normalize.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/foundation.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/code.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/style.css">
+
+    <link rel="shortcut icon" href="/icons/favicon.png" />
+    <link rel="icon" href="/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/amirmc" title="amirchaudhry.com" />
+    <!-- <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed"> -->
+    
+    <script src="/assets/themes/zurb/js/vendor/custom.modernizr.js"></script>  
+  </head>
+
+  <body>
+    <!-- Crazy nesting just to match post alignment -->
+    <div class="row">
+      <div class="medium-9 columns">
+        <div class="row">
+          <!-- Title -->
+          <div class="medium-9 medium-offset-3 columns">
+            <h1 class="head-title"><a class="head-title" href="http://amirchaudhry.com">Amir Chaudhry</a> <br /></h1>
+            <h3><small>thoughts, comments &amp; general ramblings</small></h3>
+          </div> <!-- End Title -->
+          <!-- Navigation -->
+          <div class="medium-9 medium-offset-3 columns">
+            <ul class="inline-list head-nav">
+              
+              
+              
+
+           
+<li><a  href="http://amirchaudhry.com/">home</a></li>
+                               
+<li><a  href="http://amirchaudhry.com/journal">journal</a></li>
+                         
+<li><a  href="http://amirchaudhry.com/freebusy">free/busy</a></li>
+                       
+<li><a  href="http://amirchaudhry.com/about">about</a></li>
+                          
+            </ul>
+          </div> <!-- End Nav -->
+        </div> <!-- End inset row -->
+      </div> <!-- End 9 column section -->
+    </div> <!-- End inset row -->
+
+    
+<div class="row">
+  <div class="medium-9 columns">
+
+    <div class="row">
+      <div class="medium-3 columns">
+        <h5 class="post-date" align="right"> 4 October 2012</h5>
+      </div>
+      <div class="medium-9 columns">
+        <h2><a class="post-title" href="/ocaml-installation-and-hello-world">OCaml - Installation and hello world</a></h2>
+        <!-- <br /> -->
+        
+
+<p class="footnote">This post is part of a series where I'm trying to teach myself OCaml.<br />
+You might want to <a href="http://amirchaudhry.com/thirty-days-of-ocaml/">start at the beginning</a>.</p>
+
+
+<p>It's been a few days into my OCaml experience so this is a write-up of what I've come across so far.  I've spent more time reading background rather than getting stuck in so I've copied in some of the links that I've found interesting/useful at the end.</p>
+
+<h2>Installation</h2>
+
+<p>There are number of ways you can get OCaml on your machine.  The most obvious  would be to get the source via the <a href="http://caml.inria.fr/ocaml/release.en.html">release page</a>, but you could also use something called <a href="http://godi.camlcity.org/godi/index.html">GODI</a>, which apparently bundles a bunch of other stuff alongside the language.</p>
+
+<p>I don't really want to install from source 'by hand' and I definitely don't need all the stuff that comes with GODI.  I happen to use <a href="http://mxcl.github.com/homebrew/">Homebrew</a> on my machine, so I checked to see if I can install that way.  Turns out I can, so that's what I ended up doing.</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>brew install objective-caml
+</code></pre></div>
+
+
+<p>The current version of OCaml is 4.00.0 and you can check the version you have installed by typing <code>ocaml -version</code> in your terminal.</p>
+
+<h4><em>notes</em></h4>
+
+<p>Be aware that Homebrew has it's own installation process and depends on Ruby.  To get Ruby, someone recommended that I install via <a href="https://rvm.io/">Ruby Version Manager</a>.  To be able to do the above, you'll need to have the OSX developer tools installed, which means having <a href="https://developer.apple.com/xcode/">Xcode</a>.</p>
+
+<h2>Hello World!</h2>
+
+<p>The first thing to do is get a <a href="http://en.wikipedia.org/wiki/Hello_world_program">hello world</a> programme working.  Since OCaml is a compiled language, that means writing the necessary source code into a file, compiling it and then executing it.  In this case I only need one line that prints 'hello world' to the screen and I'm taking it from INRIA's site (<a href="http://caml.inria.fr/pub/docs/u3-ocaml/ocaml-steps.html">link</a>).</p>
+
+<div class="highlight"><pre><code class="ocaml"><span class="n">print_string</span> <span class="s2">&quot;Hello, world!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">;;</span>
+</code></pre></div>
+
+
+<p>Take the one line above and save it in a file called <code>hello.ml</code>.  Now we need to compile that file using the OCaml compiler.  At the command prompt, type the following:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>ocamlc -o hello hello.ml
+<span class="nv">$ </span>./hello
+</code></pre></div>
+
+
+<p>Since I don't really understand the first line I should break it down. <code>ocamlc</code> is the command to invoke the compiler, the option <code>-o hello</code> means you want to name the output executable to be (in this case) 'hello' and the final argument is the source code file.  It's useful to look at the man page for <code>ocamlc</code> to see what other options are available.  The second line executes the programme, which prints hello world to the screen with a line-break.</p>
+
+<p>I also notice that I now have two other files in addition to the source, <code>hello.cmi</code> and <code>hello.cmo</code>.  According to the man page, these are the 'compiled interface' and 'compiled object code file' respectively.  I have no idea what that means but removing the files doesn't affect the executable.</p>
+
+<h3>OCaml 'toplevel'</h3>
+
+<p>Even though OCaml is a compiled language, there's something called 'toplevel' that allows interactive use (more on <a href="http://caml.inria.fr/pub/docs/manual-ocaml-4.00/manual023.html">toplevel</a>).  To enter this mode, you simply have to type <code>ocaml</code> at the prompt so let's try running the above hello world program using toplevel.</p>
+
+<div class="highlight"><pre><code class="text">$ ocaml
+        OCaml version 4.00.0
+
+# print_string &quot;Hello, world!\n&quot;;;
+Hello, world!
+- : unit = ()
+# #quit;;
+$ 
+</code></pre></div>
+
+
+<p>The <code>$</code> prompt is the command line and the <code>#</code> prompt is where toplevel is awaiting a new line of input.  The input can span multiple lines and is terminated by <code>;;</code> (as in the source code).</p>
+
+<p>To exit toplevel, type <code>#quit;;</code>.  It took me three attempts to get that right.  I haven't really played around with toplevel much and I think I'm likely to stick with source code and compiling until I'm a little more comfortable with the syntax.</p>
+
+<p>That's pretty much where I am for the moment and everything so far has been straightforward.  Obviously, I should push myself a bit harder :)</p>
+
+<h2>Resources</h2>
+
+<p>This is the material I found and have been looking over for the last couple of days.  Useful as background but I'd say I'm in danger of (semi-productive) procrastination if I'm not careful.</p>
+
+<ul>
+<li><a href="http://caml.inria.fr/pub/docs/manual-ocaml-4.00">OCaml Manual</a> (from INRIA)</li>
+<li><a href="http://caml.inria.fr/about/taste.en.html">OCaml examples</a> (also INRIA)</li>
+<li><a href="http://en.wikibooks.org/wiki/Objective_Caml/Introduction">OCaml Intro</a> (wikibooks)</li>
+<li><a href="https://ocaml.janestreet.com/?q=node/82">Minsky on ML</a> (Jane Street)</li>
+<li><a href="https://sites.google.com/site/steveyegge2/ocaml">OCaml pros</a> (Steve Yegge)</li>
+<li><a href="http://www.podval.org/~sds/ocaml-sucks.html">OCaml cons</a> (Sam Steingold)</li>
+<li><a href="http://www.thinkocaml.com">Think OCaml</a> (PDF book)</li>
+</ul>
+
+
+<!--
+    http://news.ycombinator.com/item?id=112129
+    http://dave.fayr.am/posts/2011-08-19-lets-go-shopping.html
+-->
+
+
+        <hr id='share-comment'>
+        <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_preferred_3"></a>
+    <a class="addthis_button_preferred_4"></a>
+    <a class="addthis_button_compact"></a>
+    <a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f7d70e955879218"></script>
+<script> var addthis_share = {templates : {twitter : "OCaml - Installation and hello world: http://bit.ly/Swhtij via @amirmc"}}</script>
+<!-- AddThis Button END -->
+        <div class="pagination">
+          <ul class="inline-list">
+            
+              <li class="prev"><a href="/thirty-days-of-ocaml" title="Thirty Days of OCaml">&larr; previous</a></li>
+            
+              <li class="small"><a href="/journal/">journal</a></li>
+            
+              <li class="next"><a href="/wireframe-demos-for-ocamlorg" title="Wireframe demos for OCaml.org">next &rarr;</a></li>
+            
+          </ul>
+        </div>
+        <hr id='comments'>
+        
+
+
+  <script type='text/javascript' src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
+<script type='text/javascript'>
+    var fyre = LF({
+        site_id: 297150
+    });
+</script>
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="medium-3 columns">
+    <div class="sidebar">
+  <a href="/about/"><img src="/images/amc.png"/></a>
+  <ul class="sidebar">
+    <li class="sidebar">Team at <a class="sidebar" href="/about/"> Nymote.org</a></li>
+    <li class="sidebar">Wrangler at <a class="sidebar" href="/about/"> OCaml Labs</a></li>
+    <li class="sidebar">Post-doc at <a class="sidebar" href="/about/"> Computer Lab</a></li>
+    <li class="sidebar">Member of <a class="sidebar" href="/about/">Darwin College</a></li>
+    <li class="sidebar">Cofounder of <a class="sidebar" href="/about/"> Springboard</a></li>
+    <li class="sidebar">Advisor to <a class="sidebar" href="/about/">CUEntrepreneurs</a></li>
+  </ul>
+  <a rel="me" href="https://twitter.com/amirmc"><img src="/icons/twitter_16.png" alt="amirmc on Twitter"/></a>
+  <a href="http://www.linkedin.com/in/amirchaudhry/"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn"/></a>
+  <a rel="me" href="https://github.com/amirmc"><img src="/icons/github_16.png" alt="amirmc on GitHub"/></a>
+  <a href="http://news.ycombinator.com/threads?id=amirmc"><img src="/icons/yc_16.png" alt="amirmc on Hacker News"/></a>
+  <form action="http://www.google.com/search" class="searchbar" method="get">
+    <input type="hidden" name="q" value="site:amirchaudhry.com"/>
+    <input type="text" class="query" placeholder="Search" name="q"/>
+  </form>
+  
+    
+      <h6 class="sidebar">Filed under</h6>
+      
+    
+    <ul class="tag_box">
+      
+
+
+  
+     
+    	<li><a href="/tags/#30days">30days </a> </li>
+     
+    	<li><a href="/tags/#code">code </a> </li>
+     
+    	<li><a href="/tags/#learning">learning </a> </li>
+     
+    	<li><a href="/tags/#ocaml">ocaml </a> </li>
+    
+  
+
+
+
+    </ul>
+  
+</div>
+  </div>
+</div>
+
+
+      
+    <footer>
+      <p class="footer" align="center">&copy; Amir Chaudhry 2010-2013</p>
+    </footer>
+
+    
+    
+    <!-- JavaScripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/themes/zurb/js/vendor/jquery.js"></script>
+    <script src="/assets/themes/zurb/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+

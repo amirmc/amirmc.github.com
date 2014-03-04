@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switching from Bootstrap to Zurb Foundation | Amir Chaudhry</title>
+    
+    <meta name="author" content="Amir Chaudhry">
+
+    <!-- Style sheets for Zurb Foundation v5 -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/normalize.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/foundation.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/code.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/style.css">
+
+    <link rel="shortcut icon" href="/icons/favicon.png" />
+    <link rel="icon" href="/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/amirmc" title="amirchaudhry.com" />
+    <!-- <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed"> -->
+    
+    <script src="/assets/themes/zurb/js/vendor/custom.modernizr.js"></script>  
+  </head>
+
+  <body>
+    <!-- Crazy nesting just to match post alignment -->
+    <div class="row">
+      <div class="medium-9 columns">
+        <div class="row">
+          <!-- Title -->
+          <div class="medium-9 medium-offset-3 columns">
+            <h1 class="head-title"><a class="head-title" href="http://amirchaudhry.com">Amir Chaudhry</a> <br /></h1>
+            <h3><small>thoughts, comments &amp; general ramblings</small></h3>
+          </div> <!-- End Title -->
+          <!-- Navigation -->
+          <div class="medium-9 medium-offset-3 columns">
+            <ul class="inline-list head-nav">
+              
+              
+              
+
+           
+<li><a  href="http://amirchaudhry.com/">home</a></li>
+                               
+<li><a  href="http://amirchaudhry.com/journal">journal</a></li>
+                         
+<li><a  href="http://amirchaudhry.com/freebusy">free/busy</a></li>
+                       
+<li><a  href="http://amirchaudhry.com/about">about</a></li>
+                          
+            </ul>
+          </div> <!-- End Nav -->
+        </div> <!-- End inset row -->
+      </div> <!-- End 9 column section -->
+    </div> <!-- End inset row -->
+
+    
+<div class="row">
+  <div class="medium-9 columns">
+
+    <div class="row">
+      <div class="medium-3 columns">
+        <h5 class="post-date" align="right">26 November 2013</h5>
+      </div>
+      <div class="medium-9 columns">
+        <h2><a class="post-title" href="/switching-from-bootstrap-to-zurb-foundation">Switching from Bootstrap to Zurb Foundation</a></h2>
+        <!-- <br /> -->
+        <p>I've just updated my site's HTML/CSS and moved from Twitter Bootstrap to
+<a href="http://foundation.zurb.com/learn/features.html">Zurb Foundation</a>.  This post captures my subjective notes on the
+migration.</p>
+
+<h4>My use of Bootstrap</h4>
+
+<p>When I originally set this site up, I didn't know what frameworks existed or
+anything more than the basics of dealing with HTML (and barely any CSS).  I
+came across Twitter Bootstrap and immediately decided it would Solve All My
+Problems.  It really did.  Since then, I've gone through one 'upgrade' with
+Bootstrap (from 1.x to 2.x), after which I dutifully ignored all the fixes
+and improvements (note that Bootstrap was up to v2.3.2 while I was still
+using v2.0.2).</p>
+
+<p><img src="http://amirchaudhry.com/images/switch-to-foundation/responsive-design.png" alt="Responsive Design" /></p>
+
+<p>For the most part, this was fine with me but for a while now, I've been
+meaning to make this site 'responsive' (read: not look like crap from a
+mobile).  Bootstrap v3 purports to be mobile-first so upgrading would likely
+give me what I'm after but v3 is <a href="http://getbootstrap.com/getting-started/">not backwards compatible</a>,
+meaning I'd have to rewrite parts of the HTML.  Since this step was
+unavoidable, it led me to have another look at front-end frameworks, just to
+see if I was missing anything.  This was especially relevant since we'd
+<a href="http://amirchaudhry.com/announcing-new-ocamlorg/">just released</a> the new <a href="http://ocaml.org">OCaml.org</a>
+website, itself built with Bootstrap v2.3.1 (we'd done the design/templating
+work long before v3 was released).  It would be useful to know what else is
+out there for any future work.</p>
+
+<p>Around this time I discovered Zurb Foundation and also the numerous
+comparisons between them (note: Foundation seems to come out ahead in most
+of those).  A few days ago, the folks at Zurb released
+<a href="http://zurb.com/article/1280/foundation-5-blasts-off--2">version 5</a>, so I decided that now is the time to kick the
+tires.  For the last few days, I've been playing with the framework and in
+the end I decided to migrate my site over completely.</p>
+
+<p><a href="http://foundation.zurb.com/learn/features.html"><img src="http://amirchaudhry.com/images/switch-to-foundation/zurb-yeti.png" alt="Foundation's Yeti" /></a></p>
+
+<h4>Swapping out one framework for another</h4>
+
+<p>Over time, I've become moderately experienced with HTML/CSS and I can
+usually wrangle things to look the way I want, but my solutions aren't
+necessarily elegant. I was initially concerned that I'd already munged
+things so much that changing anything would be a pain.  When I first put the
+styles for this site together, I had to spend quite a bit of time
+overwriting Bootstrap's defaults so I was prepared for the same when using
+Foundation.  Turns out that I was fine.  I currently use <a href="http://jekyllrb.com">Jekyll</a> (and
+<a href="http://jekyllbootstrap.com">Jekyll Bootstrap</a>) so I only had three template files and a couple of
+HTML pages to edit and because I'd kept most of my custom CSS in a separate
+file, it was literally a case of swapping out one framework for another and
+bug-fixing from there onwards.  There's definitely a lesson here in using
+automation as much as possible.</p>
+
+<p>Customising the styles was another area of concern but I was pleasantly
+surprised to find I needed <em>less</em> customisation than with Bootstrap.  This
+is likely because I didn't have to override as many defaults (and probably
+because I've learned more about CSS since then).  The one thing I seemed to
+be missing was a way to deal with code sections, so I just took what
+Bootstrap had and copied it in.  At some point I should revisit this.</p>
+
+<p>It did take me a while to get my head around Foundation's grid but it was
+worth it in the end.  The idea is that you should design for small screens
+first and then adjust things for larger screens as necessary. There are
+several different default sizes which inherit their properties from the size
+below, unless you explicitly override them.  I initially screwed this up by
+explicitly defining the grid using the <code>small-#</code> classes, which obviously
+looks ridiculous on small screens.  I fixed it by swapping out <code>small-#</code> for
+<code>medium-#</code> everywhere in the HTML, after which everything looked reasonable.
+Items flowed sensibly into a default column for the small screens and looked
+acceptable for larger screens and perfectly fine on desktops.  I could do
+more styling of the mobile view but I'd already achieved most of what I was
+after.</p>
+
+<h4>Fixing image galleries and embedded content</h4>
+
+<p>The only additional thing I used from Bootstrap was the <a href="http://getbootstrap.com/javascript/#carousel">Carousel</a>. I'd
+written some custom helper scripts that would take some images and
+thumbnails from a specified folder and produce clickable thumbnails with a
+slider underneath.  Foundation provides <a href="http://foundation.zurb.com/docs/components/orbit.html">Orbit</a>, so I had to spend time
+rewriting my script to produce the necessary HTML.  This actually resulted
+in cleaner HTML and one of the features I wanted (the ability to link to a
+specific image) was available by default in Orbit.  At this point I also
+tried to make the output look better for the case where JavaScript is
+disabled (in essence, each image is just displayed as a list).  Below is an
+example of an image gallery, taken from a previous post, when I
+<a href="http://amirchaudhry.com/joined-the-computer-lab/">joined the computer lab</a>.</p>
+
+<div class="gallery">
+  <noscript><small><em>Note: The gallery needs JavaScript but I've tried to make it degrade gracefully. -Amir</em></small></noscript>
+  <ul class="inline-list">
+    
+      <li><a data-orbit-link="join-comp-lab-1"><img src="/images/join-comp-lab/join-comp-lab-thumb-1.png" alt="join-comp-lab-thumb-1" /></a></li>
+    
+      <li><a data-orbit-link="join-comp-lab-2"><img src="/images/join-comp-lab/join-comp-lab-thumb-2.png" alt="join-comp-lab-thumb-2" /></a></li>
+    
+      <li><a data-orbit-link="join-comp-lab-3"><img src="/images/join-comp-lab/join-comp-lab-thumb-3.png" alt="join-comp-lab-thumb-3" /></a></li>
+    
+  </ul>
+  <ul data-orbit data-options="next_on_click:true; timer_speed:3000; pause_on_hover:false; bullets:false;">
+    
+    <li class="gallery-image" data-orbit-slide="join-comp-lab-1"><img src="/images/join-comp-lab/join-comp-lab-1.jpg" alt="join-comp-lab-1"></li>
+    
+    <li class="gallery-image" data-orbit-slide="join-comp-lab-2"><img src="/images/join-comp-lab/join-comp-lab-2.jpg" alt="join-comp-lab-2"></li>
+    
+    <li class="gallery-image" data-orbit-slide="join-comp-lab-3"><img src="/images/join-comp-lab/join-comp-lab-3.jpg" alt="join-comp-lab-3"></li>
+    
+  </ul>
+</div>
+
+
+<p>Foundation also provides a component called <a href="http://foundation.zurb.com/docs/components/flex_video.html">Flex Video</a>, which allows the
+browser to scale videos to the appropriate size.  This fix was as simple as
+going back through old posts and wrapping anything that was <code>&lt;iframe&gt;</code> in a
+<code>&lt;div class="flex-video"&gt;</code>.  It really was that simple and all the Vimeo and
+YouTube items scaled perfectly.  Here's an example of a video from an
+earlier post, where I gave a <a href="http://amirchaudhry.com/wireframe-demos-for-ocamlorg/">walkthrough of the ocaml.org site</a>.
+Try changing the width of your browser window to see it scale.</p>
+
+<div class="flex-video widescreen vimeo">
+  <iframe src="http://player.vimeo.com/video/61768157?byline=0&amp;portrait=0&amp;color=de9e6a" width="540" height="303" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true">Video demo</iframe>
+</div>
+
+
+<h4>Framework differences</h4>
+
+<p>Another of the main difference between the two frameworks is that Bootstrap
+uses <a href="http://lesscss.org">LESS</a> to manage its CSS whereas Foundation uses <a href="http://sass-lang.com">SASS</a>.  Frankly,
+I've no experience with either of them so it makes little difference to me.
+It's worth bearing in mind for anyone who's workflow does involve
+pre-processing.  Also, Bootstrap is available under the
+<a href="http://getbootstrap.com/getting-started/#license-faqs">Apache 2 License</a>, while Foundation is released under
+the <a href="http://foundation.zurb.com/learn/faq.html#question-3">MIT license</a>.</p>
+
+<h4>Summary</h4>
+
+<p>Overall, the transition was pretty painless and most of the time was spent
+getting familiar with the grid, hunting for docs/examples and trying to make
+the image gallery work the way I wanted.  I do think Bootstrap's docs are
+better but Foundation's aren't bad.</p>
+
+<p>Although this isn't meant to be a comparison, I much prefer Foundation to
+Bootstrap.  If you're not sure which to use then I think the secret is in
+the names of the frameworks.</p>
+
+<ul>
+<li>Bootstrap (for me) was a <em>great</em> way to '<em>bootstrap</em>' a site quickly with
+lots of acceptable defaults -- it was quick to get started but took some
+work to alter.</li>
+<li>Foundation seems to provide a great '<em>foundation</em>' on which to create more
+customised sites -- it's more flexible but needs more upfront thought.</li>
+</ul>
+
+
+<p>That's pretty much how I'd recommend them to people now.</p>
+
+        <hr id='share-comment'>
+        <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_preferred_3"></a>
+    <a class="addthis_button_preferred_4"></a>
+    <a class="addthis_button_compact"></a>
+    <a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f7d70e955879218"></script>
+<script> var addthis_share = {templates : {twitter : "Switching from Bootstrap to Zurb Foundation: http://bit.ly/1blLWsm via @amirmc"}}</script>
+<!-- AddThis Button END -->
+        <div class="pagination">
+          <ul class="inline-list">
+            
+              <li class="prev"><a href="/announcing-new-ocamlorg" title="Announcing the new OCaml.org">&larr; previous</a></li>
+            
+              <li class="small"><a href="/journal/">journal</a></li>
+            
+              <li class="next"><a href="/scientific-evidence-for-health-supplements-2014" title="Scientific evidence for health supplements">next &rarr;</a></li>
+            
+          </ul>
+        </div>
+        <hr id='comments'>
+        
+
+
+  <script type='text/javascript' src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
+<script type='text/javascript'>
+    var fyre = LF({
+        site_id: 297150
+    });
+</script>
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="medium-3 columns">
+    <div class="sidebar">
+  <a href="/about/"><img src="/images/amc.png"/></a>
+  <ul class="sidebar">
+    <li class="sidebar">Team at <a class="sidebar" href="/about/"> Nymote.org</a></li>
+    <li class="sidebar">Wrangler at <a class="sidebar" href="/about/"> OCaml Labs</a></li>
+    <li class="sidebar">Post-doc at <a class="sidebar" href="/about/"> Computer Lab</a></li>
+    <li class="sidebar">Member of <a class="sidebar" href="/about/">Darwin College</a></li>
+    <li class="sidebar">Cofounder of <a class="sidebar" href="/about/"> Springboard</a></li>
+    <li class="sidebar">Advisor to <a class="sidebar" href="/about/">CUEntrepreneurs</a></li>
+  </ul>
+  <a rel="me" href="https://twitter.com/amirmc"><img src="/icons/twitter_16.png" alt="amirmc on Twitter"/></a>
+  <a href="http://www.linkedin.com/in/amirchaudhry/"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn"/></a>
+  <a rel="me" href="https://github.com/amirmc"><img src="/icons/github_16.png" alt="amirmc on GitHub"/></a>
+  <a href="http://news.ycombinator.com/threads?id=amirmc"><img src="/icons/yc_16.png" alt="amirmc on Hacker News"/></a>
+  <form action="http://www.google.com/search" class="searchbar" method="get">
+    <input type="hidden" name="q" value="site:amirchaudhry.com"/>
+    <input type="text" class="query" placeholder="Search" name="q"/>
+  </form>
+  
+    
+      <h6 class="sidebar">Filed under</h6>
+      
+    
+    <ul class="tag_box">
+      
+
+
+  
+     
+    	<li><a href="/tags/#design">design </a> </li>
+     
+    	<li><a href="/tags/#essay">essay </a> </li>
+     
+    	<li><a href="/tags/#ocaml">ocaml </a> </li>
+     
+    	<li><a href="/tags/#ocaml-labs">ocaml-labs </a> </li>
+     
+    	<li><a href="/tags/#ocamllabs">ocamllabs </a> </li>
+    
+  
+
+
+
+    </ul>
+  
+</div>
+  </div>
+</div>
+
+
+      
+    <footer>
+      <p class="footer" align="center">&copy; Amir Chaudhry 2010-2013</p>
+    </footer>
+
+    
+    
+    <!-- JavaScripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/themes/zurb/js/vendor/jquery.js"></script>
+    <script src="/assets/themes/zurb/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review of the OCaml FPDays tutorial | Amir Chaudhry</title>
+    
+    <meta name="author" content="Amir Chaudhry">
+
+    <!-- Style sheets for Zurb Foundation v5 -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/normalize.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/foundation.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/code.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/style.css">
+
+    <link rel="shortcut icon" href="/icons/favicon.png" />
+    <link rel="icon" href="/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/amirmc" title="amirchaudhry.com" />
+    <!-- <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed"> -->
+    
+    <script src="/assets/themes/zurb/js/vendor/custom.modernizr.js"></script>  
+  </head>
+
+  <body>
+    <!-- Crazy nesting just to match post alignment -->
+    <div class="row">
+      <div class="medium-9 columns">
+        <div class="row">
+          <!-- Title -->
+          <div class="medium-9 medium-offset-3 columns">
+            <h1 class="head-title"><a class="head-title" href="http://amirchaudhry.com">Amir Chaudhry</a> <br /></h1>
+            <h3><small>thoughts, comments &amp; general ramblings</small></h3>
+          </div> <!-- End Title -->
+          <!-- Navigation -->
+          <div class="medium-9 medium-offset-3 columns">
+            <ul class="inline-list head-nav">
+              
+              
+              
+
+           
+<li><a  href="http://amirchaudhry.com/">home</a></li>
+                               
+<li><a  href="http://amirchaudhry.com/journal">journal</a></li>
+                         
+<li><a  href="http://amirchaudhry.com/freebusy">free/busy</a></li>
+                       
+<li><a  href="http://amirchaudhry.com/about">about</a></li>
+                          
+            </ul>
+          </div> <!-- End Nav -->
+        </div> <!-- End inset row -->
+      </div> <!-- End 9 column section -->
+    </div> <!-- End inset row -->
+
+    
+<div class="row">
+  <div class="medium-9 columns">
+
+    <div class="row">
+      <div class="medium-3 columns">
+        <h5 class="post-date" align="right">28 October 2013</h5>
+      </div>
+      <div class="medium-9 columns">
+        <h2><a class="post-title" href="/fpdays-review">Review of the OCaml FPDays tutorial</a></h2>
+        <!-- <br /> -->
+        <p><a href="http://fpdays.net/2013/sessions/index.php?session=24"><img style="float: right; margin-top: 10px; margin-left: 10px" src="/images/web/fpdays-logo.png"></a>
+Last Thursday a bunch of us from the OCaml Labs team gave an OCaml tutorial
+at the <a href="http://fpdays.net/2013/sessions/index.php?session=24">FPDays</a> conference (an event for people interested in Functional
+Programming).  <a href="https://github.com/yallop">Jeremy</a> and I led the session with <a href="http://www.lpw25.net">Leo</a>, <a href="https://github.com/dsheets">David</a> and
+<a href="http://philippewang.info/CL/">Philippe</a> helping everyone progress and dealing with questions.</p>
+
+<p><img style="float: left; margin-right: 10px" src="/images/fpdays2013/fpdays2013-01.jpg">
+It turned out to be by far the <em>most popular session</em> at the conference with
+over 20 people all wanting to get to grips with OCaml!  An excellent turnout
+and a great indicator of the interest that's out there, especially when you
+offer a hands-on session to people.  This shouldn't be a surprise as we've
+had good attendance for the general <a href="http://www.meetup.com/Cambridge-NonDysFunctional-Programmers/">OCaml meetups</a> I've run
+and also the <a href="http://ocamllabs.github.io/compiler-hacking/2013/09/17/compiler-hacking-july-2013.html">compiler hacking sessions</a>, which Jeremy and
+Leo have been building up (do sign up if you're interested in either of
+those!).  We had a nice surprise for attendees, which were
+<a href="http://en.wikipedia.org/wiki/Galley_proof">uncorrected proof</a> copies of Real World OCaml and luckily, we had just
+enough to go around.</p>
+
+<p>For the tutorial itself, Jeremy put together a nice sequence of exercises
+and a <a href="https://github.com/ocamllabs/fpdays-skeleton">skeleton repo</a> (with helpful comments in the code) so that people
+could dive in quickly.  The event was set up to be really informal and the
+rough plan was as following:</p>
+
+<ol>
+<li><p><em>Installation/Intro</em> - We checked that people had been able to follow the
+<a href="http://amirchaudhry.com/fpdays-ocaml-session/">installation instructions</a>, which we'd sent them in advance.
+We also handed out copies of the book and made sure folks were comfortable
+with <a href="http://opam.ocaml.org">OPAM</a>.</p></li>
+<li><p><em>Hello world</em> - A light intro to get people familiar with the OCaml
+syntax and installing packages with OPAM. This would also help people to get
+familiar with the toolchain, workflow and compilation.</p></li>
+<li><p><em>Monty Hall browser game</em> - Using <a href="http://ocsigen.org/js_of_ocaml/"><code>js_of_ocaml</code></a>, we wanted
+people to create and run the <a href="http://en.wikipedia.org/wiki/Monty_Hall_problem">Monty Hall problem</a> in their
+browser.  This would give people a taste of some real world interaction by
+having to deal with the DOM and interfaces.  If folks did well, they could
+add code to keep logs of the game results.</p></li>
+<li><p><em>Client-server game</em> - The previous game was all in the browser (so could
+be examined by players) so here the task was to split it into a client and
+server, ensuring the two stay in sync.  This would demonstrate the
+re-usability of the OCaml code already written and give people a feel for
+client server interactions. If people wanted to do more, they could use
+<a href="http://opam.ocaml.org/pkg/ctypes/0.1.1/">ctypes</a> and get better random numbers.</p></li>
+</ol>
+
+
+<p>We did manage to stick to the overall scheme as above and we think this is a
+great base from which to improve future tutorials.  It has the really nice
+benefit of having visual, interactive elements and the ability to run things
+both in the browser as well as on the server is a great way to show the
+versatility of OCaml.  <code>js_of_ocaml</code> is quite a mature tool and so it's
+no surprise that it's also used by companies such as Facebook (see the recent
+<a href="http://www.youtube.com/watch?v=gKWNjFagR9k">CUFP talk by Julien Verlaguet</a> - skip to <a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=gKWNjFagR9k#t=1149">19:00</a>).</p>
+
+<p>We learned a lot from running this session so we've captured the good, the
+bad and the ugly below.  This is useful for anyone who'd like to run an
+OCaml tutorial in the future and also for us to be aware of the next
+time we do this.  I've incorporated the feedback from the attendees as well
+as our own thoughts.</p>
+
+<p><img src="/images/fpdays2013/fpdays2013-03.jpg" alt="Heads down and hands on" /></p>
+
+<h3>Things we learnt</h3>
+
+<h4>The Good</h4>
+
+<ul>
+<li><p>Most people really did follow the install instructions beforehand. This
+made things so much easier on the day as we didn't have to worry about
+compile times and people getting bored.  A few people had even got in touch
+with me the night before to sort out installation problems.</p></li>
+<li><p>Many folks from OCaml Labs also came over to help people, which meant
+no-one was waiting longer than around 10 seconds before getting help.</p></li>
+<li><p>We had a good plan of the things we wanted to cover but we were happy to
+be flexible and made it clear the aim was to get right into it.  Several
+folks told us that they really appreciated this loose (as opposed to rigid)
+structure.</p></li>
+<li><p>We didn't spend any time lecturing the room but instead got people right
+into the code.  Having enough of a skeleton to get something interesting
+working was a big plus in this regard. People did progress from the early
+examples to the later ones fairly well.</p></li>
+<li><p>We had a VM with the correct set up that we could log people into if they
+were having trouble locally.  Two people made use of this.</p></li>
+<li><p>Of course, It was great to have early proofs of the book and these were
+well-received.</p></li>
+</ul>
+
+
+<p><img src="/images/fpdays2013/fpdays2013-02.jpg" alt="RWO books galore!" /></p>
+
+<h4>The Bad</h4>
+
+<ul>
+<li><p>In our excitement to get right into the exercises, we didn't really give
+an overview of OCaml and its benefits.  A few minutes at the beginning would
+be enough and it's important so that people can leave with a few sound-bites.</p></li>
+<li><p>Not everyone received my email about installation, and certainly not the
+late arrivals.  This meant some pain getting things downloaded and running
+especially due to the wifi (see 'Ugly' below).</p></li>
+<li><p>A few of the people who <em>had</em> installed, didn't complete the instructions
+fully but didn't realise this until the morning of the session.  There was a good
+suggestion about having some kind of test to run that would check
+everything, so you'd know if there was something missing.</p></li>
+<li><p>We really should have had a cut-off where we told people to use VMs
+instead of fixing installation issues and 10-15 minutes would have been
+enough.  This would have been especially useful for the late-comers.</p></li>
+<li><p>We didn't really keep a record of the problems folks were having so we
+can't now go back and fix underlying issues.  To be fair, this would have
+been a little awkward to do ad-hoc but in hindsight, it's a good thing to
+plan for.</p></li>
+</ul>
+
+
+<h4>The Ugly</h4>
+
+<ul>
+<li>The only ugly part was the wifi.  It turned out that the room itself was a
+bit of a dead-spot and that wasn't helped by 30ish devices trying to connect
+to one access point!  Having everyone grab packages at the same time in the
+morning probably didn't help.  It was especially tricky as all our
+mitigation plans seemed to revolve around at least having local connectivity.
+In any case, this problem only lasted for the morning session and was a
+little better by the afternoon.  I'd definitely recommend a backup plan in
+the case of complete wifi failure next time!  One such plan that Leo got
+started on was to put the repository and other information onto a flash
+drive that could be shared with people.  We didn't need this in the end but
+it'll be useful to have something like this prepared for next time.  If
+anyone fancies donating a bunch of flash drives, I'll happily receive them!</li>
+</ul>
+
+
+<p>Overall, it was a great session and everyone left happy, having completed
+most of the tutorial (and with a book!).  A few even continued at home
+afterwards and <a href="https://twitter.com/richardclegg/status/393458073052139520">got in touch</a> to let us know that they got
+everything working.
+It was a great session and thanks to <a href="https://twitter.com/MarkDalgarno">Mark</a>, <a href="https://twitter.com/JacquiDDavidson">Jacqui</a> and the rest of
+the FPDays crew for a great conference!</p>
+
+<p><img src="/images/fpdays2013/fpdays2013-04.jpg" alt="RWO Book giveaway" /></p>
+
+<p>(Thanks to Jeremy, Leo, David and Philippe for contributions to this post)</p>
+
+        <hr id='share-comment'>
+        <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_preferred_3"></a>
+    <a class="addthis_button_preferred_4"></a>
+    <a class="addthis_button_compact"></a>
+    <a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f7d70e955879218"></script>
+<script> var addthis_share = {templates : {twitter : "Review of the OCaml FPDays tutorial: http://bit.ly/HoxEec via @amirmc"}}</script>
+<!-- AddThis Button END -->
+        <div class="pagination">
+          <ul class="inline-list">
+            
+              <li class="prev"><a href="/fpdays-ocaml-session" title="FP Days OCaml Session">&larr; previous</a></li>
+            
+              <li class="small"><a href="/journal/">journal</a></li>
+            
+              <li class="next"><a href="/migration-plan-ocaml-org" title="Migration plan for the OCaml.org redesign">next &rarr;</a></li>
+            
+          </ul>
+        </div>
+        <hr id='comments'>
+        
+
+
+  <script type='text/javascript' src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
+<script type='text/javascript'>
+    var fyre = LF({
+        site_id: 297150
+    });
+</script>
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="medium-3 columns">
+    <div class="sidebar">
+  <a href="/about/"><img src="/images/amc.png"/></a>
+  <ul class="sidebar">
+    <li class="sidebar">Team at <a class="sidebar" href="/about/"> Nymote.org</a></li>
+    <li class="sidebar">Wrangler at <a class="sidebar" href="/about/"> OCaml Labs</a></li>
+    <li class="sidebar">Post-doc at <a class="sidebar" href="/about/"> Computer Lab</a></li>
+    <li class="sidebar">Member of <a class="sidebar" href="/about/">Darwin College</a></li>
+    <li class="sidebar">Cofounder of <a class="sidebar" href="/about/"> Springboard</a></li>
+    <li class="sidebar">Advisor to <a class="sidebar" href="/about/">CUEntrepreneurs</a></li>
+  </ul>
+  <a rel="me" href="https://twitter.com/amirmc"><img src="/icons/twitter_16.png" alt="amirmc on Twitter"/></a>
+  <a href="http://www.linkedin.com/in/amirchaudhry/"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn"/></a>
+  <a rel="me" href="https://github.com/amirmc"><img src="/icons/github_16.png" alt="amirmc on GitHub"/></a>
+  <a href="http://news.ycombinator.com/threads?id=amirmc"><img src="/icons/yc_16.png" alt="amirmc on Hacker News"/></a>
+  <form action="http://www.google.com/search" class="searchbar" method="get">
+    <input type="hidden" name="q" value="site:amirchaudhry.com"/>
+    <input type="text" class="query" placeholder="Search" name="q"/>
+  </form>
+  
+    
+      <h6 class="sidebar">Filed under</h6>
+      
+    
+    <ul class="tag_box">
+      
+
+
+  
+     
+    	<li><a href="/tags/#ocaml">ocaml </a> </li>
+     
+    	<li><a href="/tags/#ocaml-labs">ocaml-labs </a> </li>
+     
+    	<li><a href="/tags/#ocamllabs">ocamllabs </a> </li>
+    
+  
+
+
+
+    </ul>
+  
+</div>
+  </div>
+</div>
+
+
+      
+    <footer>
+      <p class="footer" align="center">&copy; Amir Chaudhry 2010-2013</p>
+    </footer>
+
+    
+    
+    <!-- JavaScripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/themes/zurb/js/vendor/jquery.js"></script>
+    <script src="/assets/themes/zurb/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+

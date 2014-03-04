@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migration plan for the OCaml.org redesign | Amir Chaudhry</title>
+    
+    <meta name="author" content="Amir Chaudhry">
+
+    <!-- Style sheets for Zurb Foundation v5 -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/normalize.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/foundation.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/code.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/style.css">
+
+    <link rel="shortcut icon" href="/icons/favicon.png" />
+    <link rel="icon" href="/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/amirmc" title="amirchaudhry.com" />
+    <!-- <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed"> -->
+    
+    <script src="/assets/themes/zurb/js/vendor/custom.modernizr.js"></script>  
+  </head>
+
+  <body>
+    <!-- Crazy nesting just to match post alignment -->
+    <div class="row">
+      <div class="medium-9 columns">
+        <div class="row">
+          <!-- Title -->
+          <div class="medium-9 medium-offset-3 columns">
+            <h1 class="head-title"><a class="head-title" href="http://amirchaudhry.com">Amir Chaudhry</a> <br /></h1>
+            <h3><small>thoughts, comments &amp; general ramblings</small></h3>
+          </div> <!-- End Title -->
+          <!-- Navigation -->
+          <div class="medium-9 medium-offset-3 columns">
+            <ul class="inline-list head-nav">
+              
+              
+              
+
+           
+<li><a  href="http://amirchaudhry.com/">home</a></li>
+                               
+<li><a  href="http://amirchaudhry.com/journal">journal</a></li>
+                         
+<li><a  href="http://amirchaudhry.com/freebusy">free/busy</a></li>
+                       
+<li><a  href="http://amirchaudhry.com/about">about</a></li>
+                          
+            </ul>
+          </div> <!-- End Nav -->
+        </div> <!-- End inset row -->
+      </div> <!-- End 9 column section -->
+    </div> <!-- End inset row -->
+
+    
+<div class="row">
+  <div class="medium-9 columns">
+
+    <div class="row">
+      <div class="medium-3 columns">
+        <h5 class="post-date" align="right"> 6 November 2013</h5>
+      </div>
+      <div class="medium-9 columns">
+        <h2><a class="post-title" href="/migration-plan-ocaml-org">Migration plan for the OCaml.org redesign</a></h2>
+        <!-- <br /> -->
+        <p>We're close to releasing the new design of ocaml.org but need help from the
+OCaml community to identify and fix bugs before we switch next week.</p>
+
+<p>Ashish, Christophe, Philippe and I have been discussing how we should go
+about this and below is the plan for migration.  If anyone would like to
+discuss any of this, then the <a href="http://lists.ocaml.org/listinfo/infrastructure">infrastructure list</a> is the best
+place to do so.</p>
+
+<ol>
+<li><p>We've made a <strong><a href="https://github.com/ocaml/ocaml.org/tree/redesign">new branch</a></strong> on the main ocaml.org repository with
+the redesign.  This branch is a fork of the master and we've simply cleaned
+up and replayed our git commits there.</p></li>
+<li><p>We've built a live version of the new site, which is visible at
+<strong><a href="http://preview.ocaml.org">http://preview.ocaml.org</a></strong> - this is rebuilt every few minutes
+from the branch mentioned above.</p></li>
+<li><p>Over the course of one week, we ask the community to review the new site
+and <strong><a href="https://github.com/ocaml/ocaml.org/issues">report any bugs or problems</a></strong> on the issue tracker. We <em>triage</em>
+those bugs to identify any blockers and work on those first.  This is the
+phase we'll be in from <em>today</em>.</p></li>
+<li><p>After one week (7 days), and after blocking bugs have been fixed, we
+<strong>merge the redesign branch</strong> into the master branch.  This would
+effectively present the new site to the world.</p></li>
+</ol>
+
+
+<p>During the above, we would not be able to accept any new pull requests on
+the master branch but would be happy to accept them on the new, redesign
+branch.  Hence, restricting the time frame to one week.</p>
+
+<p>Please note that the above is only intended to merge the <em>design</em> and
+<em>toolchain</em> for the new site.  Specifically, we've created new landing
+pages, have new style sheets and have restructured the site's contents as
+well as made some new libraries (<a href="http://pw374.github.io/posts/2013-09-05-22-31-26-about-omd.html">OMD</a> and <a href="http://pw374.github.io/posts/2013-10-03-20-39-07-OPAMaging-MPP.html">MPP</a>). The new toolchain
+means people can write files in markdown, which makes contributing content a
+lot easier.</p>
+
+<p>Since the files are on GitHub, people don't even need to clone the site
+locally to make simple edits (or even add new pages). Just click the 'Edit
+this page' link in the footer to be taken to the right file in the
+repository and GitHub's editing and pull request features will allow you to
+make changes and submit updates, all from within your browser (see the
+<a href="https://help.github.com/articles/creating-and-editing-files-in-your-repository">GitHub Article</a> for details).</p>
+
+<p>There is still work to be done on adding new features but the above changes
+are already a great improvement to the site and are ready to be reviewed by
+the OCaml community and merged.</p>
+
+        <hr id='share-comment'>
+        <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_preferred_3"></a>
+    <a class="addthis_button_preferred_4"></a>
+    <a class="addthis_button_compact"></a>
+    <a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f7d70e955879218"></script>
+<script> var addthis_share = {templates : {twitter : "Migration plan for the OCaml.org redesign: http://bit.ly/19C1nKJ via @amirmc"}}</script>
+<!-- AddThis Button END -->
+        <div class="pagination">
+          <ul class="inline-list">
+            
+              <li class="prev"><a href="/fpdays-review" title="Review of the OCaml FPDays tutorial">&larr; previous</a></li>
+            
+              <li class="small"><a href="/journal/">journal</a></li>
+            
+              <li class="next"><a href="/announcing-new-ocamlorg" title="Announcing the new OCaml.org">next &rarr;</a></li>
+            
+          </ul>
+        </div>
+        <hr id='comments'>
+        
+
+
+  <script type='text/javascript' src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
+<script type='text/javascript'>
+    var fyre = LF({
+        site_id: 297150
+    });
+</script>
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="medium-3 columns">
+    <div class="sidebar">
+  <a href="/about/"><img src="/images/amc.png"/></a>
+  <ul class="sidebar">
+    <li class="sidebar">Team at <a class="sidebar" href="/about/"> Nymote.org</a></li>
+    <li class="sidebar">Wrangler at <a class="sidebar" href="/about/"> OCaml Labs</a></li>
+    <li class="sidebar">Post-doc at <a class="sidebar" href="/about/"> Computer Lab</a></li>
+    <li class="sidebar">Member of <a class="sidebar" href="/about/">Darwin College</a></li>
+    <li class="sidebar">Cofounder of <a class="sidebar" href="/about/"> Springboard</a></li>
+    <li class="sidebar">Advisor to <a class="sidebar" href="/about/">CUEntrepreneurs</a></li>
+  </ul>
+  <a rel="me" href="https://twitter.com/amirmc"><img src="/icons/twitter_16.png" alt="amirmc on Twitter"/></a>
+  <a href="http://www.linkedin.com/in/amirchaudhry/"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn"/></a>
+  <a rel="me" href="https://github.com/amirmc"><img src="/icons/github_16.png" alt="amirmc on GitHub"/></a>
+  <a href="http://news.ycombinator.com/threads?id=amirmc"><img src="/icons/yc_16.png" alt="amirmc on Hacker News"/></a>
+  <form action="http://www.google.com/search" class="searchbar" method="get">
+    <input type="hidden" name="q" value="site:amirchaudhry.com"/>
+    <input type="text" class="query" placeholder="Search" name="q"/>
+  </form>
+  
+    
+      <h6 class="sidebar">Filed under</h6>
+      
+    
+    <ul class="tag_box">
+      
+
+
+  
+     
+    	<li><a href="/tags/#ocaml">ocaml </a> </li>
+     
+    	<li><a href="/tags/#ocaml-labs">ocaml-labs </a> </li>
+     
+    	<li><a href="/tags/#ocamllabs">ocamllabs </a> </li>
+    
+  
+
+
+
+    </ul>
+  
+</div>
+  </div>
+</div>
+
+
+      
+    <footer>
+      <p class="footer" align="center">&copy; Amir Chaudhry 2010-2013</p>
+    </footer>
+
+    
+    
+    <!-- JavaScripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/themes/zurb/js/vendor/jquery.js"></script>
+    <script src="/assets/themes/zurb/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+

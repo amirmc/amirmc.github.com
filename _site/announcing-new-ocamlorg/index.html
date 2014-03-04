@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcing the new OCaml.org | Amir Chaudhry</title>
+    
+    <meta name="author" content="Amir Chaudhry">
+
+    <!-- Style sheets for Zurb Foundation v5 -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/normalize.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/foundation.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/code.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/style.css">
+
+    <link rel="shortcut icon" href="/icons/favicon.png" />
+    <link rel="icon" href="/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/amirmc" title="amirchaudhry.com" />
+    <!-- <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed"> -->
+    
+    <script src="/assets/themes/zurb/js/vendor/custom.modernizr.js"></script>  
+  </head>
+
+  <body>
+    <!-- Crazy nesting just to match post alignment -->
+    <div class="row">
+      <div class="medium-9 columns">
+        <div class="row">
+          <!-- Title -->
+          <div class="medium-9 medium-offset-3 columns">
+            <h1 class="head-title"><a class="head-title" href="http://amirchaudhry.com">Amir Chaudhry</a> <br /></h1>
+            <h3><small>thoughts, comments &amp; general ramblings</small></h3>
+          </div> <!-- End Title -->
+          <!-- Navigation -->
+          <div class="medium-9 medium-offset-3 columns">
+            <ul class="inline-list head-nav">
+              
+              
+              
+
+           
+<li><a  href="http://amirchaudhry.com/">home</a></li>
+                               
+<li><a  href="http://amirchaudhry.com/journal">journal</a></li>
+                         
+<li><a  href="http://amirchaudhry.com/freebusy">free/busy</a></li>
+                       
+<li><a  href="http://amirchaudhry.com/about">about</a></li>
+                          
+            </ul>
+          </div> <!-- End Nav -->
+        </div> <!-- End inset row -->
+      </div> <!-- End 9 column section -->
+    </div> <!-- End inset row -->
+
+    
+<div class="row">
+  <div class="medium-9 columns">
+
+    <div class="row">
+      <div class="medium-3 columns">
+        <h5 class="post-date" align="right">20 November 2013</h5>
+      </div>
+      <div class="medium-9 columns">
+        <h2><a class="post-title" href="/announcing-new-ocamlorg">Announcing the new OCaml.org</a></h2>
+        <!-- <br /> -->
+        <p>As some of you may have noticed, the new OCaml.org site is now live!</p>
+
+<p>The DNS may still be propagating so if <a href="http://ocaml.org">http://ocaml.org</a> hasn't updated for you then try http://166.78.252.20.  This post is in two parts: the first is the announcement and the second is a call for content.</p>
+
+<h3>New OCaml.org website design!</h3>
+
+<p>The new site represents a major milestone in the continuing growth of the OCaml ecosystem. It's the culmination of a lot of volunteer work over the last several months and I'd specifically like to thank <a href="https://github.com/Chris00">Christophe</a>, <a href="http://ashishagarwal.org">Ashish</a> and <a href="http://philippewang.info/CL/">Philippe</a> for their dedication (the <a href="https://github.com/ocaml/ocaml.org/commits/master">commit logs</a> speak volumes).</p>
+
+<p><a href="http://amirchaudhry.com/wireframe-demos-for-ocamlorg/"><img src="http://amirchaudhry.com/images/ann-new-ocamlorg/ocaml-home-wire.png" alt="OCaml.org Wireframes" /></a></p>
+
+<p>We began this journey just over 8 months ago with paper, pencils and a lot of ideas. This led to a comprehensive set of <a href="http://amirchaudhry.com/wireframe-demos-for-ocamlorg/">wireframes and walk-throughs</a> of the site, which then developed into a collection of <a href="https://github.com/ocaml/ocaml.org/wiki/Site-Redesign">Photoshop mockups</a>. In turn, these formed the basis for the html templates and style sheets, which we've adapted to fit our needs across the site.</p>
+
+<p>Alongside the design process, we also considered the kind of structure and <a href="http://lists.ocaml.org/pipermail/infrastructure/2013-July/000211.html">workflow we aspired to</a>, both as maintainers and contributors.  This led us to develop completely new tools for <a href="http://pw374.github.io/posts/2013-09-05-22-31-26-about-omd.html">Markdown</a> and <a href="http://pw374.github.io/posts/2013-10-03-20-35-12-using-mpp-two-different-ways.html">templating</a> in OCaml, which are now available in OPAM for the benefit all.</p>
+
+<p>Working on all these things in parallel definitely had it challenges (which I'll write about separately) but the result has been worth the effort.</p>
+
+<p><a href="http://ocaml.org"><img src="http://amirchaudhry.com/images/ann-new-ocamlorg/ocaml-home-mockup.png" alt="OCaml.org" /></a></p>
+
+<p>The journey is ongoing and we still have many more improvements we hope to make. The site you see today primarily improves upon the design, structure and workflows but in time, we also intend to incorporate more information on packages and documentation. With the new tooling, moving the website forward will become much easier and I hope that more members of the community become involved in the generation and curation of content.  This brings me to the second part of this post.</p>
+
+<h3>Call for content</h3>
+
+<p>We have lots of great content on the website but there are parts that could do with a refresh and gaps that could be filled.  As a community driven site, we need ongoing contributions to ensure that the site best reflects its members.</p>
+
+<p>For example, if you do commercial work on OCaml then maybe you'd like to add yourself to the <a href="http://ocaml.org/community/support.html">support page</a>? Perhaps there are tutorials you can help to complete, like <a href="http://ocaml.org/learn/tutorials/99problems.html">99 problems</a>?  If you're not sure where to begin, there are already a number of <a href="https://github.com/ocaml/ocaml.org/issues?labels=content">content issues</a> you could contribute to.</p>
+
+<p>Although we've gone through a bug-hunt already, feedback on the site is still very welcome.  You can either <a href="https://github.com/ocaml/ocaml.org/issues">create an issue</a> on the tracker (preferred), or email the infrastructure list.</p>
+
+<p>It's fantastic how far we've come and I look forward to the next phase!</p>
+
+        <hr id='share-comment'>
+        <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_preferred_3"></a>
+    <a class="addthis_button_preferred_4"></a>
+    <a class="addthis_button_compact"></a>
+    <a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f7d70e955879218"></script>
+<script> var addthis_share = {templates : {twitter : "Announcing the new OCaml.org: http://bit.ly/1aHg3b2 via @amirmc"}}</script>
+<!-- AddThis Button END -->
+        <div class="pagination">
+          <ul class="inline-list">
+            
+              <li class="prev"><a href="/migration-plan-ocaml-org" title="Migration plan for the OCaml.org redesign">&larr; previous</a></li>
+            
+              <li class="small"><a href="/journal/">journal</a></li>
+            
+              <li class="next"><a href="/switching-from-bootstrap-to-zurb-foundation" title="Switching from Bootstrap to Zurb Foundation">next &rarr;</a></li>
+            
+          </ul>
+        </div>
+        <hr id='comments'>
+        
+
+
+  <script type='text/javascript' src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
+<script type='text/javascript'>
+    var fyre = LF({
+        site_id: 297150
+    });
+</script>
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="medium-3 columns">
+    <div class="sidebar">
+  <a href="/about/"><img src="/images/amc.png"/></a>
+  <ul class="sidebar">
+    <li class="sidebar">Team at <a class="sidebar" href="/about/"> Nymote.org</a></li>
+    <li class="sidebar">Wrangler at <a class="sidebar" href="/about/"> OCaml Labs</a></li>
+    <li class="sidebar">Post-doc at <a class="sidebar" href="/about/"> Computer Lab</a></li>
+    <li class="sidebar">Member of <a class="sidebar" href="/about/">Darwin College</a></li>
+    <li class="sidebar">Cofounder of <a class="sidebar" href="/about/"> Springboard</a></li>
+    <li class="sidebar">Advisor to <a class="sidebar" href="/about/">CUEntrepreneurs</a></li>
+  </ul>
+  <a rel="me" href="https://twitter.com/amirmc"><img src="/icons/twitter_16.png" alt="amirmc on Twitter"/></a>
+  <a href="http://www.linkedin.com/in/amirchaudhry/"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn"/></a>
+  <a rel="me" href="https://github.com/amirmc"><img src="/icons/github_16.png" alt="amirmc on GitHub"/></a>
+  <a href="http://news.ycombinator.com/threads?id=amirmc"><img src="/icons/yc_16.png" alt="amirmc on Hacker News"/></a>
+  <form action="http://www.google.com/search" class="searchbar" method="get">
+    <input type="hidden" name="q" value="site:amirchaudhry.com"/>
+    <input type="text" class="query" placeholder="Search" name="q"/>
+  </form>
+  
+    
+      <h6 class="sidebar">Filed under</h6>
+      
+    
+    <ul class="tag_box">
+      
+
+
+  
+     
+    	<li><a href="/tags/#ocaml">ocaml </a> </li>
+     
+    	<li><a href="/tags/#ocaml-labs">ocaml-labs </a> </li>
+     
+    	<li><a href="/tags/#ocamllabs">ocamllabs </a> </li>
+    
+  
+
+
+
+    </ul>
+  
+</div>
+  </div>
+</div>
+
+
+      
+    <footer>
+      <p class="footer" align="center">&copy; Amir Chaudhry 2010-2013</p>
+    </footer>
+
+    
+    
+    <!-- JavaScripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/themes/zurb/js/vendor/jquery.js"></script>
+    <script src="/assets/themes/zurb/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+

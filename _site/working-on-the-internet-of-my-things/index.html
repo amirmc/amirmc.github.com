@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm working on The Internet of *my* Things | Amir Chaudhry</title>
+    
+    <meta name="author" content="Amir Chaudhry">
+
+    <!-- Style sheets for Zurb Foundation v5 -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/normalize.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/foundation.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/code.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/style.css">
+
+    <link rel="shortcut icon" href="/icons/favicon.png" />
+    <link rel="icon" href="/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/amirmc" title="amirchaudhry.com" />
+    <!-- <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed"> -->
+    
+    <script src="/assets/themes/zurb/js/vendor/custom.modernizr.js"></script>  
+  </head>
+
+  <body>
+    <!-- Crazy nesting just to match post alignment -->
+    <div class="row">
+      <div class="medium-9 columns">
+        <div class="row">
+          <!-- Title -->
+          <div class="medium-9 medium-offset-3 columns">
+            <h1 class="head-title"><a class="head-title" href="http://amirchaudhry.com">Amir Chaudhry</a> <br /></h1>
+            <h3><small>thoughts, comments &amp; general ramblings</small></h3>
+          </div> <!-- End Title -->
+          <!-- Navigation -->
+          <div class="medium-9 medium-offset-3 columns">
+            <ul class="inline-list head-nav">
+              
+              
+              
+
+           
+<li><a  href="http://amirchaudhry.com/">home</a></li>
+                               
+<li><a  href="http://amirchaudhry.com/journal">journal</a></li>
+                         
+<li><a  href="http://amirchaudhry.com/freebusy">free/busy</a></li>
+                       
+<li><a  href="http://amirchaudhry.com/about">about</a></li>
+                          
+            </ul>
+          </div> <!-- End Nav -->
+        </div> <!-- End inset row -->
+      </div> <!-- End 9 column section -->
+    </div> <!-- End inset row -->
+
+    
+<div class="row">
+  <div class="medium-9 columns">
+
+    <div class="row">
+      <div class="medium-3 columns">
+        <h5 class="post-date" align="right"> 2 September 2013</h5>
+      </div>
+      <div class="medium-9 columns">
+        <h2><a class="post-title" href="/working-on-the-internet-of-my-things">I'm working on The Internet of *my* Things</a></h2>
+        <!-- <br /> -->
+        <p>For a long time I've been interested what the future holds in terms of how
+we will interact with each other and our environments.  Back in the day,
+these areas used to be called ubiquitous computing and home automation but
+have since been subsumed by the (only slightly) catchier moniker of Internet
+of Things (IoT).</p>
+
+<p><a href="http://www.flickr.com/photos/mjwiacek/3718366706/"><img style="float: right; margin-left: 10px" src="/images/web/pizza-oven.jpg"></a>
+A couple of my ideas involved controlling devices at home via SMS messages
+(this was way before smart phones and 'apps' came along).  For example,
+being able to set my VCR to record a show while I'm out* or pre-heat the
+oven when I'm heading home with a frozen pizza<sup>&dagger;</sup>.  Of
+course, if I were to implement these now I'd take a completely different
+approach.  With all the advances we've made, the Internet of Things has huge
+potential to change our lives the way the Internet itself did.</p>
+
+<p>However, if we take the last decade of the Internet and Web as an example of
+how the IoT may play out it's actually not a pretty picture.  We're in the
+age of the Internet behemoths, with huge centralised data silos containing
+lots of our personal data.  We trust such services to secure our data but
+<a href="http://venturebeat.com/2012/08/01/dropbox-has-become-problem-child-of-cloud-security/">repeated breaches</a> undermine that trust. Sure, there is
+some choice among providers but it's fast becoming a case of "choose your
+dictator".  Our information is trapped, interoperating is
+<a href="https://www.eff.org/deeplinks/2013/05/google-abandons-open-standards-instant-messaging">becoming difficult</a> and to top it off, these giants are
+busy fighting <a href="http://www.groklaw.net/article.php?story=20130523150909464">legal battles</a> with each other instead of
+out-competing.  Users just get caught in the cross-fire.</p>
+
+<p>If we extrapolate this to the Internet of Things then, ultimately, it'll
+become a winner-take-all-my-data arrangement, with lock-ins to restrict me
+from migrating.  Remember, we're talking about connecting more devices to
+the Internet and giving almost ubiquitous access to our daily lives and
+habits.  Trading more of our personal lives, from within our homes, with
+increasingly faceless companies and for not very much in return, isn't
+particularly appealing.</p>
+
+<p><a href="http://www.flickr.com/photos/59937401@N07/5857192377/"><img style="float:left; margin-right: 15px;" src="/images/web/monopoly-house-die-dollar.jpg"></a>
+If the IoT plays out this way, then we will effectively <em>increase</em> the
+Privacy Tax that we've <em>already</em> had to pay for our social networking tools.
+In order to benefit from the world of connected devices, we have to adjust
+(again) the notion of ownership.  I want this to be the Internet of <strong>my</strong>
+Things, so how do we make that happen?</p>
+
+<p>To really achieve that, we need to have software infrastructure that
+incorporates <a href="http://en.wikipedia.org/wiki/Privacy_by_Design">Privacy by Design</a>, so that an individual can regain the
+ability to control their data and decide for themselves whom to share it
+with. These infrastructure tools must also work in a distributed fashion, so
+there's no requirement to ally yourself to any particular centralised
+service. Of course, the tools themselves also have to be open-source, so
+that developers can be reassured that the ground they're building their
+products on won't be taken away from them.</p>
+
+<p>In the last year and a half, I've been exploring these ideas at the
+<a href="http://www.cl.cam.ac.uk">Cambridge Computer Laboratory</a>.  A lot of cutting edge work is being done
+on the problems of <a href="http://nymote.org/connected-devices-and-signpost">Identity and connectivity</a> as well as the
+operating systems for the future.  Infrastructure and tools are being shaped
+that together form a new toolstack to make the creation and management of
+decentralised networks easier<sup>&Dagger;</sup>.  There's a larger picture
+emerging from this work and it's time to start talking more about it and
+describing the pieces.  We're calling this open-source toolstack
+<strong><a href="http://nymote.org">Nymote</a></strong> and there's a new site where you can read more about it and
+keep up with news and releases.  The <a href="http://nymote.org/blog/2013/introducing-nymote/">introductory post</a>
+there describes more about the background and what we're working on.</p>
+
+<p>I'll be writing about this work both here and on the <a href="http://nymote.org/blog">Nymote Blog</a> and I'd
+love to hear from others who are interested in this area -- please do
+<a href="/about">get in touch with me</a> or leave a comment.  If you'd like to sign up
+for updates by email, you can <a href="http://eepurl.com/mXYb1">join the Nymote list here</a>.</p>
+
+<!-- footnotes -->
+
+
+<p class="footnote">* Sky+ came out with this feature a few months after I started discussing it with people.</p>
+
+
+
+
+<p class="footnote"><sup>&dagger;</sup> Yes, people told me this was insane and I'd burn my house down.  Luckily for my housemates, I never actually got around to implementing anything.</p>
+
+
+
+
+<p class="footnote"><sup>&Dagger;</sup> This is somewhat ironic as decentralisation was one of the founding tenets of the Internet. We're just helping people get back to that.</p>
+
+
+        <hr id='share-comment'>
+        <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_preferred_3"></a>
+    <a class="addthis_button_preferred_4"></a>
+    <a class="addthis_button_compact"></a>
+    <a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f7d70e955879218"></script>
+<script> var addthis_share = {templates : {twitter : "I'm working on The Internet of *my* Things: http://bit.ly/1a1HT0T via @amirmc"}}</script>
+<!-- AddThis Button END -->
+        <div class="pagination">
+          <ul class="inline-list">
+            
+              <li class="prev"><a href="/wireframe-demos-for-ocamlorg" title="Wireframe demos for OCaml.org">&larr; previous</a></li>
+            
+              <li class="small"><a href="/journal/">journal</a></li>
+            
+              <li class="next"><a href="/ocamlorg-request-for-feedback" title="Feedback requested on the OCaml.org redesign">next &rarr;</a></li>
+            
+          </ul>
+        </div>
+        <hr id='comments'>
+        
+
+
+  <script type='text/javascript' src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
+<script type='text/javascript'>
+    var fyre = LF({
+        site_id: 297150
+    });
+</script>
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="medium-3 columns">
+    <div class="sidebar">
+  <a href="/about/"><img src="/images/amc.png"/></a>
+  <ul class="sidebar">
+    <li class="sidebar">Team at <a class="sidebar" href="/about/"> Nymote.org</a></li>
+    <li class="sidebar">Wrangler at <a class="sidebar" href="/about/"> OCaml Labs</a></li>
+    <li class="sidebar">Post-doc at <a class="sidebar" href="/about/"> Computer Lab</a></li>
+    <li class="sidebar">Member of <a class="sidebar" href="/about/">Darwin College</a></li>
+    <li class="sidebar">Cofounder of <a class="sidebar" href="/about/"> Springboard</a></li>
+    <li class="sidebar">Advisor to <a class="sidebar" href="/about/">CUEntrepreneurs</a></li>
+  </ul>
+  <a rel="me" href="https://twitter.com/amirmc"><img src="/icons/twitter_16.png" alt="amirmc on Twitter"/></a>
+  <a href="http://www.linkedin.com/in/amirchaudhry/"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn"/></a>
+  <a rel="me" href="https://github.com/amirmc"><img src="/icons/github_16.png" alt="amirmc on GitHub"/></a>
+  <a href="http://news.ycombinator.com/threads?id=amirmc"><img src="/icons/yc_16.png" alt="amirmc on Hacker News"/></a>
+  <form action="http://www.google.com/search" class="searchbar" method="get">
+    <input type="hidden" name="q" value="site:amirchaudhry.com"/>
+    <input type="text" class="query" placeholder="Search" name="q"/>
+  </form>
+  
+    
+      <h6 class="sidebar">Filed under</h6>
+      
+    
+    <ul class="tag_box">
+      
+
+
+  
+     
+    	<li><a href="/tags/#aggregation">aggregation </a> </li>
+     
+    	<li><a href="/tags/#apps">apps </a> </li>
+     
+    	<li><a href="/tags/#centralisation">centralisation </a> </li>
+     
+    	<li><a href="/tags/#companies">companies </a> </li>
+     
+    	<li><a href="/tags/#devices">devices </a> </li>
+     
+    	<li><a href="/tags/#essay">essay </a> </li>
+     
+    	<li><a href="/tags/#internet of things">internet of things </a> </li>
+     
+    	<li><a href="/tags/#nymote">nymote </a> </li>
+     
+    	<li><a href="/tags/#ownership">ownership </a> </li>
+     
+    	<li><a href="/tags/#privacy">privacy </a> </li>
+     
+    	<li><a href="/tags/#rights">rights </a> </li>
+     
+    	<li><a href="/tags/#software">software </a> </li>
+     
+    	<li><a href="/tags/#tech">tech </a> </li>
+    
+  
+
+
+
+    </ul>
+  
+</div>
+  </div>
+</div>
+
+
+      
+    <footer>
+      <p class="footer" align="center">&copy; Amir Chaudhry 2010-2013</p>
+    </footer>
+
+    
+    
+    <!-- JavaScripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/themes/zurb/js/vendor/jquery.js"></script>
+    <script src="/assets/themes/zurb/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+
