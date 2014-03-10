@@ -13,6 +13,7 @@ http://amirchaudhry.com/tags/ocaml-labs-atom.xml
 http://amirchaudhry.com/tags/ocamllabs-atom.xml
 http://amirchaudhry.com/test/index.html
 
+http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines
 http://amirchaudhry.com/scientific-evidence-for-health-supplements-2014
 http://amirchaudhry.com/switching-from-bootstrap-to-zurb-foundation
 http://amirchaudhry.com/announcing-new-ocamlorg
