@@ -5,10 +5,322 @@
         <description>Amir Chaudhry - Amir Chaudhry</description>
         <link>http://amirchaudhry.com</link>
         <link>http://amirchaudhry.com</link>
-        <lastBuildDate>2014-03-10T18:41:48+00:00</lastBuildDate>
-        <pubDate>2014-03-10T18:41:48+00:00</pubDate>
+        <lastBuildDate>2014-03-13T21:01:20+00:00</lastBuildDate>
+        <pubDate>2014-03-13T21:01:20+00:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>IoT - Brave New World or Simply evolved M2M?</title>
+                <description>&lt;p&gt;I was at an &lt;a href=&quot;http://www.cambridgewireless.co.uk/events/article/default.aspx?objid=43697&quot;&gt;event&lt;/a&gt; run by Cambridge Wireless today on the Internet of
+Things.  These are my notes. Although I've named people, I'm paraphrasing a
+lot so best not to treat anything you read here as a direct quote.&lt;/p&gt;
+
+&lt;p&gt;There were a few audience polls conducted using little keypads they handed
+out. There were only 30-ish keypads so it's not necessarily indicative of
+how the whole room felt.  I took some hasty pics of a few of the slides
+(mainly the poll results) so apologies for the poor quality.&lt;/p&gt;
+
+&lt;h3&gt;&quot;The Enterprise and the Internet of Things - Evolution or Revolution?&quot;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;John Hicklin, Principal Consultant | Commercial Enterprise Markets, CGI UK&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Nowadays, you can walk into the C-suite and start a discussion about the IoT.
+They may not know what they're talking about but someone's told them they
+need to be thinking about it.  But what is IoT?&lt;/p&gt;
+
+&lt;p&gt;One of the problems in industry you go to your Director and you explain this
+new tech and all the awesome things you can do with it and he asks the
+dreaded question, &quot;So what?&quot;  Example of the Connected Toothbrush. With a
+connected toothbrush you can automatically have a remote relationship with
+your dentist.  But he already drives a BMW and it's not clear how he
+benefits from that.  He wants you in the office where, every time you open
+your mouth, he sees new business development opportunities.  For the moment,
+he neither needs nor wants a remote relationship with you. Leads to the
+question about who's going to sign up for the business case.&lt;/p&gt;
+
+&lt;p&gt;Number of key areas that need to be addressed (paraphrased):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Crack open the Data&lt;/strong&gt;: We are awash with data but don't know how to use
+it. Problem with clients is that they really buy into the vision but they
+have a lot of legacy systems (green screens!) which already run things.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Identifying value&lt;/strong&gt;(?): Volume is not a sign of success.  Need to know
+where the value is, which means understanding it. e.g is Enron. Thousands of
+documents, accountants all over the place with tons of data. It took a small
+team of a few researchers doing a case study that discovered no tax had ever
+been paid.  They got to the right data and asked the right questions.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Connectivity&lt;/strong&gt;(?): M2M has grown in a silo'd manner where a device takes
+data and sends it to one place.  This needs to open up more and give access
+to other areas of business.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Business operations&lt;/strong&gt;: People matter too. Process changes, systems that
+allow real-time decisions, empowering individuals.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Overall, IoT is an enabler for a number of wider trends. IoT can improve
+operational efficiency &lt;strong&gt;and&lt;/strong&gt; enhance customer experience.  Normally these
+are in conflict with each-other. However, if we just get into a tech-fest,
+then we might just end up with a large number of failures as we've seen with
+'Big Data'&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Poll - Which (categories of) business-related infrastructure categories
+are most urgently needed for building the Internet of Things.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://amirchaudhry.com/images/cw-iot-new-world/cw-iot-new-world-1.jpg&quot; alt=&quot;Poll results&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;&quot;Overcoming the Internet of Things Connectivity Challenge&quot;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;David Dunn, Software Engineer, Electric Imp&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Electric Imp aims to help people in Product Development in the IoT space,
+namely with the connectivity problem.  The name 'IMP' came from 'Internet
+Messaging Processor'. Name is also from Terry Pratchett who's stories had
+devices that contained an imp which did the work :)&lt;/p&gt;
+
+&lt;p&gt;Building connected devices is difficult. Have to be secure, easy to set up.
+There are many choices for connectivity, problems with managing the code on
+the devices.  Electric Imp picked wifi and decided to do it well.  This
+satisfies a lot of markets but not all.&lt;/p&gt;
+
+&lt;p&gt;Side story of the &lt;a href=&quot;http://www.proofpoint.com/threatinsight/posts/your-fridge-is-full-of-spam-part-ll-details.php&quot;&gt;hacked fridge sending spam emails&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Things run through Electric Imp system and they manage the security. It's
+security as a service.  Electric Imp manages deployment of your code too so
+developers can just push code and it will end up on all their devices.&lt;/p&gt;
+
+&lt;!-- http://www.bbc.co.uk/news/technology-25780908
+http://www.economist.com/news/science-and-technology/21594955-when-internet-things-misbehaves-spam-fridge
+http://www.proofpoint.com/about-us/press-releases/01162014.php
+http://www.proofpoint.com/threatinsight/posts/your-fridge-is-full-of-spam-proof-of-a-Iot-driven-attack.php
+http://www.proofpoint.com/threatinsight/posts/your-fridge-is-full-of-spam-part-ll-details.php --&gt;
+
+
+&lt;p&gt;Simplicity comes from one-step setup.  It's optical and uses a smartphone
+and flashes the screen, which sends the wifi SSID and credentials to the
+device (via a sensor). Customer code runs within a VM on top of with custom
+OS (impOS) taking care of I/O (TLS-encrypted wifi connection to service).&lt;/p&gt;
+
+&lt;p&gt;Difficult to debug devices in the field so cloud based- service helps with
+that. They do embedded stuff on the device and cloud stuff in the cloud.
+There's another VM in the cloud that's paired with the VM on the device.
+Heavy lifting can happens elsewhere so no need to parse JSON on the device
+itself.&lt;/p&gt;
+
+&lt;p&gt;Q - How do you deal with identity of units?&lt;br/&gt;
+A - Imps have unique serials and the devices they're plugged into are also unique (missed how).&lt;/p&gt;
+
+&lt;h3&gt;&quot;Real-life experiences from rolling out M2M networks and how we can learn from these in the shift to IoT&quot;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Jon Lewis, Chief Innovation Officer, Plextek Consulting&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Plextek was working in this field when it was called 'telemetry'.  One of
+the earliest things they worked on was 'Lojack' (car tracking). Things then
+shifted to 'smart cities' and now people talk about 'IoT' and want consumer
+devices with consumer volumes.&lt;/p&gt;
+
+&lt;p&gt;2014 has got to be year of IoT. However, still some way from business cases
+as it's too expensive to simply track your cat (approx £100 set up fee and
+then around £30 pcm).&lt;/p&gt;
+
+&lt;p&gt;Deployment often costs more than then the sensor devices. c.f street
+lighting systems.  Choice of radio system is critical.  Projects in
+UK/Europe are about incremental cost savings with pay-back in less than 5yrs.
+In industrialising countries, there is new build which is easier then
+retrofit.  Urbanisation creates strain and demand. Local issues relate to
+the Spectrum issues and local regulations (e.g mandate to use govt
+encryption streams).  Data privacy is also concern as we don't know who
+holds the monkey. That's made even more difficult when you go abroad.  Local
+politics also matters.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Big opportunity in B2C: but need consolidation in B2B markets to get
+necessary economies of scale&lt;/li&gt;
+&lt;li&gt;Big B2B opportunity in developing countries: but is tough and needs local
+partners&lt;/li&gt;
+&lt;li&gt;Application developers need common platforms: to lower R&amp;amp;D costs and
+enable access to global markets&lt;/li&gt;
+&lt;li&gt;Whole value chain needs to work: building an ecosystem that connects
+application developers to markets is key to achieving scale&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;&quot;The role of LTE in M2M&quot;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Georg Steimel, Head of M2M Solutions, Huawei&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;About Huawei
+- Three businesses: Carrier network, Consumer business, Enterprise business
+- Revenues of $39Bn, No2. Telecom solution provider, 150k+ employees
+worldwide&lt;/p&gt;
+
+&lt;p&gt;Georg is in Consumer branch for Europe.  Huawei wants to be top M2M module
+vendor in the coming years.  They're operator and system integrator agnostic.&lt;/p&gt;
+
+&lt;p&gt;Tech evolution brings new opportunities. Mobile data traffic needs, Network
+upgrading etc. Ave user expected to generated 1G data traffic per month
+(currently 63MB today) and there are predicted to be 50Bn+ devices.
+Examples of users are highly varied including monitoring of pregnant cows.&lt;/p&gt;
+
+&lt;p&gt;Challenges for mass rollout are a scattered market requiring complex
+solutions.  Alignment of all parties in one adequate business model is quite
+tricky, esp when it comes to customer ownership. Should consider the value
+chain.&lt;/p&gt;
+
+&lt;p&gt;Complex business model:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;From sales to service&lt;/li&gt;
+&lt;li&gt;Many stakeholders
+
+&lt;ul&gt;
+&lt;li&gt;Who pays, how much, to whom, for what service, for what benefits?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Individual benefit must exceed cost
+
+&lt;ul&gt;
+&lt;li&gt;Realistic pricing&lt;/li&gt;
+&lt;li&gt;Appropriate effort&lt;/li&gt;
+&lt;li&gt;Total benefit, direct vs indirect TCO&lt;/li&gt;
+&lt;li&gt;Sustainability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Amount of data generated is also going to be huge.  Smart meters in German
+households could send over 4TB per day, which is a huge strain for mobile
+networks.&lt;/p&gt;
+
+&lt;p&gt;LTE advantage for M2M is obviously bandwidth but that's only relevant to a
+few verticals (signage, routers, and in-car entertainment). Low latency is
+more important for industrial alarms and medical devices.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Poll - What business models?&lt;/strong&gt;
+&lt;img src=&quot;http://amirchaudhry.com/images/cw-iot-new-world/cw-iot-new-world-2.jpg&quot; alt=&quot;Poll results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Break down of poll results.&lt;br/&gt;
+&lt;img src=&quot;http://amirchaudhry.com/images/cw-iot-new-world/cw-iot-new-world-3.jpg&quot; alt=&quot;Poll results&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;&quot;Using networked visualisation for better decision making&quot;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Fredrik Sjostedt, Vice President | Corporate Marketing, Barco Ltd&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Barco does a lot of visualising information. Displays for radiographers,
+stuff in cinema screens, screens in flight simulators and a lot more.&lt;/p&gt;
+
+&lt;p&gt;Need to take in data from sensors, display relevant information and allow
+operators to make SMART decisions.  e.g number of CCTV cameras in London -
+who's looking at them? Real 'Big Data' step is at the operator level.&lt;/p&gt;
+
+&lt;p&gt;Important to use standards, rather than proprietary systems.&lt;/p&gt;
+
+&lt;p&gt;Q - In transport visualisation do you have low enough latency to get
+real-time info?&lt;br/&gt;
+A- Yes, e.g on a route in Brazil near Sao Palo it's closed dues to fog.
+Real-time info important for understanding the whole route.&lt;/p&gt;
+
+&lt;h3&gt;&quot;Regulatory backdrop on IP and standards issues for the M2M eco-system&quot;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Justin Hill, Co-Head of the Patent Prosecution Group and Purvi Parekh, Co-Head of International Telecoms, Olswang&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Purvi&lt;/strong&gt; on the Regulatory environment&lt;br/&gt;
+No tailor made regulation v high regulatory focus. Regulatory focus from
+leading bodies and many of them said that existing regulation can be amended
+to facilitate M2M/IoT.  Made more complicated by lack of globally agreed
+definition of IoT (which make it difficult for lawyers).  There's generally
+promotion of Open Standards.  EU does believe that this is v important.
+People should read the RAND report (Nov 2013), commissioned by the EU to
+examine if there should be standards.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Justin&lt;/strong&gt; on IP issues&lt;br/&gt;
+With any standardisation process, you're hoping to increase adoption with
+the trade-off of Right of IPR owners.  &lt;a href=&quot;http://en.wikipedia.org/wiki/Reasonable_and_non-discriminatory_licensing&quot;&gt;FRAND&lt;/a&gt; (fair, reasonable, and
+non-discriminatory terms) are also important but that's also debatable.
+When considering how to protect IPR, it's worth comparing whole-system
+claims with protecting at different layers of the tech/value stack and build
+a portfolio.&lt;/p&gt;
+
+&lt;h3&gt;&quot;The impact of autonomous systems on surface transport&quot;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Paul Copping, Corporate Development Director, TRL&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;TRL is the Transport Research Laboratory.  Did some work to consider the
+impact of autonomous transport on the overall value chain.  Some of things
+we're trying now with autonomous driving have been successfully done in the
+past by other means (e.g car tracking a lane with magnets).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://amirchaudhry.com/images/cw-iot-new-world/cw-iot-new-world-4.jpg&quot; alt=&quot;Transport Value Chain&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;&quot;Connected Products - Designing for Scale&quot;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Pilgrim Beart, Founder Director, 1248-io&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;What is IoT?  Humans don't scale.  Population is predicted to tail off at
+around 9Bn.  Connected devices are growing and the rate of change is
+exponential (and increasing).  In the 90s we used to be our own sysadmin
+with maybe one device.  Now we have several and some cloud services.  In the
+future there will be many more and they'll have to manage themselves. There
+are different problem you face as you go from 1 to 10 to 100 to 10000 to
+1MM+ deployed devices.  Issues ranging from device updates al the way to
+regulation and externalities that affect your business.&lt;/p&gt;
+
+&lt;p&gt;In 10 years time, when all is said and done, we won't be calling it the
+Internet of Things. It'll just be called the Internet.&lt;/p&gt;
+
+&lt;p&gt;Q from an application developers perspective wht would you different earlier
+in your development if you were to go back and start again&lt;br/&gt;
+A - AlertMe started a bit too early so there were a lot things were not
+off-the-shelf. Had to build. Right now can see a lot people reinventing the
+wheel but shouldn't need to do this.&lt;/p&gt;
+
+&lt;h3&gt;&quot;A new standard to connect the Internet of Everything&quot;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Antony Rix, Senior Consultant, TTP&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;One of the things TTP works on are wireless standards.&lt;/p&gt;
+
+&lt;p&gt;The size of the grey blobs are in an indication of market size.&lt;br/&gt;
+&lt;img src=&quot;http://amirchaudhry.com/images/cw-iot-new-world/cw-iot-new-world-5.jpg&quot; alt=&quot;IoT Market Segments&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Users will expect things to cost pretty much the same as they did before.
+Cost will be critical and as we buy things we generally still expect them to
+last for years.&lt;/p&gt;
+
+&lt;p&gt;TTP Matrix is a proprietary standard specifically for use by low-cost
+wireless connected devices.  It's optimised for efficient use of radio
+spectrum, long range, low cost and power efficient.  Use-case example
+(DisplayData) are the pricing labels on supermarket.  50k products running
+through only 3 gateways (other standards would find this difficult). Low
+power consumption means a battery can last 10 years.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Poll - Which (categories of) technical / architecture building blocks are
+most urgently needed for building the Internet of Things.&lt;/strong&gt;
+&lt;img src=&quot;http://amirchaudhry.com/images/cw-iot-new-world/cw-iot-new-world-6.jpg&quot; alt=&quot;Poll results&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;Debate&lt;/h3&gt;
+
+&lt;p&gt;Interesting discussion of Humans role in IoT.  For home consumer devices
+people may not want to have to make any decisions (completely automated) but
+corporates my want all information in order to integrate and decide.&lt;/p&gt;
+
+&lt;p&gt;How quickly will this happen? It's difficult to say when you're in the
+middle of it. We'll know it's happened after the event. It takes about a
+decade for things to get things in to mature in the market. On the other
+hand, it's happening.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Poll - Big and small data - Which statement do you agree with most/least&lt;/strong&gt;  &lt;br/&gt;
+I only got a pic of the latter but it's the inverse of the former
+(unsurprisingly).&lt;br/&gt;
+&lt;img src=&quot;http://amirchaudhry.com/images/cw-iot-new-world/cw-iot-new-world-7.jpg&quot; alt=&quot;Poll results&quot; /&gt;&lt;/p&gt;
+</description>
+                <link>http://amirchaudhry.com/iot-brave-new-world-or-evolved-m2m</link>
+                <guid>http://amirchaudhry.com/iot-brave-new-world-or-evolved-m2m</guid>
+                <pubDate>2014-03-13T21:00:00Z</pubDate>
+        </item>
 
         <item>
                 <title>From Jekyll site to Unikernel in fifty lines of code.</title>
