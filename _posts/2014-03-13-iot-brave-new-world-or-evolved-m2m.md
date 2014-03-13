@@ -3,7 +3,7 @@ layout: post
 title: "IoT - Brave New World or Simply evolved M2M?"
 author: Amir Chaudhry
 date: 2014-03-13 21:00:00
-tags: [conference, devices, IoT, notes, pics]
+tags: [conference, devices, internet of things, notes, pics]
 shorturl: http://bit.ly/1fWcbIj
 ---
 {% include JB/setup %}
