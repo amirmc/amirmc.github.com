@@ -30,6 +30,8 @@ Board Observer at TidePowerd
 
 Exec Committee at [SVc2UK][]
 
+Customer Dev at Go Test It
+
 Operations and Quality at [CTC][]
 
 Advisor at [CU Entrepreneurs][]
