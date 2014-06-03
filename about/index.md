@@ -30,6 +30,8 @@ Board Observer at TidePowerd
 
 Exec Committee at [SVc2UK][]
 
+Operations and Quality at [CTC][]
+
 Advisor at [CU Entrepreneurs][]
 
 
@@ -40,6 +42,7 @@ Advisor at [CU Entrepreneurs][]
 [Springboard]: http://springboard.com
 [Nymote.org]: http://nymote.org
 [SVc2UK]: http://svc2uk.com
+[CTC]: http://www.temperatureconcepts.com
 
 #### Where to find me
 
