@@ -56,9 +56,12 @@ Edit `config.ml` so that the two mentions of `./htdocs` are replaced with
 be able to build the unikernel with the unix backend.  Make sure you have
 the mirage package installed by running `$ opam install mirage` and then run:
 
+*(edit: If you already have `mirage`, remember to `opam update` to make sure you've got the latest packages.)*
+
 {% highlight bash %}
 $ cd _mirage
 $ mirage configure --unix
+$ make depend         # needed as of mirage 1.2 onward
 $ mirage build
 $ cd ..
 {% endhighlight %}
