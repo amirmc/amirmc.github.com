@@ -14,13 +14,16 @@ navweight: 4
 
 ***Currently***
 
+Lead at [Nymote.org][]
+
+Community at [Mirage OS][]
+
 Post-doc at [Cambridge Computer Lab][]
 
 Programme Manager at [OCaml Labs][]
 
 Senior Member at [Darwin College][]
 
-Team at [Nymote.org][]
 
 ***Previously***
 
@@ -36,6 +39,7 @@ Operations and Quality at [CTC][]
 
 Advisor at [CU Entrepreneurs][]
 
+PhD in [Neuroscience at Cambridge University][cam-neuro]
 
 [Cambridge Computer Lab]: http://www.cl.cam.ac.uk
 [OCaml Labs]: http://www.cl.cam.ac.uk/projects/ocamllabs/
@@ -43,8 +47,10 @@ Advisor at [CU Entrepreneurs][]
 [Darwin College]: http://www.darwin.cam.ac.uk
 [Springboard]: http://springboard.com
 [Nymote.org]: http://nymote.org
+[Mirage OS]: http://openmirage.org
 [SVc2UK]: http://svc2uk.com
 [CTC]: http://www.temperatureconcepts.com
+[cam-neuro]: http://www.neuroscience.cam.ac.uk
 
 #### Where to find me
 
