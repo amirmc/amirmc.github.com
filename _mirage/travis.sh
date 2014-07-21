@@ -35,6 +35,7 @@ mirage --version
 
 # run the commands to build from here
 FS=fat mirage configure --$MIRAGE_BACKEND
+make depend
 mirage build
 
 #############################
