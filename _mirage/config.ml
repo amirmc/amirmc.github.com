@@ -15,8 +15,8 @@ let fat_ro dir =
   kv_ro_of_fs (fat_of_files ~dir ())
 
 let fs = match mode with
-  | `Fat    -> fat_ro "../_site"
-  | `Crunch -> crunch "../_site"
+  | `Fat    -> fat_ro "./htdocs"
+  | `Crunch -> crunch "./htdocs"
 
 let net =
   try match Sys.getenv "NET" with
@@ -44,6 +44,9 @@ let main =
   foreign "Dispatch.Main" (console @-> kv_ro @-> http @-> job)
 
 let () =
+  add_to_ocamlfind_libraries ["re.str"];
+  add_to_opam_packages ["re"];
+
   register "www" [
     main $ default_console $ fs $ server
   ]
