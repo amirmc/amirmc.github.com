@@ -4,7 +4,7 @@
   <link href="http://amirchaudhry.com/tags/ocaml-labs-atom.xml" rel="self"/>
   <link href="http://amirchaudhry.com"/>
   <subtitle>thoughts, comments &amp; general ramblings</subtitle>
-  <updated>2014-04-29T14:17:43+01:00</updated>
+  <updated>2014-07-22T00:44:39+01:00</updated>
   <id>http://amirchaudhry.com/tags/#ocaml-labs</id>
   <author>
     <name>Amir Chaudhry</name>
@@ -625,10 +625,9 @@ makes this easy.  Just run the following (and get more coffee):&lt;/p&gt;&lt;/li
 &lt;/ul&gt;
 
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam update
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam update
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam switch 4.01.0
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;opam config env&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;opam config env&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
@@ -641,8 +640,7 @@ installing in advance are &lt;code&gt;core&lt;/code&gt; and &lt;code&gt;js_of_oc
 &lt;/ul&gt;
 
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam install core js_of_ocaml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam install core js_of_ocaml&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;OPAM will take care of the dependencies and the rest we can get on the day!&lt;/p&gt;

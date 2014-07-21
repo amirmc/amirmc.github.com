@@ -53,15 +53,15 @@
               
               
 
-           
+                 
 <li><a  href="http://amirchaudhry.com/">home</a></li>
-                               
+                 
 <li><a  href="http://amirchaudhry.com/journal">journal</a></li>
-                         
+                                     
 <li><a  href="http://amirchaudhry.com/freebusy">free/busy</a></li>
                        
 <li><a  href="http://amirchaudhry.com/about">about</a></li>
-                          
+                      
             </ul>
           </div> <!-- End Nav -->
         </div> <!-- End inset row -->
@@ -129,11 +129,13 @@ jekyll repository.</p>
 be able to build the unikernel with the unix backend.  Make sure you have
 the mirage package installed by running <code>$ opam install mirage</code> and then run:</p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span><span class="nb">cd </span>_mirage
+<p><em>(edit: If you already have <code>mirage</code>, remember to <code>opam update</code> to make sure you've got the latest packages.)</em></p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd </span>_mirage
 <span class="nv">$ </span>mirage configure --unix
+<span class="nv">$ </span>make depend         <span class="c"># needed as of mirage 1.2 onward</span>
 <span class="nv">$ </span>mirage build
-<span class="nv">$ </span><span class="nb">cd</span> ..
-</code></pre></div>
+<span class="nv">$ </span><span class="nb">cd</span> ..</code></pre></div>
 
 
 <p>That's all it takes!  In a few minutes there will be a unikernel built on
@@ -148,12 +150,11 @@ static_website files from <a href="https://github.com/mirage/mirage-skeleton">mi
 information about the details of this on the <a href="http://openmirage.org/wiki/mirage-www">Mirage docs site</a>
 but the quick instructions are:</p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span><span class="nb">cd </span>_mirage
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd </span>_mirage
 <span class="nv">$ </span>sudo mirage run
 
 <span class="c"># in another terminal window</span>
-<span class="nv">$ </span>sudo ifconfig tap0 10.0.0.1 255.255.255.0
-</code></pre></div>
+<span class="nv">$ </span>sudo ifconfig tap0 10.0.0.1 255.255.255.0</code></pre></div>
 
 
 <p>You can now point your browser at http://10.0.0.2/ and see your site!
@@ -199,14 +200,13 @@ The build instructions will be in the file <code>_mirage/travis.sh</code>, which
 will move to and trigger from the <code>.travis.yml</code> file.  This means our YAML
 file should look like:</p>
 
-<div class="highlight"><pre><code class="yaml"><span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">c</span>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">c</span>
 <span class="l-Scalar-Plain">before_script</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">cd _mirage</span>
 <span class="l-Scalar-Plain">script</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">bash -ex travis.sh</span>
 <span class="l-Scalar-Plain">env</span><span class="p-Indicator">:</span>
   <span class="l-Scalar-Plain">matrix</span><span class="p-Indicator">:</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">MIRAGE_BACKEND=xen DEPLOY=0</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">MIRAGE_BACKEND=unix</span>
-</code></pre></div>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">MIRAGE_BACKEND=unix</span></code></pre></div>
 
 
 <p>The matrix enables us to have parallel builds for different environments and
@@ -225,23 +225,21 @@ first thing to do is define which PPAs each line of the build matrix
 corresponds to.  Since we're keeping things simple, we only need one PPA
 that has the most recent releases of OCaml and Opam.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="c">#!/usr/bin/env bash</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/usr/bin/env bash</span>
 <span class="nv">ppa</span><span class="o">=</span>avsm/ocaml41+opam11
 <span class="nb">echo</span> <span class="s2">&quot;yes&quot;</span> <span class="p">|</span> sudo add-apt-repository ppa:<span class="nv">$ppa</span>
 sudo apt-get update -qq
-sudo apt-get install -qq ocaml ocaml-native-compilers camlp4-extra opam
-</code></pre></div>
+sudo apt-get install -qq ocaml ocaml-native-compilers camlp4-extra opam</code></pre></div>
 
 
 <p>[NB: There are many <a href="https://launchpad.net/~avsm">other PPAs</a> for different combinations of
 OCaml/Opam which are useful for testing].  Once the appropriate PPAs have
 been set up it's time to initialise Opam and install Mirage.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="nb">export </span><span class="nv">OPAMYES</span><span class="o">=</span>1
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">OPAMYES</span><span class="o">=</span>1
 opam init
 opam install mirage
-<span class="nb">eval</span> <span class="sb">`</span>opam config env<span class="sb">`</span>
-</code></pre></div>
+<span class="nb">eval</span> <span class="sb">`</span>opam config env<span class="sb">`</span></code></pre></div>
 
 
 <p>We set <code>OPAMYES=1</code> to get non-interactive use of Opam (it defaults to 'yes'
@@ -251,9 +249,8 @@ The rest should be straight-forward and you'll end up with an
 Ubuntu machine with OCaml, Opam and the Mirage package installed.  It's now
 trivial to do the next step of actually building the unikernel!</p>
 
-<div class="highlight"><pre><code class="bash">mirage configure --<span class="nv">$MIRAGE_BACKEND</span>
-mirage build
-</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">mirage configure --<span class="nv">$MIRAGE_BACKEND</span>
+mirage build</code></pre></div>
 
 
 <p>You can see how we've used the environment variable from the Travis file and
@@ -307,18 +304,17 @@ the Travis gem to encrypt the pieces to add them to the <code>.travis.yml</code>
 preference is to create a <em>new</em> deploy key, which will only be used for
 <a href="https://help.github.com/articles/managing-deploy-keys#deploy-keys">deployment to one repository</a>.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># make a key pair on your local machine</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># make a key pair on your local machine</span>
 <span class="nv">$ </span><span class="nb">cd</span> ~/.ssh/
 <span class="nv">$ </span>ssh-keygen -t dsa -C <span class="s2">&quot;travis.deploy&quot;</span> -f travis-deploy_dsa
-<span class="nv">$ </span><span class="nb">cd</span> -
-</code></pre></div>
+<span class="nv">$ </span><span class="nb">cd</span> -</code></pre></div>
 
 
 <p>Note that this is a 1024 bit key so if you decide to use a 2048 bit key,
 then be aware that Travis <a href="https://github.com/avsm/travis-senv/issues/1">sometimes has issues</a>. Now that we have
 a key, we can encrypt it and add it to the Travis file.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># on your local machine</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># on your local machine</span>
 
 <span class="c"># install the necessary components</span>
 <span class="nv">$ </span>gem install travis
@@ -327,8 +323,7 @@ a key, we can encrypt it and add it to the Travis file.</p>
 <span class="c"># chunk the key, add to yml file and rm the intermediate</span>
 <span class="nv">$ </span>travis-senv encrypt ~/.ssh/travis-deploy_dsa _travis_env
 <span class="nv">$ </span>cat _travis_env <span class="p">|</span> travis encrypt -ps --add
-<span class="nv">$ </span>rm _travis_env
-</code></pre></div>
+<span class="nv">$ </span>rm _travis_env</code></pre></div>
 
 
 <p><code>travis-senv</code> encrypts and chunks the key locally on your machine, placing
@@ -339,7 +334,7 @@ adding that to the Travis file (<code>--add</code>).  You can run <code>$ travis
 to understand these options.  Once you've run the above commands,
 <code>.travis.yml</code> will look as follows.</p>
 
-<div class="highlight"><pre><code class="yaml"><span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">c</span>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">c</span>
 <span class="l-Scalar-Plain">before_script</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">cd _mirage</span>
 <span class="l-Scalar-Plain">script</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">bash -ex travis.sh</span>
 <span class="l-Scalar-Plain">env</span><span class="p-Indicator">:</span>
@@ -350,8 +345,7 @@ to understand these options.  Once you've run the above commands,
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">secure</span><span class="p-Indicator">:</span> <span class="s">&quot;....</span><span class="nv"> </span><span class="s">encrypted</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">....&quot;</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">secure</span><span class="p-Indicator">:</span> <span class="s">&quot;....</span><span class="nv"> </span><span class="s">encrypted</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">....&quot;</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">secure</span><span class="p-Indicator">:</span> <span class="s">&quot;....</span><span class="nv"> </span><span class="s">encrypted</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">....&quot;</span>
-  <span class="l-Scalar-Plain">...</span>
-</code></pre></div>
+  <span class="l-Scalar-Plain">...</span></code></pre></div>
 
 
 <p>The number of secure variables added depends on the type and size of the key
@@ -385,7 +379,7 @@ helps us trace which commit it was built from).</p>
 details in the comments. This section is what you need to add at the end of
 your existing build script (i.e straight after <code>mirage build</code>).</p>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># Only deploy if the following conditions are met.</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Only deploy if the following conditions are met.</span>
 <span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$MIRAGE_BACKEND&quot;</span> <span class="o">=</span> <span class="s2">&quot;xen&quot;</span> <span class="se">\</span>
             -a <span class="s2">&quot;$DEPLOY&quot;</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span> <span class="se">\</span>
             -a <span class="s2">&quot;$TRAVIS_PULL_REQUEST&quot;</span> <span class="o">=</span> <span class="s2">&quot;false&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
@@ -396,7 +390,7 @@ your existing build script (i.e straight after <code>mirage build</code>).</p>
     opam install travis-senv
     mkdir -p ~/.ssh
     travis-senv decrypt &gt; ~/.ssh/id_dsa <span class="c"># This doesn&#39;t expose it</span>
-    chmod 600 ~/.ssh/id_dsa             <span class="c"># Owner can read and write</span>
+    chmod <span class="m">600</span> ~/.ssh/id_dsa             <span class="c"># Owner can read and write</span>
     <span class="nb">echo</span> <span class="s2">&quot;Host some_user github.com&quot;</span>   &gt;&gt; ~/.ssh/config
     <span class="nb">echo</span> <span class="s2">&quot;  Hostname github.com&quot;</span>          &gt;&gt; ~/.ssh/config
     <span class="nb">echo</span> <span class="s2">&quot;  StrictHostKeyChecking no&quot;</span>     &gt;&gt; ~/.ssh/config
@@ -433,8 +427,7 @@ your existing build script (i.e straight after <code>mirage build</code>).</p>
     git commit -m <span class="s2">&quot;adding $TRAVIS_COMMIT built for $MIRAGE_BACKEND&quot;</span>
     git push origin master
     <span class="c"># Go out and enjoy the Sun!</span>
-<span class="k">fi</span>
-</code></pre></div>
+<span class="k">fi</span></code></pre></div>
 
 
 <p>At this point you should commit the changes to <code>./travis.yml</code> (don't forget
@@ -458,12 +451,11 @@ jekyll repository (<code>_deploy-unikernel.sh</code>) that builds the site, comm
 contents of <code>_site</code> and pushes to GitHub. I simply run this after I've
 committed a new blog post and the rest takes care of itself.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="c">#!/usr/bin/env bash</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/usr/bin/env bash</span>
 jekyll build
 git add _site
 git commit -m <span class="s1">&#39;update _site&#39;</span>
-git push origin master
-</code></pre></div>
+git push origin master</code></pre></div>
 
 
 <p>Congratulations! You now have an end-to-end workflow that will produce a
@@ -570,8 +562,9 @@ commenting on an earlier draft of this post.</p>
     <div class="sidebar">
   <a href="/about/"><img src="/images/amc.png"/></a>
   <ul class="sidebar">
-    <li class="sidebar">Team at <a class="sidebar" href="/about/"> Nymote.org</a></li>
+    <li class="sidebar">Lead at <a class="sidebar" href="/about/"> Nymote.org</a></li>
     <li class="sidebar">Wrangler at <a class="sidebar" href="/about/"> OCaml Labs</a></li>
+    <li class="sidebar">Community at <a class="sidebar" href="/about/"> Mirage OS</a></li>
     <li class="sidebar">Post-doc at <a class="sidebar" href="/about/"> Computer Lab</a></li>
     <li class="sidebar">Member of <a class="sidebar" href="/about/">Darwin College</a></li>
     <li class="sidebar">Cofounder of <a class="sidebar" href="/about/"> Springboard</a></li>

@@ -4,7 +4,7 @@
   <link href="http://amirchaudhry.com/" rel="self"/>
   <link href="http://amirchaudhry.com"/>
   <subtitle>thoughts, comments &amp; general ramblings</subtitle>
-  <updated>2014-04-29T14:17:43+01:00</updated>
+  <updated>2014-07-22T00:44:39+01:00</updated>
   <id>http://amirchaudhry.com</id>
   <author>
     <name>Amir Chaudhry</name>
@@ -557,11 +557,13 @@ jekyll repository.&lt;/p&gt;
 be able to build the unikernel with the unix backend.  Make sure you have
 the mirage package installed by running &lt;code&gt;$ opam install mirage&lt;/code&gt; and then run:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_mirage
+&lt;p&gt;&lt;em&gt;(edit: If you already have &lt;code&gt;mirage&lt;/code&gt;, remember to &lt;code&gt;opam update&lt;/code&gt; to make sure you've got the latest packages.)&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_mirage
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mirage configure --unix
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;make depend         &lt;span class=&quot;c&quot;&gt;# needed as of mirage 1.2 onward&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mirage build
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;That's all it takes!  In a few minutes there will be a unikernel built on
@@ -576,12 +578,11 @@ static_website files from &lt;a href=&quot;https://github.com/mirage/mirage-skel
 information about the details of this on the &lt;a href=&quot;http://openmirage.org/wiki/mirage-www&quot;&gt;Mirage docs site&lt;/a&gt;
 but the quick instructions are:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_mirage
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_mirage
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo mirage run
 
 &lt;span class=&quot;c&quot;&gt;# in another terminal window&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo ifconfig tap0 10.0.0.1 255.255.255.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo ifconfig tap0 10.0.0.1 255.255.255.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;You can now point your browser at http://10.0.0.2/ and see your site!
@@ -627,14 +628,13 @@ The build instructions will be in the file &lt;code&gt;_mirage/travis.sh&lt;/cod
 will move to and trigger from the &lt;code&gt;.travis.yml&lt;/code&gt; file.  This means our YAML
 file should look like:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;c&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;c&lt;/span&gt;
 &lt;span class=&quot;l-Scalar-Plain&quot;&gt;before_script&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;cd _mirage&lt;/span&gt;
 &lt;span class=&quot;l-Scalar-Plain&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;bash -ex travis.sh&lt;/span&gt;
 &lt;span class=&quot;l-Scalar-Plain&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;l-Scalar-Plain&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;MIRAGE_BACKEND=xen DEPLOY=0&lt;/span&gt;
-  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;MIRAGE_BACKEND=unix&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;MIRAGE_BACKEND=unix&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;The matrix enables us to have parallel builds for different environments and
@@ -653,23 +653,21 @@ first thing to do is define which PPAs each line of the build matrix
 corresponds to.  Since we're keeping things simple, we only need one PPA
 that has the most recent releases of OCaml and Opam.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env bash&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env bash&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;ppa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;avsm/ocaml41+opam11
 &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;yes&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sudo add-apt-repository ppa:&lt;span class=&quot;nv&quot;&gt;$ppa&lt;/span&gt;
 sudo apt-get update -qq
-sudo apt-get install -qq ocaml ocaml-native-compilers camlp4-extra opam
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+sudo apt-get install -qq ocaml ocaml-native-compilers camlp4-extra opam&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;[NB: There are many &lt;a href=&quot;https://launchpad.net/~avsm&quot;&gt;other PPAs&lt;/a&gt; for different combinations of
 OCaml/Opam which are useful for testing].  Once the appropriate PPAs have
 been set up it's time to initialise Opam and install Mirage.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OPAMYES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OPAMYES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
 opam init
 opam install mirage
-&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;opam config env&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;opam config env&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;We set &lt;code&gt;OPAMYES=1&lt;/code&gt; to get non-interactive use of Opam (it defaults to 'yes'
@@ -679,9 +677,8 @@ The rest should be straight-forward and you'll end up with an
 Ubuntu machine with OCaml, Opam and the Mirage package installed.  It's now
 trivial to do the next step of actually building the unikernel!&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;mirage configure --&lt;span class=&quot;nv&quot;&gt;$MIRAGE_BACKEND&lt;/span&gt;
-mirage build
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mirage configure --&lt;span class=&quot;nv&quot;&gt;$MIRAGE_BACKEND&lt;/span&gt;
+mirage build&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;You can see how we've used the environment variable from the Travis file and
@@ -735,18 +732,17 @@ the Travis gem to encrypt the pieces to add them to the &lt;code&gt;.travis.yml&
 preference is to create a &lt;em&gt;new&lt;/em&gt; deploy key, which will only be used for
 &lt;a href=&quot;https://help.github.com/articles/managing-deploy-keys#deploy-keys&quot;&gt;deployment to one repository&lt;/a&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# make a key pair on your local machine&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# make a key pair on your local machine&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.ssh/
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh-keygen -t dsa -C &lt;span class=&quot;s2&quot;&gt;&amp;quot;travis.deploy&amp;quot;&lt;/span&gt; -f travis-deploy_dsa
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; -
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; -&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Note that this is a 1024 bit key so if you decide to use a 2048 bit key,
 then be aware that Travis &lt;a href=&quot;https://github.com/avsm/travis-senv/issues/1&quot;&gt;sometimes has issues&lt;/a&gt;. Now that we have
 a key, we can encrypt it and add it to the Travis file.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# on your local machine&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# on your local machine&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# install the necessary components&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem install travis
@@ -755,8 +751,7 @@ a key, we can encrypt it and add it to the Travis file.&lt;/p&gt;
 &lt;span class=&quot;c&quot;&gt;# chunk the key, add to yml file and rm the intermediate&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;travis-senv encrypt ~/.ssh/travis-deploy_dsa _travis_env
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat _travis_env &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; travis encrypt -ps --add
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rm _travis_env
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rm _travis_env&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;&lt;code&gt;travis-senv&lt;/code&gt; encrypts and chunks the key locally on your machine, placing
@@ -767,7 +762,7 @@ adding that to the Travis file (&lt;code&gt;--add&lt;/code&gt;).  You can run &l
 to understand these options.  Once you've run the above commands,
 &lt;code&gt;.travis.yml&lt;/code&gt; will look as follows.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;c&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;c&lt;/span&gt;
 &lt;span class=&quot;l-Scalar-Plain&quot;&gt;before_script&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;cd _mirage&lt;/span&gt;
 &lt;span class=&quot;l-Scalar-Plain&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;bash -ex travis.sh&lt;/span&gt;
 &lt;span class=&quot;l-Scalar-Plain&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt;
@@ -778,8 +773,7 @@ to understand these options.  Once you've run the above commands,
   &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;secure&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;....&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;encrypted&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;....&amp;quot;&lt;/span&gt;
   &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;secure&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;....&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;encrypted&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;....&amp;quot;&lt;/span&gt;
   &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;secure&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;....&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;encrypted&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;....&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;...&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;span class=&quot;l-Scalar-Plain&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;The number of secure variables added depends on the type and size of the key
@@ -813,7 +807,7 @@ helps us trace which commit it was built from).&lt;/p&gt;
 details in the comments. This section is what you need to add at the end of
 your existing build script (i.e straight after &lt;code&gt;mirage build&lt;/code&gt;).&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Only deploy if the following conditions are met.&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Only deploy if the following conditions are met.&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$MIRAGE_BACKEND&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;xen&amp;quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
             -a &lt;span class=&quot;s2&quot;&gt;&amp;quot;$DEPLOY&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;1&amp;quot;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
             -a &lt;span class=&quot;s2&quot;&gt;&amp;quot;$TRAVIS_PULL_REQUEST&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;false&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
@@ -824,7 +818,7 @@ your existing build script (i.e straight after &lt;code&gt;mirage build&lt;/code
     opam install travis-senv
     mkdir -p ~/.ssh
     travis-senv decrypt &amp;gt; ~/.ssh/id_dsa &lt;span class=&quot;c&quot;&gt;# This doesn&amp;#39;t expose it&lt;/span&gt;
-    chmod 600 ~/.ssh/id_dsa             &lt;span class=&quot;c&quot;&gt;# Owner can read and write&lt;/span&gt;
+    chmod &lt;span class=&quot;m&quot;&gt;600&lt;/span&gt; ~/.ssh/id_dsa             &lt;span class=&quot;c&quot;&gt;# Owner can read and write&lt;/span&gt;
     &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Host some_user github.com&amp;quot;&lt;/span&gt;   &amp;gt;&amp;gt; ~/.ssh/config
     &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;  Hostname github.com&amp;quot;&lt;/span&gt;          &amp;gt;&amp;gt; ~/.ssh/config
     &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;  StrictHostKeyChecking no&amp;quot;&lt;/span&gt;     &amp;gt;&amp;gt; ~/.ssh/config
@@ -861,8 +855,7 @@ your existing build script (i.e straight after &lt;code&gt;mirage build&lt;/code
     git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;adding $TRAVIS_COMMIT built for $MIRAGE_BACKEND&amp;quot;&lt;/span&gt;
     git push origin master
     &lt;span class=&quot;c&quot;&gt;# Go out and enjoy the Sun!&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;At this point you should commit the changes to &lt;code&gt;./travis.yml&lt;/code&gt; (don't forget
@@ -886,12 +879,11 @@ jekyll repository (&lt;code&gt;_deploy-unikernel.sh&lt;/code&gt;) that builds th
 contents of &lt;code&gt;_site&lt;/code&gt; and pushes to GitHub. I simply run this after I've
 committed a new blog post and the rest takes care of itself.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env bash&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env bash&lt;/span&gt;
 jekyll build
 git add _site
 git commit -m &lt;span class=&quot;s1&quot;&gt;&amp;#39;update _site&amp;#39;&lt;/span&gt;
-git push origin master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Congratulations! You now have an end-to-end workflow that will produce a
@@ -1437,10 +1429,9 @@ makes this easy.  Just run the following (and get more coffee):&lt;/p&gt;&lt;/li
 &lt;/ul&gt;
 
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam update
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam update
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam switch 4.01.0
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;opam config env&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;opam config env&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;ul&gt;
@@ -1453,8 +1444,7 @@ installing in advance are &lt;code&gt;core&lt;/code&gt; and &lt;code&gt;js_of_oc
 &lt;/ul&gt;
 
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam install core js_of_ocaml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam install core js_of_ocaml&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;OPAM will take care of the dependencies and the rest we can get on the day!&lt;/p&gt;
@@ -1676,8 +1666,7 @@ You might want to &lt;a href=&quot;http://amirchaudhry.com/thirty-days-of-ocaml/
 
 &lt;p&gt;I don't really want to install from source 'by hand' and I definitely don't need all the stuff that comes with GODI.  I happen to use &lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;Homebrew&lt;/a&gt; on my machine, so I checked to see if I can install that way.  Turns out I can, so that's what I ended up doing.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew install objective-caml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew install objective-caml&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;The current version of OCaml is 4.00.0 and you can check the version you have installed by typing &lt;code&gt;ocaml -version&lt;/code&gt; in your terminal.&lt;/p&gt;
@@ -1690,15 +1679,13 @@ You might want to &lt;a href=&quot;http://amirchaudhry.com/thirty-days-of-ocaml/
 
 &lt;p&gt;The first thing to do is get a &lt;a href=&quot;http://en.wikipedia.org/wiki/Hello_world_program&quot;&gt;hello world&lt;/a&gt; programme working.  Since OCaml is a compiled language, that means writing the necessary source code into a file, compiling it and then executing it.  In this case I only need one line that prints 'hello world' to the screen and I'm taking it from INRIA's site (&lt;a href=&quot;http://caml.inria.fr/pub/docs/u3-ocaml/ocaml-steps.html&quot;&gt;link&lt;/a&gt;).&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ocaml&quot;&gt;&lt;span class=&quot;n&quot;&gt;print_string&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello, world!&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ocaml&quot; data-lang=&quot;ocaml&quot;&gt;&lt;span class=&quot;n&quot;&gt;print_string&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello, world!&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Take the one line above and save it in a file called &lt;code&gt;hello.ml&lt;/code&gt;.  Now we need to compile that file using the OCaml compiler.  At the command prompt, type the following:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ocamlc -o hello hello.ml
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;./hello
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ocamlc -o hello hello.ml
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;./hello&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Since I don't really understand the first line I should break it down. &lt;code&gt;ocamlc&lt;/code&gt; is the command to invoke the compiler, the option &lt;code&gt;-o hello&lt;/code&gt; means you want to name the output executable to be (in this case) 'hello' and the final argument is the source code file.  It's useful to look at the man page for &lt;code&gt;ocamlc&lt;/code&gt; to see what other options are available.  The second line executes the programme, which prints hello world to the screen with a line-break.&lt;/p&gt;
@@ -1709,15 +1696,14 @@ You might want to &lt;a href=&quot;http://amirchaudhry.com/thirty-days-of-ocaml/
 
 &lt;p&gt;Even though OCaml is a compiled language, there's something called 'toplevel' that allows interactive use (more on &lt;a href=&quot;http://caml.inria.fr/pub/docs/manual-ocaml-4.00/manual023.html&quot;&gt;toplevel&lt;/a&gt;).  To enter this mode, you simply have to type &lt;code&gt;ocaml&lt;/code&gt; at the prompt so let's try running the above hello world program using toplevel.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;$ ocaml
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ ocaml
         OCaml version 4.00.0
 
 # print_string &amp;quot;Hello, world!\n&amp;quot;;;
 Hello, world!
 - : unit = ()
 # #quit;;
-$ 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+$&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;The &lt;code&gt;$&lt;/code&gt; prompt is the command line and the &lt;code&gt;#&lt;/code&gt; prompt is where toplevel is awaiting a new line of input.  The input can span multiple lines and is terminated by &lt;code&gt;;;&lt;/code&gt; (as in the source code).&lt;/p&gt;
@@ -2041,8 +2027,7 @@ $
 
 &lt;p&gt;I used &lt;a href=&quot;http://jekyllbootstrap.com&quot;&gt;Jekyll Bootstrap&lt;/a&gt; and the default &lt;a href=&quot;http://twitter.github.com/bootstrap/&quot;&gt;bootstrap theme&lt;/a&gt;. It was &lt;em&gt;ridiculously&lt;/em&gt; quick and easy to get a basic site up and start playing around.  The first thing I did was try to re-create structure of my old site and then worry about how it looked.  I'd never dealt with CSS before so this was always going to take a while. For example, it took me &lt;em&gt;ages&lt;/em&gt; to figure out why items kept shifting between pages. Turns out I needed the following line in my style file:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;overflow-y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;scroll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;overflow-y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;scroll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Although dealing with the CSS took a while, Bootstrap made it really easy to copy/paste/edit the bits I wanted to change.  The nav section was a pain to sort out.  It took a few weeks to get to this point but you're looking at a bootstrap site, which looks nothing like bootstrap (win!). It's likely that I'll keep tweaking things but I'm not expecting to do anything major.&lt;/p&gt;
@@ -2053,15 +2038,14 @@ $
 
 &lt;p&gt;Next step was to run all the html posts through &lt;a href=&quot;http://johnmacfarlane.net/pandoc&quot;&gt;pandoc&lt;/a&gt; to convert them to markdown. I wrote a fairly trivial shell script to do this.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; -e &lt;span class=&quot;s2&quot;&gt;&amp;quot;Files to convert to md? &amp;quot;&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; -a allfiles
 &lt;span class=&quot;c&quot;&gt;#args=(&amp;quot;$@&amp;quot;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;file in &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;allfiles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[*]&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;printf&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;   %s\n&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; file in &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;allfiles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[*]&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;printf&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;   %s\n&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt;
     pandoc -o ./convert/&lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt;.md &lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Then came the slow process of checking each file, removing the left-over html, adding the appropriate headers, dealing with image galleries etc.  Part of this could have been automated but I don't have that many posts so I went through them manually.&lt;/p&gt;

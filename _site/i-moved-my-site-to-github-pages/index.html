@@ -53,15 +53,15 @@
               
               
 
-           
+                 
 <li><a  href="http://amirchaudhry.com/">home</a></li>
-                               
+                 
 <li><a  href="http://amirchaudhry.com/journal">journal</a></li>
-                         
+                                     
 <li><a  href="http://amirchaudhry.com/freebusy">free/busy</a></li>
                        
 <li><a  href="http://amirchaudhry.com/about">about</a></li>
-                          
+                      
             </ul>
           </div> <!-- End Nav -->
         </div> <!-- End inset row -->
@@ -104,8 +104,7 @@
 
 <p>I used <a href="http://jekyllbootstrap.com">Jekyll Bootstrap</a> and the default <a href="http://twitter.github.com/bootstrap/">bootstrap theme</a>. It was <em>ridiculously</em> quick and easy to get a basic site up and start playing around.  The first thing I did was try to re-create structure of my old site and then worry about how it looked.  I'd never dealt with CSS before so this was always going to take a while. For example, it took me <em>ages</em> to figure out why items kept shifting between pages. Turns out I needed the following line in my style file:</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">html</span> <span class="p">{</span> <span class="k">overflow-y</span><span class="o">:</span> <span class="k">scroll</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">html</span> <span class="p">{</span> <span class="k">overflow-y</span><span class="o">:</span> <span class="k">scroll</span><span class="p">;</span> <span class="p">}</span></code></pre></div>
 
 
 <p>Although dealing with the CSS took a while, Bootstrap made it really easy to copy/paste/edit the bits I wanted to change.  The nav section was a pain to sort out.  It took a few weeks to get to this point but you're looking at a bootstrap site, which looks nothing like bootstrap (win!). It's likely that I'll keep tweaking things but I'm not expecting to do anything major.</p>
@@ -116,15 +115,14 @@
 
 <p>Next step was to run all the html posts through <a href="http://johnmacfarlane.net/pandoc">pandoc</a> to convert them to markdown. I wrote a fairly trivial shell script to do this.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="c">#!/bin/bash</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
 <span class="nb">echo</span> -e <span class="s2">&quot;Files to convert to md? &quot;</span>
 <span class="nb">read</span> -a allfiles
 <span class="c">#args=(&quot;$@&quot;)</span>
-<span class="k">for </span>file in <span class="k">${</span><span class="nv">allfiles</span><span class="p">[*]</span><span class="k">}</span><span class="p">;</span> <span class="k">do</span>
-<span class="k">    </span><span class="nb">printf</span> <span class="s2">&quot;   %s\n&quot;</span> <span class="nv">$file</span>
+<span class="k">for</span> file in <span class="k">${</span><span class="nv">allfiles</span><span class="p">[*]</span><span class="k">}</span><span class="p">;</span> <span class="k">do</span>
+    <span class="nb">printf</span> <span class="s2">&quot;   %s\n&quot;</span> <span class="nv">$file</span>
     pandoc -o ./convert/<span class="nv">$file</span>.md <span class="nv">$file</span>
-<span class="k">done</span>
-</code></pre></div>
+<span class="k">done</span></code></pre></div>
 
 
 <p>Then came the slow process of checking each file, removing the left-over html, adding the appropriate headers, dealing with image galleries etc.  Part of this could have been automated but I don't have that many posts so I went through them manually.</p>
@@ -194,8 +192,9 @@
     <div class="sidebar">
   <a href="/about/"><img src="/images/amc.png"/></a>
   <ul class="sidebar">
-    <li class="sidebar">Team at <a class="sidebar" href="/about/"> Nymote.org</a></li>
+    <li class="sidebar">Lead at <a class="sidebar" href="/about/"> Nymote.org</a></li>
     <li class="sidebar">Wrangler at <a class="sidebar" href="/about/"> OCaml Labs</a></li>
+    <li class="sidebar">Community at <a class="sidebar" href="/about/"> Mirage OS</a></li>
     <li class="sidebar">Post-doc at <a class="sidebar" href="/about/"> Computer Lab</a></li>
     <li class="sidebar">Member of <a class="sidebar" href="/about/">Darwin College</a></li>
     <li class="sidebar">Cofounder of <a class="sidebar" href="/about/"> Springboard</a></li>

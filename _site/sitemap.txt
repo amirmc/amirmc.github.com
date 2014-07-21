@@ -1,17 +1,17 @@
 
-http://amirchaudhry.com/about/index.html
 http://amirchaudhry.com/atom.xml
+http://amirchaudhry.com/journal/index.html
+http://amirchaudhry.com/about/index.html
+http://amirchaudhry.com/tags/index.html
 http://amirchaudhry.com/bio/index.html
 http://amirchaudhry.com/freebusy/index.html
+http://amirchaudhry.com/test/index.html
 http://amirchaudhry.com/index.html
-http://amirchaudhry.com/journal/index.html
-http://amirchaudhry.com/rss.xml
-http://amirchaudhry.com/sitemap.txt
-http://amirchaudhry.com/tags/index.html
 http://amirchaudhry.com/tags/ocaml-atom.xml
 http://amirchaudhry.com/tags/ocaml-labs-atom.xml
 http://amirchaudhry.com/tags/ocamllabs-atom.xml
-http://amirchaudhry.com/test/index.html
+http://amirchaudhry.com/rss.xml
+http://amirchaudhry.com/sitemap.txt
 
 http://amirchaudhry.com/writing-planet-in-pure-ocaml
 http://amirchaudhry.com/iot-brave-new-world-or-evolved-m2m

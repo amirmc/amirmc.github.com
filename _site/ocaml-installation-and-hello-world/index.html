@@ -53,15 +53,15 @@
               
               
 
-           
+                 
 <li><a  href="http://amirchaudhry.com/">home</a></li>
-                               
+                 
 <li><a  href="http://amirchaudhry.com/journal">journal</a></li>
-                         
+                                     
 <li><a  href="http://amirchaudhry.com/freebusy">free/busy</a></li>
                        
 <li><a  href="http://amirchaudhry.com/about">about</a></li>
-                          
+                      
             </ul>
           </div> <!-- End Nav -->
         </div> <!-- End inset row -->
@@ -93,8 +93,7 @@ You might want to <a href="http://amirchaudhry.com/thirty-days-of-ocaml/">start 
 
 <p>I don't really want to install from source 'by hand' and I definitely don't need all the stuff that comes with GODI.  I happen to use <a href="http://mxcl.github.com/homebrew/">Homebrew</a> on my machine, so I checked to see if I can install that way.  Turns out I can, so that's what I ended up doing.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>brew install objective-caml
-</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>brew install objective-caml</code></pre></div>
 
 
 <p>The current version of OCaml is 4.00.0 and you can check the version you have installed by typing <code>ocaml -version</code> in your terminal.</p>
@@ -107,15 +106,13 @@ You might want to <a href="http://amirchaudhry.com/thirty-days-of-ocaml/">start 
 
 <p>The first thing to do is get a <a href="http://en.wikipedia.org/wiki/Hello_world_program">hello world</a> programme working.  Since OCaml is a compiled language, that means writing the necessary source code into a file, compiling it and then executing it.  In this case I only need one line that prints 'hello world' to the screen and I'm taking it from INRIA's site (<a href="http://caml.inria.fr/pub/docs/u3-ocaml/ocaml-steps.html">link</a>).</p>
 
-<div class="highlight"><pre><code class="ocaml"><span class="n">print_string</span> <span class="s2">&quot;Hello, world!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">;;</span>
-</code></pre></div>
+<div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="n">print_string</span> <span class="s2">&quot;Hello, world!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">;;</span></code></pre></div>
 
 
 <p>Take the one line above and save it in a file called <code>hello.ml</code>.  Now we need to compile that file using the OCaml compiler.  At the command prompt, type the following:</p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>ocamlc -o hello hello.ml
-<span class="nv">$ </span>./hello
-</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>ocamlc -o hello hello.ml
+<span class="nv">$ </span>./hello</code></pre></div>
 
 
 <p>Since I don't really understand the first line I should break it down. <code>ocamlc</code> is the command to invoke the compiler, the option <code>-o hello</code> means you want to name the output executable to be (in this case) 'hello' and the final argument is the source code file.  It's useful to look at the man page for <code>ocamlc</code> to see what other options are available.  The second line executes the programme, which prints hello world to the screen with a line-break.</p>
@@ -126,15 +123,14 @@ You might want to <a href="http://amirchaudhry.com/thirty-days-of-ocaml/">start 
 
 <p>Even though OCaml is a compiled language, there's something called 'toplevel' that allows interactive use (more on <a href="http://caml.inria.fr/pub/docs/manual-ocaml-4.00/manual023.html">toplevel</a>).  To enter this mode, you simply have to type <code>ocaml</code> at the prompt so let's try running the above hello world program using toplevel.</p>
 
-<div class="highlight"><pre><code class="text">$ ocaml
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ ocaml
         OCaml version 4.00.0
 
 # print_string &quot;Hello, world!\n&quot;;;
 Hello, world!
 - : unit = ()
 # #quit;;
-$ 
-</code></pre></div>
+$</code></pre></div>
 
 
 <p>The <code>$</code> prompt is the command line and the <code>#</code> prompt is where toplevel is awaiting a new line of input.  The input can span multiple lines and is terminated by <code>;;</code> (as in the source code).</p>
@@ -209,8 +205,9 @@ $
     <div class="sidebar">
   <a href="/about/"><img src="/images/amc.png"/></a>
   <ul class="sidebar">
-    <li class="sidebar">Team at <a class="sidebar" href="/about/"> Nymote.org</a></li>
+    <li class="sidebar">Lead at <a class="sidebar" href="/about/"> Nymote.org</a></li>
     <li class="sidebar">Wrangler at <a class="sidebar" href="/about/"> OCaml Labs</a></li>
+    <li class="sidebar">Community at <a class="sidebar" href="/about/"> Mirage OS</a></li>
     <li class="sidebar">Post-doc at <a class="sidebar" href="/about/"> Computer Lab</a></li>
     <li class="sidebar">Member of <a class="sidebar" href="/about/">Darwin College</a></li>
     <li class="sidebar">Cofounder of <a class="sidebar" href="/about/"> Springboard</a></li>
