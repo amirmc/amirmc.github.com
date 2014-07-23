@@ -5,10 +5,443 @@
         <description>Amir Chaudhry - Amir Chaudhry</description>
         <link>http://amirchaudhry.com</link>
         <link>http://amirchaudhry.com</link>
-        <lastBuildDate>2014-07-22T10:52:53+01:00</lastBuildDate>
-        <pubDate>2014-07-22T10:52:53+01:00</pubDate>
+        <lastBuildDate>2014-07-23T15:13:14+01:00</lastBuildDate>
+        <pubDate>2014-07-23T15:13:14+01:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Winning Seedhack 5.0</title>
+                <description>
+
+&lt;p class=&quot;footnote&quot;&gt;[This story was also a
+    &lt;a href=&quot;http://seedcamp.com/seedhack-5-0/&quot;&gt;guest post&lt;/a&gt;
+    on the &lt;a href=&quot;http://seedcamp.com&quot;&gt;Seedcamp&lt;/a&gt; blog.]&lt;/p&gt;
+
+
+&lt;p&gt;A couple of weeks ago, I took part in &lt;a href=&quot;http://seedhack.com&quot;&gt;Seedhack 5.0&lt;/a&gt;, on the theme
+of life-logging. My team were overall winners with Clarity, our calendar
+assistant app. This post captures my experiences of what happened over the
+weekend, the process of how we built the app and the main things I learned.
+You'll find out what Clarity is at the end -- just like we did.&lt;/p&gt;
+
+&lt;h3&gt;Meeting people and pitches on Friday&lt;/h3&gt;
+
+&lt;p&gt;The weekend began with some information on the APIs available to us, which
+was followed by pizza and mingling with everyone. I spoke to a few people
+about what they were working on and the technologies they were used to. It
+was good to find a mixture of experience and I was specifically looking for
+folks with an interest in functional programming -- that's how I first met
+Vlad over Twitter.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/vla_ve/statuses/485083697172185088&quot;&gt;&lt;img src=&quot;http://amirchaudhry.com/images/seedhack2014/seedhack2014-1.jpg&quot; alt=&quot;Tweets with Vlad&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;After pizza, those people with ideas, even if not fully formed, were invited
+to share them with the room. I came in to Seedhack with specific thoughts on
+the kind of things I wanted to work on so I spoke about one of those.&lt;/p&gt;
+
+&lt;h3&gt;Pitching Personal Clouds&lt;/h3&gt;
+
+&lt;p&gt;I described the problem of silos, poor interoperability and how all the
+life-logging data should really be owned by the user. That would allow third
+parties to request access and provide way more value to users, while
+maintaining privacy and security. Building a centralised service makes a lot
+of sense in the first instance but what's more disruptive than eschewing the
+current model of yet-another-silo and putting the user in control? If that
+sounds familiar, it's because I'm trying to solve these problems already.&lt;/p&gt;
+
+&lt;p&gt;I'm working on a open source toolstack for building distributed systems that
+I call the MISO stack, which is analogous to the LAMP stack of old but
+is based on &lt;a href=&quot;http://openmirage.org&quot;&gt;Mirage OS&lt;/a&gt;.  With this stack, I'm putting together a
+system to help people create and run their own little piece of the cloud
+-- &lt;a href=&quot;http://nymote.org&quot;&gt;Nymote&lt;/a&gt;. The &lt;a href=&quot;http://nymote.org/blog/2013/introducing-nymote/&quot;&gt;introductory post&lt;/a&gt; and my post on
+'&lt;a href=&quot;http://amirchaudhry.com/working-on-the-internet-of-my-things/&quot;&gt;The Internet of &lt;em&gt;my&lt;/em&gt; Things&lt;/a&gt;' has more detail on why I'm working
+on this.&lt;/p&gt;
+
+&lt;p&gt;For systems like this to be viable, we must be willing to trust them with
+the core applications of Email, Contacts and Calendar. Without advanced and
+robust options for running these, it's unlikely that anyone (including me)
+would want to switch away from the current providers. Of these three
+applications, I decided to talk about the contact management solution, since
+I happen to have wireframes and thought it might be simpler to implement
+something over the weekend.&lt;/p&gt;
+
+&lt;!--
+Some readers may not be convinced but I like to recall a 1977 quote by Ken
+Olsen, Cofounder and CEO of Digital Equipment Corp., who said *&quot;[There is no
+reason for any individual to have a computer in his home][olsen].&quot;* We now
+carry computers in our pockets (see footnote), so it's perfectly reasonable
+to me that we'll all have our own clouds one day.
+--&gt;
+
+
+&lt;p&gt;There was quite a bit of interest in the overall concept but what really
+piqued my curiosity was that someone else presented some thoughts around
+Calendars and analytics. After a brief chat, we decided to join forces and
+tackle the problems of Calendar management. The team had a great mix of
+experience from product to design and several of them had worked together
+before.&lt;/p&gt;
+
+&lt;h3&gt;The Clarity Team&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://amirchaudhry.com&quot;&gt;Amir&lt;/a&gt; - &lt;em&gt;Product&lt;/em&gt; - Worked in several startups, product &amp;amp; programme management experience, currently a Post Doc at Cambridge University Computer Science dept.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://twitter.com/rivertam57&quot;&gt;River&lt;/a&gt; - &lt;em&gt;Product&lt;/em&gt; - Programme Manager at Dotforge Accelerator and lead organiser of StartupBus UK 2014.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://msingh.co&quot;&gt;Mani&lt;/a&gt; - &lt;em&gt;Developer&lt;/em&gt; - Freelance web dev (CMS and APIs), winner of multiple hackathons, currently studying at Sheffield University.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://vladvelici.github.io&quot;&gt;Vlad&lt;/a&gt; - &lt;em&gt;Developer&lt;/em&gt; - Started programming long ago and attended many competitions and hackathons. Currently studying Computer Science at the University of Southampton.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://linkedin.com/in/joaoaparicio&quot;&gt;João&lt;/a&gt; - &lt;em&gt;Developer&lt;/em&gt; - PhD in Theoretical Physics, Python enthusiast and moving into data science, currently doing data analysis at Potential.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jchui.me&quot;&gt;Jeremy&lt;/a&gt; - &lt;em&gt;Designer&lt;/em&gt; - Freelance UI/UX Designer, hackathon enthusiast, currently studying medicine at Sheffield University.&lt;/p&gt;
+
+&lt;h3&gt;Thick fog and ambiguity on Friday evening&lt;/h3&gt;
+
+&lt;p&gt;We had all decided to work together and we knew it would be on the problem
+of calendar management and analytics. We were fired up but it quickly became
+obvious that was &lt;em&gt;all&lt;/em&gt; we knew.&lt;/p&gt;
+
+&lt;p&gt;The next four to five &lt;em&gt;hours&lt;/em&gt; were spent discussing the rough shape of what
+we were going to build, what specific problem we thought we were solving and
+whether there were enough people with such a problem to care.&lt;/p&gt;
+
+&lt;p&gt;We had a look at each other's calendars and talked about how we each use
+them and the things we like and dislike about them. For example, I have
+around nine calendars and I curate them carefully, adding contextual
+information and sometimes even correcting old events to reflect what
+happened. We even bounced around the idea of the contact management app
+several times as well as a few other ideas that came up during the
+discussions.&lt;/p&gt;
+
+&lt;p&gt;These conversations took a while and it seemed like we were going around in
+circles. Despite this, it didn't feel particularly frustrating. I realised
+that the same sticking point was coming up repeatedly because we were
+forcing ourselves to imagine a prototypical customer and the problems &lt;em&gt;they&lt;/em&gt;
+might have. This was never going to work since we wouldn't have time to go
+and find such people and do basic customer development. Far better to
+constrain the problem to something &lt;em&gt;we&lt;/em&gt; experience so that we can look to
+ourselves for initial customer feedback.  Once we did this, things seemed to
+go a little faster and taking breaks for food helped us keep our energy up.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/inthecompanyof/status/485463322020839424&quot;&gt;&lt;img src=&quot;http://amirchaudhry.com/images/seedhack2014/seedhack2014-2.jpg&quot; alt=&quot;Mani grabbing falafel for dinner&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;There were a few occasions where I looked around the room and saw other
+teams with their heads down, headphones in, and bashing away at keyboards
+-- we hadn't even figured out what we were doing yet.
+Despite this, it was a great exercise because it allowed all of us to get a
+feel for what aspects each of us cared about most and it helped us form some
+kind of shared language for the product.&lt;/p&gt;
+
+&lt;p&gt;The only outcome from this first evening was an outline but it was an
+important one. It distilled what we what we were going to work on and the
+components of it. We did this so we'd have a clear starting point the next
+morning and could get going quickly.  Here's a paraphrased version of what
+we sent ourselves.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;Smart Calendar App.
+
+We are collecting data from mobile and from desktop. 
+- Mobile includes:
+  - Call logs
+  - Location (if we can)
+  - Messages
+  - What application is being used and when
+- Desktop includes:
+  - What application is active and timestamps of it
+  - Location?
+  - Git Logs ... ?
+  - Taking logs of their existing calendars.
+
+Working out what people are doing.
+- Extrapolating info from active application (e.g browser page)
+
+Present info back via calendar UI
+- Need to turn all this information into webcal events
+
+Useful info we want
+- Time spent travelling (how much?)
+- Time in meetings 
+- Time on phone
+- Who the meetings/calls were with
+- Relevant docs/emails these are linked with
+- Use labels
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then it was time for some late night snacks.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/nicolagreco/status/485201493633826818&quot;&gt;&lt;img src=&quot;http://amirchaudhry.com/images/seedhack2014/seedhack2014-3.jpg&quot; alt=&quot;Midnight snacks&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;With one challenge out of the way, the next one was finding somewhere to
+sleep for a few hours (Campus was closing from 01:30). I had nothing planned
+but luckily for me, a couple of team members had booked a hotel room for the
+night. The minor complication was that we had to first find the hotel and
+then somehow get six people into a room meant for two -- without the night
+manager kicking us out. That's a whole other story, but it suffices to say
+that James Bond has nothing to worry about.&lt;/p&gt;
+
+&lt;h3&gt;Rays of light and clearing haze on Saturday&lt;/h3&gt;
+
+&lt;p&gt;After some card games and a few hours of sleep, we headed back to Campus and
+during this walk, we came up with 'Clarity' as the name of the application.&lt;/p&gt;
+
+&lt;p&gt;Once we arrived, development began. River volunteered his digital
+assets to the cause (i.e. his whole Google life). Mani worked on the Android
+app, Vlad on a Chrome extension with Joao pulling in the Google Apps data as
+well as combining it with data from the various platform apps. Jeremy worked
+on the front-end of the site, while River and I began wireframing the UI and
+user flow through the site.&lt;/p&gt;
+
+&lt;p&gt;Once the development was well underway, I realised how superfluous 'the
+business guys' can be. It would have been easy to simply sit there and let
+everyone get on with it but there were other things River and I did while
+developers were writing code.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Wireframing&lt;/em&gt; - We spent time thinking about what a user would actually see
+and engage with once they visited the Clarity site. We made a lot of
+sketches on paper and this was helpful because communication with the team
+was smoother with something to guide the discussion. It also helped to
+inform the design work and gave River and I something to show to potential
+users.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Talk to people&lt;/em&gt; - aka early customer development. We already knew that we
+were our own customers but it was useful to talk to other people for two
+reasons. Firstly, to get an idea of how they use their calendars and whether
+they have similar problems to us and secondly, to see what thoughts we
+prompt when we describe our solution (or show our wireframes). This led to
+useful information on how we should refine the product and and position
+ourselves against perceived competition.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Refine the product&lt;/em&gt; - Going through the wireframing and talking to people
+helped us come up with several new ideas for how to display the data back to
+users. Some of these seemed great at the time, but after showing some paper
+sketches to other people, we realised customers didn't care about certain
+things, so we discarded them. Even though Jeremy had already done the work of
+putting together the UI for them (sorry, Jeremy!).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Examine the competition&lt;/em&gt; - After we described what we were working on. A
+few people mentioned potential competitors and asked how we were different.
+Initially, we didn't know much about these companies but it was something we
+could explore while development was underway and consider our positioning.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Remind people to regroup&lt;/em&gt; - Every few hours, we would make sure everyone
+caught up with each other.  We would check that things were going well, share
+what we'd learned from talking to people and discuss any technical problems
+and possible workarounds -- including changing the scope of the product. The
+discussions we'd had on Friday meant that we spent less time debating when
+these questions came up during the weekend.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Work on the pitch&lt;/em&gt; - River and I began working on the pitch from just after
+Saturday lunchtime and kept building on it until Sunday afternoon. This,
+combined with showing our sketches to people, made it much easier to think
+about the story we wanted to tell the audience. In turn, that made it easier
+to think about the product development that &lt;em&gt;had&lt;/em&gt; to be completed by Sunday.
+Especially in terms of a kick-ass demo.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/mindeedly/status/485502064437780480&quot;&gt;&lt;img src=&quot;http://amirchaudhry.com/images/seedhack2014/seedhack2014-4.jpg&quot; alt=&quot;Popcorn and candyfloss&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Bright sunshine and achieving Clarity on Sunday afternoon&lt;/h3&gt;
+
+&lt;p&gt;Development carried on through the night and we took a break to watch some
+sports via River's laptop -- at this point Clarity was actually logging this
+and other events.
+The next morning, we reiterated what we needed to
+get done for the demo and I was pretty ruthless about practising the pitch.
+River and I practised endlessly while everyone else made sure the the
+technical pieces were working smoothly. We had a lot of moving parts and
+making sure they were glued together seamlessly was important.
+At this point, we knew what Clarity was and how to tell its story.&lt;/p&gt;
+
+&lt;h3&gt;Introducing Clarity&lt;/h3&gt;
+
+&lt;p&gt;We all have calendars and we put a lot of time and effort into managing them
+but get very little back. A simple glance at your calendar for the past
+month will show you a sea of information with no idea where your time was
+actually spent. We believe your calendar should be working harder for you.
+Your calendar should give you clarity.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://amirchaudhry.com/images/seedhack2014/seedhack2014-5.jpg&quot; alt=&quot;Calendar&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Over the course of the weekend, we built tools that can go through your
+calendar and understand the events you're involved in and tie them back to
+the relevant emails, documents and people.  With a suite of software that
+spans across your GDrive, Chrome and Android, we're able to combine your
+calendars with rich, contextual information so you can really understand
+what your time is being spent on.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://clarityapp.me&quot;&gt;&lt;img src=&quot;http://amirchaudhry.com/images/seedhack2014/seedhack2014-6.jpg&quot; alt=&quot;Clarity summary view&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We built this system and plugged it into River's digital life.
+If we take a look at River's summary for the last month, we see that he's
+spent around 32 hours in meetings in London last month, despite living in
+Sheffield. We can also see that he's spent an hour on the phone with someone
+called Lee, but that all of them were short calls. The next person also
+totalled an hour on the phone but only across 3 calls.  Already, River has
+learned something about the the people he interacts with most and how. We
+can also drill down further and see all this activity presented in a
+calendar view, except this now represents where his time &lt;em&gt;did&lt;/em&gt; go, rather
+than where he thought it went. For example, he's most active via text
+message between 4pm and 5pm during the week, and we can see that he spent
+a few hours watching sports last night.&lt;/p&gt;
+
+&lt;p&gt;Clarity can do much more than provide an accurate retrospective view of your
+time. Since it interacts with all the important components of your life,
+like your phone and laptop, it can even perform helpful actions for you.
+For example, say I have a meeting set up with River but I want to reschedule
+it. I simply send a text to him as I normally would, suggesting that we move
+it to another day. Clarity can pick up that message and is smart enough to
+understand its intent, find the relevant calendar event and &lt;em&gt;reschedule
+it automatically&lt;/em&gt;. River doesn't have to lift a finger and his diary is
+always up to date. It's easy to imagine a future where we might never have
+to add or edit events ourselves.&lt;/p&gt;
+
+&lt;p&gt;Clarity is a smart calendar assistant that understands the context around
+you, provides you with insight into your life and helps you seamlessly
+organise your future. You can find out more at
+&lt;a href=&quot;http://clarityapp.me&quot;&gt;http://clarityapp.me&lt;/a&gt;&lt;/p&gt;
+
+&lt;script async class=&quot;speakerdeck-embed&quot; data-id=&quot;c88770b0ef1801315b3b2e79871312e8&quot; data-ratio=&quot;1.41436464088398&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;
+
+
+&lt;h3&gt;Judging and announcements&lt;/h3&gt;
+
+&lt;p&gt;After the pitches, we met a lot of people who had the same problems as we
+did with calendar management. Several offered to be beta testers. After
+waiting for the judges, prizes were announced and Clarity was declared the
+overall winner of Seedhack 5.0!&lt;/p&gt;
+
+&lt;div class=&quot;gallery&quot;&gt;
+  &lt;noscript&gt;&lt;small&gt;&lt;em&gt;Note: The gallery needs JavaScript but I've tried to make it degrade gracefully. -Amir&lt;/em&gt;&lt;/small&gt;&lt;/noscript&gt;
+  &lt;ul class=&quot;inline-list&quot;&gt;
+    
+      &lt;li&gt;&lt;a data-orbit-link=&quot;seedhack2014-win-1&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-thumb-1.png&quot; alt=&quot;seedhack2014-win-thumb-1&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    
+      &lt;li&gt;&lt;a data-orbit-link=&quot;seedhack2014-win-2&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-thumb-2.png&quot; alt=&quot;seedhack2014-win-thumb-2&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    
+      &lt;li&gt;&lt;a data-orbit-link=&quot;seedhack2014-win-3&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-thumb-3.png&quot; alt=&quot;seedhack2014-win-thumb-3&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    
+      &lt;li&gt;&lt;a data-orbit-link=&quot;seedhack2014-win-4&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-thumb-4.png&quot; alt=&quot;seedhack2014-win-thumb-4&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    
+      &lt;li&gt;&lt;a data-orbit-link=&quot;seedhack2014-win-5&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-thumb-5.png&quot; alt=&quot;seedhack2014-win-thumb-5&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    
+      &lt;li&gt;&lt;a data-orbit-link=&quot;seedhack2014-win-6&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-thumb-6.png&quot; alt=&quot;seedhack2014-win-thumb-6&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    
+      &lt;li&gt;&lt;a data-orbit-link=&quot;seedhack2014-win-7&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-thumb-7.png&quot; alt=&quot;seedhack2014-win-thumb-7&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    
+      &lt;li&gt;&lt;a data-orbit-link=&quot;seedhack2014-win-8&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-thumb-8.png&quot; alt=&quot;seedhack2014-win-thumb-8&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    
+      &lt;li&gt;&lt;a data-orbit-link=&quot;seedhack2014-win-9&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-thumb-9.png&quot; alt=&quot;seedhack2014-win-thumb-9&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    
+      &lt;li&gt;&lt;a data-orbit-link=&quot;seedhack2014-win-10&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-thumb-10.png&quot; alt=&quot;seedhack2014-win-thumb-10&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    
+      &lt;li&gt;&lt;a data-orbit-link=&quot;seedhack2014-win-11&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-thumb-11.png&quot; alt=&quot;seedhack2014-win-thumb-11&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+    
+  &lt;/ul&gt;
+  &lt;ul data-orbit data-options=&quot;next_on_click:true; timer_speed:3000; pause_on_hover:false; bullets:false;&quot;&gt;
+    
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;seedhack2014-win-1&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-1.jpg&quot; alt=&quot;seedhack2014-win-1&quot;&gt;&lt;/li&gt;
+    
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;seedhack2014-win-2&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-2.jpg&quot; alt=&quot;seedhack2014-win-2&quot;&gt;&lt;/li&gt;
+    
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;seedhack2014-win-3&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-3.jpg&quot; alt=&quot;seedhack2014-win-3&quot;&gt;&lt;/li&gt;
+    
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;seedhack2014-win-4&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-4.jpg&quot; alt=&quot;seedhack2014-win-4&quot;&gt;&lt;/li&gt;
+    
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;seedhack2014-win-5&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-5.jpg&quot; alt=&quot;seedhack2014-win-5&quot;&gt;&lt;/li&gt;
+    
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;seedhack2014-win-6&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-6.jpg&quot; alt=&quot;seedhack2014-win-6&quot;&gt;&lt;/li&gt;
+    
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;seedhack2014-win-7&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-7.jpg&quot; alt=&quot;seedhack2014-win-7&quot;&gt;&lt;/li&gt;
+    
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;seedhack2014-win-8&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-8.jpg&quot; alt=&quot;seedhack2014-win-8&quot;&gt;&lt;/li&gt;
+    
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;seedhack2014-win-9&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-9.jpg&quot; alt=&quot;seedhack2014-win-9&quot;&gt;&lt;/li&gt;
+    
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;seedhack2014-win-10&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-10.jpg&quot; alt=&quot;seedhack2014-win-10&quot;&gt;&lt;/li&gt;
+    
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;seedhack2014-win-11&quot;&gt;&lt;img src=&quot;/images/seedhack2014-win/seedhack2014-win-11.jpg&quot; alt=&quot;seedhack2014-win-11&quot;&gt;&lt;/li&gt;
+    
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+
+&lt;h3&gt;Things I learned&lt;/h3&gt;
+
+&lt;p&gt;Looking back, there were a lot of things we did which I think
+helped us get to the winning slot, so I thought I'd summarise them here.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Think first&lt;/strong&gt; - We spent time up front to &lt;em&gt;define&lt;/em&gt; what we were
+going to work on. I thought this step was crucial as it meant we all
+understood the shape of the problem but also the areas that each of us were
+interested in.  That helped later in the weekend as we could refer back to
+things we discussed on Friday.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Move fast&lt;/strong&gt; - Once we did figure out what we were doing, then it was a
+matter of building the software to gather and crunch the data. A lot of this
+was done in parallel as Jeremy worked on the front-end UI while Mani, Joao
+and Vlad took care of the data aggregation, analytics and platform products.
+Don't be afraid to throw away ideas if you find that they don't work for
+people and remember it's a &lt;em&gt;hackathon&lt;/em&gt; (i.e gruesome hacks are the norm).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Remember the demo&lt;/strong&gt; - At some point you're going to be forced to stand up
+and talk about what you've done. We started thinking about this from
+Saturday lunchtime and sketched out the slides and the elements of the app
+we wanted to show. This helped inform the UI and technology that we were
+building and the pitch never felt like it was rushed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Practice, practice, practice&lt;/strong&gt; - we were told we'd have 3 minutes to
+pitch/demo and maybe a few additional questions. I made sure River and I
+practised &lt;em&gt;repeatedly&lt;/em&gt; to get our time down to 3mins and ensure we getting
+across everything we wanted to.  The important thing with such a
+short amount of time, is that we were forced to &lt;em&gt;cut&lt;/em&gt; things out as well as
+ensure we emphasised the main points. It was a ruthless exercise in saying
+'no'. During the actual pitches, we realised everyone was taking longer
+(without repercussions), so I added an extra 30 seconds to cover the
+potential market sizes and business models.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Leave artefacts&lt;/strong&gt; - After the pitches, we knew that we had to take the
+site down. It was built at high speed and in a way that ended up exposing
+someone's data to the internet at large (thanks, River!). It might have
+been somewhat easier to build something using faked data that we could
+happily share the URL to and leave online.  On the other hand, our demo
+would not have been half as compelling if we weren't running it real-time
+on live data.&lt;/p&gt;
+
+&lt;h3&gt;Looking to the future&lt;/h3&gt;
+
+&lt;p&gt;This is a product we all want to use and the team is interested in taking
+this forward. There are a lot of things to think about and many
+things we would build differently so we're discussing the next steps. For
+example, there are likely ways to empower the end-users to control their
+data and give them more flexibility, even though the work at the hackathon
+was already quite impressive. Given how well Seedhack went, you might even
+see us at &lt;a href=&quot;http://seedcamp.com/events/seedcamp-week-london/&quot;&gt;Seedcamp Week&lt;/a&gt; later in the year. If you think this is
+something you'd like to work on with us,
+&lt;a href=&quot;mailto:amirmc+clarity@gmail.com&quot;&gt;do get in touch&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;To wrap things up, here's a victory selfie!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/RiverTam57/status/485821694037458944&quot;&gt;&lt;img src=&quot;http://amirchaudhry.com/images/seedhack2014/seedhack2014-7.jpg&quot; alt=&quot;Victory Selfie&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- 
+****
+
+&lt;p class=&quot;footnote&quot;&gt;**Footnote: It's worth reading the
+&lt;a href=&quot;http://www.snopes.com/quotes/kenolsen.asp&quot;&gt;linked article&lt;/a&gt; as
+the quote is usually taken out of context -- did you notice that I'm guilty
+of that too? :). Ken actually &lt;strong&gt;did&lt;/strong&gt; understand the value of
+PCs and having them at home. What he was disputing was that we would have
+computers everywhere that would be running our lives. There's delicious
+irony here because that is &lt;strong&gt;exactly&lt;/strong&gt; the promise of the
+Internet of Things and 'Big Data'. Systems that know us better than we know
+ourselves.&lt;/p&gt;
+--&gt;
+
+</description>
+                <link>http://amirchaudhry.com/winning-seedhack-5-2014</link>
+                <guid>http://amirchaudhry.com/winning-seedhack-5-2014</guid>
+                <pubDate>2014-07-23T13:00:00+01:00</pubDate>
+        </item>
 
         <item>
                 <title>Writing Planet in pure OCaml</title>
