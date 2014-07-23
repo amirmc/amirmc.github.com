@@ -11,6 +11,10 @@ shorturl: http://bit.ly/1wSm6C7
 ---
 {% include JB/setup %}
 
+<p class="footnote">[This story was also a
+    <a href="http://seedcamp.com/seedhack-5-0/">guest post</a>
+    on the <a href="http://seedcamp.com">Seedcamp</a> blog.]</p>
+
 A couple of weeks ago, I took part in [Seedhack 5.0][seedhack], on the theme
 of life-logging. My team were overall winners with Clarity, our calendar
 assistant app. This post captures my experiences of what happened over the
@@ -368,7 +372,7 @@ potential market sizes and business models.
 
 **Leave artefacts** - After the pitches, we knew that we had to take the
 site down. It was built at high speed and in a way that ended up exposing
-someone's data to the internet at large (thanks, River!). It might have have
+someone's data to the internet at large (thanks, River!). It might have
 been somewhat easier to build something using faked data that we could
 happily share the URL to and leave online.  On the other hand, our demo
 would not have been half as compelling if we weren't running it real-time
