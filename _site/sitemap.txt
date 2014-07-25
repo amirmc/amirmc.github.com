@@ -13,6 +13,7 @@ http://amirchaudhry.com/tags/ocamllabs-atom.xml
 http://amirchaudhry.com/rss.xml
 http://amirchaudhry.com/sitemap.txt
 
+http://amirchaudhry.com/describing-miso-entrepreneur-first-2014
 http://amirchaudhry.com/winning-seedhack-5-2014
 http://amirchaudhry.com/writing-planet-in-pure-ocaml
 http://amirchaudhry.com/iot-brave-new-world-or-evolved-m2m
