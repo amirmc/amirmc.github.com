@@ -41,6 +41,8 @@ Advisor at [CU Entrepreneurs][]
 
 PhD in [Neuroscience at Cambridge University][cam-neuro]
 
+MSci in [Physics at Imperial College][ic-physics]
+
 [Cambridge Computer Lab]: http://www.cl.cam.ac.uk
 [OCaml Labs]: http://www.cl.cam.ac.uk/projects/ocamllabs/
 [CU Entrepreneurs]: http://www.cue.org.uk
@@ -51,6 +53,7 @@ PhD in [Neuroscience at Cambridge University][cam-neuro]
 [SVc2UK]: http://svc2uk.com
 [CTC]: http://www.temperatureconcepts.com
 [cam-neuro]: http://www.neuroscience.cam.ac.uk
+[ic-physics]: http://www3.imperial.ac.uk/physics/
 
 #### Where to find me
 
