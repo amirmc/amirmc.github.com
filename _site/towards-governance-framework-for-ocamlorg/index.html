@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Towards a governance framework for OCaml.org | Amir Chaudhry</title>
+    
+    <meta name="author" content="Amir Chaudhry">
+
+    <!-- Style sheets for Zurb Foundation v5 -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/normalize.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/foundation.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/code.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/style.css">
+
+    <link rel="shortcut icon" href="/icons/favicon.png" />
+    <link rel="icon" href="/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/amirmc" title="amirchaudhry.com" />
+    <!-- <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed"> -->
+    
+    <script src="/assets/themes/zurb/js/vendor/custom.modernizr.js"></script>  
+  </head>
+
+  <body>
+    <!-- Crazy nesting just to match post alignment -->
+    <div class="row">
+      <div class="medium-9 columns">
+        <div class="row">
+          <!-- Title -->
+          <div class="medium-9 medium-offset-3 columns">
+            <h1 class="head-title"><a class="head-title" href="http://amirchaudhry.com">Amir Chaudhry</a> <br /></h1>
+            <h3><small>thoughts, comments &amp; general ramblings</small></h3>
+          </div> <!-- End Title -->
+          <!-- Navigation -->
+          <div class="medium-9 medium-offset-3 columns">
+            <ul class="inline-list head-nav">
+              
+              
+              
+
+                 
+<li><a  href="http://amirchaudhry.com/">home</a></li>
+                 
+<li><a  href="http://amirchaudhry.com/journal">journal</a></li>
+                                     
+<li><a  href="http://amirchaudhry.com/freebusy">free/busy</a></li>
+                       
+<li><a  href="http://amirchaudhry.com/about">about</a></li>
+                      
+            </ul>
+          </div> <!-- End Nav -->
+        </div> <!-- End inset row -->
+      </div> <!-- End 9 column section -->
+    </div> <!-- End inset row -->
+
+    
+<div class="row">
+  <div class="medium-9 columns">
+
+    <div class="row">
+      <div class="medium-3 columns">
+        <h5 class="post-date" align="right"> 8 January 2015</h5>
+      </div>
+      <div class="medium-9 columns">
+        <h2><a class="post-title" href="/towards-governance-framework-for-ocamlorg">Towards a governance framework for OCaml.org</a></h2>
+        <!-- <br /> -->
+        <p>The projects around the OCaml.org domain name are becoming more established
+and it's time to think about how they're organised. 2014 saw a <em>lot</em> of
+activity, which built on the <a href="http://www.cl.cam.ac.uk/projects/ocamllabs/news/index.html#OnlineatOCamlorg">successes from 2013</a>.
+Some of the main things that stand out to me are:</p>
+
+<ul>
+<li>More <a href="http://ocaml.org/contributors.html">volunteers</a> contributing to the public website with
+translations, bug fixes and content updates, as well as many new visitors —
+for example, the new page on <a href="http://ocaml.org/learn/teaching-ocaml.html">teaching OCaml</a> received over 5k
+visits alone. The increasing contributions are a result of the earlier work on
+<a href="http://amirchaudhry.com/announcing-new-ocamlorg/">re-engineering the site</a> and there are many ways to get involved
+so please do <a href="https://github.com/ocaml/ocaml.org/labels/contribute%21">contribute</a>!</li>
+</ul>
+
+
+<p><a href="http://opam.ocaml.org/"><img style="float: right; margin-left: 10px" src="http://amirchaudhry.com/images/web/opampkg-2015-01-08.png"></a></p>
+
+<ul>
+<li><p>The relentless improvements and growth of OPAM, both in terms of the
+repository — with over 1000 additional packages and several
+<a href="http://lists.ocaml.org/pipermail/opam-devel/2014-October/000781.html">new repo maintainers</a> — and also improved workflows (e.g the new
+<a href="http://opam.ocaml.org/blog/opam-1-2-pin/">pin functionality</a>).
+The OPAM site and package list also moved to the ocaml.org domain, becoming
+the substrate for the OCaml Platform efforts. This began with the work towards
+<a href="http://opam.ocaml.org/blog/opam-1-2-0-beta4/">OPAM 1.2</a> and there is much more to come (including closer
+integration in terms of styling). Join the <a href="http://lists.ocaml.org/listinfo/platform">Platform list</a> to
+keep up to date.</p></li>
+<li><p>Much more activity on the <a href="http://lists.ocaml.org">mailing lists</a> in general and user groups
+requesting to have lists made (e.g the <a href="http://lists.ocaml.org/listinfo/teaching">teaching list</a>). If anyone
+has a need for a new list, just ask on the
+<a href="http://lists.ocaml.org/listinfo/infrastructure">infrastructure list</a>!</p></li>
+</ul>
+
+
+<p>There is other work besides those I've mentioned and I think by any measure,
+all the projects have been quite successful. As the community continues to
+develop, it's important to clarify how things currently work to improve the
+level of transparency and make it easier for newcomers to get involved.</p>
+
+<h3>Factors for a governance framework</h3>
+
+<p>For the last couple of months, I've been looking over how larger projects
+manage themselves and the governance documents that are available. My aim has
+been to put such a document together for the OCaml.org domain without
+introducing burdensome processes.  There are number of things that stood out
+to me during this process, which have guided the approach I'm taking.</p>
+
+<p>My considerations for an OCaml.org governance document:</p>
+
+<ul>
+<li><p>A governance document is not <em>necessary</em> for success but it's valuable to
+demonstrate a commitment to a <strong>stable decision-making process</strong>.  There are
+many projects that progress perfectly well without any documented processes
+and indeed the work around OCaml.org so far is a good example of this (as well
+as OCaml itself).  However, for projects to achieve a scale greater than the
+initial teams, it's a significant benefit to encode in writing how things work
+(NB: please note that I didn't define the <em>type</em> of decision-making process -
+merely that it's a stable one).</p></li>
+<li><p>It must <strong>clarify its scope</strong> so that there is no confusion about what the
+document covers. In the case of OCaml.org, it needs to be clear that the
+governance covers the domain itself, rather than referring to the website.</p></li>
+<li><p>It should <strong>document the reality</strong>, rather than represent an aspirational
+goal or what people <em>believe</em> a governance structure should look like.  It's
+very tempting to think of an idealised structure without recognising that
+behaviours and norms have <em>already</em> been established. Sometimes this will be
+vague and poorly defined but that might simply indicate areas that the
+community hasn't encountered yet (e.g it's uncommon for any new project to
+seriously think about dispute resolution processes until they have to).  In
+this sense, the initial version of a governance document should simply be a
+written description of how things currently stand, rather than a means to
+adjust that behaviour.</p></li>
+<li><p>It should be <strong>simple and self-contained</strong>, so that anyone can understand
+the intent quickly without recourse to other documents.  It may be tempting to
+consider every edge-case or try to resolve every likely ambiguity but this
+just leads to large, legal documents.  This approach may well be necessary
+once projects have reached a certain scale but to implement it sooner would be
+a case of premature optimisation — not to mention that very few people would
+read and remember such a document.</p></li>
+<li><p>It's a <strong>living document</strong>. If the community decides that it would prefer a
+new arrangement, then the document conveniently provides a stable starting
+point from which to iterate. Indeed, it <em>should</em> adapt along with the project
+that it governs.</p></li>
+</ul>
+
+
+<p>With the above points in mind, I've been putting together a draft governance
+framework to cover how the OCaml.org domain name is managed.  It's been a
+quiet work-in-progress for some time and I'll be getting in touch with
+maintainers of specific projects soon.  Once I've had a round of reviews, I'll
+be sharing it more widely and posting it here!</p>
+
+<!-- [![FIGURE 06.1 Governance versus anarchy on Flickr](http://amirchaudhry.com/images/web/governance-alpha.png)](https://www.flickr.com/photos/jurgenappelo/5201270923/) -->
+
+
+        <hr id='share-comment'>
+        <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_preferred_3"></a>
+    <a class="addthis_button_preferred_4"></a>
+    <a class="addthis_button_compact"></a>
+    <a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f7d70e955879218"></script>
+<script> var addthis_share = {templates : {twitter : "Towards a governance framework for OCaml.org: http://bit.ly/1DnCoKW via @amirmc"}}</script>
+<!-- AddThis Button END -->
+        <div class="pagination">
+          <ul class="inline-list">
+            
+              <li class="prev"><a href="/describing-miso-entrepreneur-first-2014" title="Describing the MISO stack at Entrepreneur First">&larr; previous</a></li>
+            
+              <li class="small"><a href="/journal/">journal</a></li>
+            
+              <li class="next disabled"><a>next &rarr;</a>
+            
+          </ul>
+        </div>
+        <hr id='comments'>
+        
+
+
+  <script type='text/javascript' src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
+<script type='text/javascript'>
+    var fyre = LF({
+        site_id: 297150
+    });
+</script>
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="medium-3 columns">
+    <div class="sidebar">
+  <a href="/about/"><img src="/images/amc.png"/></a>
+  <ul class="sidebar">
+    <li class="sidebar">Lead at <a class="sidebar" href="/about/"> Nymote.org</a></li>
+    <li class="sidebar">Wrangler at <a class="sidebar" href="/about/"> OCaml Labs</a></li>
+    <li class="sidebar">Community at <a class="sidebar" href="/about/"> Mirage OS</a></li>
+    <li class="sidebar">Post-doc at <a class="sidebar" href="/about/"> Computer Lab</a></li>
+    <li class="sidebar">Member of <a class="sidebar" href="/about/">Darwin College</a></li>
+    <li class="sidebar">Cofounder of <a class="sidebar" href="/about/"> Springboard</a></li>
+    <li class="sidebar">Advisor to <a class="sidebar" href="/about/">CUEntrepreneurs</a></li>
+  </ul>
+  <a rel="me" href="https://twitter.com/amirmc"><img src="/icons/twitter_16.png" alt="amirmc on Twitter"/></a>
+  <a href="http://www.linkedin.com/in/amirchaudhry/"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn"/></a>
+  <a rel="me" href="https://github.com/amirmc"><img src="/icons/github_16.png" alt="amirmc on GitHub"/></a>
+  <a href="http://news.ycombinator.com/threads?id=amirmc"><img src="/icons/yc_16.png" alt="amirmc on Hacker News"/></a>
+  <form action="http://www.google.com/search" class="searchbar" method="get">
+    <input type="hidden" name="q" value="site:amirchaudhry.com"/>
+    <input type="text" class="query" placeholder="Search" name="q"/>
+  </form>
+  
+    
+      <h6 class="sidebar">Filed under</h6>
+      
+    
+    <ul class="tag_box">
+      
+
+
+  
+     
+    	<li><a href="/tags/#docs">docs </a> </li>
+     
+    	<li><a href="/tags/#legal">legal </a> </li>
+     
+    	<li><a href="/tags/#ocaml">ocaml </a> </li>
+     
+    	<li><a href="/tags/#ocaml-labs">ocaml-labs </a> </li>
+     
+    	<li><a href="/tags/#ocamllabs">ocamllabs </a> </li>
+     
+    	<li><a href="/tags/#opam">opam </a> </li>
+     
+    	<li><a href="/tags/#platform">platform </a> </li>
+     
+    	<li><a href="/tags/#project">project </a> </li>
+    
+  
+
+
+
+    </ul>
+  
+</div>
+  </div>
+</div>
+
+
+      
+    <footer>
+      <p class="footer" align="center">&copy; Amir Chaudhry 2010-2015</p>
+    </footer>
+
+    
+    
+    <!-- JavaScripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/themes/zurb/js/vendor/jquery.js"></script>
+    <script src="/assets/themes/zurb/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+

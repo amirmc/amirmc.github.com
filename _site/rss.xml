@@ -5,10 +5,111 @@
         <description>Amir Chaudhry - Amir Chaudhry</description>
         <link>http://amirchaudhry.com</link>
         <link>http://amirchaudhry.com</link>
-        <lastBuildDate>2014-07-25T11:25:47+01:00</lastBuildDate>
-        <pubDate>2014-07-25T11:25:47+01:00</pubDate>
+        <lastBuildDate>2015-01-08T19:30:00+01:00</lastBuildDate>
+        <pubDate>2015-01-08T19:30:00+01:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Towards a governance framework for OCaml.org</title>
+                <description>&lt;p&gt;The projects around the OCaml.org domain name are becoming more established
+and it's time to think about how they're organised. 2014 saw a &lt;em&gt;lot&lt;/em&gt; of
+activity, which built on the &lt;a href=&quot;http://www.cl.cam.ac.uk/projects/ocamllabs/news/index.html#OnlineatOCamlorg&quot;&gt;successes from 2013&lt;/a&gt;.
+Some of the main things that stand out to me are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;More &lt;a href=&quot;http://ocaml.org/contributors.html&quot;&gt;volunteers&lt;/a&gt; contributing to the public website with
+translations, bug fixes and content updates, as well as many new visitors —
+for example, the new page on &lt;a href=&quot;http://ocaml.org/learn/teaching-ocaml.html&quot;&gt;teaching OCaml&lt;/a&gt; received over 5k
+visits alone. The increasing contributions are a result of the earlier work on
+&lt;a href=&quot;http://amirchaudhry.com/announcing-new-ocamlorg/&quot;&gt;re-engineering the site&lt;/a&gt; and there are many ways to get involved
+so please do &lt;a href=&quot;https://github.com/ocaml/ocaml.org/labels/contribute%21&quot;&gt;contribute&lt;/a&gt;!&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;http://opam.ocaml.org/&quot;&gt;&lt;img style=&quot;float: right; margin-left: 10px&quot; src=&quot;http://amirchaudhry.com/images/web/opampkg-2015-01-08.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The relentless improvements and growth of OPAM, both in terms of the
+repository — with over 1000 additional packages and several
+&lt;a href=&quot;http://lists.ocaml.org/pipermail/opam-devel/2014-October/000781.html&quot;&gt;new repo maintainers&lt;/a&gt; — and also improved workflows (e.g the new
+&lt;a href=&quot;http://opam.ocaml.org/blog/opam-1-2-pin/&quot;&gt;pin functionality&lt;/a&gt;).
+The OPAM site and package list also moved to the ocaml.org domain, becoming
+the substrate for the OCaml Platform efforts. This began with the work towards
+&lt;a href=&quot;http://opam.ocaml.org/blog/opam-1-2-0-beta4/&quot;&gt;OPAM 1.2&lt;/a&gt; and there is much more to come (including closer
+integration in terms of styling). Join the &lt;a href=&quot;http://lists.ocaml.org/listinfo/platform&quot;&gt;Platform list&lt;/a&gt; to
+keep up to date.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Much more activity on the &lt;a href=&quot;http://lists.ocaml.org&quot;&gt;mailing lists&lt;/a&gt; in general and user groups
+requesting to have lists made (e.g the &lt;a href=&quot;http://lists.ocaml.org/listinfo/teaching&quot;&gt;teaching list&lt;/a&gt;). If anyone
+has a need for a new list, just ask on the
+&lt;a href=&quot;http://lists.ocaml.org/listinfo/infrastructure&quot;&gt;infrastructure list&lt;/a&gt;!&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;There is other work besides those I've mentioned and I think by any measure,
+all the projects have been quite successful. As the community continues to
+develop, it's important to clarify how things currently work to improve the
+level of transparency and make it easier for newcomers to get involved.&lt;/p&gt;
+
+&lt;h3&gt;Factors for a governance framework&lt;/h3&gt;
+
+&lt;p&gt;For the last couple of months, I've been looking over how larger projects
+manage themselves and the governance documents that are available. My aim has
+been to put such a document together for the OCaml.org domain without
+introducing burdensome processes.  There are number of things that stood out
+to me during this process, which have guided the approach I'm taking.&lt;/p&gt;
+
+&lt;p&gt;My considerations for an OCaml.org governance document:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A governance document is not &lt;em&gt;necessary&lt;/em&gt; for success but it's valuable to
+demonstrate a commitment to a &lt;strong&gt;stable decision-making process&lt;/strong&gt;.  There are
+many projects that progress perfectly well without any documented processes
+and indeed the work around OCaml.org so far is a good example of this (as well
+as OCaml itself).  However, for projects to achieve a scale greater than the
+initial teams, it's a significant benefit to encode in writing how things work
+(NB: please note that I didn't define the &lt;em&gt;type&lt;/em&gt; of decision-making process -
+merely that it's a stable one).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It must &lt;strong&gt;clarify its scope&lt;/strong&gt; so that there is no confusion about what the
+document covers. In the case of OCaml.org, it needs to be clear that the
+governance covers the domain itself, rather than referring to the website.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It should &lt;strong&gt;document the reality&lt;/strong&gt;, rather than represent an aspirational
+goal or what people &lt;em&gt;believe&lt;/em&gt; a governance structure should look like.  It's
+very tempting to think of an idealised structure without recognising that
+behaviours and norms have &lt;em&gt;already&lt;/em&gt; been established. Sometimes this will be
+vague and poorly defined but that might simply indicate areas that the
+community hasn't encountered yet (e.g it's uncommon for any new project to
+seriously think about dispute resolution processes until they have to).  In
+this sense, the initial version of a governance document should simply be a
+written description of how things currently stand, rather than a means to
+adjust that behaviour.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It should be &lt;strong&gt;simple and self-contained&lt;/strong&gt;, so that anyone can understand
+the intent quickly without recourse to other documents.  It may be tempting to
+consider every edge-case or try to resolve every likely ambiguity but this
+just leads to large, legal documents.  This approach may well be necessary
+once projects have reached a certain scale but to implement it sooner would be
+a case of premature optimisation — not to mention that very few people would
+read and remember such a document.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It's a &lt;strong&gt;living document&lt;/strong&gt;. If the community decides that it would prefer a
+new arrangement, then the document conveniently provides a stable starting
+point from which to iterate. Indeed, it &lt;em&gt;should&lt;/em&gt; adapt along with the project
+that it governs.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;With the above points in mind, I've been putting together a draft governance
+framework to cover how the OCaml.org domain name is managed.  It's been a
+quiet work-in-progress for some time and I'll be getting in touch with
+maintainers of specific projects soon.  Once I've had a round of reviews, I'll
+be sharing it more widely and posting it here!&lt;/p&gt;
+
+&lt;!-- [![FIGURE 06.1 Governance versus anarchy on Flickr](http://amirchaudhry.com/images/web/governance-alpha.png)](https://www.flickr.com/photos/jurgenappelo/5201270923/) --&gt;
+
+</description>
+                <link>http://amirchaudhry.com/towards-governance-framework-for-ocamlorg</link>
+                <guid>http://amirchaudhry.com/towards-governance-framework-for-ocamlorg</guid>
+                <pubDate>2015-01-08T19:15:00+01:00</pubDate>
+        </item>
 
         <item>
                 <title>Describing the MISO stack at Entrepreneur First</title>
@@ -71,7 +172,7 @@
 </description>
                 <link>http://amirchaudhry.com/describing-miso-entrepreneur-first-2014</link>
                 <guid>http://amirchaudhry.com/describing-miso-entrepreneur-first-2014</guid>
-                <pubDate>2014-07-25T12:30:00+01:00</pubDate>
+                <pubDate>2014-07-25T13:30:00+02:00</pubDate>
         </item>
 
         <item>
@@ -504,7 +605,7 @@ ourselves.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/winning-seedhack-5-2014</link>
                 <guid>http://amirchaudhry.com/winning-seedhack-5-2014</guid>
-                <pubDate>2014-07-23T13:00:00+01:00</pubDate>
+                <pubDate>2014-07-23T14:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -681,7 +782,7 @@ and providing feedback on my approach.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/writing-planet-in-pure-ocaml</link>
                 <guid>http://amirchaudhry.com/writing-planet-in-pure-ocaml</guid>
-                <pubDate>2014-04-29T10:30:00+01:00</pubDate>
+                <pubDate>2014-04-29T11:30:00+02:00</pubDate>
         </item>
 
         <item>
@@ -993,7 +1094,7 @@ I only got a pic of the latter but it's the inverse of the former
 </description>
                 <link>http://amirchaudhry.com/iot-brave-new-world-or-evolved-m2m</link>
                 <guid>http://amirchaudhry.com/iot-brave-new-world-or-evolved-m2m</guid>
-                <pubDate>2014-03-13T21:00:00+00:00</pubDate>
+                <pubDate>2014-03-13T22:00:00+01:00</pubDate>
         </item>
 
         <item>
@@ -1438,7 +1539,7 @@ commenting on an earlier draft of this post.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines</link>
                 <guid>http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines</guid>
-                <pubDate>2014-03-10T18:30:00+00:00</pubDate>
+                <pubDate>2014-03-10T19:30:00+01:00</pubDate>
         </item>
 
         <item>
@@ -1487,7 +1588,7 @@ can also dig into the &lt;a href=&quot;http://bit.ly/snakeoilsupps&quot;&gt;spre
 </description>
                 <link>http://amirchaudhry.com/scientific-evidence-for-health-supplements-2014</link>
                 <guid>http://amirchaudhry.com/scientific-evidence-for-health-supplements-2014</guid>
-                <pubDate>2014-01-30T00:00:00+00:00</pubDate>
+                <pubDate>2014-01-30T00:00:00+01:00</pubDate>
         </item>
 
         <item>
@@ -1648,7 +1749,7 @@ customised sites -- it's more flexible but needs more upfront thought.&lt;/li&gt
 </description>
                 <link>http://amirchaudhry.com/switching-from-bootstrap-to-zurb-foundation</link>
                 <guid>http://amirchaudhry.com/switching-from-bootstrap-to-zurb-foundation</guid>
-                <pubDate>2013-11-26T21:05:00+00:00</pubDate>
+                <pubDate>2013-11-26T22:05:00+01:00</pubDate>
         </item>
 
         <item>
@@ -1685,7 +1786,7 @@ customised sites -- it's more flexible but needs more upfront thought.&lt;/li&gt
 </description>
                 <link>http://amirchaudhry.com/announcing-new-ocamlorg</link>
                 <guid>http://amirchaudhry.com/announcing-new-ocamlorg</guid>
-                <pubDate>2013-11-20T23:00:00+00:00</pubDate>
+                <pubDate>2013-11-21T00:00:00+01:00</pubDate>
         </item>
 
         <item>
@@ -1739,7 +1840,7 @@ the OCaml community and merged.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/migration-plan-ocaml-org</link>
                 <guid>http://amirchaudhry.com/migration-plan-ocaml-org</guid>
-                <pubDate>2013-11-06T11:00:00+00:00</pubDate>
+                <pubDate>2013-11-06T12:00:00+01:00</pubDate>
         </item>
 
         <item>
@@ -1887,7 +1988,7 @@ the FPDays crew for a great conference!&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/fpdays-review</link>
                 <guid>http://amirchaudhry.com/fpdays-review</guid>
-                <pubDate>2013-10-28T12:30:00+00:00</pubDate>
+                <pubDate>2013-10-28T13:30:00+01:00</pubDate>
         </item>
 
         <item>
@@ -1936,7 +2037,7 @@ installing in advance are &lt;code&gt;core&lt;/code&gt; and &lt;code&gt;js_of_oc
 </description>
                 <link>http://amirchaudhry.com/fpdays-ocaml-session</link>
                 <guid>http://amirchaudhry.com/fpdays-ocaml-session</guid>
-                <pubDate>2013-10-22T22:00:00+01:00</pubDate>
+                <pubDate>2013-10-22T23:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -1954,7 +2055,7 @@ and it is now approaching a point of crisis overall.&quot;&lt;/em&gt;&lt;/p&gt;&
 </description>
                 <link>http://amirchaudhry.com/the-real-problem-of-humanity</link>
                 <guid>http://amirchaudhry.com/the-real-problem-of-humanity</guid>
-                <pubDate>2013-10-01T19:45:00+01:00</pubDate>
+                <pubDate>2013-10-01T20:45:00+02:00</pubDate>
         </item>
 
         <item>
@@ -1988,7 +2089,7 @@ add your comments to those threads first.&lt;/p&gt;&lt;/li&gt;
 </description>
                 <link>http://amirchaudhry.com/ocamlorg-request-for-feedback</link>
                 <guid>http://amirchaudhry.com/ocamlorg-request-for-feedback</guid>
-                <pubDate>2013-09-24T15:00:00+01:00</pubDate>
+                <pubDate>2013-09-24T16:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -2078,7 +2179,7 @@ for updates by email, you can &lt;a href=&quot;http://eepurl.com/mXYb1&quot;&gt;
 </description>
                 <link>http://amirchaudhry.com/working-on-the-internet-of-my-things</link>
                 <guid>http://amirchaudhry.com/working-on-the-internet-of-my-things</guid>
-                <pubDate>2013-09-02T00:00:00+01:00</pubDate>
+                <pubDate>2013-09-02T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -2127,7 +2228,7 @@ for updates by email, you can &lt;a href=&quot;http://eepurl.com/mXYb1&quot;&gt;
 </description>
                 <link>http://amirchaudhry.com/wireframe-demos-for-ocamlorg</link>
                 <guid>http://amirchaudhry.com/wireframe-demos-for-ocamlorg</guid>
-                <pubDate>2013-03-14T00:00:00+00:00</pubDate>
+                <pubDate>2013-03-14T00:00:00+01:00</pubDate>
         </item>
 
         <item>
@@ -2215,7 +2316,7 @@ $&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
                 <link>http://amirchaudhry.com/ocaml-installation-and-hello-world</link>
                 <guid>http://amirchaudhry.com/ocaml-installation-and-hello-world</guid>
-                <pubDate>2012-10-04T00:00:00+01:00</pubDate>
+                <pubDate>2012-10-04T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -2249,7 +2350,7 @@ $&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
                 <link>http://amirchaudhry.com/thirty-days-of-ocaml</link>
                 <guid>http://amirchaudhry.com/thirty-days-of-ocaml</guid>
-                <pubDate>2012-10-01T00:00:00+01:00</pubDate>
+                <pubDate>2012-10-01T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -2317,7 +2418,7 @@ $&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
                 <link>http://amirchaudhry.com/im-in-san-francisco</link>
                 <guid>http://amirchaudhry.com/im-in-san-francisco</guid>
-                <pubDate>2012-08-28T00:00:00+01:00</pubDate>
+                <pubDate>2012-08-28T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -2330,7 +2431,7 @@ $&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
                 <link>http://amirchaudhry.com/illusion-of-choice</link>
                 <guid>http://amirchaudhry.com/illusion-of-choice</guid>
-                <pubDate>2012-04-26T00:00:00+01:00</pubDate>
+                <pubDate>2012-04-26T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -2403,7 +2504,7 @@ $&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
                 <link>http://amirchaudhry.com/tedx-granta-2012</link>
                 <guid>http://amirchaudhry.com/tedx-granta-2012</guid>
-                <pubDate>2012-04-13T00:00:00+01:00</pubDate>
+                <pubDate>2012-04-13T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -2426,7 +2527,7 @@ $&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
                 <link>http://amirchaudhry.com/chances-of-dying</link>
                 <guid>http://amirchaudhry.com/chances-of-dying</guid>
-                <pubDate>2012-04-12T11:15:00+01:00</pubDate>
+                <pubDate>2012-04-12T12:15:00+02:00</pubDate>
         </item>
 
         <item>
@@ -2470,7 +2571,7 @@ $&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
                 <link>http://amirchaudhry.com/joined-the-computer-lab</link>
                 <guid>http://amirchaudhry.com/joined-the-computer-lab</guid>
-                <pubDate>2012-04-11T00:00:00+01:00</pubDate>
+                <pubDate>2012-04-11T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -2545,7 +2646,7 @@ $&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
                 <link>http://amirchaudhry.com/i-moved-my-site-to-github-pages</link>
                 <guid>http://amirchaudhry.com/i-moved-my-site-to-github-pages</guid>
-                <pubDate>2012-04-07T00:00:00+01:00</pubDate>
+                <pubDate>2012-04-07T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -2725,7 +2826,7 @@ $&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
                 <link>http://amirchaudhry.com/catchup-post-oct-dec</link>
                 <guid>http://amirchaudhry.com/catchup-post-oct-dec</guid>
-                <pubDate>2012-01-25T00:00:00+00:00</pubDate>
+                <pubDate>2012-01-25T00:00:00+01:00</pubDate>
         </item>
 
         <item>
@@ -2736,7 +2837,7 @@ $&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
                 <link>http://amirchaudhry.com/what-success-really-looks-like</link>
                 <guid>http://amirchaudhry.com/what-success-really-looks-like</guid>
-                <pubDate>2011-09-20T00:00:00+01:00</pubDate>
+                <pubDate>2011-09-20T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -2760,7 +2861,7 @@ A possible reason that the &quot;tangible health benefits&quot; of Vitamins A &a
 </description>
                 <link>http://amirchaudhry.com/scientific-evidence-for-health-supplements</link>
                 <guid>http://amirchaudhry.com/scientific-evidence-for-health-supplements</guid>
-                <pubDate>2011-07-28T00:00:00+01:00</pubDate>
+                <pubDate>2011-07-28T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -2857,7 +2958,7 @@ become easier for startups to make better informed decisions.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/my-thoughts-on-the-seedsummit-term-sheet</link>
                 <guid>http://amirchaudhry.com/my-thoughts-on-the-seedsummit-term-sheet</guid>
-                <pubDate>2011-07-11T15:02:00+01:00</pubDate>
+                <pubDate>2011-07-11T16:02:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3086,7 +3187,7 @@ or &lt;a href=&quot;http://news.ycombinator.com/item?id=2750689&quot;&gt;upvote 
 </description>
                 <link>http://amirchaudhry.com/review-of-the-seedsummit-term-sheet</link>
                 <guid>http://amirchaudhry.com/review-of-the-seedsummit-term-sheet</guid>
-                <pubDate>2011-07-11T15:00:00+01:00</pubDate>
+                <pubDate>2011-07-11T16:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3099,7 +3200,7 @@ or &lt;a href=&quot;http://news.ycombinator.com/item?id=2750689&quot;&gt;upvote 
 </description>
                 <link>http://amirchaudhry.com/tech-company-org-charts-and-other-cool-comics</link>
                 <guid>http://amirchaudhry.com/tech-company-org-charts-and-other-cool-comics</guid>
-                <pubDate>2011-07-01T00:00:00+01:00</pubDate>
+                <pubDate>2011-07-01T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3129,7 +3230,7 @@ might disappear in time.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/did-google-hangout-just-kill-skype</link>
                 <guid>http://amirchaudhry.com/did-google-hangout-just-kill-skype</guid>
-                <pubDate>2011-06-30T00:00:00+01:00</pubDate>
+                <pubDate>2011-06-30T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3147,7 +3248,7 @@ might disappear in time.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/solar-3d-printer-fantastic-video</link>
                 <guid>http://amirchaudhry.com/solar-3d-printer-fantastic-video</guid>
-                <pubDate>2011-06-26T00:00:00+01:00</pubDate>
+                <pubDate>2011-06-26T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3163,7 +3264,7 @@ while since I actually posted new stuff here).&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/on-my-facebook-wall-tonight</link>
                 <guid>http://amirchaudhry.com/on-my-facebook-wall-tonight</guid>
-                <pubDate>2011-06-09T00:00:00+01:00</pubDate>
+                <pubDate>2011-06-09T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3251,7 +3352,7 @@ still compatible with bricks made today.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/lego-is-amazing</link>
                 <guid>http://amirchaudhry.com/lego-is-amazing</guid>
-                <pubDate>2011-05-06T00:00:00+01:00</pubDate>
+                <pubDate>2011-05-06T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3266,7 +3367,7 @@ still compatible with bricks made today.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/moviebarcode-fantastic-images</link>
                 <guid>http://amirchaudhry.com/moviebarcode-fantastic-images</guid>
-                <pubDate>2011-03-09T00:00:00+00:00</pubDate>
+                <pubDate>2011-03-09T00:00:00+01:00</pubDate>
         </item>
 
         <item>
@@ -3281,7 +3382,7 @@ still compatible with bricks made today.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/lifes-too-short-for-the-wrong-job</link>
                 <guid>http://amirchaudhry.com/lifes-too-short-for-the-wrong-job</guid>
-                <pubDate>2011-03-03T00:00:00+00:00</pubDate>
+                <pubDate>2011-03-03T00:00:00+01:00</pubDate>
         </item>
 
         <item>
@@ -3416,7 +3517,7 @@ i hope to get this lecture in a audio file
 </description>
                 <link>http://amirchaudhry.com/richard-stallman-on-free-software-and-your-freedom</link>
                 <guid>http://amirchaudhry.com/richard-stallman-on-free-software-and-your-freedom</guid>
-                <pubDate>2011-03-01T00:00:00+00:00</pubDate>
+                <pubDate>2011-03-01T00:00:00+01:00</pubDate>
         </item>
 
         <item>
@@ -3460,7 +3561,7 @@ i hope to get this lecture in a audio file
 </description>
                 <link>http://amirchaudhry.com/session-4-using-audience-insight</link>
                 <guid>http://amirchaudhry.com/session-4-using-audience-insight</guid>
-                <pubDate>2011-02-26T14:32:41+00:00</pubDate>
+                <pubDate>2011-02-26T15:32:41+01:00</pubDate>
         </item>
 
         <item>
@@ -3509,7 +3610,7 @@ recognised? &lt;br /&gt;&lt;/li&gt;
 </description>
                 <link>http://amirchaudhry.com/session-3-whats-your-product-mgmnt-persona</link>
                 <guid>http://amirchaudhry.com/session-3-whats-your-product-mgmnt-persona</guid>
-                <pubDate>2011-02-26T12:30:55+00:00</pubDate>
+                <pubDate>2011-02-26T13:30:55+01:00</pubDate>
         </item>
 
         <item>
@@ -3559,7 +3660,7 @@ Great thank you for the notes - I was gutted that I missed her presentation... S
 </description>
                 <link>http://amirchaudhry.com/session-1-data-driven-decisions-pcampldn</link>
                 <guid>http://amirchaudhry.com/session-1-data-driven-decisions-pcampldn</guid>
-                <pubDate>2011-02-26T11:44:00+00:00</pubDate>
+                <pubDate>2011-02-26T12:44:00+01:00</pubDate>
         </item>
 
         <item>
@@ -3572,7 +3673,7 @@ Great thank you for the notes - I was gutted that I missed her presentation... S
 </description>
                 <link>http://amirchaudhry.com/im-at-product-camp-london</link>
                 <guid>http://amirchaudhry.com/im-at-product-camp-london</guid>
-                <pubDate>2011-02-26T11:14:43+00:00</pubDate>
+                <pubDate>2011-02-26T12:14:43+01:00</pubDate>
         </item>
 
         <item>
@@ -3593,7 +3694,7 @@ to this part of the building but that would be crazy talk.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/moved-desks-and-discovered-spent-munitions</link>
                 <guid>http://amirchaudhry.com/moved-desks-and-discovered-spent-munitions</guid>
-                <pubDate>2010-12-30T00:00:00+00:00</pubDate>
+                <pubDate>2010-12-30T00:00:00+01:00</pubDate>
         </item>
 
         <item>
@@ -3610,7 +3711,7 @@ to this part of the building but that would be crazy talk.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/random-things-i-learned-at-school</link>
                 <guid>http://amirchaudhry.com/random-things-i-learned-at-school</guid>
-                <pubDate>2010-12-03T00:00:00+00:00</pubDate>
+                <pubDate>2010-12-03T00:00:00+01:00</pubDate>
         </item>
 
         <item>
@@ -3621,7 +3722,7 @@ to this part of the building but that would be crazy talk.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/why-obama-got-the-peace-prize-comic</link>
                 <guid>http://amirchaudhry.com/why-obama-got-the-peace-prize-comic</guid>
-                <pubDate>2010-11-25T00:00:00+00:00</pubDate>
+                <pubDate>2010-11-25T00:00:00+01:00</pubDate>
         </item>
 
         <item>
@@ -3658,7 +3759,7 @@ to this part of the building but that would be crazy talk.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/how-to-discourage-people-from-messing-with-your-stuff</link>
                 <guid>http://amirchaudhry.com/how-to-discourage-people-from-messing-with-your-stuff</guid>
-                <pubDate>2010-10-29T00:00:00+01:00</pubDate>
+                <pubDate>2010-10-29T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3702,7 +3803,7 @@ group.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/collective-intelligence-in-human-groups</link>
                 <guid>http://amirchaudhry.com/collective-intelligence-in-human-groups</guid>
-                <pubDate>2010-10-04T00:00:00+01:00</pubDate>
+                <pubDate>2010-10-04T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3724,7 +3825,7 @@ group.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/fantastic-eyjafjallajokull-time-lapse-movie</link>
                 <guid>http://amirchaudhry.com/fantastic-eyjafjallajokull-time-lapse-movie</guid>
-                <pubDate>2010-10-01T00:12:00+01:00</pubDate>
+                <pubDate>2010-10-01T01:12:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3737,7 +3838,7 @@ group.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/the-future-is-now</link>
                 <guid>http://amirchaudhry.com/the-future-is-now</guid>
-                <pubDate>2010-09-30T18:22:00+01:00</pubDate>
+                <pubDate>2010-09-30T19:22:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3834,7 +3935,7 @@ You can have your Ph D superviser in the room at UK universities. I opted not to
 </description>
                 <link>http://amirchaudhry.com/phd-vivas-the-dutch-do-it-better</link>
                 <guid>http://amirchaudhry.com/phd-vivas-the-dutch-do-it-better</guid>
-                <pubDate>2010-09-30T11:48:00+01:00</pubDate>
+                <pubDate>2010-09-30T12:48:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3864,7 +3965,7 @@ to the epic nature scenes.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/this-time-lapse-montage-will-blow-your-mind</link>
                 <guid>http://amirchaudhry.com/this-time-lapse-montage-will-blow-your-mind</guid>
-                <pubDate>2010-09-29T00:00:00+01:00</pubDate>
+                <pubDate>2010-09-29T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3884,7 +3985,7 @@ Alcaide&lt;/a&gt;)&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/when-girls-say-i-love-you</link>
                 <guid>http://amirchaudhry.com/when-girls-say-i-love-you</guid>
-                <pubDate>2010-09-27T00:00:00+01:00</pubDate>
+                <pubDate>2010-09-27T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3897,7 +3998,7 @@ Alcaide&lt;/a&gt;)&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/woah-drinking-tea-prevents-testicle-shrinkage</link>
                 <guid>http://amirchaudhry.com/woah-drinking-tea-prevents-testicle-shrinkage</guid>
-                <pubDate>2010-09-24T00:00:00+01:00</pubDate>
+                <pubDate>2010-09-24T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3917,7 +4018,7 @@ Alcaide&lt;/a&gt;)&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/i-guess-im-going-to-have-to-play-starcraft-2</link>
                 <guid>http://amirchaudhry.com/i-guess-im-going-to-have-to-play-starcraft-2</guid>
-                <pubDate>2010-09-23T00:00:00+01:00</pubDate>
+                <pubDate>2010-09-23T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3943,7 +4044,7 @@ agencies and carefully selected advertisers&quot;&lt;/p&gt;&lt;/blockquote&gt;
 </description>
                 <link>http://amirchaudhry.com/what-the-facebook-phone-would-look-like</link>
                 <guid>http://amirchaudhry.com/what-the-facebook-phone-would-look-like</guid>
-                <pubDate>2010-09-21T00:00:00+01:00</pubDate>
+                <pubDate>2010-09-21T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3958,7 +4059,7 @@ agencies and carefully selected advertisers&quot;&lt;/p&gt;&lt;/blockquote&gt;
 </description>
                 <link>http://amirchaudhry.com/cambridge-ousts-harvard-as-worlds-best-university</link>
                 <guid>http://amirchaudhry.com/cambridge-ousts-harvard-as-worlds-best-university</guid>
-                <pubDate>2010-09-08T00:00:00+01:00</pubDate>
+                <pubDate>2010-09-08T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3973,7 +4074,7 @@ agencies and carefully selected advertisers&quot;&lt;/p&gt;&lt;/blockquote&gt;
 </description>
                 <link>http://amirchaudhry.com/cooking-recipes-as-gantt-charts-genius</link>
                 <guid>http://amirchaudhry.com/cooking-recipes-as-gantt-charts-genius</guid>
-                <pubDate>2010-09-02T00:00:00+01:00</pubDate>
+                <pubDate>2010-09-02T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -3989,7 +4090,7 @@ idea how many followers his old handle now has (or will have soon).&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/paul-graham-joins-twitter</link>
                 <guid>http://amirchaudhry.com/paul-graham-joins-twitter</guid>
-                <pubDate>2010-08-28T00:00:00+01:00</pubDate>
+                <pubDate>2010-08-28T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -4011,7 +4112,7 @@ idea how many followers his old handle now has (or will have soon).&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/base-jumping-meets-free-diving-kind-of</link>
                 <guid>http://amirchaudhry.com/base-jumping-meets-free-diving-kind-of</guid>
-                <pubDate>2010-08-27T00:00:00+01:00</pubDate>
+                <pubDate>2010-08-27T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -4027,7 +4128,7 @@ of this guy before but never took the time to look him up.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/gary-arndt-things-ive-learned-from-traveling</link>
                 <guid>http://amirchaudhry.com/gary-arndt-things-ive-learned-from-traveling</guid>
-                <pubDate>2010-08-24T15:37:59+01:00</pubDate>
+                <pubDate>2010-08-24T16:37:59+02:00</pubDate>
         </item>
 
         <item>
@@ -4045,7 +4146,7 @@ of this guy before but never took the time to look him up.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/maz-jobrani-did-you-hear-the-one-about-the-iranian-american</link>
                 <guid>http://amirchaudhry.com/maz-jobrani-did-you-hear-the-one-about-the-iranian-american</guid>
-                <pubDate>2010-08-24T13:28:40+01:00</pubDate>
+                <pubDate>2010-08-24T14:28:40+02:00</pubDate>
         </item>
 
         <item>
@@ -4059,7 +4160,7 @@ to visit the page at &lt;a href=&quot;http://www.visual-literacy.org/periodic_ta
 </description>
                 <link>http://amirchaudhry.com/a-periodic-table-of-visualisation-methods</link>
                 <guid>http://amirchaudhry.com/a-periodic-table-of-visualisation-methods</guid>
-                <pubDate>2010-08-13T00:00:00+01:00</pubDate>
+                <pubDate>2010-08-13T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -4070,7 +4171,7 @@ to visit the page at &lt;a href=&quot;http://www.visual-literacy.org/periodic_ta
 </description>
                 <link>http://amirchaudhry.com/awesome-present-for-a-cool-nephew</link>
                 <guid>http://amirchaudhry.com/awesome-present-for-a-cool-nephew</guid>
-                <pubDate>2010-08-03T00:00:00+01:00</pubDate>
+                <pubDate>2010-08-03T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -4163,7 +4264,7 @@ This is cool. The scenario that really needs to be solved is... 2 working parent
 </description>
                 <link>http://amirchaudhry.com/easily-aggregate-outlook-google-ical-calendar</link>
                 <guid>http://amirchaudhry.com/easily-aggregate-outlook-google-ical-calendar</guid>
-                <pubDate>2010-07-13T00:00:00+01:00</pubDate>
+                <pubDate>2010-07-13T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -4201,31 +4302,7 @@ This is cool. The scenario that really needs to be solved is... 2 working parent
 </description>
                 <link>http://amirchaudhry.com/cfel-ignite-programme-celebration-dinner</link>
                 <guid>http://amirchaudhry.com/cfel-ignite-programme-celebration-dinner</guid>
-                <pubDate>2010-07-03T00:00:00+01:00</pubDate>
-        </item>
-
-        <item>
-                <title>My first 3-way</title>
-                <description>&lt;h3&gt;BCPA Monthly Draw – June&lt;/h3&gt;
-
-&lt;p&gt;I’m the guy in the white helmet.&lt;/p&gt;
-
-&lt;div class=&quot;flex-video&quot;&gt;
-    &lt;iframe width=&quot;540&quot; height=&quot;405&quot; src=&quot;http://www.youtube-nocookie.com/embed/3e4t-BA20Jo?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt;lipsum&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-&lt;p&gt;The above was my first attempt at a proper 3-way skydive. If you look closely it becomes obvious that I’m being dragged around. I’ve clearly got some work to do before I can keep up with these guys by myself. We did get 7 or 8 points though!&lt;/p&gt;
-
-&lt;h4&gt;About the video&lt;/h4&gt;
-
-&lt;p&gt;The &lt;a href=&quot;http://www.ukskydiver.co.uk/cms/index.php?/topic/9412-bcpa-about-contact-how-to-join/&quot;&gt;BCPA&lt;/a&gt; is the national student body that promotes skydiving. Every month there’s a draw of three formations. The idea is to complete the sequence of formations (and repeat) as many times as possible within the time allowed (35sec).&lt;/p&gt;
-
-&lt;p&gt;June was the last draw of this academic year and the formations in the video are Sputnik, Opal and Cluster. The divepool these formations came from can be found &lt;a href=&quot;http://img638.imageshack.us/img638/5070/bcpafs3waydivepool.gif&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-</description>
-                <link>http://amirchaudhry.com/my-first-3-way</link>
-                <guid>http://amirchaudhry.com/my-first-3-way</guid>
-                <pubDate>2010-07-01T00:00:00+01:00</pubDate>
+                <pubDate>2010-07-03T00:00:00+02:00</pubDate>
         </item>
 
         <item>
@@ -4258,7 +4335,7 @@ another roadblock to writing.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/learning-markdown</link>
                 <guid>http://amirchaudhry.com/learning-markdown</guid>
-                <pubDate>2010-06-30T23:57:00+01:00</pubDate>
+                <pubDate>2010-07-01T00:57:00+02:00</pubDate>
         </item>
 
         <item>
@@ -4275,7 +4352,31 @@ email I expect I'll actually use it a lot more than other services.&lt;/p&gt;
 </description>
                 <link>http://amirchaudhry.com/this-is-my-posterous</link>
                 <guid>http://amirchaudhry.com/this-is-my-posterous</guid>
-                <pubDate>2010-06-30T23:15:00+01:00</pubDate>
+                <pubDate>2010-07-01T00:15:00+02:00</pubDate>
+        </item>
+
+        <item>
+                <title>My first 3-way</title>
+                <description>&lt;h3&gt;BCPA Monthly Draw – June&lt;/h3&gt;
+
+&lt;p&gt;I’m the guy in the white helmet.&lt;/p&gt;
+
+&lt;div class=&quot;flex-video&quot;&gt;
+    &lt;iframe width=&quot;540&quot; height=&quot;405&quot; src=&quot;http://www.youtube-nocookie.com/embed/3e4t-BA20Jo?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt;lipsum&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;The above was my first attempt at a proper 3-way skydive. If you look closely it becomes obvious that I’m being dragged around. I’ve clearly got some work to do before I can keep up with these guys by myself. We did get 7 or 8 points though!&lt;/p&gt;
+
+&lt;h4&gt;About the video&lt;/h4&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://www.ukskydiver.co.uk/cms/index.php?/topic/9412-bcpa-about-contact-how-to-join/&quot;&gt;BCPA&lt;/a&gt; is the national student body that promotes skydiving. Every month there’s a draw of three formations. The idea is to complete the sequence of formations (and repeat) as many times as possible within the time allowed (35sec).&lt;/p&gt;
+
+&lt;p&gt;June was the last draw of this academic year and the formations in the video are Sputnik, Opal and Cluster. The divepool these formations came from can be found &lt;a href=&quot;http://img638.imageshack.us/img638/5070/bcpafs3waydivepool.gif&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+</description>
+                <link>http://amirchaudhry.com/my-first-3-way</link>
+                <guid>http://amirchaudhry.com/my-first-3-way</guid>
+                <pubDate>2010-07-01T00:00:00+02:00</pubDate>
         </item>
 
 

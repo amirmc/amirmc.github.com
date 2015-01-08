@@ -4,17 +4,120 @@
   <link href="http://amirchaudhry.com/tags/ocamllabs-atom.xml" rel="self"/>
   <link href="http://amirchaudhry.com"/>
   <subtitle>thoughts, comments &amp; general ramblings</subtitle>
-  <updated>2014-07-25T11:25:47+01:00</updated>
+  <updated>2015-01-08T19:30:00+01:00</updated>
   <id>http://amirchaudhry.com/tags/#ocamllabs</id>
   <author>
     <name>Amir Chaudhry</name>
   </author>
   
     <entry>
+  <title>Towards a governance framework for OCaml.org</title>
+  <link href="http://amirchaudhry.com/towards-governance-framework-for-ocamlorg"/>
+  <author>Amir Chaudhry</author>
+  <updated>2015-01-08T19:15:00+01:00</updated>
+  <id>http://amirchaudhry.com/towards-governance-framework-for-ocamlorg</id>
+  <content type="html">&lt;p&gt;The projects around the OCaml.org domain name are becoming more established
+and it's time to think about how they're organised. 2014 saw a &lt;em&gt;lot&lt;/em&gt; of
+activity, which built on the &lt;a href=&quot;http://www.cl.cam.ac.uk/projects/ocamllabs/news/index.html#OnlineatOCamlorg&quot;&gt;successes from 2013&lt;/a&gt;.
+Some of the main things that stand out to me are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;More &lt;a href=&quot;http://ocaml.org/contributors.html&quot;&gt;volunteers&lt;/a&gt; contributing to the public website with
+translations, bug fixes and content updates, as well as many new visitors —
+for example, the new page on &lt;a href=&quot;http://ocaml.org/learn/teaching-ocaml.html&quot;&gt;teaching OCaml&lt;/a&gt; received over 5k
+visits alone. The increasing contributions are a result of the earlier work on
+&lt;a href=&quot;http://amirchaudhry.com/announcing-new-ocamlorg/&quot;&gt;re-engineering the site&lt;/a&gt; and there are many ways to get involved
+so please do &lt;a href=&quot;https://github.com/ocaml/ocaml.org/labels/contribute%21&quot;&gt;contribute&lt;/a&gt;!&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;http://opam.ocaml.org/&quot;&gt;&lt;img style=&quot;float: right; margin-left: 10px&quot; src=&quot;http://amirchaudhry.com/images/web/opampkg-2015-01-08.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The relentless improvements and growth of OPAM, both in terms of the
+repository — with over 1000 additional packages and several
+&lt;a href=&quot;http://lists.ocaml.org/pipermail/opam-devel/2014-October/000781.html&quot;&gt;new repo maintainers&lt;/a&gt; — and also improved workflows (e.g the new
+&lt;a href=&quot;http://opam.ocaml.org/blog/opam-1-2-pin/&quot;&gt;pin functionality&lt;/a&gt;).
+The OPAM site and package list also moved to the ocaml.org domain, becoming
+the substrate for the OCaml Platform efforts. This began with the work towards
+&lt;a href=&quot;http://opam.ocaml.org/blog/opam-1-2-0-beta4/&quot;&gt;OPAM 1.2&lt;/a&gt; and there is much more to come (including closer
+integration in terms of styling). Join the &lt;a href=&quot;http://lists.ocaml.org/listinfo/platform&quot;&gt;Platform list&lt;/a&gt; to
+keep up to date.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Much more activity on the &lt;a href=&quot;http://lists.ocaml.org&quot;&gt;mailing lists&lt;/a&gt; in general and user groups
+requesting to have lists made (e.g the &lt;a href=&quot;http://lists.ocaml.org/listinfo/teaching&quot;&gt;teaching list&lt;/a&gt;). If anyone
+has a need for a new list, just ask on the
+&lt;a href=&quot;http://lists.ocaml.org/listinfo/infrastructure&quot;&gt;infrastructure list&lt;/a&gt;!&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;There is other work besides those I've mentioned and I think by any measure,
+all the projects have been quite successful. As the community continues to
+develop, it's important to clarify how things currently work to improve the
+level of transparency and make it easier for newcomers to get involved.&lt;/p&gt;
+
+&lt;h3&gt;Factors for a governance framework&lt;/h3&gt;
+
+&lt;p&gt;For the last couple of months, I've been looking over how larger projects
+manage themselves and the governance documents that are available. My aim has
+been to put such a document together for the OCaml.org domain without
+introducing burdensome processes.  There are number of things that stood out
+to me during this process, which have guided the approach I'm taking.&lt;/p&gt;
+
+&lt;p&gt;My considerations for an OCaml.org governance document:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A governance document is not &lt;em&gt;necessary&lt;/em&gt; for success but it's valuable to
+demonstrate a commitment to a &lt;strong&gt;stable decision-making process&lt;/strong&gt;.  There are
+many projects that progress perfectly well without any documented processes
+and indeed the work around OCaml.org so far is a good example of this (as well
+as OCaml itself).  However, for projects to achieve a scale greater than the
+initial teams, it's a significant benefit to encode in writing how things work
+(NB: please note that I didn't define the &lt;em&gt;type&lt;/em&gt; of decision-making process -
+merely that it's a stable one).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It must &lt;strong&gt;clarify its scope&lt;/strong&gt; so that there is no confusion about what the
+document covers. In the case of OCaml.org, it needs to be clear that the
+governance covers the domain itself, rather than referring to the website.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It should &lt;strong&gt;document the reality&lt;/strong&gt;, rather than represent an aspirational
+goal or what people &lt;em&gt;believe&lt;/em&gt; a governance structure should look like.  It's
+very tempting to think of an idealised structure without recognising that
+behaviours and norms have &lt;em&gt;already&lt;/em&gt; been established. Sometimes this will be
+vague and poorly defined but that might simply indicate areas that the
+community hasn't encountered yet (e.g it's uncommon for any new project to
+seriously think about dispute resolution processes until they have to).  In
+this sense, the initial version of a governance document should simply be a
+written description of how things currently stand, rather than a means to
+adjust that behaviour.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It should be &lt;strong&gt;simple and self-contained&lt;/strong&gt;, so that anyone can understand
+the intent quickly without recourse to other documents.  It may be tempting to
+consider every edge-case or try to resolve every likely ambiguity but this
+just leads to large, legal documents.  This approach may well be necessary
+once projects have reached a certain scale but to implement it sooner would be
+a case of premature optimisation — not to mention that very few people would
+read and remember such a document.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It's a &lt;strong&gt;living document&lt;/strong&gt;. If the community decides that it would prefer a
+new arrangement, then the document conveniently provides a stable starting
+point from which to iterate. Indeed, it &lt;em&gt;should&lt;/em&gt; adapt along with the project
+that it governs.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;With the above points in mind, I've been putting together a draft governance
+framework to cover how the OCaml.org domain name is managed.  It's been a
+quiet work-in-progress for some time and I'll be getting in touch with
+maintainers of specific projects soon.  Once I've had a round of reviews, I'll
+be sharing it more widely and posting it here!&lt;/p&gt;
+
+&lt;!-- [![FIGURE 06.1 Governance versus anarchy on Flickr](http://amirchaudhry.com/images/web/governance-alpha.png)](https://www.flickr.com/photos/jurgenappelo/5201270923/) --&gt;
+
+</content>
+</entry>
+
+  
+    <entry>
   <title>Writing Planet in pure OCaml</title>
   <link href="http://amirchaudhry.com/writing-planet-in-pure-ocaml"/>
   <author>Amir Chaudhry</author>
-  <updated>2014-04-29T10:30:00+01:00</updated>
+  <updated>2014-04-29T11:30:00+02:00</updated>
   <id>http://amirchaudhry.com/writing-planet-in-pure-ocaml</id>
   <content type="html">&lt;p&gt;I've been learning OCaml for some time now but not really had a problem that
 I wanted to solve. As such, my progress has been rather slow and sporadic
@@ -193,7 +296,7 @@ and providing feedback on my approach.&lt;/p&gt;
   <title>From Jekyll site to Unikernel in fifty lines of code.</title>
   <link href="http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines"/>
   <author>Amir Chaudhry</author>
-  <updated>2014-03-10T18:30:00+00:00</updated>
+  <updated>2014-03-10T19:30:00+01:00</updated>
   <id>http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines</id>
   <content type="html">&lt;p&gt;&lt;a href=&quot;http://openmirage.org&quot;&gt;Mirage&lt;/a&gt; has reached a point where it's possible to easily set up
 end-to-end toolchains to build &lt;a href=&quot;http://queue.acm.org/detail.cfm?id=2566628&quot;&gt;unikernels&lt;/a&gt;! &lt;!--\[If you're not sure what that is, read the post [What is a unikernel?][amc-unikernel]\]--&gt;
@@ -640,7 +743,7 @@ commenting on an earlier draft of this post.&lt;/p&gt;
   <title>Switching from Bootstrap to Zurb Foundation</title>
   <link href="http://amirchaudhry.com/switching-from-bootstrap-to-zurb-foundation"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-11-26T21:05:00+00:00</updated>
+  <updated>2013-11-26T22:05:00+01:00</updated>
   <id>http://amirchaudhry.com/switching-from-bootstrap-to-zurb-foundation</id>
   <content type="html">&lt;p&gt;I've just updated my site's HTML/CSS and moved from Twitter Bootstrap to
 &lt;a href=&quot;http://foundation.zurb.com/learn/features.html&quot;&gt;Zurb Foundation&lt;/a&gt;.  This post captures my subjective notes on the
@@ -803,7 +906,7 @@ customised sites -- it's more flexible but needs more upfront thought.&lt;/li&gt
   <title>Announcing the new OCaml.org</title>
   <link href="http://amirchaudhry.com/announcing-new-ocamlorg"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-11-20T23:00:00+00:00</updated>
+  <updated>2013-11-21T00:00:00+01:00</updated>
   <id>http://amirchaudhry.com/announcing-new-ocamlorg</id>
   <content type="html">&lt;p&gt;As some of you may have noticed, the new OCaml.org site is now live!&lt;/p&gt;
 
@@ -842,7 +945,7 @@ customised sites -- it's more flexible but needs more upfront thought.&lt;/li&gt
   <title>Migration plan for the OCaml.org redesign</title>
   <link href="http://amirchaudhry.com/migration-plan-ocaml-org"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-11-06T11:00:00+00:00</updated>
+  <updated>2013-11-06T12:00:00+01:00</updated>
   <id>http://amirchaudhry.com/migration-plan-ocaml-org</id>
   <content type="html">&lt;p&gt;We're close to releasing the new design of ocaml.org but need help from the
 OCaml community to identify and fix bugs before we switch next week.&lt;/p&gt;
@@ -898,7 +1001,7 @@ the OCaml community and merged.&lt;/p&gt;
   <title>Review of the OCaml FPDays tutorial</title>
   <link href="http://amirchaudhry.com/fpdays-review"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-10-28T12:30:00+00:00</updated>
+  <updated>2013-10-28T13:30:00+01:00</updated>
   <id>http://amirchaudhry.com/fpdays-review</id>
   <content type="html">&lt;p&gt;&lt;a href=&quot;http://fpdays.net/2013/sessions/index.php?session=24&quot;&gt;&lt;img style=&quot;float: right; margin-top: 10px; margin-left: 10px&quot; src=&quot;/images/web/fpdays-logo.png&quot;&gt;&lt;/a&gt;
 Last Thursday a bunch of us from the OCaml Labs team gave an OCaml tutorial
@@ -1048,7 +1151,7 @@ the FPDays crew for a great conference!&lt;/p&gt;
   <title>FP Days OCaml Session</title>
   <link href="http://amirchaudhry.com/fpdays-ocaml-session"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-10-22T22:00:00+01:00</updated>
+  <updated>2013-10-22T23:00:00+02:00</updated>
   <id>http://amirchaudhry.com/fpdays-ocaml-session</id>
   <content type="html">&lt;p&gt;On Thursday, along with &lt;a href=&quot;https://github.com/yallop&quot;&gt;Jeremy&lt;/a&gt; and
 &lt;a href=&quot;http://www.lpw25.net&quot;&gt;Leo&lt;/a&gt;, I'll be running an OCaml Hands-on Session at
@@ -1099,7 +1202,7 @@ installing in advance are &lt;code&gt;core&lt;/code&gt; and &lt;code&gt;js_of_oc
   <title>Feedback requested on the OCaml.org redesign</title>
   <link href="http://amirchaudhry.com/ocamlorg-request-for-feedback"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-09-24T15:00:00+01:00</updated>
+  <updated>2013-09-24T16:00:00+02:00</updated>
   <id>http://amirchaudhry.com/ocamlorg-request-for-feedback</id>
   <content type="html">&lt;p&gt;There is a work-in-progress site at
 &lt;a href=&quot;http://ocaml-redesign.github.io&quot;&gt;ocaml-redesign.github.io&lt;/a&gt;, where we've
@@ -1135,7 +1238,7 @@ add your comments to those threads first.&lt;/p&gt;&lt;/li&gt;
   <title>Wireframe demos for OCaml.org</title>
   <link href="http://amirchaudhry.com/wireframe-demos-for-ocamlorg"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-03-14T00:00:00+00:00</updated>
+  <updated>2013-03-14T00:00:00+01:00</updated>
   <id>http://amirchaudhry.com/wireframe-demos-for-ocamlorg</id>
   <content type="html">&lt;h3&gt;Making mockups&lt;/h3&gt;
 
