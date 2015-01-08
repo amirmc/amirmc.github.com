@@ -27,7 +27,7 @@ so please do [contribute][]!
 [new-ocamlorg]: http://amirchaudhry.com/announcing-new-ocamlorg/
 [contribute]: https://github.com/ocaml/ocaml.org/labels/contribute%21
 
-<a href="http://opam.ocaml.org/"><img style="float: right; margin-left: 10px" src="/images/web/opampkg-2015-01-08.png"></a>
+<a href="http://opam.ocaml.org/"><img style="float: right; margin-left: 10px" src="http://amirchaudhry.com/images/web/opampkg-2015-01-08.png"></a>
 
 - The relentless improvements and growth of OPAM, both in terms of the
 repository — with over 1000 additional packages and several
