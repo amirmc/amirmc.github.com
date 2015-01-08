@@ -2,7 +2,7 @@
 layout: post
 title: "Towards a governance framework for OCaml.org"
 author: Amir Chaudhry
-date: 2015-01-08 14:00:00
+date: 2015-01-08 18:15:00
 tags: [docs, legal, ocaml, ocaml-labs, ocamllabs, opam, platform, project]
 description:
 shorturl: http://bit.ly/1DnCoKW
