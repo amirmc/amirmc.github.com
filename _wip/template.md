@@ -2,7 +2,7 @@
 layout: post
 title: ""
 author: Amir Chaudhry
-date: 2014-XX-XX XX:00:00
+date: 2015-XX-XX XX:00:00
 tags: []
 description:
 shorturl: http://amirchaudhry.com/
@@ -18,3 +18,5 @@ shorturl: http://amirchaudhry.com/
 <div class="flex-video">
   <iframe>Title</iframe>
 </div>
+
+<a href="#"><img style="float: right; margin-left: 10px" src="http://amirchaudhry.com/images/web/#"></a>
