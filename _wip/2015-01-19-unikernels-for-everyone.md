@@ -2,19 +2,22 @@
 layout: post
 title: "Unikernels for everyone!"
 author: Amir Chaudhry
-date: 2015-01-19 12:00:00
+date: 2015-01-19 14:00:00
 tags: [mirage, nymote, ocaml, unikernel]
 description:
-shorturl: http://amirchaudhry.com/
+shorturl: http://amirchaudhry.com/unikernels-for-everyone
 ---
 {% include JB/setup %}
 
-Many people have now set up unikernels for blogs and simple services,
-documenting their experiences for others to follow.  If you'd like to get
-started there are now even more posts to follow that use different tools and
-target different deployment methods.  Below are summaries of some of the posts
-I found interesting and that will make it easier for you try out different
-ways of creating and deploying your unikernels.
+Many people have now set up unikernels for blogs, documenting their
+experiences for others to follow.  Even more important is that people are
+going beyond static sites to build unikernels that provide more complicated
+services and solve real-world problems.
+
+To help newcomers get started, there are now even more posts that that use
+different tools and target different deployment methods.  Below are summaries
+of some of the posts I found interesting and that will make it easier for you
+try out different ways of creating and deploying your unikernels.
 
 ### Unikernel blogs with MirageOS ###
 
@@ -58,7 +61,7 @@ with EC2.  Chris also wrote about the issue he had with clean urls (i.e
 serving `/about/index.html` when a user visits `/about/`) — he describes the
 things he tried out until he was finally able to fix it.  
 
-- *Chris's posts*
+- *Chris' posts*
   - *Setting up a unikernel* - ["About Not Found"][chris-unikernel]
   - *Deploying to Linode* - ["Hello Linode"][chris-linode]
 
