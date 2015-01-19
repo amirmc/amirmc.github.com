@@ -2,14 +2,12 @@
 layout: post
 title: "Unikernels for everyone!"
 author: Amir Chaudhry
-date: 2015-01-19 14:00:00
+date: 2015-01-19 13:00:00
 tags: [mirage, nymote, ocaml, unikernel]
 description:
-shorturl: http://amirchaudhry.com/unikernels-for-everyone
+shorturl: http://bit.ly/14X01uM
 ---
 {% include JB/setup %}
-
-
 
 Many people have now set up unikernels for blogs, documenting their
 experiences for others to follow.  Even more important is that people are
@@ -121,7 +119,7 @@ see from the posts above, shared experiences help other people progress
 further and branch out into new areas. When you've had a chance to try
 something out please do share your experiences online! 
 
-<p class="footnote">This post also appears on the <a href="http://nymote.org/blog">Nymote blog</a>.</p>
+<p class="footnote">This post also appears on the <a href="http://nymote.org/blog/2015/unikernels-for-everyone/">Nymote blog</a>.</p>
 
 <!-- ===== LINKS ===== -->
 
