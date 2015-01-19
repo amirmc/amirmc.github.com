@@ -9,6 +9,8 @@ shorturl: http://amirchaudhry.com/unikernels-for-everyone
 ---
 {% include JB/setup %}
 
+
+
 Many people have now set up unikernels for blogs, documenting their
 experiences for others to follow.  Even more important is that people are
 going beyond static sites to build unikernels that provide more complicated
@@ -119,6 +121,7 @@ see from the posts above, shared experiences help other people progress
 further and branch out into new areas. When you've had a chance to try
 something out please do share your experiences online! 
 
+<p class="footnote">This post also appears on the <a href="http://nymote.org/blog">Nymote blog</a>.</p>
 
 <!-- ===== LINKS ===== -->
 
