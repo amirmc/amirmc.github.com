@@ -5,7 +5,7 @@ author: Amir Chaudhry
 date: 2015-01-20 14:00:00
 tags: [calendar, contacts, irmin, mail, mirage, nymote, ocaml, signpost, unikernel]
 description:
-shorturl: http://amirchaudhry.com/brewing-miso-to-serve-nymote/
+shorturl: http://bit.ly/1xQIc7G
 ---
 {% include JB/setup %}
 
