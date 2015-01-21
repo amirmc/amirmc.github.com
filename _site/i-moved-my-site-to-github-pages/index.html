@@ -79,39 +79,38 @@
       <div class="medium-9 columns">
         <h2><a class="post-title" href="/i-moved-my-site-to-github-pages">I moved my site to GitHub Pages</a></h2>
         <!-- <br /> -->
-        <p>Yet again, it's been several months since my last post (it's almost a habit now).  This isn't intended to be another catchup post, though.</p>
+        
+<p>Yet again, it&#8217;s been several months since my last post (it&#8217;s almost a habit now).  This isn&#8217;t intended to be another catchup post, though.</p>
 
-<p>The reason for this post is that I've moved my site (<a href="http://amirchaudhry.com">amirchaudhry.com</a>) to <a href="http://pages.github.com">GitHub Pages</a>.</p>
+<p>The reason for this post is that I&#8217;ve moved my site (<a href="http://amirchaudhry.com">amirchaudhry.com</a>) to <a href="http://pages.github.com">GitHub Pages</a>.</p>
 
-<p>Since I'm using my own domain, this is unlikely to affect anyone but I've copied this post into both the new GitHub site and old Posterous site just in case.  If you're reading this via <a href="http://amirmc.posterous.com">my Posterous site</a> (presumably through the share/follow features there), then it'll be the last post to go up there.</p>
+<p>Since I&#8217;m using my own domain, this is unlikely to affect anyone but I&#8217;ve copied this post into both the new GitHub site and old Posterous site just in case.  If you&#8217;re reading this via <a href="http://amirmc.posterous.com">my Posterous site</a> (presumably through the share/follow features there), then it&#8217;ll be the last post to go up there.</p>
 
 <p>There are still a bunch of things that are bit broken in the new place.</p>
 
 <ul>
-<li>No tweet/sharing buttons*</li>
-<li>Tags don't sort properly</li>
-<li>Search doesn't work well</li>
-<li>RSS/Atom feed is probably a mess</li>
-<li>Syntax highlighting isn't working**</li>
+  <li>No tweet/sharing buttons*</li>
+  <li>Tags don&#8217;t sort properly</li>
+  <li>Search doesn&#8217;t work well</li>
+  <li>RSS/Atom feed is probably a mess</li>
+  <li>Syntax highlighting isn&#8217;t working**</li>
 </ul>
 
+<h3 id="moving-from-posterous-to-github-pages">Moving from Posterous to GitHub Pages</h3>
 
-<h3>Moving from Posterous to GitHub Pages</h3>
+<p>The process of moving to GitHub was a useful experience.  Here are the steps I ended up taking before I pointed the domain to the new site. Overall, I&#8217;m really glad that my posts aren&#8217;t tied up in someone else&#8217;s platform anymore.</p>
 
-<p>The process of moving to GitHub was a useful experience.  Here are the steps I ended up taking before I pointed the domain to the new site. Overall, I'm really glad that my posts aren't tied up in someone else's platform anymore.</p>
+<h4 id="getting-set-up-with-github-pages">Getting set up with GitHub Pages</h4>
 
-<h4>Getting set up with GitHub Pages</h4>
-
-<p>I used <a href="http://jekyllbootstrap.com">Jekyll Bootstrap</a> and the default <a href="http://twitter.github.com/bootstrap/">bootstrap theme</a>. It was <em>ridiculously</em> quick and easy to get a basic site up and start playing around.  The first thing I did was try to re-create structure of my old site and then worry about how it looked.  I'd never dealt with CSS before so this was always going to take a while. For example, it took me <em>ages</em> to figure out why items kept shifting between pages. Turns out I needed the following line in my style file:</p>
+<p>I used <a href="http://jekyllbootstrap.com">Jekyll Bootstrap</a> and the default <a href="http://twitter.github.com/bootstrap/">bootstrap theme</a>. It was <em>ridiculously</em> quick and easy to get a basic site up and start playing around.  The first thing I did was try to re-create structure of my old site and then worry about how it looked.  I&#8217;d never dealt with CSS before so this was always going to take a while. For example, it took me <em>ages</em> to figure out why items kept shifting between pages. Turns out I needed the following line in my style file:</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">html</span> <span class="p">{</span> <span class="k">overflow-y</span><span class="o">:</span> <span class="k">scroll</span><span class="p">;</span> <span class="p">}</span></code></pre></div>
 
+<p>Although dealing with the CSS took a while, Bootstrap made it really easy to copy/paste/edit the bits I wanted to change.  The nav section was a pain to sort out.  It took a few weeks to get to this point but you&#8217;re looking at a bootstrap site, which looks nothing like bootstrap (win!). It&#8217;s likely that I&#8217;ll keep tweaking things but I&#8217;m not expecting to do anything major.</p>
 
-<p>Although dealing with the CSS took a while, Bootstrap made it really easy to copy/paste/edit the bits I wanted to change.  The nav section was a pain to sort out.  It took a few weeks to get to this point but you're looking at a bootstrap site, which looks nothing like bootstrap (win!). It's likely that I'll keep tweaking things but I'm not expecting to do anything major.</p>
+<h4 id="migrating-the-posts">Migrating the posts</h4>
 
-<h4>Migrating the posts</h4>
-
-<p>There wasn't an easy way to migrate directly from Posterous to GitHub. There are scripts available but either through bad-luck or ineptitude, I couldn't get them to work.  A guy called <a href="http://jazzychad.net/">Chad</a> recently created <a href="http://exportmyposts.com">Export My Posts</a>, which pulled out all my content in html format (phew!).  I really didn't want to deal with learning an API or parsing an xml file, so I'm glad he put this together.  It works extremely well.</p>
+<p>There wasn&#8217;t an easy way to migrate directly from Posterous to GitHub. There are scripts available but either through bad-luck or ineptitude, I couldn&#8217;t get them to work.  A guy called <a href="http://jazzychad.net/">Chad</a> recently created <a href="http://exportmyposts.com">Export My Posts</a>, which pulled out all my content in html format (phew!).  I really didn&#8217;t want to deal with learning an API or parsing an xml file, so I&#8217;m glad he put this together.  It works extremely well.</p>
 
 <p>Next step was to run all the html posts through <a href="http://johnmacfarlane.net/pandoc">pandoc</a> to convert them to markdown. I wrote a fairly trivial shell script to do this.</p>
 
@@ -124,28 +123,23 @@
     pandoc -o ./convert/<span class="nv">$file</span>.md <span class="nv">$file</span>
 <span class="k">done</span></code></pre></div>
 
-
-<p>Then came the slow process of checking each file, removing the left-over html, adding the appropriate headers, dealing with image galleries etc.  Part of this could have been automated but I don't have that many posts so I went through them manually.</p>
+<p>Then came the slow process of checking each file, removing the left-over html, adding the appropriate headers, dealing with image galleries etc.  Part of this could have been automated but I don&#8217;t have that many posts so I went through them manually.</p>
 
 <p>Once all that was done, I simply had to switch the domain over and everything was fine.</p>
 
-<h4>Lessons learned</h4>
+<h4 id="lessons-learned">Lessons learned</h4>
 
-<p>I need to keep a local copy of content. Of course, this is now solved but even before-hand I would write and save things locally before sending them up. The problem was that I'd always have to tweak something or edit a typo and <em>those</em> changes happened on the site (never on my local copy).</p>
+<p>I need to keep a local copy of content. Of course, this is now solved but even before-hand I would write and save things locally before sending them up. The problem was that I&#8217;d always have to tweak something or edit a typo and <em>those</em> changes happened on the site (never on my local copy). </p>
 
-<p>Having existing things I can dig into and copy from (i.e. bootstrap) really speeds up my learning. I don't think I could have gotten this far this quickly without such resources.  If you look at the code itself it's probably a mess, but it's <em>my</em> mess.</p>
+<p>Having existing things I can dig into and copy from (i.e. bootstrap) really speeds up my learning. I don&#8217;t think I could have gotten this far this quickly without such resources.  If you look at the code itself it&#8217;s probably a mess, but it&#8217;s <em>my</em> mess.</p>
 
 <p>Scripting things will help. Quickly creating image galleries is the next thing I need to figure out. The process is obvious to me now (since I did parts of it by hand) but I have to automate it using <a href="http://www.imagemagick.org">ImageMagick</a>.</p>
 
-<p>Overall, I'm quite pleased with myself.  I've gone from knowing nothing about CSS, static sites, and bootstrap to being vaguely (in)competent. Rock on!</p>
+<p>Overall, I&#8217;m quite pleased with myself.  I&#8217;ve gone from knowing nothing about CSS, static sites, and bootstrap to being vaguely (in)competent. Rock on!</p>
 
 <p class="footnote">*Though I'll probably use something like <a href="http://www.addthis.com">AddThis</a>. ... Edit: Ok, so at the time of writing, I didn't have the buttons but by the time of publishing I'd figured it out :)</p>
 
-
-
-
 <p class="footnote">**Yup, managed to fix that too :)</p>
-
 
         <hr id='share-comment'>
         <!-- AddThis Button BEGIN -->

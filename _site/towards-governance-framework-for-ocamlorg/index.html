@@ -79,13 +79,14 @@
       <div class="medium-9 columns">
         <h2><a class="post-title" href="/towards-governance-framework-for-ocamlorg">Towards a governance framework for OCaml.org</a></h2>
         <!-- <br /> -->
-        <p>The projects around the OCaml.org domain name are becoming more established
-and it's time to think about how they're organised. 2014 saw a <em>lot</em> of
+        
+<p>The projects around the OCaml.org domain name are becoming more established
+and it’s time to think about how they’re organised. 2014 saw a <em>lot</em> of
 activity, which built on the <a href="http://www.cl.cam.ac.uk/projects/ocamllabs/news/index.html#OnlineatOCamlorg">successes from 2013</a>.
 Some of the main things that stand out to me are:</p>
 
 <ul>
-<li>More <a href="http://ocaml.org/contributors.html">volunteers</a> contributing to the public website with
+  <li>More <a href="http://ocaml.org/contributors.html">volunteers</a> contributing to the public website with
 translations, bug fixes and content updates, as well as many new visitors —
 for example, the new page on <a href="http://ocaml.org/learn/teaching-ocaml.html">teaching OCaml</a> received over 5k
 visits alone. The increasing contributions are a result of the earlier work on
@@ -93,85 +94,94 @@ visits alone. The increasing contributions are a result of the earlier work on
 so please do <a href="https://github.com/ocaml/ocaml.org/labels/contribute%21">contribute</a>!</li>
 </ul>
 
-
-<p><a href="http://opam.ocaml.org/"><img style="float: right; margin-left: 10px" src="http://amirchaudhry.com/images/web/opampkg-2015-01-08.png"></a></p>
+<p><a href="http://opam.ocaml.org/"><img style="float: right; margin-left: 10px" src="http://amirchaudhry.com/images/web/opampkg-2015-01-08.png" /></a></p>
 
 <ul>
-<li><p>The relentless improvements and growth of OPAM, both in terms of the
+  <li>The relentless improvements and growth of OPAM, both in terms of the
 repository — with over 1000 additional packages and several
 <a href="http://lists.ocaml.org/pipermail/opam-devel/2014-October/000781.html">new repo maintainers</a> — and also improved workflows (e.g the new
-<a href="http://opam.ocaml.org/blog/opam-1-2-pin/">pin functionality</a>).
+<a href="http://opam.ocaml.org/blog/opam-1-2-pin/">pin functionality</a>). 
 The OPAM site and package list also moved to the ocaml.org domain, becoming
 the substrate for the OCaml Platform efforts. This began with the work towards
 <a href="http://opam.ocaml.org/blog/opam-1-2-0-beta4/">OPAM 1.2</a> and there is much more to come (including closer
 integration in terms of styling). Join the <a href="http://lists.ocaml.org/listinfo/platform">Platform list</a> to
-keep up to date.</p></li>
-<li><p>Much more activity on the <a href="http://lists.ocaml.org">mailing lists</a> in general and user groups
-requesting to have lists made (e.g the <a href="http://lists.ocaml.org/listinfo/teaching">teaching list</a>). If anyone
-has a need for a new list, just ask on the
-<a href="http://lists.ocaml.org/listinfo/infrastructure">infrastructure list</a>!</p></li>
+keep up to date.</li>
 </ul>
 
+<ul>
+  <li>Much more activity on the <a href="http://lists.ocaml.org">mailing lists</a> in general and user groups
+requesting to have lists made (e.g the <a href="http://lists.ocaml.org/listinfo/teaching">teaching list</a>). If anyone
+has a need for a new list, just ask on the
+<a href="http://lists.ocaml.org/listinfo/infrastructure">infrastructure list</a>!</li>
+</ul>
 
-<p>There is other work besides those I've mentioned and I think by any measure,
+<p>There is other work besides those I’ve mentioned and I think by any measure,
 all the projects have been quite successful. As the community continues to
-develop, it's important to clarify how things currently work to improve the
+develop, it’s important to clarify how things currently work to improve the
 level of transparency and make it easier for newcomers to get involved.</p>
 
-<h3>Factors for a governance framework</h3>
+<h3 id="factors-for-a-governance-framework">Factors for a governance framework</h3>
 
-<p>For the last couple of months, I've been looking over how larger projects
+<p>For the last couple of months, I’ve been looking over how larger projects
 manage themselves and the governance documents that are available. My aim has
 been to put such a document together for the OCaml.org domain without
 introducing burdensome processes.  There are number of things that stood out
-to me during this process, which have guided the approach I'm taking.</p>
+to me during this process, which have guided the approach I’m taking.</p>
 
 <p>My considerations for an OCaml.org governance document:</p>
 
 <ul>
-<li><p>A governance document is not <em>necessary</em> for success but it's valuable to
+  <li>
+    <p>A governance document is not <em>necessary</em> for success but it’s valuable to
 demonstrate a commitment to a <strong>stable decision-making process</strong>.  There are
 many projects that progress perfectly well without any documented processes
 and indeed the work around OCaml.org so far is a good example of this (as well
 as OCaml itself).  However, for projects to achieve a scale greater than the
-initial teams, it's a significant benefit to encode in writing how things work
-(NB: please note that I didn't define the <em>type</em> of decision-making process -
-merely that it's a stable one).</p></li>
-<li><p>It must <strong>clarify its scope</strong> so that there is no confusion about what the
+initial teams, it’s a significant benefit to encode in writing how things work
+(NB: please note that I didn’t define the <em>type</em> of decision-making process -
+merely that it’s a stable one).</p>
+  </li>
+  <li>
+    <p>It must <strong>clarify its scope</strong> so that there is no confusion about what the
 document covers. In the case of OCaml.org, it needs to be clear that the
-governance covers the domain itself, rather than referring to the website.</p></li>
-<li><p>It should <strong>document the reality</strong>, rather than represent an aspirational
-goal or what people <em>believe</em> a governance structure should look like.  It's
+governance covers the domain itself, rather than referring to the website. </p>
+  </li>
+  <li>
+    <p>It should <strong>document the reality</strong>, rather than represent an aspirational
+goal or what people <em>believe</em> a governance structure should look like.  It’s
 very tempting to think of an idealised structure without recognising that
 behaviours and norms have <em>already</em> been established. Sometimes this will be
 vague and poorly defined but that might simply indicate areas that the
-community hasn't encountered yet (e.g it's uncommon for any new project to
+community hasn’t encountered yet (e.g it’s uncommon for any new project to
 seriously think about dispute resolution processes until they have to).  In
 this sense, the initial version of a governance document should simply be a
 written description of how things currently stand, rather than a means to
-adjust that behaviour.</p></li>
-<li><p>It should be <strong>simple and self-contained</strong>, so that anyone can understand
+adjust that behaviour.  </p>
+  </li>
+  <li>
+    <p>It should be <strong>simple and self-contained</strong>, so that anyone can understand
 the intent quickly without recourse to other documents.  It may be tempting to
 consider every edge-case or try to resolve every likely ambiguity but this
 just leads to large, legal documents.  This approach may well be necessary
 once projects have reached a certain scale but to implement it sooner would be
-a case of premature optimisation — not to mention that very few people would
-read and remember such a document.</p></li>
-<li><p>It's a <strong>living document</strong>. If the community decides that it would prefer a
+a case of premature optimisation — not to mention that very few people would 
+read and remember such a document.</p>
+  </li>
+  <li>
+    <p>It’s a <strong>living document</strong>. If the community decides that it would prefer a
 new arrangement, then the document conveniently provides a stable starting
 point from which to iterate. Indeed, it <em>should</em> adapt along with the project
-that it governs.</p></li>
+that it governs. </p>
+  </li>
 </ul>
 
-
-<p>With the above points in mind, I've been putting together a draft governance
-framework to cover how the OCaml.org domain name is managed.  It's been a
-quiet work-in-progress for some time and I'll be getting in touch with
-maintainers of specific projects soon.  Once I've had a round of reviews, I'll
+<p>With the above points in mind, I’ve been putting together a draft governance
+framework to cover how the OCaml.org domain name is managed.  It’s been a
+quiet work-in-progress for some time and I’ll be getting in touch with
+maintainers of specific projects soon.  Once I’ve had a round of reviews, I’ll
 be sharing it more widely and posting it here!</p>
 
 <!-- [![FIGURE 06.1 Governance versus anarchy on Flickr](http://amirchaudhry.com/images/web/governance-alpha.png)](https://www.flickr.com/photos/jurgenappelo/5201270923/) -->
-
 
         <hr id='share-comment'>
         <!-- AddThis Button BEGIN -->

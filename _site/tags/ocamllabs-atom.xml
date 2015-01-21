@@ -4,7 +4,7 @@
   <link href="http://amirchaudhry.com/tags/ocamllabs-atom.xml" rel="self"/>
   <link href="http://amirchaudhry.com"/>
   <subtitle>thoughts, comments &amp; general ramblings</subtitle>
-  <updated>2015-01-21T14:42:41+00:00</updated>
+  <updated>2015-01-21T15:14:27+00:00</updated>
   <id>http://amirchaudhry.com/tags/#ocamllabs</id>
   <author>
     <name>Amir Chaudhry</name>
@@ -16,13 +16,14 @@
   <author>Amir Chaudhry</author>
   <updated>2015-01-08T18:15:00+00:00</updated>
   <id>http://amirchaudhry.com/towards-governance-framework-for-ocamlorg</id>
-  <content type="html">&lt;p&gt;The projects around the OCaml.org domain name are becoming more established
-and it's time to think about how they're organised. 2014 saw a &lt;em&gt;lot&lt;/em&gt; of
+  <content type="html">
+&lt;p&gt;The projects around the OCaml.org domain name are becoming more established
+and it’s time to think about how they’re organised. 2014 saw a &lt;em&gt;lot&lt;/em&gt; of
 activity, which built on the &lt;a href=&quot;http://www.cl.cam.ac.uk/projects/ocamllabs/news/index.html#OnlineatOCamlorg&quot;&gt;successes from 2013&lt;/a&gt;.
 Some of the main things that stand out to me are:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;More &lt;a href=&quot;http://ocaml.org/contributors.html&quot;&gt;volunteers&lt;/a&gt; contributing to the public website with
+  &lt;li&gt;More &lt;a href=&quot;http://ocaml.org/contributors.html&quot;&gt;volunteers&lt;/a&gt; contributing to the public website with
 translations, bug fixes and content updates, as well as many new visitors —
 for example, the new page on &lt;a href=&quot;http://ocaml.org/learn/teaching-ocaml.html&quot;&gt;teaching OCaml&lt;/a&gt; received over 5k
 visits alone. The increasing contributions are a result of the earlier work on
@@ -30,85 +31,94 @@ visits alone. The increasing contributions are a result of the earlier work on
 so please do &lt;a href=&quot;https://github.com/ocaml/ocaml.org/labels/contribute%21&quot;&gt;contribute&lt;/a&gt;!&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;p&gt;&lt;a href=&quot;http://opam.ocaml.org/&quot;&gt;&lt;img style=&quot;float: right; margin-left: 10px&quot; src=&quot;http://amirchaudhry.com/images/web/opampkg-2015-01-08.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://opam.ocaml.org/&quot;&gt;&lt;img style=&quot;float: right; margin-left: 10px&quot; src=&quot;http://amirchaudhry.com/images/web/opampkg-2015-01-08.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The relentless improvements and growth of OPAM, both in terms of the
+  &lt;li&gt;The relentless improvements and growth of OPAM, both in terms of the
 repository — with over 1000 additional packages and several
 &lt;a href=&quot;http://lists.ocaml.org/pipermail/opam-devel/2014-October/000781.html&quot;&gt;new repo maintainers&lt;/a&gt; — and also improved workflows (e.g the new
-&lt;a href=&quot;http://opam.ocaml.org/blog/opam-1-2-pin/&quot;&gt;pin functionality&lt;/a&gt;).
+&lt;a href=&quot;http://opam.ocaml.org/blog/opam-1-2-pin/&quot;&gt;pin functionality&lt;/a&gt;). 
 The OPAM site and package list also moved to the ocaml.org domain, becoming
 the substrate for the OCaml Platform efforts. This began with the work towards
 &lt;a href=&quot;http://opam.ocaml.org/blog/opam-1-2-0-beta4/&quot;&gt;OPAM 1.2&lt;/a&gt; and there is much more to come (including closer
 integration in terms of styling). Join the &lt;a href=&quot;http://lists.ocaml.org/listinfo/platform&quot;&gt;Platform list&lt;/a&gt; to
-keep up to date.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Much more activity on the &lt;a href=&quot;http://lists.ocaml.org&quot;&gt;mailing lists&lt;/a&gt; in general and user groups
-requesting to have lists made (e.g the &lt;a href=&quot;http://lists.ocaml.org/listinfo/teaching&quot;&gt;teaching list&lt;/a&gt;). If anyone
-has a need for a new list, just ask on the
-&lt;a href=&quot;http://lists.ocaml.org/listinfo/infrastructure&quot;&gt;infrastructure list&lt;/a&gt;!&lt;/p&gt;&lt;/li&gt;
+keep up to date.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;ul&gt;
+  &lt;li&gt;Much more activity on the &lt;a href=&quot;http://lists.ocaml.org&quot;&gt;mailing lists&lt;/a&gt; in general and user groups
+requesting to have lists made (e.g the &lt;a href=&quot;http://lists.ocaml.org/listinfo/teaching&quot;&gt;teaching list&lt;/a&gt;). If anyone
+has a need for a new list, just ask on the
+&lt;a href=&quot;http://lists.ocaml.org/listinfo/infrastructure&quot;&gt;infrastructure list&lt;/a&gt;!&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;There is other work besides those I've mentioned and I think by any measure,
+&lt;p&gt;There is other work besides those I’ve mentioned and I think by any measure,
 all the projects have been quite successful. As the community continues to
-develop, it's important to clarify how things currently work to improve the
+develop, it’s important to clarify how things currently work to improve the
 level of transparency and make it easier for newcomers to get involved.&lt;/p&gt;
 
-&lt;h3&gt;Factors for a governance framework&lt;/h3&gt;
+&lt;h3 id=&quot;factors-for-a-governance-framework&quot;&gt;Factors for a governance framework&lt;/h3&gt;
 
-&lt;p&gt;For the last couple of months, I've been looking over how larger projects
+&lt;p&gt;For the last couple of months, I’ve been looking over how larger projects
 manage themselves and the governance documents that are available. My aim has
 been to put such a document together for the OCaml.org domain without
 introducing burdensome processes.  There are number of things that stood out
-to me during this process, which have guided the approach I'm taking.&lt;/p&gt;
+to me during this process, which have guided the approach I’m taking.&lt;/p&gt;
 
 &lt;p&gt;My considerations for an OCaml.org governance document:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;A governance document is not &lt;em&gt;necessary&lt;/em&gt; for success but it's valuable to
+  &lt;li&gt;
+    &lt;p&gt;A governance document is not &lt;em&gt;necessary&lt;/em&gt; for success but it’s valuable to
 demonstrate a commitment to a &lt;strong&gt;stable decision-making process&lt;/strong&gt;.  There are
 many projects that progress perfectly well without any documented processes
 and indeed the work around OCaml.org so far is a good example of this (as well
 as OCaml itself).  However, for projects to achieve a scale greater than the
-initial teams, it's a significant benefit to encode in writing how things work
-(NB: please note that I didn't define the &lt;em&gt;type&lt;/em&gt; of decision-making process -
-merely that it's a stable one).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;It must &lt;strong&gt;clarify its scope&lt;/strong&gt; so that there is no confusion about what the
+initial teams, it’s a significant benefit to encode in writing how things work
+(NB: please note that I didn’t define the &lt;em&gt;type&lt;/em&gt; of decision-making process -
+merely that it’s a stable one).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It must &lt;strong&gt;clarify its scope&lt;/strong&gt; so that there is no confusion about what the
 document covers. In the case of OCaml.org, it needs to be clear that the
-governance covers the domain itself, rather than referring to the website.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;It should &lt;strong&gt;document the reality&lt;/strong&gt;, rather than represent an aspirational
-goal or what people &lt;em&gt;believe&lt;/em&gt; a governance structure should look like.  It's
+governance covers the domain itself, rather than referring to the website. &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It should &lt;strong&gt;document the reality&lt;/strong&gt;, rather than represent an aspirational
+goal or what people &lt;em&gt;believe&lt;/em&gt; a governance structure should look like.  It’s
 very tempting to think of an idealised structure without recognising that
 behaviours and norms have &lt;em&gt;already&lt;/em&gt; been established. Sometimes this will be
 vague and poorly defined but that might simply indicate areas that the
-community hasn't encountered yet (e.g it's uncommon for any new project to
+community hasn’t encountered yet (e.g it’s uncommon for any new project to
 seriously think about dispute resolution processes until they have to).  In
 this sense, the initial version of a governance document should simply be a
 written description of how things currently stand, rather than a means to
-adjust that behaviour.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;It should be &lt;strong&gt;simple and self-contained&lt;/strong&gt;, so that anyone can understand
+adjust that behaviour.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It should be &lt;strong&gt;simple and self-contained&lt;/strong&gt;, so that anyone can understand
 the intent quickly without recourse to other documents.  It may be tempting to
 consider every edge-case or try to resolve every likely ambiguity but this
 just leads to large, legal documents.  This approach may well be necessary
 once projects have reached a certain scale but to implement it sooner would be
-a case of premature optimisation — not to mention that very few people would
-read and remember such a document.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;It's a &lt;strong&gt;living document&lt;/strong&gt;. If the community decides that it would prefer a
+a case of premature optimisation — not to mention that very few people would 
+read and remember such a document.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It’s a &lt;strong&gt;living document&lt;/strong&gt;. If the community decides that it would prefer a
 new arrangement, then the document conveniently provides a stable starting
 point from which to iterate. Indeed, it &lt;em&gt;should&lt;/em&gt; adapt along with the project
-that it governs.&lt;/p&gt;&lt;/li&gt;
+that it governs. &lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;p&gt;With the above points in mind, I've been putting together a draft governance
-framework to cover how the OCaml.org domain name is managed.  It's been a
-quiet work-in-progress for some time and I'll be getting in touch with
-maintainers of specific projects soon.  Once I've had a round of reviews, I'll
+&lt;p&gt;With the above points in mind, I’ve been putting together a draft governance
+framework to cover how the OCaml.org domain name is managed.  It’s been a
+quiet work-in-progress for some time and I’ll be getting in touch with
+maintainers of specific projects soon.  Once I’ve had a round of reviews, I’ll
 be sharing it more widely and posting it here!&lt;/p&gt;
 
 &lt;!-- [![FIGURE 06.1 Governance versus anarchy on Flickr](http://amirchaudhry.com/images/web/governance-alpha.png)](https://www.flickr.com/photos/jurgenappelo/5201270923/) --&gt;
-
 </content>
 </entry>
 
@@ -119,25 +129,26 @@ be sharing it more widely and posting it here!&lt;/p&gt;
   <author>Amir Chaudhry</author>
   <updated>2014-04-29T10:30:00+01:00</updated>
   <id>http://amirchaudhry.com/writing-planet-in-pure-ocaml</id>
-  <content type="html">&lt;p&gt;I've been learning OCaml for some time now but not really had a problem that
+  <content type="html">
+&lt;p&gt;I&amp;#8217;ve been learning OCaml for some time now but not really had a problem that
 I wanted to solve. As such, my progress has been rather slow and sporadic
-and I only make time for exercises when I'm travelling. In order to focus my
-learning, I have to identify and tackle something specific. That's usually
+and I only make time for exercises when I&amp;#8217;m travelling. In order to focus my
+learning, I have to identify and tackle something specific. That&amp;#8217;s usually
 the best way to advance and I recently found something I can work on.&lt;/p&gt;
 
-&lt;p&gt;As I've been trying to write more blog posts, I want to be able to keep as
+&lt;p&gt;As I&amp;#8217;ve been trying to write more blog posts, I want to be able to keep as
 much content on my own site as possible and syndicate my posts out to other
 sites I run. Put simply, I want to be able to take multiple feeds from
 different sources and merge them into one feed, which will be served from
 some other site. In addition, I also want to render that feed as HTML on a
 webpage. All of this has to remain within the OCaml toolchain so it can be
 used as part of &lt;a href=&quot;http://openmirage.org/&quot;&gt;Mirage&lt;/a&gt; (i.e. I can use it when
-&lt;a href=&quot;http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines&quot;&gt;building unikernels&lt;/a&gt;).&lt;/p&gt;
+&lt;a href=&quot;http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines&quot;&gt;building unikernels&lt;/a&gt;). &lt;/p&gt;
 
-&lt;p&gt;What I'm describing might sound familiar and there's a well-known tool that
-does this called &lt;a href=&quot;http://en.wikipedia.org/wiki/Planet_(software)&quot;&gt;Planet&lt;/a&gt;. It's a 'river of news' feed reader, which
+&lt;p&gt;What I&amp;#8217;m describing might sound familiar and there&amp;#8217;s a well-known tool that
+does this called &lt;a href=&quot;http://en.wikipedia.org/wiki/Planet_(software)&quot;&gt;Planet&lt;/a&gt;. It&amp;#8217;s a &amp;#8216;river of news&amp;#8217; feed reader, which
 aggregates feeds and can display posts on webpages and you can find the
-&lt;a href=&quot;http://www.planetplanet.org&quot;&gt;original Planet&lt;/a&gt; and it's successor &lt;a href=&quot;http://intertwingly.net/code/venus/docs/index.html&quot;&gt;Venus&lt;/a&gt;, both written in Python.
+&lt;a href=&quot;http://www.planetplanet.org&quot;&gt;original Planet&lt;/a&gt; and it&amp;#8217;s successor &lt;a href=&quot;http://intertwingly.net/code/venus/docs/index.html&quot;&gt;Venus&lt;/a&gt;, both written in Python.
 However, Venus seems to be unmaintained as there are a number of
 &lt;a href=&quot;https://github.com/rubys/venus/issues&quot;&gt;unresolved issues and pull requests&lt;/a&gt;, which have been
 languishing for quite some time with no discussion. There does appear to be
@@ -151,23 +162,22 @@ no reported issues.&lt;/p&gt;
     lucky I managed to get to the Wikipedia page.\] 
 --&gt;
 
-
-&lt;h3&gt;Benefits of a Planet in pure OCaml&lt;/h3&gt;
+&lt;h3 id=&quot;benefits-of-a-planet-in-pure-ocaml&quot;&gt;Benefits of a Planet in pure OCaml&lt;/h3&gt;
 
 &lt;p&gt;Although I could use the one of the above options, it would be much more
 useful to keep everything within the OCaml ecosystem.  This way I can make
 the best use of the &lt;a href=&quot;https://queue.acm.org/detail.cfm?id=2566628&quot;&gt;unikernel approach&lt;/a&gt; with Mirage (i.e lean,
-single-purpose appliances). Obviously, the existing options don't lend
+single-purpose appliances). Obviously, the existing options don&amp;#8217;t lend
 themselves to this approach and there are &lt;a href=&quot;https://forge.ocamlcore.org/tracker/index.php?func=detail&amp;amp;aid=1349&amp;amp;group_id=1&amp;amp;atid=101&quot;&gt;known bugs&lt;/a&gt; as a lot has
 changed on the web since Planet Venus (e.g the adoption of HTML5).
 Having said that, I can learn a lot from the existing implementations and
-I'm glad I'm not embarking into completely uncharted territory.&lt;/p&gt;
+I&amp;#8217;m glad I&amp;#8217;m not embarking into completely uncharted territory.&lt;/p&gt;
 
-&lt;p&gt;In addition, the OCaml version doesn't need to (and &lt;em&gt;shouldn't&lt;/em&gt;) be written
+&lt;p&gt;In addition, the OCaml version doesn&amp;#8217;t need to (and &lt;em&gt;shouldn&amp;#8217;t&lt;/em&gt;) be written
 as one monolithic library.  Instead, pulling together a collection of
 smaller, reusable libraries that present clear interfaces to each other
 would make things much more maintainable. This would bring substantially
-greater benefits to everyone and &lt;a href=&quot;https://opam.ocaml.org/&quot;&gt;OPAM&lt;/a&gt; can manage the dependencies.&lt;/p&gt;
+greater benefits to everyone and &lt;a href=&quot;https://opam.ocaml.org/&quot;&gt;OPAM&lt;/a&gt; can manage the dependencies. &lt;/p&gt;
 
 &lt;!--
     OPAM makes managing dependencies easy so having a number of single-
@@ -177,22 +187,21 @@ greater benefits to everyone and &lt;a href=&quot;https://opam.ocaml.org/&quot;&
     used by multiple projects.
 --&gt;
 
-
-&lt;h3&gt;Breaking down the problem&lt;/h3&gt;
+&lt;h3 id=&quot;breaking-down-the-problem&quot;&gt;Breaking down the problem&lt;/h3&gt;
 
 &lt;p&gt;The first cut is somewhat straightforward as we have a piece that deals with
 the consumption and manipulation of feeds and another that takes the result
 and emits HTML. This is also how the original Planet is put together, with a
-library called &lt;a href=&quot;https://pypi.python.org/pypi/feedparser/&quot;&gt;feedparser&lt;/a&gt; and another for templating pages.&lt;/p&gt;
+library called &lt;a href=&quot;https://pypi.python.org/pypi/feedparser/&quot;&gt;feedparser&lt;/a&gt; and another for templating pages.  &lt;/p&gt;
 
 &lt;p&gt;For the feed-parsing aspect, I can break it down further by considering Atom
 and RSS feeds separately and then even further by thinking about how to (1)
 consume such feeds and (2) output them. Then there is the HTML component,
 where it may be necessary to consider existing representations of HTML. These
-are not new ideas and since I'm claiming that individual pieces might be
-useful then it's worth finding out which ones are already available.&lt;/p&gt;
+are not new ideas and since I&amp;#8217;m claiming that individual pieces might be
+useful then it&amp;#8217;s worth finding out which ones are already available.&lt;/p&gt;
 
-&lt;h4&gt;Existing components&lt;/h4&gt;
+&lt;h4 id=&quot;existing-components&quot;&gt;Existing components&lt;/h4&gt;
 
 &lt;p&gt;The easiest way to find existing libraries is via the
 &lt;a href=&quot;http://opam.ocaml.org/packages&quot;&gt;OPAM package list&lt;/a&gt;. Some quick searches for &lt;code&gt;RSS&lt;/code&gt;, &lt;code&gt;XML&lt;/code&gt;, &lt;code&gt;HTML&lt;/code&gt;
@@ -200,53 +209,51 @@ and &lt;code&gt;net&lt;/code&gt; bring up a lot of packages. The most relevant o
 &lt;a href=&quot;https://opam.ocaml.org/packages/xmlm/xmlm.1.2.0/&quot;&gt;xmlm&lt;/a&gt;, &lt;a href=&quot;https://opam.ocaml.org/packages/ocamlrss/ocamlrss.2.2.2/&quot;&gt;ocamlrss&lt;/a&gt;, &lt;a href=&quot;https://opam.ocaml.org/packages/cow/cow.0.9.1/&quot;&gt;cow&lt;/a&gt; and maybe &lt;a href=&quot;http://opam.ocaml.org/packages/xmldiff/xmldiff.0.1/&quot;&gt;xmldiff&lt;/a&gt;. I noticed that
 nothing appears, when searching for &lt;code&gt;Atom&lt;/code&gt;, but I do know that &lt;code&gt;cow&lt;/code&gt; has an
 Atom module for creating feeds. In terms of turning feeds into pages and
-HTML, I'm aware of &lt;a href=&quot;https://github.com/ocaml/ocaml.org/blob/master/script/rss2html.ml&quot;&gt;rss2html&lt;/a&gt; used on the &lt;a href=&quot;http://ocaml.org&quot;&gt;OCaml&lt;/a&gt; website and parts of
+HTML, I&amp;#8217;m aware of &lt;a href=&quot;https://github.com/ocaml/ocaml.org/blob/master/script/rss2html.ml&quot;&gt;rss2html&lt;/a&gt; used on the &lt;a href=&quot;http://ocaml.org&quot;&gt;OCaml&lt;/a&gt; website and parts of
 &lt;a href=&quot;http://opam.ocaml.org/packages/ocamlnet/ocamlnet.3.7.3/&quot;&gt;ocamlnet&lt;/a&gt; that may be relevant (e.g &lt;code&gt;nethtml&lt;/code&gt; and &lt;code&gt;netstring&lt;/code&gt;) as well as
-&lt;code&gt;cow&lt;/code&gt;.  There is likely to be other code I'm missing but this is useful as a
-first pass.&lt;/p&gt;
+&lt;code&gt;cow&lt;/code&gt;.  There is likely to be other code I&amp;#8217;m missing but this is useful as a
+first pass. &lt;/p&gt;
 
-&lt;p&gt;Overall, a number of components are already out there but it's not obvious
-if they're compatible (e.g html) and there are still gaps (e.g atom). Since
-I also want to minimise dependencies, I'll try and use whatever works but
+&lt;p&gt;Overall, a number of components are already out there but it&amp;#8217;s not obvious
+if they&amp;#8217;re compatible (e.g html) and there are still gaps (e.g atom). Since
+I also want to minimise dependencies, I&amp;#8217;ll try and use whatever works but
 may ultimately have to roll my own. Either way, I can learn from what
-already exists. Perhaps I'm being overconfident but if I can break things
+already exists. Perhaps I&amp;#8217;m being overconfident but if I can break things
 down sensibly and keep the scope constrained then this should be an
-achievable project.&lt;/p&gt;
+achievable project. &lt;/p&gt;
 
-&lt;h3&gt;The first (baby) steps - an Atom parser&lt;/h3&gt;
+&lt;h3 id=&quot;the-first-baby-steps---an-atom-parser&quot;&gt;The first (baby) steps - an Atom parser&lt;/h3&gt;
 
 &lt;p&gt;As this is an exercise for me to learn OCaml by solving a problem, I need to
 break it down into bite-size pieces and take each one at a time. Practically
 speaking, this means limiting the scope to be as narrow as possible while
 still producing a useful result &lt;em&gt;for me&lt;/em&gt;.  That last part is important as I
-have specific needs and it's likely that the first thing I make won't be
-particularly interesting for many others.&lt;/p&gt;
+have specific needs and it&amp;#8217;s likely that the first thing I make won&amp;#8217;t be
+particularly interesting for many others. &lt;/p&gt;
 
-&lt;p&gt;For my specific use-case, I'm only interested in dealing with Atom feeds as
-that's what I use on my site and others I'm involved with. Initial feedback
+&lt;p&gt;For my specific use-case, I&amp;#8217;m only interested in dealing with Atom feeds as
+that&amp;#8217;s what I use on my site and others I&amp;#8217;m involved with. Initial feedback
 is that creating an Atom parser will be the bulk of the work and I should
-start by defining the types. To keep this manageable, I'm only going to deal
+start by defining the types. To keep this manageable, I&amp;#8217;m only going to deal
 with my own feeds instead of attempting a fully compliant parser (in other
-words, I'll only consider the subset of &lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC4287&lt;/a&gt; that's relevant to me).
+words, I&amp;#8217;ll only consider the subset of &lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC4287&lt;/a&gt; that&amp;#8217;s relevant to me).
 Once I can parse, merge and write such feeds I should be able to iterate
-from there.&lt;/p&gt;
+from there. &lt;/p&gt;
 
 &lt;p&gt;To make my requirements more concrete:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Only consider &lt;em&gt;my own&lt;/em&gt; Atom feeds for now&lt;/li&gt;
-&lt;li&gt;Initially, be able to parse and emit just one Atom feed&lt;/li&gt;
-&lt;li&gt;Then be able to merge 2+ feeds, specifically:
-
-&lt;ul&gt;
-&lt;li&gt;Use tag-based feeds from my personal site as starting points&lt;/li&gt;
-&lt;li&gt;Be able to de-dupe content&lt;/li&gt;
+  &lt;li&gt;Only consider &lt;em&gt;my own&lt;/em&gt; Atom feeds for now&lt;/li&gt;
+  &lt;li&gt;Initially, be able to parse and emit just one Atom feed&lt;/li&gt;
+  &lt;li&gt;Then be able to merge 2+ feeds, specifically:
+    &lt;ul&gt;
+      &lt;li&gt;Use tag-based feeds from my personal site as starting points&lt;/li&gt;
+      &lt;li&gt;Be able to de-dupe content&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;No database or storage (construct it afresh every time)&lt;/li&gt;
+  &lt;li&gt;Minimise library dependencies&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;No database or storage (construct it afresh every time)&lt;/li&gt;
-&lt;li&gt;Minimise library dependencies&lt;/li&gt;
-&lt;/ul&gt;
-
 
 &lt;!-- 
     Perhaps these requirements are already too much and I may decide to dial
@@ -257,26 +264,24 @@ from there.&lt;/p&gt;
     to deal with general feeds.
 --&gt;
 
+&lt;h4 id=&quot;timeframes-and-workflow&quot;&gt;Timeframes and workflow&lt;/h4&gt;
 
-&lt;h4&gt;Timeframes and workflow&lt;/h4&gt;
-
-&lt;p&gt;I've honestly no idea how long this might take and I'm treating it as a
+&lt;p&gt;I&amp;#8217;ve honestly no idea how long this might take and I&amp;#8217;m treating it as a
 side-project. I know there are many people out there who could produce a
-working version of everything in a week or two but I'm not one of them (yet).
+working version of everything in a week or two but I&amp;#8217;m not one of them (yet).
 There are also &lt;em&gt;a lot&lt;/em&gt; of ancillary things I need to learn on the way, like
 packaging, improving my knowledge of Git and dealing with build systems. If
-I had to put a vague time frame on this, I'd be thinking in months rather
+I had to put a vague time frame on this, I&amp;#8217;d be thinking in months rather
 than weeks.  It might even be the case that others start work on parts of
-this and ship things sooner but that's great as I'll probably be able to use
+this and ship things sooner but that&amp;#8217;s great as I&amp;#8217;ll probably be able to use
 whatever they create and move further along the chain.&lt;/p&gt;
 
 &lt;p&gt;In terms of workflow, everything will be done in the open, warts and all, and
 I expect to make embarrassing mistakes as I go. You can follow along on my
-freshly created &lt;a href=&quot;https://github.com/amirmc/ocamlatom&quot;&gt;OCaml Atom&lt;/a&gt; repo, and I'll be using the issue tracker as
+freshly created &lt;a href=&quot;https://github.com/amirmc/ocamlatom&quot;&gt;OCaml Atom&lt;/a&gt; repo, and I&amp;#8217;ll be using the issue tracker as
 the main way of dealing with bugs and features. Let the fun begin.&lt;/p&gt;
 
 &lt;!-- acknowledgements --&gt;
-
 
 &lt;hr /&gt;
 
@@ -285,8 +290,6 @@ the main way of dealing with bugs and features. Let the fun begin.&lt;/p&gt;
 and providing feedback on my approach.&lt;/p&gt;
 
 &lt;!-- links --&gt;
-
-
 
 </content>
 </entry>
@@ -298,45 +301,45 @@ and providing feedback on my approach.&lt;/p&gt;
   <author>Amir Chaudhry</author>
   <updated>2014-03-10T18:30:00+00:00</updated>
   <id>http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines</id>
-  <content type="html">&lt;p&gt;&lt;a href=&quot;http://openmirage.org&quot;&gt;Mirage&lt;/a&gt; has reached a point where it's possible to easily set up
+  <content type="html">
+&lt;p&gt;&lt;a href=&quot;http://openmirage.org&quot;&gt;Mirage&lt;/a&gt; has reached a point where it&amp;#8217;s possible to easily set up
 end-to-end toolchains to build &lt;a href=&quot;http://queue.acm.org/detail.cfm?id=2566628&quot;&gt;unikernels&lt;/a&gt;! &lt;!--\[If you're not sure what that is, read the post [What is a unikernel?][amc-unikernel]\]--&gt;
 My first use-case is to be able to generate a unikernel which can serve my
 personal static site but to do it with as much automation as possible. It
 turns out this is possible with less than 50 lines of code.&lt;/p&gt;
 
-&lt;p&gt;I use Jekyll and GitHub Pages at the moment so I wanted a workflow that's as
-easy to use, though I'm happy to spend some time up front to set up and
+&lt;p&gt;I use Jekyll and GitHub Pages at the moment so I wanted a workflow that&amp;#8217;s as
+easy to use, though I&amp;#8217;m happy to spend some time up front to set up and
 configure things.
 The tools for achieving what I want are in good shape so
 this post takes the example of a Jekyll site (i.e this one) and goes through
 the steps to produce a unikernel on
 &lt;a href=&quot;https://travis-ci.org&quot;&gt;Travis CI&lt;/a&gt; (a continuous integration service) which can later be
 deployed.  Many of these instructions already exist in various forms but
-they're collated here to aid this use-case.&lt;/p&gt;
+they&amp;#8217;re collated here to aid this use-case.  &lt;/p&gt;
 
-&lt;p&gt;I will take you, dear reader, through the process and when we're finished,
+&lt;p&gt;I will take you, dear reader, through the process and when we&amp;#8217;re finished,
 the workflow will be as follows:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;You'll write your posts on your local machine as normal&lt;/li&gt;
-&lt;li&gt;A push to GitHub will trigger a unikernel build for each commit&lt;/li&gt;
-&lt;li&gt;The Xen unikernel will be pushed to a repo for deployment&lt;/li&gt;
+  &lt;li&gt;You&amp;#8217;ll write your posts on your local machine as normal&lt;/li&gt;
+  &lt;li&gt;A push to GitHub will trigger a unikernel build for each commit&lt;/li&gt;
+  &lt;li&gt;The Xen unikernel will be pushed to a repo for deployment&lt;/li&gt;
 &lt;/ol&gt;
 
-
-&lt;p&gt;To achieve this, we'll first check that we can build a unikernel VM locally,
-then we'll set up a continuous integration service to automatically build
-them for us and finally we'll adapt the CI service to also deploy the built
+&lt;p&gt;To achieve this, we&amp;#8217;ll first check that we can build a unikernel VM locally,
+then we&amp;#8217;ll set up a continuous integration service to automatically build
+them for us and finally we&amp;#8217;ll adapt the CI service to also deploy the built
 VM.  Although the amount of code required is small, each of these steps is
 covered below in some detail.
-For simplicity, I'll assume you already have OCaml and Opam
-installed -- if not, you can find out how via the
+For simplicity, I&amp;#8217;ll assume you already have OCaml and Opam
+installed &amp;#8211; if not, you can find out how via the
 &lt;a href=&quot;http://realworldocaml.org/install&quot;&gt;Real Word OCaml install instructions&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2&gt;Building locally&lt;/h2&gt;
+&lt;h2 id=&quot;building-locally&quot;&gt;Building locally&lt;/h2&gt;
 
 &lt;p&gt;To ensure that the build actually works, you should run things locally at
-least once before pushing to Travis.  It's worth noting that the
+least once before pushing to Travis.  It&amp;#8217;s worth noting that the
 &lt;a href=&quot;https://github.com/mirage/mirage-skeleton&quot;&gt;mirage-skeleton&lt;/a&gt; repo contains a lot of useful, public domain examples
 and helpfully, the specific code we need is in
 &lt;a href=&quot;https://github.com/mirage/mirage-skeleton/tree/master/static_website&quot;&gt;mirage-skeleton/static_website&lt;/a&gt;.  Copy both the &lt;code&gt;config.ml&lt;/code&gt;
@@ -344,11 +347,11 @@ and &lt;code&gt;dispatch.ml&lt;/code&gt; files from that folder into a new &lt;c
 jekyll repository.&lt;/p&gt;
 
 &lt;p&gt;Edit &lt;code&gt;config.ml&lt;/code&gt; so that the two mentions of &lt;code&gt;./htdocs&lt;/code&gt; are replaced with
-&lt;code&gt;../_site&lt;/code&gt;.  This is the only change you'll need to make and you should now
+&lt;code&gt;../_site&lt;/code&gt;.  This is the only change you&amp;#8217;ll need to make and you should now
 be able to build the unikernel with the unix backend.  Make sure you have
 the mirage package installed by running &lt;code&gt;$ opam install mirage&lt;/code&gt; and then run:&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;(edit: If you already have &lt;code&gt;mirage&lt;/code&gt;, remember to &lt;code&gt;opam update&lt;/code&gt; to make sure you've got the latest packages.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(edit: If you already have &lt;code&gt;mirage&lt;/code&gt;, remember to &lt;code&gt;opam update&lt;/code&gt; to make sure you&amp;#8217;ve got the latest packages.)&lt;/em&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_mirage
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mirage configure --unix
@@ -356,16 +359,15 @@ the mirage package installed by running &lt;code&gt;$ opam install mirage&lt;/co
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mirage build
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;That's all it takes!  In a few minutes there will be a unikernel built on
+&lt;p&gt;That&amp;#8217;s all it takes!  In a few minutes there will be a unikernel built on
 your system (symlinked as &lt;code&gt;_mirage/mir-www&lt;/code&gt;).  If there are any errors, make
 sure that Opam is up to date and that you have the latest version of the
-static_website files from &lt;a href=&quot;https://github.com/mirage/mirage-skeleton&quot;&gt;mirage-skeleton&lt;/a&gt;.&lt;/p&gt;
+static_website files from &lt;a href=&quot;https://github.com/mirage/mirage-skeleton&quot;&gt;mirage-skeleton&lt;/a&gt;. &lt;/p&gt;
 
-&lt;h3&gt;Serving the site locally&lt;/h3&gt;
+&lt;h3 id=&quot;serving-the-site-locally&quot;&gt;Serving the site locally&lt;/h3&gt;
 
-&lt;p&gt;If you'd like to see this site locally, you can do so from within the
-&lt;code&gt;_mirage&lt;/code&gt; folder by running unikernel you just built.  There's more
+&lt;p&gt;If you&amp;#8217;d like to see this site locally, you can do so from within the
+&lt;code&gt;_mirage&lt;/code&gt; folder by running unikernel you just built.  There&amp;#8217;s more
 information about the details of this on the &lt;a href=&quot;http://openmirage.org/wiki/mirage-www&quot;&gt;Mirage docs site&lt;/a&gt;
 but the quick instructions are:&lt;/p&gt;
 
@@ -375,45 +377,43 @@ but the quick instructions are:&lt;/p&gt;
 &lt;span class=&quot;c&quot;&gt;# in another terminal window&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo ifconfig tap0 10.0.0.1 255.255.255.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;You can now point your browser at http://10.0.0.2/ and see your site!
-Once you're finished browsing, &lt;code&gt;$ mirage clean&lt;/code&gt; will clear up all the
-generated files.&lt;/p&gt;
+Once you&amp;#8217;re finished browsing, &lt;code&gt;$ mirage clean&lt;/code&gt; will clear up all the
+generated files. &lt;/p&gt;
 
 &lt;p&gt;Since the build is working locally, we can set up a continuous integration
 system to perform the builds for us.&lt;/p&gt;
 
-&lt;h2&gt;Setting up Travis CI&lt;/h2&gt;
+&lt;h2 id=&quot;setting-up-travis-ci&quot;&gt;Setting up Travis CI&lt;/h2&gt;
+&lt;p&gt;&lt;img style=&quot;float: right; margin-left: 10px&quot; src=&quot;http://amirchaudhry.com/images/jekyll-unikernel/travis.png&quot; /&gt;&amp;lt;/img&amp;gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img style=&quot;float: right; margin-left: 10px&quot; src=&quot;http://amirchaudhry.com/images/jekyll-unikernel/travis.png&quot;&gt;&lt;/img&gt;&lt;/p&gt;
-
-&lt;p&gt;We'll be using the &lt;a href=&quot;https://travis-ci.org&quot;&gt;Travis CI&lt;/a&gt; service, which is free for open-source
-projects (so this assumes you're using a public repo).  The benefit of using
+&lt;p&gt;We&amp;#8217;ll be using the &lt;a href=&quot;https://travis-ci.org&quot;&gt;Travis CI&lt;/a&gt; service, which is free for open-source
+projects (so this assumes you&amp;#8217;re using a public repo).  The benefit of using
 Travis is that you can build a unikernel &lt;em&gt;without&lt;/em&gt; needing a local OCaml
-environment, but it's always quicker to debug things locally.&lt;/p&gt;
+environment, but it&amp;#8217;s always quicker to debug things locally.&lt;/p&gt;
 
 &lt;p&gt;Log in to Travis using your GitHub ID which will then trigger a scan of your
 repositories.  When this is complete, go to your Travis accounts page and
-find the repo you'll be building the unikernel from.  Switch it 'on' and
+find the repo you&amp;#8217;ll be building the unikernel from.  Switch it &amp;#8216;on&amp;#8217; and
 Travis will automatically set your GitHub post-commit hook and token for you.
-That's all you need to do on the website.&lt;/p&gt;
+That&amp;#8217;s all you need to do on the website.&lt;/p&gt;
 
 &lt;p&gt;When you next make a push to your repository, GitHub will inform Travis,
 which will then look for a YAML file in the root of the repo called
 &lt;code&gt;.travis.yml&lt;/code&gt;.  That file describes what Travis should do and what the build
-matrix is.  Since OCaml is not one of the supported languages, we'll be
+matrix is.  Since OCaml is not one of the supported languages, we&amp;#8217;ll be
 writing our build script manually (this is actually easier than it sounds).
-First, let's set up the YAML file and then we'll examine the build script.&lt;/p&gt;
+First, let&amp;#8217;s set up the YAML file and then we&amp;#8217;ll examine the build script.&lt;/p&gt;
 
-&lt;h3&gt;The Travis YAML file - .travis.yml&lt;/h3&gt;
+&lt;h3 id=&quot;the-travis-yaml-file---travisyml&quot;&gt;The Travis YAML file - .travis.yml&lt;/h3&gt;
 
 &lt;p&gt;The &lt;a href=&quot;http://docs.travis-ci.com/user/ci-environment/#CI-environment-OS&quot;&gt;Travis CI environment&lt;/a&gt; is based on Ubuntu 12.04, with a
 number of things pre-installed (e.g Git, networking tools etc).  Travis
-doesn't support OCaml (yet) so we'll use the &lt;code&gt;c&lt;/code&gt; environment to get the
+doesn&amp;#8217;t support OCaml (yet) so we&amp;#8217;ll use the &lt;code&gt;c&lt;/code&gt; environment to get the
 packages we need, specifically, the OCaml compiler, Opam and Mirage. Once
 those are set up, our build should run pretty much the same as it did locally.&lt;/p&gt;
 
-&lt;p&gt;For now, let's keep things simple and only focus on the latest releases
+&lt;p&gt;For now, let&amp;#8217;s keep things simple and only focus on the latest releases
 (OCaml 4.01.0 and Opam 1.1.1), which means our build matrix is very simple.
 The build instructions will be in the file &lt;code&gt;_mirage/travis.sh&lt;/code&gt;, which we
 will move to and trigger from the &lt;code&gt;.travis.yml&lt;/code&gt; file.  This means our YAML
@@ -427,21 +427,20 @@ file should look like:&lt;/p&gt;
   &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;MIRAGE_BACKEND=xen DEPLOY=0&lt;/span&gt;
   &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;MIRAGE_BACKEND=unix&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;The matrix enables us to have parallel builds for different environments and
-this one is very simple as it's only building two unikernels. One worker
+this one is very simple as it&amp;#8217;s only building two unikernels. One worker
 will build for the Xen backend and another worker will build for the Unix
 backend. The &lt;code&gt;_mirage/travis.sh&lt;/code&gt; script will clarify what each of these
-environments translates to.  We'll come back to the &lt;code&gt;DEPLOY&lt;/code&gt; flag later on
-(it's not necessary yet).  Now that this file is set up, we can work on the
+environments translates to.  We&amp;#8217;ll come back to the &lt;code&gt;DEPLOY&lt;/code&gt; flag later on
+(it&amp;#8217;s not necessary yet).  Now that this file is set up, we can work on the
 build script itself.&lt;/p&gt;
 
-&lt;h3&gt;The build script - travis.sh&lt;/h3&gt;
+&lt;h3 id=&quot;the-build-script---travissh&quot;&gt;The build script - travis.sh&lt;/h3&gt;
 
-&lt;p&gt;To save time, we'll be using an Ubuntu PPA to quickly get
+&lt;p&gt;To save time, we&amp;#8217;ll be using an Ubuntu PPA to quickly get
 &lt;a href=&quot;https://launchpad.net/~avsm&quot;&gt;pre-packaged versions of the OCaml compiler and Opam&lt;/a&gt;, so the
 first thing to do is define which PPAs each line of the build matrix
-corresponds to.  Since we're keeping things simple, we only need one PPA
+corresponds to.  Since we&amp;#8217;re keeping things simple, we only need one PPA
 that has the most recent releases of OCaml and Opam.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env bash&lt;/span&gt;
@@ -450,48 +449,44 @@ that has the most recent releases of OCaml and Opam.&lt;/p&gt;
 sudo apt-get update -qq
 sudo apt-get install -qq ocaml ocaml-native-compilers camlp4-extra opam&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;[NB: There are many &lt;a href=&quot;https://launchpad.net/~avsm&quot;&gt;other PPAs&lt;/a&gt; for different combinations of
 OCaml/Opam which are useful for testing].  Once the appropriate PPAs have
-been set up it's time to initialise Opam and install Mirage.&lt;/p&gt;
+been set up it&amp;#8217;s time to initialise Opam and install Mirage. &lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;OPAMYES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
 opam init
 opam install mirage
 &lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;opam config env&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;We set &lt;code&gt;OPAMYES=1&lt;/code&gt; to get non-interactive use of Opam (it defaults to 'yes'
+&lt;p&gt;We set &lt;code&gt;OPAMYES=1&lt;/code&gt; to get non-interactive use of Opam (it defaults to &amp;#8216;yes&amp;#8217;
 for any user input) and if we want full build logs, we could also set
-&lt;code&gt;OPAMVERBOSE=1&lt;/code&gt; (I haven't in this example).
-The rest should be straight-forward and you'll end up with an
-Ubuntu machine with OCaml, Opam and the Mirage package installed.  It's now
+&lt;code&gt;OPAMVERBOSE=1&lt;/code&gt; (I haven&amp;#8217;t in this example).
+The rest should be straight-forward and you&amp;#8217;ll end up with an
+Ubuntu machine with OCaml, Opam and the Mirage package installed.  It&amp;#8217;s now
 trivial to do the next step of actually building the unikernel!&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mirage configure --&lt;span class=&quot;nv&quot;&gt;$MIRAGE_BACKEND&lt;/span&gt;
 mirage build&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;You can see how we've used the environment variable from the Travis file and
-this is where our two parallel builds begin to diverge.  When you've saved
-this file, you'll need to change permissions to make it executable by doing
+&lt;p&gt;You can see how we&amp;#8217;ve used the environment variable from the Travis file and
+this is where our two parallel builds begin to diverge.  When you&amp;#8217;ve saved
+this file, you&amp;#8217;ll need to change permissions to make it executable by doing
 &lt;code&gt;$ chmod +x _mirage/travis.sh&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;That's all you need to build the unikernel on Travis!  You should now commit
+&lt;p&gt;That&amp;#8217;s all you need to build the unikernel on Travis!  You should now commit
 both the YAML file and the build script to the repo and push the changes to
 GitHub.  Travis should automatically start your first build and you can
 watch the console output online to check that both the Xen and Unix backends
 complete properly.  If you notice any errors, you should go back over your
 build script and fix it before the next step.&lt;/p&gt;
 
-&lt;h2&gt;Deploying your unikernel&lt;/h2&gt;
-
-&lt;p&gt;&lt;img style=&quot;float: right; margin-left: 10px&quot; src=&quot;http://amirchaudhry.com/images/jekyll-unikernel/octocat.png&quot;&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;h2 id=&quot;deploying-your-unikernel&quot;&gt;Deploying your unikernel&lt;/h2&gt;
+&lt;p&gt;&lt;img style=&quot;float: right; margin-left: 10px&quot; src=&quot;http://amirchaudhry.com/images/jekyll-unikernel/octocat.png&quot; /&gt;&amp;lt;/img&amp;gt;&lt;/p&gt;
 
 &lt;p&gt;When Travis has finished its builds it will simply destroy the worker and
 all its contents, including the unikernels we just built.  This is perfectly
 fine for testing but if we want to also &lt;em&gt;deploy&lt;/em&gt; a unikernel, we need to get
-it out of the Travis worker after it's built. In this case, we want to
+it out of the Travis worker after it&amp;#8217;s built. In this case, we want to
 extract the Xen-based unikernel so that we can later start it on a Xen-based
 machine (e.g Amazon, Rackspace or - in our case - a machine on &lt;a href=&quot;http://www.bytemark.co.uk&quot;&gt;Bytemark&lt;/a&gt;).&lt;/p&gt;
 
@@ -500,21 +495,21 @@ exporting will be to commit the Xen unikernel into a repository on GitHub.
 It can be retrieved and started later on and keeping the VMs in version
 control gives us very effective snapshots (we can roll back the site without
 having to rebuild).  This is something that would be much more challenging
-if we were using the 'standard' web toolstack.&lt;/p&gt;
+if we were using the &amp;#8216;standard&amp;#8217; web toolstack.&lt;/p&gt;
 
 &lt;p&gt;The deployment step is a little more complex as we have to send the
 Travis worker a private SSH key, which will give it push access to a GitHub
-repository.  Of course, we don't want to expose that key by simply adding it
-to the Travis file so we have to encrypt it somehow.&lt;/p&gt;
+repository.  Of course, we don&amp;#8217;t want to expose that key by simply adding it
+to the Travis file so we have to encrypt it somehow. &lt;/p&gt;
 
-&lt;h3&gt;Sending Travis a private SSH key&lt;/h3&gt;
+&lt;h3 id=&quot;sending-travis-a-private-ssh-key&quot;&gt;Sending Travis a private SSH key&lt;/h3&gt;
 
 &lt;p&gt;Travis supports &lt;a href=&quot;http://docs.travis-ci.com/user/encryption-keys/&quot;&gt;encrypted environment variables&lt;/a&gt;. Each
 repository has its own public key and the &lt;a href=&quot;http://rubygems.org/gems/travis&quot;&gt;Travis gem&lt;/a&gt; uses
 this public key to encrypt data, which you then add to your &lt;code&gt;.travis.yml&lt;/code&gt;
 file for decryption by the worker.  This is meant for sending things like
 private API tokens and other small amounts of data. Trying to encrypt an SSH
-key isn't going to work as it's too large.  Instead we'll use
+key isn&amp;#8217;t going to work as it&amp;#8217;s too large.  Instead we&amp;#8217;ll use
 &lt;a href=&quot;https://github.com/avsm/travis-senv&quot;&gt;travis-senv&lt;/a&gt;, which encodes, encrypts and chunks up the key into smaller
 pieces and then reassembles those pieces on the Travis worker.  We still use
 the Travis gem to encrypt the pieces to add them to the &lt;code&gt;.travis.yml&lt;/code&gt; file.&lt;/p&gt;
@@ -528,10 +523,9 @@ preference is to create a &lt;em&gt;new&lt;/em&gt; deploy key, which will only b
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh-keygen -t dsa -C &lt;span class=&quot;s2&quot;&gt;&amp;quot;travis.deploy&amp;quot;&lt;/span&gt; -f travis-deploy_dsa
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; -&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Note that this is a 1024 bit key so if you decide to use a 2048 bit key,
 then be aware that Travis &lt;a href=&quot;https://github.com/avsm/travis-senv/issues/1&quot;&gt;sometimes has issues&lt;/a&gt;. Now that we have
-a key, we can encrypt it and add it to the Travis file.&lt;/p&gt;
+a key, we can encrypt it and add it to the Travis file. &lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# on your local machine&lt;/span&gt;
 
@@ -544,13 +538,12 @@ a key, we can encrypt it and add it to the Travis file.&lt;/p&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat _travis_env &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; travis encrypt -ps --add
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rm _travis_env&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;&lt;code&gt;travis-senv&lt;/code&gt; encrypts and chunks the key locally on your machine, placing
 its output in a file you decide (&lt;code&gt;_travis_env&lt;/code&gt;).  We then take that output
 file and pipe it to the &lt;code&gt;travis&lt;/code&gt; ruby gem, asking it to encrypt the input,
 treating each line as separate and to be appended (&lt;code&gt;-ps&lt;/code&gt;) and then actually
 adding that to the Travis file (&lt;code&gt;--add&lt;/code&gt;).  You can run &lt;code&gt;$ travis encrypt -h&lt;/code&gt;
-to understand these options.  Once you've run the above commands,
+to understand these options.  Once you&amp;#8217;ve run the above commands,
 &lt;code&gt;.travis.yml&lt;/code&gt; will look as follows.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;c&lt;/span&gt;
@@ -566,22 +559,21 @@ to understand these options.  Once you've run the above commands,
   &lt;span class=&quot;p-Indicator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;secure&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;....&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;encrypted&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;....&amp;quot;&lt;/span&gt;
   &lt;span class=&quot;l-Scalar-Plain&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;The number of secure variables added depends on the type and size of the key
-you had to chunk, so it could vary from 8 up to 29. We'll commit
+you had to chunk, so it could vary from 8 up to 29. We&amp;#8217;ll commit
 these additions later on, alongside additions to the build script.&lt;/p&gt;
 
 &lt;p&gt;At this point, we also need to make a repository on GitHub
 and add the public deploy key so
-that Travis can push to it.  Once you've created your repo and added a
-README, follow GitHub's instructions on &lt;a href=&quot;https://help.github.com/articles/managing-deploy-keys#deploy-keys&quot;&gt;adding deploy keys&lt;/a&gt;
-and paste in the public key (i.e. the content of &lt;code&gt;travis-deploy_dsa.pub&lt;/code&gt;).&lt;/p&gt;
+that Travis can push to it.  Once you&amp;#8217;ve created your repo and added a
+README, follow GitHub&amp;#8217;s instructions on &lt;a href=&quot;https://help.github.com/articles/managing-deploy-keys#deploy-keys&quot;&gt;adding deploy keys&lt;/a&gt;
+and paste in the public key (i.e. the content of &lt;code&gt;travis-deploy_dsa.pub&lt;/code&gt;).  &lt;/p&gt;
 
 &lt;p&gt;Now that we can securely pass a private SSH key to the worker
 and have a repo that the worker can push to, we need to
 make additions to the build script.&lt;/p&gt;
 
-&lt;h3&gt;Committing the unikernel to a repository&lt;/h3&gt;
+&lt;h3 id=&quot;committing-the-unikernel-to-a-repository&quot;&gt;Committing the unikernel to a repository&lt;/h3&gt;
 
 &lt;p&gt;Since we can set &lt;code&gt;DEPLOY=1&lt;/code&gt; in the YAML file we only need to make
 additions to the build script.  Specifically, we want to assure that: only
@@ -589,12 +581,12 @@ the Xen backend is deployed; only &lt;em&gt;pushes&lt;/em&gt; to the repo result
 deployments, not pull requests (we do still want &lt;em&gt;builds&lt;/em&gt; for pull requests).&lt;/p&gt;
 
 &lt;p&gt;In the build script (&lt;code&gt;_mirage/travis.sh&lt;/code&gt;), which is being run by the worker,
-we'll have to reconstruct the SSH key and configure Git.  In addition,
-Travis gives us a set of useful &lt;a href=&quot;http://docs.travis-ci.com/user/ci-environment/#Environment-variables&quot;&gt;environment variables&lt;/a&gt; so we'll
+we&amp;#8217;ll have to reconstruct the SSH key and configure Git.  In addition,
+Travis gives us a set of useful &lt;a href=&quot;http://docs.travis-ci.com/user/ci-environment/#Environment-variables&quot;&gt;environment variables&lt;/a&gt; so we&amp;#8217;ll
 use the latest commit hash (&lt;code&gt;$TRAVIS_COMMIT&lt;/code&gt;) to name the the VM (which also
 helps us trace which commit it was built from).&lt;/p&gt;
 
-&lt;p&gt;It's easier to consider this section of code at once so I've explained the
+&lt;p&gt;It&amp;#8217;s easier to consider this section of code at once so I&amp;#8217;ve explained the
 details in the comments. This section is what you need to add at the end of
 your existing build script (i.e straight after &lt;code&gt;mirage build&lt;/code&gt;).&lt;/p&gt;
 
@@ -648,26 +640,25 @@ your existing build script (i.e straight after &lt;code&gt;mirage build&lt;/code
     &lt;span class=&quot;c&quot;&gt;# Go out and enjoy the Sun!&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;At this point you should commit the changes to &lt;code&gt;./travis.yml&lt;/code&gt; (don't forget
+&lt;p&gt;At this point you should commit the changes to &lt;code&gt;./travis.yml&lt;/code&gt; (don&amp;#8217;t forget
 the deploy flag) and &lt;code&gt;_mirage/travis.sh&lt;/code&gt; and push the changes to GitHub.
 Everything else will take place automatically and in a few minutes you will
-have a unikernel ready to deploy on top of Xen!&lt;/p&gt;
+have a unikernel ready to deploy on top of Xen! &lt;/p&gt;
 
 &lt;p&gt;You can see both the complete YAML file and build script in use on my
 &lt;a href=&quot;https://github.com/amirmc/www-test&quot;&gt;test repo&lt;/a&gt;, as well as the &lt;a href=&quot;https://travis-ci.org/amirmc/www-test&quot;&gt;build logs&lt;/a&gt; for that repo
 and the &lt;a href=&quot;https://github.com/amirmc/www-test-deploy&quot;&gt;deploy repo&lt;/a&gt; with a VM.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;[Pro-tip: If you add &lt;/em&gt;&lt;code&gt;[skip ci]&lt;/code&gt;&lt;em&gt; anywhere in your
+&lt;p&gt;&lt;em&gt;[Pro-tip: If you add *&lt;code&gt;[skip ci]&lt;/code&gt;&lt;/em&gt; anywhere in your
 commit message, Travis will skip the build for that commit.
-This is very useful if you're making minor changes, like updating a
-README.]&lt;/em&gt;&lt;/p&gt;
+This is very useful if you&amp;#8217;re making minor changes, like updating a
+README.]*&lt;/p&gt;
 
-&lt;h2&gt;Finishing up&lt;/h2&gt;
+&lt;h2 id=&quot;finishing-up&quot;&gt;Finishing up&lt;/h2&gt;
 
-&lt;p&gt;Since I'm still using Jekyll for my website, I made a short script in my
+&lt;p&gt;Since I&amp;#8217;m still using Jekyll for my website, I made a short script in my
 jekyll repository (&lt;code&gt;_deploy-unikernel.sh&lt;/code&gt;) that builds the site, commits the
-contents of &lt;code&gt;_site&lt;/code&gt; and pushes to GitHub. I simply run this after I've
+contents of &lt;code&gt;_site&lt;/code&gt; and pushes to GitHub. I simply run this after I&amp;#8217;ve
 committed a new blog post and the rest takes care of itself.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env bash&lt;/span&gt;
@@ -676,65 +667,64 @@ git add _site
 git commit -m &lt;span class=&quot;s1&quot;&gt;&amp;#39;update _site&amp;#39;&lt;/span&gt;
 git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Congratulations! You now have an end-to-end workflow that will produce a
 unikernel VM from your Jekyll-based site and push it to a repo.  If you
-strip out all the comments, you'll see that we've written less than 50 lines
-of code! Admittedly, I'm not counting the 80 or so lines that came for free
-in the &lt;code&gt;*.ml&lt;/code&gt; files but that's still pretty impressive.&lt;/p&gt;
+strip out all the comments, you&amp;#8217;ll see that we&amp;#8217;ve written less than 50 lines
+of code! Admittedly, I&amp;#8217;m not counting the 80 or so lines that came for free
+in the &lt;code&gt;*.ml&lt;/code&gt; files but that&amp;#8217;s still pretty impressive.&lt;/p&gt;
 
-&lt;p&gt;Of course, we still need a machine to take that VM and run it but that's a
-topic for another post.  For the time-being, I'm still using GitHub Pages
+&lt;p&gt;Of course, we still need a machine to take that VM and run it but that&amp;#8217;s a
+topic for another post.  For the time-being, I&amp;#8217;m still using GitHub Pages
 but once the VM is hosted somewhere, I will:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Turn off GitHub Pages and serve from the VM -- but still using Jekyll in
+  &lt;li&gt;Turn off GitHub Pages and serve from the VM &amp;#8211; but still using Jekyll in
 the workflow.&lt;/li&gt;
-&lt;li&gt;Replace Jekyll with OCaml-based static-site generation.&lt;/li&gt;
+  &lt;li&gt;Replace Jekyll with OCaml-based static-site generation.&lt;/li&gt;
 &lt;/ol&gt;
 
-
-&lt;p&gt;Although all the tools already exist to switch now, I'm taking my time so
+&lt;p&gt;Although all the tools already exist to switch now, I&amp;#8217;m taking my time so
 that I can easily maintain the code I end up using.&lt;/p&gt;
 
-&lt;h2&gt;Expanding the script for testing&lt;/h2&gt;
+&lt;h2 id=&quot;expanding-the-script-for-testing&quot;&gt;Expanding the script for testing&lt;/h2&gt;
 
 &lt;p&gt;You may have noticed that the examples here are not very flexible or
-extensible but that was a deliberate choice to keep them readable.  It's
+extensible but that was a deliberate choice to keep them readable.  It&amp;#8217;s
 possible to do much more with the build matrix and script, as you can see
 from the Travis files on my &lt;a href=&quot;https://github.com/amirmc/amirmc.github.com/tree/master/_mirage&quot;&gt;website repo&lt;/a&gt;, which were based on
-those of the &lt;a href=&quot;https://github.com/mirage/mirage-www&quot;&gt;Mirage site&lt;/a&gt; and &lt;a href=&quot;https://github.com/mor1/mort-www&quot;&gt;Mort's site&lt;/a&gt;.
+those of the &lt;a href=&quot;https://github.com/mirage/mirage-www&quot;&gt;Mirage site&lt;/a&gt; and &lt;a href=&quot;https://github.com/mor1/mort-www&quot;&gt;Mort&amp;#8217;s site&lt;/a&gt;.
 Specifically, you can note the use of more environment variables and case
-statements to decide which PPAs to grab.  Once you've got your builds
-working, it's worth improving your scripts to make them more maintainable
+statements to decide which PPAs to grab.  Once you&amp;#8217;ve got your builds
+working, it&amp;#8217;s worth improving your scripts to make them more maintainable
 and cover the test cases you feel are important.&lt;/p&gt;
 
-&lt;h3&gt;Not just for static sites (surprise!)&lt;/h3&gt;
+&lt;h3 id=&quot;not-just-for-static-sites-surprise&quot;&gt;Not just for static sites (surprise!)&lt;/h3&gt;
 
 &lt;p&gt;You might have noticed that in very few places in the toolchain above have I
 mentioned anything specific to static sites per se.  The workflow is simply
 (1) do some stuff locally, (2) push to a continuous integration service
 which then (3) builds and deploys a Xen-based unikernel.  Apart from the
 convenient folder structure, the specific work to treat this as a static
-site lives in the &lt;code&gt;*.ml&lt;/code&gt; files, which I've skipped over for this post.&lt;/p&gt;
+site lives in the &lt;code&gt;*.ml&lt;/code&gt; files, which I&amp;#8217;ve skipped over for this post.  &lt;/p&gt;
 
-&lt;p&gt;As such, the GitHub+Travis workflow we've developed here is quite general
+&lt;p&gt;As such, the GitHub+Travis workflow we&amp;#8217;ve developed here is quite general
 and will apply to almost &lt;em&gt;any&lt;/em&gt; unikernels that we may want to construct.
 I encourage you to explore the examples in the &lt;a href=&quot;https://github.com/mirage/mirage-skeleton&quot;&gt;mirage-skeleton&lt;/a&gt; repo and
-keep your build script maintainable.  We'll be using it again the next time
+keep your build script maintainable.  We&amp;#8217;ll be using it again the next time
 we build unikernel devices.&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;em&gt;Acknowledgements:&lt;/em&gt; There were lots of things I read over while writing this
 post but there were a few particularly useful things that you should look up.
-Anil's posts on &lt;a href=&quot;http://anil.recoil.org/2013/09/30/travis-and-ocaml.html&quot;&gt;Testing with Travis&lt;/a&gt; and
+Anil&amp;#8217;s posts on &lt;a href=&quot;http://anil.recoil.org/2013/09/30/travis-and-ocaml.html&quot;&gt;Testing with Travis&lt;/a&gt; and
 &lt;a href=&quot;http://anil.recoil.org/2013/10/06/travis-secure-ssh-integration.html&quot;&gt;Travis for secure deployments&lt;/a&gt; are quite succinct (and
-were themselves prompted by &lt;a href=&quot;http://blog.mlin.net/2013/02/testing-ocaml-projects-on-travis-ci.html&quot;&gt;Mike Lin's Travis post&lt;/a&gt; several
-months earlier). Looking over Mort's &lt;a href=&quot;https://github.com/mor1/mort-www/blob/master/.travis-build.sh&quot;&gt;build script&lt;/a&gt; and that of
+were themselves prompted by &lt;a href=&quot;http://blog.mlin.net/2013/02/testing-ocaml-projects-on-travis-ci.html&quot;&gt;Mike Lin&amp;#8217;s Travis post&lt;/a&gt; several
+months earlier). Looking over Mort&amp;#8217;s &lt;a href=&quot;https://github.com/mor1/mort-www/blob/master/.travis-build.sh&quot;&gt;build script&lt;/a&gt; and that of
 &lt;a href=&quot;https://github.com/mirage/mirage-www/blob/master/.travis-ci.sh&quot;&gt;mirage-www&lt;/a&gt; helped me figure out the deployment steps as well as improve
 my own script. Special thanks also to &lt;a href=&quot;http://erratique.ch&quot;&gt;Daniel&lt;/a&gt;, &lt;a href=&quot;http://www.lpw25.net&quot;&gt;Leo&lt;/a&gt; and &lt;a href=&quot;http://anil.recoil.org&quot;&gt;Anil&lt;/a&gt; for
 commenting on an earlier draft of this post.&lt;/p&gt;
+
 </content>
 </entry>
 
@@ -745,90 +735,91 @@ commenting on an earlier draft of this post.&lt;/p&gt;
   <author>Amir Chaudhry</author>
   <updated>2013-11-26T21:05:00+00:00</updated>
   <id>http://amirchaudhry.com/switching-from-bootstrap-to-zurb-foundation</id>
-  <content type="html">&lt;p&gt;I've just updated my site's HTML/CSS and moved from Twitter Bootstrap to
-&lt;a href=&quot;http://foundation.zurb.com/learn/features.html&quot;&gt;Zurb Foundation&lt;/a&gt;.  This post captures my subjective notes on the
+  <content type="html">
+&lt;p&gt;I&amp;#8217;ve just updated my site&amp;#8217;s HTML/CSS and moved from Twitter Bootstrap to 
+&lt;a href=&quot;http://foundation.zurb.com/learn/features.html&quot;&gt;Zurb Foundation&lt;/a&gt;.  This post captures my subjective notes on the 
 migration.&lt;/p&gt;
 
-&lt;h4&gt;My use of Bootstrap&lt;/h4&gt;
+&lt;h4 id=&quot;my-use-of-bootstrap&quot;&gt;My use of Bootstrap&lt;/h4&gt;
 
-&lt;p&gt;When I originally set this site up, I didn't know what frameworks existed or
-anything more than the basics of dealing with HTML (and barely any CSS).  I
-came across Twitter Bootstrap and immediately decided it would Solve All My
-Problems.  It really did.  Since then, I've gone through one 'upgrade' with
-Bootstrap (from 1.x to 2.x), after which I dutifully ignored all the fixes
-and improvements (note that Bootstrap was up to v2.3.2 while I was still
-using v2.0.2).&lt;/p&gt;
+&lt;p&gt;When I originally set this site up, I didn&amp;#8217;t know what frameworks existed or 
+anything more than the basics of dealing with HTML (and barely any CSS).  I 
+came across Twitter Bootstrap and immediately decided it would Solve All My 
+Problems.  It really did.  Since then, I&amp;#8217;ve gone through one &amp;#8216;upgrade&amp;#8217; with 
+Bootstrap (from 1.x to 2.x), after which I dutifully ignored all the fixes 
+and improvements (note that Bootstrap was up to v2.3.2 while I was still 
+using v2.0.2).  &lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://amirchaudhry.com/images/switch-to-foundation/responsive-design.png&quot; alt=&quot;Responsive Design&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;For the most part, this was fine with me but for a while now, I've been
-meaning to make this site 'responsive' (read: not look like crap from a
-mobile).  Bootstrap v3 purports to be mobile-first so upgrading would likely
-give me what I'm after but v3 is &lt;a href=&quot;http://getbootstrap.com/getting-started/&quot;&gt;not backwards compatible&lt;/a&gt;,
-meaning I'd have to rewrite parts of the HTML.  Since this step was
-unavoidable, it led me to have another look at front-end frameworks, just to
-see if I was missing anything.  This was especially relevant since we'd
-&lt;a href=&quot;http://amirchaudhry.com/announcing-new-ocamlorg/&quot;&gt;just released&lt;/a&gt; the new &lt;a href=&quot;http://ocaml.org&quot;&gt;OCaml.org&lt;/a&gt;
-website, itself built with Bootstrap v2.3.1 (we'd done the design/templating
-work long before v3 was released).  It would be useful to know what else is
+&lt;p&gt;For the most part, this was fine with me but for a while now, I&amp;#8217;ve been 
+meaning to make this site &amp;#8216;responsive&amp;#8217; (read: not look like crap from a 
+mobile).  Bootstrap v3 purports to be mobile-first so upgrading would likely 
+give me what I&amp;#8217;m after but v3 is &lt;a href=&quot;http://getbootstrap.com/getting-started/&quot;&gt;not backwards compatible&lt;/a&gt;, 
+meaning I&amp;#8217;d have to rewrite parts of the HTML.  Since this step was 
+unavoidable, it led me to have another look at front-end frameworks, just to 
+see if I was missing anything.  This was especially relevant since we&amp;#8217;d 
+&lt;a href=&quot;http://amirchaudhry.com/announcing-new-ocamlorg/&quot;&gt;just released&lt;/a&gt; the new &lt;a href=&quot;http://ocaml.org&quot;&gt;OCaml.org&lt;/a&gt; 
+website, itself built with Bootstrap v2.3.1 (we&amp;#8217;d done the design/templating 
+work long before v3 was released).  It would be useful to know what else is 
 out there for any future work.&lt;/p&gt;
 
-&lt;p&gt;Around this time I discovered Zurb Foundation and also the numerous
-comparisons between them (note: Foundation seems to come out ahead in most
-of those).  A few days ago, the folks at Zurb released
-&lt;a href=&quot;http://zurb.com/article/1280/foundation-5-blasts-off--2&quot;&gt;version 5&lt;/a&gt;, so I decided that now is the time to kick the
-tires.  For the last few days, I've been playing with the framework and in
-the end I decided to migrate my site over completely.&lt;/p&gt;
+&lt;p&gt;Around this time I discovered Zurb Foundation and also the numerous 
+comparisons between them (note: Foundation seems to come out ahead in most 
+of those).  A few days ago, the folks at Zurb released 
+&lt;a href=&quot;http://zurb.com/article/1280/foundation-5-blasts-off--2&quot;&gt;version 5&lt;/a&gt;, so I decided that now is the time to kick the 
+tires.  For the last few days, I&amp;#8217;ve been playing with the framework and in 
+the end I decided to migrate my site over completely.  &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://foundation.zurb.com/learn/features.html&quot;&gt;&lt;img src=&quot;http://amirchaudhry.com/images/switch-to-foundation/zurb-yeti.png&quot; alt=&quot;Foundation's Yeti&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4&gt;Swapping out one framework for another&lt;/h4&gt;
+&lt;h4 id=&quot;swapping-out-one-framework-for-another&quot;&gt;Swapping out one framework for another&lt;/h4&gt;
 
-&lt;p&gt;Over time, I've become moderately experienced with HTML/CSS and I can
-usually wrangle things to look the way I want, but my solutions aren't
-necessarily elegant. I was initially concerned that I'd already munged
-things so much that changing anything would be a pain.  When I first put the
-styles for this site together, I had to spend quite a bit of time
-overwriting Bootstrap's defaults so I was prepared for the same when using
-Foundation.  Turns out that I was fine.  I currently use &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; (and
-&lt;a href=&quot;http://jekyllbootstrap.com&quot;&gt;Jekyll Bootstrap&lt;/a&gt;) so I only had three template files and a couple of
-HTML pages to edit and because I'd kept most of my custom CSS in a separate
-file, it was literally a case of swapping out one framework for another and
-bug-fixing from there onwards.  There's definitely a lesson here in using
+&lt;p&gt;Over time, I&amp;#8217;ve become moderately experienced with HTML/CSS and I can 
+usually wrangle things to look the way I want, but my solutions aren&amp;#8217;t 
+necessarily elegant. I was initially concerned that I&amp;#8217;d already munged 
+things so much that changing anything would be a pain.  When I first put the 
+styles for this site together, I had to spend quite a bit of time 
+overwriting Bootstrap&amp;#8217;s defaults so I was prepared for the same when using 
+Foundation.  Turns out that I was fine.  I currently use &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; (and 
+&lt;a href=&quot;http://jekyllbootstrap.com&quot;&gt;Jekyll Bootstrap&lt;/a&gt;) so I only had three template files and a couple of 
+HTML pages to edit and because I&amp;#8217;d kept most of my custom CSS in a separate 
+file, it was literally a case of swapping out one framework for another and 
+bug-fixing from there onwards.  There&amp;#8217;s definitely a lesson here in using 
 automation as much as possible.&lt;/p&gt;
 
-&lt;p&gt;Customising the styles was another area of concern but I was pleasantly
-surprised to find I needed &lt;em&gt;less&lt;/em&gt; customisation than with Bootstrap.  This
-is likely because I didn't have to override as many defaults (and probably
-because I've learned more about CSS since then).  The one thing I seemed to
-be missing was a way to deal with code sections, so I just took what
+&lt;p&gt;Customising the styles was another area of concern but I was pleasantly 
+surprised to find I needed &lt;em&gt;less&lt;/em&gt; customisation than with Bootstrap.  This 
+is likely because I didn&amp;#8217;t have to override as many defaults (and probably 
+because I&amp;#8217;ve learned more about CSS since then).  The one thing I seemed to 
+be missing was a way to deal with code sections, so I just took what 
 Bootstrap had and copied it in.  At some point I should revisit this.&lt;/p&gt;
 
-&lt;p&gt;It did take me a while to get my head around Foundation's grid but it was
-worth it in the end.  The idea is that you should design for small screens
-first and then adjust things for larger screens as necessary. There are
-several different default sizes which inherit their properties from the size
-below, unless you explicitly override them.  I initially screwed this up by
-explicitly defining the grid using the &lt;code&gt;small-#&lt;/code&gt; classes, which obviously
-looks ridiculous on small screens.  I fixed it by swapping out &lt;code&gt;small-#&lt;/code&gt; for
-&lt;code&gt;medium-#&lt;/code&gt; everywhere in the HTML, after which everything looked reasonable.
-Items flowed sensibly into a default column for the small screens and looked
-acceptable for larger screens and perfectly fine on desktops.  I could do
-more styling of the mobile view but I'd already achieved most of what I was
-after.&lt;/p&gt;
+&lt;p&gt;It did take me a while to get my head around Foundation&amp;#8217;s grid but it was 
+worth it in the end.  The idea is that you should design for small screens 
+first and then adjust things for larger screens as necessary. There are 
+several different default sizes which inherit their properties from the size 
+below, unless you explicitly override them.  I initially screwed this up by 
+explicitly defining the grid using the &lt;code&gt;small-#&lt;/code&gt; classes, which obviously 
+looks ridiculous on small screens.  I fixed it by swapping out &lt;code&gt;small-#&lt;/code&gt; for 
+&lt;code&gt;medium-#&lt;/code&gt; everywhere in the HTML, after which everything looked reasonable. 
+Items flowed sensibly into a default column for the small screens and looked 
+acceptable for larger screens and perfectly fine on desktops.  I could do 
+more styling of the mobile view but I&amp;#8217;d already achieved most of what I was 
+after.  &lt;/p&gt;
 
-&lt;h4&gt;Fixing image galleries and embedded content&lt;/h4&gt;
+&lt;h4 id=&quot;fixing-image-galleries-and-embedded-content&quot;&gt;Fixing image galleries and embedded content&lt;/h4&gt;
 
-&lt;p&gt;The only additional thing I used from Bootstrap was the &lt;a href=&quot;http://getbootstrap.com/javascript/#carousel&quot;&gt;Carousel&lt;/a&gt;. I'd
-written some custom helper scripts that would take some images and
-thumbnails from a specified folder and produce clickable thumbnails with a
-slider underneath.  Foundation provides &lt;a href=&quot;http://foundation.zurb.com/docs/components/orbit.html&quot;&gt;Orbit&lt;/a&gt;, so I had to spend time
-rewriting my script to produce the necessary HTML.  This actually resulted
-in cleaner HTML and one of the features I wanted (the ability to link to a
-specific image) was available by default in Orbit.  At this point I also
-tried to make the output look better for the case where JavaScript is
-disabled (in essence, each image is just displayed as a list).  Below is an
-example of an image gallery, taken from a previous post, when I
+&lt;p&gt;The only additional thing I used from Bootstrap was the &lt;a href=&quot;http://getbootstrap.com/javascript/#carousel&quot;&gt;Carousel&lt;/a&gt;. I&amp;#8217;d 
+written some custom helper scripts that would take some images and 
+thumbnails from a specified folder and produce clickable thumbnails with a 
+slider underneath.  Foundation provides &lt;a href=&quot;http://foundation.zurb.com/docs/components/orbit.html&quot;&gt;Orbit&lt;/a&gt;, so I had to spend time 
+rewriting my script to produce the necessary HTML.  This actually resulted 
+in cleaner HTML and one of the features I wanted (the ability to link to a 
+specific image) was available by default in Orbit.  At this point I also 
+tried to make the output look better for the case where JavaScript is 
+disabled (in essence, each image is just displayed as a list).  Below is an 
+example of an image gallery, taken from a previous post, when I 
 &lt;a href=&quot;http://amirchaudhry.com/joined-the-computer-lab/&quot;&gt;joined the computer lab&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;gallery&quot;&gt;
@@ -842,62 +833,60 @@ example of an image gallery, taken from a previous post, when I
       &lt;li&gt;&lt;a data-orbit-link=&quot;join-comp-lab-3&quot;&gt;&lt;img src=&quot;/images/join-comp-lab/join-comp-lab-thumb-3.png&quot; alt=&quot;join-comp-lab-thumb-3&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
     
   &lt;/ul&gt;
-  &lt;ul data-orbit data-options=&quot;next_on_click:true; timer_speed:3000; pause_on_hover:false; bullets:false;&quot;&gt;
+  &lt;ul data-orbit=&quot;&quot; data-options=&quot;next_on_click:true; timer_speed:3000; pause_on_hover:false; bullets:false;&quot;&gt;
     
-    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;join-comp-lab-1&quot;&gt;&lt;img src=&quot;/images/join-comp-lab/join-comp-lab-1.jpg&quot; alt=&quot;join-comp-lab-1&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;join-comp-lab-1&quot;&gt;&lt;img src=&quot;/images/join-comp-lab/join-comp-lab-1.jpg&quot; alt=&quot;join-comp-lab-1&quot; /&gt;&lt;/li&gt;
     
-    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;join-comp-lab-2&quot;&gt;&lt;img src=&quot;/images/join-comp-lab/join-comp-lab-2.jpg&quot; alt=&quot;join-comp-lab-2&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;join-comp-lab-2&quot;&gt;&lt;img src=&quot;/images/join-comp-lab/join-comp-lab-2.jpg&quot; alt=&quot;join-comp-lab-2&quot; /&gt;&lt;/li&gt;
     
-    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;join-comp-lab-3&quot;&gt;&lt;img src=&quot;/images/join-comp-lab/join-comp-lab-3.jpg&quot; alt=&quot;join-comp-lab-3&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;gallery-image&quot; data-orbit-slide=&quot;join-comp-lab-3&quot;&gt;&lt;img src=&quot;/images/join-comp-lab/join-comp-lab-3.jpg&quot; alt=&quot;join-comp-lab-3&quot; /&gt;&lt;/li&gt;
     
   &lt;/ul&gt;
 &lt;/div&gt;
 
-
-&lt;p&gt;Foundation also provides a component called &lt;a href=&quot;http://foundation.zurb.com/docs/components/flex_video.html&quot;&gt;Flex Video&lt;/a&gt;, which allows the
-browser to scale videos to the appropriate size.  This fix was as simple as
-going back through old posts and wrapping anything that was &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt; in a
-&lt;code&gt;&amp;lt;div class=&quot;flex-video&quot;&amp;gt;&lt;/code&gt;.  It really was that simple and all the Vimeo and
-YouTube items scaled perfectly.  Here's an example of a video from an
-earlier post, where I gave a &lt;a href=&quot;http://amirchaudhry.com/wireframe-demos-for-ocamlorg/&quot;&gt;walkthrough of the ocaml.org site&lt;/a&gt;.
+&lt;p&gt;Foundation also provides a component called &lt;a href=&quot;http://foundation.zurb.com/docs/components/flex_video.html&quot;&gt;Flex Video&lt;/a&gt;, which allows the 
+browser to scale videos to the appropriate size.  This fix was as simple as 
+going back through old posts and wrapping anything that was &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt; in a 
+&lt;code&gt;&amp;lt;div class=&quot;flex-video&quot;&amp;gt;&lt;/code&gt;.  It really was that simple and all the Vimeo and 
+YouTube items scaled perfectly.  Here&amp;#8217;s an example of a video from an 
+earlier post, where I gave a &lt;a href=&quot;http://amirchaudhry.com/wireframe-demos-for-ocamlorg/&quot;&gt;walkthrough of the ocaml.org site&lt;/a&gt;. 
 Try changing the width of your browser window to see it scale.&lt;/p&gt;
 
 &lt;div class=&quot;flex-video widescreen vimeo&quot;&gt;
-  &lt;iframe src=&quot;http://player.vimeo.com/video/61768157?byline=0&amp;amp;portrait=0&amp;amp;color=de9e6a&quot; width=&quot;540&quot; height=&quot;303&quot; frameborder=&quot;0&quot; webkitAllowFullScreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowFullScreen=&quot;true&quot;&gt;Video demo&lt;/iframe&gt;
+  &lt;iframe src=&quot;http://player.vimeo.com/video/61768157?byline=0&amp;amp;portrait=0&amp;amp;color=de9e6a&quot; width=&quot;540&quot; height=&quot;303&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowfullscreen=&quot;true&quot;&gt;Video demo&lt;/iframe&gt;
 &lt;/div&gt;
 
+&lt;h4 id=&quot;framework-differences&quot;&gt;Framework differences&lt;/h4&gt;
 
-&lt;h4&gt;Framework differences&lt;/h4&gt;
-
-&lt;p&gt;Another of the main difference between the two frameworks is that Bootstrap
-uses &lt;a href=&quot;http://lesscss.org&quot;&gt;LESS&lt;/a&gt; to manage its CSS whereas Foundation uses &lt;a href=&quot;http://sass-lang.com&quot;&gt;SASS&lt;/a&gt;.  Frankly,
-I've no experience with either of them so it makes little difference to me.
-It's worth bearing in mind for anyone who's workflow does involve
-pre-processing.  Also, Bootstrap is available under the
-&lt;a href=&quot;http://getbootstrap.com/getting-started/#license-faqs&quot;&gt;Apache 2 License&lt;/a&gt;, while Foundation is released under
+&lt;p&gt;Another of the main difference between the two frameworks is that Bootstrap 
+uses &lt;a href=&quot;http://lesscss.org&quot;&gt;LESS&lt;/a&gt; to manage its CSS whereas Foundation uses &lt;a href=&quot;http://sass-lang.com&quot;&gt;SASS&lt;/a&gt;.  Frankly, 
+I&amp;#8217;ve no experience with either of them so it makes little difference to me. 
+It&amp;#8217;s worth bearing in mind for anyone who&amp;#8217;s workflow does involve 
+pre-processing.  Also, Bootstrap is available under the 
+&lt;a href=&quot;http://getbootstrap.com/getting-started/#license-faqs&quot;&gt;Apache 2 License&lt;/a&gt;, while Foundation is released under 
 the &lt;a href=&quot;http://foundation.zurb.com/learn/faq.html#question-3&quot;&gt;MIT license&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h4&gt;Summary&lt;/h4&gt;
+&lt;h4 id=&quot;summary&quot;&gt;Summary&lt;/h4&gt;
 
-&lt;p&gt;Overall, the transition was pretty painless and most of the time was spent
-getting familiar with the grid, hunting for docs/examples and trying to make
-the image gallery work the way I wanted.  I do think Bootstrap's docs are
-better but Foundation's aren't bad.&lt;/p&gt;
+&lt;p&gt;Overall, the transition was pretty painless and most of the time was spent 
+getting familiar with the grid, hunting for docs/examples and trying to make 
+the image gallery work the way I wanted.  I do think Bootstrap&amp;#8217;s docs are 
+better but Foundation&amp;#8217;s aren&amp;#8217;t bad.  &lt;/p&gt;
 
-&lt;p&gt;Although this isn't meant to be a comparison, I much prefer Foundation to
-Bootstrap.  If you're not sure which to use then I think the secret is in
-the names of the frameworks.&lt;/p&gt;
+&lt;p&gt;Although this isn&amp;#8217;t meant to be a comparison, I much prefer Foundation to 
+Bootstrap.  If you&amp;#8217;re not sure which to use then I think the secret is in 
+the names of the frameworks.  &lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Bootstrap (for me) was a &lt;em&gt;great&lt;/em&gt; way to '&lt;em&gt;bootstrap&lt;/em&gt;' a site quickly with
-lots of acceptable defaults -- it was quick to get started but took some
-work to alter.&lt;/li&gt;
-&lt;li&gt;Foundation seems to provide a great '&lt;em&gt;foundation&lt;/em&gt;' on which to create more
-customised sites -- it's more flexible but needs more upfront thought.&lt;/li&gt;
+  &lt;li&gt;Bootstrap (for me) was a &lt;em&gt;great&lt;/em&gt; way to &amp;#8216;&lt;em&gt;bootstrap&lt;/em&gt;&amp;#8217; a site quickly with 
+lots of acceptable defaults &amp;#8211; it was quick to get started but took some 
+work to alter.  &lt;/li&gt;
+  &lt;li&gt;Foundation seems to provide a great &amp;#8216;&lt;em&gt;foundation&lt;/em&gt;&amp;#8217; on which to create more 
+customised sites &amp;#8211; it&amp;#8217;s more flexible but needs more upfront thought.  &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;That&amp;#8217;s pretty much how I&amp;#8217;d recommend them to people now.&lt;/p&gt;
 
-&lt;p&gt;That's pretty much how I'd recommend them to people now.&lt;/p&gt;
 </content>
 </entry>
 
@@ -908,35 +897,37 @@ customised sites -- it's more flexible but needs more upfront thought.&lt;/li&gt
   <author>Amir Chaudhry</author>
   <updated>2013-11-20T23:00:00+00:00</updated>
   <id>http://amirchaudhry.com/announcing-new-ocamlorg</id>
-  <content type="html">&lt;p&gt;As some of you may have noticed, the new OCaml.org site is now live!&lt;/p&gt;
+  <content type="html">
+&lt;p&gt;As some of you may have noticed, the new OCaml.org site is now live!  &lt;/p&gt;
 
-&lt;p&gt;The DNS may still be propagating so if &lt;a href=&quot;http://ocaml.org&quot;&gt;http://ocaml.org&lt;/a&gt; hasn't updated for you then try http://166.78.252.20.  This post is in two parts: the first is the announcement and the second is a call for content.&lt;/p&gt;
+&lt;p&gt;The DNS may still be propagating so if &lt;a href=&quot;http://ocaml.org&quot;&gt;http://ocaml.org&lt;/a&gt; hasn&amp;#8217;t updated for you then try http://166.78.252.20.  This post is in two parts: the first is the announcement and the second is a call for content.&lt;/p&gt;
 
-&lt;h3&gt;New OCaml.org website design!&lt;/h3&gt;
+&lt;h3 id=&quot;new-ocamlorg-website-design&quot;&gt;New OCaml.org website design!&lt;/h3&gt;
 
-&lt;p&gt;The new site represents a major milestone in the continuing growth of the OCaml ecosystem. It's the culmination of a lot of volunteer work over the last several months and I'd specifically like to thank &lt;a href=&quot;https://github.com/Chris00&quot;&gt;Christophe&lt;/a&gt;, &lt;a href=&quot;http://ashishagarwal.org&quot;&gt;Ashish&lt;/a&gt; and &lt;a href=&quot;http://philippewang.info/CL/&quot;&gt;Philippe&lt;/a&gt; for their dedication (the &lt;a href=&quot;https://github.com/ocaml/ocaml.org/commits/master&quot;&gt;commit logs&lt;/a&gt; speak volumes).&lt;/p&gt;
+&lt;p&gt;The new site represents a major milestone in the continuing growth of the OCaml ecosystem. It&amp;#8217;s the culmination of a lot of volunteer work over the last several months and I&amp;#8217;d specifically like to thank &lt;a href=&quot;https://github.com/Chris00&quot;&gt;Christophe&lt;/a&gt;, &lt;a href=&quot;http://ashishagarwal.org&quot;&gt;Ashish&lt;/a&gt; and &lt;a href=&quot;http://philippewang.info/CL/&quot;&gt;Philippe&lt;/a&gt; for their dedication (the &lt;a href=&quot;https://github.com/ocaml/ocaml.org/commits/master&quot;&gt;commit logs&lt;/a&gt; speak volumes).  &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://amirchaudhry.com/wireframe-demos-for-ocamlorg/&quot;&gt;&lt;img src=&quot;http://amirchaudhry.com/images/ann-new-ocamlorg/ocaml-home-wire.png&quot; alt=&quot;OCaml.org Wireframes&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;We began this journey just over 8 months ago with paper, pencils and a lot of ideas. This led to a comprehensive set of &lt;a href=&quot;http://amirchaudhry.com/wireframe-demos-for-ocamlorg/&quot;&gt;wireframes and walk-throughs&lt;/a&gt; of the site, which then developed into a collection of &lt;a href=&quot;https://github.com/ocaml/ocaml.org/wiki/Site-Redesign&quot;&gt;Photoshop mockups&lt;/a&gt;. In turn, these formed the basis for the html templates and style sheets, which we've adapted to fit our needs across the site.&lt;/p&gt;
+&lt;p&gt;We began this journey just over 8 months ago with paper, pencils and a lot of ideas. This led to a comprehensive set of &lt;a href=&quot;http://amirchaudhry.com/wireframe-demos-for-ocamlorg/&quot;&gt;wireframes and walk-throughs&lt;/a&gt; of the site, which then developed into a collection of &lt;a href=&quot;https://github.com/ocaml/ocaml.org/wiki/Site-Redesign&quot;&gt;Photoshop mockups&lt;/a&gt;. In turn, these formed the basis for the html templates and style sheets, which we&amp;#8217;ve adapted to fit our needs across the site.  &lt;/p&gt;
 
-&lt;p&gt;Alongside the design process, we also considered the kind of structure and &lt;a href=&quot;http://lists.ocaml.org/pipermail/infrastructure/2013-July/000211.html&quot;&gt;workflow we aspired to&lt;/a&gt;, both as maintainers and contributors.  This led us to develop completely new tools for &lt;a href=&quot;http://pw374.github.io/posts/2013-09-05-22-31-26-about-omd.html&quot;&gt;Markdown&lt;/a&gt; and &lt;a href=&quot;http://pw374.github.io/posts/2013-10-03-20-35-12-using-mpp-two-different-ways.html&quot;&gt;templating&lt;/a&gt; in OCaml, which are now available in OPAM for the benefit all.&lt;/p&gt;
+&lt;p&gt;Alongside the design process, we also considered the kind of structure and &lt;a href=&quot;http://lists.ocaml.org/pipermail/infrastructure/2013-July/000211.html&quot;&gt;workflow we aspired to&lt;/a&gt;, both as maintainers and contributors.  This led us to develop completely new tools for &lt;a href=&quot;http://pw374.github.io/posts/2013-09-05-22-31-26-about-omd.html&quot;&gt;Markdown&lt;/a&gt; and &lt;a href=&quot;http://pw374.github.io/posts/2013-10-03-20-35-12-using-mpp-two-different-ways.html&quot;&gt;templating&lt;/a&gt; in OCaml, which are now available in OPAM for the benefit all.  &lt;/p&gt;
 
-&lt;p&gt;Working on all these things in parallel definitely had it challenges (which I'll write about separately) but the result has been worth the effort.&lt;/p&gt;
+&lt;p&gt;Working on all these things in parallel definitely had it challenges (which I&amp;#8217;ll write about separately) but the result has been worth the effort.  &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://ocaml.org&quot;&gt;&lt;img src=&quot;http://amirchaudhry.com/images/ann-new-ocamlorg/ocaml-home-mockup.png&quot; alt=&quot;OCaml.org&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The journey is ongoing and we still have many more improvements we hope to make. The site you see today primarily improves upon the design, structure and workflows but in time, we also intend to incorporate more information on packages and documentation. With the new tooling, moving the website forward will become much easier and I hope that more members of the community become involved in the generation and curation of content.  This brings me to the second part of this post.&lt;/p&gt;
 
-&lt;h3&gt;Call for content&lt;/h3&gt;
+&lt;h3 id=&quot;call-for-content&quot;&gt;Call for content&lt;/h3&gt;
 
-&lt;p&gt;We have lots of great content on the website but there are parts that could do with a refresh and gaps that could be filled.  As a community driven site, we need ongoing contributions to ensure that the site best reflects its members.&lt;/p&gt;
+&lt;p&gt;We have lots of great content on the website but there are parts that could do with a refresh and gaps that could be filled.  As a community driven site, we need ongoing contributions to ensure that the site best reflects its members.  &lt;/p&gt;
 
-&lt;p&gt;For example, if you do commercial work on OCaml then maybe you'd like to add yourself to the &lt;a href=&quot;http://ocaml.org/community/support.html&quot;&gt;support page&lt;/a&gt;? Perhaps there are tutorials you can help to complete, like &lt;a href=&quot;http://ocaml.org/learn/tutorials/99problems.html&quot;&gt;99 problems&lt;/a&gt;?  If you're not sure where to begin, there are already a number of &lt;a href=&quot;https://github.com/ocaml/ocaml.org/issues?labels=content&quot;&gt;content issues&lt;/a&gt; you could contribute to.&lt;/p&gt;
+&lt;p&gt;For example, if you do commercial work on OCaml then maybe you&amp;#8217;d like to add yourself to the &lt;a href=&quot;http://ocaml.org/community/support.html&quot;&gt;support page&lt;/a&gt;? Perhaps there are tutorials you can help to complete, like &lt;a href=&quot;http://ocaml.org/learn/tutorials/99problems.html&quot;&gt;99 problems&lt;/a&gt;?  If you&amp;#8217;re not sure where to begin, there are already a number of &lt;a href=&quot;https://github.com/ocaml/ocaml.org/issues?labels=content&quot;&gt;content issues&lt;/a&gt; you could contribute to.  &lt;/p&gt;
 
-&lt;p&gt;Although we've gone through a bug-hunt already, feedback on the site is still very welcome.  You can either &lt;a href=&quot;https://github.com/ocaml/ocaml.org/issues&quot;&gt;create an issue&lt;/a&gt; on the tracker (preferred), or email the infrastructure list.&lt;/p&gt;
+&lt;p&gt;Although we&amp;#8217;ve gone through a bug-hunt already, feedback on the site is still very welcome.  You can either &lt;a href=&quot;https://github.com/ocaml/ocaml.org/issues&quot;&gt;create an issue&lt;/a&gt; on the tracker (preferred), or email the infrastructure list. &lt;/p&gt;
 
-&lt;p&gt;It's fantastic how far we've come and I look forward to the next phase!&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s fantastic how far we&amp;#8217;ve come and I look forward to the next phase!&lt;/p&gt;
+
 </content>
 </entry>
 
@@ -947,52 +938,61 @@ customised sites -- it's more flexible but needs more upfront thought.&lt;/li&gt
   <author>Amir Chaudhry</author>
   <updated>2013-11-06T11:00:00+00:00</updated>
   <id>http://amirchaudhry.com/migration-plan-ocaml-org</id>
-  <content type="html">&lt;p&gt;We're close to releasing the new design of ocaml.org but need help from the
+  <content type="html">
+&lt;p&gt;We&amp;#8217;re close to releasing the new design of ocaml.org but need help from the 
 OCaml community to identify and fix bugs before we switch next week.&lt;/p&gt;
 
-&lt;p&gt;Ashish, Christophe, Philippe and I have been discussing how we should go
-about this and below is the plan for migration.  If anyone would like to
-discuss any of this, then the &lt;a href=&quot;http://lists.ocaml.org/listinfo/infrastructure&quot;&gt;infrastructure list&lt;/a&gt; is the best
+&lt;p&gt;Ashish, Christophe, Philippe and I have been discussing how we should go 
+about this and below is the plan for migration.  If anyone would like to 
+discuss any of this, then the &lt;a href=&quot;http://lists.ocaml.org/listinfo/infrastructure&quot;&gt;infrastructure list&lt;/a&gt; is the best 
 place to do so.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;We've made a &lt;strong&gt;&lt;a href=&quot;https://github.com/ocaml/ocaml.org/tree/redesign&quot;&gt;new branch&lt;/a&gt;&lt;/strong&gt; on the main ocaml.org repository with
-the redesign.  This branch is a fork of the master and we've simply cleaned
-up and replayed our git commits there.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We've built a live version of the new site, which is visible at
-&lt;strong&gt;&lt;a href=&quot;http://preview.ocaml.org&quot;&gt;http://preview.ocaml.org&lt;/a&gt;&lt;/strong&gt; - this is rebuilt every few minutes
-from the branch mentioned above.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Over the course of one week, we ask the community to review the new site
-and &lt;strong&gt;&lt;a href=&quot;https://github.com/ocaml/ocaml.org/issues&quot;&gt;report any bugs or problems&lt;/a&gt;&lt;/strong&gt; on the issue tracker. We &lt;em&gt;triage&lt;/em&gt;
-those bugs to identify any blockers and work on those first.  This is the
-phase we'll be in from &lt;em&gt;today&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;After one week (7 days), and after blocking bugs have been fixed, we
-&lt;strong&gt;merge the redesign branch&lt;/strong&gt; into the master branch.  This would
-effectively present the new site to the world.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We&amp;#8217;ve made a &lt;strong&gt;&lt;a href=&quot;https://github.com/ocaml/ocaml.org/tree/redesign&quot;&gt;new branch&lt;/a&gt;&lt;/strong&gt; on the main ocaml.org repository with 
+the redesign.  This branch is a fork of the master and we&amp;#8217;ve simply cleaned 
+up and replayed our git commits there.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We&amp;#8217;ve built a live version of the new site, which is visible at 
+&lt;strong&gt;&lt;a href=&quot;http://preview.ocaml.org&quot;&gt;http://preview.ocaml.org&lt;/a&gt;&lt;/strong&gt; - this is rebuilt every few minutes 
+from the branch mentioned above.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Over the course of one week, we ask the community to review the new site 
+and &lt;strong&gt;&lt;a href=&quot;https://github.com/ocaml/ocaml.org/issues&quot;&gt;report any bugs or problems&lt;/a&gt;&lt;/strong&gt; on the issue tracker. We &lt;em&gt;triage&lt;/em&gt; 
+those bugs to identify any blockers and work on those first.  This is the 
+phase we&amp;#8217;ll be in from &lt;em&gt;today&lt;/em&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;After one week (7 days), and after blocking bugs have been fixed, we 
+&lt;strong&gt;merge the redesign branch&lt;/strong&gt; into the master branch.  This would 
+effectively present the new site to the world.  &lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;p&gt;During the above, we would not be able to accept any new pull requests on 
+the master branch but would be happy to accept them on the new, redesign 
+branch.  Hence, restricting the time frame to one week.  &lt;/p&gt;
 
-&lt;p&gt;During the above, we would not be able to accept any new pull requests on
-the master branch but would be happy to accept them on the new, redesign
-branch.  Hence, restricting the time frame to one week.&lt;/p&gt;
+&lt;p&gt;Please note that the above is only intended to merge the &lt;em&gt;design&lt;/em&gt; and 
+&lt;em&gt;toolchain&lt;/em&gt; for the new site.  Specifically, we&amp;#8217;ve created new landing 
+pages, have new style sheets and have restructured the site&amp;#8217;s contents as 
+well as made some new libraries (&lt;a href=&quot;http://pw374.github.io/posts/2013-09-05-22-31-26-about-omd.html&quot;&gt;OMD&lt;/a&gt; and &lt;a href=&quot;http://pw374.github.io/posts/2013-10-03-20-39-07-OPAMaging-MPP.html&quot;&gt;MPP&lt;/a&gt;). The new toolchain 
+means people can write files in markdown, which makes contributing content a 
+lot easier.  &lt;/p&gt;
 
-&lt;p&gt;Please note that the above is only intended to merge the &lt;em&gt;design&lt;/em&gt; and
-&lt;em&gt;toolchain&lt;/em&gt; for the new site.  Specifically, we've created new landing
-pages, have new style sheets and have restructured the site's contents as
-well as made some new libraries (&lt;a href=&quot;http://pw374.github.io/posts/2013-09-05-22-31-26-about-omd.html&quot;&gt;OMD&lt;/a&gt; and &lt;a href=&quot;http://pw374.github.io/posts/2013-10-03-20-39-07-OPAMaging-MPP.html&quot;&gt;MPP&lt;/a&gt;). The new toolchain
-means people can write files in markdown, which makes contributing content a
-lot easier.&lt;/p&gt;
+&lt;p&gt;Since the files are on GitHub, people don&amp;#8217;t even need to clone the site 
+locally to make simple edits (or even add new pages). Just click the &amp;#8216;Edit 
+this page&amp;#8217; link in the footer to be taken to the right file in the 
+repository and GitHub&amp;#8217;s editing and pull request features will allow you to 
+make changes and submit updates, all from within your browser (see the 
+&lt;a href=&quot;https://help.github.com/articles/creating-and-editing-files-in-your-repository&quot;&gt;GitHub Article&lt;/a&gt; for details).  &lt;/p&gt;
 
-&lt;p&gt;Since the files are on GitHub, people don't even need to clone the site
-locally to make simple edits (or even add new pages). Just click the 'Edit
-this page' link in the footer to be taken to the right file in the
-repository and GitHub's editing and pull request features will allow you to
-make changes and submit updates, all from within your browser (see the
-&lt;a href=&quot;https://help.github.com/articles/creating-and-editing-files-in-your-repository&quot;&gt;GitHub Article&lt;/a&gt; for details).&lt;/p&gt;
-
-&lt;p&gt;There is still work to be done on adding new features but the above changes
-are already a great improvement to the site and are ready to be reviewed by
+&lt;p&gt;There is still work to be done on adding new features but the above changes 
+are already a great improvement to the site and are ready to be reviewed by 
 the OCaml community and merged.&lt;/p&gt;
+
 </content>
 </entry>
 
@@ -1003,146 +1003,174 @@ the OCaml community and merged.&lt;/p&gt;
   <author>Amir Chaudhry</author>
   <updated>2013-10-28T12:30:00+00:00</updated>
   <id>http://amirchaudhry.com/fpdays-review</id>
-  <content type="html">&lt;p&gt;&lt;a href=&quot;http://fpdays.net/2013/sessions/index.php?session=24&quot;&gt;&lt;img style=&quot;float: right; margin-top: 10px; margin-left: 10px&quot; src=&quot;/images/web/fpdays-logo.png&quot;&gt;&lt;/a&gt;
-Last Thursday a bunch of us from the OCaml Labs team gave an OCaml tutorial
-at the &lt;a href=&quot;http://fpdays.net/2013/sessions/index.php?session=24&quot;&gt;FPDays&lt;/a&gt; conference (an event for people interested in Functional
-Programming).  &lt;a href=&quot;https://github.com/yallop&quot;&gt;Jeremy&lt;/a&gt; and I led the session with &lt;a href=&quot;http://www.lpw25.net&quot;&gt;Leo&lt;/a&gt;, &lt;a href=&quot;https://github.com/dsheets&quot;&gt;David&lt;/a&gt; and
+  <content type="html">
+&lt;p&gt;&lt;a href=&quot;http://fpdays.net/2013/sessions/index.php?session=24&quot;&gt;&lt;img style=&quot;float: right; margin-top: 10px; margin-left: 10px&quot; src=&quot;/images/web/fpdays-logo.png&quot; /&gt;&lt;/a&gt;
+Last Thursday a bunch of us from the OCaml Labs team gave an OCaml tutorial 
+at the &lt;a href=&quot;http://fpdays.net/2013/sessions/index.php?session=24&quot;&gt;FPDays&lt;/a&gt; conference (an event for people interested in Functional 
+Programming).  &lt;a href=&quot;https://github.com/yallop&quot;&gt;Jeremy&lt;/a&gt; and I led the session with &lt;a href=&quot;http://www.lpw25.net&quot;&gt;Leo&lt;/a&gt;, &lt;a href=&quot;https://github.com/dsheets&quot;&gt;David&lt;/a&gt; and 
 &lt;a href=&quot;http://philippewang.info/CL/&quot;&gt;Philippe&lt;/a&gt; helping everyone progress and dealing with questions.&lt;/p&gt;
 
-&lt;p&gt;&lt;img style=&quot;float: left; margin-right: 10px&quot; src=&quot;/images/fpdays2013/fpdays2013-01.jpg&quot;&gt;
-It turned out to be by far the &lt;em&gt;most popular session&lt;/em&gt; at the conference with
-over 20 people all wanting to get to grips with OCaml!  An excellent turnout
-and a great indicator of the interest that's out there, especially when you
-offer a hands-on session to people.  This shouldn't be a surprise as we've
-had good attendance for the general &lt;a href=&quot;http://www.meetup.com/Cambridge-NonDysFunctional-Programmers/&quot;&gt;OCaml meetups&lt;/a&gt; I've run
-and also the &lt;a href=&quot;http://ocamllabs.github.io/compiler-hacking/2013/09/17/compiler-hacking-july-2013.html&quot;&gt;compiler hacking sessions&lt;/a&gt;, which Jeremy and
-Leo have been building up (do sign up if you're interested in either of
-those!).  We had a nice surprise for attendees, which were
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Galley_proof&quot;&gt;uncorrected proof&lt;/a&gt; copies of Real World OCaml and luckily, we had just
+&lt;p&gt;&lt;img style=&quot;float: left; margin-right: 10px&quot; src=&quot;/images/fpdays2013/fpdays2013-01.jpg&quot; /&gt;
+It turned out to be by far the &lt;em&gt;most popular session&lt;/em&gt; at the conference with 
+over 20 people all wanting to get to grips with OCaml!  An excellent turnout 
+and a great indicator of the interest that&amp;#8217;s out there, especially when you 
+offer a hands-on session to people.  This shouldn&amp;#8217;t be a surprise as we&amp;#8217;ve 
+had good attendance for the general &lt;a href=&quot;http://www.meetup.com/Cambridge-NonDysFunctional-Programmers/&quot;&gt;OCaml meetups&lt;/a&gt; I&amp;#8217;ve run 
+and also the &lt;a href=&quot;http://ocamllabs.github.io/compiler-hacking/2013/09/17/compiler-hacking-july-2013.html&quot;&gt;compiler hacking sessions&lt;/a&gt;, which Jeremy and 
+Leo have been building up (do sign up if you&amp;#8217;re interested in either of 
+those!).  We had a nice surprise for attendees, which were 
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Galley_proof&quot;&gt;uncorrected proof&lt;/a&gt; copies of Real World OCaml and luckily, we had just 
 enough to go around.&lt;/p&gt;
 
-&lt;p&gt;For the tutorial itself, Jeremy put together a nice sequence of exercises
-and a &lt;a href=&quot;https://github.com/ocamllabs/fpdays-skeleton&quot;&gt;skeleton repo&lt;/a&gt; (with helpful comments in the code) so that people
-could dive in quickly.  The event was set up to be really informal and the
+&lt;p&gt;For the tutorial itself, Jeremy put together a nice sequence of exercises 
+and a &lt;a href=&quot;https://github.com/ocamllabs/fpdays-skeleton&quot;&gt;skeleton repo&lt;/a&gt; (with helpful comments in the code) so that people 
+could dive in quickly.  The event was set up to be really informal and the 
 rough plan was as following:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Installation/Intro&lt;/em&gt; - We checked that people had been able to follow the
-&lt;a href=&quot;http://amirchaudhry.com/fpdays-ocaml-session/&quot;&gt;installation instructions&lt;/a&gt;, which we'd sent them in advance.
-We also handed out copies of the book and made sure folks were comfortable
-with &lt;a href=&quot;http://opam.ocaml.org&quot;&gt;OPAM&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Hello world&lt;/em&gt; - A light intro to get people familiar with the OCaml
-syntax and installing packages with OPAM. This would also help people to get
-familiar with the toolchain, workflow and compilation.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Monty Hall browser game&lt;/em&gt; - Using &lt;a href=&quot;http://ocsigen.org/js_of_ocaml/&quot;&gt;&lt;code&gt;js_of_ocaml&lt;/code&gt;&lt;/a&gt;, we wanted
-people to create and run the &lt;a href=&quot;http://en.wikipedia.org/wiki/Monty_Hall_problem&quot;&gt;Monty Hall problem&lt;/a&gt; in their
-browser.  This would give people a taste of some real world interaction by
-having to deal with the DOM and interfaces.  If folks did well, they could
-add code to keep logs of the game results.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Client-server game&lt;/em&gt; - The previous game was all in the browser (so could
-be examined by players) so here the task was to split it into a client and
-server, ensuring the two stay in sync.  This would demonstrate the
-re-usability of the OCaml code already written and give people a feel for
-client server interactions. If people wanted to do more, they could use
-&lt;a href=&quot;http://opam.ocaml.org/pkg/ctypes/0.1.1/&quot;&gt;ctypes&lt;/a&gt; and get better random numbers.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Installation/Intro&lt;/em&gt; - We checked that people had been able to follow the 
+&lt;a href=&quot;http://amirchaudhry.com/fpdays-ocaml-session/&quot;&gt;installation instructions&lt;/a&gt;, which we&amp;#8217;d sent them in advance. 
+We also handed out copies of the book and made sure folks were comfortable 
+with &lt;a href=&quot;http://opam.ocaml.org&quot;&gt;OPAM&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Hello world&lt;/em&gt; - A light intro to get people familiar with the OCaml 
+syntax and installing packages with OPAM. This would also help people to get 
+familiar with the toolchain, workflow and compilation.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Monty Hall browser game&lt;/em&gt; - Using &lt;a href=&quot;http://ocsigen.org/js_of_ocaml/&quot;&gt;&lt;code&gt;js_of_ocaml&lt;/code&gt;&lt;/a&gt;, we wanted 
+people to create and run the &lt;a href=&quot;http://en.wikipedia.org/wiki/Monty_Hall_problem&quot;&gt;Monty Hall problem&lt;/a&gt; in their 
+browser.  This would give people a taste of some real world interaction by 
+having to deal with the DOM and interfaces.  If folks did well, they could 
+add code to keep logs of the game results.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Client-server game&lt;/em&gt; - The previous game was all in the browser (so could 
+be examined by players) so here the task was to split it into a client and 
+server, ensuring the two stay in sync.  This would demonstrate the 
+re-usability of the OCaml code already written and give people a feel for 
+client server interactions. If people wanted to do more, they could use 
+&lt;a href=&quot;http://opam.ocaml.org/pkg/ctypes/0.1.1/&quot;&gt;ctypes&lt;/a&gt; and get better random numbers.  &lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;p&gt;We did manage to stick to the overall scheme as above and we think this is a 
+great base from which to improve future tutorials.  It has the really nice 
+benefit of having visual, interactive elements and the ability to run things 
+both in the browser as well as on the server is a great way to show the 
+versatility of OCaml.  &lt;code&gt;js_of_ocaml&lt;/code&gt; is quite a mature tool and so it&amp;#8217;s 
+no surprise that it&amp;#8217;s also used by companies such as Facebook (see the recent 
+&lt;a href=&quot;http://www.youtube.com/watch?v=gKWNjFagR9k&quot;&gt;CUFP talk by Julien Verlaguet&lt;/a&gt; - skip to &lt;a href=&quot;http://www.youtube.com/watch?feature=player_detailpage&amp;amp;v=gKWNjFagR9k#t=1149&quot;&gt;19:00&lt;/a&gt;).  &lt;/p&gt;
 
-&lt;p&gt;We did manage to stick to the overall scheme as above and we think this is a
-great base from which to improve future tutorials.  It has the really nice
-benefit of having visual, interactive elements and the ability to run things
-both in the browser as well as on the server is a great way to show the
-versatility of OCaml.  &lt;code&gt;js_of_ocaml&lt;/code&gt; is quite a mature tool and so it's
-no surprise that it's also used by companies such as Facebook (see the recent
-&lt;a href=&quot;http://www.youtube.com/watch?v=gKWNjFagR9k&quot;&gt;CUFP talk by Julien Verlaguet&lt;/a&gt; - skip to &lt;a href=&quot;http://www.youtube.com/watch?feature=player_detailpage&amp;amp;v=gKWNjFagR9k#t=1149&quot;&gt;19:00&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;We learned a lot from running this session so we've captured the good, the
-bad and the ugly below.  This is useful for anyone who'd like to run an
-OCaml tutorial in the future and also for us to be aware of the next
-time we do this.  I've incorporated the feedback from the attendees as well
+&lt;p&gt;We learned a lot from running this session so we&amp;#8217;ve captured the good, the 
+bad and the ugly below.  This is useful for anyone who&amp;#8217;d like to run an 
+OCaml tutorial in the future and also for us to be aware of the next 
+time we do this.  I&amp;#8217;ve incorporated the feedback from the attendees as well 
 as our own thoughts.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/fpdays2013/fpdays2013-03.jpg&quot; alt=&quot;Heads down and hands on&quot; /&gt;&lt;/p&gt;
 
-&lt;h3&gt;Things we learnt&lt;/h3&gt;
+&lt;h3 id=&quot;things-we-learnt&quot;&gt;Things we learnt&lt;/h3&gt;
 
-&lt;h4&gt;The Good&lt;/h4&gt;
+&lt;h4 id=&quot;the-good&quot;&gt;The Good&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Most people really did follow the install instructions beforehand. This
-made things so much easier on the day as we didn't have to worry about
-compile times and people getting bored.  A few people had even got in touch
-with me the night before to sort out installation problems.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Many folks from OCaml Labs also came over to help people, which meant
-no-one was waiting longer than around 10 seconds before getting help.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We had a good plan of the things we wanted to cover but we were happy to
-be flexible and made it clear the aim was to get right into it.  Several
-folks told us that they really appreciated this loose (as opposed to rigid)
-structure.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We didn't spend any time lecturing the room but instead got people right
-into the code.  Having enough of a skeleton to get something interesting
-working was a big plus in this regard. People did progress from the early
-examples to the later ones fairly well.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We had a VM with the correct set up that we could log people into if they
-were having trouble locally.  Two people made use of this.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Of course, It was great to have early proofs of the book and these were
-well-received.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Most people really did follow the install instructions beforehand. This 
+made things so much easier on the day as we didn&amp;#8217;t have to worry about 
+compile times and people getting bored.  A few people had even got in touch 
+with me the night before to sort out installation problems.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Many folks from OCaml Labs also came over to help people, which meant 
+no-one was waiting longer than around 10 seconds before getting help.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We had a good plan of the things we wanted to cover but we were happy to 
+be flexible and made it clear the aim was to get right into it.  Several 
+folks told us that they really appreciated this loose (as opposed to rigid) 
+structure.  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We didn&amp;#8217;t spend any time lecturing the room but instead got people right 
+into the code.  Having enough of a skeleton to get something interesting 
+working was a big plus in this regard. People did progress from the early 
+examples to the later ones fairly well.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We had a VM with the correct set up that we could log people into if they 
+were having trouble locally.  Two people made use of this.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Of course, It was great to have early proofs of the book and these were 
+well-received.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
-
 
 &lt;p&gt;&lt;img src=&quot;/images/fpdays2013/fpdays2013-02.jpg&quot; alt=&quot;RWO books galore!&quot; /&gt;&lt;/p&gt;
 
-&lt;h4&gt;The Bad&lt;/h4&gt;
+&lt;h4 id=&quot;the-bad&quot;&gt;The Bad&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;In our excitement to get right into the exercises, we didn't really give
-an overview of OCaml and its benefits.  A few minutes at the beginning would
-be enough and it's important so that people can leave with a few sound-bites.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Not everyone received my email about installation, and certainly not the
-late arrivals.  This meant some pain getting things downloaded and running
-especially due to the wifi (see 'Ugly' below).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;A few of the people who &lt;em&gt;had&lt;/em&gt; installed, didn't complete the instructions
-fully but didn't realise this until the morning of the session.  There was a good
-suggestion about having some kind of test to run that would check
-everything, so you'd know if there was something missing.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We really should have had a cut-off where we told people to use VMs
-instead of fixing installation issues and 10-15 minutes would have been
-enough.  This would have been especially useful for the late-comers.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We didn't really keep a record of the problems folks were having so we
-can't now go back and fix underlying issues.  To be fair, this would have
-been a little awkward to do ad-hoc but in hindsight, it's a good thing to
-plan for.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In our excitement to get right into the exercises, we didn&amp;#8217;t really give 
+an overview of OCaml and its benefits.  A few minutes at the beginning would 
+be enough and it&amp;#8217;s important so that people can leave with a few sound-bites.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Not everyone received my email about installation, and certainly not the 
+late arrivals.  This meant some pain getting things downloaded and running 
+especially due to the wifi (see &amp;#8216;Ugly&amp;#8217; below).  &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A few of the people who &lt;em&gt;had&lt;/em&gt; installed, didn&amp;#8217;t complete the instructions 
+fully but didn&amp;#8217;t realise this until the morning of the session.  There was a good 
+suggestion about having some kind of test to run that would check 
+everything, so you&amp;#8217;d know if there was something missing.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We really should have had a cut-off where we told people to use VMs 
+instead of fixing installation issues and 10-15 minutes would have been 
+enough.  This would have been especially useful for the late-comers.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We didn&amp;#8217;t really keep a record of the problems folks were having so we 
+can&amp;#8217;t now go back and fix underlying issues.  To be fair, this would have 
+been a little awkward to do ad-hoc but in hindsight, it&amp;#8217;s a good thing to 
+plan for.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;h4&gt;The Ugly&lt;/h4&gt;
+&lt;h4 id=&quot;the-ugly&quot;&gt;The Ugly&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;The only ugly part was the wifi.  It turned out that the room itself was a
-bit of a dead-spot and that wasn't helped by 30ish devices trying to connect
-to one access point!  Having everyone grab packages at the same time in the
-morning probably didn't help.  It was especially tricky as all our
+  &lt;li&gt;The only ugly part was the wifi.  It turned out that the room itself was a 
+bit of a dead-spot and that wasn&amp;#8217;t helped by 30ish devices trying to connect 
+to one access point!  Having everyone grab packages at the same time in the 
+morning probably didn&amp;#8217;t help.  It was especially tricky as all our 
 mitigation plans seemed to revolve around at least having local connectivity.
-In any case, this problem only lasted for the morning session and was a
-little better by the afternoon.  I'd definitely recommend a backup plan in
-the case of complete wifi failure next time!  One such plan that Leo got
-started on was to put the repository and other information onto a flash
-drive that could be shared with people.  We didn't need this in the end but
-it'll be useful to have something like this prepared for next time.  If
-anyone fancies donating a bunch of flash drives, I'll happily receive them!&lt;/li&gt;
+In any case, this problem only lasted for the morning session and was a 
+little better by the afternoon.  I&amp;#8217;d definitely recommend a backup plan in 
+the case of complete wifi failure next time!  One such plan that Leo got 
+started on was to put the repository and other information onto a flash 
+drive that could be shared with people.  We didn&amp;#8217;t need this in the end but 
+it&amp;#8217;ll be useful to have something like this prepared for next time.  If 
+anyone fancies donating a bunch of flash drives, I&amp;#8217;ll happily receive them!&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;p&gt;Overall, it was a great session and everyone left happy, having completed
-most of the tutorial (and with a book!).  A few even continued at home
-afterwards and &lt;a href=&quot;https://twitter.com/richardclegg/status/393458073052139520&quot;&gt;got in touch&lt;/a&gt; to let us know that they got
+&lt;p&gt;Overall, it was a great session and everyone left happy, having completed 
+most of the tutorial (and with a book!).  A few even continued at home 
+afterwards and &lt;a href=&quot;https://twitter.com/richardclegg/status/393458073052139520&quot;&gt;got in touch&lt;/a&gt; to let us know that they got 
 everything working.
-It was a great session and thanks to &lt;a href=&quot;https://twitter.com/MarkDalgarno&quot;&gt;Mark&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/JacquiDDavidson&quot;&gt;Jacqui&lt;/a&gt; and the rest of
+It was a great session and thanks to &lt;a href=&quot;https://twitter.com/MarkDalgarno&quot;&gt;Mark&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/JacquiDDavidson&quot;&gt;Jacqui&lt;/a&gt; and the rest of 
 the FPDays crew for a great conference!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/fpdays2013/fpdays2013-04.jpg&quot; alt=&quot;RWO Book giveaway&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;(Thanks to Jeremy, Leo, David and Philippe for contributions to this post)&lt;/p&gt;
+
 </content>
 </entry>
 
@@ -1153,45 +1181,46 @@ the FPDays crew for a great conference!&lt;/p&gt;
   <author>Amir Chaudhry</author>
   <updated>2013-10-22T22:00:00+01:00</updated>
   <id>http://amirchaudhry.com/fpdays-ocaml-session</id>
-  <content type="html">&lt;p&gt;On Thursday, along with &lt;a href=&quot;https://github.com/yallop&quot;&gt;Jeremy&lt;/a&gt; and
-&lt;a href=&quot;http://www.lpw25.net&quot;&gt;Leo&lt;/a&gt;, I'll be running an OCaml Hands-on Session at
-the &lt;a href=&quot;http://fpdays.net/2013/&quot;&gt;FPDays conference&lt;/a&gt;. Below are some prep
+  <content type="html">
+&lt;p&gt;On Thursday, along with &lt;a href=&quot;https://github.com/yallop&quot;&gt;Jeremy&lt;/a&gt; and 
+&lt;a href=&quot;http://www.lpw25.net&quot;&gt;Leo&lt;/a&gt;, I&amp;#8217;ll be running an OCaml Hands-on Session at 
+the &lt;a href=&quot;http://fpdays.net/2013/&quot;&gt;FPDays conference&lt;/a&gt;. Below are some prep 
 instructions for attendees.&lt;/p&gt;
 
-&lt;h3&gt;Preparation for the session&lt;/h3&gt;
+&lt;h3 id=&quot;preparation-for-the-session&quot;&gt;Preparation for the session&lt;/h3&gt;
 
-&lt;p&gt;If you're starting from scratch, installation can take some time so it's
-best to get as much done in advance as possible.  You'll need OPAM (the
-package manager), OCaml 4.01 (available through OPAM) and a few libraries
+&lt;p&gt;If you&amp;#8217;re starting from scratch, installation can take some time so it&amp;#8217;s 
+best to get as much done in advance as possible.  You&amp;#8217;ll need OPAM (the 
+package manager), OCaml 4.01 (available through OPAM) and a few libraries 
 before Thursday.  If you have any issues, please contact Amir.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;OPAM&lt;/strong&gt;: Follow the instructions for your platform at &lt;a href=&quot;http://opam.ocaml.org/doc/Quick_Install.html&quot;&gt;http://opam.ocaml.org/doc/Quick_Install.html&lt;/a&gt;.
-OPAM requires OCaml so hopefully the relevant dependencies will kick in and
-you'll get OCaml too (most likely version 3.12).  You can get a cup of
-coffee while you wait. After installation, run &lt;code&gt;opam init&lt;/code&gt; to initialise OPAM.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;OCaml 4.01&lt;/strong&gt;: We actually need the latest version of OCaml but OPAM
-makes this easy.  Just run the following (and get more coffee):&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;OPAM&lt;/strong&gt;: Follow the instructions for your platform at &lt;a href=&quot;http://opam.ocaml.org/doc/Quick_Install.html&quot;&gt;http://opam.ocaml.org/doc/Quick_Install.html&lt;/a&gt;. 
+OPAM requires OCaml so hopefully the relevant dependencies will kick in and 
+you&amp;#8217;ll get OCaml too (most likely version 3.12).  You can get a cup of 
+coffee while you wait. After installation, run &lt;code&gt;opam init&lt;/code&gt; to initialise OPAM.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;OCaml 4.01&lt;/strong&gt;: We actually need the latest version of OCaml but OPAM 
+makes this easy.  Just run the following (and get more coffee):&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
-
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam update
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam switch 4.01.0
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;opam config env&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Libraries&lt;/strong&gt;: For the workshop you will need to check that you have the
-following installed: &lt;code&gt;libffi&lt;/code&gt;, &lt;code&gt;pcre&lt;/code&gt; and &lt;code&gt;pkg-config&lt;/code&gt;.  This will depend on
-your platform so on a Mac with homebrew I would do
-&lt;code&gt;brew install libffi pcre pkg-config&lt;/code&gt; or on Debian or Ubuntu
-&lt;code&gt;apt-get install libffi-dev&lt;/code&gt;.  After this, two OCaml packages it's worth
+  &lt;li&gt;&lt;strong&gt;Libraries&lt;/strong&gt;: For the workshop you will need to check that you have the 
+following installed: &lt;code&gt;libffi&lt;/code&gt;, &lt;code&gt;pcre&lt;/code&gt; and &lt;code&gt;pkg-config&lt;/code&gt;.  This will depend on 
+your platform so on a Mac with homebrew I would do 
+&lt;code&gt;brew install libffi pcre pkg-config&lt;/code&gt; or on Debian or Ubuntu 
+&lt;code&gt;apt-get install libffi-dev&lt;/code&gt;.  After this, two OCaml packages it&amp;#8217;s worth 
 installing in advance are &lt;code&gt;core&lt;/code&gt; and &lt;code&gt;js_of_ocaml&lt;/code&gt; so simply run:&lt;/li&gt;
 &lt;/ul&gt;
 
-
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;opam install core js_of_ocaml&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;OPAM will take care of the dependencies and the rest we can get on the day!&lt;/p&gt;
 </content>
@@ -1204,30 +1233,35 @@ installing in advance are &lt;code&gt;core&lt;/code&gt; and &lt;code&gt;js_of_oc
   <author>Amir Chaudhry</author>
   <updated>2013-09-24T15:00:00+01:00</updated>
   <id>http://amirchaudhry.com/ocamlorg-request-for-feedback</id>
-  <content type="html">&lt;p&gt;There is a work-in-progress site at
-&lt;a href=&quot;http://ocaml-redesign.github.io&quot;&gt;ocaml-redesign.github.io&lt;/a&gt;, where we've
-been developing both the tools and design for the new ocaml.org pages.  This
-allows us to test our tools and fix issues before we consider merging
+  <content type="html">
+&lt;p&gt;There is a work-in-progress site at 
+&lt;a href=&quot;http://ocaml-redesign.github.io&quot;&gt;ocaml-redesign.github.io&lt;/a&gt;, where we&amp;#8217;ve 
+been developing both the tools and design for the new ocaml.org pages.  This 
+allows us to test our tools and fix issues before we consider merging 
 changes upstream.&lt;/p&gt;
 
-&lt;p&gt;There is a more detailed post coming about all the design work to date and
-the workflow we're using, but in the meantime, feedback on the following
-areas would be most welcome.  Please leave feedback in the form of issues on
-the &lt;a href=&quot;https://github.com/ocamllabs/sandbox-ocaml.org/issues&quot;&gt;ocaml.org sandbox repo&lt;/a&gt;.  You can also raise points on the
+&lt;p&gt;There is a more detailed post coming about all the design work to date and 
+the workflow we&amp;#8217;re using, but in the meantime, feedback on the following 
+areas would be most welcome.  Please leave feedback in the form of issues on 
+the &lt;a href=&quot;https://github.com/ocamllabs/sandbox-ocaml.org/issues&quot;&gt;ocaml.org sandbox repo&lt;/a&gt;.  You can also raise points on the 
 &lt;a href=&quot;http://lists.ocaml.org/listinfo/infrastructure&quot;&gt;infrastructure mailing list&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;OCaml Logo&lt;/strong&gt; - There was some feedback on the last iteration of the
-logo, especially regarding the font, so there are now several options to
-consider.  Please look at the images on the
-&lt;a href=&quot;https://github.com/ocaml/ocaml.org/wiki/Draft-OCaml-Logos&quot;&gt;ocaml.org GitHub wiki&lt;/a&gt; and then leave your feedback on
-&lt;a href=&quot;https://github.com/ocamllabs/sandbox-ocaml.org/issues/16&quot;&gt;issue #16 on the sandbox repo&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Site design&lt;/strong&gt; - Please do give feedback on the design and any glitches
-you notice. Text on each of the new landing pages is still an initial draft
-so comments and improvements there are also welcome (specifically: Home
-Page, Learn, Documentation, Platform, Community). There are already a few
-&lt;a href=&quot;https://github.com/ocamllabs/sandbox-ocaml.org/issues&quot;&gt;known issues&lt;/a&gt;, so do
-add your comments to those threads first.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;OCaml Logo&lt;/strong&gt; - There was some feedback on the last iteration of the 
+logo, especially regarding the font, so there are now several options to 
+consider.  Please look at the images on the 
+&lt;a href=&quot;https://github.com/ocaml/ocaml.org/wiki/Draft-OCaml-Logos&quot;&gt;ocaml.org GitHub wiki&lt;/a&gt; and then leave your feedback on 
+&lt;a href=&quot;https://github.com/ocamllabs/sandbox-ocaml.org/issues/16&quot;&gt;issue #16 on the sandbox repo&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Site design&lt;/strong&gt; - Please do give feedback on the design and any glitches 
+you notice. Text on each of the new landing pages is still an initial draft 
+so comments and improvements there are also welcome (specifically: Home 
+Page, Learn, Documentation, Platform, Community). There are already a few 
+&lt;a href=&quot;https://github.com/ocamllabs/sandbox-ocaml.org/issues&quot;&gt;known issues&lt;/a&gt;, so do 
+add your comments to those threads first.  &lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 </content>
@@ -1240,45 +1274,45 @@ add your comments to those threads first.&lt;/p&gt;&lt;/li&gt;
   <author>Amir Chaudhry</author>
   <updated>2013-03-14T00:00:00+00:00</updated>
   <id>http://amirchaudhry.com/wireframe-demos-for-ocamlorg</id>
-  <content type="html">&lt;h3&gt;Making mockups&lt;/h3&gt;
+  <content type="html">
+&lt;h3 id=&quot;making-mockups&quot;&gt;Making mockups&lt;/h3&gt;
 
-&lt;p&gt;Over the last few months, I've been working on various aspects of the &lt;a href=&quot;http://ocaml.org&quot;&gt;OCaml.org&lt;/a&gt; design project.  This covers things like the design, information architecture and how to incorporate new functionality.  One of the methods for thinking through these was to put together a bunch of wireframes using &lt;a href=&quot;http://www.balsamiq.com&quot;&gt;Balsamiq&lt;/a&gt; and use these to express (and generate) ideas as well as get feedback quickly.&lt;/p&gt;
+&lt;p&gt;Over the last few months, I&amp;#8217;ve been working on various aspects of the &lt;a href=&quot;http://ocaml.org&quot;&gt;OCaml.org&lt;/a&gt; design project.  This covers things like the design, information architecture and how to incorporate new functionality.  One of the methods for thinking through these was to put together a bunch of wireframes using &lt;a href=&quot;http://www.balsamiq.com&quot;&gt;Balsamiq&lt;/a&gt; and use these to express (and generate) ideas as well as get feedback quickly.&lt;/p&gt;
 
-&lt;p&gt;If you haven't used wireframes before, think of them as a slightly more advanced form of sketching things out on a whiteboard.  The best aspect is that it's far quicker, easier and &lt;em&gt;cheaper&lt;/em&gt; to iterate using wireframes than on an actual website.  As you'll see below, you can also convey a lot of information about how a site might work by showing people a clickable demo.&lt;/p&gt;
+&lt;p&gt;If you haven&amp;#8217;t used wireframes before, think of them as a slightly more advanced form of sketching things out on a whiteboard.  The best aspect is that it&amp;#8217;s far quicker, easier and &lt;em&gt;cheaper&lt;/em&gt; to iterate using wireframes than on an actual website.  As you&amp;#8217;ll see below, you can also convey a lot of information about how a site might work by showing people a clickable demo.&lt;/p&gt;
 
-&lt;p&gt;I want to make this work public and I thought the best way would be to show you some screencasts of how the upcoming &lt;a href=&quot;http://ocaml.org&quot;&gt;OCaml.org&lt;/a&gt; website might work and also make the demo available to all of you.  The three videos below cover three aspects of the site and I'd encourage you to go through them in order (about 16 minutes in total).  Apologies if my screen isn't particularly clear in the videos but you can visit the demo for yourself and see things in more detail (link and info on feedback at the end of this post).&lt;/p&gt;
+&lt;p&gt;I want to make this work public and I thought the best way would be to show you some screencasts of how the upcoming &lt;a href=&quot;http://ocaml.org&quot;&gt;OCaml.org&lt;/a&gt; website might work and also make the demo available to all of you.  The three videos below cover three aspects of the site and I&amp;#8217;d encourage you to go through them in order (about 16 minutes in total).  Apologies if my screen isn&amp;#8217;t particularly clear in the videos but you can visit the demo for yourself and see things in more detail (link and info on feedback at the end of this post).&lt;/p&gt;
 
-&lt;h3&gt;Video walkthroughs&lt;/h3&gt;
+&lt;h3 id=&quot;video-walkthroughs&quot;&gt;Video walkthroughs&lt;/h3&gt;
 
-&lt;p&gt;For those who'd like to watch the videos back-to-back and scaled to fit your browser window, you can &lt;a href=&quot;http://vimeo.com/couchmode/album/2301640&quot;&gt;view the Vimeo album in 'couchmode'&lt;/a&gt;. Otherwise, individual videos are embedded below (total time 16m17s).&lt;/p&gt;
-
-&lt;div class=&quot;flex-video widescreen vimeo&quot;&gt;
-    &lt;iframe src=&quot;http://player.vimeo.com/video/61768157?byline=0&amp;amp;portrait=0&amp;amp;color=de9e6a&quot; width=&quot;540&quot; height=&quot;303&quot; frameborder=&quot;0&quot; webkitAllowFullScreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowFullScreen=&quot;true&quot;&gt;Video Part 1 - Overview - http://player.vimeo.com/video/61768157&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-
+&lt;p&gt;For those who&amp;#8217;d like to watch the videos back-to-back and scaled to fit your browser window, you can &lt;a href=&quot;http://vimeo.com/couchmode/album/2301640&quot;&gt;view the Vimeo album in &amp;#8216;couchmode&amp;#8217;&lt;/a&gt;. Otherwise, individual videos are embedded below (total time 16m17s).&lt;/p&gt;
 
 &lt;div class=&quot;flex-video widescreen vimeo&quot;&gt;
-    &lt;iframe src=&quot;http://player.vimeo.com/video/61768235?byline=0&amp;amp;portrait=0&amp;amp;color=de9e6a&quot; width=&quot;540&quot; height=&quot;304&quot; frameborder=&quot;0&quot; webkitAllowFullScreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowFullScreen=&quot;true&quot;&gt;Video Part 2 - Documentation - http://player.vimeo.com/video/61768235&lt;/iframe&gt;
+    &lt;iframe src=&quot;http://player.vimeo.com/video/61768157?byline=0&amp;amp;portrait=0&amp;amp;color=de9e6a&quot; width=&quot;540&quot; height=&quot;303&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowfullscreen=&quot;true&quot;&gt;Video Part 1 - Overview - http://player.vimeo.com/video/61768157&lt;/iframe&gt;
 &lt;/div&gt;
-
-
-
 
 &lt;div class=&quot;flex-video widescreen vimeo&quot;&gt;
-    &lt;iframe src=&quot;http://player.vimeo.com/video/61768273?byline=0&amp;amp;portrait=0&amp;amp;color=de9e6a&quot; width=&quot;540&quot; height=&quot;304&quot; frameborder=&quot;0&quot; webkitAllowFullScreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowFullScreen=&quot;true&quot;&gt;Video Part 3 - Continuous Integration - http://player.vimeo.com/video/61768273&lt;/iframe&gt;
+    &lt;iframe src=&quot;http://player.vimeo.com/video/61768235?byline=0&amp;amp;portrait=0&amp;amp;color=de9e6a&quot; width=&quot;540&quot; height=&quot;304&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowfullscreen=&quot;true&quot;&gt;Video Part 2 - Documentation - http://player.vimeo.com/video/61768235&lt;/iframe&gt;
 &lt;/div&gt;
 
+&lt;div class=&quot;flex-video widescreen vimeo&quot;&gt;
+    &lt;iframe src=&quot;http://player.vimeo.com/video/61768273?byline=0&amp;amp;portrait=0&amp;amp;color=de9e6a&quot; width=&quot;540&quot; height=&quot;304&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; allowfullscreen=&quot;true&quot;&gt;Video Part 3 - Continuous Integration - http://player.vimeo.com/video/61768273&lt;/iframe&gt;
+&lt;/div&gt;
 
-&lt;h3&gt;Public wireframe demo&lt;/h3&gt;
+&lt;h3 id=&quot;public-wireframe-demo&quot;&gt;Public wireframe demo&lt;/h3&gt;
 
 &lt;p&gt;A demo you can interact with can be found at &lt;a href=&quot;https://ocaml.mybalsamiq.com/projects/public-demo/naked/0_home?key=b897ea86d8a8199c6e46b3295ddf630dfa33e5e1&quot;&gt;OCaml.org wireframe demo&lt;/a&gt; and image files for each page are available on the &lt;a href=&quot;https://github.com/ocaml/ocaml.org/wiki/Wireframes&quot;&gt;github ocaml.org wiki&lt;/a&gt;.  Please bear in mind the following:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Not everything that looks like it might be clickable actually is (and vice versa). There'll be a toggle on the bottom right of the browser window that will highlight what can be clicked.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;There are parts of the site which are 'work in progress' and are marked as such.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The designs you see aren't necessarily final. Your feedback will help shape our decisions and the best way to provide it is via the &lt;a href=&quot;http://lists.ocaml.org/listinfo/infrastructure&quot;&gt;infrastructure mailing list&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Not everything that looks like it might be clickable actually is (and vice versa). There&amp;#8217;ll be a toggle on the bottom right of the browser window that will highlight what can be clicked.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;There are parts of the site which are &amp;#8216;work in progress&amp;#8217; and are marked as such.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The designs you see aren&amp;#8217;t necessarily final. Your feedback will help shape our decisions and the best way to provide it is via the &lt;a href=&quot;http://lists.ocaml.org/listinfo/infrastructure&quot;&gt;infrastructure mailing list&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 </content>

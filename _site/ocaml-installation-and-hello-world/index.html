@@ -80,48 +80,43 @@
         <h2><a class="post-title" href="/ocaml-installation-and-hello-world">OCaml - Installation and hello world</a></h2>
         <!-- <br /> -->
         
-
 <p class="footnote">This post is part of a series where I'm trying to teach myself OCaml.<br />
 You might want to <a href="http://amirchaudhry.com/thirty-days-of-ocaml/">start at the beginning</a>.</p>
 
+<p>It&#8217;s been a few days into my OCaml experience so this is a write-up of what I&#8217;ve come across so far.  I&#8217;ve spent more time reading background rather than getting stuck in so I&#8217;ve copied in some of the links that I&#8217;ve found interesting/useful at the end.</p>
 
-<p>It's been a few days into my OCaml experience so this is a write-up of what I've come across so far.  I've spent more time reading background rather than getting stuck in so I've copied in some of the links that I've found interesting/useful at the end.</p>
+<h2 id="installation">Installation</h2>
 
-<h2>Installation</h2>
+<p>There are number of ways you can get OCaml on your machine.  The most obvious  would be to get the source via the <a href="http://caml.inria.fr/ocaml/release.en.html">release page</a>, but you could also use something called <a href="http://godi.camlcity.org/godi/index.html">GODI</a>, which apparently bundles a bunch of other stuff alongside the language.  </p>
 
-<p>There are number of ways you can get OCaml on your machine.  The most obvious  would be to get the source via the <a href="http://caml.inria.fr/ocaml/release.en.html">release page</a>, but you could also use something called <a href="http://godi.camlcity.org/godi/index.html">GODI</a>, which apparently bundles a bunch of other stuff alongside the language.</p>
-
-<p>I don't really want to install from source 'by hand' and I definitely don't need all the stuff that comes with GODI.  I happen to use <a href="http://mxcl.github.com/homebrew/">Homebrew</a> on my machine, so I checked to see if I can install that way.  Turns out I can, so that's what I ended up doing.</p>
+<p>I don&#8217;t really want to install from source &#8216;by hand&#8217; and I definitely don&#8217;t need all the stuff that comes with GODI.  I happen to use <a href="http://mxcl.github.com/homebrew/">Homebrew</a> on my machine, so I checked to see if I can install that way.  Turns out I can, so that&#8217;s what I ended up doing.</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>brew install objective-caml</code></pre></div>
 
-
 <p>The current version of OCaml is 4.00.0 and you can check the version you have installed by typing <code>ocaml -version</code> in your terminal.</p>
 
-<h4><em>notes</em></h4>
+<h4 id="notes"><em>notes</em></h4>
 
-<p>Be aware that Homebrew has it's own installation process and depends on Ruby.  To get Ruby, someone recommended that I install via <a href="https://rvm.io/">Ruby Version Manager</a>.  To be able to do the above, you'll need to have the OSX developer tools installed, which means having <a href="https://developer.apple.com/xcode/">Xcode</a>.</p>
+<p>Be aware that Homebrew has it&#8217;s own installation process and depends on Ruby.  To get Ruby, someone recommended that I install via <a href="https://rvm.io/">Ruby Version Manager</a>.  To be able to do the above, you&#8217;ll need to have the OSX developer tools installed, which means having <a href="https://developer.apple.com/xcode/">Xcode</a>.  </p>
 
-<h2>Hello World!</h2>
+<h2 id="hello-world">Hello World!</h2>
 
-<p>The first thing to do is get a <a href="http://en.wikipedia.org/wiki/Hello_world_program">hello world</a> programme working.  Since OCaml is a compiled language, that means writing the necessary source code into a file, compiling it and then executing it.  In this case I only need one line that prints 'hello world' to the screen and I'm taking it from INRIA's site (<a href="http://caml.inria.fr/pub/docs/u3-ocaml/ocaml-steps.html">link</a>).</p>
+<p>The first thing to do is get a <a href="http://en.wikipedia.org/wiki/Hello_world_program">hello world</a> programme working.  Since OCaml is a compiled language, that means writing the necessary source code into a file, compiling it and then executing it.  In this case I only need one line that prints &#8216;hello world&#8217; to the screen and I&#8217;m taking it from INRIA&#8217;s site (<a href="http://caml.inria.fr/pub/docs/u3-ocaml/ocaml-steps.html">link</a>).</p>
 
 <div class="highlight"><pre><code class="language-ocaml" data-lang="ocaml"><span class="n">print_string</span> <span class="s2">&quot;Hello, world!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">;;</span></code></pre></div>
-
 
 <p>Take the one line above and save it in a file called <code>hello.ml</code>.  Now we need to compile that file using the OCaml compiler.  At the command prompt, type the following:</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>ocamlc -o hello hello.ml
 <span class="nv">$ </span>./hello</code></pre></div>
 
+<p>Since I don&#8217;t really understand the first line I should break it down. <code>ocamlc</code> is the command to invoke the compiler, the option <code>-o hello</code> means you want to name the output executable to be (in this case) &#8216;hello&#8217; and the final argument is the source code file.  It&#8217;s useful to look at the man page for <code>ocamlc</code> to see what other options are available.  The second line executes the programme, which prints hello world to the screen with a line-break.</p>
 
-<p>Since I don't really understand the first line I should break it down. <code>ocamlc</code> is the command to invoke the compiler, the option <code>-o hello</code> means you want to name the output executable to be (in this case) 'hello' and the final argument is the source code file.  It's useful to look at the man page for <code>ocamlc</code> to see what other options are available.  The second line executes the programme, which prints hello world to the screen with a line-break.</p>
+<p>I also notice that I now have two other files in addition to the source, <code>hello.cmi</code> and <code>hello.cmo</code>.  According to the man page, these are the &#8216;compiled interface&#8217; and &#8216;compiled object code file&#8217; respectively.  I have no idea what that means but removing the files doesn&#8217;t affect the executable.</p>
 
-<p>I also notice that I now have two other files in addition to the source, <code>hello.cmi</code> and <code>hello.cmo</code>.  According to the man page, these are the 'compiled interface' and 'compiled object code file' respectively.  I have no idea what that means but removing the files doesn't affect the executable.</p>
+<h3 id="ocaml-toplevel">OCaml &#8216;toplevel&#8217;</h3>
 
-<h3>OCaml 'toplevel'</h3>
-
-<p>Even though OCaml is a compiled language, there's something called 'toplevel' that allows interactive use (more on <a href="http://caml.inria.fr/pub/docs/manual-ocaml-4.00/manual023.html">toplevel</a>).  To enter this mode, you simply have to type <code>ocaml</code> at the prompt so let's try running the above hello world program using toplevel.</p>
+<p>Even though OCaml is a compiled language, there&#8217;s something called &#8216;toplevel&#8217; that allows interactive use (more on <a href="http://caml.inria.fr/pub/docs/manual-ocaml-4.00/manual023.html">toplevel</a>).  To enter this mode, you simply have to type <code>ocaml</code> at the prompt so let&#8217;s try running the above hello world program using toplevel.</p>
 
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ ocaml
         OCaml version 4.00.0
@@ -132,33 +127,30 @@ Hello, world!
 # #quit;;
 $</code></pre></div>
 
-
 <p>The <code>$</code> prompt is the command line and the <code>#</code> prompt is where toplevel is awaiting a new line of input.  The input can span multiple lines and is terminated by <code>;;</code> (as in the source code).</p>
 
-<p>To exit toplevel, type <code>#quit;;</code>.  It took me three attempts to get that right.  I haven't really played around with toplevel much and I think I'm likely to stick with source code and compiling until I'm a little more comfortable with the syntax.</p>
+<p>To exit toplevel, type <code>#quit;;</code>.  It took me three attempts to get that right.  I haven&#8217;t really played around with toplevel much and I think I&#8217;m likely to stick with source code and compiling until I&#8217;m a little more comfortable with the syntax.  </p>
 
-<p>That's pretty much where I am for the moment and everything so far has been straightforward.  Obviously, I should push myself a bit harder :)</p>
+<p>That&#8217;s pretty much where I am for the moment and everything so far has been straightforward.  Obviously, I should push myself a bit harder :)</p>
 
-<h2>Resources</h2>
+<h2 id="resources">Resources</h2>
 
-<p>This is the material I found and have been looking over for the last couple of days.  Useful as background but I'd say I'm in danger of (semi-productive) procrastination if I'm not careful.</p>
+<p>This is the material I found and have been looking over for the last couple of days.  Useful as background but I&#8217;d say I&#8217;m in danger of (semi-productive) procrastination if I&#8217;m not careful.</p>
 
 <ul>
-<li><a href="http://caml.inria.fr/pub/docs/manual-ocaml-4.00">OCaml Manual</a> (from INRIA)</li>
-<li><a href="http://caml.inria.fr/about/taste.en.html">OCaml examples</a> (also INRIA)</li>
-<li><a href="http://en.wikibooks.org/wiki/Objective_Caml/Introduction">OCaml Intro</a> (wikibooks)</li>
-<li><a href="https://ocaml.janestreet.com/?q=node/82">Minsky on ML</a> (Jane Street)</li>
-<li><a href="https://sites.google.com/site/steveyegge2/ocaml">OCaml pros</a> (Steve Yegge)</li>
-<li><a href="http://www.podval.org/~sds/ocaml-sucks.html">OCaml cons</a> (Sam Steingold)</li>
-<li><a href="http://www.thinkocaml.com">Think OCaml</a> (PDF book)</li>
+  <li><a href="http://caml.inria.fr/pub/docs/manual-ocaml-4.00">OCaml Manual</a> (from INRIA)</li>
+  <li><a href="http://caml.inria.fr/about/taste.en.html">OCaml examples</a> (also INRIA)</li>
+  <li><a href="http://en.wikibooks.org/wiki/Objective_Caml/Introduction">OCaml Intro</a> (wikibooks)</li>
+  <li><a href="https://ocaml.janestreet.com/?q=node/82">Minsky on ML</a> (Jane Street)</li>
+  <li><a href="https://sites.google.com/site/steveyegge2/ocaml">OCaml pros</a> (Steve Yegge)</li>
+  <li><a href="http://www.podval.org/~sds/ocaml-sucks.html">OCaml cons</a> (Sam Steingold)</li>
+  <li><a href="http://www.thinkocaml.com">Think OCaml</a> (PDF book)</li>
 </ul>
-
 
 <!--
     http://news.ycombinator.com/item?id=112129
     http://dave.fayr.am/posts/2011-08-19-lets-go-shopping.html
 -->
-
 
         <hr id='share-comment'>
         <!-- AddThis Button BEGIN -->

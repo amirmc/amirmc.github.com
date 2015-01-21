@@ -79,146 +79,174 @@
       <div class="medium-9 columns">
         <h2><a class="post-title" href="/fpdays-review">Review of the OCaml FPDays tutorial</a></h2>
         <!-- <br /> -->
-        <p><a href="http://fpdays.net/2013/sessions/index.php?session=24"><img style="float: right; margin-top: 10px; margin-left: 10px" src="/images/web/fpdays-logo.png"></a>
-Last Thursday a bunch of us from the OCaml Labs team gave an OCaml tutorial
-at the <a href="http://fpdays.net/2013/sessions/index.php?session=24">FPDays</a> conference (an event for people interested in Functional
-Programming).  <a href="https://github.com/yallop">Jeremy</a> and I led the session with <a href="http://www.lpw25.net">Leo</a>, <a href="https://github.com/dsheets">David</a> and
+        
+<p><a href="http://fpdays.net/2013/sessions/index.php?session=24"><img style="float: right; margin-top: 10px; margin-left: 10px" src="/images/web/fpdays-logo.png" /></a>
+Last Thursday a bunch of us from the OCaml Labs team gave an OCaml tutorial 
+at the <a href="http://fpdays.net/2013/sessions/index.php?session=24">FPDays</a> conference (an event for people interested in Functional 
+Programming).  <a href="https://github.com/yallop">Jeremy</a> and I led the session with <a href="http://www.lpw25.net">Leo</a>, <a href="https://github.com/dsheets">David</a> and 
 <a href="http://philippewang.info/CL/">Philippe</a> helping everyone progress and dealing with questions.</p>
 
-<p><img style="float: left; margin-right: 10px" src="/images/fpdays2013/fpdays2013-01.jpg">
-It turned out to be by far the <em>most popular session</em> at the conference with
-over 20 people all wanting to get to grips with OCaml!  An excellent turnout
-and a great indicator of the interest that's out there, especially when you
-offer a hands-on session to people.  This shouldn't be a surprise as we've
-had good attendance for the general <a href="http://www.meetup.com/Cambridge-NonDysFunctional-Programmers/">OCaml meetups</a> I've run
-and also the <a href="http://ocamllabs.github.io/compiler-hacking/2013/09/17/compiler-hacking-july-2013.html">compiler hacking sessions</a>, which Jeremy and
-Leo have been building up (do sign up if you're interested in either of
-those!).  We had a nice surprise for attendees, which were
-<a href="http://en.wikipedia.org/wiki/Galley_proof">uncorrected proof</a> copies of Real World OCaml and luckily, we had just
+<p><img style="float: left; margin-right: 10px" src="/images/fpdays2013/fpdays2013-01.jpg" />
+It turned out to be by far the <em>most popular session</em> at the conference with 
+over 20 people all wanting to get to grips with OCaml!  An excellent turnout 
+and a great indicator of the interest that&#8217;s out there, especially when you 
+offer a hands-on session to people.  This shouldn&#8217;t be a surprise as we&#8217;ve 
+had good attendance for the general <a href="http://www.meetup.com/Cambridge-NonDysFunctional-Programmers/">OCaml meetups</a> I&#8217;ve run 
+and also the <a href="http://ocamllabs.github.io/compiler-hacking/2013/09/17/compiler-hacking-july-2013.html">compiler hacking sessions</a>, which Jeremy and 
+Leo have been building up (do sign up if you&#8217;re interested in either of 
+those!).  We had a nice surprise for attendees, which were 
+<a href="http://en.wikipedia.org/wiki/Galley_proof">uncorrected proof</a> copies of Real World OCaml and luckily, we had just 
 enough to go around.</p>
 
-<p>For the tutorial itself, Jeremy put together a nice sequence of exercises
-and a <a href="https://github.com/ocamllabs/fpdays-skeleton">skeleton repo</a> (with helpful comments in the code) so that people
-could dive in quickly.  The event was set up to be really informal and the
+<p>For the tutorial itself, Jeremy put together a nice sequence of exercises 
+and a <a href="https://github.com/ocamllabs/fpdays-skeleton">skeleton repo</a> (with helpful comments in the code) so that people 
+could dive in quickly.  The event was set up to be really informal and the 
 rough plan was as following:</p>
 
 <ol>
-<li><p><em>Installation/Intro</em> - We checked that people had been able to follow the
-<a href="http://amirchaudhry.com/fpdays-ocaml-session/">installation instructions</a>, which we'd sent them in advance.
-We also handed out copies of the book and made sure folks were comfortable
-with <a href="http://opam.ocaml.org">OPAM</a>.</p></li>
-<li><p><em>Hello world</em> - A light intro to get people familiar with the OCaml
-syntax and installing packages with OPAM. This would also help people to get
-familiar with the toolchain, workflow and compilation.</p></li>
-<li><p><em>Monty Hall browser game</em> - Using <a href="http://ocsigen.org/js_of_ocaml/"><code>js_of_ocaml</code></a>, we wanted
-people to create and run the <a href="http://en.wikipedia.org/wiki/Monty_Hall_problem">Monty Hall problem</a> in their
-browser.  This would give people a taste of some real world interaction by
-having to deal with the DOM and interfaces.  If folks did well, they could
-add code to keep logs of the game results.</p></li>
-<li><p><em>Client-server game</em> - The previous game was all in the browser (so could
-be examined by players) so here the task was to split it into a client and
-server, ensuring the two stay in sync.  This would demonstrate the
-re-usability of the OCaml code already written and give people a feel for
-client server interactions. If people wanted to do more, they could use
-<a href="http://opam.ocaml.org/pkg/ctypes/0.1.1/">ctypes</a> and get better random numbers.</p></li>
+  <li>
+    <p><em>Installation/Intro</em> - We checked that people had been able to follow the 
+<a href="http://amirchaudhry.com/fpdays-ocaml-session/">installation instructions</a>, which we&#8217;d sent them in advance. 
+We also handed out copies of the book and made sure folks were comfortable 
+with <a href="http://opam.ocaml.org">OPAM</a>.</p>
+  </li>
+  <li>
+    <p><em>Hello world</em> - A light intro to get people familiar with the OCaml 
+syntax and installing packages with OPAM. This would also help people to get 
+familiar with the toolchain, workflow and compilation.  </p>
+  </li>
+  <li>
+    <p><em>Monty Hall browser game</em> - Using <a href="http://ocsigen.org/js_of_ocaml/"><code>js_of_ocaml</code></a>, we wanted 
+people to create and run the <a href="http://en.wikipedia.org/wiki/Monty_Hall_problem">Monty Hall problem</a> in their 
+browser.  This would give people a taste of some real world interaction by 
+having to deal with the DOM and interfaces.  If folks did well, they could 
+add code to keep logs of the game results.</p>
+  </li>
+  <li>
+    <p><em>Client-server game</em> - The previous game was all in the browser (so could 
+be examined by players) so here the task was to split it into a client and 
+server, ensuring the two stay in sync.  This would demonstrate the 
+re-usability of the OCaml code already written and give people a feel for 
+client server interactions. If people wanted to do more, they could use 
+<a href="http://opam.ocaml.org/pkg/ctypes/0.1.1/">ctypes</a> and get better random numbers.  </p>
+  </li>
 </ol>
 
+<p>We did manage to stick to the overall scheme as above and we think this is a 
+great base from which to improve future tutorials.  It has the really nice 
+benefit of having visual, interactive elements and the ability to run things 
+both in the browser as well as on the server is a great way to show the 
+versatility of OCaml.  <code>js_of_ocaml</code> is quite a mature tool and so it&#8217;s 
+no surprise that it&#8217;s also used by companies such as Facebook (see the recent 
+<a href="http://www.youtube.com/watch?v=gKWNjFagR9k">CUFP talk by Julien Verlaguet</a> - skip to <a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=gKWNjFagR9k#t=1149">19:00</a>).  </p>
 
-<p>We did manage to stick to the overall scheme as above and we think this is a
-great base from which to improve future tutorials.  It has the really nice
-benefit of having visual, interactive elements and the ability to run things
-both in the browser as well as on the server is a great way to show the
-versatility of OCaml.  <code>js_of_ocaml</code> is quite a mature tool and so it's
-no surprise that it's also used by companies such as Facebook (see the recent
-<a href="http://www.youtube.com/watch?v=gKWNjFagR9k">CUFP talk by Julien Verlaguet</a> - skip to <a href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=gKWNjFagR9k#t=1149">19:00</a>).</p>
-
-<p>We learned a lot from running this session so we've captured the good, the
-bad and the ugly below.  This is useful for anyone who'd like to run an
-OCaml tutorial in the future and also for us to be aware of the next
-time we do this.  I've incorporated the feedback from the attendees as well
+<p>We learned a lot from running this session so we&#8217;ve captured the good, the 
+bad and the ugly below.  This is useful for anyone who&#8217;d like to run an 
+OCaml tutorial in the future and also for us to be aware of the next 
+time we do this.  I&#8217;ve incorporated the feedback from the attendees as well 
 as our own thoughts.</p>
 
 <p><img src="/images/fpdays2013/fpdays2013-03.jpg" alt="Heads down and hands on" /></p>
 
-<h3>Things we learnt</h3>
+<h3 id="things-we-learnt">Things we learnt</h3>
 
-<h4>The Good</h4>
+<h4 id="the-good">The Good</h4>
 
 <ul>
-<li><p>Most people really did follow the install instructions beforehand. This
-made things so much easier on the day as we didn't have to worry about
-compile times and people getting bored.  A few people had even got in touch
-with me the night before to sort out installation problems.</p></li>
-<li><p>Many folks from OCaml Labs also came over to help people, which meant
-no-one was waiting longer than around 10 seconds before getting help.</p></li>
-<li><p>We had a good plan of the things we wanted to cover but we were happy to
-be flexible and made it clear the aim was to get right into it.  Several
-folks told us that they really appreciated this loose (as opposed to rigid)
-structure.</p></li>
-<li><p>We didn't spend any time lecturing the room but instead got people right
-into the code.  Having enough of a skeleton to get something interesting
-working was a big plus in this regard. People did progress from the early
-examples to the later ones fairly well.</p></li>
-<li><p>We had a VM with the correct set up that we could log people into if they
-were having trouble locally.  Two people made use of this.</p></li>
-<li><p>Of course, It was great to have early proofs of the book and these were
-well-received.</p></li>
+  <li>
+    <p>Most people really did follow the install instructions beforehand. This 
+made things so much easier on the day as we didn&#8217;t have to worry about 
+compile times and people getting bored.  A few people had even got in touch 
+with me the night before to sort out installation problems.  </p>
+  </li>
+  <li>
+    <p>Many folks from OCaml Labs also came over to help people, which meant 
+no-one was waiting longer than around 10 seconds before getting help.  </p>
+  </li>
+  <li>
+    <p>We had a good plan of the things we wanted to cover but we were happy to 
+be flexible and made it clear the aim was to get right into it.  Several 
+folks told us that they really appreciated this loose (as opposed to rigid) 
+structure.  </p>
+  </li>
+  <li>
+    <p>We didn&#8217;t spend any time lecturing the room but instead got people right 
+into the code.  Having enough of a skeleton to get something interesting 
+working was a big plus in this regard. People did progress from the early 
+examples to the later ones fairly well.</p>
+  </li>
+  <li>
+    <p>We had a VM with the correct set up that we could log people into if they 
+were having trouble locally.  Two people made use of this.</p>
+  </li>
+  <li>
+    <p>Of course, It was great to have early proofs of the book and these were 
+well-received.</p>
+  </li>
 </ul>
-
 
 <p><img src="/images/fpdays2013/fpdays2013-02.jpg" alt="RWO books galore!" /></p>
 
-<h4>The Bad</h4>
+<h4 id="the-bad">The Bad</h4>
 
 <ul>
-<li><p>In our excitement to get right into the exercises, we didn't really give
-an overview of OCaml and its benefits.  A few minutes at the beginning would
-be enough and it's important so that people can leave with a few sound-bites.</p></li>
-<li><p>Not everyone received my email about installation, and certainly not the
-late arrivals.  This meant some pain getting things downloaded and running
-especially due to the wifi (see 'Ugly' below).</p></li>
-<li><p>A few of the people who <em>had</em> installed, didn't complete the instructions
-fully but didn't realise this until the morning of the session.  There was a good
-suggestion about having some kind of test to run that would check
-everything, so you'd know if there was something missing.</p></li>
-<li><p>We really should have had a cut-off where we told people to use VMs
-instead of fixing installation issues and 10-15 minutes would have been
-enough.  This would have been especially useful for the late-comers.</p></li>
-<li><p>We didn't really keep a record of the problems folks were having so we
-can't now go back and fix underlying issues.  To be fair, this would have
-been a little awkward to do ad-hoc but in hindsight, it's a good thing to
-plan for.</p></li>
+  <li>
+    <p>In our excitement to get right into the exercises, we didn&#8217;t really give 
+an overview of OCaml and its benefits.  A few minutes at the beginning would 
+be enough and it&#8217;s important so that people can leave with a few sound-bites.</p>
+  </li>
+  <li>
+    <p>Not everyone received my email about installation, and certainly not the 
+late arrivals.  This meant some pain getting things downloaded and running 
+especially due to the wifi (see &#8216;Ugly&#8217; below).  </p>
+  </li>
+  <li>
+    <p>A few of the people who <em>had</em> installed, didn&#8217;t complete the instructions 
+fully but didn&#8217;t realise this until the morning of the session.  There was a good 
+suggestion about having some kind of test to run that would check 
+everything, so you&#8217;d know if there was something missing.</p>
+  </li>
+  <li>
+    <p>We really should have had a cut-off where we told people to use VMs 
+instead of fixing installation issues and 10-15 minutes would have been 
+enough.  This would have been especially useful for the late-comers.</p>
+  </li>
+  <li>
+    <p>We didn&#8217;t really keep a record of the problems folks were having so we 
+can&#8217;t now go back and fix underlying issues.  To be fair, this would have 
+been a little awkward to do ad-hoc but in hindsight, it&#8217;s a good thing to 
+plan for.</p>
+  </li>
 </ul>
 
-
-<h4>The Ugly</h4>
+<h4 id="the-ugly">The Ugly</h4>
 
 <ul>
-<li>The only ugly part was the wifi.  It turned out that the room itself was a
-bit of a dead-spot and that wasn't helped by 30ish devices trying to connect
-to one access point!  Having everyone grab packages at the same time in the
-morning probably didn't help.  It was especially tricky as all our
+  <li>The only ugly part was the wifi.  It turned out that the room itself was a 
+bit of a dead-spot and that wasn&#8217;t helped by 30ish devices trying to connect 
+to one access point!  Having everyone grab packages at the same time in the 
+morning probably didn&#8217;t help.  It was especially tricky as all our 
 mitigation plans seemed to revolve around at least having local connectivity.
-In any case, this problem only lasted for the morning session and was a
-little better by the afternoon.  I'd definitely recommend a backup plan in
-the case of complete wifi failure next time!  One such plan that Leo got
-started on was to put the repository and other information onto a flash
-drive that could be shared with people.  We didn't need this in the end but
-it'll be useful to have something like this prepared for next time.  If
-anyone fancies donating a bunch of flash drives, I'll happily receive them!</li>
+In any case, this problem only lasted for the morning session and was a 
+little better by the afternoon.  I&#8217;d definitely recommend a backup plan in 
+the case of complete wifi failure next time!  One such plan that Leo got 
+started on was to put the repository and other information onto a flash 
+drive that could be shared with people.  We didn&#8217;t need this in the end but 
+it&#8217;ll be useful to have something like this prepared for next time.  If 
+anyone fancies donating a bunch of flash drives, I&#8217;ll happily receive them!</li>
 </ul>
 
-
-<p>Overall, it was a great session and everyone left happy, having completed
-most of the tutorial (and with a book!).  A few even continued at home
-afterwards and <a href="https://twitter.com/richardclegg/status/393458073052139520">got in touch</a> to let us know that they got
+<p>Overall, it was a great session and everyone left happy, having completed 
+most of the tutorial (and with a book!).  A few even continued at home 
+afterwards and <a href="https://twitter.com/richardclegg/status/393458073052139520">got in touch</a> to let us know that they got 
 everything working.
-It was a great session and thanks to <a href="https://twitter.com/MarkDalgarno">Mark</a>, <a href="https://twitter.com/JacquiDDavidson">Jacqui</a> and the rest of
+It was a great session and thanks to <a href="https://twitter.com/MarkDalgarno">Mark</a>, <a href="https://twitter.com/JacquiDDavidson">Jacqui</a> and the rest of 
 the FPDays crew for a great conference!</p>
 
 <p><img src="/images/fpdays2013/fpdays2013-04.jpg" alt="RWO Book giveaway" /></p>
 
 <p>(Thanks to Jeremy, Leo, David and Philippe for contributions to this post)</p>
+
 
         <hr id='share-comment'>
         <!-- AddThis Button BEGIN -->

@@ -79,45 +79,46 @@
       <div class="medium-9 columns">
         <h2><a class="post-title" href="/fpdays-ocaml-session">FP Days OCaml Session</a></h2>
         <!-- <br /> -->
-        <p>On Thursday, along with <a href="https://github.com/yallop">Jeremy</a> and
-<a href="http://www.lpw25.net">Leo</a>, I'll be running an OCaml Hands-on Session at
-the <a href="http://fpdays.net/2013/">FPDays conference</a>. Below are some prep
+        
+<p>On Thursday, along with <a href="https://github.com/yallop">Jeremy</a> and 
+<a href="http://www.lpw25.net">Leo</a>, I&#8217;ll be running an OCaml Hands-on Session at 
+the <a href="http://fpdays.net/2013/">FPDays conference</a>. Below are some prep 
 instructions for attendees.</p>
 
-<h3>Preparation for the session</h3>
+<h3 id="preparation-for-the-session">Preparation for the session</h3>
 
-<p>If you're starting from scratch, installation can take some time so it's
-best to get as much done in advance as possible.  You'll need OPAM (the
-package manager), OCaml 4.01 (available through OPAM) and a few libraries
+<p>If you&#8217;re starting from scratch, installation can take some time so it&#8217;s 
+best to get as much done in advance as possible.  You&#8217;ll need OPAM (the 
+package manager), OCaml 4.01 (available through OPAM) and a few libraries 
 before Thursday.  If you have any issues, please contact Amir.</p>
 
 <ul>
-<li><p><strong>OPAM</strong>: Follow the instructions for your platform at <a href="http://opam.ocaml.org/doc/Quick_Install.html">http://opam.ocaml.org/doc/Quick_Install.html</a>.
-OPAM requires OCaml so hopefully the relevant dependencies will kick in and
-you'll get OCaml too (most likely version 3.12).  You can get a cup of
-coffee while you wait. After installation, run <code>opam init</code> to initialise OPAM.</p></li>
-<li><p><strong>OCaml 4.01</strong>: We actually need the latest version of OCaml but OPAM
-makes this easy.  Just run the following (and get more coffee):</p></li>
+  <li>
+    <p><strong>OPAM</strong>: Follow the instructions for your platform at <a href="http://opam.ocaml.org/doc/Quick_Install.html">http://opam.ocaml.org/doc/Quick_Install.html</a>. 
+OPAM requires OCaml so hopefully the relevant dependencies will kick in and 
+you&#8217;ll get OCaml too (most likely version 3.12).  You can get a cup of 
+coffee while you wait. After installation, run <code>opam init</code> to initialise OPAM.</p>
+  </li>
+  <li>
+    <p><strong>OCaml 4.01</strong>: We actually need the latest version of OCaml but OPAM 
+makes this easy.  Just run the following (and get more coffee):</p>
+  </li>
 </ul>
-
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>opam update
 <span class="nv">$ </span>opam switch 4.01.0
 <span class="nv">$ </span><span class="nb">eval</span> <span class="sb">`</span>opam config env<span class="sb">`</span></code></pre></div>
 
-
 <ul>
-<li><strong>Libraries</strong>: For the workshop you will need to check that you have the
-following installed: <code>libffi</code>, <code>pcre</code> and <code>pkg-config</code>.  This will depend on
-your platform so on a Mac with homebrew I would do
-<code>brew install libffi pcre pkg-config</code> or on Debian or Ubuntu
-<code>apt-get install libffi-dev</code>.  After this, two OCaml packages it's worth
+  <li><strong>Libraries</strong>: For the workshop you will need to check that you have the 
+following installed: <code>libffi</code>, <code>pcre</code> and <code>pkg-config</code>.  This will depend on 
+your platform so on a Mac with homebrew I would do 
+<code>brew install libffi pcre pkg-config</code> or on Debian or Ubuntu 
+<code>apt-get install libffi-dev</code>.  After this, two OCaml packages it&#8217;s worth 
 installing in advance are <code>core</code> and <code>js_of_ocaml</code> so simply run:</li>
 </ul>
 
-
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>opam install core js_of_ocaml</code></pre></div>
-
 
 <p>OPAM will take care of the dependencies and the rest we can get on the day!</p>
 

@@ -69,7 +69,6 @@
     </div> <!-- End inset row -->
 
     
-
 <div class="row">
   <div class="medium-9 columns">
 
@@ -80,7 +79,8 @@
       </div>
       <div class="medium-9 columns">
         <h2><a class="post-title" href="/brewing-miso-to-serve-nymote">Brewing MISO to serve Nymote</a></h2>
-        <p>The <a href="http://nymote.org/blog/2013/introducing-nymote/">mission of Nymote</a> is to enable the creation of resilient
+        
+<p>The <a href="http://nymote.org/blog/2013/introducing-nymote/">mission of Nymote</a> is to enable the creation of resilient
 decentralised systems that incorporate privacy from the ground up, so that
 users retain control of their networks and data.  To achieve this, we
 reconsider all the old assumptions about how software is created in light of
@@ -92,36 +92,36 @@ for their own purposes and the first three applications Nymote targets are
 Mail, Contacts and Calendars, but to get there, we first have to create solid
 foundations.</p>
 
-<h3>Defining the bedrock</h3>
+<h3 id="defining-the-bedrock">Defining the bedrock</h3>
 
 <p>In order to create applications that work for the user, we first have to
 create a robust and reliable software stack that takes care of fundamental
 problems for us. In other words, to be able to assemble the applications we
 desire, we must first construct the correct building blocks.</p>
 
-<p>We've taken a clean-slate approach so that we can build long-lasting solutions
+<p>We’ve taken a clean-slate approach so that we can build long-lasting solutions
 with all the benefits of hindsight but none of the baggage. As
 mentioned in earlier posts, there are three main components of the stack,
 which are: <a href="http://nymote.org/software/mirage/">Mirage</a> (OS for the Cloud/IoT), <a href="http://nymote.org/software/irmin/">Irmin</a> (distributed datastore)
 and <a href="http://nymote.org/software/signpost/">Signpost</a> (identity and connectivity) - all built using the <a href="http://ocaml.org">OCaml</a>
 programming language.</p>
 
-<h4>Using the MISO stack to build Nymote</h4>
+<h4 id="using-the-miso-stack-to-build-nymote">Using the MISO stack to build Nymote</h4>
 
-<p>As you've already noticed, there's a useful acronym for the above tools —
+<p>As you’ve already noticed, there’s a useful acronym for the above tools —
 <strong>MISO</strong>. Each of the projects mentioned is a serious undertaking in its own
 right and each is likely to be impactful as a stand-alone concept.  However,
 when used together we have the opportunity to create applications and services
 with high levels of security, scalability and stability, which are not easy to
-achieve using other means.</p>
+achieve using other means. </p>
 
-<p>In other words, MISO is the <em>toolstack</em> that we're using to build Nymote —
+<p>In other words, MISO is the <em>toolstack</em> that we’re using to build Nymote —
 Nymote is the <em>decentralised system</em> that works for its users.</p>
 
 <p>Each of the projects is at a different phase but they have all have made great
 strides over the last year.</p>
 
-<h4>Mirage</h4>
+<h4 id="mirage">Mirage</h4>
 
 <p>Mirage — a library operating system that constructs unikernels — is the most
 mature part of the stack. I previously wrote about the
@@ -134,37 +134,36 @@ layer security (TLS) protocol.</p>
 <p>In addition to the development efforts, there have also been many
 presentations to audiences, ranging from <a href="http://amirchaudhry.com/describing-miso-entrepreneur-first-2014/">small groups of startups</a>
 all the way to <a href="http://media.ccc.de/browse/congress/2014/31c3_-_6443_-_en_-_saal_2_-_201412271245_-_trustworthy_secure_modular_operating_system_engineering_-_hannes_-_david_kaloper.html#video">prestigious keynotes</a> with 1000+ attendees.  Ever
-since we've had ARM support, the talks themselves have been delivered from
+since we’ve had ARM support, the talks themselves have been delivered from
 unikernels running on Cubieboards and you can see the growing collection of
 slides at <a href="http://decks.openmirage.org">decks.openmirage.org</a>.</p>
 
 <p>All of these activities have led to a tremendous increase in public awareness
 of unikernels and the value they can bring to developing robust, modern
 software as well as the promise of <a href="https://medium.com/@darrenrush/after-docker-unikernels-and-immutable-infrastructure-93d5a91c849e">immutable infrastructure</a>.
-As more people look to get involved and contribute to the codebase, we've also
+As more people look to get involved and contribute to the codebase, we’ve also
 begun curating a set of <a href="https://github.com/mirage/mirage-www/wiki/Pioneer-Projects">Pioneer Projects</a>, which are suitable for a
 range of skill-levels.</p>
 
 <p>You can find much more information on all the activities of 2014 in the
-comprehensive <a href="http://openmirage.org/blog/2014-in-review">Mirage review post</a>. As it's the most mature
+comprehensive <a href="http://openmirage.org/blog/2014-in-review">Mirage review post</a>. As it’s the most mature
 component of the MISO stack, anyone interested in the <em>development of code</em>
 towards Nymote should join the <a href="http://lists.xenproject.org/cgi-bin/mailman/listinfo/mirageos-devel">Mirage mailing list</a>.</p>
 
 <ul>
-<li><em>Source code</em> - <a href="https://github.com/mirage">Mirage org on GitHub</a></li>
+  <li><em>Source code</em> - <a href="https://github.com/mirage">Mirage org on GitHub</a></li>
 </ul>
 
-
-<h4>Irmin</h4>
+<h4 id="irmin">Irmin</h4>
 
 <p>Irmin — a library to persist and synchronize distributed data structures —
-made significant progress last year. It's based on the principles of Git, the
+made significant progress last year. It’s based on the principles of Git, the
 distributed version control system, and allows developers to choose the
 appropriate combination of consistency, availability and partition tolerance
 for their needs.</p>
 
 <p>Early last year Irmin was released as an alpha with the ability to speak
-'fluent Git' and by the summer, it was supporting user-defined merge
+‘fluent Git’ and by the summer, it was supporting user-defined merge
 operations and fast in-memory views.  A couple of summer projects improved the
 <a href="http://gazagnaire.org/pub/FGM15.pdf">merge strategies</a> and synchronisation strategies, while an
 external project — Xenstore — used Irmin to <a href="http://openmirage.org/blog/introducing-irmin-in-xenstore">add fault-tolerance</a>.</p>
@@ -173,90 +172,87 @@ external project — Xenstore — used Irmin to <a href="http://openmirage.org/b
 <a href="http://samoht.github.io/irmin/">developer documentation</a>) and a cleaner high-level REST API.
 Upcoming work includes proper documentation of the REST API, which means Irmin
 can more easily be used in non-OCaml projects, and full integration with
-Mirage projects.</p>
+Mirage projects. </p>
 
 <p>Irmin is already being used to create
 <a href="https://opam.ocaml.org/packages/imaplet-lwt/imaplet-lwt.0.1.3/">a version controlled IMAP server</a> and
-<a href="https://github.com/samoht/dog">a version controlled distributed log system</a>. It's no surprise
+<a href="https://github.com/samoht/dog">a version controlled distributed log system</a>. It’s no surprise
 that the first major release is coming <a href="https://github.com/mirage/irmin/issues?q=is%3Aopen+is%3Aissue+milestone%3A1.0.0">very soon</a>!</p>
 
 <ul>
-<li><em>Source code</em> - <a href="https://github.com/mirage/irmin">Irmin on GitHub</a></li>
+  <li><em>Source code</em> - <a href="https://github.com/mirage/irmin">Irmin on GitHub</a></li>
 </ul>
 
-
-<h4>Signpost</h4>
+<h4 id="signpost">Signpost</h4>
 
 <p>Signpost will be a collection of libraries that aims to provide identity and
 connectivity between devices.  Forming efficient connections between
 end-points is becoming ever more important as the number of devices we own
 increases. These devices need to be able to recognise and reach each-other,
-regardless of their location on the network or the obstacles in between.</p>
+regardless of their location on the network or the obstacles in between. </p>
 
 <p>This is very much a nascent project and it involves a lot of work on
 underlying libraries to ensure that security aspects are properly considered.
 As such, we must take great care in how we implement things and be clear about
 any trade-offs we make. Our thoughts are beginning to converge on a design we
-think will work and that we would entrust with our own data, but we're
-treating this as a case of 'Here Be Dragons'.  This is a critical piece of the
-stack and we'll share what we learn as we chart our way towards it.</p>
+think will work and that we would entrust with our own data, but we’re
+treating this as a case of ‘Here Be Dragons’.  This is a critical piece of the
+stack and we’ll share what we learn as we chart our way towards it.</p>
 
-<p>Even though we're at the design stage of Signpost, we did substantial work
+<p>Even though we’re at the design stage of Signpost, we did substantial work
 last year to create the libraries we might use for implementation.  A
 particularly exciting one is <a href="https://github.com/MagnusS/jitsu">Jitsu</a> — which stands for Just In Time
 Summoning of Unikernels. This is a DNS server that spawns unikernels in
 response to DNS requests and boots them in real-time with no perceptible lag
 to the end user.  In other words, it makes much more efficient use of
 resources and significantly reduces latency of services for end-users —
-services are only run <em>when</em> they need to be, in the <em>places</em> they need to be.</p>
+services are only run <em>when</em> they need to be, in the <em>places</em> they need to be. </p>
 
-<p>There's also been lots of efforts on other libraries that will help us
+<p>There’s also been lots of efforts on other libraries that will help us
 <em>iterate towards</em> a complete solution. Initially, we will use pre-existing
-implementations but in time we can take what we've learned and create more
+implementations but in time we can take what we’ve learned and create more
 robust alternatives. Some of the libraries are listed below (but note the
-friendly disclaimers!).</p>
+friendly disclaimers!). </p>
 
 <ul>
-<li><em>Source code</em>
-
-<ul>
-<li><a href="https://github.com/dsheets/ocaml-sodium">Bindings to libsodium</a></li>
-<li><a href="https://github.com/dsheets/ocaml-dnscurve">Implementation of DNSCurve</a></li>
-<li><a href="https://github.com/dsheets/ocaml-libmacaroons">Bindings to libmacaroons</a></li>
+  <li><em>Source code</em>
+    <ul>
+      <li><a href="https://github.com/dsheets/ocaml-sodium">Bindings to libsodium</a></li>
+      <li><a href="https://github.com/dsheets/ocaml-dnscurve">Implementation of DNSCurve</a></li>
+      <li><a href="https://github.com/dsheets/ocaml-libmacaroons">Bindings to libmacaroons</a></li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
 
+<h4 id="ocaml">OCaml</h4>
 
-<h4>OCaml</h4>
-
-<p><a href="http://ocaml.org">OCaml</a> is a mature, powerful and highly pragmatic language.  It's
+<p><a href="http://ocaml.org">OCaml</a> is a mature, powerful and highly pragmatic language.  It’s
 proven ideal for creating robust systems applications and
-<a href="http://ocaml.org/learn/companies.html">many others</a> also recognise this.  We're using it to create all the
-tools you've read about so far and we're also helping to improve the ecosystem
+<a href="http://ocaml.org/learn/companies.html">many others</a> also recognise this.  We’re using it to create all the
+tools you’ve read about so far and we’re also helping to improve the ecosystem
 around it.</p>
 
-<p>One of the major things we've been involved with is the coordination of the
+<p>One of the major things we’ve been involved with is the coordination of the
 OCaml Platform, which combines the OCaml compiler with a coherent set of tools
 and workflows to be more productive in the language and speed up development
 time.  We presented the first major release of these efforts at OCaml 2014 and
 you can <a href="http://ocaml.org/meetings/ocaml/2014/ocaml2014_7.pdf">read the abstract</a> or <a href="https://www.youtube.com/watch?v=jxhtpQ5nJHg&amp;list=UUP9g4dLR7xt6KzCYntNqYcw">watch the video</a>.</p>
 
-<p>There's more to come, as we continue to improve the tooling and also support
+<p>There’s more to come, as we continue to improve the tooling and also support
 the community in <a href="http://amirchaudhry.com/towards-governance-framework-for-ocamlorg">other ways</a>.</p>
 
-<h3>Early steps towards applications</h3>
+<h3 id="early-steps-towards-applications">Early steps towards applications</h3>
 
 <p>Building blocks are important but we also need to push towards working
-applications.  There are different approaches we've taken to this, which
+applications.  There are different approaches we’ve taken to this, which
 include building prototypes, wireframing use-cases and implementing features
 with other toolstacks.  Some of this work is also part of a larger
-<a href="http://usercentricnetworking.eu">EU funded project</a>* and below are brief summaries of the things we've
-done so far. We'll expand on them as we do more over time.</p>
+<a href="http://usercentricnetworking.eu">EU funded project</a>* and below are brief summaries of the things we’ve
+done so far. We’ll expand on them as we do more over time.</p>
 
 <p><strong>Mail</strong> - As mentioned above, a prototype IMAP server exists (<a href="https://opam.ocaml.org/packages/imaplet-lwt/imaplet-lwt.0.1.3/">IMAPlet</a>)
 which uses Irmin to store data. This is already able to connect to a client to
-serve mail. The important feature is that it's an IMAP server which is version
+serve mail. The important feature is that it’s an IMAP server which is version
 controlled in the backend and can expose a REST API from the mailstore quite
 easily.</p>
 
@@ -277,13 +273,13 @@ the point of being very invasive) can provide disproportionate benefits.  The
 won first place. This was <em>great</em> validation that the features are desirable
 so we need to work towards a decentralised, privacy-conscious version.</p>
 
-<h3>Time to get involved!</h3>
+<h3 id="time-to-get-involved">Time to get involved!</h3>
 
 <p>The coming year represents the best time to be working on the MISO stack and
 using it to make Nymote a reality.  All source code is publicly available and
 the projects are varied enough that there is something for everyone.  Browse
 through issues, consider the <a href="https://github.com/mirage/mirage-www/wiki/Pioneer-Projects">projects</a> or simply write online and
-share with us the things you'd like to see.
+share with us the things you’d like to see.
 This promises to be an exciting year!</p>
 
 <p class="footnote">* The research leading to these results has received
@@ -291,16 +287,11 @@ funding from the European Union's Seventh Framework Programme FP7/2007-2013
 under the UCN project, grant agreement no 611001.
 </p>
 
-
-
-
 <!-- ========================================================= -->
 
 
-
-
         <a href="/brewing-miso-to-serve-nymote/#share-comment">Share / Comment</a>
-        <hr>
+        <hr />
         <br />
         <br />
       </div>
@@ -312,7 +303,8 @@ under the UCN project, grant agreement no 611001.
       </div>
       <div class="medium-9 columns">
         <h2><a class="post-title" href="/unikernels-for-everyone">Unikernels for everyone!</a></h2>
-        <p>Many people have now set up unikernels for blogs, documenting their
+        
+<p>Many people have now set up unikernels for blogs, documenting their
 experiences for others to follow.  Even more important is that people are
 going beyond static sites to build unikernels that provide more complicated
 services and solve real-world problems.</p>
@@ -322,7 +314,7 @@ different tools and target different deployment methods.  Below are summaries
 of some of the posts I found interesting and that will make it easier for you
 try out different ways of creating and deploying your unikernels.</p>
 
-<h3>Unikernel blogs with MirageOS</h3>
+<h3 id="unikernel-blogs-with-mirageos">Unikernel blogs with MirageOS</h3>
 
 <p>Mindy picked up where the <a href="http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines/">first set of instructions</a>
 finished and described her work to get an Octopress blog running on Amazon EC2.
@@ -331,22 +323,20 @@ lot of interesting experiences — which included getting into the Mirage
 networking stack to debug an issue and submit a bugfix!  More recently, she
 also wrote a couple of excellent posts on <em>why</em> she uses a unikernel for her
 blog.  These posts cover the security concerns (and responsibility) of running
-networked services on today's Internet and the importance of owning your
+networked services on today’s Internet and the importance of owning your
 content — both ideas are at the heart of the work behind <a href="http://nymote.org/">Nymote</a> and are
 well worth reading.</p>
 
 <ul>
-<li><em>Mindy's posts</em>
-
-<ul>
-<li><em>Overview</em> - <a href="http://www.somerandomidiot.com/blog/2014/08/18/i-am-unikernel/">"I Am Unikernel (and So Can You!)"</a></li>
-<li><em>First in her Mirage series</em> - <a href="http://www.somerandomidiot.com/blog/2014/03/14/its-a-mirage/">"It's a Mirage! (or, How to Shave a Yak.)"</a></li>
-<li><a href="http://www.somerandomidiot.com/blog/2014/08/11/attack-surface-area/">"Attack Surface: Why I Unikernel, Part 1"</a></li>
-<li><a href="http://www.somerandomidiot.com/blog/2014/08/14/my-content-is-mine/">"My Content Is Mine: Why I Unikernel, Part 2"</a></li>
+  <li><em>Mindy’s posts</em>
+    <ul>
+      <li><em>Overview</em> - <a href="http://www.somerandomidiot.com/blog/2014/08/18/i-am-unikernel/">“I Am Unikernel (and So Can You!)”</a></li>
+      <li><em>First in her Mirage series</em> - <a href="http://www.somerandomidiot.com/blog/2014/03/14/its-a-mirage/">“It’s a Mirage! (or, How to Shave a Yak.)”</a></li>
+      <li><a href="http://www.somerandomidiot.com/blog/2014/08/11/attack-surface-area/">“Attack Surface: Why I Unikernel, Part 1”</a></li>
+      <li><a href="http://www.somerandomidiot.com/blog/2014/08/14/my-content-is-mine/">“My Content Is Mine: Why I Unikernel, Part 2”</a></li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
-
 
 <p>Ian took a different path to AWS deployment by using Vagrant and Test Kitchen
 to to get his static site together and build his unikernel, and then Packer to
@@ -354,9 +344,8 @@ create the images for deployment to EC2.  All succinctly explained with code
 available on GitHub for others to try out!</p>
 
 <ul>
-<li><em>Ian on</em> <a href="https://github.com/iw/mirage-jekyll">"Mirage with Jekyll on Amazon EC2"</a></li>
+  <li><em>Ian on</em> <a href="https://github.com/iw/mirage-jekyll">“Mirage with Jekyll on Amazon EC2”</a></li>
 </ul>
-
 
 <p>Toby wanted to put together a blog that was a little more complicated than a
 traditional static site, with specific features like subdomains based on tags
@@ -365,104 +354,93 @@ libraries so he can use Mustache for sever-side rendering, where his blog
 posts and metadata are stored as JSON and rendered on request.</p>
 
 <ul>
-<li><em>Toby on</em> <a href="http://ocaml.is-awesome.net/2014/11/building-a-blog-with-mirage-os">"Building a Blog with MirageOS"</a></li>
+  <li><em>Toby on</em> <a href="http://ocaml.is-awesome.net/2014/11/building-a-blog-with-mirage-os">“Building a Blog with MirageOS”</a></li>
 </ul>
 
-
-<p>Chris saw others working to get unikernel blogs on EC2 and decide he'd try
+<p>Chris saw others working to get unikernel blogs on EC2 and decide he’d try
 getting his up and running on Linode instead.  He is the first person to
 deploy his unikernel to Linode and he provided a great walkthough with helpful
 screenshots, as well as brief notes about the handful of differences compared
 with EC2.  Chris also wrote about the issue he had with clean urls (i.e
 serving <code>/about/index.html</code> when a user visits <code>/about/</code>) — he describes the
-things he tried out until he was finally able to fix it.</p>
+things he tried out until he was finally able to fix it.  </p>
 
 <ul>
-<li><em>Chris' posts</em>
-
-<ul>
-<li><em>Setting up a unikernel</em> - <a href="http://christopherbothwell.com/ocaml/mirage/2014/12/03/about-not-found.html">"About Not Found"</a></li>
-<li><em>Deploying to Linode</em> - <a href="http://christopherbothwell.com/ocaml/mirage/linode/2014/12/08/hello-linode.html">"Hello Linode"</a></li>
+  <li><em>Chris’ posts</em>
+    <ul>
+      <li><em>Setting up a unikernel</em> - <a href="http://christopherbothwell.com/ocaml/mirage/2014/12/03/about-not-found.html">“About Not Found”</a></li>
+      <li><em>Deploying to Linode</em> - <a href="http://christopherbothwell.com/ocaml/mirage/linode/2014/12/08/hello-linode.html">“Hello Linode”</a></li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
-
 
 <p>Phil focused on getting unikernels running on a cubieboards, which are ARM
 based development boards — similar to the Raspberry Pi. He starts by taking
-Mirage's pre-built <a href="http://blobs.openmirage.org">Cubieboard images</a> — which makes it easy to
+Mirage’s pre-built <a href="http://blobs.openmirage.org">Cubieboard images</a> — which makes it easy to
 get Xen and an OCaml environment set up on the board — and getting this
 installed on the Cubieboard.  He also noted the issues he came across along
 with the simple tweaks he made to fix them and finally serves a Mirage hello
 world page.</p>
 
 <ul>
-<li><em>Phil on</em> <a href="http://philtomson.github.io/blog/2014/09/10/some-notes-on-building-and-running-mirage-unikernels-on-cubieboard2/">"Some Notes on Building and Running Mirage Unikernels on Cubieboard2"</a></li>
+  <li><em>Phil on</em> <a href="http://philtomson.github.io/blog/2014/09/10/some-notes-on-building-and-running-mirage-unikernels-on-cubieboard2/">“Some Notes on Building and Running Mirage Unikernels on Cubieboard2”</a></li>
 </ul>
 
+<h3 id="more-than-just-static-sites">More than just static sites</h3>
 
-<h3>More than just static sites</h3>
-
-<p>Static sites have become the new 'hello world' app. They're simple to manage,
+<p>Static sites have become the new ‘hello world’ app. They’re simple to manage,
 low-risk and provide lots of opportunities to experience something new.  These
 aspects make them ideal for discovering the benefits (and trade offs) of the
 unikernel approach and I look forward to seeing what variations people come up
-with — For instance, there aren't any public instructions for deploying to
-Rackspace so it would be great to read about someone's experiences there.
+with — For instance, there aren’t any public instructions for deploying to
+Rackspace so it would be great to read about someone’s experiences there.
 However, there are also many other applications that also fit the above
-criteria of simplicity, low risk and plentiful learning opportunities.</p>
+criteria of simplicity, low risk and plentiful learning opportunities. </p>
 
 <p>Thomas Leonard decided to create a unikernel for a simple REST service for
 queuing package uploads for 0install.  His post takes you from the very
 beginning, with a simple hello world program running on Xen, all the way
 through to creating his REST service. Along the way there a lots of code
-snippets and explanations of the libraries being used and what they're doing.
+snippets and explanations of the libraries being used and what they’re doing.
 This is a great use-case for unikernels and there are a lot of interesting
 things to take from this post, for example the ease with which Thomas was able
-to find and fix bugs using regular tools. There's also lots of information on
+to find and fix bugs using regular tools. There’s also lots of information on
 performance testing and optimising of the unikernel, which he covers in a
-follow-up post, and he even built tools to visualise the traces.</p>
+follow-up post, and he even built tools to visualise the traces. </p>
 
 <ul>
-<li><em>Thomas' posts</em>
-
-<ul>
-<li><em>Hello world and REST service</em> - <a href="http://roscidus.com/blog/blog/2014/07/28/my-first-unikernel/">"My First Unikernel"</a></li>
-<li><em>Profiling and optimisations</em> - <a href="http://roscidus.com/blog/blog/2014/08/15/optimising-the-unikernel/">"Optimising the Unikernel"</a></li>
-<li><em>Tool to visualise traces</em> - <a href="http://roscidus.com/blog/blog/2014/10/27/visualising-an-asynchronous-monad">"Visualising an Asynchronous Monad"</a></li>
+  <li><em>Thomas’ posts</em>
+    <ul>
+      <li><em>Hello world and REST service</em> - <a href="http://roscidus.com/blog/blog/2014/07/28/my-first-unikernel/">“My First Unikernel”</a></li>
+      <li><em>Profiling and optimisations</em> - <a href="http://roscidus.com/blog/blog/2014/08/15/optimising-the-unikernel/">“Optimising the Unikernel”</a></li>
+      <li><em>Tool to visualise traces</em> - <a href="http://roscidus.com/blog/blog/2014/10/27/visualising-an-asynchronous-monad">“Visualising an Asynchronous Monad”</a></li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
 
-
-<p>Of course, there's much more activity out there than described in this post as
+<p>Of course, there’s much more activity out there than described in this post as
 people continually propose ideas on the <a href="http://lists.xenproject.org/cgi-bin/mailman/listinfo/mirageos-devel">Mirage mailing list</a> — both
 for things they would like to try out and issues they came up against. In my
 <a href="http://nymote.org/blog/2014/from-jekyll-site-to-unikernel/">last post</a>, I pointed out that the workflow is applicable to any
-type of unikernel and as Thomas showed, with bit of effort it's already
+type of unikernel and as Thomas showed, with bit of effort it’s already
 possible to create useful, real-world services using the many libraries that
-already exist. There's also a lot of scaffolding in the <a href="https://github.com/mirage/mirage-skeleton">mirage-skeleton</a>
+already exist. There’s also a lot of scaffolding in the <a href="https://github.com/mirage/mirage-skeleton">mirage-skeleton</a>
 repo that you can build on which makes it even easier to get involved.  If you
 want to dive deeper into the libraries and perhaps learn OCaml, there are lots
 of <a href="http://ocaml.org/learn/books.html">resources online</a> and <a href="https://github.com/mirage/mirage-www/wiki/Pioneer-Projects">projects</a> to get involved with too.</p>
 
 <p>Now is a great time to try building a unikernel for yourself and as you can
 see from the posts above, shared experiences help other people progress
-further and branch out into new areas. When you've had a chance to try
-something out please do share your experiences online!</p>
+further and branch out into new areas. When you’ve had a chance to try
+something out please do share your experiences online! </p>
 
 <p class="footnote">This post also appears on the <a href="http://nymote.org/blog/2015/unikernels-for-everyone/">Nymote blog</a>.</p>
-
-
-
 
 <!-- ===== LINKS ===== -->
 
 
-
-
         <a href="/unikernels-for-everyone/#share-comment">Share / Comment</a>
-        <hr>
+        <hr />
         <br />
         <br />
       </div>
@@ -474,13 +452,14 @@ something out please do share your experiences online!</p>
       </div>
       <div class="medium-9 columns">
         <h2><a class="post-title" href="/towards-governance-framework-for-ocamlorg">Towards a governance framework for OCaml.org</a></h2>
-        <p>The projects around the OCaml.org domain name are becoming more established
-and it's time to think about how they're organised. 2014 saw a <em>lot</em> of
+        
+<p>The projects around the OCaml.org domain name are becoming more established
+and it’s time to think about how they’re organised. 2014 saw a <em>lot</em> of
 activity, which built on the <a href="http://www.cl.cam.ac.uk/projects/ocamllabs/news/index.html#OnlineatOCamlorg">successes from 2013</a>.
 Some of the main things that stand out to me are:</p>
 
 <ul>
-<li>More <a href="http://ocaml.org/contributors.html">volunteers</a> contributing to the public website with
+  <li>More <a href="http://ocaml.org/contributors.html">volunteers</a> contributing to the public website with
 translations, bug fixes and content updates, as well as many new visitors —
 for example, the new page on <a href="http://ocaml.org/learn/teaching-ocaml.html">teaching OCaml</a> received over 5k
 visits alone. The increasing contributions are a result of the earlier work on
@@ -488,88 +467,97 @@ visits alone. The increasing contributions are a result of the earlier work on
 so please do <a href="https://github.com/ocaml/ocaml.org/labels/contribute%21">contribute</a>!</li>
 </ul>
 
-
-<p><a href="http://opam.ocaml.org/"><img style="float: right; margin-left: 10px" src="http://amirchaudhry.com/images/web/opampkg-2015-01-08.png"></a></p>
+<p><a href="http://opam.ocaml.org/"><img style="float: right; margin-left: 10px" src="http://amirchaudhry.com/images/web/opampkg-2015-01-08.png" /></a></p>
 
 <ul>
-<li><p>The relentless improvements and growth of OPAM, both in terms of the
+  <li>The relentless improvements and growth of OPAM, both in terms of the
 repository — with over 1000 additional packages and several
 <a href="http://lists.ocaml.org/pipermail/opam-devel/2014-October/000781.html">new repo maintainers</a> — and also improved workflows (e.g the new
-<a href="http://opam.ocaml.org/blog/opam-1-2-pin/">pin functionality</a>).
+<a href="http://opam.ocaml.org/blog/opam-1-2-pin/">pin functionality</a>). 
 The OPAM site and package list also moved to the ocaml.org domain, becoming
 the substrate for the OCaml Platform efforts. This began with the work towards
 <a href="http://opam.ocaml.org/blog/opam-1-2-0-beta4/">OPAM 1.2</a> and there is much more to come (including closer
 integration in terms of styling). Join the <a href="http://lists.ocaml.org/listinfo/platform">Platform list</a> to
-keep up to date.</p></li>
-<li><p>Much more activity on the <a href="http://lists.ocaml.org">mailing lists</a> in general and user groups
-requesting to have lists made (e.g the <a href="http://lists.ocaml.org/listinfo/teaching">teaching list</a>). If anyone
-has a need for a new list, just ask on the
-<a href="http://lists.ocaml.org/listinfo/infrastructure">infrastructure list</a>!</p></li>
+keep up to date.</li>
 </ul>
 
+<ul>
+  <li>Much more activity on the <a href="http://lists.ocaml.org">mailing lists</a> in general and user groups
+requesting to have lists made (e.g the <a href="http://lists.ocaml.org/listinfo/teaching">teaching list</a>). If anyone
+has a need for a new list, just ask on the
+<a href="http://lists.ocaml.org/listinfo/infrastructure">infrastructure list</a>!</li>
+</ul>
 
-<p>There is other work besides those I've mentioned and I think by any measure,
+<p>There is other work besides those I’ve mentioned and I think by any measure,
 all the projects have been quite successful. As the community continues to
-develop, it's important to clarify how things currently work to improve the
+develop, it’s important to clarify how things currently work to improve the
 level of transparency and make it easier for newcomers to get involved.</p>
 
-<h3>Factors for a governance framework</h3>
+<h3 id="factors-for-a-governance-framework">Factors for a governance framework</h3>
 
-<p>For the last couple of months, I've been looking over how larger projects
+<p>For the last couple of months, I’ve been looking over how larger projects
 manage themselves and the governance documents that are available. My aim has
 been to put such a document together for the OCaml.org domain without
 introducing burdensome processes.  There are number of things that stood out
-to me during this process, which have guided the approach I'm taking.</p>
+to me during this process, which have guided the approach I’m taking.</p>
 
 <p>My considerations for an OCaml.org governance document:</p>
 
 <ul>
-<li><p>A governance document is not <em>necessary</em> for success but it's valuable to
+  <li>
+    <p>A governance document is not <em>necessary</em> for success but it’s valuable to
 demonstrate a commitment to a <strong>stable decision-making process</strong>.  There are
 many projects that progress perfectly well without any documented processes
 and indeed the work around OCaml.org so far is a good example of this (as well
 as OCaml itself).  However, for projects to achieve a scale greater than the
-initial teams, it's a significant benefit to encode in writing how things work
-(NB: please note that I didn't define the <em>type</em> of decision-making process -
-merely that it's a stable one).</p></li>
-<li><p>It must <strong>clarify its scope</strong> so that there is no confusion about what the
+initial teams, it’s a significant benefit to encode in writing how things work
+(NB: please note that I didn’t define the <em>type</em> of decision-making process -
+merely that it’s a stable one).</p>
+  </li>
+  <li>
+    <p>It must <strong>clarify its scope</strong> so that there is no confusion about what the
 document covers. In the case of OCaml.org, it needs to be clear that the
-governance covers the domain itself, rather than referring to the website.</p></li>
-<li><p>It should <strong>document the reality</strong>, rather than represent an aspirational
-goal or what people <em>believe</em> a governance structure should look like.  It's
+governance covers the domain itself, rather than referring to the website. </p>
+  </li>
+  <li>
+    <p>It should <strong>document the reality</strong>, rather than represent an aspirational
+goal or what people <em>believe</em> a governance structure should look like.  It’s
 very tempting to think of an idealised structure without recognising that
 behaviours and norms have <em>already</em> been established. Sometimes this will be
 vague and poorly defined but that might simply indicate areas that the
-community hasn't encountered yet (e.g it's uncommon for any new project to
+community hasn’t encountered yet (e.g it’s uncommon for any new project to
 seriously think about dispute resolution processes until they have to).  In
 this sense, the initial version of a governance document should simply be a
 written description of how things currently stand, rather than a means to
-adjust that behaviour.</p></li>
-<li><p>It should be <strong>simple and self-contained</strong>, so that anyone can understand
+adjust that behaviour.  </p>
+  </li>
+  <li>
+    <p>It should be <strong>simple and self-contained</strong>, so that anyone can understand
 the intent quickly without recourse to other documents.  It may be tempting to
 consider every edge-case or try to resolve every likely ambiguity but this
 just leads to large, legal documents.  This approach may well be necessary
 once projects have reached a certain scale but to implement it sooner would be
-a case of premature optimisation — not to mention that very few people would
-read and remember such a document.</p></li>
-<li><p>It's a <strong>living document</strong>. If the community decides that it would prefer a
+a case of premature optimisation — not to mention that very few people would 
+read and remember such a document.</p>
+  </li>
+  <li>
+    <p>It’s a <strong>living document</strong>. If the community decides that it would prefer a
 new arrangement, then the document conveniently provides a stable starting
 point from which to iterate. Indeed, it <em>should</em> adapt along with the project
-that it governs.</p></li>
+that it governs. </p>
+  </li>
 </ul>
 
-
-<p>With the above points in mind, I've been putting together a draft governance
-framework to cover how the OCaml.org domain name is managed.  It's been a
-quiet work-in-progress for some time and I'll be getting in touch with
-maintainers of specific projects soon.  Once I've had a round of reviews, I'll
+<p>With the above points in mind, I’ve been putting together a draft governance
+framework to cover how the OCaml.org domain name is managed.  It’s been a
+quiet work-in-progress for some time and I’ll be getting in touch with
+maintainers of specific projects soon.  Once I’ve had a round of reviews, I’ll
 be sharing it more widely and posting it here!</p>
 
 <!-- [![FIGURE 06.1 Governance versus anarchy on Flickr](http://amirchaudhry.com/images/web/governance-alpha.png)](https://www.flickr.com/photos/jurgenappelo/5201270923/) -->
 
-
         <a href="/towards-governance-framework-for-ocamlorg/#share-comment">Share / Comment</a>
-        <hr>
+        <hr />
         <br />
         <br />
       </div>
@@ -582,7 +570,6 @@ be sharing it more widely and posting it here!</p>
       <div class="medium-9 columns">
         <h2><a class="post-title" href="/describing-miso-entrepreneur-first-2014">Describing the MISO stack at Entrepreneur First</a></h2>
         
-
 <!-- 
 
 
@@ -627,19 +614,19 @@ be sharing it more widely and posting it here!</p>
 
  -->
 
+<p>I&#8217;m speaking to the <a href="http://joinef.com">Entrepreneur First</a> cohort this morning about the future of resilient, distributed systems and what I&#8217;m working on to get us there.  Firstly, I&#8217;m describing the kinds of solutions we have today, the great things they offer developers as well as the issues they create. This leads into the new toolstack we&#8217;re creating, called the MISO stack, and the benefits and trade-offs.</p>
 
-<p>I'm speaking to the <a href="http://joinef.com">Entrepreneur First</a> cohort this morning about the future of resilient, distributed systems and what I'm working on to get us there.  Firstly, I'm describing the kinds of solutions we have today, the great things they offer developers as well as the issues they create. This leads into the new toolstack we're creating, called the MISO stack, and the benefits and trade-offs.</p>
+<p>I&#8217;m spending more time talking about <a href="http://openmirage.org">Mirage OS</a> &#8211; the &#8216;M&#8217; in the MISO stack &#8211; because the workflow we&#8217;ve developed here underpins how we build, deploy and maintain such applications at scale. As an example of how things can work, I point at my earlier post on how to go from <a href="http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines">jekyll to unikernel</a>.  This uses TravisCI to do all the hard work and all the relevant artefacts, including the final VM, can be version-controlled through Git. I actually deployed this post while the audience was watching, so that I could point at <a href="http://travisci.org/amirmc/amirmc.github.com">the build logs</a>.</p>
 
-<p>I'm spending more time talking about <a href="http://openmirage.org">Mirage OS</a> -- the 'M' in the MISO stack -- because the workflow we've developed here underpins how we build, deploy and maintain such applications at scale. As an example of how things can work, I point at my earlier post on how to go from <a href="http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines">jekyll to unikernel</a>.  This uses TravisCI to do all the hard work and all the relevant artefacts, including the final VM, can be version-controlled through Git. I actually deployed this post while the audience was watching, so that I could point at <a href="http://travisci.org/amirmc/amirmc.github.com">the build logs</a>.</p>
+<p>One of the use cases for our toolstack is to make it possible for individuals to create and maintain their own piece of the cloud, a project called <a href="http://nymote.org">Nymote</a>, which will also make it possible to run the <a href="http://amirchaudhry.com/working-on-the-internet-of-my-things/">Internet of <em>my</em> Things</a> &#8211; which itself is related to another things I&#8217;m working on, such the <a href="http://hubofallthings.com">Hub of All Things - HAT</a> and the <a href="http://usercentricnetworking.eu">User Centric Networking</a> projects.</p>
 
-<p>One of the use cases for our toolstack is to make it possible for individuals to create and maintain their own piece of the cloud, a project called <a href="http://nymote.org">Nymote</a>, which will also make it possible to run the <a href="http://amirchaudhry.com/working-on-the-internet-of-my-things/">Internet of <em>my</em> Things</a> -- which itself is related to another things I'm working on, such the <a href="http://hubofallthings.com">Hub of All Things - HAT</a> and the <a href="http://usercentricnetworking.eu">User Centric Networking</a> projects.</p>
-
-<p>This is an exciting summer for all the tools we're putting together, since we've recently <a href="http://openmirage.org/blog/announcing-mirage-20-release">announced Mirage OS v2.0</a>, which now works on ARM, are going full steam ahead with <a href="http://openmirage.org/blog/introducing-irmin">Irmin</a> and working hard on improvements to the <a href="http://www.cl.cam.ac.uk/projects/ocamllabs/tasks/platform.html">OCaml ecosystem</a>. It's a great time to explore these projects, learn a new language and build awesome stuff.</p>
+<p>This is an exciting summer for all the tools we&#8217;re putting together, since we&#8217;ve recently <a href="http://openmirage.org/blog/announcing-mirage-20-release">announced Mirage OS v2.0</a>, which now works on ARM, are going full steam ahead with <a href="http://openmirage.org/blog/introducing-irmin">Irmin</a> and working hard on improvements to the <a href="http://www.cl.cam.ac.uk/projects/ocamllabs/tasks/platform.html">OCaml ecosystem</a>. It&#8217;s a great time to explore these projects, learn a new language and build awesome stuff.</p>
 
 <p><a href="https://twitter.com/amirmc/status/492202830774927361"><img src="http://amirchaudhry.com/images/singles/mirage-cubieboard.jpg" alt="Mirage on ARM" /></a></p>
 
+
         <a href="/describing-miso-entrepreneur-first-2014/#share-comment">Share / Comment</a>
-        <hr>
+        <hr />
         <br />
         <br />
       </div>
@@ -652,58 +639,56 @@ be sharing it more widely and posting it here!</p>
       <div class="medium-9 columns">
         <h2><a class="post-title" href="/winning-seedhack-5-2014">Winning Seedhack 5.0</a></h2>
         
-
 <p class="footnote">[This story was also a
     <a href="http://seedcamp.com/seedhack-5-0/">guest post</a>
     on the <a href="http://seedcamp.com">Seedcamp</a> blog.]</p>
-
 
 <p>A couple of weeks ago, I took part in <a href="http://seedhack.com">Seedhack 5.0</a>, on the theme
 of life-logging. My team were overall winners with Clarity, our calendar
 assistant app. This post captures my experiences of what happened over the
 weekend, the process of how we built the app and the main things I learned.
-You'll find out what Clarity is at the end -- just like we did.</p>
+You’ll find out what Clarity is at the end – just like we did.</p>
 
-<h3>Meeting people and pitches on Friday</h3>
+<h3 id="meeting-people-and-pitches-on-friday">Meeting people and pitches on Friday</h3>
 
 <p>The weekend began with some information on the APIs available to us, which
 was followed by pizza and mingling with everyone. I spoke to a few people
 about what they were working on and the technologies they were used to. It
 was good to find a mixture of experience and I was specifically looking for
-folks with an interest in functional programming -- that's how I first met
-Vlad over Twitter.</p>
+folks with an interest in functional programming – that’s how I first met
+Vlad over Twitter. </p>
 
 <p><a href="https://twitter.com/vla_ve/statuses/485083697172185088"><img src="http://amirchaudhry.com/images/seedhack2014/seedhack2014-1.jpg" alt="Tweets with Vlad" /></a></p>
 
 <p>After pizza, those people with ideas, even if not fully formed, were invited
 to share them with the room. I came in to Seedhack with specific thoughts on
-the kind of things I wanted to work on so I spoke about one of those.</p>
+the kind of things I wanted to work on so I spoke about one of those.  </p>
 
-<h3>Pitching Personal Clouds</h3>
+<h3 id="pitching-personal-clouds">Pitching Personal Clouds</h3>
 
 <p>I described the problem of silos, poor interoperability and how all the
 life-logging data should really be owned by the user. That would allow third
 parties to request access and provide way more value to users, while
 maintaining privacy and security. Building a centralised service makes a lot
-of sense in the first instance but what's more disruptive than eschewing the
+of sense in the first instance but what’s more disruptive than eschewing the
 current model of yet-another-silo and putting the user in control? If that
-sounds familiar, it's because I'm trying to solve these problems already.</p>
+sounds familiar, it’s because I’m trying to solve these problems already.  </p>
 
-<p>I'm working on a open source toolstack for building distributed systems that
+<p>I’m working on a open source toolstack for building distributed systems that
 I call the MISO stack, which is analogous to the LAMP stack of old but
-is based on <a href="http://openmirage.org">Mirage OS</a>.  With this stack, I'm putting together a
+is based on <a href="http://openmirage.org">Mirage OS</a>.  With this stack, I’m putting together a
 system to help people create and run their own little piece of the cloud
--- <a href="http://nymote.org">Nymote</a>. The <a href="http://nymote.org/blog/2013/introducing-nymote/">introductory post</a> and my post on
-'<a href="http://amirchaudhry.com/working-on-the-internet-of-my-things/">The Internet of <em>my</em> Things</a>' has more detail on why I'm working
-on this.</p>
+– <a href="http://nymote.org">Nymote</a>. The <a href="http://nymote.org/blog/2013/introducing-nymote/">introductory post</a> and my post on
+‘<a href="http://amirchaudhry.com/working-on-the-internet-of-my-things/">The Internet of <em>my</em> Things</a>’ has more detail on why I’m working
+on this. </p>
 
 <p>For systems like this to be viable, we must be willing to trust them with
 the core applications of Email, Contacts and Calendar. Without advanced and
-robust options for running these, it's unlikely that anyone (including me)
+robust options for running these, it’s unlikely that anyone (including me)
 would want to switch away from the current providers. Of these three
 applications, I decided to talk about the contact management solution, since
 I happen to have wireframes and thought it might be simpler to implement
-something over the weekend.</p>
+something over the weekend. </p>
 
 <!--
 Some readers may not be convinced but I like to recall a 1977 quote by Ken
@@ -713,7 +698,6 @@ carry computers in our pockets (see footnote), so it's perfectly reasonable
 to me that we'll all have our own clouds one day.
 -->
 
-
 <p>There was quite a bit of interest in the overall concept but what really
 piqued my curiosity was that someone else presented some thoughts around
 Calendars and analytics. After a brief chat, we decided to join forces and
@@ -721,7 +705,7 @@ tackle the problems of Calendar management. The team had a great mix of
 experience from product to design and several of them had worked together
 before.</p>
 
-<h3>The Clarity Team</h3>
+<h3 id="the-clarity-team">The Clarity Team</h3>
 
 <p><a href="http://amirchaudhry.com">Amir</a> - <em>Product</em> - Worked in several startups, product &amp; programme management experience, currently a Post Doc at Cambridge University Computer Science dept.</p>
 
@@ -735,7 +719,7 @@ before.</p>
 
 <p><a href="http://jchui.me">Jeremy</a> - <em>Designer</em> - Freelance UI/UX Designer, hackathon enthusiast, currently studying medicine at Sheffield University.</p>
 
-<h3>Thick fog and ambiguity on Friday evening</h3>
+<h3 id="thick-fog-and-ambiguity-on-friday-evening">Thick fog and ambiguity on Friday evening</h3>
 
 <p>We had all decided to work together and we knew it would be on the problem
 of calendar management and analytics. We were fired up but it quickly became
@@ -743,21 +727,21 @@ obvious that was <em>all</em> we knew.</p>
 
 <p>The next four to five <em>hours</em> were spent discussing the rough shape of what
 we were going to build, what specific problem we thought we were solving and
-whether there were enough people with such a problem to care.</p>
+whether there were enough people with such a problem to care. </p>
 
-<p>We had a look at each other's calendars and talked about how we each use
+<p>We had a look at each other’s calendars and talked about how we each use
 them and the things we like and dislike about them. For example, I have
 around nine calendars and I curate them carefully, adding contextual
 information and sometimes even correcting old events to reflect what
 happened. We even bounced around the idea of the contact management app
 several times as well as a few other ideas that came up during the
-discussions.</p>
+discussions. </p>
 
 <p>These conversations took a while and it seemed like we were going around in
-circles. Despite this, it didn't feel particularly frustrating. I realised
+circles. Despite this, it didn’t feel particularly frustrating. I realised
 that the same sticking point was coming up repeatedly because we were
 forcing ourselves to imagine a prototypical customer and the problems <em>they</em>
-might have. This was never going to work since we wouldn't have time to go
+might have. This was never going to work since we wouldn’t have time to go
 and find such people and do basic customer development. Far better to
 constrain the problem to something <em>we</em> experience so that we can look to
 ourselves for initial customer feedback.  Once we did this, things seemed to
@@ -767,20 +751,21 @@ go a little faster and taking breaks for food helped us keep our energy up.</p>
 
 <p>There were a few occasions where I looked around the room and saw other
 teams with their heads down, headphones in, and bashing away at keyboards
--- we hadn't even figured out what we were doing yet.
+– we hadn’t even figured out what we were doing yet.
 Despite this, it was a great exercise because it allowed all of us to get a
 feel for what aspects each of us cared about most and it helped us form some
-kind of shared language for the product.</p>
+kind of shared language for the product. </p>
 
 <p>The only outcome from this first evening was an outline but it was an
 important one. It distilled what we what we were going to work on and the
-components of it. We did this so we'd have a clear starting point the next
-morning and could get going quickly.  Here's a paraphrased version of what
-we sent ourselves.</p>
+components of it. We did this so we’d have a clear starting point the next
+morning and could get going quickly.  Here’s a paraphrased version of what
+we sent ourselves. </p>
 
-<pre><code class="text">Smart Calendar App.
+<p>```text
+Smart Calendar App.</p>
 
-We are collecting data from mobile and from desktop. 
+<p>We are collecting data from mobile and from desktop. 
 - Mobile includes:
   - Call logs
   - Location (if we can)
@@ -789,23 +774,23 @@ We are collecting data from mobile and from desktop.
 - Desktop includes:
   - What application is active and timestamps of it
   - Location?
-  - Git Logs ... ?
-  - Taking logs of their existing calendars.
+  - Git Logs … ?
+  - Taking logs of their existing calendars.</p>
 
-Working out what people are doing.
-- Extrapolating info from active application (e.g browser page)
+<p>Working out what people are doing.
+- Extrapolating info from active application (e.g browser page)</p>
 
-Present info back via calendar UI
-- Need to turn all this information into webcal events
+<p>Present info back via calendar UI
+- Need to turn all this information into webcal events</p>
 
-Useful info we want
+<p>Useful info we want
 - Time spent travelling (how much?)
 - Time in meetings 
 - Time on phone
 - Who the meetings/calls were with
 - Relevant docs/emails these are linked with
 - Use labels
-</code></pre>
+```</p>
 
 <p>Then it was time for some late night snacks.</p>
 
@@ -815,24 +800,24 @@ Useful info we want
 sleep for a few hours (Campus was closing from 01:30). I had nothing planned
 but luckily for me, a couple of team members had booked a hotel room for the
 night. The minor complication was that we had to first find the hotel and
-then somehow get six people into a room meant for two -- without the night
-manager kicking us out. That's a whole other story, but it suffices to say
+then somehow get six people into a room meant for two – without the night
+manager kicking us out. That’s a whole other story, but it suffices to say
 that James Bond has nothing to worry about.</p>
 
-<h3>Rays of light and clearing haze on Saturday</h3>
+<h3 id="rays-of-light-and-clearing-haze-on-saturday">Rays of light and clearing haze on Saturday</h3>
 
 <p>After some card games and a few hours of sleep, we headed back to Campus and
-during this walk, we came up with 'Clarity' as the name of the application.</p>
+during this walk, we came up with ‘Clarity’ as the name of the application. </p>
 
 <p>Once we arrived, development began. River volunteered his digital
 assets to the cause (i.e. his whole Google life). Mani worked on the Android
 app, Vlad on a Chrome extension with Joao pulling in the Google Apps data as
 well as combining it with data from the various platform apps. Jeremy worked
 on the front-end of the site, while River and I began wireframing the UI and
-user flow through the site.</p>
+user flow through the site. </p>
 
-<p>Once the development was well underway, I realised how superfluous 'the
-business guys' can be. It would have been easy to simply sit there and let
+<p>Once the development was well underway, I realised how superfluous ‘the
+business guys’ can be. It would have been easy to simply sit there and let
 everyone get on with it but there were other things River and I did while
 developers were writing code.</p>
 
@@ -841,7 +826,7 @@ and engage with once they visited the Clarity site. We made a lot of
 sketches on paper and this was helpful because communication with the team
 was smoother with something to guide the discussion. It also helped to
 inform the design work and gave River and I something to show to potential
-users.</p>
+users. </p>
 
 <p><em>Talk to people</em> - aka early customer development. We already knew that we
 were our own customers but it was useful to talk to other people for two
@@ -854,20 +839,20 @@ ourselves against perceived competition.</p>
 <p><em>Refine the product</em> - Going through the wireframing and talking to people
 helped us come up with several new ideas for how to display the data back to
 users. Some of these seemed great at the time, but after showing some paper
-sketches to other people, we realised customers didn't care about certain
+sketches to other people, we realised customers didn’t care about certain
 things, so we discarded them. Even though Jeremy had already done the work of
 putting together the UI for them (sorry, Jeremy!).</p>
 
 <p><em>Examine the competition</em> - After we described what we were working on. A
 few people mentioned potential competitors and asked how we were different.
-Initially, we didn't know much about these companies but it was something we
+Initially, we didn’t know much about these companies but it was something we
 could explore while development was underway and consider our positioning.</p>
 
 <p><em>Remind people to regroup</em> - Every few hours, we would make sure everyone
 caught up with each other.  We would check that things were going well, share
-what we'd learned from talking to people and discuss any technical problems
-and possible workarounds -- including changing the scope of the product. The
-discussions we'd had on Friday meant that we spent less time debating when
+what we’d learned from talking to people and discuss any technical problems
+and possible workarounds – including changing the scope of the product. The
+discussions we’d had on Friday meant that we spent less time debating when
 these questions came up during the weekend.</p>
 
 <p><em>Work on the pitch</em> - River and I began working on the pitch from just after
@@ -879,10 +864,10 @@ Especially in terms of a kick-ass demo.</p>
 
 <p><a href="https://twitter.com/mindeedly/status/485502064437780480"><img src="http://amirchaudhry.com/images/seedhack2014/seedhack2014-4.jpg" alt="Popcorn and candyfloss" /></a></p>
 
-<h3>Bright sunshine and achieving Clarity on Sunday afternoon</h3>
+<h3 id="bright-sunshine-and-achieving-clarity-on-sunday-afternoon">Bright sunshine and achieving Clarity on Sunday afternoon</h3>
 
 <p>Development carried on through the night and we took a break to watch some
-sports via River's laptop -- at this point Clarity was actually logging this
+sports via River’s laptop – at this point Clarity was actually logging this
 and other events.
 The next morning, we reiterated what we needed to
 get done for the demo and I was pretty ruthless about practising the pitch.
@@ -891,35 +876,35 @@ technical pieces were working smoothly. We had a lot of moving parts and
 making sure they were glued together seamlessly was important.
 At this point, we knew what Clarity was and how to tell its story.</p>
 
-<h3>Introducing Clarity</h3>
+<h3 id="introducing-clarity">Introducing Clarity</h3>
 
 <p>We all have calendars and we put a lot of time and effort into managing them
 but get very little back. A simple glance at your calendar for the past
 month will show you a sea of information with no idea where your time was
 actually spent. We believe your calendar should be working harder for you.
-Your calendar should give you clarity.</p>
+Your calendar should give you clarity. </p>
 
 <p><img src="http://amirchaudhry.com/images/seedhack2014/seedhack2014-5.jpg" alt="Calendar" /></p>
 
 <p>Over the course of the weekend, we built tools that can go through your
-calendar and understand the events you're involved in and tie them back to
+calendar and understand the events you’re involved in and tie them back to
 the relevant emails, documents and people.  With a suite of software that
-spans across your GDrive, Chrome and Android, we're able to combine your
+spans across your GDrive, Chrome and Android, we’re able to combine your
 calendars with rich, contextual information so you can really understand
 what your time is being spent on.</p>
 
 <p><a href="http://clarityapp.me"><img src="http://amirchaudhry.com/images/seedhack2014/seedhack2014-6.jpg" alt="Clarity summary view" /></a></p>
 
-<p>We built this system and plugged it into River's digital life.
-If we take a look at River's summary for the last month, we see that he's
+<p>We built this system and plugged it into River’s digital life.
+If we take a look at River’s summary for the last month, we see that he’s
 spent around 32 hours in meetings in London last month, despite living in
-Sheffield. We can also see that he's spent an hour on the phone with someone
+Sheffield. We can also see that he’s spent an hour on the phone with someone
 called Lee, but that all of them were short calls. The next person also
 totalled an hour on the phone but only across 3 calls.  Already, River has
 learned something about the the people he interacts with most and how. We
 can also drill down further and see all this activity presented in a
 calendar view, except this now represents where his time <em>did</em> go, rather
-than where he thought it went. For example, he's most active via text
+than where he thought it went. For example, he’s most active via text
 message between 4pm and 5pm during the week, and we can see that he spent
 a few hours watching sports last night.</p>
 
@@ -930,19 +915,18 @@ For example, say I have a meeting set up with River but I want to reschedule
 it. I simply send a text to him as I normally would, suggesting that we move
 it to another day. Clarity can pick up that message and is smart enough to
 understand its intent, find the relevant calendar event and <em>reschedule
-it automatically</em>. River doesn't have to lift a finger and his diary is
-always up to date. It's easy to imagine a future where we might never have
-to add or edit events ourselves.</p>
+it automatically</em>. River doesn’t have to lift a finger and his diary is
+always up to date. It’s easy to imagine a future where we might never have
+to add or edit events ourselves. </p>
 
 <p>Clarity is a smart calendar assistant that understands the context around
 you, provides you with insight into your life and helps you seamlessly
 organise your future. You can find out more at
 <a href="http://clarityapp.me">http://clarityapp.me</a></p>
 
-<script async class="speakerdeck-embed" data-id="c88770b0ef1801315b3b2e79871312e8" data-ratio="1.41436464088398" src="//speakerdeck.com/assets/embed.js"></script>
+<script async="" class="speakerdeck-embed" data-id="c88770b0ef1801315b3b2e79871312e8" data-ratio="1.41436464088398" src="//speakerdeck.com/assets/embed.js"></script>
 
-
-<h3>Judging and announcements</h3>
+<h3 id="judging-and-announcements">Judging and announcements</h3>
 
 <p>After the pitches, we met a lot of people who had the same problems as we
 did with calendar management. Several offered to be beta testers. After
@@ -976,38 +960,37 @@ overall winner of Seedhack 5.0!</p>
       <li><a data-orbit-link="seedhack2014-win-11"><img src="/images/seedhack2014-win/seedhack2014-win-thumb-11.png" alt="seedhack2014-win-thumb-11" /></a></li>
     
   </ul>
-  <ul data-orbit data-options="next_on_click:true; timer_speed:3000; pause_on_hover:false; bullets:false;">
+  <ul data-orbit="" data-options="next_on_click:true; timer_speed:3000; pause_on_hover:false; bullets:false;">
     
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-1"><img src="/images/seedhack2014-win/seedhack2014-win-1.jpg" alt="seedhack2014-win-1"></li>
+    <li class="gallery-image" data-orbit-slide="seedhack2014-win-1"><img src="/images/seedhack2014-win/seedhack2014-win-1.jpg" alt="seedhack2014-win-1" /></li>
     
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-2"><img src="/images/seedhack2014-win/seedhack2014-win-2.jpg" alt="seedhack2014-win-2"></li>
+    <li class="gallery-image" data-orbit-slide="seedhack2014-win-2"><img src="/images/seedhack2014-win/seedhack2014-win-2.jpg" alt="seedhack2014-win-2" /></li>
     
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-3"><img src="/images/seedhack2014-win/seedhack2014-win-3.jpg" alt="seedhack2014-win-3"></li>
+    <li class="gallery-image" data-orbit-slide="seedhack2014-win-3"><img src="/images/seedhack2014-win/seedhack2014-win-3.jpg" alt="seedhack2014-win-3" /></li>
     
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-4"><img src="/images/seedhack2014-win/seedhack2014-win-4.jpg" alt="seedhack2014-win-4"></li>
+    <li class="gallery-image" data-orbit-slide="seedhack2014-win-4"><img src="/images/seedhack2014-win/seedhack2014-win-4.jpg" alt="seedhack2014-win-4" /></li>
     
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-5"><img src="/images/seedhack2014-win/seedhack2014-win-5.jpg" alt="seedhack2014-win-5"></li>
+    <li class="gallery-image" data-orbit-slide="seedhack2014-win-5"><img src="/images/seedhack2014-win/seedhack2014-win-5.jpg" alt="seedhack2014-win-5" /></li>
     
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-6"><img src="/images/seedhack2014-win/seedhack2014-win-6.jpg" alt="seedhack2014-win-6"></li>
+    <li class="gallery-image" data-orbit-slide="seedhack2014-win-6"><img src="/images/seedhack2014-win/seedhack2014-win-6.jpg" alt="seedhack2014-win-6" /></li>
     
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-7"><img src="/images/seedhack2014-win/seedhack2014-win-7.jpg" alt="seedhack2014-win-7"></li>
+    <li class="gallery-image" data-orbit-slide="seedhack2014-win-7"><img src="/images/seedhack2014-win/seedhack2014-win-7.jpg" alt="seedhack2014-win-7" /></li>
     
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-8"><img src="/images/seedhack2014-win/seedhack2014-win-8.jpg" alt="seedhack2014-win-8"></li>
+    <li class="gallery-image" data-orbit-slide="seedhack2014-win-8"><img src="/images/seedhack2014-win/seedhack2014-win-8.jpg" alt="seedhack2014-win-8" /></li>
     
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-9"><img src="/images/seedhack2014-win/seedhack2014-win-9.jpg" alt="seedhack2014-win-9"></li>
+    <li class="gallery-image" data-orbit-slide="seedhack2014-win-9"><img src="/images/seedhack2014-win/seedhack2014-win-9.jpg" alt="seedhack2014-win-9" /></li>
     
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-10"><img src="/images/seedhack2014-win/seedhack2014-win-10.jpg" alt="seedhack2014-win-10"></li>
+    <li class="gallery-image" data-orbit-slide="seedhack2014-win-10"><img src="/images/seedhack2014-win/seedhack2014-win-10.jpg" alt="seedhack2014-win-10" /></li>
     
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-11"><img src="/images/seedhack2014-win/seedhack2014-win-11.jpg" alt="seedhack2014-win-11"></li>
+    <li class="gallery-image" data-orbit-slide="seedhack2014-win-11"><img src="/images/seedhack2014-win/seedhack2014-win-11.jpg" alt="seedhack2014-win-11" /></li>
     
   </ul>
 </div>
 
-
-<h3>Things I learned</h3>
+<h3 id="things-i-learned">Things I learned</h3>
 
 <p>Looking back, there were a lot of things we did which I think
-helped us get to the winning slot, so I thought I'd summarise them here.</p>
+helped us get to the winning slot, so I thought I’d summarise them here.</p>
 
 <p><strong>Think first</strong> - We spent time up front to <em>define</em> what we were
 going to work on. I thought this step was crucial as it meant we all
@@ -1019,46 +1002,46 @@ things we discussed on Friday.</p>
 matter of building the software to gather and crunch the data. A lot of this
 was done in parallel as Jeremy worked on the front-end UI while Mani, Joao
 and Vlad took care of the data aggregation, analytics and platform products.
-Don't be afraid to throw away ideas if you find that they don't work for
-people and remember it's a <em>hackathon</em> (i.e gruesome hacks are the norm).</p>
+Don’t be afraid to throw away ideas if you find that they don’t work for
+people and remember it’s a <em>hackathon</em> (i.e gruesome hacks are the norm).</p>
 
-<p><strong>Remember the demo</strong> - At some point you're going to be forced to stand up
-and talk about what you've done. We started thinking about this from
+<p><strong>Remember the demo</strong> - At some point you’re going to be forced to stand up
+and talk about what you’ve done. We started thinking about this from
 Saturday lunchtime and sketched out the slides and the elements of the app
 we wanted to show. This helped inform the UI and technology that we were
 building and the pitch never felt like it was rushed.</p>
 
-<p><strong>Practice, practice, practice</strong> - we were told we'd have 3 minutes to
+<p><strong>Practice, practice, practice</strong> - we were told we’d have 3 minutes to
 pitch/demo and maybe a few additional questions. I made sure River and I
 practised <em>repeatedly</em> to get our time down to 3mins and ensure we getting
 across everything we wanted to.  The important thing with such a
 short amount of time, is that we were forced to <em>cut</em> things out as well as
 ensure we emphasised the main points. It was a ruthless exercise in saying
-'no'. During the actual pitches, we realised everyone was taking longer
+‘no’. During the actual pitches, we realised everyone was taking longer
 (without repercussions), so I added an extra 30 seconds to cover the
 potential market sizes and business models.</p>
 
 <p><strong>Leave artefacts</strong> - After the pitches, we knew that we had to take the
 site down. It was built at high speed and in a way that ended up exposing
-someone's data to the internet at large (thanks, River!). It might have
+someone’s data to the internet at large (thanks, River!). It might have
 been somewhat easier to build something using faked data that we could
 happily share the URL to and leave online.  On the other hand, our demo
-would not have been half as compelling if we weren't running it real-time
+would not have been half as compelling if we weren’t running it real-time
 on live data.</p>
 
-<h3>Looking to the future</h3>
+<h3 id="looking-to-the-future">Looking to the future</h3>
 
 <p>This is a product we all want to use and the team is interested in taking
 this forward. There are a lot of things to think about and many
-things we would build differently so we're discussing the next steps. For
+things we would build differently so we’re discussing the next steps. For
 example, there are likely ways to empower the end-users to control their
 data and give them more flexibility, even though the work at the hackathon
 was already quite impressive. Given how well Seedhack went, you might even
 see us at <a href="http://seedcamp.com/events/seedcamp-week-london/">Seedcamp Week</a> later in the year. If you think this is
-something you'd like to work on with us,
-<a href="mailto:amirmc+clarity@gmail.com">do get in touch</a>!</p>
+something you’d like to work on with us,
+<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#097;&#109;&#105;&#114;&#109;&#099;&#043;&#099;&#108;&#097;&#114;&#105;&#116;&#121;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">do get in touch</a>!</p>
 
-<p>To wrap things up, here's a victory selfie!</p>
+<p>To wrap things up, here’s a victory selfie!</p>
 
 <p><a href="https://twitter.com/RiverTam57/status/485821694037458944"><img src="http://amirchaudhry.com/images/seedhack2014/seedhack2014-7.jpg" alt="Victory Selfie" /></a></p>
 
@@ -1076,9 +1059,8 @@ Internet of Things and 'Big Data'. Systems that know us better than we know
 ourselves.</p>
 -->
 
-
         <a href="/winning-seedhack-5-2014/#share-comment">Share / Comment</a>
-        <hr>
+        <hr />
         <br />
         <br />
       </div>
@@ -1088,7 +1070,7 @@ ourselves.</p>
   </div>
   <div class="medium-3 columns">
     <div class="sidebar">
-  <a href="/about/"><img src="/images/amc.png"/></a>
+  <a href="/about/"><img src="/images/amc.png" /></a>
   <ul class="sidebar">
     <li class="sidebar">Lead at <a class="sidebar" href="/about/"> Nymote.org</a></li>
     <li class="sidebar">Wrangler at <a class="sidebar" href="/about/"> OCaml Labs</a></li>
@@ -1098,13 +1080,13 @@ ourselves.</p>
     <li class="sidebar">Cofounder of <a class="sidebar" href="/about/"> Springboard</a></li>
     <li class="sidebar">Advisor to <a class="sidebar" href="/about/">CUEntrepreneurs</a></li>
   </ul>
-  <a rel="me" href="https://twitter.com/amirmc"><img src="/icons/twitter_16.png" alt="amirmc on Twitter"/></a>
-  <a href="http://www.linkedin.com/in/amirchaudhry/"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn"/></a>
-  <a rel="me" href="https://github.com/amirmc"><img src="/icons/github_16.png" alt="amirmc on GitHub"/></a>
-  <a href="http://news.ycombinator.com/threads?id=amirmc"><img src="/icons/yc_16.png" alt="amirmc on Hacker News"/></a>
+  <a rel="me" href="https://twitter.com/amirmc"><img src="/icons/twitter_16.png" alt="amirmc on Twitter" /></a>
+  <a href="http://www.linkedin.com/in/amirchaudhry/"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn" /></a>
+  <a rel="me" href="https://github.com/amirmc"><img src="/icons/github_16.png" alt="amirmc on GitHub" /></a>
+  <a href="http://news.ycombinator.com/threads?id=amirmc"><img src="/icons/yc_16.png" alt="amirmc on Hacker News" /></a>
   <form action="http://www.google.com/search" class="searchbar" method="get">
-    <input type="hidden" name="q" value="site:amirchaudhry.com"/>
-    <input type="text" class="query" placeholder="Search" name="q"/>
+    <input type="hidden" name="q" value="site:amirchaudhry.com" />
+    <input type="text" class="query" placeholder="Search" name="q" />
   </form>
   
     
@@ -1117,149 +1099,149 @@ ourselves.</p>
 
   
      
-        <li><a href="/tags/#misc">misc  <span>(6)</span></a></li>
+    	<li><a href="/tags/#misc">misc  <span>(6)</span></a></li>
      
-        <li><a href="/tags/#learning">learning  <span>(7)</span></a></li>
+    	<li><a href="/tags/#learning">learning  <span>(7)</span></a></li>
      
-        <li><a href="/tags/#fun">fun  <span>(9)</span></a></li>
+    	<li><a href="/tags/#fun">fun  <span>(9)</span></a></li>
      
-        <li><a href="/tags/#skydive">skydive  <span>(3)</span></a></li>
+    	<li><a href="/tags/#skydive">skydive  <span>(3)</span></a></li>
      
-        <li><a href="/tags/#video">video  <span>(7)</span></a></li>
+    	<li><a href="/tags/#video">video  <span>(7)</span></a></li>
      
-        <li><a href="/tags/#cambridge">cambridge  <span>(10)</span></a></li>
+    	<li><a href="/tags/#cambridge">cambridge  <span>(10)</span></a></li>
      
-        <li><a href="/tags/#entrepreneurs">entrepreneurs  <span>(1)</span></a></li>
+    	<li><a href="/tags/#entrepreneurs">entrepreneurs  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#pics">pics  <span>(14)</span></a></li>
+    	<li><a href="/tags/#pics">pics  <span>(14)</span></a></li>
      
-        <li><a href="/tags/#list">list  <span>(1)</span></a></li>
+    	<li><a href="/tags/#list">list  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#software">software  <span>(5)</span></a></li>
+    	<li><a href="/tags/#software">software  <span>(5)</span></a></li>
      
-        <li><a href="/tags/#tech">tech  <span>(5)</span></a></li>
+    	<li><a href="/tags/#tech">tech  <span>(5)</span></a></li>
      
-        <li><a href="/tags/#useful">useful  <span>(1)</span></a></li>
+    	<li><a href="/tags/#useful">useful  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#web">web  <span>(15)</span></a></li>
+    	<li><a href="/tags/#web">web  <span>(15)</span></a></li>
      
-        <li><a href="/tags/#funny">funny  <span>(7)</span></a></li>
+    	<li><a href="/tags/#funny">funny  <span>(7)</span></a></li>
      
-        <li><a href="/tags/#startups">startups  <span>(5)</span></a></li>
+    	<li><a href="/tags/#startups">startups  <span>(5)</span></a></li>
      
-        <li><a href="/tags/#games">games  <span>(1)</span></a></li>
+    	<li><a href="/tags/#games">games  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#trivia">trivia  <span>(1)</span></a></li>
+    	<li><a href="/tags/#trivia">trivia  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#quotes">quotes  <span>(1)</span></a></li>
+    	<li><a href="/tags/#quotes">quotes  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#essay">essay  <span>(10)</span></a></li>
+    	<li><a href="/tags/#essay">essay  <span>(10)</span></a></li>
      
-        <li><a href="/tags/#friends">friends  <span>(2)</span></a></li>
+    	<li><a href="/tags/#friends">friends  <span>(2)</span></a></li>
      
-        <li><a href="/tags/#science">science  <span>(4)</span></a></li>
+    	<li><a href="/tags/#science">science  <span>(4)</span></a></li>
      
-        <li><a href="/tags/#redgate">redgate  <span>(2)</span></a></li>
+    	<li><a href="/tags/#redgate">redgate  <span>(2)</span></a></li>
      
-        <li><a href="/tags/#school">school  <span>(1)</span></a></li>
+    	<li><a href="/tags/#school">school  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#conference">conference  <span>(6)</span></a></li>
+    	<li><a href="/tags/#conference">conference  <span>(6)</span></a></li>
      
-        <li><a href="/tags/#notes">notes  <span>(6)</span></a></li>
+    	<li><a href="/tags/#notes">notes  <span>(6)</span></a></li>
      
-        <li><a href="/tags/#lecture">lecture  <span>(1)</span></a></li>
+    	<li><a href="/tags/#lecture">lecture  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#legal">legal  <span>(3)</span></a></li>
+    	<li><a href="/tags/#legal">legal  <span>(3)</span></a></li>
      
-        <li><a href="/tags/#code">code  <span>(4)</span></a></li>
+    	<li><a href="/tags/#code">code  <span>(4)</span></a></li>
      
-        <li><a href="/tags/#infographic">infographic  <span>(2)</span></a></li>
+    	<li><a href="/tags/#infographic">infographic  <span>(2)</span></a></li>
      
-        <li><a href="/tags/#holiday">holiday  <span>(1)</span></a></li>
+    	<li><a href="/tags/#holiday">holiday  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#new york">new york  <span>(1)</span></a></li>
+    	<li><a href="/tags/#new york">new york  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#sabbatical">sabbatical  <span>(1)</span></a></li>
+    	<li><a href="/tags/#sabbatical">sabbatical  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#san francisco">san francisco  <span>(1)</span></a></li>
+    	<li><a href="/tags/#san francisco">san francisco  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#30days">30days  <span>(2)</span></a></li>
+    	<li><a href="/tags/#30days">30days  <span>(2)</span></a></li>
      
-        <li><a href="/tags/#ocaml">ocaml  <span>(14)</span></a></li>
+    	<li><a href="/tags/#ocaml">ocaml  <span>(14)</span></a></li>
      
-        <li><a href="/tags/#ocaml-labs">ocaml-labs  <span>(9)</span></a></li>
+    	<li><a href="/tags/#ocaml-labs">ocaml-labs  <span>(9)</span></a></li>
      
-        <li><a href="/tags/#ocamllabs">ocamllabs  <span>(10)</span></a></li>
+    	<li><a href="/tags/#ocamllabs">ocamllabs  <span>(10)</span></a></li>
      
-        <li><a href="/tags/#wireframes">wireframes  <span>(1)</span></a></li>
+    	<li><a href="/tags/#wireframes">wireframes  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#apps">apps  <span>(2)</span></a></li>
+    	<li><a href="/tags/#apps">apps  <span>(2)</span></a></li>
      
-        <li><a href="/tags/#aggregation">aggregation  <span>(1)</span></a></li>
+    	<li><a href="/tags/#aggregation">aggregation  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#centralisation">centralisation  <span>(3)</span></a></li>
+    	<li><a href="/tags/#centralisation">centralisation  <span>(3)</span></a></li>
      
-        <li><a href="/tags/#companies">companies  <span>(1)</span></a></li>
+    	<li><a href="/tags/#companies">companies  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#devices">devices  <span>(2)</span></a></li>
+    	<li><a href="/tags/#devices">devices  <span>(2)</span></a></li>
      
-        <li><a href="/tags/#internet of things">internet of things  <span>(4)</span></a></li>
+    	<li><a href="/tags/#internet of things">internet of things  <span>(4)</span></a></li>
      
-        <li><a href="/tags/#nymote">nymote  <span>(6)</span></a></li>
+    	<li><a href="/tags/#nymote">nymote  <span>(6)</span></a></li>
      
-        <li><a href="/tags/#ownership">ownership  <span>(3)</span></a></li>
+    	<li><a href="/tags/#ownership">ownership  <span>(3)</span></a></li>
      
-        <li><a href="/tags/#privacy">privacy  <span>(1)</span></a></li>
+    	<li><a href="/tags/#privacy">privacy  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#rights">rights  <span>(1)</span></a></li>
+    	<li><a href="/tags/#rights">rights  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#quote">quote  <span>(1)</span></a></li>
+    	<li><a href="/tags/#quote">quote  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#design">design  <span>(1)</span></a></li>
+    	<li><a href="/tags/#design">design  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#graphic">graphic  <span>(1)</span></a></li>
+    	<li><a href="/tags/#graphic">graphic  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#health">health  <span>(1)</span></a></li>
+    	<li><a href="/tags/#health">health  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#docs">docs  <span>(2)</span></a></li>
+    	<li><a href="/tags/#docs">docs  <span>(2)</span></a></li>
      
-        <li><a href="/tags/#mirage">mirage  <span>(5)</span></a></li>
+    	<li><a href="/tags/#mirage">mirage  <span>(5)</span></a></li>
      
-        <li><a href="/tags/#website">website  <span>(3)</span></a></li>
+    	<li><a href="/tags/#website">website  <span>(3)</span></a></li>
      
-        <li><a href="/tags/#ocamlatom">ocamlatom  <span>(1)</span></a></li>
+    	<li><a href="/tags/#ocamlatom">ocamlatom  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#planet">planet  <span>(1)</span></a></li>
+    	<li><a href="/tags/#planet">planet  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#project">project  <span>(4)</span></a></li>
+    	<li><a href="/tags/#project">project  <span>(4)</span></a></li>
      
-        <li><a href="/tags/#calendar">calendar  <span>(2)</span></a></li>
+    	<li><a href="/tags/#calendar">calendar  <span>(2)</span></a></li>
      
-        <li><a href="/tags/#cloud">cloud  <span>(2)</span></a></li>
+    	<li><a href="/tags/#cloud">cloud  <span>(2)</span></a></li>
      
-        <li><a href="/tags/#hackathon">hackathon  <span>(1)</span></a></li>
+    	<li><a href="/tags/#hackathon">hackathon  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#seedcamp">seedcamp  <span>(1)</span></a></li>
+    	<li><a href="/tags/#seedcamp">seedcamp  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#miso">miso  <span>(1)</span></a></li>
+    	<li><a href="/tags/#miso">miso  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#slides">slides  <span>(1)</span></a></li>
+    	<li><a href="/tags/#slides">slides  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#talks">talks  <span>(1)</span></a></li>
+    	<li><a href="/tags/#talks">talks  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#opam">opam  <span>(1)</span></a></li>
+    	<li><a href="/tags/#opam">opam  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#platform">platform  <span>(1)</span></a></li>
+    	<li><a href="/tags/#platform">platform  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#unikernel">unikernel  <span>(2)</span></a></li>
+    	<li><a href="/tags/#unikernel">unikernel  <span>(2)</span></a></li>
      
-        <li><a href="/tags/#contacts">contacts  <span>(1)</span></a></li>
+    	<li><a href="/tags/#contacts">contacts  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#irmin">irmin  <span>(1)</span></a></li>
+    	<li><a href="/tags/#irmin">irmin  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#mail">mail  <span>(1)</span></a></li>
+    	<li><a href="/tags/#mail">mail  <span>(1)</span></a></li>
      
-        <li><a href="/tags/#signpost">signpost  <span>(1)</span></a></li>
+    	<li><a href="/tags/#signpost">signpost  <span>(1)</span></a></li>
     
   
 
@@ -1271,12 +1253,7 @@ ourselves.</p>
   </div>
 </div>
 
-
-
-
 <!-- Crazy nesting just to match post alignment -->
-
-
 <div class="row">
   <div class="medium-9 columns">
     <div class="row">
@@ -1286,7 +1263,6 @@ ourselves.</p>
     </div>
   </div>
 </div>
-
 
       
     <footer>

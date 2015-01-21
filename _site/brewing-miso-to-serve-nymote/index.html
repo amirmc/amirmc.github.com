@@ -79,7 +79,8 @@
       <div class="medium-9 columns">
         <h2><a class="post-title" href="/brewing-miso-to-serve-nymote">Brewing MISO to serve Nymote</a></h2>
         <!-- <br /> -->
-        <p>The <a href="http://nymote.org/blog/2013/introducing-nymote/">mission of Nymote</a> is to enable the creation of resilient
+        
+<p>The <a href="http://nymote.org/blog/2013/introducing-nymote/">mission of Nymote</a> is to enable the creation of resilient
 decentralised systems that incorporate privacy from the ground up, so that
 users retain control of their networks and data.  To achieve this, we
 reconsider all the old assumptions about how software is created in light of
@@ -91,36 +92,36 @@ for their own purposes and the first three applications Nymote targets are
 Mail, Contacts and Calendars, but to get there, we first have to create solid
 foundations.</p>
 
-<h3>Defining the bedrock</h3>
+<h3 id="defining-the-bedrock">Defining the bedrock</h3>
 
 <p>In order to create applications that work for the user, we first have to
 create a robust and reliable software stack that takes care of fundamental
 problems for us. In other words, to be able to assemble the applications we
 desire, we must first construct the correct building blocks.</p>
 
-<p>We've taken a clean-slate approach so that we can build long-lasting solutions
+<p>We’ve taken a clean-slate approach so that we can build long-lasting solutions
 with all the benefits of hindsight but none of the baggage. As
 mentioned in earlier posts, there are three main components of the stack,
 which are: <a href="http://nymote.org/software/mirage/">Mirage</a> (OS for the Cloud/IoT), <a href="http://nymote.org/software/irmin/">Irmin</a> (distributed datastore)
 and <a href="http://nymote.org/software/signpost/">Signpost</a> (identity and connectivity) - all built using the <a href="http://ocaml.org">OCaml</a>
 programming language.</p>
 
-<h4>Using the MISO stack to build Nymote</h4>
+<h4 id="using-the-miso-stack-to-build-nymote">Using the MISO stack to build Nymote</h4>
 
-<p>As you've already noticed, there's a useful acronym for the above tools —
+<p>As you’ve already noticed, there’s a useful acronym for the above tools —
 <strong>MISO</strong>. Each of the projects mentioned is a serious undertaking in its own
 right and each is likely to be impactful as a stand-alone concept.  However,
 when used together we have the opportunity to create applications and services
 with high levels of security, scalability and stability, which are not easy to
-achieve using other means.</p>
+achieve using other means. </p>
 
-<p>In other words, MISO is the <em>toolstack</em> that we're using to build Nymote —
+<p>In other words, MISO is the <em>toolstack</em> that we’re using to build Nymote —
 Nymote is the <em>decentralised system</em> that works for its users.</p>
 
 <p>Each of the projects is at a different phase but they have all have made great
 strides over the last year.</p>
 
-<h4>Mirage</h4>
+<h4 id="mirage">Mirage</h4>
 
 <p>Mirage — a library operating system that constructs unikernels — is the most
 mature part of the stack. I previously wrote about the
@@ -133,37 +134,36 @@ layer security (TLS) protocol.</p>
 <p>In addition to the development efforts, there have also been many
 presentations to audiences, ranging from <a href="http://amirchaudhry.com/describing-miso-entrepreneur-first-2014/">small groups of startups</a>
 all the way to <a href="http://media.ccc.de/browse/congress/2014/31c3_-_6443_-_en_-_saal_2_-_201412271245_-_trustworthy_secure_modular_operating_system_engineering_-_hannes_-_david_kaloper.html#video">prestigious keynotes</a> with 1000+ attendees.  Ever
-since we've had ARM support, the talks themselves have been delivered from
+since we’ve had ARM support, the talks themselves have been delivered from
 unikernels running on Cubieboards and you can see the growing collection of
 slides at <a href="http://decks.openmirage.org">decks.openmirage.org</a>.</p>
 
 <p>All of these activities have led to a tremendous increase in public awareness
 of unikernels and the value they can bring to developing robust, modern
 software as well as the promise of <a href="https://medium.com/@darrenrush/after-docker-unikernels-and-immutable-infrastructure-93d5a91c849e">immutable infrastructure</a>.
-As more people look to get involved and contribute to the codebase, we've also
+As more people look to get involved and contribute to the codebase, we’ve also
 begun curating a set of <a href="https://github.com/mirage/mirage-www/wiki/Pioneer-Projects">Pioneer Projects</a>, which are suitable for a
 range of skill-levels.</p>
 
 <p>You can find much more information on all the activities of 2014 in the
-comprehensive <a href="http://openmirage.org/blog/2014-in-review">Mirage review post</a>. As it's the most mature
+comprehensive <a href="http://openmirage.org/blog/2014-in-review">Mirage review post</a>. As it’s the most mature
 component of the MISO stack, anyone interested in the <em>development of code</em>
 towards Nymote should join the <a href="http://lists.xenproject.org/cgi-bin/mailman/listinfo/mirageos-devel">Mirage mailing list</a>.</p>
 
 <ul>
-<li><em>Source code</em> - <a href="https://github.com/mirage">Mirage org on GitHub</a></li>
+  <li><em>Source code</em> - <a href="https://github.com/mirage">Mirage org on GitHub</a></li>
 </ul>
 
-
-<h4>Irmin</h4>
+<h4 id="irmin">Irmin</h4>
 
 <p>Irmin — a library to persist and synchronize distributed data structures —
-made significant progress last year. It's based on the principles of Git, the
+made significant progress last year. It’s based on the principles of Git, the
 distributed version control system, and allows developers to choose the
 appropriate combination of consistency, availability and partition tolerance
 for their needs.</p>
 
 <p>Early last year Irmin was released as an alpha with the ability to speak
-'fluent Git' and by the summer, it was supporting user-defined merge
+‘fluent Git’ and by the summer, it was supporting user-defined merge
 operations and fast in-memory views.  A couple of summer projects improved the
 <a href="http://gazagnaire.org/pub/FGM15.pdf">merge strategies</a> and synchronisation strategies, while an
 external project — Xenstore — used Irmin to <a href="http://openmirage.org/blog/introducing-irmin-in-xenstore">add fault-tolerance</a>.</p>
@@ -172,90 +172,87 @@ external project — Xenstore — used Irmin to <a href="http://openmirage.org/b
 <a href="http://samoht.github.io/irmin/">developer documentation</a>) and a cleaner high-level REST API.
 Upcoming work includes proper documentation of the REST API, which means Irmin
 can more easily be used in non-OCaml projects, and full integration with
-Mirage projects.</p>
+Mirage projects. </p>
 
 <p>Irmin is already being used to create
 <a href="https://opam.ocaml.org/packages/imaplet-lwt/imaplet-lwt.0.1.3/">a version controlled IMAP server</a> and
-<a href="https://github.com/samoht/dog">a version controlled distributed log system</a>. It's no surprise
+<a href="https://github.com/samoht/dog">a version controlled distributed log system</a>. It’s no surprise
 that the first major release is coming <a href="https://github.com/mirage/irmin/issues?q=is%3Aopen+is%3Aissue+milestone%3A1.0.0">very soon</a>!</p>
 
 <ul>
-<li><em>Source code</em> - <a href="https://github.com/mirage/irmin">Irmin on GitHub</a></li>
+  <li><em>Source code</em> - <a href="https://github.com/mirage/irmin">Irmin on GitHub</a></li>
 </ul>
 
-
-<h4>Signpost</h4>
+<h4 id="signpost">Signpost</h4>
 
 <p>Signpost will be a collection of libraries that aims to provide identity and
 connectivity between devices.  Forming efficient connections between
 end-points is becoming ever more important as the number of devices we own
 increases. These devices need to be able to recognise and reach each-other,
-regardless of their location on the network or the obstacles in between.</p>
+regardless of their location on the network or the obstacles in between. </p>
 
 <p>This is very much a nascent project and it involves a lot of work on
 underlying libraries to ensure that security aspects are properly considered.
 As such, we must take great care in how we implement things and be clear about
 any trade-offs we make. Our thoughts are beginning to converge on a design we
-think will work and that we would entrust with our own data, but we're
-treating this as a case of 'Here Be Dragons'.  This is a critical piece of the
-stack and we'll share what we learn as we chart our way towards it.</p>
+think will work and that we would entrust with our own data, but we’re
+treating this as a case of ‘Here Be Dragons’.  This is a critical piece of the
+stack and we’ll share what we learn as we chart our way towards it.</p>
 
-<p>Even though we're at the design stage of Signpost, we did substantial work
+<p>Even though we’re at the design stage of Signpost, we did substantial work
 last year to create the libraries we might use for implementation.  A
 particularly exciting one is <a href="https://github.com/MagnusS/jitsu">Jitsu</a> — which stands for Just In Time
 Summoning of Unikernels. This is a DNS server that spawns unikernels in
 response to DNS requests and boots them in real-time with no perceptible lag
 to the end user.  In other words, it makes much more efficient use of
 resources and significantly reduces latency of services for end-users —
-services are only run <em>when</em> they need to be, in the <em>places</em> they need to be.</p>
+services are only run <em>when</em> they need to be, in the <em>places</em> they need to be. </p>
 
-<p>There's also been lots of efforts on other libraries that will help us
+<p>There’s also been lots of efforts on other libraries that will help us
 <em>iterate towards</em> a complete solution. Initially, we will use pre-existing
-implementations but in time we can take what we've learned and create more
+implementations but in time we can take what we’ve learned and create more
 robust alternatives. Some of the libraries are listed below (but note the
-friendly disclaimers!).</p>
+friendly disclaimers!). </p>
 
 <ul>
-<li><em>Source code</em>
-
-<ul>
-<li><a href="https://github.com/dsheets/ocaml-sodium">Bindings to libsodium</a></li>
-<li><a href="https://github.com/dsheets/ocaml-dnscurve">Implementation of DNSCurve</a></li>
-<li><a href="https://github.com/dsheets/ocaml-libmacaroons">Bindings to libmacaroons</a></li>
+  <li><em>Source code</em>
+    <ul>
+      <li><a href="https://github.com/dsheets/ocaml-sodium">Bindings to libsodium</a></li>
+      <li><a href="https://github.com/dsheets/ocaml-dnscurve">Implementation of DNSCurve</a></li>
+      <li><a href="https://github.com/dsheets/ocaml-libmacaroons">Bindings to libmacaroons</a></li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
 
+<h4 id="ocaml">OCaml</h4>
 
-<h4>OCaml</h4>
-
-<p><a href="http://ocaml.org">OCaml</a> is a mature, powerful and highly pragmatic language.  It's
+<p><a href="http://ocaml.org">OCaml</a> is a mature, powerful and highly pragmatic language.  It’s
 proven ideal for creating robust systems applications and
-<a href="http://ocaml.org/learn/companies.html">many others</a> also recognise this.  We're using it to create all the
-tools you've read about so far and we're also helping to improve the ecosystem
+<a href="http://ocaml.org/learn/companies.html">many others</a> also recognise this.  We’re using it to create all the
+tools you’ve read about so far and we’re also helping to improve the ecosystem
 around it.</p>
 
-<p>One of the major things we've been involved with is the coordination of the
+<p>One of the major things we’ve been involved with is the coordination of the
 OCaml Platform, which combines the OCaml compiler with a coherent set of tools
 and workflows to be more productive in the language and speed up development
 time.  We presented the first major release of these efforts at OCaml 2014 and
 you can <a href="http://ocaml.org/meetings/ocaml/2014/ocaml2014_7.pdf">read the abstract</a> or <a href="https://www.youtube.com/watch?v=jxhtpQ5nJHg&amp;list=UUP9g4dLR7xt6KzCYntNqYcw">watch the video</a>.</p>
 
-<p>There's more to come, as we continue to improve the tooling and also support
+<p>There’s more to come, as we continue to improve the tooling and also support
 the community in <a href="http://amirchaudhry.com/towards-governance-framework-for-ocamlorg">other ways</a>.</p>
 
-<h3>Early steps towards applications</h3>
+<h3 id="early-steps-towards-applications">Early steps towards applications</h3>
 
 <p>Building blocks are important but we also need to push towards working
-applications.  There are different approaches we've taken to this, which
+applications.  There are different approaches we’ve taken to this, which
 include building prototypes, wireframing use-cases and implementing features
 with other toolstacks.  Some of this work is also part of a larger
-<a href="http://usercentricnetworking.eu">EU funded project</a>* and below are brief summaries of the things we've
-done so far. We'll expand on them as we do more over time.</p>
+<a href="http://usercentricnetworking.eu">EU funded project</a>* and below are brief summaries of the things we’ve
+done so far. We’ll expand on them as we do more over time.</p>
 
 <p><strong>Mail</strong> - As mentioned above, a prototype IMAP server exists (<a href="https://opam.ocaml.org/packages/imaplet-lwt/imaplet-lwt.0.1.3/">IMAPlet</a>)
 which uses Irmin to store data. This is already able to connect to a client to
-serve mail. The important feature is that it's an IMAP server which is version
+serve mail. The important feature is that it’s an IMAP server which is version
 controlled in the backend and can expose a REST API from the mailstore quite
 easily.</p>
 
@@ -276,13 +273,13 @@ the point of being very invasive) can provide disproportionate benefits.  The
 won first place. This was <em>great</em> validation that the features are desirable
 so we need to work towards a decentralised, privacy-conscious version.</p>
 
-<h3>Time to get involved!</h3>
+<h3 id="time-to-get-involved">Time to get involved!</h3>
 
 <p>The coming year represents the best time to be working on the MISO stack and
 using it to make Nymote a reality.  All source code is publicly available and
 the projects are varied enough that there is something for everyone.  Browse
 through issues, consider the <a href="https://github.com/mirage/mirage-www/wiki/Pioneer-Projects">projects</a> or simply write online and
-share with us the things you'd like to see.
+share with us the things you’d like to see.
 This promises to be an exciting year!</p>
 
 <p class="footnote">* The research leading to these results has received
@@ -290,12 +287,7 @@ funding from the European Union's Seventh Framework Programme FP7/2007-2013
 under the UCN project, grant agreement no 611001.
 </p>
 
-
-
-
 <!-- ========================================================= -->
-
-
 
 
         <hr id='share-comment'>
