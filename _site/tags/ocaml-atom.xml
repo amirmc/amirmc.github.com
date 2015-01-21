@@ -4,17 +4,403 @@
   <link href="http://amirchaudhry.com/tags/ocaml-atom.xml" rel="self"/>
   <link href="http://amirchaudhry.com"/>
   <subtitle>thoughts, comments &amp; general ramblings</subtitle>
-  <updated>2015-01-08T19:30:00+01:00</updated>
+  <updated>2015-01-21T14:42:41+00:00</updated>
   <id>http://amirchaudhry.com/tags/#ocaml</id>
   <author>
     <name>Amir Chaudhry</name>
   </author>
   
     <entry>
+  <title>Brewing MISO to serve Nymote</title>
+  <link href="http://amirchaudhry.com/brewing-miso-to-serve-nymote"/>
+  <author>Amir Chaudhry</author>
+  <updated>2015-01-20T14:00:00+00:00</updated>
+  <id>http://amirchaudhry.com/brewing-miso-to-serve-nymote</id>
+  <content type="html">&lt;p&gt;The &lt;a href=&quot;http://nymote.org/blog/2013/introducing-nymote/&quot;&gt;mission of Nymote&lt;/a&gt; is to enable the creation of resilient
+decentralised systems that incorporate privacy from the ground up, so that
+users retain control of their networks and data.  To achieve this, we
+reconsider all the old assumptions about how software is created in light of
+the problems of the modern, networked environment.  Problems that will become
+even more pronounced as more devices and sensors find their way into our lives.&lt;/p&gt;
+
+&lt;p&gt;We want to make it simple for anyone to be able to run a piece of the cloud
+for their own purposes and the first three applications Nymote targets are
+Mail, Contacts and Calendars, but to get there, we first have to create solid
+foundations.&lt;/p&gt;
+
+&lt;h3&gt;Defining the bedrock&lt;/h3&gt;
+
+&lt;p&gt;In order to create applications that work for the user, we first have to
+create a robust and reliable software stack that takes care of fundamental
+problems for us. In other words, to be able to assemble the applications we
+desire, we must first construct the correct building blocks.&lt;/p&gt;
+
+&lt;p&gt;We've taken a clean-slate approach so that we can build long-lasting solutions
+with all the benefits of hindsight but none of the baggage. As
+mentioned in earlier posts, there are three main components of the stack,
+which are: &lt;a href=&quot;http://nymote.org/software/mirage/&quot;&gt;Mirage&lt;/a&gt; (OS for the Cloud/IoT), &lt;a href=&quot;http://nymote.org/software/irmin/&quot;&gt;Irmin&lt;/a&gt; (distributed datastore)
+and &lt;a href=&quot;http://nymote.org/software/signpost/&quot;&gt;Signpost&lt;/a&gt; (identity and connectivity) - all built using the &lt;a href=&quot;http://ocaml.org&quot;&gt;OCaml&lt;/a&gt;
+programming language.&lt;/p&gt;
+
+&lt;h4&gt;Using the MISO stack to build Nymote&lt;/h4&gt;
+
+&lt;p&gt;As you've already noticed, there's a useful acronym for the above tools —
+&lt;strong&gt;MISO&lt;/strong&gt;. Each of the projects mentioned is a serious undertaking in its own
+right and each is likely to be impactful as a stand-alone concept.  However,
+when used together we have the opportunity to create applications and services
+with high levels of security, scalability and stability, which are not easy to
+achieve using other means.&lt;/p&gt;
+
+&lt;p&gt;In other words, MISO is the &lt;em&gt;toolstack&lt;/em&gt; that we're using to build Nymote —
+Nymote is the &lt;em&gt;decentralised system&lt;/em&gt; that works for its users.&lt;/p&gt;
+
+&lt;p&gt;Each of the projects is at a different phase but they have all have made great
+strides over the last year.&lt;/p&gt;
+
+&lt;h4&gt;Mirage&lt;/h4&gt;
+
+&lt;p&gt;Mirage — a library operating system that constructs unikernels — is the most
+mature part of the stack. I previously wrote about the
+&lt;a href=&quot;http://nymote.org/blog/2014/announcing-first-mirage-release/&quot;&gt;Mirage 1.0 release&lt;/a&gt; and only six months later we had an
+&lt;a href=&quot;http://openmirage.org/blog/announcing-mirage-20-release&quot;&gt;impressive 2.0 release&lt;/a&gt;, with continuing advances throughout the year.
+We achieved major milestones such as the ability to deploy unikernels to
+ARM-based devices, as well as a clean-slate implementation of the transport
+layer security (TLS) protocol.&lt;/p&gt;
+
+&lt;p&gt;In addition to the development efforts, there have also been many
+presentations to audiences, ranging from &lt;a href=&quot;http://amirchaudhry.com/describing-miso-entrepreneur-first-2014/&quot;&gt;small groups of startups&lt;/a&gt;
+all the way to &lt;a href=&quot;http://media.ccc.de/browse/congress/2014/31c3_-_6443_-_en_-_saal_2_-_201412271245_-_trustworthy_secure_modular_operating_system_engineering_-_hannes_-_david_kaloper.html#video&quot;&gt;prestigious keynotes&lt;/a&gt; with 1000+ attendees.  Ever
+since we've had ARM support, the talks themselves have been delivered from
+unikernels running on Cubieboards and you can see the growing collection of
+slides at &lt;a href=&quot;http://decks.openmirage.org&quot;&gt;decks.openmirage.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;All of these activities have led to a tremendous increase in public awareness
+of unikernels and the value they can bring to developing robust, modern
+software as well as the promise of &lt;a href=&quot;https://medium.com/@darrenrush/after-docker-unikernels-and-immutable-infrastructure-93d5a91c849e&quot;&gt;immutable infrastructure&lt;/a&gt;.
+As more people look to get involved and contribute to the codebase, we've also
+begun curating a set of &lt;a href=&quot;https://github.com/mirage/mirage-www/wiki/Pioneer-Projects&quot;&gt;Pioneer Projects&lt;/a&gt;, which are suitable for a
+range of skill-levels.&lt;/p&gt;
+
+&lt;p&gt;You can find much more information on all the activities of 2014 in the
+comprehensive &lt;a href=&quot;http://openmirage.org/blog/2014-in-review&quot;&gt;Mirage review post&lt;/a&gt;. As it's the most mature
+component of the MISO stack, anyone interested in the &lt;em&gt;development of code&lt;/em&gt;
+towards Nymote should join the &lt;a href=&quot;http://lists.xenproject.org/cgi-bin/mailman/listinfo/mirageos-devel&quot;&gt;Mirage mailing list&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Source code&lt;/em&gt; - &lt;a href=&quot;https://github.com/mirage&quot;&gt;Mirage org on GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;Irmin&lt;/h4&gt;
+
+&lt;p&gt;Irmin — a library to persist and synchronize distributed data structures —
+made significant progress last year. It's based on the principles of Git, the
+distributed version control system, and allows developers to choose the
+appropriate combination of consistency, availability and partition tolerance
+for their needs.&lt;/p&gt;
+
+&lt;p&gt;Early last year Irmin was released as an alpha with the ability to speak
+'fluent Git' and by the summer, it was supporting user-defined merge
+operations and fast in-memory views.  A couple of summer projects improved the
+&lt;a href=&quot;http://gazagnaire.org/pub/FGM15.pdf&quot;&gt;merge strategies&lt;/a&gt; and synchronisation strategies, while an
+external project — Xenstore — used Irmin to &lt;a href=&quot;http://openmirage.org/blog/introducing-irmin-in-xenstore&quot;&gt;add fault-tolerance&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;More recent work has involved a big clean-up in the user-facing API (with nice
+&lt;a href=&quot;http://samoht.github.io/irmin/&quot;&gt;developer documentation&lt;/a&gt;) and a cleaner high-level REST API.
+Upcoming work includes proper documentation of the REST API, which means Irmin
+can more easily be used in non-OCaml projects, and full integration with
+Mirage projects.&lt;/p&gt;
+
+&lt;p&gt;Irmin is already being used to create
+&lt;a href=&quot;https://opam.ocaml.org/packages/imaplet-lwt/imaplet-lwt.0.1.3/&quot;&gt;a version controlled IMAP server&lt;/a&gt; and
+&lt;a href=&quot;https://github.com/samoht/dog&quot;&gt;a version controlled distributed log system&lt;/a&gt;. It's no surprise
+that the first major release is coming &lt;a href=&quot;https://github.com/mirage/irmin/issues?q=is%3Aopen+is%3Aissue+milestone%3A1.0.0&quot;&gt;very soon&lt;/a&gt;!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Source code&lt;/em&gt; - &lt;a href=&quot;https://github.com/mirage/irmin&quot;&gt;Irmin on GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;Signpost&lt;/h4&gt;
+
+&lt;p&gt;Signpost will be a collection of libraries that aims to provide identity and
+connectivity between devices.  Forming efficient connections between
+end-points is becoming ever more important as the number of devices we own
+increases. These devices need to be able to recognise and reach each-other,
+regardless of their location on the network or the obstacles in between.&lt;/p&gt;
+
+&lt;p&gt;This is very much a nascent project and it involves a lot of work on
+underlying libraries to ensure that security aspects are properly considered.
+As such, we must take great care in how we implement things and be clear about
+any trade-offs we make. Our thoughts are beginning to converge on a design we
+think will work and that we would entrust with our own data, but we're
+treating this as a case of 'Here Be Dragons'.  This is a critical piece of the
+stack and we'll share what we learn as we chart our way towards it.&lt;/p&gt;
+
+&lt;p&gt;Even though we're at the design stage of Signpost, we did substantial work
+last year to create the libraries we might use for implementation.  A
+particularly exciting one is &lt;a href=&quot;https://github.com/MagnusS/jitsu&quot;&gt;Jitsu&lt;/a&gt; — which stands for Just In Time
+Summoning of Unikernels. This is a DNS server that spawns unikernels in
+response to DNS requests and boots them in real-time with no perceptible lag
+to the end user.  In other words, it makes much more efficient use of
+resources and significantly reduces latency of services for end-users —
+services are only run &lt;em&gt;when&lt;/em&gt; they need to be, in the &lt;em&gt;places&lt;/em&gt; they need to be.&lt;/p&gt;
+
+&lt;p&gt;There's also been lots of efforts on other libraries that will help us
+&lt;em&gt;iterate towards&lt;/em&gt; a complete solution. Initially, we will use pre-existing
+implementations but in time we can take what we've learned and create more
+robust alternatives. Some of the libraries are listed below (but note the
+friendly disclaimers!).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Source code&lt;/em&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dsheets/ocaml-sodium&quot;&gt;Bindings to libsodium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dsheets/ocaml-dnscurve&quot;&gt;Implementation of DNSCurve&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dsheets/ocaml-libmacaroons&quot;&gt;Bindings to libmacaroons&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;OCaml&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ocaml.org&quot;&gt;OCaml&lt;/a&gt; is a mature, powerful and highly pragmatic language.  It's
+proven ideal for creating robust systems applications and
+&lt;a href=&quot;http://ocaml.org/learn/companies.html&quot;&gt;many others&lt;/a&gt; also recognise this.  We're using it to create all the
+tools you've read about so far and we're also helping to improve the ecosystem
+around it.&lt;/p&gt;
+
+&lt;p&gt;One of the major things we've been involved with is the coordination of the
+OCaml Platform, which combines the OCaml compiler with a coherent set of tools
+and workflows to be more productive in the language and speed up development
+time.  We presented the first major release of these efforts at OCaml 2014 and
+you can &lt;a href=&quot;http://ocaml.org/meetings/ocaml/2014/ocaml2014_7.pdf&quot;&gt;read the abstract&lt;/a&gt; or &lt;a href=&quot;https://www.youtube.com/watch?v=jxhtpQ5nJHg&amp;amp;list=UUP9g4dLR7xt6KzCYntNqYcw&quot;&gt;watch the video&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There's more to come, as we continue to improve the tooling and also support
+the community in &lt;a href=&quot;http://amirchaudhry.com/towards-governance-framework-for-ocamlorg&quot;&gt;other ways&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Early steps towards applications&lt;/h3&gt;
+
+&lt;p&gt;Building blocks are important but we also need to push towards working
+applications.  There are different approaches we've taken to this, which
+include building prototypes, wireframing use-cases and implementing features
+with other toolstacks.  Some of this work is also part of a larger
+&lt;a href=&quot;http://usercentricnetworking.eu&quot;&gt;EU funded project&lt;/a&gt;* and below are brief summaries of the things we've
+done so far. We'll expand on them as we do more over time.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mail&lt;/strong&gt; - As mentioned above, a prototype IMAP server exists (&lt;a href=&quot;https://opam.ocaml.org/packages/imaplet-lwt/imaplet-lwt.0.1.3/&quot;&gt;IMAPlet&lt;/a&gt;)
+which uses Irmin to store data. This is already able to connect to a client to
+serve mail. The important feature is that it's an IMAP server which is version
+controlled in the backend and can expose a REST API from the mailstore quite
+easily.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Contacts&lt;/strong&gt; - We first made wireframe mockups of the features we might like
+in a contacts app (to follow in later post) and then built a
+&lt;a href=&quot;https://github.com/yansh/contacts-app&quot;&gt;draft implementation&lt;/a&gt;. To get here, code was first written in OCaml
+and then put through the &lt;a href=&quot;http://ocsigen.org/js_of_ocaml/&quot;&gt;js_of_ocaml&lt;/a&gt; compiler. This is valuable as it
+takes us closer to a point where we can build networks using our address books
+and have the system take care of sharing details in a privacy-conscious manner
+and with minimal maintenance. The &lt;a href=&quot;http://yansnotes.blogspot.co.uk/2015/01/work-summary-ocaml-labs.html&quot;&gt;summary post&lt;/a&gt; has more detail.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Calendar&lt;/strong&gt; - This use-case was approached in a completely different way as
+part of a hackathon last year. A rough but functional prototype was built over
+one weekend, with a team formed at the event.  It was centralised but it
+tested the idea that a service which integrates intimately with your life (to
+the point of being very invasive) can provide disproportionate benefits.  The
+&lt;a href=&quot;http://seedcamp.com/seedhack-5-0/&quot;&gt;experience report&lt;/a&gt; describes the weekend and our app — Clarity —
+won first place. This was &lt;em&gt;great&lt;/em&gt; validation that the features are desirable
+so we need to work towards a decentralised, privacy-conscious version.&lt;/p&gt;
+
+&lt;h3&gt;Time to get involved!&lt;/h3&gt;
+
+&lt;p&gt;The coming year represents the best time to be working on the MISO stack and
+using it to make Nymote a reality.  All source code is publicly available and
+the projects are varied enough that there is something for everyone.  Browse
+through issues, consider the &lt;a href=&quot;https://github.com/mirage/mirage-www/wiki/Pioneer-Projects&quot;&gt;projects&lt;/a&gt; or simply write online and
+share with us the things you'd like to see.
+This promises to be an exciting year!&lt;/p&gt;
+
+&lt;p class=&quot;footnote&quot;&gt;* The research leading to these results has received
+funding from the European Union's Seventh Framework Programme FP7/2007-2013
+under the UCN project, grant agreement no 611001.
+&lt;/p&gt;
+
+
+
+
+&lt;!-- ========================================================= --&gt;
+
+
+
+</content>
+</entry>
+
+  
+    <entry>
+  <title>Unikernels for everyone!</title>
+  <link href="http://amirchaudhry.com/unikernels-for-everyone"/>
+  <author>Amir Chaudhry</author>
+  <updated>2015-01-19T13:00:00+00:00</updated>
+  <id>http://amirchaudhry.com/unikernels-for-everyone</id>
+  <content type="html">&lt;p&gt;Many people have now set up unikernels for blogs, documenting their
+experiences for others to follow.  Even more important is that people are
+going beyond static sites to build unikernels that provide more complicated
+services and solve real-world problems.&lt;/p&gt;
+
+&lt;p&gt;To help newcomers get started, there are now even more posts that that use
+different tools and target different deployment methods.  Below are summaries
+of some of the posts I found interesting and that will make it easier for you
+try out different ways of creating and deploying your unikernels.&lt;/p&gt;
+
+&lt;h3&gt;Unikernel blogs with MirageOS&lt;/h3&gt;
+
+&lt;p&gt;Mindy picked up where the &lt;a href=&quot;http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines/&quot;&gt;first set of instructions&lt;/a&gt;
+finished and described her work to get an Octopress blog running on Amazon EC2.
+As one of the first people outside the core team to work on this, she had a
+lot of interesting experiences — which included getting into the Mirage
+networking stack to debug an issue and submit a bugfix!  More recently, she
+also wrote a couple of excellent posts on &lt;em&gt;why&lt;/em&gt; she uses a unikernel for her
+blog.  These posts cover the security concerns (and responsibility) of running
+networked services on today's Internet and the importance of owning your
+content — both ideas are at the heart of the work behind &lt;a href=&quot;http://nymote.org/&quot;&gt;Nymote&lt;/a&gt; and are
+well worth reading.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Mindy's posts&lt;/em&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Overview&lt;/em&gt; - &lt;a href=&quot;http://www.somerandomidiot.com/blog/2014/08/18/i-am-unikernel/&quot;&gt;&quot;I Am Unikernel (and So Can You!)&quot;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;First in her Mirage series&lt;/em&gt; - &lt;a href=&quot;http://www.somerandomidiot.com/blog/2014/03/14/its-a-mirage/&quot;&gt;&quot;It's a Mirage! (or, How to Shave a Yak.)&quot;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.somerandomidiot.com/blog/2014/08/11/attack-surface-area/&quot;&gt;&quot;Attack Surface: Why I Unikernel, Part 1&quot;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.somerandomidiot.com/blog/2014/08/14/my-content-is-mine/&quot;&gt;&quot;My Content Is Mine: Why I Unikernel, Part 2&quot;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Ian took a different path to AWS deployment by using Vagrant and Test Kitchen
+to to get his static site together and build his unikernel, and then Packer to
+create the images for deployment to EC2.  All succinctly explained with code
+available on GitHub for others to try out!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Ian on&lt;/em&gt; &lt;a href=&quot;https://github.com/iw/mirage-jekyll&quot;&gt;&quot;Mirage with Jekyll on Amazon EC2&quot;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Toby wanted to put together a blog that was a little more complicated than a
+traditional static site, with specific features like subdomains based on tags
+and the ability to set future dates for posts. He also pulled in some other
+libraries so he can use Mustache for sever-side rendering, where his blog
+posts and metadata are stored as JSON and rendered on request.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Toby on&lt;/em&gt; &lt;a href=&quot;http://ocaml.is-awesome.net/2014/11/building-a-blog-with-mirage-os&quot;&gt;&quot;Building a Blog with MirageOS&quot;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Chris saw others working to get unikernel blogs on EC2 and decide he'd try
+getting his up and running on Linode instead.  He is the first person to
+deploy his unikernel to Linode and he provided a great walkthough with helpful
+screenshots, as well as brief notes about the handful of differences compared
+with EC2.  Chris also wrote about the issue he had with clean urls (i.e
+serving &lt;code&gt;/about/index.html&lt;/code&gt; when a user visits &lt;code&gt;/about/&lt;/code&gt;) — he describes the
+things he tried out until he was finally able to fix it.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Chris' posts&lt;/em&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Setting up a unikernel&lt;/em&gt; - &lt;a href=&quot;http://christopherbothwell.com/ocaml/mirage/2014/12/03/about-not-found.html&quot;&gt;&quot;About Not Found&quot;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Deploying to Linode&lt;/em&gt; - &lt;a href=&quot;http://christopherbothwell.com/ocaml/mirage/linode/2014/12/08/hello-linode.html&quot;&gt;&quot;Hello Linode&quot;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Phil focused on getting unikernels running on a cubieboards, which are ARM
+based development boards — similar to the Raspberry Pi. He starts by taking
+Mirage's pre-built &lt;a href=&quot;http://blobs.openmirage.org&quot;&gt;Cubieboard images&lt;/a&gt; — which makes it easy to
+get Xen and an OCaml environment set up on the board — and getting this
+installed on the Cubieboard.  He also noted the issues he came across along
+with the simple tweaks he made to fix them and finally serves a Mirage hello
+world page.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Phil on&lt;/em&gt; &lt;a href=&quot;http://philtomson.github.io/blog/2014/09/10/some-notes-on-building-and-running-mirage-unikernels-on-cubieboard2/&quot;&gt;&quot;Some Notes on Building and Running Mirage Unikernels on Cubieboard2&quot;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;More than just static sites&lt;/h3&gt;
+
+&lt;p&gt;Static sites have become the new 'hello world' app. They're simple to manage,
+low-risk and provide lots of opportunities to experience something new.  These
+aspects make them ideal for discovering the benefits (and trade offs) of the
+unikernel approach and I look forward to seeing what variations people come up
+with — For instance, there aren't any public instructions for deploying to
+Rackspace so it would be great to read about someone's experiences there.
+However, there are also many other applications that also fit the above
+criteria of simplicity, low risk and plentiful learning opportunities.&lt;/p&gt;
+
+&lt;p&gt;Thomas Leonard decided to create a unikernel for a simple REST service for
+queuing package uploads for 0install.  His post takes you from the very
+beginning, with a simple hello world program running on Xen, all the way
+through to creating his REST service. Along the way there a lots of code
+snippets and explanations of the libraries being used and what they're doing.
+This is a great use-case for unikernels and there are a lot of interesting
+things to take from this post, for example the ease with which Thomas was able
+to find and fix bugs using regular tools. There's also lots of information on
+performance testing and optimising of the unikernel, which he covers in a
+follow-up post, and he even built tools to visualise the traces.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Thomas' posts&lt;/em&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Hello world and REST service&lt;/em&gt; - &lt;a href=&quot;http://roscidus.com/blog/blog/2014/07/28/my-first-unikernel/&quot;&gt;&quot;My First Unikernel&quot;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Profiling and optimisations&lt;/em&gt; - &lt;a href=&quot;http://roscidus.com/blog/blog/2014/08/15/optimising-the-unikernel/&quot;&gt;&quot;Optimising the Unikernel&quot;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Tool to visualise traces&lt;/em&gt; - &lt;a href=&quot;http://roscidus.com/blog/blog/2014/10/27/visualising-an-asynchronous-monad&quot;&gt;&quot;Visualising an Asynchronous Monad&quot;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Of course, there's much more activity out there than described in this post as
+people continually propose ideas on the &lt;a href=&quot;http://lists.xenproject.org/cgi-bin/mailman/listinfo/mirageos-devel&quot;&gt;Mirage mailing list&lt;/a&gt; — both
+for things they would like to try out and issues they came up against. In my
+&lt;a href=&quot;http://nymote.org/blog/2014/from-jekyll-site-to-unikernel/&quot;&gt;last post&lt;/a&gt;, I pointed out that the workflow is applicable to any
+type of unikernel and as Thomas showed, with bit of effort it's already
+possible to create useful, real-world services using the many libraries that
+already exist. There's also a lot of scaffolding in the &lt;a href=&quot;https://github.com/mirage/mirage-skeleton&quot;&gt;mirage-skeleton&lt;/a&gt;
+repo that you can build on which makes it even easier to get involved.  If you
+want to dive deeper into the libraries and perhaps learn OCaml, there are lots
+of &lt;a href=&quot;http://ocaml.org/learn/books.html&quot;&gt;resources online&lt;/a&gt; and &lt;a href=&quot;https://github.com/mirage/mirage-www/wiki/Pioneer-Projects&quot;&gt;projects&lt;/a&gt; to get involved with too.&lt;/p&gt;
+
+&lt;p&gt;Now is a great time to try building a unikernel for yourself and as you can
+see from the posts above, shared experiences help other people progress
+further and branch out into new areas. When you've had a chance to try
+something out please do share your experiences online!&lt;/p&gt;
+
+&lt;p class=&quot;footnote&quot;&gt;This post also appears on the &lt;a href=&quot;http://nymote.org/blog/2015/unikernels-for-everyone/&quot;&gt;Nymote blog&lt;/a&gt;.&lt;/p&gt;
+
+
+
+
+&lt;!-- ===== LINKS ===== --&gt;
+
+
+
+</content>
+</entry>
+
+  
+    <entry>
   <title>Towards a governance framework for OCaml.org</title>
   <link href="http://amirchaudhry.com/towards-governance-framework-for-ocamlorg"/>
   <author>Amir Chaudhry</author>
-  <updated>2015-01-08T19:15:00+01:00</updated>
+  <updated>2015-01-08T18:15:00+00:00</updated>
   <id>http://amirchaudhry.com/towards-governance-framework-for-ocamlorg</id>
   <content type="html">&lt;p&gt;The projects around the OCaml.org domain name are becoming more established
 and it's time to think about how they're organised. 2014 saw a &lt;em&gt;lot&lt;/em&gt; of
@@ -117,7 +503,7 @@ be sharing it more widely and posting it here!&lt;/p&gt;
   <title>Writing Planet in pure OCaml</title>
   <link href="http://amirchaudhry.com/writing-planet-in-pure-ocaml"/>
   <author>Amir Chaudhry</author>
-  <updated>2014-04-29T11:30:00+02:00</updated>
+  <updated>2014-04-29T10:30:00+01:00</updated>
   <id>http://amirchaudhry.com/writing-planet-in-pure-ocaml</id>
   <content type="html">&lt;p&gt;I've been learning OCaml for some time now but not really had a problem that
 I wanted to solve. As such, my progress has been rather slow and sporadic
@@ -296,7 +682,7 @@ and providing feedback on my approach.&lt;/p&gt;
   <title>From Jekyll site to Unikernel in fifty lines of code.</title>
   <link href="http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines"/>
   <author>Amir Chaudhry</author>
-  <updated>2014-03-10T19:30:00+01:00</updated>
+  <updated>2014-03-10T18:30:00+00:00</updated>
   <id>http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines</id>
   <content type="html">&lt;p&gt;&lt;a href=&quot;http://openmirage.org&quot;&gt;Mirage&lt;/a&gt; has reached a point where it's possible to easily set up
 end-to-end toolchains to build &lt;a href=&quot;http://queue.acm.org/detail.cfm?id=2566628&quot;&gt;unikernels&lt;/a&gt;! &lt;!--\[If you're not sure what that is, read the post [What is a unikernel?][amc-unikernel]\]--&gt;
@@ -743,7 +1129,7 @@ commenting on an earlier draft of this post.&lt;/p&gt;
   <title>Switching from Bootstrap to Zurb Foundation</title>
   <link href="http://amirchaudhry.com/switching-from-bootstrap-to-zurb-foundation"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-11-26T22:05:00+01:00</updated>
+  <updated>2013-11-26T21:05:00+00:00</updated>
   <id>http://amirchaudhry.com/switching-from-bootstrap-to-zurb-foundation</id>
   <content type="html">&lt;p&gt;I've just updated my site's HTML/CSS and moved from Twitter Bootstrap to
 &lt;a href=&quot;http://foundation.zurb.com/learn/features.html&quot;&gt;Zurb Foundation&lt;/a&gt;.  This post captures my subjective notes on the
@@ -906,7 +1292,7 @@ customised sites -- it's more flexible but needs more upfront thought.&lt;/li&gt
   <title>Announcing the new OCaml.org</title>
   <link href="http://amirchaudhry.com/announcing-new-ocamlorg"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-11-21T00:00:00+01:00</updated>
+  <updated>2013-11-20T23:00:00+00:00</updated>
   <id>http://amirchaudhry.com/announcing-new-ocamlorg</id>
   <content type="html">&lt;p&gt;As some of you may have noticed, the new OCaml.org site is now live!&lt;/p&gt;
 
@@ -945,7 +1331,7 @@ customised sites -- it's more flexible but needs more upfront thought.&lt;/li&gt
   <title>Migration plan for the OCaml.org redesign</title>
   <link href="http://amirchaudhry.com/migration-plan-ocaml-org"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-11-06T12:00:00+01:00</updated>
+  <updated>2013-11-06T11:00:00+00:00</updated>
   <id>http://amirchaudhry.com/migration-plan-ocaml-org</id>
   <content type="html">&lt;p&gt;We're close to releasing the new design of ocaml.org but need help from the
 OCaml community to identify and fix bugs before we switch next week.&lt;/p&gt;
@@ -1001,7 +1387,7 @@ the OCaml community and merged.&lt;/p&gt;
   <title>Review of the OCaml FPDays tutorial</title>
   <link href="http://amirchaudhry.com/fpdays-review"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-10-28T13:30:00+01:00</updated>
+  <updated>2013-10-28T12:30:00+00:00</updated>
   <id>http://amirchaudhry.com/fpdays-review</id>
   <content type="html">&lt;p&gt;&lt;a href=&quot;http://fpdays.net/2013/sessions/index.php?session=24&quot;&gt;&lt;img style=&quot;float: right; margin-top: 10px; margin-left: 10px&quot; src=&quot;/images/web/fpdays-logo.png&quot;&gt;&lt;/a&gt;
 Last Thursday a bunch of us from the OCaml Labs team gave an OCaml tutorial
@@ -1151,7 +1537,7 @@ the FPDays crew for a great conference!&lt;/p&gt;
   <title>FP Days OCaml Session</title>
   <link href="http://amirchaudhry.com/fpdays-ocaml-session"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-10-22T23:00:00+02:00</updated>
+  <updated>2013-10-22T22:00:00+01:00</updated>
   <id>http://amirchaudhry.com/fpdays-ocaml-session</id>
   <content type="html">&lt;p&gt;On Thursday, along with &lt;a href=&quot;https://github.com/yallop&quot;&gt;Jeremy&lt;/a&gt; and
 &lt;a href=&quot;http://www.lpw25.net&quot;&gt;Leo&lt;/a&gt;, I'll be running an OCaml Hands-on Session at
@@ -1202,7 +1588,7 @@ installing in advance are &lt;code&gt;core&lt;/code&gt; and &lt;code&gt;js_of_oc
   <title>Feedback requested on the OCaml.org redesign</title>
   <link href="http://amirchaudhry.com/ocamlorg-request-for-feedback"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-09-24T16:00:00+02:00</updated>
+  <updated>2013-09-24T15:00:00+01:00</updated>
   <id>http://amirchaudhry.com/ocamlorg-request-for-feedback</id>
   <content type="html">&lt;p&gt;There is a work-in-progress site at
 &lt;a href=&quot;http://ocaml-redesign.github.io&quot;&gt;ocaml-redesign.github.io&lt;/a&gt;, where we've
@@ -1238,7 +1624,7 @@ add your comments to those threads first.&lt;/p&gt;&lt;/li&gt;
   <title>Wireframe demos for OCaml.org</title>
   <link href="http://amirchaudhry.com/wireframe-demos-for-ocamlorg"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-03-14T00:00:00+01:00</updated>
+  <updated>2013-03-14T00:00:00+00:00</updated>
   <id>http://amirchaudhry.com/wireframe-demos-for-ocamlorg</id>
   <content type="html">&lt;h3&gt;Making mockups&lt;/h3&gt;
 
@@ -1289,7 +1675,7 @@ add your comments to those threads first.&lt;/p&gt;&lt;/li&gt;
   <title>OCaml - Installation and hello world</title>
   <link href="http://amirchaudhry.com/ocaml-installation-and-hello-world"/>
   <author>Amir Chaudhry</author>
-  <updated>2012-10-04T00:00:00+02:00</updated>
+  <updated>2012-10-04T00:00:00+01:00</updated>
   <id>http://amirchaudhry.com/ocaml-installation-and-hello-world</id>
   <content type="html">
 
@@ -1379,7 +1765,7 @@ $&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   <title>Thirty Days of OCaml</title>
   <link href="http://amirchaudhry.com/thirty-days-of-ocaml"/>
   <author>Amir Chaudhry</author>
-  <updated>2012-10-01T00:00:00+02:00</updated>
+  <updated>2012-10-01T00:00:00+01:00</updated>
   <id>http://amirchaudhry.com/thirty-days-of-ocaml</id>
   <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/jeremyandchanel/6131620285/&quot;&gt;&lt;img src=&quot;/images/ocaml-30days/camel-bactrian-silhouette.jpg&quot; alt=&quot;Bactrian Camel Silhouette&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 

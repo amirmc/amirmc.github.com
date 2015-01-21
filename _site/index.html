@@ -59,9 +59,9 @@
 <li><a  href="http://amirchaudhry.com/journal">journal</a></li>
                                      
 <li><a  href="http://amirchaudhry.com/freebusy">free/busy</a></li>
-                       
+                           
 <li><a  href="http://amirchaudhry.com/about">about</a></li>
-                      
+                  
             </ul>
           </div> <!-- End Nav -->
         </div> <!-- End inset row -->
@@ -73,6 +73,400 @@
 <div class="row">
   <div class="medium-9 columns">
 
+    
+    <div class="row">
+      <div class="medium-3 columns">
+        <h5 class="post-date" align="right">20 January 2015</h5>
+      </div>
+      <div class="medium-9 columns">
+        <h2><a class="post-title" href="/brewing-miso-to-serve-nymote">Brewing MISO to serve Nymote</a></h2>
+        <p>The <a href="http://nymote.org/blog/2013/introducing-nymote/">mission of Nymote</a> is to enable the creation of resilient
+decentralised systems that incorporate privacy from the ground up, so that
+users retain control of their networks and data.  To achieve this, we
+reconsider all the old assumptions about how software is created in light of
+the problems of the modern, networked environment.  Problems that will become
+even more pronounced as more devices and sensors find their way into our lives.</p>
+
+<p>We want to make it simple for anyone to be able to run a piece of the cloud
+for their own purposes and the first three applications Nymote targets are
+Mail, Contacts and Calendars, but to get there, we first have to create solid
+foundations.</p>
+
+<h3>Defining the bedrock</h3>
+
+<p>In order to create applications that work for the user, we first have to
+create a robust and reliable software stack that takes care of fundamental
+problems for us. In other words, to be able to assemble the applications we
+desire, we must first construct the correct building blocks.</p>
+
+<p>We've taken a clean-slate approach so that we can build long-lasting solutions
+with all the benefits of hindsight but none of the baggage. As
+mentioned in earlier posts, there are three main components of the stack,
+which are: <a href="http://nymote.org/software/mirage/">Mirage</a> (OS for the Cloud/IoT), <a href="http://nymote.org/software/irmin/">Irmin</a> (distributed datastore)
+and <a href="http://nymote.org/software/signpost/">Signpost</a> (identity and connectivity) - all built using the <a href="http://ocaml.org">OCaml</a>
+programming language.</p>
+
+<h4>Using the MISO stack to build Nymote</h4>
+
+<p>As you've already noticed, there's a useful acronym for the above tools —
+<strong>MISO</strong>. Each of the projects mentioned is a serious undertaking in its own
+right and each is likely to be impactful as a stand-alone concept.  However,
+when used together we have the opportunity to create applications and services
+with high levels of security, scalability and stability, which are not easy to
+achieve using other means.</p>
+
+<p>In other words, MISO is the <em>toolstack</em> that we're using to build Nymote —
+Nymote is the <em>decentralised system</em> that works for its users.</p>
+
+<p>Each of the projects is at a different phase but they have all have made great
+strides over the last year.</p>
+
+<h4>Mirage</h4>
+
+<p>Mirage — a library operating system that constructs unikernels — is the most
+mature part of the stack. I previously wrote about the
+<a href="http://nymote.org/blog/2014/announcing-first-mirage-release/">Mirage 1.0 release</a> and only six months later we had an
+<a href="http://openmirage.org/blog/announcing-mirage-20-release">impressive 2.0 release</a>, with continuing advances throughout the year.
+We achieved major milestones such as the ability to deploy unikernels to
+ARM-based devices, as well as a clean-slate implementation of the transport
+layer security (TLS) protocol.</p>
+
+<p>In addition to the development efforts, there have also been many
+presentations to audiences, ranging from <a href="http://amirchaudhry.com/describing-miso-entrepreneur-first-2014/">small groups of startups</a>
+all the way to <a href="http://media.ccc.de/browse/congress/2014/31c3_-_6443_-_en_-_saal_2_-_201412271245_-_trustworthy_secure_modular_operating_system_engineering_-_hannes_-_david_kaloper.html#video">prestigious keynotes</a> with 1000+ attendees.  Ever
+since we've had ARM support, the talks themselves have been delivered from
+unikernels running on Cubieboards and you can see the growing collection of
+slides at <a href="http://decks.openmirage.org">decks.openmirage.org</a>.</p>
+
+<p>All of these activities have led to a tremendous increase in public awareness
+of unikernels and the value they can bring to developing robust, modern
+software as well as the promise of <a href="https://medium.com/@darrenrush/after-docker-unikernels-and-immutable-infrastructure-93d5a91c849e">immutable infrastructure</a>.
+As more people look to get involved and contribute to the codebase, we've also
+begun curating a set of <a href="https://github.com/mirage/mirage-www/wiki/Pioneer-Projects">Pioneer Projects</a>, which are suitable for a
+range of skill-levels.</p>
+
+<p>You can find much more information on all the activities of 2014 in the
+comprehensive <a href="http://openmirage.org/blog/2014-in-review">Mirage review post</a>. As it's the most mature
+component of the MISO stack, anyone interested in the <em>development of code</em>
+towards Nymote should join the <a href="http://lists.xenproject.org/cgi-bin/mailman/listinfo/mirageos-devel">Mirage mailing list</a>.</p>
+
+<ul>
+<li><em>Source code</em> - <a href="https://github.com/mirage">Mirage org on GitHub</a></li>
+</ul>
+
+
+<h4>Irmin</h4>
+
+<p>Irmin — a library to persist and synchronize distributed data structures —
+made significant progress last year. It's based on the principles of Git, the
+distributed version control system, and allows developers to choose the
+appropriate combination of consistency, availability and partition tolerance
+for their needs.</p>
+
+<p>Early last year Irmin was released as an alpha with the ability to speak
+'fluent Git' and by the summer, it was supporting user-defined merge
+operations and fast in-memory views.  A couple of summer projects improved the
+<a href="http://gazagnaire.org/pub/FGM15.pdf">merge strategies</a> and synchronisation strategies, while an
+external project — Xenstore — used Irmin to <a href="http://openmirage.org/blog/introducing-irmin-in-xenstore">add fault-tolerance</a>.</p>
+
+<p>More recent work has involved a big clean-up in the user-facing API (with nice
+<a href="http://samoht.github.io/irmin/">developer documentation</a>) and a cleaner high-level REST API.
+Upcoming work includes proper documentation of the REST API, which means Irmin
+can more easily be used in non-OCaml projects, and full integration with
+Mirage projects.</p>
+
+<p>Irmin is already being used to create
+<a href="https://opam.ocaml.org/packages/imaplet-lwt/imaplet-lwt.0.1.3/">a version controlled IMAP server</a> and
+<a href="https://github.com/samoht/dog">a version controlled distributed log system</a>. It's no surprise
+that the first major release is coming <a href="https://github.com/mirage/irmin/issues?q=is%3Aopen+is%3Aissue+milestone%3A1.0.0">very soon</a>!</p>
+
+<ul>
+<li><em>Source code</em> - <a href="https://github.com/mirage/irmin">Irmin on GitHub</a></li>
+</ul>
+
+
+<h4>Signpost</h4>
+
+<p>Signpost will be a collection of libraries that aims to provide identity and
+connectivity between devices.  Forming efficient connections between
+end-points is becoming ever more important as the number of devices we own
+increases. These devices need to be able to recognise and reach each-other,
+regardless of their location on the network or the obstacles in between.</p>
+
+<p>This is very much a nascent project and it involves a lot of work on
+underlying libraries to ensure that security aspects are properly considered.
+As such, we must take great care in how we implement things and be clear about
+any trade-offs we make. Our thoughts are beginning to converge on a design we
+think will work and that we would entrust with our own data, but we're
+treating this as a case of 'Here Be Dragons'.  This is a critical piece of the
+stack and we'll share what we learn as we chart our way towards it.</p>
+
+<p>Even though we're at the design stage of Signpost, we did substantial work
+last year to create the libraries we might use for implementation.  A
+particularly exciting one is <a href="https://github.com/MagnusS/jitsu">Jitsu</a> — which stands for Just In Time
+Summoning of Unikernels. This is a DNS server that spawns unikernels in
+response to DNS requests and boots them in real-time with no perceptible lag
+to the end user.  In other words, it makes much more efficient use of
+resources and significantly reduces latency of services for end-users —
+services are only run <em>when</em> they need to be, in the <em>places</em> they need to be.</p>
+
+<p>There's also been lots of efforts on other libraries that will help us
+<em>iterate towards</em> a complete solution. Initially, we will use pre-existing
+implementations but in time we can take what we've learned and create more
+robust alternatives. Some of the libraries are listed below (but note the
+friendly disclaimers!).</p>
+
+<ul>
+<li><em>Source code</em>
+
+<ul>
+<li><a href="https://github.com/dsheets/ocaml-sodium">Bindings to libsodium</a></li>
+<li><a href="https://github.com/dsheets/ocaml-dnscurve">Implementation of DNSCurve</a></li>
+<li><a href="https://github.com/dsheets/ocaml-libmacaroons">Bindings to libmacaroons</a></li>
+</ul>
+</li>
+</ul>
+
+
+<h4>OCaml</h4>
+
+<p><a href="http://ocaml.org">OCaml</a> is a mature, powerful and highly pragmatic language.  It's
+proven ideal for creating robust systems applications and
+<a href="http://ocaml.org/learn/companies.html">many others</a> also recognise this.  We're using it to create all the
+tools you've read about so far and we're also helping to improve the ecosystem
+around it.</p>
+
+<p>One of the major things we've been involved with is the coordination of the
+OCaml Platform, which combines the OCaml compiler with a coherent set of tools
+and workflows to be more productive in the language and speed up development
+time.  We presented the first major release of these efforts at OCaml 2014 and
+you can <a href="http://ocaml.org/meetings/ocaml/2014/ocaml2014_7.pdf">read the abstract</a> or <a href="https://www.youtube.com/watch?v=jxhtpQ5nJHg&amp;list=UUP9g4dLR7xt6KzCYntNqYcw">watch the video</a>.</p>
+
+<p>There's more to come, as we continue to improve the tooling and also support
+the community in <a href="http://amirchaudhry.com/towards-governance-framework-for-ocamlorg">other ways</a>.</p>
+
+<h3>Early steps towards applications</h3>
+
+<p>Building blocks are important but we also need to push towards working
+applications.  There are different approaches we've taken to this, which
+include building prototypes, wireframing use-cases and implementing features
+with other toolstacks.  Some of this work is also part of a larger
+<a href="http://usercentricnetworking.eu">EU funded project</a>* and below are brief summaries of the things we've
+done so far. We'll expand on them as we do more over time.</p>
+
+<p><strong>Mail</strong> - As mentioned above, a prototype IMAP server exists (<a href="https://opam.ocaml.org/packages/imaplet-lwt/imaplet-lwt.0.1.3/">IMAPlet</a>)
+which uses Irmin to store data. This is already able to connect to a client to
+serve mail. The important feature is that it's an IMAP server which is version
+controlled in the backend and can expose a REST API from the mailstore quite
+easily.</p>
+
+<p><strong>Contacts</strong> - We first made wireframe mockups of the features we might like
+in a contacts app (to follow in later post) and then built a
+<a href="https://github.com/yansh/contacts-app">draft implementation</a>. To get here, code was first written in OCaml
+and then put through the <a href="http://ocsigen.org/js_of_ocaml/">js_of_ocaml</a> compiler. This is valuable as it
+takes us closer to a point where we can build networks using our address books
+and have the system take care of sharing details in a privacy-conscious manner
+and with minimal maintenance. The <a href="http://yansnotes.blogspot.co.uk/2015/01/work-summary-ocaml-labs.html">summary post</a> has more detail.</p>
+
+<p><strong>Calendar</strong> - This use-case was approached in a completely different way as
+part of a hackathon last year. A rough but functional prototype was built over
+one weekend, with a team formed at the event.  It was centralised but it
+tested the idea that a service which integrates intimately with your life (to
+the point of being very invasive) can provide disproportionate benefits.  The
+<a href="http://seedcamp.com/seedhack-5-0/">experience report</a> describes the weekend and our app — Clarity —
+won first place. This was <em>great</em> validation that the features are desirable
+so we need to work towards a decentralised, privacy-conscious version.</p>
+
+<h3>Time to get involved!</h3>
+
+<p>The coming year represents the best time to be working on the MISO stack and
+using it to make Nymote a reality.  All source code is publicly available and
+the projects are varied enough that there is something for everyone.  Browse
+through issues, consider the <a href="https://github.com/mirage/mirage-www/wiki/Pioneer-Projects">projects</a> or simply write online and
+share with us the things you'd like to see.
+This promises to be an exciting year!</p>
+
+<p class="footnote">* The research leading to these results has received
+funding from the European Union's Seventh Framework Programme FP7/2007-2013
+under the UCN project, grant agreement no 611001.
+</p>
+
+
+
+
+<!-- ========================================================= -->
+
+
+
+
+        <a href="/brewing-miso-to-serve-nymote/#share-comment">Share / Comment</a>
+        <hr>
+        <br />
+        <br />
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="medium-3 columns">
+        <h5 class="post-date" align="right">19 January 2015</h5>
+      </div>
+      <div class="medium-9 columns">
+        <h2><a class="post-title" href="/unikernels-for-everyone">Unikernels for everyone!</a></h2>
+        <p>Many people have now set up unikernels for blogs, documenting their
+experiences for others to follow.  Even more important is that people are
+going beyond static sites to build unikernels that provide more complicated
+services and solve real-world problems.</p>
+
+<p>To help newcomers get started, there are now even more posts that that use
+different tools and target different deployment methods.  Below are summaries
+of some of the posts I found interesting and that will make it easier for you
+try out different ways of creating and deploying your unikernels.</p>
+
+<h3>Unikernel blogs with MirageOS</h3>
+
+<p>Mindy picked up where the <a href="http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines/">first set of instructions</a>
+finished and described her work to get an Octopress blog running on Amazon EC2.
+As one of the first people outside the core team to work on this, she had a
+lot of interesting experiences — which included getting into the Mirage
+networking stack to debug an issue and submit a bugfix!  More recently, she
+also wrote a couple of excellent posts on <em>why</em> she uses a unikernel for her
+blog.  These posts cover the security concerns (and responsibility) of running
+networked services on today's Internet and the importance of owning your
+content — both ideas are at the heart of the work behind <a href="http://nymote.org/">Nymote</a> and are
+well worth reading.</p>
+
+<ul>
+<li><em>Mindy's posts</em>
+
+<ul>
+<li><em>Overview</em> - <a href="http://www.somerandomidiot.com/blog/2014/08/18/i-am-unikernel/">"I Am Unikernel (and So Can You!)"</a></li>
+<li><em>First in her Mirage series</em> - <a href="http://www.somerandomidiot.com/blog/2014/03/14/its-a-mirage/">"It's a Mirage! (or, How to Shave a Yak.)"</a></li>
+<li><a href="http://www.somerandomidiot.com/blog/2014/08/11/attack-surface-area/">"Attack Surface: Why I Unikernel, Part 1"</a></li>
+<li><a href="http://www.somerandomidiot.com/blog/2014/08/14/my-content-is-mine/">"My Content Is Mine: Why I Unikernel, Part 2"</a></li>
+</ul>
+</li>
+</ul>
+
+
+<p>Ian took a different path to AWS deployment by using Vagrant and Test Kitchen
+to to get his static site together and build his unikernel, and then Packer to
+create the images for deployment to EC2.  All succinctly explained with code
+available on GitHub for others to try out!</p>
+
+<ul>
+<li><em>Ian on</em> <a href="https://github.com/iw/mirage-jekyll">"Mirage with Jekyll on Amazon EC2"</a></li>
+</ul>
+
+
+<p>Toby wanted to put together a blog that was a little more complicated than a
+traditional static site, with specific features like subdomains based on tags
+and the ability to set future dates for posts. He also pulled in some other
+libraries so he can use Mustache for sever-side rendering, where his blog
+posts and metadata are stored as JSON and rendered on request.</p>
+
+<ul>
+<li><em>Toby on</em> <a href="http://ocaml.is-awesome.net/2014/11/building-a-blog-with-mirage-os">"Building a Blog with MirageOS"</a></li>
+</ul>
+
+
+<p>Chris saw others working to get unikernel blogs on EC2 and decide he'd try
+getting his up and running on Linode instead.  He is the first person to
+deploy his unikernel to Linode and he provided a great walkthough with helpful
+screenshots, as well as brief notes about the handful of differences compared
+with EC2.  Chris also wrote about the issue he had with clean urls (i.e
+serving <code>/about/index.html</code> when a user visits <code>/about/</code>) — he describes the
+things he tried out until he was finally able to fix it.</p>
+
+<ul>
+<li><em>Chris' posts</em>
+
+<ul>
+<li><em>Setting up a unikernel</em> - <a href="http://christopherbothwell.com/ocaml/mirage/2014/12/03/about-not-found.html">"About Not Found"</a></li>
+<li><em>Deploying to Linode</em> - <a href="http://christopherbothwell.com/ocaml/mirage/linode/2014/12/08/hello-linode.html">"Hello Linode"</a></li>
+</ul>
+</li>
+</ul>
+
+
+<p>Phil focused on getting unikernels running on a cubieboards, which are ARM
+based development boards — similar to the Raspberry Pi. He starts by taking
+Mirage's pre-built <a href="http://blobs.openmirage.org">Cubieboard images</a> — which makes it easy to
+get Xen and an OCaml environment set up on the board — and getting this
+installed on the Cubieboard.  He also noted the issues he came across along
+with the simple tweaks he made to fix them and finally serves a Mirage hello
+world page.</p>
+
+<ul>
+<li><em>Phil on</em> <a href="http://philtomson.github.io/blog/2014/09/10/some-notes-on-building-and-running-mirage-unikernels-on-cubieboard2/">"Some Notes on Building and Running Mirage Unikernels on Cubieboard2"</a></li>
+</ul>
+
+
+<h3>More than just static sites</h3>
+
+<p>Static sites have become the new 'hello world' app. They're simple to manage,
+low-risk and provide lots of opportunities to experience something new.  These
+aspects make them ideal for discovering the benefits (and trade offs) of the
+unikernel approach and I look forward to seeing what variations people come up
+with — For instance, there aren't any public instructions for deploying to
+Rackspace so it would be great to read about someone's experiences there.
+However, there are also many other applications that also fit the above
+criteria of simplicity, low risk and plentiful learning opportunities.</p>
+
+<p>Thomas Leonard decided to create a unikernel for a simple REST service for
+queuing package uploads for 0install.  His post takes you from the very
+beginning, with a simple hello world program running on Xen, all the way
+through to creating his REST service. Along the way there a lots of code
+snippets and explanations of the libraries being used and what they're doing.
+This is a great use-case for unikernels and there are a lot of interesting
+things to take from this post, for example the ease with which Thomas was able
+to find and fix bugs using regular tools. There's also lots of information on
+performance testing and optimising of the unikernel, which he covers in a
+follow-up post, and he even built tools to visualise the traces.</p>
+
+<ul>
+<li><em>Thomas' posts</em>
+
+<ul>
+<li><em>Hello world and REST service</em> - <a href="http://roscidus.com/blog/blog/2014/07/28/my-first-unikernel/">"My First Unikernel"</a></li>
+<li><em>Profiling and optimisations</em> - <a href="http://roscidus.com/blog/blog/2014/08/15/optimising-the-unikernel/">"Optimising the Unikernel"</a></li>
+<li><em>Tool to visualise traces</em> - <a href="http://roscidus.com/blog/blog/2014/10/27/visualising-an-asynchronous-monad">"Visualising an Asynchronous Monad"</a></li>
+</ul>
+</li>
+</ul>
+
+
+<p>Of course, there's much more activity out there than described in this post as
+people continually propose ideas on the <a href="http://lists.xenproject.org/cgi-bin/mailman/listinfo/mirageos-devel">Mirage mailing list</a> — both
+for things they would like to try out and issues they came up against. In my
+<a href="http://nymote.org/blog/2014/from-jekyll-site-to-unikernel/">last post</a>, I pointed out that the workflow is applicable to any
+type of unikernel and as Thomas showed, with bit of effort it's already
+possible to create useful, real-world services using the many libraries that
+already exist. There's also a lot of scaffolding in the <a href="https://github.com/mirage/mirage-skeleton">mirage-skeleton</a>
+repo that you can build on which makes it even easier to get involved.  If you
+want to dive deeper into the libraries and perhaps learn OCaml, there are lots
+of <a href="http://ocaml.org/learn/books.html">resources online</a> and <a href="https://github.com/mirage/mirage-www/wiki/Pioneer-Projects">projects</a> to get involved with too.</p>
+
+<p>Now is a great time to try building a unikernel for yourself and as you can
+see from the posts above, shared experiences help other people progress
+further and branch out into new areas. When you've had a chance to try
+something out please do share your experiences online!</p>
+
+<p class="footnote">This post also appears on the <a href="http://nymote.org/blog/2015/unikernels-for-everyone/">Nymote blog</a>.</p>
+
+
+
+
+<!-- ===== LINKS ===== -->
+
+
+
+
+        <a href="/unikernels-for-everyone/#share-comment">Share / Comment</a>
+        <hr>
+        <br />
+        <br />
+      </div>
+    </div>
     
     <div class="row">
       <div class="medium-3 columns">
@@ -690,507 +1084,6 @@ ourselves.</p>
       </div>
     </div>
     
-    <div class="row">
-      <div class="medium-3 columns">
-        <h5 class="post-date" align="right">29 April 2014</h5>
-      </div>
-      <div class="medium-9 columns">
-        <h2><a class="post-title" href="/writing-planet-in-pure-ocaml">Writing Planet in pure OCaml</a></h2>
-        <p>I've been learning OCaml for some time now but not really had a problem that
-I wanted to solve. As such, my progress has been rather slow and sporadic
-and I only make time for exercises when I'm travelling. In order to focus my
-learning, I have to identify and tackle something specific. That's usually
-the best way to advance and I recently found something I can work on.</p>
-
-<p>As I've been trying to write more blog posts, I want to be able to keep as
-much content on my own site as possible and syndicate my posts out to other
-sites I run. Put simply, I want to be able to take multiple feeds from
-different sources and merge them into one feed, which will be served from
-some other site. In addition, I also want to render that feed as HTML on a
-webpage. All of this has to remain within the OCaml toolchain so it can be
-used as part of <a href="http://openmirage.org/">Mirage</a> (i.e. I can use it when
-<a href="http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines">building unikernels</a>).</p>
-
-<p>What I'm describing might sound familiar and there's a well-known tool that
-does this called <a href="http://en.wikipedia.org/wiki/Planet_(software)">Planet</a>. It's a 'river of news' feed reader, which
-aggregates feeds and can display posts on webpages and you can find the
-<a href="http://www.planetplanet.org">original Planet</a> and it's successor <a href="http://intertwingly.net/code/venus/docs/index.html">Venus</a>, both written in Python.
-However, Venus seems to be unmaintained as there are a number of
-<a href="https://github.com/rubys/venus/issues">unresolved issues and pull requests</a>, which have been
-languishing for quite some time with no discussion. There does appear to be
-a more active Ruby implementation called <a href="http://feedreader.github.io/">Pluto</a>, with recent commits and
-no reported issues.</p>
-
-<!-- 
-    \[Rant: Frankly, the naming of these versions leaves a lot to be desired.
-    When you know exactly what you're supposed to Google for you're fine, but
-    until then you're just on a random-walk through space websites. I'm
-    lucky I managed to get to the Wikipedia page.\] 
--->
-
-
-<h3>Benefits of a Planet in pure OCaml</h3>
-
-<p>Although I could use the one of the above options, it would be much more
-useful to keep everything within the OCaml ecosystem.  This way I can make
-the best use of the <a href="https://queue.acm.org/detail.cfm?id=2566628">unikernel approach</a> with Mirage (i.e lean,
-single-purpose appliances). Obviously, the existing options don't lend
-themselves to this approach and there are <a href="https://forge.ocamlcore.org/tracker/index.php?func=detail&amp;aid=1349&amp;group_id=1&amp;atid=101">known bugs</a> as a lot has
-changed on the web since Planet Venus (e.g the adoption of HTML5).
-Having said that, I can learn a lot from the existing implementations and
-I'm glad I'm not embarking into completely uncharted territory.</p>
-
-<p>In addition, the OCaml version doesn't need to (and <em>shouldn't</em>) be written
-as one monolithic library.  Instead, pulling together a collection of
-smaller, reusable libraries that present clear interfaces to each other
-would make things much more maintainable. This would bring substantially
-greater benefits to everyone and <a href="https://opam.ocaml.org/">OPAM</a> can manage the dependencies.</p>
-
-<!--
-    OPAM makes managing dependencies easy so having a number of single-
-    purpose libraries is A Good Thing and costs almost nothing.  This 
-    approach has already worked well with examples like an [IP address 
-    library][ipaddr] and the [OCaml markdown library][OMD], which can be 
-    used by multiple projects.
--->
-
-
-<h3>Breaking down the problem</h3>
-
-<p>The first cut is somewhat straightforward as we have a piece that deals with
-the consumption and manipulation of feeds and another that takes the result
-and emits HTML. This is also how the original Planet is put together, with a
-library called <a href="https://pypi.python.org/pypi/feedparser/">feedparser</a> and another for templating pages.</p>
-
-<p>For the feed-parsing aspect, I can break it down further by considering Atom
-and RSS feeds separately and then even further by thinking about how to (1)
-consume such feeds and (2) output them. Then there is the HTML component,
-where it may be necessary to consider existing representations of HTML. These
-are not new ideas and since I'm claiming that individual pieces might be
-useful then it's worth finding out which ones are already available.</p>
-
-<h4>Existing components</h4>
-
-<p>The easiest way to find existing libraries is via the
-<a href="http://opam.ocaml.org/packages">OPAM package list</a>. Some quick searches for <code>RSS</code>, <code>XML</code>, <code>HTML</code>
-and <code>net</code> bring up a lot of packages. The most relevant of these seem to be
-<a href="https://opam.ocaml.org/packages/xmlm/xmlm.1.2.0/">xmlm</a>, <a href="https://opam.ocaml.org/packages/ocamlrss/ocamlrss.2.2.2/">ocamlrss</a>, <a href="https://opam.ocaml.org/packages/cow/cow.0.9.1/">cow</a> and maybe <a href="http://opam.ocaml.org/packages/xmldiff/xmldiff.0.1/">xmldiff</a>. I noticed that
-nothing appears, when searching for <code>Atom</code>, but I do know that <code>cow</code> has an
-Atom module for creating feeds. In terms of turning feeds into pages and
-HTML, I'm aware of <a href="https://github.com/ocaml/ocaml.org/blob/master/script/rss2html.ml">rss2html</a> used on the <a href="http://ocaml.org">OCaml</a> website and parts of
-<a href="http://opam.ocaml.org/packages/ocamlnet/ocamlnet.3.7.3/">ocamlnet</a> that may be relevant (e.g <code>nethtml</code> and <code>netstring</code>) as well as
-<code>cow</code>.  There is likely to be other code I'm missing but this is useful as a
-first pass.</p>
-
-<p>Overall, a number of components are already out there but it's not obvious
-if they're compatible (e.g html) and there are still gaps (e.g atom). Since
-I also want to minimise dependencies, I'll try and use whatever works but
-may ultimately have to roll my own. Either way, I can learn from what
-already exists. Perhaps I'm being overconfident but if I can break things
-down sensibly and keep the scope constrained then this should be an
-achievable project.</p>
-
-<h3>The first (baby) steps - an Atom parser</h3>
-
-<p>As this is an exercise for me to learn OCaml by solving a problem, I need to
-break it down into bite-size pieces and take each one at a time. Practically
-speaking, this means limiting the scope to be as narrow as possible while
-still producing a useful result <em>for me</em>.  That last part is important as I
-have specific needs and it's likely that the first thing I make won't be
-particularly interesting for many others.</p>
-
-<p>For my specific use-case, I'm only interested in dealing with Atom feeds as
-that's what I use on my site and others I'm involved with. Initial feedback
-is that creating an Atom parser will be the bulk of the work and I should
-start by defining the types. To keep this manageable, I'm only going to deal
-with my own feeds instead of attempting a fully compliant parser (in other
-words, I'll only consider the subset of <a href="https://tools.ietf.org/html/rfc4287">RFC4287</a> that's relevant to me).
-Once I can parse, merge and write such feeds I should be able to iterate
-from there.</p>
-
-<p>To make my requirements more concrete:</p>
-
-<ul>
-<li>Only consider <em>my own</em> Atom feeds for now</li>
-<li>Initially, be able to parse and emit just one Atom feed</li>
-<li>Then be able to merge 2+ feeds, specifically:
-
-<ul>
-<li>Use tag-based feeds from my personal site as starting points</li>
-<li>Be able to de-dupe content</li>
-</ul>
-</li>
-<li>No database or storage (construct it afresh every time)</li>
-<li>Minimise library dependencies</li>
-</ul>
-
-
-<!-- 
-    Perhaps these requirements are already too much and I may decide to dial
-    it down even further (e.g just figure out how to consume *one* feed),
-    but I won't really know until I get started. For example, I can imagine
-    that I'll need one bunch of code to deal with Atom feeds and then
-    perhaps I can make another (feedparser), that depends on it and others
-    to deal with general feeds.
--->
-
-
-<h4>Timeframes and workflow</h4>
-
-<p>I've honestly no idea how long this might take and I'm treating it as a
-side-project. I know there are many people out there who could produce a
-working version of everything in a week or two but I'm not one of them (yet).
-There are also <em>a lot</em> of ancillary things I need to learn on the way, like
-packaging, improving my knowledge of Git and dealing with build systems. If
-I had to put a vague time frame on this, I'd be thinking in months rather
-than weeks.  It might even be the case that others start work on parts of
-this and ship things sooner but that's great as I'll probably be able to use
-whatever they create and move further along the chain.</p>
-
-<p>In terms of workflow, everything will be done in the open, warts and all, and
-I expect to make embarrassing mistakes as I go. You can follow along on my
-freshly created <a href="https://github.com/amirmc/ocamlatom">OCaml Atom</a> repo, and I'll be using the issue tracker as
-the main way of dealing with bugs and features. Let the fun begin.</p>
-
-<!-- acknowledgements -->
-
-
-<hr />
-
-<p><em>Acknowledgements:</em> Thanks to <a href="http://erratique.ch">Daniel</a>, <a href="http://ashishagarwal.org">Ashish</a>, <a href="https://github.com/Chris00">Christophe</a>,
-<a href="http://philippewang.info/">Philippe</a> and <a href="http://gazagnaire.org">Thomas</a> for discussions on an earlier draft of this post
-and providing feedback on my approach.</p>
-
-<!-- links -->
-
-
-
-
-        <a href="/writing-planet-in-pure-ocaml/#share-comment">Share / Comment</a>
-        <hr>
-        <br />
-        <br />
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="medium-3 columns">
-        <h5 class="post-date" align="right">13 March 2014</h5>
-      </div>
-      <div class="medium-9 columns">
-        <h2><a class="post-title" href="/iot-brave-new-world-or-evolved-m2m">IoT - Brave New World or Simply evolved M2M?</a></h2>
-        <p>I was at an <a href="http://www.cambridgewireless.co.uk/events/article/default.aspx?objid=43697">event</a> run by Cambridge Wireless today on the Internet of
-Things.  These are my notes. Although I've named people, I'm paraphrasing a
-lot so best not to treat anything you read here as a direct quote.</p>
-
-<p>There were a few audience polls conducted using little keypads they handed
-out. There were only 30-ish keypads so it's not necessarily indicative of
-how the whole room felt.  I took some hasty pics of a few of the slides
-(mainly the poll results) so apologies for the poor quality.</p>
-
-<h3>"The Enterprise and the Internet of Things - Evolution or Revolution?"</h3>
-
-<p><em>John Hicklin, Principal Consultant | Commercial Enterprise Markets, CGI UK</em></p>
-
-<p>Nowadays, you can walk into the C-suite and start a discussion about the IoT.
-They may not know what they're talking about but someone's told them they
-need to be thinking about it.  But what is IoT?</p>
-
-<p>One of the problems in industry you go to your Director and you explain this
-new tech and all the awesome things you can do with it and he asks the
-dreaded question, "So what?"  Example of the Connected Toothbrush. With a
-connected toothbrush you can automatically have a remote relationship with
-your dentist.  But he already drives a BMW and it's not clear how he
-benefits from that.  He wants you in the office where, every time you open
-your mouth, he sees new business development opportunities.  For the moment,
-he neither needs nor wants a remote relationship with you. Leads to the
-question about who's going to sign up for the business case.</p>
-
-<p>Number of key areas that need to be addressed (paraphrased):</p>
-
-<ul>
-<li><p><strong>Crack open the Data</strong>: We are awash with data but don't know how to use
-it. Problem with clients is that they really buy into the vision but they
-have a lot of legacy systems (green screens!) which already run things.</p></li>
-<li><p><strong>Identifying value</strong>(?): Volume is not a sign of success.  Need to know
-where the value is, which means understanding it. e.g is Enron. Thousands of
-documents, accountants all over the place with tons of data. It took a small
-team of a few researchers doing a case study that discovered no tax had ever
-been paid.  They got to the right data and asked the right questions.</p></li>
-<li><p><strong>Connectivity</strong>(?): M2M has grown in a silo'd manner where a device takes
-data and sends it to one place.  This needs to open up more and give access
-to other areas of business.</p></li>
-<li><p><strong>Business operations</strong>: People matter too. Process changes, systems that
-allow real-time decisions, empowering individuals.</p></li>
-</ul>
-
-
-<p>Overall, IoT is an enabler for a number of wider trends. IoT can improve
-operational efficiency <strong>and</strong> enhance customer experience.  Normally these
-are in conflict with each-other. However, if we just get into a tech-fest,
-then we might just end up with a large number of failures as we've seen with
-'Big Data'</p>
-
-<p><strong>Poll - Which (categories of) business-related infrastructure categories
-are most urgently needed for building the Internet of Things.</strong></p>
-
-<p><img src="http://amirchaudhry.com/images/cw-iot-new-world/cw-iot-new-world-1.jpg" alt="Poll results" /></p>
-
-<h3>"Overcoming the Internet of Things Connectivity Challenge"</h3>
-
-<p><em>David Dunn, Software Engineer, Electric Imp</em></p>
-
-<p>Electric Imp aims to help people in Product Development in the IoT space,
-namely with the connectivity problem.  The name 'IMP' came from 'Internet
-Messaging Processor'. Name is also from Terry Pratchett who's stories had
-devices that contained an imp which did the work :)</p>
-
-<p>Building connected devices is difficult. Have to be secure, easy to set up.
-There are many choices for connectivity, problems with managing the code on
-the devices.  Electric Imp picked wifi and decided to do it well.  This
-satisfies a lot of markets but not all.</p>
-
-<p>Side story of the <a href="http://www.proofpoint.com/threatinsight/posts/your-fridge-is-full-of-spam-part-ll-details.php">hacked fridge sending spam emails</a>.</p>
-
-<p>Things run through Electric Imp system and they manage the security. It's
-security as a service.  Electric Imp manages deployment of your code too so
-developers can just push code and it will end up on all their devices.</p>
-
-<!-- http://www.bbc.co.uk/news/technology-25780908
-http://www.economist.com/news/science-and-technology/21594955-when-internet-things-misbehaves-spam-fridge
-http://www.proofpoint.com/about-us/press-releases/01162014.php
-http://www.proofpoint.com/threatinsight/posts/your-fridge-is-full-of-spam-proof-of-a-Iot-driven-attack.php
-http://www.proofpoint.com/threatinsight/posts/your-fridge-is-full-of-spam-part-ll-details.php -->
-
-
-<p>Simplicity comes from one-step setup.  It's optical and uses a smartphone
-and flashes the screen, which sends the wifi SSID and credentials to the
-device (via a sensor). Customer code runs within a VM on top of with custom
-OS (impOS) taking care of I/O (TLS-encrypted wifi connection to service).</p>
-
-<p>Difficult to debug devices in the field so cloud based- service helps with
-that. They do embedded stuff on the device and cloud stuff in the cloud.
-There's another VM in the cloud that's paired with the VM on the device.
-Heavy lifting can happens elsewhere so no need to parse JSON on the device
-itself.</p>
-
-<p>Q - How do you deal with identity of units?<br/>
-A - Imps have unique serials and the devices they're plugged into are also unique (missed how).</p>
-
-<h3>"Real-life experiences from rolling out M2M networks and how we can learn from these in the shift to IoT"</h3>
-
-<p><em>Jon Lewis, Chief Innovation Officer, Plextek Consulting</em></p>
-
-<p>Plextek was working in this field when it was called 'telemetry'.  One of
-the earliest things they worked on was 'Lojack' (car tracking). Things then
-shifted to 'smart cities' and now people talk about 'IoT' and want consumer
-devices with consumer volumes.</p>
-
-<p>2014 has got to be year of IoT. However, still some way from business cases
-as it's too expensive to simply track your cat (approx £100 set up fee and
-then around £30 pcm).</p>
-
-<p>Deployment often costs more than then the sensor devices. c.f street
-lighting systems.  Choice of radio system is critical.  Projects in
-UK/Europe are about incremental cost savings with pay-back in less than 5yrs.
-In industrialising countries, there is new build which is easier then
-retrofit.  Urbanisation creates strain and demand. Local issues relate to
-the Spectrum issues and local regulations (e.g mandate to use govt
-encryption streams).  Data privacy is also concern as we don't know who
-holds the monkey. That's made even more difficult when you go abroad.  Local
-politics also matters.</p>
-
-<p><strong>Summary</strong>:</p>
-
-<ul>
-<li>Big opportunity in B2C: but need consolidation in B2B markets to get
-necessary economies of scale</li>
-<li>Big B2B opportunity in developing countries: but is tough and needs local
-partners</li>
-<li>Application developers need common platforms: to lower R&amp;D costs and
-enable access to global markets</li>
-<li>Whole value chain needs to work: building an ecosystem that connects
-application developers to markets is key to achieving scale</li>
-</ul>
-
-
-<h3>"The role of LTE in M2M"</h3>
-
-<p><em>Georg Steimel, Head of M2M Solutions, Huawei</em></p>
-
-<p>About Huawei
-- Three businesses: Carrier network, Consumer business, Enterprise business
-- Revenues of $39Bn, No2. Telecom solution provider, 150k+ employees
-worldwide</p>
-
-<p>Georg is in Consumer branch for Europe.  Huawei wants to be top M2M module
-vendor in the coming years.  They're operator and system integrator agnostic.</p>
-
-<p>Tech evolution brings new opportunities. Mobile data traffic needs, Network
-upgrading etc. Ave user expected to generated 1G data traffic per month
-(currently 63MB today) and there are predicted to be 50Bn+ devices.
-Examples of users are highly varied including monitoring of pregnant cows.</p>
-
-<p>Challenges for mass rollout are a scattered market requiring complex
-solutions.  Alignment of all parties in one adequate business model is quite
-tricky, esp when it comes to customer ownership. Should consider the value
-chain.</p>
-
-<p>Complex business model:</p>
-
-<ul>
-<li>From sales to service</li>
-<li>Many stakeholders
-
-<ul>
-<li>Who pays, how much, to whom, for what service, for what benefits?</li>
-</ul>
-</li>
-<li>Individual benefit must exceed cost
-
-<ul>
-<li>Realistic pricing</li>
-<li>Appropriate effort</li>
-<li>Total benefit, direct vs indirect TCO</li>
-<li>Sustainability</li>
-</ul>
-</li>
-</ul>
-
-
-<p>Amount of data generated is also going to be huge.  Smart meters in German
-households could send over 4TB per day, which is a huge strain for mobile
-networks.</p>
-
-<p>LTE advantage for M2M is obviously bandwidth but that's only relevant to a
-few verticals (signage, routers, and in-car entertainment). Low latency is
-more important for industrial alarms and medical devices.</p>
-
-<p><strong>Poll - What business models?</strong>
-<img src="http://amirchaudhry.com/images/cw-iot-new-world/cw-iot-new-world-2.jpg" alt="Poll results" /></p>
-
-<p>Break down of poll results.<br/>
-<img src="http://amirchaudhry.com/images/cw-iot-new-world/cw-iot-new-world-3.jpg" alt="Poll results" /></p>
-
-<h3>"Using networked visualisation for better decision making"</h3>
-
-<p><em>Fredrik Sjostedt, Vice President | Corporate Marketing, Barco Ltd</em></p>
-
-<p>Barco does a lot of visualising information. Displays for radiographers,
-stuff in cinema screens, screens in flight simulators and a lot more.</p>
-
-<p>Need to take in data from sensors, display relevant information and allow
-operators to make SMART decisions.  e.g number of CCTV cameras in London -
-who's looking at them? Real 'Big Data' step is at the operator level.</p>
-
-<p>Important to use standards, rather than proprietary systems.</p>
-
-<p>Q - In transport visualisation do you have low enough latency to get
-real-time info?<br/>
-A- Yes, e.g on a route in Brazil near Sao Palo it's closed dues to fog.
-Real-time info important for understanding the whole route.</p>
-
-<h3>"Regulatory backdrop on IP and standards issues for the M2M eco-system"</h3>
-
-<p><em>Justin Hill, Co-Head of the Patent Prosecution Group and Purvi Parekh, Co-Head of International Telecoms, Olswang</em></p>
-
-<p><strong>Purvi</strong> on the Regulatory environment<br/>
-No tailor made regulation v high regulatory focus. Regulatory focus from
-leading bodies and many of them said that existing regulation can be amended
-to facilitate M2M/IoT.  Made more complicated by lack of globally agreed
-definition of IoT (which make it difficult for lawyers).  There's generally
-promotion of Open Standards.  EU does believe that this is v important.
-People should read the RAND report (Nov 2013), commissioned by the EU to
-examine if there should be standards.</p>
-
-<p><strong>Justin</strong> on IP issues<br/>
-With any standardisation process, you're hoping to increase adoption with
-the trade-off of Right of IPR owners.  <a href="http://en.wikipedia.org/wiki/Reasonable_and_non-discriminatory_licensing">FRAND</a> (fair, reasonable, and
-non-discriminatory terms) are also important but that's also debatable.
-When considering how to protect IPR, it's worth comparing whole-system
-claims with protecting at different layers of the tech/value stack and build
-a portfolio.</p>
-
-<h3>"The impact of autonomous systems on surface transport"</h3>
-
-<p><em>Paul Copping, Corporate Development Director, TRL</em></p>
-
-<p>TRL is the Transport Research Laboratory.  Did some work to consider the
-impact of autonomous transport on the overall value chain.  Some of things
-we're trying now with autonomous driving have been successfully done in the
-past by other means (e.g car tracking a lane with magnets).</p>
-
-<p><img src="http://amirchaudhry.com/images/cw-iot-new-world/cw-iot-new-world-4.jpg" alt="Transport Value Chain" /></p>
-
-<h3>"Connected Products - Designing for Scale"</h3>
-
-<p><em>Pilgrim Beart, Founder Director, 1248-io</em></p>
-
-<p>What is IoT?  Humans don't scale.  Population is predicted to tail off at
-around 9Bn.  Connected devices are growing and the rate of change is
-exponential (and increasing).  In the 90s we used to be our own sysadmin
-with maybe one device.  Now we have several and some cloud services.  In the
-future there will be many more and they'll have to manage themselves. There
-are different problem you face as you go from 1 to 10 to 100 to 10000 to
-1MM+ deployed devices.  Issues ranging from device updates al the way to
-regulation and externalities that affect your business.</p>
-
-<p>In 10 years time, when all is said and done, we won't be calling it the
-Internet of Things. It'll just be called the Internet.</p>
-
-<p>Q from an application developers perspective wht would you different earlier
-in your development if you were to go back and start again<br/>
-A - AlertMe started a bit too early so there were a lot things were not
-off-the-shelf. Had to build. Right now can see a lot people reinventing the
-wheel but shouldn't need to do this.</p>
-
-<h3>"A new standard to connect the Internet of Everything"</h3>
-
-<p><em>Antony Rix, Senior Consultant, TTP</em></p>
-
-<p>One of the things TTP works on are wireless standards.</p>
-
-<p>The size of the grey blobs are in an indication of market size.<br/>
-<img src="http://amirchaudhry.com/images/cw-iot-new-world/cw-iot-new-world-5.jpg" alt="IoT Market Segments" /></p>
-
-<p>Users will expect things to cost pretty much the same as they did before.
-Cost will be critical and as we buy things we generally still expect them to
-last for years.</p>
-
-<p>TTP Matrix is a proprietary standard specifically for use by low-cost
-wireless connected devices.  It's optimised for efficient use of radio
-spectrum, long range, low cost and power efficient.  Use-case example
-(DisplayData) are the pricing labels on supermarket.  50k products running
-through only 3 gateways (other standards would find this difficult). Low
-power consumption means a battery can last 10 years.</p>
-
-<p><strong>Poll - Which (categories of) technical / architecture building blocks are
-most urgently needed for building the Internet of Things.</strong>
-<img src="http://amirchaudhry.com/images/cw-iot-new-world/cw-iot-new-world-6.jpg" alt="Poll results" /></p>
-
-<h3>Debate</h3>
-
-<p>Interesting discussion of Humans role in IoT.  For home consumer devices
-people may not want to have to make any decisions (completely automated) but
-corporates my want all information in order to integrate and decide.</p>
-
-<p>How quickly will this happen? It's difficult to say when you're in the
-middle of it. We'll know it's happened after the event. It takes about a
-decade for things to get things in to mature in the market. On the other
-hand, it's happening.</p>
-
-<p><strong>Poll - Big and small data - Which statement do you agree with most/least</strong>  <br/>
-I only got a pic of the latter but it's the inverse of the former
-(unsurprisingly).<br/>
-<img src="http://amirchaudhry.com/images/cw-iot-new-world/cw-iot-new-world-7.jpg" alt="Poll results" /></p>
-
-        <a href="/iot-brave-new-world-or-evolved-m2m/#share-comment">Share / Comment</a>
-        <hr>
-        <br />
-        <br />
-      </div>
-    </div>
-    
 
   </div>
   <div class="medium-3 columns">
@@ -1224,15 +1117,15 @@ I only got a pic of the latter but it's the inverse of the former
 
   
      
-        <li><a href="/tags/#fun">fun  <span>(9)</span></a></li>
+        <li><a href="/tags/#misc">misc  <span>(6)</span></a></li>
      
         <li><a href="/tags/#learning">learning  <span>(7)</span></a></li>
+     
+        <li><a href="/tags/#fun">fun  <span>(9)</span></a></li>
      
         <li><a href="/tags/#skydive">skydive  <span>(3)</span></a></li>
      
         <li><a href="/tags/#video">video  <span>(7)</span></a></li>
-     
-        <li><a href="/tags/#misc">misc  <span>(6)</span></a></li>
      
         <li><a href="/tags/#cambridge">cambridge  <span>(10)</span></a></li>
      
@@ -1292,7 +1185,7 @@ I only got a pic of the latter but it's the inverse of the former
      
         <li><a href="/tags/#30days">30days  <span>(2)</span></a></li>
      
-        <li><a href="/tags/#ocaml">ocaml  <span>(12)</span></a></li>
+        <li><a href="/tags/#ocaml">ocaml  <span>(14)</span></a></li>
      
         <li><a href="/tags/#ocaml-labs">ocaml-labs  <span>(9)</span></a></li>
      
@@ -1312,7 +1205,7 @@ I only got a pic of the latter but it's the inverse of the former
      
         <li><a href="/tags/#internet of things">internet of things  <span>(4)</span></a></li>
      
-        <li><a href="/tags/#nymote">nymote  <span>(4)</span></a></li>
+        <li><a href="/tags/#nymote">nymote  <span>(6)</span></a></li>
      
         <li><a href="/tags/#ownership">ownership  <span>(3)</span></a></li>
      
@@ -1330,7 +1223,7 @@ I only got a pic of the latter but it's the inverse of the former
      
         <li><a href="/tags/#docs">docs  <span>(2)</span></a></li>
      
-        <li><a href="/tags/#mirage">mirage  <span>(3)</span></a></li>
+        <li><a href="/tags/#mirage">mirage  <span>(5)</span></a></li>
      
         <li><a href="/tags/#website">website  <span>(3)</span></a></li>
      
@@ -1340,7 +1233,7 @@ I only got a pic of the latter but it's the inverse of the former
      
         <li><a href="/tags/#project">project  <span>(4)</span></a></li>
      
-        <li><a href="/tags/#calendar">calendar  <span>(1)</span></a></li>
+        <li><a href="/tags/#calendar">calendar  <span>(2)</span></a></li>
      
         <li><a href="/tags/#cloud">cloud  <span>(2)</span></a></li>
      
@@ -1357,6 +1250,16 @@ I only got a pic of the latter but it's the inverse of the former
         <li><a href="/tags/#opam">opam  <span>(1)</span></a></li>
      
         <li><a href="/tags/#platform">platform  <span>(1)</span></a></li>
+     
+        <li><a href="/tags/#unikernel">unikernel  <span>(2)</span></a></li>
+     
+        <li><a href="/tags/#contacts">contacts  <span>(1)</span></a></li>
+     
+        <li><a href="/tags/#irmin">irmin  <span>(1)</span></a></li>
+     
+        <li><a href="/tags/#mail">mail  <span>(1)</span></a></li>
+     
+        <li><a href="/tags/#signpost">signpost  <span>(1)</span></a></li>
     
   
 

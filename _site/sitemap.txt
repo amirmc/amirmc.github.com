@@ -1,9 +1,9 @@
 
 http://amirchaudhry.com/atom.xml
 http://amirchaudhry.com/journal/index.html
-http://amirchaudhry.com/about/index.html
-http://amirchaudhry.com/tags/index.html
 http://amirchaudhry.com/bio/index.html
+http://amirchaudhry.com/tags/index.html
+http://amirchaudhry.com/about/index.html
 http://amirchaudhry.com/freebusy/index.html
 http://amirchaudhry.com/test/index.html
 http://amirchaudhry.com/index.html
@@ -13,6 +13,8 @@ http://amirchaudhry.com/tags/ocamllabs-atom.xml
 http://amirchaudhry.com/rss.xml
 http://amirchaudhry.com/sitemap.txt
 
+http://amirchaudhry.com/brewing-miso-to-serve-nymote
+http://amirchaudhry.com/unikernels-for-everyone
 http://amirchaudhry.com/towards-governance-framework-for-ocamlorg
 http://amirchaudhry.com/describing-miso-entrepreneur-first-2014
 http://amirchaudhry.com/winning-seedhack-5-2014
@@ -77,6 +79,6 @@ http://amirchaudhry.com/a-periodic-table-of-visualisation-methods
 http://amirchaudhry.com/awesome-present-for-a-cool-nephew
 http://amirchaudhry.com/easily-aggregate-outlook-google-ical-calendar
 http://amirchaudhry.com/cfel-ignite-programme-celebration-dinner
+http://amirchaudhry.com/my-first-3-way
 http://amirchaudhry.com/learning-markdown
 http://amirchaudhry.com/this-is-my-posterous
-http://amirchaudhry.com/my-first-3-way

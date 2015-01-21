@@ -4,7 +4,7 @@
   <link href="http://amirchaudhry.com/tags/ocamllabs-atom.xml" rel="self"/>
   <link href="http://amirchaudhry.com"/>
   <subtitle>thoughts, comments &amp; general ramblings</subtitle>
-  <updated>2015-01-08T19:30:00+01:00</updated>
+  <updated>2015-01-21T14:42:41+00:00</updated>
   <id>http://amirchaudhry.com/tags/#ocamllabs</id>
   <author>
     <name>Amir Chaudhry</name>
@@ -14,7 +14,7 @@
   <title>Towards a governance framework for OCaml.org</title>
   <link href="http://amirchaudhry.com/towards-governance-framework-for-ocamlorg"/>
   <author>Amir Chaudhry</author>
-  <updated>2015-01-08T19:15:00+01:00</updated>
+  <updated>2015-01-08T18:15:00+00:00</updated>
   <id>http://amirchaudhry.com/towards-governance-framework-for-ocamlorg</id>
   <content type="html">&lt;p&gt;The projects around the OCaml.org domain name are becoming more established
 and it's time to think about how they're organised. 2014 saw a &lt;em&gt;lot&lt;/em&gt; of
@@ -117,7 +117,7 @@ be sharing it more widely and posting it here!&lt;/p&gt;
   <title>Writing Planet in pure OCaml</title>
   <link href="http://amirchaudhry.com/writing-planet-in-pure-ocaml"/>
   <author>Amir Chaudhry</author>
-  <updated>2014-04-29T11:30:00+02:00</updated>
+  <updated>2014-04-29T10:30:00+01:00</updated>
   <id>http://amirchaudhry.com/writing-planet-in-pure-ocaml</id>
   <content type="html">&lt;p&gt;I've been learning OCaml for some time now but not really had a problem that
 I wanted to solve. As such, my progress has been rather slow and sporadic
@@ -296,7 +296,7 @@ and providing feedback on my approach.&lt;/p&gt;
   <title>From Jekyll site to Unikernel in fifty lines of code.</title>
   <link href="http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines"/>
   <author>Amir Chaudhry</author>
-  <updated>2014-03-10T19:30:00+01:00</updated>
+  <updated>2014-03-10T18:30:00+00:00</updated>
   <id>http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines</id>
   <content type="html">&lt;p&gt;&lt;a href=&quot;http://openmirage.org&quot;&gt;Mirage&lt;/a&gt; has reached a point where it's possible to easily set up
 end-to-end toolchains to build &lt;a href=&quot;http://queue.acm.org/detail.cfm?id=2566628&quot;&gt;unikernels&lt;/a&gt;! &lt;!--\[If you're not sure what that is, read the post [What is a unikernel?][amc-unikernel]\]--&gt;
@@ -743,7 +743,7 @@ commenting on an earlier draft of this post.&lt;/p&gt;
   <title>Switching from Bootstrap to Zurb Foundation</title>
   <link href="http://amirchaudhry.com/switching-from-bootstrap-to-zurb-foundation"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-11-26T22:05:00+01:00</updated>
+  <updated>2013-11-26T21:05:00+00:00</updated>
   <id>http://amirchaudhry.com/switching-from-bootstrap-to-zurb-foundation</id>
   <content type="html">&lt;p&gt;I've just updated my site's HTML/CSS and moved from Twitter Bootstrap to
 &lt;a href=&quot;http://foundation.zurb.com/learn/features.html&quot;&gt;Zurb Foundation&lt;/a&gt;.  This post captures my subjective notes on the
@@ -906,7 +906,7 @@ customised sites -- it's more flexible but needs more upfront thought.&lt;/li&gt
   <title>Announcing the new OCaml.org</title>
   <link href="http://amirchaudhry.com/announcing-new-ocamlorg"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-11-21T00:00:00+01:00</updated>
+  <updated>2013-11-20T23:00:00+00:00</updated>
   <id>http://amirchaudhry.com/announcing-new-ocamlorg</id>
   <content type="html">&lt;p&gt;As some of you may have noticed, the new OCaml.org site is now live!&lt;/p&gt;
 
@@ -945,7 +945,7 @@ customised sites -- it's more flexible but needs more upfront thought.&lt;/li&gt
   <title>Migration plan for the OCaml.org redesign</title>
   <link href="http://amirchaudhry.com/migration-plan-ocaml-org"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-11-06T12:00:00+01:00</updated>
+  <updated>2013-11-06T11:00:00+00:00</updated>
   <id>http://amirchaudhry.com/migration-plan-ocaml-org</id>
   <content type="html">&lt;p&gt;We're close to releasing the new design of ocaml.org but need help from the
 OCaml community to identify and fix bugs before we switch next week.&lt;/p&gt;
@@ -1001,7 +1001,7 @@ the OCaml community and merged.&lt;/p&gt;
   <title>Review of the OCaml FPDays tutorial</title>
   <link href="http://amirchaudhry.com/fpdays-review"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-10-28T13:30:00+01:00</updated>
+  <updated>2013-10-28T12:30:00+00:00</updated>
   <id>http://amirchaudhry.com/fpdays-review</id>
   <content type="html">&lt;p&gt;&lt;a href=&quot;http://fpdays.net/2013/sessions/index.php?session=24&quot;&gt;&lt;img style=&quot;float: right; margin-top: 10px; margin-left: 10px&quot; src=&quot;/images/web/fpdays-logo.png&quot;&gt;&lt;/a&gt;
 Last Thursday a bunch of us from the OCaml Labs team gave an OCaml tutorial
@@ -1151,7 +1151,7 @@ the FPDays crew for a great conference!&lt;/p&gt;
   <title>FP Days OCaml Session</title>
   <link href="http://amirchaudhry.com/fpdays-ocaml-session"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-10-22T23:00:00+02:00</updated>
+  <updated>2013-10-22T22:00:00+01:00</updated>
   <id>http://amirchaudhry.com/fpdays-ocaml-session</id>
   <content type="html">&lt;p&gt;On Thursday, along with &lt;a href=&quot;https://github.com/yallop&quot;&gt;Jeremy&lt;/a&gt; and
 &lt;a href=&quot;http://www.lpw25.net&quot;&gt;Leo&lt;/a&gt;, I'll be running an OCaml Hands-on Session at
@@ -1202,7 +1202,7 @@ installing in advance are &lt;code&gt;core&lt;/code&gt; and &lt;code&gt;js_of_oc
   <title>Feedback requested on the OCaml.org redesign</title>
   <link href="http://amirchaudhry.com/ocamlorg-request-for-feedback"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-09-24T16:00:00+02:00</updated>
+  <updated>2013-09-24T15:00:00+01:00</updated>
   <id>http://amirchaudhry.com/ocamlorg-request-for-feedback</id>
   <content type="html">&lt;p&gt;There is a work-in-progress site at
 &lt;a href=&quot;http://ocaml-redesign.github.io&quot;&gt;ocaml-redesign.github.io&lt;/a&gt;, where we've
@@ -1238,7 +1238,7 @@ add your comments to those threads first.&lt;/p&gt;&lt;/li&gt;
   <title>Wireframe demos for OCaml.org</title>
   <link href="http://amirchaudhry.com/wireframe-demos-for-ocamlorg"/>
   <author>Amir Chaudhry</author>
-  <updated>2013-03-14T00:00:00+01:00</updated>
+  <updated>2013-03-14T00:00:00+00:00</updated>
   <id>http://amirchaudhry.com/wireframe-demos-for-ocamlorg</id>
   <content type="html">&lt;h3&gt;Making mockups&lt;/h3&gt;
 
