@@ -28,6 +28,12 @@ This is an exciting summer for all the tools we're putting together, since we've
 
 [![Mirage on ARM](http://amirchaudhry.com/images/singles/mirage-cubieboard.jpg)](https://twitter.com/amirmc/status/492202830774927361)
 
+****
+<p class="footnote">Some of the research leading to these results has received 
+    funding from the European Union's Seventh Framework Programme
+    FP7/2007-2013 under the UCN project, grant agreement no 611001.
+</p>
+
 
 [ef]: http://joinef.com
 [jekyll-unikernel]: http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines
