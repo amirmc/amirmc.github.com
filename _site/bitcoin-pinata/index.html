@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bitcoin Piñata! | Amir Chaudhry</title>
+    
+    <meta name="author" content="Amir Chaudhry">
+
+    <!-- Style sheets for Zurb Foundation v5 -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/normalize.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/foundation.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/code.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/style.css">
+
+    <link rel="shortcut icon" href="/icons/favicon.png" />
+    <link rel="icon" href="/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/amirmc" title="amirchaudhry.com" />
+    <!-- <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed"> -->
+    
+    <script src="/assets/themes/zurb/js/vendor/custom.modernizr.js"></script>  
+  </head>
+
+  <body>
+    <!-- Crazy nesting just to match post alignment -->
+    <div class="row">
+      <div class="medium-9 columns">
+        <div class="row">
+          <!-- Title -->
+          <div class="medium-9 medium-offset-3 columns">
+            <h1 class="head-title"><a class="head-title" href="http://amirchaudhry.com">Amir Chaudhry</a> <br /></h1>
+            <h3><small>thoughts, comments &amp; general ramblings</small></h3>
+          </div> <!-- End Title -->
+          <!-- Navigation -->
+          <div class="medium-9 medium-offset-3 columns">
+            <ul class="inline-list head-nav">
+              
+              
+              
+
+                 
+<li><a  href="http://amirchaudhry.com/">home</a></li>
+                 
+<li><a  href="http://amirchaudhry.com/journal">journal</a></li>
+                                     
+<li><a  href="http://amirchaudhry.com/freebusy">free/busy</a></li>
+                       
+<li><a  href="http://amirchaudhry.com/about">about</a></li>
+                      
+            </ul>
+          </div> <!-- End Nav -->
+        </div> <!-- End inset row -->
+      </div> <!-- End 9 column section -->
+    </div> <!-- End inset row -->
+
+    
+<div class="row">
+  <div class="medium-9 columns">
+
+    <div class="row">
+      <div class="medium-3 columns">
+        <h5 class="post-date" align="right">10 February 2015</h5>
+      </div>
+      <div class="medium-9 columns">
+        <h2><a class="post-title" href="/bitcoin-pinata">The Bitcoin Piñata!</a></h2>
+        <!-- <br /> -->
+        
+<p>Last summer we announced the beta release of a clean-slate implementation of
+TLS in pure OCaml, alongside a <a href="http://openmirage.org/blog/introducing-ocaml-tls">series of blog posts</a> that described
+the libraries and the thinking behind them.  It took two hackers six months
+— starting on <a href="https://goo.gl/maps/GpcQs">the beach</a> —  to get the stack to that point and
+their <a href="https://tls.openmirage.org">demo server</a> is still going strong. Since then, the team has
+continued working and recently <a href="http://media.ccc.de/browse/congress/2014/31c3_-_6443_-_en_-_saal_2_-_201412271245_-_trustworthy_secure_modular_operating_system_engineering_-_hannes_-_david_kaloper.html#video">presented</a> at the 31st Chaos
+Communication Congress.</p>
+
+<p>The latest example goes quite a bit further than a server that just displays
+the handshake. This time, the team have constructed a Xen unikernel that’s
+holding a private key to a bitcoin address and are asking people to try and
+<em>break in</em>. Hence, they’ve called it the <strong><a href="http://ownme.ipredator.se">Bitcoin Piñata</a></strong>!*</p>
+
+<h2 id="what-the-bitcoin-piata-does">What the Bitcoin Piñata does</h2>
+
+<p><a href="http://ownme.ipredator.se"><img src="http://amirchaudhry.com/images/btc-pinata/btc-pinata.png" alt="Bitcoin Pinata" /></a></p>
+
+<p>The Piñata unikernel will transmit its private bitcoin key if you can
+successfully set up a TLS connection <strong>but</strong> it’s rigged so that it will <em>only</em>
+create that connection if you can present the certificate it’s expecting to
+see — which has been <em>signed appropriately</em>.  Of course, you’re not being given
+the secret key with which to do that signing and that means there should be
+<em>no way</em> for anyone to form a TLS connection with the Piñata.
+In order to get the private key to the bitcoin address, you’ll have to smash
+your way in.</p>
+
+<p>Helpfully (perhaps), things are set up so that you <em>can</em> make the Piñata talk
+to itself, allowing you to <a href="http://en.wikipedia.org/wiki/Man-in-the-middle_attack">eavesdrop</a> on a successful connection and
+see the encrypted traffic. In addition, all the <a href="https://github.com/mirleft/btc-pinata">code and libraries</a> are
+open-source so you can look through any of the codebase.  There isn’t anything
+that anyone will have to reverse engineer, which should make this a little
+more enjoyable.</p>
+
+<p>This contest is set to run until mid-March or whenever the coins are taken.
+If someone does manage to get in, please do let us know how!</p>
+
+<h3 id="the-rubber-hose-approach">The Rubber-hose approach</h3>
+
+<p>Of course there are many other ways to get at the private key and as many
+people like to comment, the human element is sometimes the weakest link — 
+after all, a safe is only as secure as the person with the combination.</p>
+
+<p>In this case, there is obviously a secret key or certificate <em>somewhere</em>
+that could be presented so it may be tempting to go hunting for that. Perhaps
+phishing attempts on the authors may yield a way forward, or maybe just
+straight-forward <a href="http://en.wikipedia.org/wiki/Rubber-hose_cryptanalysis">Rubber-hose cryptanalysis</a>!  Sure, these
+options might provide a result<sup>†</sup> but this is meant to be fun.
+The authors haven’t specified any rules but please be nice and focus on the
+technical things around the Piñata. Don’t be this guy.</p>
+
+<p><img src="http://amirchaudhry.com/images/btc-pinata/pinata-kid-bat.gif" alt="Pinata-kid-bat" /></p>
+
+<h2 id="whats-the-point-of-this-contest">What’s the point of this contest?</h2>
+
+<p>Even though the Bitcoin Piñata is clearly a contest, nobody is deluding
+themselves into thinking that if the coins are still there in March, that
+somehow the stack can be declared ‘undefeated’ — while pleasing, that
+result wouldn’t necessarily <em>prove</em> anything. Contests have their place but as
+Bruce Schneier <a href="https://www.schneier.com/crypto-gram/archives/1998/1215.html#contests">already pointed out</a>, they are not useful mechanisms
+to judge security.</p>
+
+<p>However, it does give us the chance to engage in some shameless self-promotion
+and try to draw vast amounts of attention to the work. That, and the chance to
+stress-test the stack in the wild. Ultimately, we <em>want</em> to use this code in
+production but must take a lot of care to get there and want to be sure that
+it can bear up. This is just one more way of learning what happens when
+putting something ‘real’ out there. </p>
+
+<p>If the Bitcoins <em>do</em> end up being taken, then there’s <em>definitely</em> something
+valuable that the team can learn from that. Regardless of the Piñata, if we
+have more people exploring the <a href="https://github.com/mirleft/">TLS codebase</a> or trying it out for
+themselves, it will undoubtedly be A Good Thing. </p>
+
+<h5 id="responsible-sidenote">Responsible sidenote</h5>
+
+<p><em>For clarity and to avoid any doubt, please be aware that the TLS codebase is
+missing external code audits and is not yet intended for use in any security
+critical applications.  All development is done in the open, including the
+tracking of <a href="https://github.com/mirleft/ocaml-tls/issues?q=label%3A%22security+concern%22+">security-related issues</a>, so please do consider
+auditing the code, testing it in your services and reporting issues.</em></p>
+
+<p class="footnote">* If you've never come across a piñata before, hopefully 
+    the gif in the post gives you an idea.  If not, the
+    <a href="https://en.wikipedia.org/wiki/Pinata">wiki page</a>
+    will surely help, where I learned that the origin may be Chinese rather
+    than Spanish!
+</p>
+
+<p class="footnote"><sup>&dagger;</sup> Of course, I'm not suggesting that
+    anyone would actually go this far. I'm simply acknowledging that there is
+    a human factor and asking that we put it aside.
+</p>
+
+
+        <hr id='share-comment'>
+        <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_preferred_3"></a>
+    <a class="addthis_button_preferred_4"></a>
+    <a class="addthis_button_compact"></a>
+    <a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f7d70e955879218"></script>
+<script> var addthis_share = {templates : {twitter : "The Bitcoin Piñata!: http://bit.ly/16L7SfL via @amirmc"}}</script>
+<!-- AddThis Button END -->
+        <div class="pagination">
+          <ul class="inline-list">
+            
+              <li class="prev"><a href="/unikernel-arm-demo-fosdem" title="Unikernel demo at FOSDEM">&larr; previous</a></li>
+            
+              <li class="small"><a href="/journal/">journal</a></li>
+            
+              <li class="next disabled"><a>next &rarr;</a>
+            
+          </ul>
+        </div>
+        <hr id='comments'>
+        
+
+
+  <script type='text/javascript' src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
+<script type='text/javascript'>
+    var fyre = LF({
+        site_id: 297150
+    });
+</script>
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="medium-3 columns">
+    <div class="sidebar">
+  <a href="/about/"><img src="/images/amc.png"/></a>
+  <ul class="sidebar">
+    <li class="sidebar">Lead at <a class="sidebar" href="/about/"> Nymote.org</a></li>
+    <li class="sidebar">Wrangler at <a class="sidebar" href="/about/"> OCaml Labs</a></li>
+    <li class="sidebar">Community at <a class="sidebar" href="/about/"> Mirage OS</a></li>
+    <li class="sidebar">Post-doc at <a class="sidebar" href="/about/"> Computer Lab</a></li>
+    <li class="sidebar">Member of <a class="sidebar" href="/about/">Darwin College</a></li>
+    <li class="sidebar">Cofounder of <a class="sidebar" href="/about/"> Springboard</a></li>
+    <li class="sidebar">Advisor to <a class="sidebar" href="/about/">CUEntrepreneurs</a></li>
+  </ul>
+  <a rel="me" href="https://twitter.com/amirmc"><img src="/icons/twitter_16.png" alt="amirmc on Twitter"/></a>
+  <a href="http://www.linkedin.com/in/amirchaudhry/"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn"/></a>
+  <a rel="me" href="https://github.com/amirmc"><img src="/icons/github_16.png" alt="amirmc on GitHub"/></a>
+  <a href="http://news.ycombinator.com/threads?id=amirmc"><img src="/icons/yc_16.png" alt="amirmc on Hacker News"/></a>
+  <form action="http://www.google.com/search" class="searchbar" method="get">
+    <input type="hidden" name="q" value="site:amirchaudhry.com"/>
+    <input type="text" class="query" placeholder="Search" name="q"/>
+  </form>
+  
+    
+      <h6 class="sidebar">Filed under</h6>
+      
+    
+    <ul class="tag_box">
+      
+
+
+  
+     
+    	<li><a href="/tags/#bitcoin">bitcoin </a> </li>
+     
+    	<li><a href="/tags/#contest">contest </a> </li>
+     
+    	<li><a href="/tags/#crypto">crypto </a> </li>
+     
+    	<li><a href="/tags/#mirage">mirage </a> </li>
+     
+    	<li><a href="/tags/#ocaml">ocaml </a> </li>
+     
+    	<li><a href="/tags/#security">security </a> </li>
+     
+    	<li><a href="/tags/#unikernel">unikernel </a> </li>
+    
+  
+
+
+
+    </ul>
+  
+</div>
+  </div>
+</div>
+
+
+      
+    <footer>
+      <p class="footer" align="center">&copy; Amir Chaudhry 2010-2015</p>
+    </footer>
+
+    
+    
+    <!-- JavaScripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/themes/zurb/js/vendor/jquery.js"></script>
+    <script src="/assets/themes/zurb/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+

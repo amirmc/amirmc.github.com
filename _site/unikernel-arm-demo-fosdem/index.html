@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unikernel demo at FOSDEM | Amir Chaudhry</title>
+    
+    <meta name="author" content="Amir Chaudhry">
+
+    <!-- Style sheets for Zurb Foundation v5 -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/normalize.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/foundation.min.css">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/assets/themes/zurb/css/code.css">
+    <link rel="stylesheet" href="/assets/themes/zurb/css/style.css">
+
+    <link rel="shortcut icon" href="/icons/favicon.png" />
+    <link rel="icon" href="/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/amirmc" title="amirchaudhry.com" />
+    <!-- <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed"> -->
+    
+    <script src="/assets/themes/zurb/js/vendor/custom.modernizr.js"></script>  
+  </head>
+
+  <body>
+    <!-- Crazy nesting just to match post alignment -->
+    <div class="row">
+      <div class="medium-9 columns">
+        <div class="row">
+          <!-- Title -->
+          <div class="medium-9 medium-offset-3 columns">
+            <h1 class="head-title"><a class="head-title" href="http://amirchaudhry.com">Amir Chaudhry</a> <br /></h1>
+            <h3><small>thoughts, comments &amp; general ramblings</small></h3>
+          </div> <!-- End Title -->
+          <!-- Navigation -->
+          <div class="medium-9 medium-offset-3 columns">
+            <ul class="inline-list head-nav">
+              
+              
+              
+
+                 
+<li><a  href="http://amirchaudhry.com/">home</a></li>
+                 
+<li><a  href="http://amirchaudhry.com/journal">journal</a></li>
+                                     
+<li><a  href="http://amirchaudhry.com/freebusy">free/busy</a></li>
+                       
+<li><a  href="http://amirchaudhry.com/about">about</a></li>
+                      
+            </ul>
+          </div> <!-- End Nav -->
+        </div> <!-- End inset row -->
+      </div> <!-- End 9 column section -->
+    </div> <!-- End inset row -->
+
+    
+<div class="row">
+  <div class="medium-9 columns">
+
+    <div class="row">
+      <div class="medium-3 columns">
+        <h5 class="post-date" align="right"> 6 February 2015</h5>
+      </div>
+      <div class="medium-9 columns">
+        <h2><a class="post-title" href="/unikernel-arm-demo-fosdem">Unikernel demo at FOSDEM</a></h2>
+        <!-- <br /> -->
+        
+<p>Last weekend was spent at one of the world’s biggest open source conferences,
+FOSDEM.  You can check out <a href="http://nymote.org/blog/2014/fosdem-summary/">last year’s review</a> to get an idea of
+the scale of the event. Since there’s no registration process, it’s difficult
+to estimate how many people attend but given how many rooms there are, and how
+full they are, it’s easily several thousand. I was impressed last year at how
+smoothly things went and the same was true this year.</p>
+
+<p>The main reason to attend this time was to run a demo of MirageOS from an ARM
+board — one of the main advances since the previous conference. I looked over
+all the things we’d achieved since last year and put together a demo that
+showcases some of the capabilities as well as being fun.</p>
+
+<h3 id="from-a-unikernel-on-an-arm-board">2048 from a Unikernel on an ARM board</h3>
+
+<p>The demo was to serve the 2048 game from a Unikernel running on a Cubieboard2
+with its own access point.  When people join the wifi network, they get
+served a static page and can begin playing the game immediately.  </p>
+
+<p>The components I needed for the demo were:</p>
+
+<ul>
+  <li>
+    <p>Code for the 2048 game — I was able to lift code from a
+<a href="https://github.com/ocamllabs/2048-tutorial/">tutorial last year</a>, which <a href="http://erratique.ch">Daniel</a>, <a href="http://www.lpw25.net">Leo</a>, <a href="https://github.com/yallop">Jeremy</a> and
+<a href="http://gazagnaire.org">Thomas</a> all contributed to. It was first run at <a href="http://cufp.org/2014/t7-leo-white-introduction-to-ocaml.html">CUFP 2014</a> then
+adapted and presented at <a href="http://booking.agilefaqs.com/functional-conf-2014#workshop-52-info">Functional Conf</a> in India (see the
+<a href="http://gazagnaire.org/fuconf14/">IOCaml notebook</a>).  Attendees wrote the code in OCaml, which was
+then compiled into pure JavaScript (via <a href="http://ocsigen.org/js_of_ocaml/">js_of_ocaml</a>). The result can be run
+completely in the browser and only involves serving two files.</p>
+  </li>
+  <li>
+    <p>Code for making a static website — Since the game is completely
+self-contained (one html file and one js file). I only need to convert a static
+website into a unikernel.  That’s trivial and
+<a href="http://amirchaudhry.com/unikernels-for-everyone/">many people have done it before</a>.</p>
+  </li>
+  <li>
+    <p>A Cubieboard with a wifi access point — There are pre-built images on the
+<a href="http://blobs.openmirage.org">MirageOS website</a>, which make part of this easy. However, getting the
+wifi access point up involves a few more steps.</p>
+  </li>
+</ul>
+
+<p>The first two pieces should be straightforward and indeed, I had a working
+unikernel serving the 2048 game within minutes (unix version on my laptop). 
+The additional factors around the ARM deployment is where things were a little
+more involved. Although this was technically straightforward to set up, it
+still took a while to get all the pieces together.  A more detailed
+description of the steps is in my <a href="https://github.com/amirmc/fosdemo">fosdemo repository</a> and in
+essence, it revolves around configuring the wifi access point and setting up a
+bridge (thanks to <a href="http://somerandomidiot.com">Mindy</a>, <a href="http://www.skjegstad.com">Magnus</a> and <a href="https://github.com/pqwy">David</a> for getting this
+working).</p>
+
+<p>Once this was all up and running, it was a simple matter to configure the
+board to boot the unikernel on startup, so that no manual intervention would
+be required to set things up at the booth.</p>
+
+<h4 id="running-the-demo">Running the demo</h4>
+
+<p>I gave the demo at the Xen booth and it went very well.  There was a small
+crowd throughout my time at the booth I’m convinced that the draw of a board
+with glowing LEDs should not be underestimated.  Many people we’re happy to
+connect to the access point and download the game to their browser but there
+were two main things I learnt.</p>
+
+<p>Firstly, demos involving games will work if people actually <em>know</em> the game.
+This is obvious, but I’d assumed that most people had already played 2048 —
+especially the crowd I’d expect to meet at FOSDEM.  It turned out that around
+a third of people had no idea what to do when the game loaded onto their
+browser. They stared blankly at it and then blankly at me.  Of course, it was
+trivial to get them started and they were soon absorbed by it — but it still
+felt like some of the ‘cool-factor’ had been lost.</p>
+
+<p>The second thing was that I tried to explain too much to people in much too
+short a time.  This particular demo involved Xen unikernels, js_of_ocaml and a
+Cubieboard2 with a wifi access point.
+There’s a surprisingly large amount of technology there, which
+is difficult explain to a complete newcomer within one or two minutes.  When
+it was obvious someone hadn’t heard of unikernels, I focused on the approach
+of library operating systems and the benefits that Mirage brings. If a visitor
+was already familiar with the concept of unikernels, I could describe the rest
+of the demo in more detail.</p>
+
+<p>Everything else did go well and next time I’d like to have a demo like this
+running with <a href="https://github.com/MagnusS/jitsu">Jitsu</a>.  That way, I could configure it so that a unikernel
+would spin up, serve the static page and then spin down again. If we can
+figure out the timing, then providing stats in the page about the lifetime of
+that unikernel would also be great, but that’s for another time.</p>
+
+<p><a href="https://twitter.com/amirmc/status/561525704161243137"><img src="http://amirchaudhry.com/images/web/fosdem15-tweet.png" alt="Tweet at FOSDEM 2015" /></a></p>
+
+<h5 id="sidenote-the-beginnings-of-a-personal-cloud">Sidenote: The beginnings of a ‘personal cloud’</h5>
+
+<p>One of the things we’re keen to work towards is the idea of
+<a href="http://nymote.org">personal clouds</a>. It’s not a stretch to imagine that a Cubieboard2,
+running the appropriate software, could act as one particular node in a
+network of your own devices. In this instance it’s just hosting a fun and
+simple game but more complex applications are also possible.</p>
+
+<h3 id="huge-range-of-sessions-and-talks">Huge range of sessions and talks</h3>
+
+<p>Of course, there was lots more going on than just my demo and I had a great
+time attending the talks. Some in particular that stood out to me were those
+in the <a href="https://fosdem.org/2015/schedule/track/open_source_design/">open source design</a> room, which was a new addition this year. It
+was great to learn that there are design people out there who would like to
+contribute to open source (<a href="https://twitter.com/amirmc">get in touch</a>, if that’s you!). I also had a
+chance to meet (and thank!) Mike McQuaid in his <a href="https://fosdem.org/2015/schedule/event/homebrew_the_good,_bad_and_ugly_of_osx_packaging/">Homebrew talk</a>.
+FOSDEM is one of those great events where you can meet in person all those
+folks you’ve only interacted with online.</p>
+
+<p>Overall, it was a great trip and I thoroughly recommend it if you’ve never
+been before!</p>
+
+
+        <hr id='share-comment'>
+        <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_preferred_3"></a>
+    <a class="addthis_button_preferred_4"></a>
+    <a class="addthis_button_compact"></a>
+    <a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f7d70e955879218"></script>
+<script> var addthis_share = {templates : {twitter : "Unikernel demo at FOSDEM: http://bit.ly/1Koi2Cg via @amirmc"}}</script>
+<!-- AddThis Button END -->
+        <div class="pagination">
+          <ul class="inline-list">
+            
+              <li class="prev"><a href="/brewing-miso-to-serve-nymote" title="Brewing MISO to serve Nymote">&larr; previous</a></li>
+            
+              <li class="small"><a href="/journal/">journal</a></li>
+            
+              <li class="next"><a href="/bitcoin-pinata" title="The Bitcoin Piñata!">next &rarr;</a></li>
+            
+          </ul>
+        </div>
+        <hr id='comments'>
+        
+
+
+  <script type='text/javascript' src='http://zor.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
+<script type='text/javascript'>
+    var fyre = LF({
+        site_id: 297150
+    });
+</script>
+
+
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="medium-3 columns">
+    <div class="sidebar">
+  <a href="/about/"><img src="/images/amc.png"/></a>
+  <ul class="sidebar">
+    <li class="sidebar">Lead at <a class="sidebar" href="/about/"> Nymote.org</a></li>
+    <li class="sidebar">Wrangler at <a class="sidebar" href="/about/"> OCaml Labs</a></li>
+    <li class="sidebar">Community at <a class="sidebar" href="/about/"> Mirage OS</a></li>
+    <li class="sidebar">Post-doc at <a class="sidebar" href="/about/"> Computer Lab</a></li>
+    <li class="sidebar">Member of <a class="sidebar" href="/about/">Darwin College</a></li>
+    <li class="sidebar">Cofounder of <a class="sidebar" href="/about/"> Springboard</a></li>
+    <li class="sidebar">Advisor to <a class="sidebar" href="/about/">CUEntrepreneurs</a></li>
+  </ul>
+  <a rel="me" href="https://twitter.com/amirmc"><img src="/icons/twitter_16.png" alt="amirmc on Twitter"/></a>
+  <a href="http://www.linkedin.com/in/amirchaudhry/"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn"/></a>
+  <a rel="me" href="https://github.com/amirmc"><img src="/icons/github_16.png" alt="amirmc on GitHub"/></a>
+  <a href="http://news.ycombinator.com/threads?id=amirmc"><img src="/icons/yc_16.png" alt="amirmc on Hacker News"/></a>
+  <form action="http://www.google.com/search" class="searchbar" method="get">
+    <input type="hidden" name="q" value="site:amirchaudhry.com"/>
+    <input type="text" class="query" placeholder="Search" name="q"/>
+  </form>
+  
+    
+      <h6 class="sidebar">Filed under</h6>
+      
+    
+    <ul class="tag_box">
+      
+
+
+  
+     
+    	<li><a href="/tags/#mirage">mirage </a> </li>
+     
+    	<li><a href="/tags/#nymote">nymote </a> </li>
+     
+    	<li><a href="/tags/#ocaml">ocaml </a> </li>
+     
+    	<li><a href="/tags/#unikernel">unikernel </a> </li>
+    
+  
+
+
+
+    </ul>
+  
+</div>
+  </div>
+</div>
+
+
+      
+    <footer>
+      <p class="footer" align="center">&copy; Amir Chaudhry 2010-2015</p>
+    </footer>
+
+    
+    
+    <!-- JavaScripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/themes/zurb/js/vendor/jquery.js"></script>
+    <script src="/assets/themes/zurb/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+

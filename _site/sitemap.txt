@@ -1,9 +1,9 @@
 
 http://amirchaudhry.com/atom.xml
 http://amirchaudhry.com/journal/index.html
-http://amirchaudhry.com/bio/index.html
-http://amirchaudhry.com/tags/index.html
 http://amirchaudhry.com/about/index.html
+http://amirchaudhry.com/tags/index.html
+http://amirchaudhry.com/bio/index.html
 http://amirchaudhry.com/freebusy/index.html
 http://amirchaudhry.com/test/index.html
 http://amirchaudhry.com/index.html
@@ -13,6 +13,8 @@ http://amirchaudhry.com/tags/ocamllabs-atom.xml
 http://amirchaudhry.com/rss.xml
 http://amirchaudhry.com/sitemap.txt
 
+http://amirchaudhry.com/bitcoin-pinata
+http://amirchaudhry.com/unikernel-arm-demo-fosdem
 http://amirchaudhry.com/brewing-miso-to-serve-nymote
 http://amirchaudhry.com/unikernels-for-everyone
 http://amirchaudhry.com/towards-governance-framework-for-ocamlorg

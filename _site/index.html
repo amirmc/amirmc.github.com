@@ -59,9 +59,9 @@
 <li><a  href="http://amirchaudhry.com/journal">journal</a></li>
                                      
 <li><a  href="http://amirchaudhry.com/freebusy">free/busy</a></li>
-                           
+                       
 <li><a  href="http://amirchaudhry.com/about">about</a></li>
-                  
+                      
             </ul>
           </div> <!-- End Nav -->
         </div> <!-- End inset row -->
@@ -72,6 +72,242 @@
 <div class="row">
   <div class="medium-9 columns">
 
+    
+    <div class="row">
+      <div class="medium-3 columns">
+        <h5 class="post-date" align="right">10 February 2015</h5>
+      </div>
+      <div class="medium-9 columns">
+        <h2><a class="post-title" href="/bitcoin-pinata">The Bitcoin Piñata!</a></h2>
+        
+<p>Last summer we announced the beta release of a clean-slate implementation of
+TLS in pure OCaml, alongside a <a href="http://openmirage.org/blog/introducing-ocaml-tls">series of blog posts</a> that described
+the libraries and the thinking behind them.  It took two hackers six months
+— starting on <a href="https://goo.gl/maps/GpcQs">the beach</a> —  to get the stack to that point and
+their <a href="https://tls.openmirage.org">demo server</a> is still going strong. Since then, the team has
+continued working and recently <a href="http://media.ccc.de/browse/congress/2014/31c3_-_6443_-_en_-_saal_2_-_201412271245_-_trustworthy_secure_modular_operating_system_engineering_-_hannes_-_david_kaloper.html#video">presented</a> at the 31st Chaos
+Communication Congress.</p>
+
+<p>The latest example goes quite a bit further than a server that just displays
+the handshake. This time, the team have constructed a Xen unikernel that’s
+holding a private key to a bitcoin address and are asking people to try and
+<em>break in</em>. Hence, they’ve called it the <strong><a href="http://ownme.ipredator.se">Bitcoin Piñata</a></strong>!*</p>
+
+<h2 id="what-the-bitcoin-piata-does">What the Bitcoin Piñata does</h2>
+
+<p><a href="http://ownme.ipredator.se"><img src="http://amirchaudhry.com/images/btc-pinata/btc-pinata.png" alt="Bitcoin Pinata" /></a></p>
+
+<p>The Piñata unikernel will transmit its private bitcoin key if you can
+successfully set up a TLS connection <strong>but</strong> it’s rigged so that it will <em>only</em>
+create that connection if you can present the certificate it’s expecting to
+see — which has been <em>signed appropriately</em>.  Of course, you’re not being given
+the secret key with which to do that signing and that means there should be
+<em>no way</em> for anyone to form a TLS connection with the Piñata.
+In order to get the private key to the bitcoin address, you’ll have to smash
+your way in.</p>
+
+<p>Helpfully (perhaps), things are set up so that you <em>can</em> make the Piñata talk
+to itself, allowing you to <a href="http://en.wikipedia.org/wiki/Man-in-the-middle_attack">eavesdrop</a> on a successful connection and
+see the encrypted traffic. In addition, all the <a href="https://github.com/mirleft/btc-pinata">code and libraries</a> are
+open-source so you can look through any of the codebase.  There isn’t anything
+that anyone will have to reverse engineer, which should make this a little
+more enjoyable.</p>
+
+<p>This contest is set to run until mid-March or whenever the coins are taken.
+If someone does manage to get in, please do let us know how!</p>
+
+<h3 id="the-rubber-hose-approach">The Rubber-hose approach</h3>
+
+<p>Of course there are many other ways to get at the private key and as many
+people like to comment, the human element is sometimes the weakest link — 
+after all, a safe is only as secure as the person with the combination.</p>
+
+<p>In this case, there is obviously a secret key or certificate <em>somewhere</em>
+that could be presented so it may be tempting to go hunting for that. Perhaps
+phishing attempts on the authors may yield a way forward, or maybe just
+straight-forward <a href="http://en.wikipedia.org/wiki/Rubber-hose_cryptanalysis">Rubber-hose cryptanalysis</a>!  Sure, these
+options might provide a result<sup>†</sup> but this is meant to be fun.
+The authors haven’t specified any rules but please be nice and focus on the
+technical things around the Piñata. Don’t be this guy.</p>
+
+<p><img src="http://amirchaudhry.com/images/btc-pinata/pinata-kid-bat.gif" alt="Pinata-kid-bat" /></p>
+
+<h2 id="whats-the-point-of-this-contest">What’s the point of this contest?</h2>
+
+<p>Even though the Bitcoin Piñata is clearly a contest, nobody is deluding
+themselves into thinking that if the coins are still there in March, that
+somehow the stack can be declared ‘undefeated’ — while pleasing, that
+result wouldn’t necessarily <em>prove</em> anything. Contests have their place but as
+Bruce Schneier <a href="https://www.schneier.com/crypto-gram/archives/1998/1215.html#contests">already pointed out</a>, they are not useful mechanisms
+to judge security.</p>
+
+<p>However, it does give us the chance to engage in some shameless self-promotion
+and try to draw vast amounts of attention to the work. That, and the chance to
+stress-test the stack in the wild. Ultimately, we <em>want</em> to use this code in
+production but must take a lot of care to get there and want to be sure that
+it can bear up. This is just one more way of learning what happens when
+putting something ‘real’ out there. </p>
+
+<p>If the Bitcoins <em>do</em> end up being taken, then there’s <em>definitely</em> something
+valuable that the team can learn from that. Regardless of the Piñata, if we
+have more people exploring the <a href="https://github.com/mirleft/">TLS codebase</a> or trying it out for
+themselves, it will undoubtedly be A Good Thing. </p>
+
+<h5 id="responsible-sidenote">Responsible sidenote</h5>
+
+<p><em>For clarity and to avoid any doubt, please be aware that the TLS codebase is
+missing external code audits and is not yet intended for use in any security
+critical applications.  All development is done in the open, including the
+tracking of <a href="https://github.com/mirleft/ocaml-tls/issues?q=label%3A%22security+concern%22+">security-related issues</a>, so please do consider
+auditing the code, testing it in your services and reporting issues.</em></p>
+
+<p class="footnote">* If you've never come across a piñata before, hopefully 
+    the gif in the post gives you an idea.  If not, the
+    <a href="https://en.wikipedia.org/wiki/Pinata">wiki page</a>
+    will surely help, where I learned that the origin may be Chinese rather
+    than Spanish!
+</p>
+
+<p class="footnote"><sup>&dagger;</sup> Of course, I'm not suggesting that
+    anyone would actually go this far. I'm simply acknowledging that there is
+    a human factor and asking that we put it aside.
+</p>
+
+
+        <a href="/bitcoin-pinata/#share-comment">Share / Comment</a>
+        <hr />
+        <br />
+        <br />
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="medium-3 columns">
+        <h5 class="post-date" align="right"> 6 February 2015</h5>
+      </div>
+      <div class="medium-9 columns">
+        <h2><a class="post-title" href="/unikernel-arm-demo-fosdem">Unikernel demo at FOSDEM</a></h2>
+        
+<p>Last weekend was spent at one of the world’s biggest open source conferences,
+FOSDEM.  You can check out <a href="http://nymote.org/blog/2014/fosdem-summary/">last year’s review</a> to get an idea of
+the scale of the event. Since there’s no registration process, it’s difficult
+to estimate how many people attend but given how many rooms there are, and how
+full they are, it’s easily several thousand. I was impressed last year at how
+smoothly things went and the same was true this year.</p>
+
+<p>The main reason to attend this time was to run a demo of MirageOS from an ARM
+board — one of the main advances since the previous conference. I looked over
+all the things we’d achieved since last year and put together a demo that
+showcases some of the capabilities as well as being fun.</p>
+
+<h3 id="from-a-unikernel-on-an-arm-board">2048 from a Unikernel on an ARM board</h3>
+
+<p>The demo was to serve the 2048 game from a Unikernel running on a Cubieboard2
+with its own access point.  When people join the wifi network, they get
+served a static page and can begin playing the game immediately.  </p>
+
+<p>The components I needed for the demo were:</p>
+
+<ul>
+  <li>
+    <p>Code for the 2048 game — I was able to lift code from a
+<a href="https://github.com/ocamllabs/2048-tutorial/">tutorial last year</a>, which <a href="http://erratique.ch">Daniel</a>, <a href="http://www.lpw25.net">Leo</a>, <a href="https://github.com/yallop">Jeremy</a> and
+<a href="http://gazagnaire.org">Thomas</a> all contributed to. It was first run at <a href="http://cufp.org/2014/t7-leo-white-introduction-to-ocaml.html">CUFP 2014</a> then
+adapted and presented at <a href="http://booking.agilefaqs.com/functional-conf-2014#workshop-52-info">Functional Conf</a> in India (see the
+<a href="http://gazagnaire.org/fuconf14/">IOCaml notebook</a>).  Attendees wrote the code in OCaml, which was
+then compiled into pure JavaScript (via <a href="http://ocsigen.org/js_of_ocaml/">js_of_ocaml</a>). The result can be run
+completely in the browser and only involves serving two files.</p>
+  </li>
+  <li>
+    <p>Code for making a static website — Since the game is completely
+self-contained (one html file and one js file). I only need to convert a static
+website into a unikernel.  That’s trivial and
+<a href="http://amirchaudhry.com/unikernels-for-everyone/">many people have done it before</a>.</p>
+  </li>
+  <li>
+    <p>A Cubieboard with a wifi access point — There are pre-built images on the
+<a href="http://blobs.openmirage.org">MirageOS website</a>, which make part of this easy. However, getting the
+wifi access point up involves a few more steps.</p>
+  </li>
+</ul>
+
+<p>The first two pieces should be straightforward and indeed, I had a working
+unikernel serving the 2048 game within minutes (unix version on my laptop). 
+The additional factors around the ARM deployment is where things were a little
+more involved. Although this was technically straightforward to set up, it
+still took a while to get all the pieces together.  A more detailed
+description of the steps is in my <a href="https://github.com/amirmc/fosdemo">fosdemo repository</a> and in
+essence, it revolves around configuring the wifi access point and setting up a
+bridge (thanks to <a href="http://somerandomidiot.com">Mindy</a>, <a href="http://www.skjegstad.com">Magnus</a> and <a href="https://github.com/pqwy">David</a> for getting this
+working).</p>
+
+<p>Once this was all up and running, it was a simple matter to configure the
+board to boot the unikernel on startup, so that no manual intervention would
+be required to set things up at the booth.</p>
+
+<h4 id="running-the-demo">Running the demo</h4>
+
+<p>I gave the demo at the Xen booth and it went very well.  There was a small
+crowd throughout my time at the booth I’m convinced that the draw of a board
+with glowing LEDs should not be underestimated.  Many people we’re happy to
+connect to the access point and download the game to their browser but there
+were two main things I learnt.</p>
+
+<p>Firstly, demos involving games will work if people actually <em>know</em> the game.
+This is obvious, but I’d assumed that most people had already played 2048 —
+especially the crowd I’d expect to meet at FOSDEM.  It turned out that around
+a third of people had no idea what to do when the game loaded onto their
+browser. They stared blankly at it and then blankly at me.  Of course, it was
+trivial to get them started and they were soon absorbed by it — but it still
+felt like some of the ‘cool-factor’ had been lost.</p>
+
+<p>The second thing was that I tried to explain too much to people in much too
+short a time.  This particular demo involved Xen unikernels, js_of_ocaml and a
+Cubieboard2 with a wifi access point.
+There’s a surprisingly large amount of technology there, which
+is difficult explain to a complete newcomer within one or two minutes.  When
+it was obvious someone hadn’t heard of unikernels, I focused on the approach
+of library operating systems and the benefits that Mirage brings. If a visitor
+was already familiar with the concept of unikernels, I could describe the rest
+of the demo in more detail.</p>
+
+<p>Everything else did go well and next time I’d like to have a demo like this
+running with <a href="https://github.com/MagnusS/jitsu">Jitsu</a>.  That way, I could configure it so that a unikernel
+would spin up, serve the static page and then spin down again. If we can
+figure out the timing, then providing stats in the page about the lifetime of
+that unikernel would also be great, but that’s for another time.</p>
+
+<p><a href="https://twitter.com/amirmc/status/561525704161243137"><img src="http://amirchaudhry.com/images/web/fosdem15-tweet.png" alt="Tweet at FOSDEM 2015" /></a></p>
+
+<h5 id="sidenote-the-beginnings-of-a-personal-cloud">Sidenote: The beginnings of a ‘personal cloud’</h5>
+
+<p>One of the things we’re keen to work towards is the idea of
+<a href="http://nymote.org">personal clouds</a>. It’s not a stretch to imagine that a Cubieboard2,
+running the appropriate software, could act as one particular node in a
+network of your own devices. In this instance it’s just hosting a fun and
+simple game but more complex applications are also possible.</p>
+
+<h3 id="huge-range-of-sessions-and-talks">Huge range of sessions and talks</h3>
+
+<p>Of course, there was lots more going on than just my demo and I had a great
+time attending the talks. Some in particular that stood out to me were those
+in the <a href="https://fosdem.org/2015/schedule/track/open_source_design/">open source design</a> room, which was a new addition this year. It
+was great to learn that there are design people out there who would like to
+contribute to open source (<a href="https://twitter.com/amirmc">get in touch</a>, if that’s you!). I also had a
+chance to meet (and thank!) Mike McQuaid in his <a href="https://fosdem.org/2015/schedule/event/homebrew_the_good,_bad_and_ugly_of_osx_packaging/">Homebrew talk</a>.
+FOSDEM is one of those great events where you can meet in person all those
+folks you’ve only interacted with online.</p>
+
+<p>Overall, it was a great trip and I thoroughly recommend it if you’ve never
+been before!</p>
+
+
+        <a href="/unikernel-arm-demo-fosdem/#share-comment">Share / Comment</a>
+        <hr />
+        <br />
+        <br />
+      </div>
+    </div>
     
     <div class="row">
       <div class="medium-3 columns">
@@ -565,509 +801,6 @@ be sharing it more widely and posting it here!</p>
       </div>
     </div>
     
-    <div class="row">
-      <div class="medium-3 columns">
-        <h5 class="post-date" align="right">25 July 2014</h5>
-      </div>
-      <div class="medium-9 columns">
-        <h2><a class="post-title" href="/describing-miso-entrepreneur-first-2014">Describing the MISO stack at Entrepreneur First</a></h2>
-        
-<!-- 
-
-
-
-
-<div class="gallery">
-  <noscript><small><em>Note: The gallery needs JavaScript but I've tried to make it degrade gracefully. -Amir</em></small></noscript>
-  <ul class="inline-list">
-    
-      <li><a data-orbit-link="ef-2014-1"><img src="/images/ef-2014/ef-2014-thumb-1.png" alt="ef-2014-thumb-1" /></a></li>
-    
-      <li><a data-orbit-link="ef-2014-2"><img src="/images/ef-2014/ef-2014-thumb-2.png" alt="ef-2014-thumb-2" /></a></li>
-    
-      <li><a data-orbit-link="ef-2014-3"><img src="/images/ef-2014/ef-2014-thumb-3.png" alt="ef-2014-thumb-3" /></a></li>
-    
-      <li><a data-orbit-link="ef-2014-4"><img src="/images/ef-2014/ef-2014-thumb-4.png" alt="ef-2014-thumb-4" /></a></li>
-    
-      <li><a data-orbit-link="ef-2014-5"><img src="/images/ef-2014/ef-2014-thumb-5.png" alt="ef-2014-thumb-5" /></a></li>
-    
-      <li><a data-orbit-link="ef-2014-6"><img src="/images/ef-2014/ef-2014-thumb-6.png" alt="ef-2014-thumb-6" /></a></li>
-    
-  </ul>
-  <ul data-orbit data-options="next_on_click:true; timer_speed:3000; pause_on_hover:false; bullets:false;">
-    
-    <li class="gallery-image" data-orbit-slide="ef-2014-1"><img src="/images/ef-2014/ef-2014-1.jpg" alt="ef-2014-1"></li>
-    
-    <li class="gallery-image" data-orbit-slide="ef-2014-2"><img src="/images/ef-2014/ef-2014-2.jpg" alt="ef-2014-2"></li>
-    
-    <li class="gallery-image" data-orbit-slide="ef-2014-3"><img src="/images/ef-2014/ef-2014-3.jpg" alt="ef-2014-3"></li>
-    
-    <li class="gallery-image" data-orbit-slide="ef-2014-4"><img src="/images/ef-2014/ef-2014-4.jpg" alt="ef-2014-4"></li>
-    
-    <li class="gallery-image" data-orbit-slide="ef-2014-5"><img src="/images/ef-2014/ef-2014-5.jpg" alt="ef-2014-5"></li>
-    
-    <li class="gallery-image" data-orbit-slide="ef-2014-6"><img src="/images/ef-2014/ef-2014-6.jpg" alt="ef-2014-6"></li>
-    
-  </ul>
-</div>
-
-
-
-
- -->
-
-<p>I&#8217;m speaking to the <a href="http://joinef.com">Entrepreneur First</a> cohort this morning about the future of resilient, distributed systems and what I&#8217;m working on to get us there.  Firstly, I&#8217;m describing the kinds of solutions we have today, the great things they offer developers as well as the issues they create. This leads into the new toolstack we&#8217;re creating, called the MISO stack, and the benefits and trade-offs.</p>
-
-<p>I&#8217;m spending more time talking about <a href="http://openmirage.org">Mirage OS</a> &#8211; the &#8216;M&#8217; in the MISO stack &#8211; because the workflow we&#8217;ve developed here underpins how we build, deploy and maintain such applications at scale. As an example of how things can work, I point at my earlier post on how to go from <a href="http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines">jekyll to unikernel</a>.  This uses TravisCI to do all the hard work and all the relevant artefacts, including the final VM, can be version-controlled through Git. I actually deployed this post while the audience was watching, so that I could point at <a href="http://travisci.org/amirmc/amirmc.github.com">the build logs</a>.</p>
-
-<p>One of the use cases for our toolstack is to make it possible for individuals to create and maintain their own piece of the cloud, a project called <a href="http://nymote.org">Nymote</a>, which will also make it possible to run the <a href="http://amirchaudhry.com/working-on-the-internet-of-my-things/">Internet of <em>my</em> Things</a> &#8211; which itself is related to another things I&#8217;m working on, such the <a href="http://hubofallthings.com">Hub of All Things - HAT</a> and the <a href="http://usercentricnetworking.eu">User Centric Networking</a> projects.</p>
-
-<p>This is an exciting summer for all the tools we&#8217;re putting together, since we&#8217;ve recently <a href="http://openmirage.org/blog/announcing-mirage-20-release">announced Mirage OS v2.0</a>, which now works on ARM, are going full steam ahead with <a href="http://openmirage.org/blog/introducing-irmin">Irmin</a> and working hard on improvements to the <a href="http://www.cl.cam.ac.uk/projects/ocamllabs/tasks/platform.html">OCaml ecosystem</a>. It&#8217;s a great time to explore these projects, learn a new language and build awesome stuff.</p>
-
-<p><a href="https://twitter.com/amirmc/status/492202830774927361"><img src="http://amirchaudhry.com/images/singles/mirage-cubieboard.jpg" alt="Mirage on ARM" /></a></p>
-
-
-        <a href="/describing-miso-entrepreneur-first-2014/#share-comment">Share / Comment</a>
-        <hr />
-        <br />
-        <br />
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="medium-3 columns">
-        <h5 class="post-date" align="right">23 July 2014</h5>
-      </div>
-      <div class="medium-9 columns">
-        <h2><a class="post-title" href="/winning-seedhack-5-2014">Winning Seedhack 5.0</a></h2>
-        
-<p class="footnote">[This story was also a
-    <a href="http://seedcamp.com/seedhack-5-0/">guest post</a>
-    on the <a href="http://seedcamp.com">Seedcamp</a> blog.]</p>
-
-<p>A couple of weeks ago, I took part in <a href="http://seedhack.com">Seedhack 5.0</a>, on the theme
-of life-logging. My team were overall winners with Clarity, our calendar
-assistant app. This post captures my experiences of what happened over the
-weekend, the process of how we built the app and the main things I learned.
-You’ll find out what Clarity is at the end – just like we did.</p>
-
-<h3 id="meeting-people-and-pitches-on-friday">Meeting people and pitches on Friday</h3>
-
-<p>The weekend began with some information on the APIs available to us, which
-was followed by pizza and mingling with everyone. I spoke to a few people
-about what they were working on and the technologies they were used to. It
-was good to find a mixture of experience and I was specifically looking for
-folks with an interest in functional programming – that’s how I first met
-Vlad over Twitter. </p>
-
-<p><a href="https://twitter.com/vla_ve/statuses/485083697172185088"><img src="http://amirchaudhry.com/images/seedhack2014/seedhack2014-1.jpg" alt="Tweets with Vlad" /></a></p>
-
-<p>After pizza, those people with ideas, even if not fully formed, were invited
-to share them with the room. I came in to Seedhack with specific thoughts on
-the kind of things I wanted to work on so I spoke about one of those.  </p>
-
-<h3 id="pitching-personal-clouds">Pitching Personal Clouds</h3>
-
-<p>I described the problem of silos, poor interoperability and how all the
-life-logging data should really be owned by the user. That would allow third
-parties to request access and provide way more value to users, while
-maintaining privacy and security. Building a centralised service makes a lot
-of sense in the first instance but what’s more disruptive than eschewing the
-current model of yet-another-silo and putting the user in control? If that
-sounds familiar, it’s because I’m trying to solve these problems already.  </p>
-
-<p>I’m working on a open source toolstack for building distributed systems that
-I call the MISO stack, which is analogous to the LAMP stack of old but
-is based on <a href="http://openmirage.org">Mirage OS</a>.  With this stack, I’m putting together a
-system to help people create and run their own little piece of the cloud
-– <a href="http://nymote.org">Nymote</a>. The <a href="http://nymote.org/blog/2013/introducing-nymote/">introductory post</a> and my post on
-‘<a href="http://amirchaudhry.com/working-on-the-internet-of-my-things/">The Internet of <em>my</em> Things</a>’ has more detail on why I’m working
-on this. </p>
-
-<p>For systems like this to be viable, we must be willing to trust them with
-the core applications of Email, Contacts and Calendar. Without advanced and
-robust options for running these, it’s unlikely that anyone (including me)
-would want to switch away from the current providers. Of these three
-applications, I decided to talk about the contact management solution, since
-I happen to have wireframes and thought it might be simpler to implement
-something over the weekend. </p>
-
-<!--
-Some readers may not be convinced but I like to recall a 1977 quote by Ken
-Olsen, Cofounder and CEO of Digital Equipment Corp., who said *"[There is no
-reason for any individual to have a computer in his home][olsen]."* We now
-carry computers in our pockets (see footnote), so it's perfectly reasonable
-to me that we'll all have our own clouds one day.
--->
-
-<p>There was quite a bit of interest in the overall concept but what really
-piqued my curiosity was that someone else presented some thoughts around
-Calendars and analytics. After a brief chat, we decided to join forces and
-tackle the problems of Calendar management. The team had a great mix of
-experience from product to design and several of them had worked together
-before.</p>
-
-<h3 id="the-clarity-team">The Clarity Team</h3>
-
-<p><a href="http://amirchaudhry.com">Amir</a> - <em>Product</em> - Worked in several startups, product &amp; programme management experience, currently a Post Doc at Cambridge University Computer Science dept.</p>
-
-<p><a href="http://twitter.com/rivertam57">River</a> - <em>Product</em> - Programme Manager at Dotforge Accelerator and lead organiser of StartupBus UK 2014.</p>
-
-<p><a href="http://msingh.co">Mani</a> - <em>Developer</em> - Freelance web dev (CMS and APIs), winner of multiple hackathons, currently studying at Sheffield University.</p>
-
-<p><a href="http://vladvelici.github.io">Vlad</a> - <em>Developer</em> - Started programming long ago and attended many competitions and hackathons. Currently studying Computer Science at the University of Southampton.</p>
-
-<p><a href="http://linkedin.com/in/joaoaparicio">João</a> - <em>Developer</em> - PhD in Theoretical Physics, Python enthusiast and moving into data science, currently doing data analysis at Potential.</p>
-
-<p><a href="http://jchui.me">Jeremy</a> - <em>Designer</em> - Freelance UI/UX Designer, hackathon enthusiast, currently studying medicine at Sheffield University.</p>
-
-<h3 id="thick-fog-and-ambiguity-on-friday-evening">Thick fog and ambiguity on Friday evening</h3>
-
-<p>We had all decided to work together and we knew it would be on the problem
-of calendar management and analytics. We were fired up but it quickly became
-obvious that was <em>all</em> we knew.</p>
-
-<p>The next four to five <em>hours</em> were spent discussing the rough shape of what
-we were going to build, what specific problem we thought we were solving and
-whether there were enough people with such a problem to care. </p>
-
-<p>We had a look at each other’s calendars and talked about how we each use
-them and the things we like and dislike about them. For example, I have
-around nine calendars and I curate them carefully, adding contextual
-information and sometimes even correcting old events to reflect what
-happened. We even bounced around the idea of the contact management app
-several times as well as a few other ideas that came up during the
-discussions. </p>
-
-<p>These conversations took a while and it seemed like we were going around in
-circles. Despite this, it didn’t feel particularly frustrating. I realised
-that the same sticking point was coming up repeatedly because we were
-forcing ourselves to imagine a prototypical customer and the problems <em>they</em>
-might have. This was never going to work since we wouldn’t have time to go
-and find such people and do basic customer development. Far better to
-constrain the problem to something <em>we</em> experience so that we can look to
-ourselves for initial customer feedback.  Once we did this, things seemed to
-go a little faster and taking breaks for food helped us keep our energy up.</p>
-
-<p><a href="https://twitter.com/inthecompanyof/status/485463322020839424"><img src="http://amirchaudhry.com/images/seedhack2014/seedhack2014-2.jpg" alt="Mani grabbing falafel for dinner" /></a></p>
-
-<p>There were a few occasions where I looked around the room and saw other
-teams with their heads down, headphones in, and bashing away at keyboards
-– we hadn’t even figured out what we were doing yet.
-Despite this, it was a great exercise because it allowed all of us to get a
-feel for what aspects each of us cared about most and it helped us form some
-kind of shared language for the product. </p>
-
-<p>The only outcome from this first evening was an outline but it was an
-important one. It distilled what we what we were going to work on and the
-components of it. We did this so we’d have a clear starting point the next
-morning and could get going quickly.  Here’s a paraphrased version of what
-we sent ourselves. </p>
-
-<p>```text
-Smart Calendar App.</p>
-
-<p>We are collecting data from mobile and from desktop. 
-- Mobile includes:
-  - Call logs
-  - Location (if we can)
-  - Messages
-  - What application is being used and when
-- Desktop includes:
-  - What application is active and timestamps of it
-  - Location?
-  - Git Logs … ?
-  - Taking logs of their existing calendars.</p>
-
-<p>Working out what people are doing.
-- Extrapolating info from active application (e.g browser page)</p>
-
-<p>Present info back via calendar UI
-- Need to turn all this information into webcal events</p>
-
-<p>Useful info we want
-- Time spent travelling (how much?)
-- Time in meetings 
-- Time on phone
-- Who the meetings/calls were with
-- Relevant docs/emails these are linked with
-- Use labels
-```</p>
-
-<p>Then it was time for some late night snacks.</p>
-
-<p><a href="https://twitter.com/nicolagreco/status/485201493633826818"><img src="http://amirchaudhry.com/images/seedhack2014/seedhack2014-3.jpg" alt="Midnight snacks" /></a></p>
-
-<p>With one challenge out of the way, the next one was finding somewhere to
-sleep for a few hours (Campus was closing from 01:30). I had nothing planned
-but luckily for me, a couple of team members had booked a hotel room for the
-night. The minor complication was that we had to first find the hotel and
-then somehow get six people into a room meant for two – without the night
-manager kicking us out. That’s a whole other story, but it suffices to say
-that James Bond has nothing to worry about.</p>
-
-<h3 id="rays-of-light-and-clearing-haze-on-saturday">Rays of light and clearing haze on Saturday</h3>
-
-<p>After some card games and a few hours of sleep, we headed back to Campus and
-during this walk, we came up with ‘Clarity’ as the name of the application. </p>
-
-<p>Once we arrived, development began. River volunteered his digital
-assets to the cause (i.e. his whole Google life). Mani worked on the Android
-app, Vlad on a Chrome extension with Joao pulling in the Google Apps data as
-well as combining it with data from the various platform apps. Jeremy worked
-on the front-end of the site, while River and I began wireframing the UI and
-user flow through the site. </p>
-
-<p>Once the development was well underway, I realised how superfluous ‘the
-business guys’ can be. It would have been easy to simply sit there and let
-everyone get on with it but there were other things River and I did while
-developers were writing code.</p>
-
-<p><em>Wireframing</em> - We spent time thinking about what a user would actually see
-and engage with once they visited the Clarity site. We made a lot of
-sketches on paper and this was helpful because communication with the team
-was smoother with something to guide the discussion. It also helped to
-inform the design work and gave River and I something to show to potential
-users. </p>
-
-<p><em>Talk to people</em> - aka early customer development. We already knew that we
-were our own customers but it was useful to talk to other people for two
-reasons. Firstly, to get an idea of how they use their calendars and whether
-they have similar problems to us and secondly, to see what thoughts we
-prompt when we describe our solution (or show our wireframes). This led to
-useful information on how we should refine the product and and position
-ourselves against perceived competition.</p>
-
-<p><em>Refine the product</em> - Going through the wireframing and talking to people
-helped us come up with several new ideas for how to display the data back to
-users. Some of these seemed great at the time, but after showing some paper
-sketches to other people, we realised customers didn’t care about certain
-things, so we discarded them. Even though Jeremy had already done the work of
-putting together the UI for them (sorry, Jeremy!).</p>
-
-<p><em>Examine the competition</em> - After we described what we were working on. A
-few people mentioned potential competitors and asked how we were different.
-Initially, we didn’t know much about these companies but it was something we
-could explore while development was underway and consider our positioning.</p>
-
-<p><em>Remind people to regroup</em> - Every few hours, we would make sure everyone
-caught up with each other.  We would check that things were going well, share
-what we’d learned from talking to people and discuss any technical problems
-and possible workarounds – including changing the scope of the product. The
-discussions we’d had on Friday meant that we spent less time debating when
-these questions came up during the weekend.</p>
-
-<p><em>Work on the pitch</em> - River and I began working on the pitch from just after
-Saturday lunchtime and kept building on it until Sunday afternoon. This,
-combined with showing our sketches to people, made it much easier to think
-about the story we wanted to tell the audience. In turn, that made it easier
-to think about the product development that <em>had</em> to be completed by Sunday.
-Especially in terms of a kick-ass demo.</p>
-
-<p><a href="https://twitter.com/mindeedly/status/485502064437780480"><img src="http://amirchaudhry.com/images/seedhack2014/seedhack2014-4.jpg" alt="Popcorn and candyfloss" /></a></p>
-
-<h3 id="bright-sunshine-and-achieving-clarity-on-sunday-afternoon">Bright sunshine and achieving Clarity on Sunday afternoon</h3>
-
-<p>Development carried on through the night and we took a break to watch some
-sports via River’s laptop – at this point Clarity was actually logging this
-and other events.
-The next morning, we reiterated what we needed to
-get done for the demo and I was pretty ruthless about practising the pitch.
-River and I practised endlessly while everyone else made sure the the
-technical pieces were working smoothly. We had a lot of moving parts and
-making sure they were glued together seamlessly was important.
-At this point, we knew what Clarity was and how to tell its story.</p>
-
-<h3 id="introducing-clarity">Introducing Clarity</h3>
-
-<p>We all have calendars and we put a lot of time and effort into managing them
-but get very little back. A simple glance at your calendar for the past
-month will show you a sea of information with no idea where your time was
-actually spent. We believe your calendar should be working harder for you.
-Your calendar should give you clarity. </p>
-
-<p><img src="http://amirchaudhry.com/images/seedhack2014/seedhack2014-5.jpg" alt="Calendar" /></p>
-
-<p>Over the course of the weekend, we built tools that can go through your
-calendar and understand the events you’re involved in and tie them back to
-the relevant emails, documents and people.  With a suite of software that
-spans across your GDrive, Chrome and Android, we’re able to combine your
-calendars with rich, contextual information so you can really understand
-what your time is being spent on.</p>
-
-<p><a href="http://clarityapp.me"><img src="http://amirchaudhry.com/images/seedhack2014/seedhack2014-6.jpg" alt="Clarity summary view" /></a></p>
-
-<p>We built this system and plugged it into River’s digital life.
-If we take a look at River’s summary for the last month, we see that he’s
-spent around 32 hours in meetings in London last month, despite living in
-Sheffield. We can also see that he’s spent an hour on the phone with someone
-called Lee, but that all of them were short calls. The next person also
-totalled an hour on the phone but only across 3 calls.  Already, River has
-learned something about the the people he interacts with most and how. We
-can also drill down further and see all this activity presented in a
-calendar view, except this now represents where his time <em>did</em> go, rather
-than where he thought it went. For example, he’s most active via text
-message between 4pm and 5pm during the week, and we can see that he spent
-a few hours watching sports last night.</p>
-
-<p>Clarity can do much more than provide an accurate retrospective view of your
-time. Since it interacts with all the important components of your life,
-like your phone and laptop, it can even perform helpful actions for you.
-For example, say I have a meeting set up with River but I want to reschedule
-it. I simply send a text to him as I normally would, suggesting that we move
-it to another day. Clarity can pick up that message and is smart enough to
-understand its intent, find the relevant calendar event and <em>reschedule
-it automatically</em>. River doesn’t have to lift a finger and his diary is
-always up to date. It’s easy to imagine a future where we might never have
-to add or edit events ourselves. </p>
-
-<p>Clarity is a smart calendar assistant that understands the context around
-you, provides you with insight into your life and helps you seamlessly
-organise your future. You can find out more at
-<a href="http://clarityapp.me">http://clarityapp.me</a></p>
-
-<script async="" class="speakerdeck-embed" data-id="c88770b0ef1801315b3b2e79871312e8" data-ratio="1.41436464088398" src="//speakerdeck.com/assets/embed.js"></script>
-
-<h3 id="judging-and-announcements">Judging and announcements</h3>
-
-<p>After the pitches, we met a lot of people who had the same problems as we
-did with calendar management. Several offered to be beta testers. After
-waiting for the judges, prizes were announced and Clarity was declared the
-overall winner of Seedhack 5.0!</p>
-
-<div class="gallery">
-  <noscript><small><em>Note: The gallery needs JavaScript but I've tried to make it degrade gracefully. -Amir</em></small></noscript>
-  <ul class="inline-list">
-    
-      <li><a data-orbit-link="seedhack2014-win-1"><img src="/images/seedhack2014-win/seedhack2014-win-thumb-1.png" alt="seedhack2014-win-thumb-1" /></a></li>
-    
-      <li><a data-orbit-link="seedhack2014-win-2"><img src="/images/seedhack2014-win/seedhack2014-win-thumb-2.png" alt="seedhack2014-win-thumb-2" /></a></li>
-    
-      <li><a data-orbit-link="seedhack2014-win-3"><img src="/images/seedhack2014-win/seedhack2014-win-thumb-3.png" alt="seedhack2014-win-thumb-3" /></a></li>
-    
-      <li><a data-orbit-link="seedhack2014-win-4"><img src="/images/seedhack2014-win/seedhack2014-win-thumb-4.png" alt="seedhack2014-win-thumb-4" /></a></li>
-    
-      <li><a data-orbit-link="seedhack2014-win-5"><img src="/images/seedhack2014-win/seedhack2014-win-thumb-5.png" alt="seedhack2014-win-thumb-5" /></a></li>
-    
-      <li><a data-orbit-link="seedhack2014-win-6"><img src="/images/seedhack2014-win/seedhack2014-win-thumb-6.png" alt="seedhack2014-win-thumb-6" /></a></li>
-    
-      <li><a data-orbit-link="seedhack2014-win-7"><img src="/images/seedhack2014-win/seedhack2014-win-thumb-7.png" alt="seedhack2014-win-thumb-7" /></a></li>
-    
-      <li><a data-orbit-link="seedhack2014-win-8"><img src="/images/seedhack2014-win/seedhack2014-win-thumb-8.png" alt="seedhack2014-win-thumb-8" /></a></li>
-    
-      <li><a data-orbit-link="seedhack2014-win-9"><img src="/images/seedhack2014-win/seedhack2014-win-thumb-9.png" alt="seedhack2014-win-thumb-9" /></a></li>
-    
-      <li><a data-orbit-link="seedhack2014-win-10"><img src="/images/seedhack2014-win/seedhack2014-win-thumb-10.png" alt="seedhack2014-win-thumb-10" /></a></li>
-    
-      <li><a data-orbit-link="seedhack2014-win-11"><img src="/images/seedhack2014-win/seedhack2014-win-thumb-11.png" alt="seedhack2014-win-thumb-11" /></a></li>
-    
-  </ul>
-  <ul data-orbit="" data-options="next_on_click:true; timer_speed:3000; pause_on_hover:false; bullets:false;">
-    
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-1"><img src="/images/seedhack2014-win/seedhack2014-win-1.jpg" alt="seedhack2014-win-1" /></li>
-    
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-2"><img src="/images/seedhack2014-win/seedhack2014-win-2.jpg" alt="seedhack2014-win-2" /></li>
-    
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-3"><img src="/images/seedhack2014-win/seedhack2014-win-3.jpg" alt="seedhack2014-win-3" /></li>
-    
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-4"><img src="/images/seedhack2014-win/seedhack2014-win-4.jpg" alt="seedhack2014-win-4" /></li>
-    
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-5"><img src="/images/seedhack2014-win/seedhack2014-win-5.jpg" alt="seedhack2014-win-5" /></li>
-    
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-6"><img src="/images/seedhack2014-win/seedhack2014-win-6.jpg" alt="seedhack2014-win-6" /></li>
-    
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-7"><img src="/images/seedhack2014-win/seedhack2014-win-7.jpg" alt="seedhack2014-win-7" /></li>
-    
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-8"><img src="/images/seedhack2014-win/seedhack2014-win-8.jpg" alt="seedhack2014-win-8" /></li>
-    
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-9"><img src="/images/seedhack2014-win/seedhack2014-win-9.jpg" alt="seedhack2014-win-9" /></li>
-    
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-10"><img src="/images/seedhack2014-win/seedhack2014-win-10.jpg" alt="seedhack2014-win-10" /></li>
-    
-    <li class="gallery-image" data-orbit-slide="seedhack2014-win-11"><img src="/images/seedhack2014-win/seedhack2014-win-11.jpg" alt="seedhack2014-win-11" /></li>
-    
-  </ul>
-</div>
-
-<h3 id="things-i-learned">Things I learned</h3>
-
-<p>Looking back, there were a lot of things we did which I think
-helped us get to the winning slot, so I thought I’d summarise them here.</p>
-
-<p><strong>Think first</strong> - We spent time up front to <em>define</em> what we were
-going to work on. I thought this step was crucial as it meant we all
-understood the shape of the problem but also the areas that each of us were
-interested in.  That helped later in the weekend as we could refer back to
-things we discussed on Friday.</p>
-
-<p><strong>Move fast</strong> - Once we did figure out what we were doing, then it was a
-matter of building the software to gather and crunch the data. A lot of this
-was done in parallel as Jeremy worked on the front-end UI while Mani, Joao
-and Vlad took care of the data aggregation, analytics and platform products.
-Don’t be afraid to throw away ideas if you find that they don’t work for
-people and remember it’s a <em>hackathon</em> (i.e gruesome hacks are the norm).</p>
-
-<p><strong>Remember the demo</strong> - At some point you’re going to be forced to stand up
-and talk about what you’ve done. We started thinking about this from
-Saturday lunchtime and sketched out the slides and the elements of the app
-we wanted to show. This helped inform the UI and technology that we were
-building and the pitch never felt like it was rushed.</p>
-
-<p><strong>Practice, practice, practice</strong> - we were told we’d have 3 minutes to
-pitch/demo and maybe a few additional questions. I made sure River and I
-practised <em>repeatedly</em> to get our time down to 3mins and ensure we getting
-across everything we wanted to.  The important thing with such a
-short amount of time, is that we were forced to <em>cut</em> things out as well as
-ensure we emphasised the main points. It was a ruthless exercise in saying
-‘no’. During the actual pitches, we realised everyone was taking longer
-(without repercussions), so I added an extra 30 seconds to cover the
-potential market sizes and business models.</p>
-
-<p><strong>Leave artefacts</strong> - After the pitches, we knew that we had to take the
-site down. It was built at high speed and in a way that ended up exposing
-someone’s data to the internet at large (thanks, River!). It might have
-been somewhat easier to build something using faked data that we could
-happily share the URL to and leave online.  On the other hand, our demo
-would not have been half as compelling if we weren’t running it real-time
-on live data.</p>
-
-<h3 id="looking-to-the-future">Looking to the future</h3>
-
-<p>This is a product we all want to use and the team is interested in taking
-this forward. There are a lot of things to think about and many
-things we would build differently so we’re discussing the next steps. For
-example, there are likely ways to empower the end-users to control their
-data and give them more flexibility, even though the work at the hackathon
-was already quite impressive. Given how well Seedhack went, you might even
-see us at <a href="http://seedcamp.com/events/seedcamp-week-london/">Seedcamp Week</a> later in the year. If you think this is
-something you’d like to work on with us,
-<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#097;&#109;&#105;&#114;&#109;&#099;&#043;&#099;&#108;&#097;&#114;&#105;&#116;&#121;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">do get in touch</a>!</p>
-
-<p>To wrap things up, here’s a victory selfie!</p>
-
-<p><a href="https://twitter.com/RiverTam57/status/485821694037458944"><img src="http://amirchaudhry.com/images/seedhack2014/seedhack2014-7.jpg" alt="Victory Selfie" /></a></p>
-
-<!-- 
-****
-
-<p class="footnote">**Footnote: It's worth reading the
-<a href="http://www.snopes.com/quotes/kenolsen.asp">linked article</a> as
-the quote is usually taken out of context -- did you notice that I'm guilty
-of that too? :). Ken actually <strong>did</strong> understand the value of
-PCs and having them at home. What he was disputing was that we would have
-computers everywhere that would be running our lives. There's delicious
-irony here because that is <strong>exactly</strong> the promise of the
-Internet of Things and 'Big Data'. Systems that know us better than we know
-ourselves.</p>
--->
-
-        <a href="/winning-seedhack-5-2014/#share-comment">Share / Comment</a>
-        <hr />
-        <br />
-        <br />
-      </div>
-    </div>
-    
 
   </div>
   <div class="medium-3 columns">
@@ -1169,7 +902,7 @@ ourselves.</p>
      
     	<li><a href="/tags/#30days">30days  <span>(2)</span></a></li>
      
-    	<li><a href="/tags/#ocaml">ocaml  <span>(14)</span></a></li>
+    	<li><a href="/tags/#ocaml">ocaml  <span>(16)</span></a></li>
      
     	<li><a href="/tags/#ocaml-labs">ocaml-labs  <span>(9)</span></a></li>
      
@@ -1189,7 +922,7 @@ ourselves.</p>
      
     	<li><a href="/tags/#internet of things">internet of things  <span>(4)</span></a></li>
      
-    	<li><a href="/tags/#nymote">nymote  <span>(6)</span></a></li>
+    	<li><a href="/tags/#nymote">nymote  <span>(7)</span></a></li>
      
     	<li><a href="/tags/#ownership">ownership  <span>(3)</span></a></li>
      
@@ -1207,7 +940,7 @@ ourselves.</p>
      
     	<li><a href="/tags/#docs">docs  <span>(2)</span></a></li>
      
-    	<li><a href="/tags/#mirage">mirage  <span>(5)</span></a></li>
+    	<li><a href="/tags/#mirage">mirage  <span>(7)</span></a></li>
      
     	<li><a href="/tags/#website">website  <span>(3)</span></a></li>
      
@@ -1235,7 +968,7 @@ ourselves.</p>
      
     	<li><a href="/tags/#platform">platform  <span>(1)</span></a></li>
      
-    	<li><a href="/tags/#unikernel">unikernel  <span>(2)</span></a></li>
+    	<li><a href="/tags/#unikernel">unikernel  <span>(4)</span></a></li>
      
     	<li><a href="/tags/#contacts">contacts  <span>(1)</span></a></li>
      
@@ -1244,6 +977,14 @@ ourselves.</p>
     	<li><a href="/tags/#mail">mail  <span>(1)</span></a></li>
      
     	<li><a href="/tags/#signpost">signpost  <span>(1)</span></a></li>
+     
+    	<li><a href="/tags/#bitcoin">bitcoin  <span>(1)</span></a></li>
+     
+    	<li><a href="/tags/#contest">contest  <span>(1)</span></a></li>
+     
+    	<li><a href="/tags/#crypto">crypto  <span>(1)</span></a></li>
+     
+    	<li><a href="/tags/#security">security  <span>(1)</span></a></li>
     
   
 

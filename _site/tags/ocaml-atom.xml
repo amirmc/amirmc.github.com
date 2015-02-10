@@ -4,11 +4,239 @@
   <link href="http://amirchaudhry.com/tags/ocaml-atom.xml" rel="self"/>
   <link href="http://amirchaudhry.com"/>
   <subtitle>thoughts, comments &amp; general ramblings</subtitle>
-  <updated>2015-01-22T23:20:05+00:00</updated>
+  <updated>2015-02-10T15:26:21+00:00</updated>
   <id>http://amirchaudhry.com/tags/#ocaml</id>
   <author>
     <name>Amir Chaudhry</name>
   </author>
+  
+    <entry>
+  <title>The Bitcoin Piñata!</title>
+  <link href="http://amirchaudhry.com/bitcoin-pinata"/>
+  <author>Amir Chaudhry</author>
+  <updated>2015-02-10T15:25:00+00:00</updated>
+  <id>http://amirchaudhry.com/bitcoin-pinata</id>
+  <content type="html">
+&lt;p&gt;Last summer we announced the beta release of a clean-slate implementation of
+TLS in pure OCaml, alongside a &lt;a href=&quot;http://openmirage.org/blog/introducing-ocaml-tls&quot;&gt;series of blog posts&lt;/a&gt; that described
+the libraries and the thinking behind them.  It took two hackers six months
+— starting on &lt;a href=&quot;https://goo.gl/maps/GpcQs&quot;&gt;the beach&lt;/a&gt; —  to get the stack to that point and
+their &lt;a href=&quot;https://tls.openmirage.org&quot;&gt;demo server&lt;/a&gt; is still going strong. Since then, the team has
+continued working and recently &lt;a href=&quot;http://media.ccc.de/browse/congress/2014/31c3_-_6443_-_en_-_saal_2_-_201412271245_-_trustworthy_secure_modular_operating_system_engineering_-_hannes_-_david_kaloper.html#video&quot;&gt;presented&lt;/a&gt; at the 31st Chaos
+Communication Congress.&lt;/p&gt;
+
+&lt;p&gt;The latest example goes quite a bit further than a server that just displays
+the handshake. This time, the team have constructed a Xen unikernel that’s
+holding a private key to a bitcoin address and are asking people to try and
+&lt;em&gt;break in&lt;/em&gt;. Hence, they’ve called it the &lt;strong&gt;&lt;a href=&quot;http://ownme.ipredator.se&quot;&gt;Bitcoin Piñata&lt;/a&gt;&lt;/strong&gt;!*&lt;/p&gt;
+
+&lt;h2 id=&quot;what-the-bitcoin-piata-does&quot;&gt;What the Bitcoin Piñata does&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ownme.ipredator.se&quot;&gt;&lt;img src=&quot;http://amirchaudhry.com/images/btc-pinata/btc-pinata.png&quot; alt=&quot;Bitcoin Pinata&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Piñata unikernel will transmit its private bitcoin key if you can
+successfully set up a TLS connection &lt;strong&gt;but&lt;/strong&gt; it’s rigged so that it will &lt;em&gt;only&lt;/em&gt;
+create that connection if you can present the certificate it’s expecting to
+see — which has been &lt;em&gt;signed appropriately&lt;/em&gt;.  Of course, you’re not being given
+the secret key with which to do that signing and that means there should be
+&lt;em&gt;no way&lt;/em&gt; for anyone to form a TLS connection with the Piñata.
+In order to get the private key to the bitcoin address, you’ll have to smash
+your way in.&lt;/p&gt;
+
+&lt;p&gt;Helpfully (perhaps), things are set up so that you &lt;em&gt;can&lt;/em&gt; make the Piñata talk
+to itself, allowing you to &lt;a href=&quot;http://en.wikipedia.org/wiki/Man-in-the-middle_attack&quot;&gt;eavesdrop&lt;/a&gt; on a successful connection and
+see the encrypted traffic. In addition, all the &lt;a href=&quot;https://github.com/mirleft/btc-pinata&quot;&gt;code and libraries&lt;/a&gt; are
+open-source so you can look through any of the codebase.  There isn’t anything
+that anyone will have to reverse engineer, which should make this a little
+more enjoyable.&lt;/p&gt;
+
+&lt;p&gt;This contest is set to run until mid-March or whenever the coins are taken.
+If someone does manage to get in, please do let us know how!&lt;/p&gt;
+
+&lt;h3 id=&quot;the-rubber-hose-approach&quot;&gt;The Rubber-hose approach&lt;/h3&gt;
+
+&lt;p&gt;Of course there are many other ways to get at the private key and as many
+people like to comment, the human element is sometimes the weakest link — 
+after all, a safe is only as secure as the person with the combination.&lt;/p&gt;
+
+&lt;p&gt;In this case, there is obviously a secret key or certificate &lt;em&gt;somewhere&lt;/em&gt;
+that could be presented so it may be tempting to go hunting for that. Perhaps
+phishing attempts on the authors may yield a way forward, or maybe just
+straight-forward &lt;a href=&quot;http://en.wikipedia.org/wiki/Rubber-hose_cryptanalysis&quot;&gt;Rubber-hose cryptanalysis&lt;/a&gt;!  Sure, these
+options might provide a result&lt;sup&gt;†&lt;/sup&gt; but this is meant to be fun.
+The authors haven’t specified any rules but please be nice and focus on the
+technical things around the Piñata. Don’t be this guy.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://amirchaudhry.com/images/btc-pinata/pinata-kid-bat.gif&quot; alt=&quot;Pinata-kid-bat&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-the-point-of-this-contest&quot;&gt;What’s the point of this contest?&lt;/h2&gt;
+
+&lt;p&gt;Even though the Bitcoin Piñata is clearly a contest, nobody is deluding
+themselves into thinking that if the coins are still there in March, that
+somehow the stack can be declared ‘undefeated’ — while pleasing, that
+result wouldn’t necessarily &lt;em&gt;prove&lt;/em&gt; anything. Contests have their place but as
+Bruce Schneier &lt;a href=&quot;https://www.schneier.com/crypto-gram/archives/1998/1215.html#contests&quot;&gt;already pointed out&lt;/a&gt;, they are not useful mechanisms
+to judge security.&lt;/p&gt;
+
+&lt;p&gt;However, it does give us the chance to engage in some shameless self-promotion
+and try to draw vast amounts of attention to the work. That, and the chance to
+stress-test the stack in the wild. Ultimately, we &lt;em&gt;want&lt;/em&gt; to use this code in
+production but must take a lot of care to get there and want to be sure that
+it can bear up. This is just one more way of learning what happens when
+putting something ‘real’ out there. &lt;/p&gt;
+
+&lt;p&gt;If the Bitcoins &lt;em&gt;do&lt;/em&gt; end up being taken, then there’s &lt;em&gt;definitely&lt;/em&gt; something
+valuable that the team can learn from that. Regardless of the Piñata, if we
+have more people exploring the &lt;a href=&quot;https://github.com/mirleft/&quot;&gt;TLS codebase&lt;/a&gt; or trying it out for
+themselves, it will undoubtedly be A Good Thing. &lt;/p&gt;
+
+&lt;h5 id=&quot;responsible-sidenote&quot;&gt;Responsible sidenote&lt;/h5&gt;
+
+&lt;p&gt;&lt;em&gt;For clarity and to avoid any doubt, please be aware that the TLS codebase is
+missing external code audits and is not yet intended for use in any security
+critical applications.  All development is done in the open, including the
+tracking of &lt;a href=&quot;https://github.com/mirleft/ocaml-tls/issues?q=label%3A%22security+concern%22+&quot;&gt;security-related issues&lt;/a&gt;, so please do consider
+auditing the code, testing it in your services and reporting issues.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p class=&quot;footnote&quot;&gt;* If you've never come across a piñata before, hopefully 
+    the gif in the post gives you an idea.  If not, the
+    &lt;a href=&quot;https://en.wikipedia.org/wiki/Pinata&quot;&gt;wiki page&lt;/a&gt;
+    will surely help, where I learned that the origin may be Chinese rather
+    than Spanish!
+&lt;/p&gt;
+
+&lt;p class=&quot;footnote&quot;&gt;&lt;sup&gt;&amp;dagger;&lt;/sup&gt; Of course, I'm not suggesting that
+    anyone would actually go this far. I'm simply acknowledging that there is
+    a human factor and asking that we put it aside.
+&lt;/p&gt;
+
+</content>
+</entry>
+
+  
+    <entry>
+  <title>Unikernel demo at FOSDEM</title>
+  <link href="http://amirchaudhry.com/unikernel-arm-demo-fosdem"/>
+  <author>Amir Chaudhry</author>
+  <updated>2015-02-06T17:50:00+00:00</updated>
+  <id>http://amirchaudhry.com/unikernel-arm-demo-fosdem</id>
+  <content type="html">
+&lt;p&gt;Last weekend was spent at one of the world’s biggest open source conferences,
+FOSDEM.  You can check out &lt;a href=&quot;http://nymote.org/blog/2014/fosdem-summary/&quot;&gt;last year’s review&lt;/a&gt; to get an idea of
+the scale of the event. Since there’s no registration process, it’s difficult
+to estimate how many people attend but given how many rooms there are, and how
+full they are, it’s easily several thousand. I was impressed last year at how
+smoothly things went and the same was true this year.&lt;/p&gt;
+
+&lt;p&gt;The main reason to attend this time was to run a demo of MirageOS from an ARM
+board — one of the main advances since the previous conference. I looked over
+all the things we’d achieved since last year and put together a demo that
+showcases some of the capabilities as well as being fun.&lt;/p&gt;
+
+&lt;h3 id=&quot;from-a-unikernel-on-an-arm-board&quot;&gt;2048 from a Unikernel on an ARM board&lt;/h3&gt;
+
+&lt;p&gt;The demo was to serve the 2048 game from a Unikernel running on a Cubieboard2
+with its own access point.  When people join the wifi network, they get
+served a static page and can begin playing the game immediately.  &lt;/p&gt;
+
+&lt;p&gt;The components I needed for the demo were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Code for the 2048 game — I was able to lift code from a
+&lt;a href=&quot;https://github.com/ocamllabs/2048-tutorial/&quot;&gt;tutorial last year&lt;/a&gt;, which &lt;a href=&quot;http://erratique.ch&quot;&gt;Daniel&lt;/a&gt;, &lt;a href=&quot;http://www.lpw25.net&quot;&gt;Leo&lt;/a&gt;, &lt;a href=&quot;https://github.com/yallop&quot;&gt;Jeremy&lt;/a&gt; and
+&lt;a href=&quot;http://gazagnaire.org&quot;&gt;Thomas&lt;/a&gt; all contributed to. It was first run at &lt;a href=&quot;http://cufp.org/2014/t7-leo-white-introduction-to-ocaml.html&quot;&gt;CUFP 2014&lt;/a&gt; then
+adapted and presented at &lt;a href=&quot;http://booking.agilefaqs.com/functional-conf-2014#workshop-52-info&quot;&gt;Functional Conf&lt;/a&gt; in India (see the
+&lt;a href=&quot;http://gazagnaire.org/fuconf14/&quot;&gt;IOCaml notebook&lt;/a&gt;).  Attendees wrote the code in OCaml, which was
+then compiled into pure JavaScript (via &lt;a href=&quot;http://ocsigen.org/js_of_ocaml/&quot;&gt;js_of_ocaml&lt;/a&gt;). The result can be run
+completely in the browser and only involves serving two files.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Code for making a static website — Since the game is completely
+self-contained (one html file and one js file). I only need to convert a static
+website into a unikernel.  That’s trivial and
+&lt;a href=&quot;http://amirchaudhry.com/unikernels-for-everyone/&quot;&gt;many people have done it before&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A Cubieboard with a wifi access point — There are pre-built images on the
+&lt;a href=&quot;http://blobs.openmirage.org&quot;&gt;MirageOS website&lt;/a&gt;, which make part of this easy. However, getting the
+wifi access point up involves a few more steps.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The first two pieces should be straightforward and indeed, I had a working
+unikernel serving the 2048 game within minutes (unix version on my laptop). 
+The additional factors around the ARM deployment is where things were a little
+more involved. Although this was technically straightforward to set up, it
+still took a while to get all the pieces together.  A more detailed
+description of the steps is in my &lt;a href=&quot;https://github.com/amirmc/fosdemo&quot;&gt;fosdemo repository&lt;/a&gt; and in
+essence, it revolves around configuring the wifi access point and setting up a
+bridge (thanks to &lt;a href=&quot;http://somerandomidiot.com&quot;&gt;Mindy&lt;/a&gt;, &lt;a href=&quot;http://www.skjegstad.com&quot;&gt;Magnus&lt;/a&gt; and &lt;a href=&quot;https://github.com/pqwy&quot;&gt;David&lt;/a&gt; for getting this
+working).&lt;/p&gt;
+
+&lt;p&gt;Once this was all up and running, it was a simple matter to configure the
+board to boot the unikernel on startup, so that no manual intervention would
+be required to set things up at the booth.&lt;/p&gt;
+
+&lt;h4 id=&quot;running-the-demo&quot;&gt;Running the demo&lt;/h4&gt;
+
+&lt;p&gt;I gave the demo at the Xen booth and it went very well.  There was a small
+crowd throughout my time at the booth I’m convinced that the draw of a board
+with glowing LEDs should not be underestimated.  Many people we’re happy to
+connect to the access point and download the game to their browser but there
+were two main things I learnt.&lt;/p&gt;
+
+&lt;p&gt;Firstly, demos involving games will work if people actually &lt;em&gt;know&lt;/em&gt; the game.
+This is obvious, but I’d assumed that most people had already played 2048 —
+especially the crowd I’d expect to meet at FOSDEM.  It turned out that around
+a third of people had no idea what to do when the game loaded onto their
+browser. They stared blankly at it and then blankly at me.  Of course, it was
+trivial to get them started and they were soon absorbed by it — but it still
+felt like some of the ‘cool-factor’ had been lost.&lt;/p&gt;
+
+&lt;p&gt;The second thing was that I tried to explain too much to people in much too
+short a time.  This particular demo involved Xen unikernels, js_of_ocaml and a
+Cubieboard2 with a wifi access point.
+There’s a surprisingly large amount of technology there, which
+is difficult explain to a complete newcomer within one or two minutes.  When
+it was obvious someone hadn’t heard of unikernels, I focused on the approach
+of library operating systems and the benefits that Mirage brings. If a visitor
+was already familiar with the concept of unikernels, I could describe the rest
+of the demo in more detail.&lt;/p&gt;
+
+&lt;p&gt;Everything else did go well and next time I’d like to have a demo like this
+running with &lt;a href=&quot;https://github.com/MagnusS/jitsu&quot;&gt;Jitsu&lt;/a&gt;.  That way, I could configure it so that a unikernel
+would spin up, serve the static page and then spin down again. If we can
+figure out the timing, then providing stats in the page about the lifetime of
+that unikernel would also be great, but that’s for another time.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/amirmc/status/561525704161243137&quot;&gt;&lt;img src=&quot;http://amirchaudhry.com/images/web/fosdem15-tweet.png&quot; alt=&quot;Tweet at FOSDEM 2015&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;sidenote-the-beginnings-of-a-personal-cloud&quot;&gt;Sidenote: The beginnings of a ‘personal cloud’&lt;/h5&gt;
+
+&lt;p&gt;One of the things we’re keen to work towards is the idea of
+&lt;a href=&quot;http://nymote.org&quot;&gt;personal clouds&lt;/a&gt;. It’s not a stretch to imagine that a Cubieboard2,
+running the appropriate software, could act as one particular node in a
+network of your own devices. In this instance it’s just hosting a fun and
+simple game but more complex applications are also possible.&lt;/p&gt;
+
+&lt;h3 id=&quot;huge-range-of-sessions-and-talks&quot;&gt;Huge range of sessions and talks&lt;/h3&gt;
+
+&lt;p&gt;Of course, there was lots more going on than just my demo and I had a great
+time attending the talks. Some in particular that stood out to me were those
+in the &lt;a href=&quot;https://fosdem.org/2015/schedule/track/open_source_design/&quot;&gt;open source design&lt;/a&gt; room, which was a new addition this year. It
+was great to learn that there are design people out there who would like to
+contribute to open source (&lt;a href=&quot;https://twitter.com/amirmc&quot;&gt;get in touch&lt;/a&gt;, if that’s you!). I also had a
+chance to meet (and thank!) Mike McQuaid in his &lt;a href=&quot;https://fosdem.org/2015/schedule/event/homebrew_the_good,_bad_and_ugly_of_osx_packaging/&quot;&gt;Homebrew talk&lt;/a&gt;.
+FOSDEM is one of those great events where you can meet in person all those
+folks you’ve only interacted with online.&lt;/p&gt;
+
+&lt;p&gt;Overall, it was a great trip and I thoroughly recommend it if you’ve never
+been before!&lt;/p&gt;
+
+</content>
+</entry>
+
   
     <entry>
   <title>Brewing MISO to serve Nymote</title>
