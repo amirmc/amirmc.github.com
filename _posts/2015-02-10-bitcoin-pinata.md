@@ -58,7 +58,7 @@ phishing attempts on the authors may yield a way forward, or maybe just
 straight-forward [Rubber-hose cryptanalysis][rubber-hose]!  Sure, these
 options might provide a result<sup>&dagger;</sup> but this is meant to be fun.
 The authors haven't specified any rules but please be nice and focus on the
-technical things around the Piñata. Don't be this guy.
+technical things around the Piñata<sup>&Dagger;</sup>. Don't be this guy.
 
 ![Pinata-kid-bat](http://amirchaudhry.com/images/btc-pinata/pinata-kid-bat.gif)
 
@@ -102,6 +102,15 @@ auditing the code, testing it in your services and reporting issues.*
 <p class="footnote"><sup>&dagger;</sup> Of course, I'm not suggesting that
     anyone would actually go this far. I'm simply acknowledging that there is
     a human factor and asking that we put it aside.
+</p>
+
+<p class="footnote"><sup>&Dagger;</sup> Edit to add: After seeing
+    <a href="https://twitter.com/andreasdotorg/status/565193815183876096">
+    Andrea's tweet</a> I should point out that <strong>any part of
+    MirageOS</strong>, including the networking stack, OCaml runtime etc is a
+    legitimate vector.  It's why there's a
+    <a href="https://raw.githubusercontent.com/mirleft/btc-pinata/master/opam-full.txt">
+    manifest of the libraries</a> that have been used to build the Piñata!
 </p>
 
 
