@@ -78,7 +78,7 @@ crontab scripts/crontab                 # add to list of cron jobs
 
 `post-merge.hook` — Since we've already run the Makefile, this file is symlinked from the appropriate place on the deployment machine.  When a `git pull` results in new commits being downloaded and merged, then this script is triggered immediately afterwards.  In this case, it just executes the `deploy.sh` script.
 
-```
+```bash
 ROOT=$(git rev-parse --show-toplevel)  # obtain path to root of repo
 exec $ROOT/scripts/deploy.sh           # execute the deploy script
 ```
