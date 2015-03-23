@@ -122,51 +122,86 @@ sudo $XM destroy $VM || true
 sudo $XM create $XM.conf
 ```
 
-That's all there is to it!  Of course, this arrangement is not an example of perfection and there are number of things we could improve.  For example, it depends on a cron job, which means it could be a while before a new unikernel is live. Replacing this with a webhook could be an improvement.  The scripts will also redeploy the *current* unikernel, even if the only change is to the crontab schedule.  Some extra work in the deploy script, using some git tools, might work around this.
+That's all there is to it!  Of course, this arrangement isn't perfect and there are number of things we could improve.  For example, it depends on a cron job, which means it may take a while before a new unikernel is live. Replacing this with a webhook could be an improvement.  The scripts will also redeploy the *current* unikernel, even if the only change is to the crontab schedule.  Some extra work in the deploy script, using some git tools, might work around this. 
 
-Despite these minor issues, we do have a completely end-to-end workflow that takes us right the way from pushing some new changes to deploying the new unikernel.  An additional feature is that *everything* is checked into version control. Right from the scripts to completed artefacts. We even have a method of transmitting secure keys/data, over public systems. There is minimal work done outside the code you've already seen, though there is obviously some effort involved in setting the Xen machine, but that's a separate topic (and there ways to make that process convenient too).
+Despite these minor issues, we do have a completely end-to-end workflow that takes us all the way from pushing some new changes to deploying a new unikernel.  An additional feature is that *everything* is checked into version control. Right from the scripts to completed artefacts (including a method of transmitting secure keys/data, over public systems). 
 
-Overall, we've only added around 20 lines of code to the initial 50 or so that we use for the Travis CI build.  So for less than 100 lines of code, we have a complete end-to-end system that can take a MirageOS project from a `git push`, all the way through to a live deployment.
+There is minimal work done outside the code you've already seen, though there is obviously some effort involved in setting the Xen machine, but that's a topic for another time (as a quick hint, you could simply use [Virtualbox VM with Xen][magnus-xen] if you wanted to text out this entire toolchain). 
 
-#### Missing pieces
+Overall, we've only added around 20 lines of code to the initial 50 or so that we use for the Travis CI build.  So for less than 100 lines of code, we have a complete end-to-end system that can take a MirageOS project from a `git push`, all the way through to a live deployment.  This close enough for me to declare it as a 'Heroku for unikernels' but obviously, there's much more we can do with such a system.
 
-TODO - talk about addition of testing and staging infrastructure. 
 
 =====
-
-### The march to immutable infrastructure
-
-So here we have a rudimentary system for deplpying unikernels!  Apart from configuring the machines themselves, all is in git.  This only involves about XX lines of code because the VMs are trivially easy to manage. 
-
-TODO - Describe why this is relevant to immutable infra (and why immutable infa is something to aspire to -- cf al the existing config mgmnt tools etc)
-
-This is sufficient for me to declare it as the Heroku for unikernels but there's actually a lot more you could do. with such a system.  
-
-TODO -- comments about unit tests and more functional tests? Easily managed in above infra.
 
 TODO -- what is immutable infra? Means you don't need the artefact
 
 ### A complete end to end process -- a system at scale
 
-This part of the post is somewhat more fanciful.  If we can consider that the end-to-end story exists a above, what kind of system could you build at scale? What if you could use the other tools that are available?
+Everything I've discussed above exists *today* and you can set up the workflows for yourselves, the same way many others have done with the Travis CI scripts for testing/build.  However, there are a range of exciting possibilities to consider if we're willing to extrapolate just a little from the tools we have above.  The rest of this post explores these ideas and considers how we might extend our end-to-end system.  As an example service, we can consider how we deploy static websites on our infrastructure.
+What benefits and features can our other tools provide to this system?  How could it operate at scale?  What can we generalise and what has to remain bespoke?
 
+TODO - mention example of static websites?
+
+<!-- 
+
+This part of the post is somewhat more fanciful.  If we can consider that the end-to-end story exists a above, what kind of system could you build at scale? What if you could use the other tools that are available?
+ -->
 
 TODO - flesh out and flow all the following paras - they're just notes for now.
 
-You go from writing code, to testing it via CI, to deploying it to a staging server for functional tests, and then pushing out into live deployment.  All of this with minimal interaction from you.  How can we we achieve this?  Because we don't have to shift around humongous blobs of stuff. Once the unikernel is built, the rest is almost trivial. You could simply deploy to production but lets add some tests.
+#### Testing frameworks
+
+In our current system, if the unikernel builds appropriately then we simply assume it can be deployed to production.  Of course, it would be much better to introduce a more thorough testing regimen.  This could include running unite tests as part of the build and more functional/systems/stress testing on the unikernel before permitting deployment. Various libraries in the MirageOS project are already moving towards this model (e.g see coverage testing in XXXX Lib).  Once the 'backbone' of the toolchain is in place, it's straightforward to see where it can be extended and how.  
+
+(move this) You go from writing code, to testing it via CI, to deploying it to a staging server for functional tests, and then pushing out into live deployment.  All of this with minimal interaction from you.  How can we we achieve this?  Because we don't have to shift around humongous blobs of stuff. Once the unikernel is built, the rest is almost trivial. You could simply deploy to production but lets add some tests.
 
 TODO - Example of GoTestIt? Prob wanna scrap this. I once worked on a product called Go Test it, so it would be simple to test a new unikernel based site to ensure that the user flow was as expected. 
 
+#### Demand-driven, hyper-elastic clouds
 
-(Use of Jitsu) When it's deployed to production, it doesn't actually have to be *live*.  Thanks to tools like Jitsu, we can have the unikernels sitting in storage, consuming only the *actual* physical storage required (0% CPU and 0% Ram), and then summon them into existence *on demand*.  This allows *highly* efficient use of resources and is very different to the current economic model of the Cloud, where billing cycles are measured in hours and the overhead of a classic OS is constantly consuming resources.  This also uses less electricity and is a much more green solution than the repetition today.
+The way cloud services are currently provisioned, means that you may have services operating and consuming resources (CPU, memory, etc), even when there is no demand for them. It would be significantly more efficient if we could simply *activate* a service when required and shut it down again when the demand has passed. In our case, this would mean that when a unikernel is 'deployed to production', it doesn't actually have to be *live*.  With tools like [Jitsu][jitsu-repo] (just-in-time summoning of unikernels), we can work towards this kind of architecture. 
 
-(Widescale deployment?) You could even set up such a system to push the well-tested unikernels out onto embedded devices elsewhere (think IoT). In this way you only need a Minimal cloud infrastructure for your IoT service, in order to push new code out to end points, where the work is actually done (within a user's home). Think of the Goodnight Lamp, This can drastically reduce cost and any loss of the central service means end devices can keep working. (requires Signpost?).  Have a central location where devices can pick up updates from. Doesn't need to do any more than coordinating stuff and devices can work P2P. V cheap to run and make money from selling devices.
+Jitsu allows us to have the unikernels sitting in storage then 'summon' them into existence, in response to an incoming request and with *no discernible latency* for the requester.  For the times when unikernels are inactive, they consume only the *actual* physical storage required (and thus 0% CPU, 0% RAM, etc). This is *highly* efficient as it means that more can be achieved with fewer resources and it would significantly improve utilization rates of hardware and things like power efficiency. 
+
+
+<!-- such that the same workloads can be... 
+because a single machine that uses Jitsu...
+only the applications that need to be running at a given time are actually active.  This is ideal for systems ...
+the same physical hardware can be ...
+This is *highly* efficient since fewer machines can manage a great workload 
+the system ensure that only ...
+and is very different to the 
+ -->
+
+With a tool that can spawn unikernels on demand, it is possible to build systems that can automate scale-out of services, including onto other machines.  For example, you could define the maximum resource usage you would allow for a given service/application and the infrastructure would simply scale to that limit in real-time, and then back down again as demand passes. 
+
+We can consider the above for the simple case of unikernels that serve static websites. Most of the time, such sites receive no traffic and therefore would remain 'turned off'. When a request comes in for a page, the unikernel can be started in order to serve that request (using minimal resources). If it seems that a particular post is generating lots of incoming traffic (a HackerNews/Reddit effect), then more resources can automatically be allocated to serving those requests — up to a specified limit (including scaling out onto different machines).  From the perspective of our deployment machine, this means we can serve more users from just the one set of physical hardware, as not all those users would be consuming resources at the same time.
+
+Overall, this is model quite different to the current usage of the Cloud where the overhead of a classic OS is constantly consuming resources.  It would also impact the economics, as billing cycles are currently measured in hours, whereas unikernels may only be active for seconds at a time.  In addition, there are interesting possibilities in *how* such scale-outs can be co-ordinated. 
+
+<!-- Just like Heroku, you can specify the maximum number of instances you want to run and your unikernels can scale up to that limit and then back down again. 
+-->
+
+
+#### Hybrid deployments for embedded devices (ie the IOT)
+
+As we move to a world with more connected devices, it will become possible to run more services from our homes. For the example of our static websites, it would be straightforward to serve them from cubieboards that reside from our homes, thus further minimising the costs to run such infrastructure.  However, they could be configured such that if demands begins to peak, then an automated scale-out can occur from the Cubieboard onto the public cloud instead.  
+
+This can still be incorporated into our end-to-end system as our existing toolchain as decribed in teh first half of this post, can simply push unikernels onto embeded devices, as well as cloud devices.  This is also great for third party servieces as tehy can consume minimal cloud recources and allow their edge devices to do most of the work
+
+You could even set up such a system to push the well-tested unikernels out onto embedded devices elsewhere (think IoT). In this way you only need a Minimal cloud infrastructure for your IoT service, in order to push new code out to end points, where the work is actually done (within a user's home). Think of the Goodnight Lamp, This can drastically reduce cost and any loss of the central service means end devices can keep working. (requires Signpost?).  Have a central location where devices can pick up updates from. Doesn't need to do any more than coordinating stuff and devices can work P2P. V cheap to run and make money from selling devices.
+
+
+
+### Remember all the things - Ubiquitous logging/provenance
+
+
+
+With something like Irmin, you may even be able to receive notifications about the type of incoming traffic and raise the limit if you so wish.  May be able to configure your embedded devices to scale up to the hosted provider if there's sufficient demand.
 
 
 (Logging) Such a system can also have complete end-to-end logging (mention dog?). using Irmin. This means each event where a unikernel is created and how much it serves can be automatically logged and be *very* fine grained. Being able to split out such information also means the ability to provide analytics to the creators of those unikernels around performance and usage characteristics. 
 
-
-(autoscaling - merge w Jitsu above) Just like Heroku, you can specify the maximum number of instances you want to run and your unikernels can scale up to that limit and then back down again. With something like Irmin, you may even be able to receive notifications about the type of incoming traffic and raise the limit if you so wish.  May be able to configure your embedded devices to scale up to the hosted provider if there's sufficient demand.
 
 The beauty of this kind of system is that it embraces the ideas of immutable infrastructure and DevOps as all your services are simply manged right from the code. Everything is in version control *including* the built artefact. you don't need to be too concerned about recreating it as something of this size is trivial to move around, the same way source code is. 
 
@@ -180,8 +215,21 @@ All the above building blocks are open source and all you need is a Xen machine 
 
 
 
+### The march to immutable infrastructure.
+### A true immutable infrastructure.
+
+So here we have a rudimentary system for deplpying unikernels!  Apart from configuring the machines themselves, all is in git.  This only involves about XX lines of code because the VMs are trivially easy to manage. 
+
+TODO - Describe why this is relevant to immutable infra (and why immutable infa is something to aspire to -- cf al the existing config mgmnt tools etc)
 
 
+
+
+
+
+**Responsible footnote: Of course, I should remind you that this is speculative and is something that the tools will allow us to work towards. 
+
+We will be presenting the current state of Jitsu at NSDI in May in Oakland, California. The paper will be available shortly afterwards. ***
 
 
 
@@ -205,3 +253,5 @@ All the above building blocks are open source and all you need is a Xen machine 
 
 [decks-deploy]: https://github.com/mirage/mirage-decks-deployment
 [hooks]: http://www.git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+[magnus-xen]: 
+[jitsu-repo]: 
