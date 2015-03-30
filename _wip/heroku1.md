@@ -324,21 +324,6 @@ Since we already have the 'backbone' of the toolchain in place, it's easier to
 see where it can be extended and how.
 
 
-<!-- TODO - In the case of Mirage Decks, we could add testing of the network stack, etc etc -->
-
-<!-- TODO - Example of GoTestIt? Prob wanna scrap this. I once worked on a product called Go Test it, so it would be simple to test a new unikernel based site to ensure that the user flow was as expected.  -->
-
-<!-- 
-
-This part of the post is somewhat more fanciful.  If we can consider that the end-to-end story exists a above, what kind of system could you build at scale? What if you could use the other tools that are available?
- -->
-
-
-
-
-<!-- \* If you're not familiar with Heroku, it's an application platform that deals with all the messy bits of deployment. The command is as simple as git push heroku master -->
-
-
 <!--
 [jitsu-repo]: https://github.com/MagnusS/jitsu
 [jitsu-x]: http://www.skjegstad.com/blog/2015/03/25/mirageos-vm-per-url-experiment
