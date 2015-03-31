@@ -2,15 +2,12 @@
 layout: post
 title: "Towards Heroku for Unikernels: Part 1 - Automated deployment"
 author: Amir Chaudhry
-date: 2015-03-31 14:00:00
-tags: [code, essay, ocaml, unikernel, mirage, miso]
+date: 2015-03-31 14:30:00
+tags: [code, docs, essay, ocaml, ocamllabs, unikernel, mirage, miso]
 description:
-shorturl: http://amirchaudhry.com/
+shorturl: http://bit.ly/1C1DG8y
 ---
 {% include JB/setup %}
-
-<!-- <a href="#"><img style="float: right; margin-left: 10px" src="http://amirchaudhry.com/images/web/#"></a> -->
-
 
 In my [Jekyll to Unikernel post][jekyll-unikernel], I described an automated
 workflow that would take your static website, turn it into a MirageOS
