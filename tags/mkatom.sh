@@ -8,7 +8,7 @@ do
     LTAG="$(echo ${TAG} | tr '[:upper:]' '[:lower:]')"
 
 echo "---
-layout: nil
+layout: null
 title : Atom Feed
 ---
 <?xml version=\"1.0\" encoding=\"utf-8\"?>
