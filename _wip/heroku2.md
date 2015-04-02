@@ -9,8 +9,6 @@ shorturl: http://bit.ly/19xH2K3
 ---
 {% include JB/setup %}
 
-<!-- <p class="footnote">This is the second post in this series. You might like to start with <a href="http://amirchaudhry.com/heroku-for-unikernels-pt1/">Part 1</a>.</p>
- -->
 
 In the [previous post][heroku1] I described the continuous end-to-end system that we've set up for some of the MirageOS projects — automatically going from a `git push` all the way to live deployment, with everything under version-control.
 
@@ -19,50 +17,6 @@ Everything I described previously already *exists* and you can set up the workfl
 Previously, we had finished the backbone of the workflow and I discussed a few obvious ideas about how we should flesh it out — namely more testing and some form of logging/reporting.  There's substantially more we can do when we consider how lean and nimble unikernels are, especially if we speculate about the systems we could create as our [toolstack][miso-post] matures.  A couple of things immediately come to mind.  
 
 The first is the ability to boot a unikernel only when it is required, which opens up the possibility of highly-elastic infrastructure.  The second is the ease with which we can push, pull or otherwise distribute unikernels throughout a system, allowing new forms of deployment to both cloud and embedded systems. We can consider these in turn and see where they take us, comparing with current `mirage-decks` deployment I described in [Part 1][heroku1].
-
-<!-- In this post I'll extrapolate from that backbone and speculate about the systems we could create as our [toolstack][miso-post] matures.  What benefits and features could we add to this system?  How would it operate at scale?
- -->
-
-<!-- 
-as already seen in the .  Each of this
-
-This also leads to another question of how we understand what's going on such as the system, in terms of logging and monitoring. 
-
-leads to interesting possibilities for the kinds of platforms we can build in order to deploy and manage systems.
- -->
-
-
-<!-- We can consider the implications of these and then think about the additional things we would bee for 
- -->
-<!-- are and how easy it is to experiment with them (especially compared with running the equivalent experiments on traditional stacks).   -->
-
-
-<!-- Items that cover
-- Demand driven clouds
-- Hybrid deployments (ARM/x86 as well as Unix)
-- ubiquitous logging
-
--- So what?
-- small-scale services -- running near you, the user
-- What does Immutable Infrastructure really mean?
- -->
-
-<!-- 
-onto a Xen machine.  All the scripts and outputs are under version-control so it's easy for collaborators to understand what's going on without needing access to any machines. 
- -->
-
-<!-- Everything I've discussed above exists *today* and you can set up the workflow for yourself, the same way many others have done with the Travis CI scripts for testing/build.  However, there are a range of exciting possibilities to consider if we're willing to extrapolate *just a little* from the tools we have above.  The rest of this post explores these ideas and considers how we might extend our end-to-end system.  --> 
-<!-- As an example service, we can consider how we deploy static websites on our infrastructure. -->
-<!-- What benefits and features can our other tools provide to this system?  How could it operate at scale?  What can we generalise and what has to remain bespoke? -->
-
-
-<!-- 
-
-This part of the post is somewhat more fanciful.  If we can consider that the end-to-end story exists a above, what kind of system could you build at scale? What if you could use the other tools that are available?
- -->
-
-<!-- TODO - flesh out and flow all the following paras - they're just notes for now. -->
-
 
 [heroku1]: http://amirchaudhry.com/heroku-for-unikernels-pt1/
 [miso-post]: http://amirchaudhry.com/brewing-miso-to-serve-nymote/
@@ -78,17 +32,6 @@ Jitsu allows us to have unikernels sitting in storage then 'summon' them into ex
 
 In the case of the [decks.openmirage.org][decks-site] unikernel that I discussed last time, it would mean that the site would only come online if someone had requested it.  In fact, we've already been working on this kind of system and Jitsu will be presented at [NSDI in Oakland this May][jitsu-nsdi] ([PDF][jitsu-paper]). So in the spirit of looking ahead, there's more we could do.
 
-
-
-
-<!-- such that the same workloads can be... 
-because a single machine that uses Jitsu...
-only the applications that need to be running at a given time are actually active.  This is ideal for systems ...
-the same physical hardware can be ...
-This is *highly* efficient since fewer machines can manage a great workload 
-the system ensure that only ...
-and is very different to the 
--->
 
 ### Hyper-elastic scaling
 
@@ -112,35 +55,13 @@ Overall, the model I've described is quite different to the way we currently use
 
 For example, having a demand-driven system means we can deliver more services from just the one set of physical hardware — because not all those services would be consuming resources at the same time.  There would also be a dramatic impact on the economics, as billing cycles are currently measured in hours, whereas unikernels may only be active for seconds at a time.  In addition to these benefits, there are interesting possibilities in *how* such scale-outs can be co-ordinated across different devices.
 
-
-<!-- took a simple static website and 
-
-If the load increases (e.g. a HackerNews/Reddit effect) then more unikernels/resources can automatically be allocated to serving those requests — up to a specified limit (including scaling out onto different machines).  It's even possible to take this to an extreme, where *each individual page* could be served via it's *own* unikernel.  We've already [experimented with this][jitsu-x] and in this scenario, a scale-out would only be needed for the individual pages that are receiving the traffic. 
-
-Somewhere i, you could define the maximum resource usage you would allow for a given service/application and the infrastructure would simply scale to that limit in real-time, and then back down again as demand passes. 
-
-If we recall our previous toolchain, the 
-
-For example, you could define the maximum resource usage you would allow for a given service/application and the infrastructure would simply scale to that limit in real-time, and then back down again as demand passes. 
-
-
-We can consider the benefits of such a system for the mirage-decks unikernel.  Most of the time, it may receive no traffic and therefore would remain 'turned off'. 
-
-When a request comes in for a page, the unikernel can be started in order to serve that request — using minimal resources. If the load increases (e.g. a HackerNews/Reddit effect) then more unikernels/resources can automatically be allocated to serving those requests — up to a specified limit (including scaling out onto different machines).  It's even possible to take this to an extreme, where *each individual page* could be served via it's *own* unikernel.  We've already [experimented with this][jitsu-x] and in this scenario, a scale-out would only be needed for the individual pages that are receiving the traffic. 
- -->
-
-<!-- If it seems that a particular post is generating lots of incoming traffic (a HackerNews/Reddit effect), then more resources can automatically be allocated to serving those requests — up to a specified limit (including scaling out onto different machines).  We can even imagine taking this to an extreme where each individual page is its own unikernel. -->
-
-
-<!-- Just like Heroku, you can specify the maximum number of instances you want to run and your unikernels can scale up to that limit and then back down again. 
--->
-
 [jitsu-repo]: https://github.com/MagnusS/jitsu
 [decks-site]: http://decks.openmirage.org
 [jitsu-nsdi]: https://www.usenix.org/conference/nsdi15/technical-sessions/presentation/madhavapeddy
 [jitsu-paper]: http://anil.recoil.org/papers/2015-nsdi-jitsu.pdf
 [magnus-url-vm]: http://www.skjegstad.com/blog/2015/03/25/mirageos-vm-per-url-experiment/
 [list-vm-disc]: http://lists.xenproject.org/archives/html/mirageos-devel/2015-03/msg00110.html
+
 
 ## Hybrid deployments
 
@@ -160,9 +81,6 @@ In this scenario, we could easily serve the traffic for `mirage-decks` from a un
 [sp-post]: http://amirchaudhry.com/brewing-miso-to-serve-nymote/#signpost
 
 
-<!-- This is also great for third party servieces as tehy can consume minimal cloud recources and allow their edge devices to do most of the work
- -->
-
 ## Remember everything
 
 When running systems at scale it becomes important to track the activity and understand what is taking place in the system. In practice, this means logging the activity of the unikernels, when and where they were created and how they perform.  This becomes even more complex for a distributed system.
@@ -180,27 +98,6 @@ Use of Irmin wouldn't be limited to logging as the unikernels themselves could u
 
 You may have noticed that one of the benefits of the unikernel approach arises because the artefacts themselves are not altered once they're created.  This embraces the ideas of immutable infrastructure as all the software and services are managed right from the code. Everything is in version control, including the built artefact, which makes managing a unikernel deployment much easier than with legacy systems. 
 
-
-<!-- you don't need to be too concerned about recreating it as something of this size is trivial to move around, the same way source code is. 
-
-TODO- xref with Nymote somehow.  The above infra is needed for those apps to provide a resilient service. etc 
-
-All the above building blocks are open source and all you need is a Xen machine to deploy this code to!
- -->
-
-
-
-
-
-
-<!-- ## The march to immutable infrastructure.
-## A true immutable infrastructure.
-
-So here we have a rudimentary system for deplpying unikernels!  Apart from configuring the machines themselves, all is in git.  This only involves about XX lines of code because the VMs are trivially easy to manage. 
-
-TODO - Describe why this is relevant to immutable infra (and why immutable infa is something to aspire to -- cf al the existing config mgmnt tools etc)
- -->
-
 Let's think about what immutable infrastructure means for code.  Essentially, it means the artefact produced *doesn't matter*. It's disposable because we have the means to easily recreate it.  In our current example, we still ship the unikernel around.  In order to make this 'fully immutable', we'd have to capture the snapshot of all the packages and code used when *building* the unikernel. That would give us a complete manifest of which package versions were pulled in and from which sources.  Complete information like this would allow us to recreate any given unikernel in a highly systematic way.  If you can achieve this, then it's the *manifest itself* which represents the minimal requirement.
 
 In this world-view, the unikernel itself becomes something akin to caching. You use it because you don't want to rebuild it from source — but unikernels are typically quicker to build than a whole OS/App stack.  For more security critical applications, you may want to be assured of the code that is pulled in, so you check the manifest file before rebuilding for yourself. This also allows you to pin to specific versions of libraries so that you can explicitly adjust the dependencies as you wish.  So how do we encode the manifest?  This is another area where Irmin can help as it can store a snapshot of the state of packages that were used for any given build run.  That build run can then be recreated elsewhere without having to manually specify package versions.
@@ -214,37 +111,5 @@ We'll keep marching on with more libraries, better tooling and improving quality
 
 That means you.
 
-
-<!-- 
-If you're interested in getting involved, then look over the various 
-
-
-
-**Responsible footnote: Of course, I should remind you that this is speculative and is something that the tools will allow us to work towards. 
-
-We will be presenting the current state of Jitsu at NSDI in May in Oakland, California. The paper will be available shortly afterwards. ***
- -->
-
-<!-- 
-\* If you're not familiar with Heroku, it's an application platform that deals with all the messy bits of deployment. The command is as simple as git push heroku master
- -->
-
-
-
-
-<!-- [jekyll-unikernel]: http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines/
-[travis-skeleton]: https://github.com/ocaml/ocaml-travisci-skeleton
-[amc-travis]: http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines#setting-up-travis-ci
-[anil-ppa]: https://launchpad.net/~avsm
-[uni-for-all]: http://amirchaudhry.com/unikernels-for-everyone/
-[deploy-key]: http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines#deploying-your-unikernel
-[decks-repo]: https://github.com/mirage/mirage-decks
-[deck-slide]: https://github.com/mirage/mirage-decks/issues/49
-[xen-installation]: http://wiki.xenproject.org/wiki/Xen_Project_Beginners_Guide
-
-[decks-deploy]: https://github.com/mirage/mirage-decks-deployment
-[hooks]: http://www.git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
-[magnus-xen]: http://www.skjegstad.com/blog/2015/01/19/mirageos-xen-virtualbox/
-[mir-notes-qa]: http://openmirage.org/wiki/weekly-2015-03-11#Qualityandtest
-[jitsu-x]: http://www.skjegstad.com/blog/2015/03/25/mirageos-vm-per-url-experiment -->
+<!-- TODO- xref with Nymote somehow.  The above infra is needed for those apps to provide a resilient service. etc -->
 
