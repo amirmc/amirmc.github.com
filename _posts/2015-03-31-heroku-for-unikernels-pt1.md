@@ -354,7 +354,7 @@ exciting possibilities to consider in terms of automation, scalability and
 distributed systems.  Especially if we incorporate other aspects of the
 [toolstack we're working towards][miso-post].  
 
-Part 2 of this series is where I'll consider these possibilities, which will
+[Part 2][pt2] of this series is where I'll consider these possibilities, which will
 be more speculative and less constrained.  It will cover the kinds of systems
 we can create once the tools are more mature and will touch on ideas around
 hyper-elastic clouds, embedded systems and what this means for the concept of
@@ -362,6 +362,12 @@ immutable infrastructure.
 
 Since we already have the 'backbone' of the toolchain in place, it's easier to
 see where it can be extended and how.
+
+
+*Edit: The second part of this series is now up -
+"[Self Scaling Systems][pt2]"*
+
+[pt2]: http://amirchaudhry.com/heroku-for-unikernels-pt2/
 
 ****
 
