@@ -5,6 +5,9 @@
 
 OPAM_DEPENDS="mirage fat-filesystem"
 
+# for the cases where we need a new gcc and binutils
+UPDATE_GCC_BINUTILS=${UPDATE_GCC_BINUTILS:-"0"}
+
 case "$OCAML_VERSION" in
 4.02) ppa=avsm/ocaml42+opam12 ;;
 *) echo Unknown $OCAML_VERSION; exit 1 ;;
