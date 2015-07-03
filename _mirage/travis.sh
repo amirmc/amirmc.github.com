@@ -5,7 +5,7 @@
 
 OPAM_DEPENDS="mirage fat-filesystem"
 
-case "$OCAML_VERSION,$OPAM_VERSION" in
+case "$OCAML_VERSION" in
 4.02) ppa=avsm/ocaml42+opam12 ;;
 *) echo Unknown $OCAML_VERSION,$OPAM_VERSION; exit 1 ;;
 esac
