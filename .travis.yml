@@ -4,6 +4,7 @@ script: bash -ex travis.sh
 env:
   matrix:
   - OCAML_VERSION=4.02 MIRAGE_BACKEND=xen DEPLOY=1
+    UPDATE_GCC_BINUTILS=1
   - OCAML_VERSION=4.02 MIRAGE_BACKEND=unix
   global:
   - secure: TvHJa5E+Fk/Htk8CGXAq5lEleVyjOYUX89HmlQR/ilAdL7Ag9jBGD1HXOmm/zIFDnjryYpexRNM9Z36prd2tnnax1v2dpos0IUbOhzqTzrHcNaa9psSj5k0H0HIkgZF3tVZpdTnQekdDLnjEIDMweNxiBUxsB8DuBG2piwctuJI=
