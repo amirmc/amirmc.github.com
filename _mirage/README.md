@@ -16,7 +16,7 @@ in this folder.
 Since these files are copy/pasted from another repo, the following links
 should help to check if things have been updated upstream
 
-Files are from: https://github.com/mirage/mirage-skeleton/commit/1709bad5bac9484b8feb476aa6803e464d66057b
+Files are from: https://github.com/mirage/mirage-skeleton/tree/c88d2b842af8df50761f89b9fc779258643d0cd6/static_website
 
 Latest versions are:
 - [config.ml][]
