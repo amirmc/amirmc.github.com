@@ -3,8 +3,8 @@ before_script: cd _mirage
 script: bash -ex travis.sh
 env:
   matrix:
-  - OCAML_VERSION=4.01.0 OPAM_VERSION=1.2.0 MIRAGE_BACKEND=xen DEPLOY=1
-  - OCAML_VERSION=4.01.0 OPAM_VERSION=1.2.0 MIRAGE_BACKEND=unix
+  - OCAML_VERSION=4.02 MIRAGE_BACKEND=xen DEPLOY=1
+  - OCAML_VERSION=4.02 MIRAGE_BACKEND=unix
   global:
   - secure: TvHJa5E+Fk/Htk8CGXAq5lEleVyjOYUX89HmlQR/ilAdL7Ag9jBGD1HXOmm/zIFDnjryYpexRNM9Z36prd2tnnax1v2dpos0IUbOhzqTzrHcNaa9psSj5k0H0HIkgZF3tVZpdTnQekdDLnjEIDMweNxiBUxsB8DuBG2piwctuJI=
   - secure: VWXyfz+yZFCi/s92kIlrEAcCYUvsu9VxvhvV+rFQj/N9q+tLzn3Y7EyRcGCq/pFGPYlXTCn8/FUpWuvxKbWa6DaE0pjSp5R3y1FACuTVrZSZ7RCtWgzu+emPMTGuX+ocTX/NJtFZULcy8sW9jehwjQaj9hs3EkWO+tofNFjeEro=

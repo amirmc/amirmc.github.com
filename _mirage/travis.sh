@@ -6,7 +6,7 @@
 OPAM_DEPENDS="mirage fat-filesystem"
 
 case "$OCAML_VERSION,$OPAM_VERSION" in
-4.01.0,1.2.0) ppa=avsm/ocaml41+opam12 ;;
+4.02) ppa=avsm/ocaml42+opam12 ;;
 *) echo Unknown $OCAML_VERSION,$OPAM_VERSION; exit 1 ;;
 esac
 
@@ -35,8 +35,9 @@ mirage --version
 
 # run the commands to build from here
 FS=fat mirage configure --$MIRAGE_BACKEND
-make depend
-mirage build
+#make depend
+./make-fat1-image.sh
+make
 
 #############################
 # DEPLOYMENT
