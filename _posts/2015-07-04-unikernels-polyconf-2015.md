@@ -53,7 +53,7 @@ yourselves!
 
 [MISO]: http://amirchaudhry.com/brewing-miso-to-serve-nymote/
 [nymote]: http://nymote.org/blog/2013/introducing-nymote/
-[mindy-overview]: http://www.somerandomidiot.com/blog/2014/08/18/i-am-unikernel/
+[mindy-overview]: http://www.somerandomidiot.com/blog/2014/08/19/i-am-unikernel/
 [tom-unikernel]: http://roscidus.com/blog/blog/2014/07/28/my-first-unikernel/ 
 [magnus]: http://www.skjegstad.com/blog/2015/03/25/mirageos-vm-per-url-experiment/
 [pinata]: http://amirchaudhry.com/bitcoin-pinata/
