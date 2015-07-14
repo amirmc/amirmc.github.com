@@ -77,7 +77,7 @@ doesn't have to be Irmin.
 - The [Introducing Irmin][irmin-intro] post is the one I was trying to point
 an audience member at.
 - When I mention the DNS server, I said it was 200MB when I actually meant
-200KB. More info in the [MirageOS ASPLOS paper][mirage-paper].
+200**KB**. More info in the [MirageOS ASPLOS paper][mirage-paper].
 - I referred to the ["HAT Project"][hat] and you should also check out the
 ["Databox paper"][databox].
 - A summary of other unikernel approaches is also [available][7-unikernels].
