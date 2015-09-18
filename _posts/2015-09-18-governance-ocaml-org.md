@@ -9,7 +9,7 @@ shorturl: http://bit.ly/1Kqc6WZ
 ---
 {% include JB/setup %}
 
-[![Governance Screenshot]({{BASE_PATH}}/images/web/governance-page.png)][gov]
+[![Governance Screenshot](http://amirchaudhry.com/images/web/governance-page.png)][gov]
 
 For several months, I've been working with the maintainers of OCaml.org
 projects to define and document the governance structure around the domain
