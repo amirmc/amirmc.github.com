@@ -62,7 +62,7 @@ you'd like to tell me what you think of the talk, please do so! There are some
 additional comments at the end of this post.
 
 <div class="flex-video">
-    <iframe width="540" height="304" src="https://www.youtube.com/embed/zi2TdMXs7Cc" frameborder="0" allowfullscreen></iframe>
+    <iframe width="540" height="304" src="https://www.youtube.com/embed/nZLy19eRWLk" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <!-- I find it a little awkward watching myself give a talk, especially when I
