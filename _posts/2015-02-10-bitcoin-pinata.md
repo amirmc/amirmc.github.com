@@ -113,6 +113,10 @@ auditing the code, testing it in your services and reporting issues.*
     manifest of the libraries</a> that have been used to build the Piñata!
 </p>
 
+*Edit: discuss this post on [devel.unikernel.org][discuss]*
+
+[discuss]: http://devel.unikernel.org/t/the-bitcoin-pinata/26/1
+
 
 [mirleft-map]: https://goo.gl/maps/GpcQs
 [om-tls]: http://openmirage.org/blog/introducing-ocaml-tls

@@ -119,6 +119,10 @@ see from the posts above, shared experiences help other people progress
 further and branch out into new areas. When you've had a chance to try
 something out please do share your experiences online! 
 
+*Edit: discuss this post on [devel.unikernel.org][discuss]*
+
+[discuss]: http://devel.unikernel.org/t/unikernels-for-everyone/28/1
+
 <p class="footnote">This post also appears on the <a href="http://nymote.org/blog/2015/unikernels-for-everyone/">Nymote blog</a>.</p>
 
 <!-- ===== LINKS ===== -->

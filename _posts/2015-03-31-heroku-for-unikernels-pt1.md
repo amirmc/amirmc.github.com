@@ -369,6 +369,11 @@ see where it can be extended and how.
 
 [pt2]: http://amirchaudhry.com/heroku-for-unikernels-pt2/
 
+*Edit2: discuss this post on [devel.unikernel.org][discuss]*
+
+[discuss]: http://devel.unikernel.org/t/towards-heroku-for-unikernels/27/1
+
+
 ****
 
 <p class="footnote">

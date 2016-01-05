@@ -285,6 +285,9 @@ the wider ecosystem.
 
 That means you.
 
+*Edit: discuss this post on [devel.unikernel.org][discuss]*
+
+[discuss]: http://devel.unikernel.org/t/towards-heroku-for-unikernels/27/1
 
 ****
 
