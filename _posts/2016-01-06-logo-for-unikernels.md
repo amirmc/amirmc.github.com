@@ -5,7 +5,7 @@ author: Amir Chaudhry
 date: 2016-01-06 18:00
 tags: [unikernel]
 description:
-shorturl: 
+shorturl: http://bit.ly/1ON9DhK
 ---
 {% include JB/setup %}
 
@@ -63,4 +63,4 @@ will be true from this shared brand.
 [projects]: http://unikernel.org/projects/
 [unikernel.org]: http://unikernel.org
 [ec2-script]: https://mirage.io/blog/unikernel-org
-[discuss]: http://devel.unikernel.org
+[discuss]: http://devel.unikernel.org/t/a-logo-for-unikernels/47
