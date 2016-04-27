@@ -129,7 +129,7 @@ something out please do share your experiences online!
 
 [jekyll-unikernel]: http://amirchaudhry.com/from-jekyll-to-unikernel-in-fifty-lines/
 [nymote]: http://nymote.org/
-[mindy-overview]: http://www.somerandomidiot.com/blog/2014/08/18/i-am-unikernel/
+[mindy-overview]: http://www.somerandomidiot.com/blog/2014/08/19/i-am-unikernel/
 [mindy-first]: http://www.somerandomidiot.com/blog/2014/03/14/its-a-mirage/
 [mindy-uk1]: http://www.somerandomidiot.com/blog/2014/08/11/attack-surface-area/
 [mindy-uk2]: http://www.somerandomidiot.com/blog/2014/08/14/my-content-is-mine/
