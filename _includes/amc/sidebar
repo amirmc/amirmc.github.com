@@ -1,13 +1,10 @@
 <div class="sidebar">
   <a href="{{ BASE_PATH}}{{ site.JB.about_path }}"><img src="/images/amc.png"/></a>
   <ul class="sidebar">
-    <li class="sidebar">Lead at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Nymote.org</a></li>
-    <li class="sidebar">Wrangler at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> OCaml Labs</a></li>
-    <li class="sidebar">Community at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Mirage OS</a></li>
-    <li class="sidebar">Post-doc at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Computer Lab</a></li>
+    <li class="sidebar">MTS at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Docker</a></li>
+    <li class="sidebar">Lead at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Nymote</a></li>
+    <li class="sidebar">Community at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> MirageOS</a></li>
     <li class="sidebar">Member of <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}">Darwin College</a></li>
-    <li class="sidebar">Cofounder of <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Springboard</a></li>
-    <li class="sidebar">Advisor to <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}">CUEntrepreneurs</a></li>
   </ul>
   <a rel="me" href="https://twitter.com/amirmc"><img src="/icons/twitter_16.png" alt="amirmc on Twitter"/></a>
   <a href="http://www.linkedin.com/in/amirchaudhry/"><img src="/icons/linkedin_16.png" alt="amir on LinkedIn"/></a>

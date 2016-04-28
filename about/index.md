@@ -14,18 +14,22 @@ navweight: 4
 
 ***Currently***
 
-Lead at [Nymote.org][]
+Member of Technical Staff at [Docker][]
 
-Community at [Mirage OS][]
+Lead at [Nymote][]
 
-Post-doc at [Cambridge Computer Lab][]
-
-Programme Manager at [OCaml Labs][]
+Community at [MirageOS][]
 
 Senior Member at [Darwin College][]
 
 
 ***Previously***
+
+Founding team at [Unikernel Systems][]
+
+Post-doc at [Cambridge Computer Lab][]
+
+Programme Manager at [OCaml Labs][]
 
 Co-founder of [Springboard][]
 
@@ -43,13 +47,15 @@ PhD in [Neuroscience at Cambridge University][cam-neuro]
 
 MSci in [Physics at Imperial College][ic-physics]
 
+[Docker]: https://www.docker.com
+[Unikernel Systems]: http://unikernel.com
 [Cambridge Computer Lab]: http://www.cl.cam.ac.uk
 [OCaml Labs]: http://www.cl.cam.ac.uk/projects/ocamllabs/
 [CU Entrepreneurs]: http://www.cue.org.uk
 [Darwin College]: http://www.darwin.cam.ac.uk
 [Springboard]: http://springboard.com
-[Nymote.org]: http://nymote.org
-[Mirage OS]: http://openmirage.org
+[Nymote]: http://nymote.org
+[MirageOS]: https://mirage.io
 [SVc2UK]: http://svc2uk.com
 [CTC]: http://www.temperatureconcepts.com
 [cam-neuro]: http://www.neuroscience.cam.ac.uk
