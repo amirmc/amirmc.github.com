@@ -6,7 +6,7 @@ header: Feedback
 ---
 {% include JB/setup %}
 
-## CraftConf feedback!
+## GlueCon feedback!
 
 Please tell me what you thought!
 
