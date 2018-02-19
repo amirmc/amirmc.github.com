@@ -4,10 +4,11 @@ title: bio
 ---
 {% include JB/setup %}
 
-[Amir Chaudhry][amir] works at [Docker][] to make [unikernels][] accessible to
+[Amir Chaudhry][amir] hopes to make [unikernels][] accessible to
 developers everywhere, and is the Community Manager for [MirageOS][]. Most of
 his time is spent on open source efforts and he's a big fan of automation to
-maximise developer impact. In previous lives he was Programme Manager at
+maximise developer impact. In previous lives he was a
+Member of Technical Staff at [Docker][], Programme Manager at
 [OCaml Labs][], led operations at a medical device start-up, created a seed
 investing programme, and was a board observer at another startup.
 Amir also has a diverse academic background with an MSci in Physics and a PhD

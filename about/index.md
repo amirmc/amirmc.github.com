@@ -14,22 +14,21 @@ navweight: 4
 
 ***Currently***
 
-Member of Technical Staff at [Docker][]
-
 Lead at [Nymote][]
 
 Community at [MirageOS][]
 
-Senior Member at [Darwin College][]
-
-
 ***Previously***
+
+Member of Technical Staff at [Docker][]
 
 Founding team at [Unikernel Systems][]
 
 Post-doc at [Cambridge Computer Lab][]
 
 Programme Manager at [OCaml Labs][]
+
+Senior Member at [Darwin College][]
 
 Co-founder of [Springboard][]
 

@@ -1,7 +1,6 @@
 <div class="sidebar">
-  <a href="{{ BASE_PATH}}{{ site.JB.about_path }}"><img src="/images/amc.png"/></a>
+  <a href="{{ BASE_PATH}}{{ site.JB.about_path }}"><img src="/images/amc-small.png"/></a>
   <ul class="sidebar">
-    <li class="sidebar">MTS at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Docker</a></li>
     <li class="sidebar">Lead at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> Nymote</a></li>
     <li class="sidebar">Community at <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}"> MirageOS</a></li>
     <li class="sidebar">Member of <a class="sidebar" href="{{ BASE_PATH}}{{ site.JB.about_path }}">Darwin College</a></li>
